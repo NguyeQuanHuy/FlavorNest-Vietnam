@@ -1,0 +1,102 @@
+// ─────────────────────────────────────────────────────────────────────────────
+//  app/stories/page.tsx
+// ─────────────────────────────────────────────────────────────────────────────
+
+import type { Metadata } from 'next'
+import StoriesClient from './_components/StoriesClient'
+
+export const metadata: Metadata = {
+    title: 'Kitchen Stories | FlavorNest Vietnam',
+    description: 'Discover the history, culture and people behind authentic Vietnamese cuisine.',
+}
+
+// Định nghĩa kiểu dữ liệu (Types)
+export type CategoryColor = 'amber' | 'forest' | 'brown'
+
+export interface Story {
+    slug: string
+    category: string
+    categoryColor: CategoryColor
+    title: string
+    subtitle: string
+    excerpt: string
+    image: string
+    imageAlt: string
+    tag: string
+    tagColor: CategoryColor
+    readTime: string
+    publishedAt: string
+    featured: boolean
+}
+
+// Dữ liệu danh sách bài viết
+export const STORIES: Story[] = [
+    {
+        slug: 'symphony-of-hanois-dawn',
+        category: 'Heritage',
+        categoryColor: 'amber',
+        title: "The Symphony of Hanoi's Dawn",
+        subtitle: 'Traditional Beef Pho',
+        excerpt: 'Phở không dành cho những người vội vã. Để có được sự tinh khiết trong vắt như gương, người nấu phải kiên nhẫn hầm xương bò suốt 10 tiếng đồng hồ.',
+        image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?w=900&q=80',
+        imageAlt: 'Hanoi beef pho',
+        tag: 'Hanoi Heritage',
+        tagColor: 'amber',
+        readTime: '6 min read',
+        publishedAt: 'April 2, 2026',
+        featured: true,
+    },
+    {
+        slug: 'secrets-of-the-south-banh-xeo',
+        category: 'Traditional',
+        categoryColor: 'forest',
+        title: "Secrets of the South: Bánh Xèo",
+        subtitle: 'Sizzling Vietnamese Pancake',
+        excerpt: 'The name itself is the recipe. "Xèo" — that violent, joyful sizzle as rice batter meets a white-hot pan.',
+        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=900&q=80',
+        imageAlt: 'Banh Xeo',
+        tag: 'Saigon Street Food',
+        tagColor: 'forest',
+        readTime: '5 min read',
+        publishedAt: 'March 18, 2026',
+        featured: false,
+    },
+    {
+        slug: 'the-art-of-banh-mi',
+        category: 'Fusion',
+        categoryColor: 'forest',
+        title: 'The Art of Bánh Mì',
+        subtitle: 'Vietnam\'s Greatest Culinary Crossroads',
+        excerpt: 'Vietnamese hands transformed the baguette into something unrecognisable and entirely their own: lighter, crispier.',
+        image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=900&q=80',
+        imageAlt: 'Banh Mi',
+        tag: 'East Meets West',
+        tagColor: 'forest',
+        readTime: '5 min read',
+        publishedAt: 'February 8, 2026',
+        featured: false,
+    },
+    {
+        slug: 'hue-salt-coffee-story',
+        category: 'Street Food',
+        categoryColor: 'brown',
+        title: 'The Rise of Salt Coffee',
+        subtitle: 'Hue Culinary Innovation',
+        excerpt: 'A surprising harmony between salty cream and bold Vietnamese robusta.',
+        image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=900&q=80',
+        imageAlt: 'Salt coffee',
+        tag: 'Hue Special',
+        tagColor: 'brown',
+        readTime: '4 min read',
+        publishedAt: 'April 9, 2026',
+        featured: false,
+    },
+]
+
+export default function StoriesPage() {
+    return (
+        <div className="min-h-screen bg-[#F5EDE3] dark:bg-[#1C1009]">
+            <StoriesClient stories={STORIES} />
+        </div>
+    )
+}
