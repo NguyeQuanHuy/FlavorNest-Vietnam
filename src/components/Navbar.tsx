@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import UserAvatar from './UserAvatar';
 import SearchModal from './SearchModal';
+import MobileMenu from './MobileMenu';
 import { Heart } from 'lucide-react';
 import { auth } from '../auth';
 
@@ -53,7 +54,6 @@ export default async function Navbar() {
         ]
     };
 
-    // ── Reusable dropdown column renderer ─────────────────────────────────
     function DropdownMenu({ menu }: { menu: typeof recipesMenu }) {
         return (
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -94,7 +94,7 @@ export default async function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-fn-brown/5">
-            <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
 
                 {/* Logo */}
                 <div className="flex-shrink-0">
@@ -111,14 +111,13 @@ export default async function Navbar() {
                     </Link>
                 </div>
 
-                {/* Navigation */}
+                {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-10 h-full">
                     <Link href="/" className="group relative py-2">
                         <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Home</span>
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </Link>
 
-                    {/* Recipes dropdown */}
                     <div className="group relative h-full flex items-center">
                         <Link href="/recipes" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">
                             Recipes
@@ -127,7 +126,6 @@ export default async function Navbar() {
                         <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </div>
 
-                    {/* Stories dropdown */}
                     <div className="group relative h-full flex items-center">
                         <Link href="/stories" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">
                             Stories
@@ -143,8 +141,9 @@ export default async function Navbar() {
                 </div>
 
                 {/* Right utilities */}
-                <div className="flex items-center gap-4 sm:gap-5">
+                <div className="flex items-center gap-3 sm:gap-4">
                     <SearchModal />
+
                     <Link
                         href="/favorites"
                         title="My Favorites"
@@ -153,24 +152,29 @@ export default async function Navbar() {
                         <Heart className="w-5 h-5 transition-transform group-hover:scale-110" />
                     </Link>
 
-                    <div className="h-8 w-[1px] bg-fn-brown/10 hidden sm:block" />
+                    {/* Desktop: Sign In / Avatar */}
+                    <div className="hidden md:flex items-center gap-4">
+                        <div className="h-8 w-[1px] bg-fn-brown/10" />
+                        {session?.user ? (
+                            <Link href="/profile" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
+                                <div className="relative">
+                                    <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
+                                    <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" />
+                                </div>
+                                <div className="flex-col items-start hidden sm:flex">
+                                    <span className="text-[9px] uppercase tracking-tighter text-fn-brown/40 font-black">FlavorNest Chef</span>
+                                    <span className="text-sm font-bold text-fn-brown group-hover:text-fn-amber transition-colors">{session.user.name}</span>
+                                </div>
+                            </Link>
+                        ) : (
+                            <Link href="/login" className="inline-flex items-center justify-center px-7 py-2.5 font-bold text-white bg-fn-brown rounded-full hover:bg-fn-amber transition-all shadow-lg shadow-fn-brown/10">
+                                <span className="text-sm tracking-wide">Sign In</span>
+                            </Link>
+                        )}
+                    </div>
 
-                    {session?.user ? (
-                        <Link href="/profile" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
-                            <div className="relative">
-                                <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
-                                <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" />
-                            </div>
-                            <div className="flex-col items-start hidden sm:flex">
-                                <span className="text-[9px] uppercase tracking-tighter text-fn-brown/40 font-black">FlavorNest Chef</span>
-                                <span className="text-sm font-bold text-fn-brown group-hover:text-fn-amber transition-colors">{session.user.name}</span>
-                            </div>
-                        </Link>
-                    ) : (
-                        <Link href="/login" className="relative inline-flex items-center justify-center px-7 py-2.5 overflow-hidden font-bold text-white transition-all duration-300 bg-fn-brown rounded-full hover:bg-fn-amber group shadow-lg shadow-fn-brown/10">
-                            <span className="relative text-sm tracking-wide">Sign In</span>
-                        </Link>
-                    )}
+                    {/* Mobile: Hamburger */}
+                    <MobileMenu />
                 </div>
             </div>
         </nav>
