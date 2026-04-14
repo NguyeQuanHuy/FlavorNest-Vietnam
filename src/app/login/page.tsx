@@ -113,7 +113,7 @@ export default function LoginPage() {
                 <div className="mt-8 pt-6 border-t border-white/10 text-center">
                     <p className="text-[#F5EDE3]/50 text-sm">
                         Chưa có tài khoản?{' '}
-                        <Link href="/login" className="text-[#D97706] font-semibold hover:underline">
+                        <Link href="/auth/signup" className="text-[#D97706] font-semibold hover:underline">
                             Đăng ký miễn phí
                         </Link>
                     </p>
