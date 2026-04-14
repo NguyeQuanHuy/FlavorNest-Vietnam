@@ -156,7 +156,7 @@ export default async function Navbar() {
                     <div className="hidden md:flex items-center gap-4">
                         <div className="h-8 w-[1px] bg-fn-brown/10" />
                         {session?.user ? (
-                            <Link href="/profile" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
+                            <Link href="/account" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
                                 <div className="relative">
                                     <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
                                     <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" />
