@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 // Định nghĩa kiểu dữ liệu (Types)
 export type { CategoryColor } from './_components/StoriesClient'
+import type { CategoryColor } from './_components/StoriesClient'
 
 export interface Story {
     slug: string
