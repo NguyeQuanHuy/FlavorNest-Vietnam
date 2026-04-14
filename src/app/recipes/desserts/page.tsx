@@ -681,21 +681,21 @@ export default function DessertsPage() {
                             { label: 'Breakfast', emoji: '🌅', href: '/recipes/breakfast', sub: 'Start the day right' },
                             { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes', sub: 'The heart of the table' },
                             { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food', sub: 'Sidewalk classics' },
-                            {
-                                label: 'Northern Cuisine', emoji: '🏯', href: '/recipes/north', sub: 'Hanoi's finest' },
-              { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel', sub: 'Where to eat in Vietnam' },
-            ].map(item => (
-                                    <Link
-                                        key={item.href} href={item.href}
-                                        style={{ display: 'flex', flexDirection: 'column', gap: 5, padding: '20px 22px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.22s' }}
-                                        onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.35)'; el.style.background = 'rgba(217,119,6,0.06)'; el.style.transform = 'translateY(-4px)'; }}
-                                        onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.07)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
-                                    >
-                                        <span style={{ fontSize: 26 }}>{item.emoji}</span>
-                                        <span style={{ fontSize: 14, fontWeight: 600, color: 'white' }}>{item.label}</span>
-                                        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontStyle: 'italic' }}>{item.sub}</span>
-                                    </Link>
-                                ))}
+                            { label: 'Northern Cuisine', emoji: '🏯', href: '/recipes/north', sub: "Hanoi's finest" },
+
+                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel', sub: 'Where to eat in Vietnam' },
+                        ].map(item => (
+                            <Link
+                                key={item.href} href={item.href}
+                                style={{ display: 'flex', flexDirection: 'column', gap: 5, padding: '20px 22px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.22s' }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.35)'; el.style.background = 'rgba(217,119,6,0.06)'; el.style.transform = 'translateY(-4px)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.07)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
+                            >
+                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
+                                <span style={{ fontSize: 14, fontWeight: 600, color: 'white' }}>{item.label}</span>
+                                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontStyle: 'italic' }}>{item.sub}</span>
+                            </Link>
+                        ))}
                     </div>
                 </motion.div>
             </section>
