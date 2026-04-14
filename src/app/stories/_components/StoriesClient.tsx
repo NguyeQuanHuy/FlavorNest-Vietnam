@@ -1,22 +1,16 @@
 'use client'
 // ─────────────────────────────────────────────────────────────────────────────
 //  app/stories/_components/StoriesClient.tsx
-//
-//  'use client' because:
-//    - useState for active category filter
-//    - Framer Motion animations (client-only)
-//
-//  Receives stories as a prop from the Server Component parent
-//  so data fetching stays on the server side.
 // ─────────────────────────────────────────────────────────────────────────────
-
-'use client'
 
 import { useState, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import type { Story, CategoryColor } from '../page'
+import type { Story } from '../page'
+
+// ── CategoryColor defined here (single source of truth) ───────────────────
+export type CategoryColor = 'amber' | 'forest' | 'brown'
 
 // ── Category filter config ─────────────────────────────────────────────────
 const CATEGORIES = ['All', 'Heritage', 'Traditional', 'Street Food', 'Fusion'] as const
@@ -66,7 +60,6 @@ interface Props {
 export default function StoriesClient({ stories }: Props) {
     const [activeCategory, setActiveCategory] = useState<Category>('All')
 
-    // Derive featured story + list from filter
     const filtered = useMemo(
         () =>
             activeCategory === 'All'
@@ -80,16 +73,12 @@ export default function StoriesClient({ stories }: Props) {
 
     return (
         <>
-            {/* ═══════════════════════════════════════════════════
-          HERO / PAGE HEADER
-      ═══════════════════════════════════════════════════ */}
+            {/* ═══ HERO / PAGE HEADER ═══════════════════════════════════════ */}
             <section className="relative pt-32 pb-16 px-5 overflow-hidden">
-                {/* Decorative background blobs */}
                 <div className="absolute -top-32 -right-32 w-[520px] h-[520px] bg-[#D97706]/8 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute top-0 -left-24 w-80 h-80 bg-[#166534]/6 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="max-w-5xl mx-auto relative z-10">
-                    {/* Eyebrow */}
                     <motion.div
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -102,7 +91,6 @@ export default function StoriesClient({ stories }: Props) {
                         </span>
                     </motion.div>
 
-                    {/* Main heading */}
                     <motion.h1
                         initial={{ opacity: 0, y: 18 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -125,9 +113,7 @@ export default function StoriesClient({ stories }: Props) {
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════════════
-          CATEGORY FILTER BAR
-      ═══════════════════════════════════════════════════ */}
+            {/* ═══ CATEGORY FILTER BAR ══════════════════════════════════════ */}
             <section className="sticky top-[72px] z-40 bg-[#F5EDE3]/94 dark:bg-[#1C1009]/94 backdrop-blur-xl border-b border-[#D97706]/12 py-3">
                 <div className="max-w-5xl mx-auto px-5 overflow-x-auto">
                     <div className="flex gap-2 w-max">
@@ -147,7 +133,6 @@ export default function StoriesClient({ stories }: Props) {
                   `}
                                 >
                                     {cat}
-                                    {/* Active indicator dot */}
                                     {active && (
                                         <motion.span
                                             layoutId="active-filter"
@@ -161,11 +146,8 @@ export default function StoriesClient({ stories }: Props) {
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════════════
-          MAIN CONTENT
-      ═══════════════════════════════════════════════════ */}
+            {/* ═══ MAIN CONTENT ═════════════════════════════════════════════ */}
             <div className="max-w-5xl mx-auto px-5 py-16 space-y-24">
-
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeCategory}
@@ -174,10 +156,7 @@ export default function StoriesClient({ stories }: Props) {
                         animate="visible"
                         exit="exit"
                     >
-                        {/* ─────────────────────────────────────────────
-                FEATURED / HERO STORY (large 2-col layout)
-                Matches the screenshot design exactly
-            ───────────────────────────────────────────── */}
+                        {/* Featured story */}
                         {featured && (
                             <motion.article
                                 custom={0}
@@ -186,7 +165,6 @@ export default function StoriesClient({ stories }: Props) {
                                 animate="visible"
                                 className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20"
                             >
-                                {/* Left: image */}
                                 <div className="relative">
                                     <div className="relative rounded-[28px] overflow-hidden aspect-[4/3] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
                                         <Image
@@ -198,11 +176,8 @@ export default function StoriesClient({ stories }: Props) {
                                             className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                                             quality={85}
                                         />
-                                        {/* Subtle gradient at bottom */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#1C1009]/30 via-transparent to-transparent" />
                                     </div>
-
-                                    {/* Floating tag badge (matches screenshot) */}
                                     <div className="absolute -bottom-4 right-6 lg:right-4">
                                         <span className="inline-flex items-center gap-1.5 bg-[#D97706] text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-[0_6px_24px_rgba(217,119,6,.4)]">
                                             {featured.tag}
@@ -210,36 +185,26 @@ export default function StoriesClient({ stories }: Props) {
                                     </div>
                                 </div>
 
-                                {/* Right: content */}
                                 <div className="pt-4 lg:pt-0">
-                                    {/* Category label */}
                                     <div className="flex items-center gap-2 mb-4">
                                         <div className={`w-1.5 h-1.5 rounded-full ${TAG_COLOR[featured.categoryColor].dot}`} />
                                         <span className={`text-xs font-bold uppercase tracking-[.18em] ${TAG_COLOR[featured.categoryColor].text}`}>
                                             {featured.subtitle}
                                         </span>
                                     </div>
-
-                                    {/* Title */}
                                     <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-5 group-hover:text-[#D97706] transition-colors duration-300">
                                         {featured.title}
                                     </h2>
-
-                                    {/* Excerpt with left border (matches screenshot) */}
                                     <blockquote className="border-l-[3px] border-[#D97706] pl-4 mb-7">
                                         <p className="text-[#4B2E1A]/65 dark:text-[#F5EDE3]/58 text-[15px] leading-relaxed italic">
                                             {featured.excerpt}
                                         </p>
                                     </blockquote>
-
-                                    {/* Meta row */}
                                     <div className="flex items-center gap-4 text-xs text-[#4B2E1A]/45 dark:text-[#F5EDE3]/38 mb-7">
                                         <span>{featured.publishedAt}</span>
                                         <span className="w-1 h-1 rounded-full bg-[#D97706]/40" />
                                         <span>{featured.readTime}</span>
                                     </div>
-
-                                    {/* CTA link (matches screenshot) */}
                                     <Link
                                         href={`/stories/${featured.slug}`}
                                         className="group/link inline-flex items-center gap-2 text-[#4B2E1A] dark:text-[#F5EDE3] font-semibold text-sm border-b-2 border-[#4B2E1A]/25 dark:border-[#F5EDE3]/25 pb-0.5 hover:text-[#D97706] hover:border-[#D97706] transition-all duration-250"
@@ -251,9 +216,6 @@ export default function StoriesClient({ stories }: Props) {
                             </motion.article>
                         )}
 
-                        {/* ─────────────────────────────────────────────
-                DIVIDER
-            ───────────────────────────────────────────── */}
                         {rest.length > 0 && (
                             <div className="flex items-center gap-4 mb-16">
                                 <div className="flex-1 h-px bg-[#D97706]/15" />
@@ -264,17 +226,12 @@ export default function StoriesClient({ stories }: Props) {
                             </div>
                         )}
 
-                        {/* ─────────────────────────────────────────────
-                REST OF STORIES — stacked 2-col on large screens
-                Alternates image left/right for visual rhythm
-            ───────────────────────────────────────────── */}
                         <div className="space-y-14">
                             {rest.map((story, i) => (
                                 <StoryCard key={story.slug} story={story} index={i + 1} flip={i % 2 !== 0} />
                             ))}
                         </div>
 
-                        {/* Empty state */}
                         {filtered.length === 0 && (
                             <div className="flex flex-col items-center justify-center py-32 text-center">
                                 <div className="text-5xl mb-4">🍜</div>
@@ -290,16 +247,13 @@ export default function StoriesClient({ stories }: Props) {
                 </AnimatePresence>
             </div>
 
-            {/* ═══════════════════════════════════════════════════
-          NEWSLETTER CTA
-      ═══════════════════════════════════════════════════ */}
             <NewsletterBanner />
         </>
     )
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  StoryCard — compact 2-col card for non-featured stories
+//  StoryCard
 // ─────────────────────────────────────────────────────────────────────────────
 function StoryCard({
     story,
@@ -324,7 +278,6 @@ function StoryCard({
         ${flip ? 'lg:[&>:first-child]:order-2 lg:[&>:last-child]:order-1' : ''}
       `}
         >
-            {/* Image */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
                 <Image
                     src={story.image}
@@ -335,8 +288,6 @@ function StoryCard({
                     quality={80}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C1009]/25 via-transparent to-transparent" />
-
-                {/* Tag badge */}
                 <div className="absolute bottom-4 right-4">
                     <span className={`inline-flex items-center gap-1.5 ${colors.bg} ${colors.text} text-[10px] font-bold px-3 py-1.5 rounded-full backdrop-blur-sm`}>
                         {story.tag}
@@ -344,36 +295,26 @@ function StoryCard({
                 </div>
             </div>
 
-            {/* Content */}
             <div>
-                {/* Category label */}
                 <div className="flex items-center gap-2 mb-3">
                     <div className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
                     <span className={`text-[11px] font-bold uppercase tracking-[.18em] ${colors.text}`}>
                         {story.subtitle}
                     </span>
                 </div>
-
-                {/* Title */}
                 <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-4 group-hover:text-[#D97706] transition-colors duration-300">
                     {story.title}
                 </h2>
-
-                {/* Excerpt */}
                 <blockquote className="border-l-[3px] border-[#D97706]/40 pl-4 mb-5">
                     <p className="text-[#4B2E1A]/62 dark:text-[#F5EDE3]/55 text-sm leading-relaxed italic line-clamp-3">
                         {story.excerpt}
                     </p>
                 </blockquote>
-
-                {/* Meta */}
                 <div className="flex items-center gap-3 text-xs text-[#4B2E1A]/40 dark:text-[#F5EDE3]/35 mb-5">
                     <span>{story.publishedAt}</span>
                     <span className="w-1 h-1 rounded-full bg-[#D97706]/35" />
                     <span>{story.readTime}</span>
                 </div>
-
-                {/* CTA */}
                 <Link
                     href={`/stories/${story.slug}`}
                     className="group/link inline-flex items-center gap-2 text-[#4B2E1A] dark:text-[#F5EDE3] font-semibold text-sm border-b-2 border-[#4B2E1A]/20 dark:border-[#F5EDE3]/20 pb-0.5 hover:text-[#D97706] hover:border-[#D97706] transition-all duration-250"
@@ -387,14 +328,12 @@ function StoryCard({
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  NewsletterBanner — bottom CTA section
+//  NewsletterBanner
 // ─────────────────────────────────────────────────────────────────────────────
 function NewsletterBanner() {
     return (
         <section className="relative py-24 px-5 overflow-hidden">
-            {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#4B2E1A] via-[#3a2010] to-[#166534]" />
-            {/* Rings */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-white/4 rounded-full pointer-events-none" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] border border-white/6 rounded-full pointer-events-none" />
             <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#D97706]/18 rounded-full blur-3xl" />
