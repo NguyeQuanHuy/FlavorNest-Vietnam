@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -40,62 +41,59 @@ export default function MobileMenu() {
         setExpanded(null)
     }
 
-    return (
-        <>
-            {/* Hamburger button — only on mobile */}
-            <button
-                onClick={() => setOpen(!open)}
-                className="md:hidden p-2.5 text-fn-brown/70 hover:text-fn-amber bg-fn-brown/5 rounded-xl transition-all"
-                aria-label="Toggle menu"
-            >
-                {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-
-            {/* Overlay */}
-            {open && (
-                <div
-                    className="fixed inset-0 bg-black/30 z-40 md:hidden"
-                    onClick={close}
-                />
-            )}
+    const drawer = open ? (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 9999 }}>
+            {/* Backdrop */}
+            <div
+                className="absolute inset-0 bg-black/40"
+                onClick={close}
+            />
 
             {/* Drawer */}
-            <div className={`
-                fixed top-0 left-0 h-full w-[300px] bg-white z-50 shadow-2xl
-                transform transition-transform duration-300 md:hidden
-                ${open ? 'translate-x-0' : '-translate-x-full'}
-            `}>
-                {/* Drawer header */}
-                <div className="flex items-center justify-between px-6 h-20 border-b border-fn-brown/8">
+            <div
+                className="absolute top-0 left-0 bg-white shadow-2xl flex flex-col"
+                style={{ width: '82vw', maxWidth: '320px', height: '100dvh' }}
+            >
+                {/* Header */}
+                <div
+                    className="flex items-center justify-between px-6 border-b border-fn-brown/8"
+                    style={{ height: '72px', flexShrink: 0 }}
+                >
                     <div>
                         <span className="block text-lg font-bold text-fn-brown leading-none">FlavorNest</span>
                         <span className="text-[10px] text-fn-amber font-medium tracking-[0.2em] uppercase">Vietnam Gourmet</span>
                     </div>
-                    <button onClick={close} className="p-2 text-fn-brown/50 hover:text-fn-amber transition-colors">
+                    <button
+                        onClick={close}
+                        className="p-2 text-fn-brown/50 hover:text-fn-amber transition-colors rounded-lg"
+                    >
                         <X className="w-5 h-5" />
                     </button>
                 </div>
 
-                {/* Links */}
-                <nav className="px-4 py-6 overflow-y-auto h-[calc(100%-80px)]">
+                {/* Scrollable links */}
+                <nav className="flex-1 overflow-y-auto px-4 py-5">
                     {MOBILE_LINKS.map((link) => (
                         <div key={link.label} className="mb-1">
                             {link.children ? (
                                 <>
                                     <button
                                         onClick={() => setExpanded(expanded === link.label ? null : link.label)}
-                                        className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-fn-brown/70 hover:text-fn-amber hover:bg-fn-amber/5 font-medium transition-all"
+                                        className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-fn-brown/70 hover:text-fn-amber hover:bg-fn-amber/5 font-medium transition-all text-left"
                                     >
                                         <span>{link.label}</span>
-                                        <ChevronDown className={`w-4 h-4 transition-transform ${expanded === link.label ? 'rotate-180' : ''}`} />
+                                        <ChevronDown
+                                            className={`w-4 h-4 transition-transform duration-200 ${expanded === link.label ? 'rotate-180' : ''
+                                                }`}
+                                        />
                                     </button>
 
                                     {expanded === link.label && (
-                                        <div className="ml-4 mt-1 mb-2 border-l-2 border-fn-amber/20 pl-4 flex flex-col gap-1">
+                                        <div className="ml-4 mt-1 mb-2 border-l-2 border-fn-amber/20 pl-4 flex flex-col gap-0.5">
                                             <Link
                                                 href={link.href}
                                                 onClick={close}
-                                                className="text-xs font-bold text-fn-amber uppercase tracking-wider py-1.5"
+                                                className="text-xs font-bold text-fn-amber uppercase tracking-wider py-2"
                                             >
                                                 View All {link.label} →
                                             </Link>
@@ -146,6 +144,22 @@ export default function MobileMenu() {
                     </div>
                 </nav>
             </div>
+        </div>
+    ) : null
+
+    return (
+        <>
+            {/* Hamburger button */}
+            <button
+                onClick={() => setOpen(!open)}
+                className="md:hidden p-2.5 text-fn-brown/70 hover:text-fn-amber bg-fn-brown/5 rounded-xl transition-all"
+                aria-label="Toggle menu"
+            >
+                {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+
+            {/* Portal renders drawer directly into <body>, escaping any parent overflow/height constraints */}
+            {typeof document !== 'undefined' && createPortal(drawer, document.body)}
         </>
     )
 }
