@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { auth } from '@/auth';
 import UserAvatar from './UserAvatar';
 import SearchModal from './SearchModal';
-import { Heart } from 'lucide-react'; // Import icon để dùng cho đẹp
+import { Heart } from 'lucide-react';
+import { auth } from '../auth';
 
 export default async function Navbar() {
+    // MỞ COMMENT DÒNG NÀY RA ĐỂ VERCEL BIẾT SESSION LÀ GÌ
     const session = await auth();
 
-    // Định nghĩa nội dung Menu để dễ quản lý
     const recipesMenu = {
         title: "Explore All Recipes",
         link: "/recipes",
@@ -71,14 +71,11 @@ export default async function Navbar() {
 
                 {/* --- NAVIGATION MENU --- */}
                 <div className="hidden md:flex items-center gap-10 h-full">
-
-                    {/* Mục Home */}
                     <Link href="/" className="group relative py-2">
                         <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Home</span>
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full"></span>
                     </Link>
 
-                    {/* MỤC RECIPES */}
                     <div className="group relative h-full flex items-center">
                         <Link href="/recipes" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors flex items-center gap-1">
                             Recipes
@@ -103,7 +100,6 @@ export default async function Navbar() {
                         <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full"></span>
                     </div>
 
-                    {/* MỤC STORIES */}
                     <div className="group relative h-full flex items-center">
                         <Link href="/stories" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors flex items-center gap-1">
                             Stories
@@ -131,7 +127,6 @@ export default async function Navbar() {
                         <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full"></span>
                     </div>
 
-                    {/* Mục About */}
                     <Link href="/about" className="group relative py-2">
                         <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">About</span>
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full"></span>
@@ -140,10 +135,7 @@ export default async function Navbar() {
 
                 {/* --- RIGHT UTILITIES --- */}
                 <div className="flex items-center gap-4 sm:gap-5">
-                    {/* 1. Nút Search */}
                     <SearchModal />
-
-                    {/* 2. NÚT FAVORITES (MỚI THÊM) */}
                     <Link
                         href="/favorites"
                         title="My Favorites"
@@ -158,7 +150,7 @@ export default async function Navbar() {
                         <div className="flex items-center gap-4">
                             <Link href="/profile" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
                                 <div className="relative">
-                                    <UserAvatar src={session.user.image} name={session.user.name} />
+                                    <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
                                     <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
                                 </div>
                                 <div className="flex flex-col items-start hidden sm:flex">
@@ -173,7 +165,6 @@ export default async function Navbar() {
                         </Link>
                     )}
                 </div>
-
             </div>
         </nav>
     );
