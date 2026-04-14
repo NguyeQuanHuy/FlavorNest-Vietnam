@@ -6,8 +6,8 @@ import type { Metadata } from 'next'
 export const travelGuideMetadata: Metadata = {
     title: 'Where to Eat in Vietnam — Food Travel Guide | FlavorNest Vietnam',
     description:
-        'From Hanoi's legendary Phở Bò to Hội An's Cao Lầu and Saigon's Bánh Mì — your complete guide to eating your way through Vietnam. 8 destination guides with must -try restaurants, local tips, and the best time to visit.',
-  keywords: [
+        "From Hanoi's legendary Phở Bò to Hội An's Cao Lầu and Saigon's Bánh Mì — your complete guide to eating your way through Vietnam.",
+    keywords: [
         'where to eat vietnam',
         'vietnam food travel guide',
         'best vietnamese food',
@@ -21,7 +21,7 @@ export const travelGuideMetadata: Metadata = {
         'vung tau seafood',
         'vietnamese cuisine regions',
         'am thuc viet nam',
-  ],
+    ],
     authors: [{ name: 'FlavorNest Vietnam' }],
     openGraph: {
         type: 'website',
