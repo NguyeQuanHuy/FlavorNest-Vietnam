@@ -131,7 +131,7 @@ export default function AboutPage() {
                             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Our Story</span>
                         </div>
                         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#2D1A0E', margin: '0 0 20px', lineHeight: 1.1 }}>
-                            It started with a bowl of phở at 6am in Hanoi
+                            It started with a bowl of Pho at 6am in Hanoi
                         </h2>
                         <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.65)', lineHeight: 1.8, margin: '0 0 18px' }}>
                             In 2022, our founder sat on a plastic stool on Bát Đàn street, eating what she still considers the best bowl of phở she has ever had. She asked the owner for the recipe. The owner laughed and said: "I have been making this for forty years. I do not have a recipe."
