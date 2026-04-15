@@ -80,7 +80,7 @@ export const RECIPES: Recipe[] = [
         title: 'Hanoi Grilled Pork Vermicelli',
         subtitle: 'Bún Chả Hà Nội',
         shortDescription: 'Smoky chargrilled pork patties in a tangy warm broth, paired with cool rice vermicelli and a mountain of fresh herbs.',
-        image: 'https://images.unsplash.com/photo-1623682785702-f0c9fcfe2fc0?auto=format&fit=crop&w=800&q=80',
+        image: 'https://tourinhanoi.com/wp-content/uploads/bun-cha-hanoi-2.jpg',
         imageAlt: 'Bun Cha Hanoi with grilled pork and herbs',
         prepTime: '20 min',
         cookTime: '25 min',
