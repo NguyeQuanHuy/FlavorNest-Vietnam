@@ -1,19 +1,5 @@
 'use client'
 
-/**
- * FlavorNest Vietnam — My Account Page (Redesigned)
- * src/app/account/page.tsx
- *
- * Improvements from Gemini review:
- * - Full English UI
- * - Larger, more visual favorite cards
- * - Personalized greeting
- * - Activity chart (weekly cooking activity)
- * - Better avatar upload UX
- * - Tighter tab navigation
- * - More interactive overview
- */
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
@@ -22,7 +8,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 type Tab = 'overview' | 'favorites' | 'settings'
 
 interface UserProfile {
@@ -44,7 +29,6 @@ interface FavoriteRecipe {
     savedAt: string
 }
 
-// ─── Mock data ────────────────────────────────────────────────────────────────
 const MOCK_USER: UserProfile = {
     name: 'Nguyễn Quan Huy',
     email: 'huy@flavornest.vn',
@@ -54,48 +38,17 @@ const MOCK_USER: UserProfile = {
 }
 
 const SAMPLE_FAVORITES: FavoriteRecipe[] = [
-    {
-        slug: 'hanoi-beef-pho',
-        title: 'Hanoi Beef Pho',
-        subtitle: 'Phở Bò Hà Nội',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=800&q=80',
-        time: '3 hrs', difficulty: 'Medium', category: 'Soup', savedAt: '2025-01-10',
-    },
-    {
-        slug: 'banh-cuon',
-        title: 'Steamed Rice Rolls',
-        subtitle: 'Bánh Cuốn',
-        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80',
-        time: '45 min', difficulty: 'Medium', category: 'Breakfast', savedAt: '2025-01-15',
-    },
-    {
-        slug: 'banh-flan',
-        title: 'Vietnamese Caramel Flan',
-        subtitle: 'Bánh Flan',
-        image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80',
-        time: '3 hrs', difficulty: 'Medium', category: 'Dessert', savedAt: '2025-01-20',
-    },
-    {
-        slug: 'bun-cha-hanoi',
-        title: 'Hanoi Grilled Pork Vermicelli',
-        subtitle: 'Bún Chả Hà Nội',
-        image: 'https://images.unsplash.com/photo-1742893368398-128bded9c656?auto=format&fit=crop&w=800&q=80',
-        time: '45 min', difficulty: 'Easy', category: 'Noodles', savedAt: '2025-02-01',
-    },
+    { slug: 'hanoi-beef-pho', title: 'Hanoi Beef Pho', subtitle: 'Phở Bò Hà Nội', image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=800&q=80', time: '3 hrs', difficulty: 'Medium', category: 'Soup', savedAt: '2025-01-10' },
+    { slug: 'banh-cuon', title: 'Steamed Rice Rolls', subtitle: 'Bánh Cuốn', image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80', time: '45 min', difficulty: 'Medium', category: 'Breakfast', savedAt: '2025-01-15' },
+    { slug: 'banh-flan', title: 'Vietnamese Caramel Flan', subtitle: 'Bánh Flan', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80', time: '3 hrs', difficulty: 'Medium', category: 'Dessert', savedAt: '2025-01-20' },
+    { slug: 'bun-cha-hanoi', title: 'Hanoi Grilled Pork Vermicelli', subtitle: 'Bún Chả Hà Nội', image: 'https://images.unsplash.com/photo-1742893368398-128bded9c656?auto=format&fit=crop&w=800&q=80', time: '45 min', difficulty: 'Easy', category: 'Noodles', savedAt: '2025-02-01' },
 ]
 
-// Mock weekly activity data
 const WEEKLY_ACTIVITY = [
-    { day: 'Mon', count: 2 },
-    { day: 'Tue', count: 0 },
-    { day: 'Wed', count: 3 },
-    { day: 'Thu', count: 1 },
-    { day: 'Fri', count: 4 },
-    { day: 'Sat', count: 2 },
-    { day: 'Sun', count: 1 },
+    { day: 'Mon', count: 2 }, { day: 'Tue', count: 0 }, { day: 'Wed', count: 3 },
+    { day: 'Thu', count: 1 }, { day: 'Fri', count: 4 }, { day: 'Sat', count: 2 }, { day: 'Sun', count: 1 },
 ]
 
-// ─── Schemas ──────────────────────────────────────────────────────────────────
 const profileSchema = z.object({
     name: z.string().min(1, 'Please enter your name').max(40, 'Max 40 characters'),
     bio: z.string().max(160, 'Max 160 characters').optional().or(z.literal('')),
@@ -105,27 +58,19 @@ const passwordSchema = z.object({
     currentPassword: z.string().min(1, 'Enter current password'),
     newPassword: z.string().min(6, 'Min 6 characters'),
     confirmPassword: z.string().min(1, 'Confirm your password'),
-}).refine(d => d.newPassword === d.confirmPassword, {
-    message: 'Passwords do not match',
-    path: ['confirmPassword'],
-})
+}).refine(d => d.newPassword === d.confirmPassword, { message: 'Passwords do not match', path: ['confirmPassword'] })
 
 type ProfileForm = z.infer<typeof profileSchema>
 type PasswordForm = z.infer<typeof passwordSchema>
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-const DIFF_COLOR: Record<string, string> = {
-    Easy: '#059669', Medium: '#D97706', Hard: '#DC2626',
-}
+const DIFF_COLOR: Record<string, string> = { Easy: '#059669', Medium: '#D97706', Hard: '#DC2626' }
 
 function formatDate(iso: string) {
     return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
 }
-
 function getInitials(name: string) {
     return name.split(' ').map(w => w[0]).slice(-2).join('').toUpperCase()
 }
-
 function getGreeting() {
     const h = new Date().getHours()
     if (h < 12) return 'Good morning'
@@ -133,7 +78,6 @@ function getGreeting() {
     return 'Good evening'
 }
 
-// ─── Activity Chart ───────────────────────────────────────────────────────────
 function ActivityChart() {
     const max = Math.max(...WEEKLY_ACTIVITY.map(d => d.count))
     return (
@@ -149,14 +93,7 @@ function ActivityChart() {
                             initial={{ height: 0 }}
                             animate={{ height: max > 0 ? `${(d.count / max) * 44}px` : '4px' }}
                             transition={{ duration: 0.5, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-                            style={{
-                                width: '100%',
-                                background: d.count > 0
-                                    ? 'linear-gradient(to top, #D97706, #F59E0B)'
-                                    : 'rgba(75,46,26,0.08)',
-                                borderRadius: '4px 4px 2px 2px',
-                                minHeight: 4,
-                            }}
+                            style={{ width: '100%', background: d.count > 0 ? 'linear-gradient(to top, #D97706, #F59E0B)' : 'rgba(75,46,26,0.08)', borderRadius: '4px 4px 2px 2px', minHeight: 4 }}
                         />
                         <span style={{ fontSize: 10, color: 'rgba(75,46,26,0.4)', fontWeight: 600 }}>{d.day}</span>
                     </div>
@@ -166,86 +103,42 @@ function ActivityChart() {
     )
 }
 
-// ─── Favorite Card (larger, more visual) ─────────────────────────────────────
 function FavoriteCard({ recipe, onRemove }: { recipe: FavoriteRecipe; onRemove: () => void }) {
     const [hovered, setHovered] = useState(false)
     const [removing, setRemoving] = useState(false)
-
     return (
-        <motion.div
-            layout
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: removing ? 0 : 1, scale: removing ? 0.9 : 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.32 }}
-            style={{
-                background: 'white',
-                borderRadius: 22,
-                overflow: 'hidden',
-                border: hovered ? '1.5px solid rgba(217,119,6,0.3)' : '1px solid rgba(75,46,26,0.07)',
-                transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
-                boxShadow: hovered ? '0 24px 52px rgba(75,46,26,0.14)' : '0 2px 8px rgba(75,46,26,0.05)',
-                transition: 'all 0.33s cubic-bezier(0.34,1.56,0.64,1)',
-                cursor: 'pointer',
-            }}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+        <motion.div layout initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: removing ? 0 : 1, scale: removing ? 0.9 : 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.32 }}
+            style={{ background: 'white', borderRadius: 22, overflow: 'hidden', border: hovered ? '1.5px solid rgba(217,119,6,0.3)' : '1px solid rgba(75,46,26,0.07)', transform: hovered ? 'translateY(-6px)' : 'translateY(0)', boxShadow: hovered ? '0 24px 52px rgba(75,46,26,0.14)' : '0 2px 8px rgba(75,46,26,0.05)', transition: 'all 0.33s cubic-bezier(0.34,1.56,0.64,1)', cursor: 'pointer' }}
+            onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
         >
-            {/* Larger image */}
             <div style={{ position: 'relative', height: 200, overflow: 'hidden', background: '#f5ede3' }}>
-                <Image
-                    src={recipe.image} alt={recipe.title} fill
-                    style={{ objectFit: 'cover', transform: hovered ? 'scale(1.07)' : 'scale(1)', transition: 'transform 0.55s ease' }}
-                    sizes="(max-width:640px) 100vw, 33vw" quality={80}
-                />
+                <Image src={recipe.image} alt={recipe.title} fill style={{ objectFit: 'cover', transform: hovered ? 'scale(1.07)' : 'scale(1)', transition: 'transform 0.55s ease' }} sizes="(max-width:640px) 100vw, 33vw" quality={80} />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(45,26,14,0.75) 0%, transparent 55%)' }} />
-
-                {/* Category */}
-                <span style={{ position: 'absolute', top: 12, left: 12, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(8px)', fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: '#4B2E1A', padding: '4px 11px', borderRadius: 100 }}>
-                    {recipe.category}
-                </span>
-
-                {/* Remove button */}
-                <motion.button
-                    whileTap={{ scale: 0.85 }}
-                    onClick={() => { setRemoving(true); setTimeout(onRemove, 320) }}
+                <span style={{ position: 'absolute', top: 12, left: 12, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(8px)', fontSize: 10, fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase', color: '#4B2E1A', padding: '4px 11px', borderRadius: 100 }}>{recipe.category}</span>
+                <motion.button whileTap={{ scale: 0.85 }} onClick={() => { setRemoving(true); setTimeout(onRemove, 320) }}
                     style={{ position: 'absolute', top: 10, right: 10, width: 32, height: 32, borderRadius: '50%', background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(8px)', border: 'none', color: 'white', fontSize: 13, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'background 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.background = 'rgba(220,38,38,0.8)')}
                     onMouseLeave={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.45)')}
-                    aria-label="Remove from favorites"
-                >
-                    ✕
-                </motion.button>
-
-                {/* Title overlay */}
+                    aria-label="Remove from favorites">✕</motion.button>
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 16px' }}>
-                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'white', margin: 0, lineHeight: 1.2, textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>
-                        {recipe.title}
-                    </h3>
+                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'white', margin: 0, lineHeight: 1.2, textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>{recipe.title}</h3>
                     <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', margin: '3px 0 0', fontStyle: 'italic' }}>{recipe.subtitle}</p>
                 </div>
             </div>
-
-            {/* Body */}
             <div style={{ padding: '14px 16px 16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                         <span style={{ fontSize: 10, fontWeight: 700, color: DIFF_COLOR[recipe.difficulty], background: `${DIFF_COLOR[recipe.difficulty]}18`, padding: '3px 9px', borderRadius: 7 }}>{recipe.difficulty}</span>
                         <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.4)' }}>⏱ {recipe.time}</span>
                     </div>
-                    <Link href={`/recipes/${recipe.slug}`} style={{ fontSize: 12, fontWeight: 700, color: '#D97706', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 3 }}>
-                        Cook it →
-                    </Link>
+                    <Link href={`/recipes/${recipe.slug}`} style={{ fontSize: 12, fontWeight: 700, color: '#D97706', textDecoration: 'none' }}>Cook it →</Link>
                 </div>
-                <p style={{ fontSize: 11, color: 'rgba(75,46,26,0.3)', margin: '8px 0 0' }}>
-                    Saved {formatDate(recipe.savedAt)}
-                </p>
+                <p style={{ fontSize: 11, color: 'rgba(75,46,26,0.3)', margin: '8px 0 0' }}>Saved {formatDate(recipe.savedAt)}</p>
             </div>
         </motion.div>
     )
 }
 
-// ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function AccountPage() {
     const [activeTab, setActiveTab] = useState<Tab>('overview')
     const [user, setUser] = useState<UserProfile>(MOCK_USER)
@@ -256,14 +149,13 @@ export default function AccountPage() {
     const fileRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
-    try {
-        const stored = localStorage.getItem('fn_favorites')
-        setFavorites(stored ? JSON.parse(stored) : SAMPLE_FAVORITES)
-        // Load saved avatar
-        const savedAvatar = localStorage.getItem('fn_avatar')
-        if (savedAvatar) setUser(prev => ({ ...prev, avatar: savedAvatar }))
-    } catch { setFavorites(SAMPLE_FAVORITES) }
-}, [])
+        try {
+            const stored = localStorage.getItem('fn_favorites')
+            setFavorites(stored ? JSON.parse(stored) : SAMPLE_FAVORITES)
+            const savedAvatar = localStorage.getItem('fn_avatar')
+            if (savedAvatar) setUser(prev => ({ ...prev, avatar: savedAvatar }))
+        } catch { setFavorites(SAMPLE_FAVORITES) }
+    }, [])
 
     const saveFavorites = (next: FavoriteRecipe[]) => {
         setFavorites(next)
@@ -272,17 +164,16 @@ export default function AccountPage() {
 
     const removeFavorite = (slug: string) => saveFavorites(favorites.filter(f => f.slug !== slug))
 
-    // Avatar upload
     const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-    const reader = new FileReader()
-    reader.onload = () => {
-        const avatarData = reader.result as string
-        setUser(prev => ({ ...prev, avatar: avatarData }))
-        try { localStorage.setItem('fn_avatar', avatarData) } catch {}
-    }
-    reader.readAsDataURL(file)
+        const file = e.target.files?.[0]
+        if (!file) return
+        const reader = new FileReader()
+        reader.onload = () => {
+            const avatarData = reader.result as string
+            setUser(prev => ({ ...prev, avatar: avatarData }))
+            try { localStorage.setItem('fn_avatar', avatarData) } catch { }
+        }
+        reader.readAsDataURL(file)
     }
 
     const profileForm = useForm<ProfileForm>({
@@ -332,12 +223,9 @@ export default function AccountPage() {
 
             <div style={{ maxWidth: 1000, margin: '0 auto', padding: '0 20px 80px' }}>
 
-                {/* ── GREETING BANNER ── */}
-                <motion.div
-                    initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45 }}
-                    style={{ background: 'linear-gradient(135deg, #2D1A0E 0%, #4B2E1A 100%)', borderRadius: 24, padding: '20px 28px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}
-                >
+                {/* GREETING */}
+                <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}
+                    style={{ background: 'linear-gradient(135deg, #2D1A0E 0%, #4B2E1A 100%)', borderRadius: 24, padding: '20px 28px', marginBottom: 20, display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
                     <div>
                         <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', margin: '0 0 3px', fontWeight: 500 }}>{getGreeting()},</p>
                         <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: 'white', margin: 0 }}>
@@ -349,32 +237,23 @@ export default function AccountPage() {
                     </Link>
                 </motion.div>
 
-                {/* ── PROFILE HEADER ── */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.05 }}
-                    style={{ background: 'white', borderRadius: 28, padding: '28px 32px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}
-                >
+                {/* PROFILE HEADER */}
+                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.05 }}
+                    style={{ background: 'white', borderRadius: 28, padding: '28px 32px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 22, flexWrap: 'wrap' }}>
-                        {/* Clickable avatar */}
                         <div style={{ position: 'relative', flexShrink: 0, cursor: 'pointer' }} onClick={() => fileRef.current?.click()} title="Click to change photo">
                             <div style={{ width: 76, height: 76, borderRadius: '50%', background: 'linear-gradient(135deg, #D97706, #F59E0B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, fontWeight: 700, color: 'white', fontFamily: "'Playfair Display', serif", overflow: 'hidden', border: '3px solid white', boxShadow: '0 0 0 2px rgba(217,119,6,0.3)' }}>
-                                {user.avatar
-                                    ? <Image src={user.avatar} alt={user.name} fill style={{ objectFit: 'cover', borderRadius: '50%' }} />
-                                    : getInitials(user.name)}
+                                {user.avatar ? <Image src={user.avatar} alt={user.name} fill style={{ objectFit: 'cover', borderRadius: '50%' }} /> : getInitials(user.name)}
                             </div>
-                            {/* Upload overlay */}
                             <div style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0, transition: 'opacity 0.2s' }}
                                 onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
-                                onMouseLeave={e => (e.currentTarget.style.opacity = '0')}
-                            >
+                                onMouseLeave={e => (e.currentTarget.style.opacity = '0')}>
                                 <span style={{ fontSize: 16 }}>📷</span>
                             </div>
                             <div style={{ position: 'absolute', bottom: 2, right: 2, width: 14, height: 14, borderRadius: '50%', background: '#22c55e', border: '2px solid white' }} />
                             <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleAvatarChange} />
                         </div>
 
-                        {/* User info */}
                         <div style={{ flex: 1, minWidth: 180 }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', marginBottom: 3 }}>
                                 <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{user.name}</h1>
@@ -384,23 +263,17 @@ export default function AccountPage() {
                             {user.bio && <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.6)', margin: 0, fontStyle: 'italic' }}>{user.bio}</p>}
                         </div>
 
-                        {/* Stats */}
                         <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap' }}>
-                            {[
-                                { val: favorites.length, lbl: 'Saved', color: '#BE185D' },
-                                { val: formatDate(user.joinedAt), lbl: 'Member since', color: '#D97706' },
-                            ].map(s => (
+                            {[{ val: favorites.length, lbl: 'Saved', color: '#BE185D' }, { val: formatDate(user.joinedAt), lbl: 'Member since', color: '#D97706' }].map(s => (
                                 <div key={s.lbl} style={{ textAlign: 'center' }}>
                                     <div style={{ fontSize: 20, fontWeight: 700, color: s.color, fontFamily: "'Playfair Display', serif", lineHeight: 1 }}>{s.val}</div>
                                     <div style={{ fontSize: 10, color: 'rgba(75,46,26,0.4)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: 3 }}>{s.lbl}</div>
                                 </div>
                             ))}
-                            <button
-                                onClick={() => setEditingProfile(true)}
+                            <button onClick={() => setEditingProfile(true)}
                                 style={{ padding: '9px 18px', background: '#4B2E1A', color: 'white', borderRadius: 100, border: 'none', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', display: 'flex', alignItems: 'center', gap: 5, transition: 'background 0.2s' }}
                                 onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
-                                onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}
-                            >
+                                onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}>
                                 ✏️ Edit Profile
                             </button>
                         </div>
@@ -416,7 +289,7 @@ export default function AccountPage() {
                     </AnimatePresence>
                 </motion.div>
 
-                {/* ── EDIT PROFILE MODAL ── */}
+                {/* EDIT PROFILE MODAL */}
                 <AnimatePresence>
                     {editingProfile && (
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
@@ -433,9 +306,7 @@ export default function AccountPage() {
                                         {profileForm.formState.errors.name && <p style={{ fontSize: 12, color: '#DC2626', marginTop: 4 }}>⚠ {profileForm.formState.errors.name.message}</p>}
                                     </div>
                                     <div>
-                                        <label style={{ fontSize: 13, fontWeight: 600, color: 'rgba(75,46,26,0.7)', display: 'block', marginBottom: 6 }}>
-                                            Short Bio <span style={{ color: 'rgba(75,46,26,0.35)', fontWeight: 400 }}>(optional)</span>
-                                        </label>
+                                        <label style={{ fontSize: 13, fontWeight: 600, color: 'rgba(75,46,26,0.7)', display: 'block', marginBottom: 6 }}>Short Bio <span style={{ color: 'rgba(75,46,26,0.35)', fontWeight: 400 }}>(optional)</span></label>
                                         <textarea {...profileForm.register('bio')} className="fn-input" style={{ ...inputCls, minHeight: 80, resize: 'vertical' }} placeholder="What do you love to cook?" />
                                     </div>
                                     <div style={{ display: 'flex', gap: 10, marginTop: 4 }}>
@@ -448,7 +319,7 @@ export default function AccountPage() {
                     )}
                 </AnimatePresence>
 
-                {/* ── TABS ── */}
+                {/* TABS */}
                 <div style={{ background: 'white', borderRadius: 22, border: '1px solid rgba(75,46,26,0.07)', overflow: 'hidden', boxShadow: '0 2px 12px rgba(75,46,26,0.04)' }}>
                     <div style={{ display: 'flex', borderBottom: '1px solid rgba(75,46,26,0.07)', overflowX: 'auto' }}>
                         {TABS.map(tab => (
@@ -462,10 +333,9 @@ export default function AccountPage() {
                         <AnimatePresence mode="wait">
                             <motion.div key={activeTab} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.22 }}>
 
-                                {/* ── OVERVIEW ── */}
+                                {/* OVERVIEW */}
                                 {activeTab === 'overview' && (
                                     <div>
-                                        {/* Stat cards */}
                                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 14, marginBottom: 24 }}>
                                             {[
                                                 { icon: '♡', val: `${favorites.length}`, lbl: 'Recipes Saved', color: '#BE185D', bg: 'rgba(190,24,93,0.07)' },
@@ -480,12 +350,10 @@ export default function AccountPage() {
                                             ))}
                                         </div>
 
-                                        {/* Activity chart */}
                                         <div style={{ marginBottom: 24 }}>
                                             <ActivityChart />
                                         </div>
 
-                                        {/* Recent saved — larger thumbnails */}
                                         {favorites.length > 0 && (
                                             <div>
                                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
@@ -496,8 +364,7 @@ export default function AccountPage() {
                                                 </div>
                                                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12 }}>
                                                     {favorites.slice(0, 4).map(f => (
-                                                        <Link key={f.slug} href={`/recipes/${f.slug}`}
-                                                            style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', height: 120, display: 'block', textDecoration: 'none', flexShrink: 0 }}>
+                                                        <Link key={f.slug} href={`/recipes/${f.slug}`} style={{ position: 'relative', borderRadius: 16, overflow: 'hidden', height: 120, display: 'block', textDecoration: 'none' }}>
                                                             <Image src={f.image} alt={f.title} fill style={{ objectFit: 'cover' }} sizes="200px" quality={70} />
                                                             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(45,26,14,0.85) 0%, transparent 50%)' }} />
                                                             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 12px' }}>
@@ -510,7 +377,6 @@ export default function AccountPage() {
                                             </div>
                                         )}
 
-                                        {/* Coming soon */}
                                         <div style={{ marginTop: 20, padding: '18px 20px', background: 'linear-gradient(135deg, #F5EDE3, #FDE8C5)', borderRadius: 16, border: '1px dashed rgba(217,119,6,0.3)', display: 'flex', alignItems: 'center', gap: 12 }}>
                                             <span style={{ fontSize: 22 }}>💬</span>
                                             <div>
@@ -521,7 +387,7 @@ export default function AccountPage() {
                                     </div>
                                 )}
 
-                                {/* ── FAVORITES ── */}
+                                {/* FAVORITES */}
                                 {activeTab === 'favorites' && (
                                     <div>
                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
@@ -530,9 +396,7 @@ export default function AccountPage() {
                                                     <div style={{ width: 22, height: 1.5, background: '#D97706' }} />
                                                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase' }}>Your Collection</span>
                                                 </div>
-                                                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', margin: 0 }}>
-                                                    Saved Recipes ({favorites.length})
-                                                </h2>
+                                                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Saved Recipes ({favorites.length})</h2>
                                             </div>
                                             {favorites.length > 0 && (
                                                 <Link href="/recipes" style={{ fontSize: 13, fontWeight: 600, color: '#D97706', textDecoration: 'none', padding: '9px 20px', border: '1.5px solid rgba(217,119,6,0.3)', borderRadius: 100 }}>
@@ -564,7 +428,7 @@ export default function AccountPage() {
                                     </div>
                                 )}
 
-                                {/* ── SETTINGS ── */}
+                                {/* SETTINGS */}
                                 {activeTab === 'settings' && (
                                     <div style={{ maxWidth: 500 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
@@ -572,7 +436,7 @@ export default function AccountPage() {
                                             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase' }}>Account Settings</span>
                                         </div>
 
-                                        {/* Change password */}
+                                        {/* Change Password */}
                                         <div style={{ background: '#FAFAF7', borderRadius: 18, padding: '24px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)' }}>
                                             <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: '#2D1A0E', margin: '0 0 20px' }}>Change Password</h3>
                                             <form onSubmit={pwForm.handleSubmit(onSavePassword)} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -598,25 +462,39 @@ export default function AccountPage() {
                                             </form>
                                         </div>
 
-                                       {/* Sign Out */}
+                                        {/* Sign Out */}
                                         <div style={{ background: '#FAFAF7', borderRadius: 18, padding: '20px 24px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)' }}>
-                                        <h3 style={{ fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 6px' }}>Sign Out</h3>
-                                        <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
-                                            Sign out of your FlavorNest account on this device.
-                                        </p>
-                                        <form action="/api/auth/signout" method="POST">
-                                            <button type="submit"
-                                                style={{ padding: '10px 24px', background: '#4B2E1A', color: 'white', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
-                                                onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
-                                                onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}
-                                            >
-                                                Sign Out →
-                                            </button>
-                                        </form>
-                                    </div>
+                                            <h3 style={{ fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 6px' }}>Sign Out</h3>
+                                            <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
+                                                Sign out of your FlavorNest account on this device.
+                                            </p>
+                                            <form action="/api/auth/signout" method="POST">
+                                                <button type="submit"
+                                                    style={{ padding: '10px 24px', background: '#4B2E1A', color: 'white', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
+                                                    onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
+                                                    onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}
+                                                >
+                                                    Sign Out →
+                                                </button>
+                                            </form>
+                                        </div>
 
-                                    {/* Danger zone */}
-                                    )}
+                                        {/* Danger Zone */}
+                                        <div style={{ borderRadius: 18, padding: '20px 24px', border: '1.5px solid rgba(220,38,38,0.15)', background: 'rgba(220,38,38,0.02)' }}>
+                                            <h3 style={{ fontSize: 15, fontWeight: 700, color: '#DC2626', margin: '0 0 6px' }}>Danger Zone</h3>
+                                            <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
+                                                Permanently delete your account and all associated data. This cannot be undone.
+                                            </p>
+                                            <button
+                                                style={{ padding: '9px 20px', background: 'transparent', color: '#DC2626', border: '1.5px solid rgba(220,38,38,0.3)', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                                                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(220,38,38,0.08)')}
+                                                onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                                            >
+                                                Delete Account
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
 
                             </motion.div>
                         </AnimatePresence>
