@@ -83,8 +83,9 @@ export default function MobileMenu() {
                                     >
                                         <span>{link.label}</span>
                                         <ChevronDown
-                                            className={`w-4 h-4 transition-transform duration-200 ${expanded === link.label ? 'rotate-180' : ''
-                                                }`}
+                                            className={`w-4 h-4 transition-transform duration-200 ${
+                                                expanded === link.label ? 'rotate-180' : ''
+                                            }`}
                                         />
                                     </button>
 
