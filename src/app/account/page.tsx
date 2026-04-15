@@ -263,7 +263,7 @@ export default function AccountPage() {
         const savedAvatar = localStorage.getItem('fn_avatar')
         if (savedAvatar) setUser(prev => ({ ...prev, avatar: savedAvatar }))
     } catch { setFavorites(SAMPLE_FAVORITES) }
-    }, [])
+}, [])
 
     const saveFavorites = (next: FavoriteRecipe[]) => {
         setFavorites(next)
