@@ -19,16 +19,19 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#FAFAF7" },
     { media: "(prefers-color-scheme: dark)", color: "#1C1009" },
   ],
 }
 
+const SITE_URL = "https://flavornest-vietnam.com"
+
 // ── SEO Metadata ──
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "FlavorNest Vietnam – Authentic Vietnamese Recipes Made Simple at Home",
     template: "%s | FlavorNest Vietnam",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://flavor-nest-vietnam.vercel.app",
+    url: SITE_URL,
     siteName: "FlavorNest Vietnam",
     title: "FlavorNest Vietnam – Authentic Vietnamese Recipes",
     description: "100+ authentic Vietnamese recipes made simple at home.",
