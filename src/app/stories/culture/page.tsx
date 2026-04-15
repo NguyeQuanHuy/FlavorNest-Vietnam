@@ -33,8 +33,8 @@ interface Article {
 const ARTICLES: Article[] = [
     {
         slug: 'pho-history',
-        title: 'The 100-Year History of Phở',
-        subtitle: 'How a humble noodle soup became a national identity',
+        title: "The 100-Year History of Phở",
+        subtitle: "How a humble noodle soup became a national identity",
         image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1200&q=85',
         readTime: '8 min read',
         tag: 'Deep Dive',
@@ -45,8 +45,8 @@ const ARTICLES: Article[] = [
     },
     {
         slug: 'five-flavours',
-        title: 'The Five Flavours of Vietnamese Cooking',
-        subtitle: 'Why balance is the most important ingredient',
+        title: "The Five Flavours of Vietnamese Cooking",
+        subtitle: "Why balance is the most important ingredient",
         image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80',
         readTime: '6 min read',
         tag: 'Philosophy',
@@ -57,7 +57,7 @@ const ARTICLES: Article[] = [
     {
         slug: 'fermentation-culture',
         title: "Vietnam's Secret Ingredient: Fermentation",
-        subtitle: 'Mắm, nước chấm, and the alchemy of time',
+        subtitle: "Mắm, nước chấm, and the alchemy of time",
         image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=900&q=80',
         readTime: '7 min read',
         tag: 'Traditions',
@@ -67,8 +67,8 @@ const ARTICLES: Article[] = [
     },
     {
         slug: 'street-food-culture',
-        title: 'Why the Best Meals Are Eaten on the Street',
-        subtitle: 'The philosophy behind Vietnam's sidewalk food culture',
+        title: "Why the Best Meals Are Eaten on the Street",
+        subtitle: "The philosophy behind Vietnam's sidewalk food culture",
         image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=80',
         readTime: '5 min read',
         tag: 'Culture',
@@ -78,8 +78,8 @@ const ARTICLES: Article[] = [
     },
     {
         slug: 'rice-civilization',
-        title: 'Rice: The Architecture of Vietnamese Civilisation',
-        subtitle: 'How a grain shaped a people, a landscape, and a cuisine',
+        title: "Rice: The Architecture of Vietnamese Civilisation",
+        subtitle: "How a grain shaped a people, a landscape, and a cuisine",
         image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=900&q=80',
         readTime: '9 min read',
         tag: 'History',
@@ -90,7 +90,7 @@ const ARTICLES: Article[] = [
     {
         slug: 'hue-royal-cuisine',
         title: "The Lost Art of Huế's Royal Cuisine",
-        subtitle: 'How the imperial kitchen shaped Central Vietnamese cooking',
+        subtitle: "How the imperial kitchen shaped Central Vietnamese cooking",
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         readTime: '7 min read',
         tag: 'Heritage',
