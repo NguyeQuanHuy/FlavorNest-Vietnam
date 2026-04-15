@@ -56,7 +56,7 @@ const ARTICLES: Article[] = [
     },
     {
         slug: 'fermentation-culture',
-        title: 'Vietnam's Secret Ingredient: Fermentation',
+        title: "Vietnam's Secret Ingredient: Fermentation",
         subtitle: 'Mắm, nước chấm, and the alchemy of time',
         image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=900&q=80',
         readTime: '7 min read',
