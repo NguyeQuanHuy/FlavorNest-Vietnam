@@ -220,7 +220,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', margin: 0 }}>
-                        Made with ♥ in Vietnam
+                        Made with ♥ for Vietnam
                     </p>
                 </div>
             </div>
