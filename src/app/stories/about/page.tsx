@@ -18,7 +18,7 @@ const TEAM = [
         region: 'Northern Vietnam',
     },
     {
-        name: 'Quang Minh Tran',
+        name: 'Huy Nguyen',
         role: 'Food Photographer & Visual Director',
         image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
         bio: 'Shot food for hotels and restaurants across Southeast Asia before realising the best food he had ever seen was on plastic stools in Hội An. Now he photographs only what he would eat himself.',
