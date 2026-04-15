@@ -1,5 +1,5 @@
 'use client'
-
+import { handleSignOut } from '@/app/actions/auth-actions'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
@@ -468,7 +468,7 @@ export default function AccountPage() {
                                             <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
                                                 Sign out of your FlavorNest account on this device.
                                             </p>
-                                            <form action="/api/auth/signout" method="POST">
+                                            <form action={handleSignOut}>
                                                 <button type="submit"
                                                     style={{ padding: '10px 24px', background: '#4B2E1A', color: 'white', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
                                                     onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
