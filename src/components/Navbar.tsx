@@ -80,10 +80,7 @@ export default async function Navbar() {
                         </div>
                     ))}
                     <div className="col-span-2 pt-4 border-t border-fn-brown/5 text-center">
-                        <Link
-                            href={menu.link}
-                            className="text-[10px] font-bold text-fn-brown/40 hover:text-fn-amber uppercase tracking-[0.1em] transition-colors"
-                        >
+                        <Link href={menu.link} className="text-[10px] font-bold text-fn-brown/40 hover:text-fn-amber uppercase tracking-[0.1em] transition-colors">
                             {menu.title} →
                         </Link>
                     </div>
@@ -99,11 +96,7 @@ export default async function Navbar() {
                 {/* Logo */}
                 <div className="flex-shrink-0">
                     <Link href="/" className="flex items-center group">
-                        <img
-                            src="/logo.png"
-                            alt="Flavor Nest Logo"
-                            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
-                        />
+                        <img src="/logo.png" alt="Flavor Nest Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
                         <div className="ml-3 hidden lg:block">
                             <span className="block text-xl font-bold text-fn-brown leading-none">FlavorNest</span>
                             <span className="text-[10px] text-fn-amber font-medium tracking-[0.2em] uppercase">Vietnam Gourmet</span>
@@ -117,23 +110,16 @@ export default async function Navbar() {
                         <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Home</span>
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </Link>
-
                     <div className="group relative h-full flex items-center">
-                        <Link href="/recipes" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">
-                            Recipes
-                        </Link>
+                        <Link href="/recipes" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Recipes</Link>
                         <DropdownMenu menu={recipesMenu} />
                         <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </div>
-
                     <div className="group relative h-full flex items-center">
-                        <Link href="/stories" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">
-                            Stories
-                        </Link>
+                        <Link href="/stories" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Stories</Link>
                         <DropdownMenu menu={storiesMenu} />
                         <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </div>
-
                     <Link href="/about" className="group relative py-2">
                         <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">About</span>
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
@@ -144,11 +130,8 @@ export default async function Navbar() {
                 <div className="flex items-center gap-3 sm:gap-4">
                     <SearchModal />
 
-                    <Link
-                        href="/favorites"
-                        title="My Favorites"
-                        className="p-2.5 text-fn-brown/60 hover:text-red-500 bg-fn-brown/5 hover:bg-red-50 transition-all duration-300 rounded-xl group border border-transparent hover:border-red-100"
-                    >
+                    <Link href="/favorites" title="My Favorites"
+                        className="p-2.5 text-fn-brown/60 hover:text-red-500 bg-fn-brown/5 hover:bg-red-50 transition-all duration-300 rounded-xl group border border-transparent hover:border-red-100">
                         <Heart className="w-5 h-5 transition-transform group-hover:scale-110" />
                     </Link>
 
@@ -173,8 +156,8 @@ export default async function Navbar() {
                         )}
                     </div>
 
-                    {/* Mobile: Hamburger */}
-                    <MobileMenu />
+                    {/* Mobile: pass session to MobileMenu */}
+                    <MobileMenu session={session} />
                 </div>
             </div>
         </nav>
