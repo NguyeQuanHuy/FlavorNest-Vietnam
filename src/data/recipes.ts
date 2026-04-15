@@ -98,10 +98,10 @@ export const RECIPES: Recipe[] = [
     // ── 3. Vietnamese Banh Mi ───────────────────────────────────────────────
     {
         slug: 'banh-mi',
-        title: 'Lemongrass Pork Bánh Mì',
+        title: 'Bánh Mì',
         subtitle: 'Bánh Mì Thịt Nướng',
         shortDescription: 'A shatteringly crispy baguette loaded with lemongrass-grilled pork, silky pâté, pickled daikon, jalapeño and Maggi mayo.',
-        image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1677354469642-3e4fc5dbbb4a?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Vietnamese banh mi sandwich cut in half',
         prepTime: '25 min',
         cookTime: '15 min',
