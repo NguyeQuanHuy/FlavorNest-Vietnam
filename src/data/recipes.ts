@@ -122,7 +122,7 @@ export const RECIPES: Recipe[] = [
         title: 'Fresh Shrimp & Pork Spring Rolls',
         subtitle: 'Gỏi Cuốn Tôm Thịt',
         shortDescription: 'Translucent rice paper filled with poached shrimp, pork belly, vermicelli and garden herbs — served with creamy peanut dipping sauce.',
-        image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1602375850899-c389c4a0fc70?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Fresh Vietnamese spring rolls on a plate',
         prepTime: '30 min',
         cookTime: '15 min',
