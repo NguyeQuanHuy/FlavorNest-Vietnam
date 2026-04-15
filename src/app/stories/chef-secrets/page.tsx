@@ -101,7 +101,7 @@ const TIPS: Tip[] = [
     {
         id: 'wok-technique',
         title: 'Wok Hei: Chasing the Breath of the Wok',
-        subtitle: 'The technique behind Vietnam\'s greatest stir-fries',
+        subtitle: "The technique behind Vietnam's greatest stir-fries",
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
         category: 'Technique',
         categoryColor: '#EA580C',
