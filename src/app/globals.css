@@ -21,11 +21,6 @@ img, video {
   height: auto;
 }
 
-/* Prevent horizontal scroll on all sections */
-section, div {
-  max-width: 100vw;
-}
-
 @theme {
   /* Định nghĩa màu sắc từ bản cũ của bạn vào đây */
   --color-fn-beige: #F5EDE3;
