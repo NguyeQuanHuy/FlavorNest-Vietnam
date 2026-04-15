@@ -599,24 +599,24 @@ export default function AccountPage() {
                                         </div>
 
                                        {/* Sign Out */}
-<div style={{ background: '#FAFAF7', borderRadius: 18, padding: '20px 24px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)' }}>
-    <h3 style={{ fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 6px' }}>Sign Out</h3>
-    <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
-        Sign out of your FlavorNest account on this device.
-    </p>
-    <form action="/api/auth/signout" method="POST">
-        <button type="submit"
-            style={{ padding: '10px 24px', background: '#4B2E1A', color: 'white', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
-            onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
-            onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}
-        >
-            Sign Out →
-        </button>
-    </form>
-</div>
+                                        <div style={{ background: '#FAFAF7', borderRadius: 18, padding: '20px 24px', marginBottom: 20, border: '1px solid rgba(75,46,26,0.07)' }}>
+                                        <h3 style={{ fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 6px' }}>Sign Out</h3>
+                                        <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.55)', margin: '0 0 14px', lineHeight: 1.6 }}>
+                                            Sign out of your FlavorNest account on this device.
+                                        </p>
+                                        <form action="/api/auth/signout" method="POST">
+                                            <button type="submit"
+                                                style={{ padding: '10px 24px', background: '#4B2E1A', color: 'white', border: 'none', borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.2s' }}
+                                                onMouseEnter={e => (e.currentTarget.style.background = '#D97706')}
+                                                onMouseLeave={e => (e.currentTarget.style.background = '#4B2E1A')}
+                                            >
+                                                Sign Out →
+                                            </button>
+                                        </form>
+                                    </div>
 
-{/* Danger zone */}
-                                )}
+                                    {/* Danger zone */}
+                                    )}
 
                             </motion.div>
                         </AnimatePresence>
