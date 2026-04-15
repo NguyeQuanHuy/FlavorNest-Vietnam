@@ -250,8 +250,23 @@ export default function AccountPage() {
                                 onMouseLeave={e => (e.currentTarget.style.opacity = '0')}>
                                 <span style={{ fontSize: 16 }}>📷</span>
                             </div>
-                            <div style={{ position: 'absolute', bottom: 2, right: 2, width: 14, height: 14, borderRadius: '50%', background: '#22c55e', border: '2px solid white' }} />
-                            <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleAvatarChange} />
+                {/* Online dot */}
+                <div style={{ position: 'absolute', bottom: 2, right: 2, width: 14, height: 14, borderRadius: '50%', background: '#22c55e', border: '2px solid white' }} />
+                
+                {/* Camera icon — always visible on mobile, subtle */}
+                <div style={{
+                    position: 'absolute', bottom: -2, left: '50%', transform: 'translateX(-50%)',
+                    background: '#D97706', borderRadius: 100, padding: '2px 7px',
+                    display: 'flex', alignItems: 'center', gap: 3,
+                    border: '1.5px solid white', boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+                }}>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                    <span style={{ fontSize: 8, color: 'white', fontWeight: 700 }}>Edit</span>
+                </div>                            
+                    <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleAvatarChange} />
                         </div>
 
                         <div style={{ flex: 1, minWidth: 180 }}>
