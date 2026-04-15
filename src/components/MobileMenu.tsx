@@ -32,7 +32,19 @@ const MOBILE_LINKS = [
     { label: 'About', href: '/about' },
 ]
 
-export default function MobileMenu() {
+
+interface MobileMenuProps {
+    session?: {
+        user?: {
+            name?: string | null
+            email?: string | null
+            image?: string | null
+        }
+    } | null
+}
+
+export default function MobileMenu({ session }: MobileMenuProps) {
+
     const [open, setOpen] = useState(false)
     const [expanded, setExpanded] = useState<string | null>(null)
 
