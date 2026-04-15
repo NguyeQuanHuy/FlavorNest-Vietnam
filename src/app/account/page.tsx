@@ -256,10 +256,13 @@ export default function AccountPage() {
     const fileRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
-        try {
-            const stored = localStorage.getItem('fn_favorites')
-            setFavorites(stored ? JSON.parse(stored) : SAMPLE_FAVORITES)
-        } catch { setFavorites(SAMPLE_FAVORITES) }
+    try {
+        const stored = localStorage.getItem('fn_favorites')
+        setFavorites(stored ? JSON.parse(stored) : SAMPLE_FAVORITES)
+        // Load saved avatar
+        const savedAvatar = localStorage.getItem('fn_avatar')
+        if (savedAvatar) setUser(prev => ({ ...prev, avatar: savedAvatar }))
+    } catch { setFavorites(SAMPLE_FAVORITES) }
     }, [])
 
     const saveFavorites = (next: FavoriteRecipe[]) => {
@@ -271,11 +274,15 @@ export default function AccountPage() {
 
     // Avatar upload
     const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0]
-        if (!file) return
-        const reader = new FileReader()
-        reader.onload = () => setUser(prev => ({ ...prev, avatar: reader.result as string }))
-        reader.readAsDataURL(file)
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => {
+        const avatarData = reader.result as string
+        setUser(prev => ({ ...prev, avatar: avatarData }))
+        try { localStorage.setItem('fn_avatar', avatarData) } catch {}
+    }
+    reader.readAsDataURL(file)
     }
 
     const profileForm = useForm<ProfileForm>({
