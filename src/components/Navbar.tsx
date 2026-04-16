@@ -102,7 +102,7 @@ export default async function Navbar() {
                     <img
                         src="/logo.png"
                         alt="FlavorNest"
-                        className="h-10 w-auto object-contain transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                        className="h-8 w-auto max-w-[40px] object-contain transition-all duration-300 group-hover:scale-105"
                     />
                     <div className="hidden lg:flex flex-col leading-none">
                         <span className="text-[17px] font-bold text-fn-brown tracking-tight">FlavorNest</span>
