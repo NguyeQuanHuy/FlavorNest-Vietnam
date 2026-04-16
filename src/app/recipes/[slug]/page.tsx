@@ -238,6 +238,109 @@ const RECIPE_DB: Record<string, RecipeData> = {
             { label: 'Carbs', value: '55g' }, { label: 'Fat', value: '14g' }, { label: 'Sodium', value: '980mg' },
         ],
         relatedSlugs: ['hanoi-beef-pho', 'banh-mi'],
+        // Paste this object into RECIPE_DB in src/app/recipes/[slug]/page.tsx
+        // Add it after the 'bun-cha-hanoi' entry
+
+        'fresh-spring-rolls': {
+            slug: 'fresh-spring-rolls',
+            title: 'Fresh Shrimp & Pork Spring Rolls',
+            subtitle: 'Gỏi Cuốn Tôm Thịt',
+            description: 'Translucent rice paper filled with poached shrimp, pork belly, vermicelli and garden herbs — served with creamy peanut dipping sauce.',
+            story: `There is something almost meditative about rolling gỏi cuốn. You lay out the rice paper, arrange the herbs just so, place the shrimp in a careful line so they show through the wrapper like stained glass. Then you roll, tuck, and pull tight. Each one takes about thirty seconds. By the end, you have made something that looks like it required skill, but actually only required patience.\n\nGỏi cuốn — fresh spring rolls — are the cooler, lighter, more elegant cousin of the fried spring roll. No wok, no oil, no heat. Just fresh ingredients assembled with care and served immediately. They are what Vietnamese food is at its best: simple, beautiful, and entirely dependent on the quality of what you put inside.\n\nThe peanut dipping sauce is not optional. It is the point.`,
+            image: 'https://images.unsplash.com/photo-1602375850899-c389c4a0fc70?auto=format&fit=crop&w=1400&q=80',
+            category: 'Rolls', region: 'Southern', difficulty: 'Easy',
+            time: '45 min', prepTime: '30 min', cookTime: '15 min',
+            servings: 4, rating: '4.7', reviews: 189, calories: 290,
+            tags: ['Shrimp', 'Pork', 'Healthy', 'No-Fry', 'Fresh'],
+            ingredients: [
+                {
+                    group: 'Filling',
+                    items: [
+                        '300g medium shrimp, peeled and deveined',
+                        '200g pork belly, in one piece',
+                        '100g dried rice vermicelli',
+                        '12 rice paper sheets (bánh tráng)',
+                        '1 head butter lettuce, leaves separated',
+                        'Large bunch fresh mint',
+                        'Large bunch fresh cilantro',
+                        '1 cucumber, julienned',
+                        '2 spring onions, thinly sliced',
+                    ],
+                },
+                {
+                    group: 'Peanut Dipping Sauce',
+                    items: [
+                        '3 tbsp hoisin sauce',
+                        '2 tbsp smooth peanut butter',
+                        '2 tbsp warm water',
+                        '1 tbsp lime juice',
+                        '1 tsp sugar',
+                        '1 clove garlic, minced',
+                        'Crushed roasted peanuts to finish',
+                        'Sliced chilli to finish',
+                    ],
+                },
+            ],
+            steps: [
+                {
+                    title: 'Poach the pork',
+                    body: 'Place pork belly in a pot, cover with cold water. Add a pinch of salt. Bring to a boil, then simmer for 25-30 minutes until cooked through. Remove and let cool completely before slicing thinly.',
+                    tip: 'Cooling the pork fully before slicing is essential — warm pork tears instead of slicing cleanly.',
+                },
+                {
+                    title: 'Cook the shrimp',
+                    body: 'Bring a small pot of salted water to the boil. Add shrimp and cook for 2-3 minutes until just pink. Drain and cool. Slice each shrimp in half lengthways — this is how you get that beautiful display through the wrapper.',
+                },
+                {
+                    title: 'Prepare the noodles',
+                    body: 'Soak rice vermicelli in cold water for 10 minutes, then blanch in boiling water for 1-2 minutes. Drain, rinse with cold water, and toss with a tiny bit of sesame oil to prevent sticking.',
+                },
+                {
+                    title: 'Make the dipping sauce',
+                    body: 'Whisk together hoisin sauce, peanut butter, warm water, lime juice, sugar, and garlic until smooth. Adjust consistency with more water if needed — it should coat a spoon but still flow. Top with crushed peanuts and chilli.',
+                },
+                {
+                    title: 'Soften the rice paper',
+                    body: 'Fill a wide shallow bowl with warm water. Dip one sheet of rice paper for exactly 5-8 seconds — it should still feel slightly firm. Lay flat on a clean surface. It will soften fully as you work.',
+                    tip: 'Under-soaking is better than over-soaking. A slightly firm wrapper is much easier to roll than a soggy one.',
+                },
+                {
+                    title: 'Roll',
+                    body: 'Lay 3-4 shrimp halves (cut side up, so they show through) in a line about one-third from the bottom. Add lettuce, a small bundle of noodles, pork slices, cucumber, mint, cilantro, and spring onion. Fold the bottom up over the filling, fold in the sides, then roll tightly forward. Serve immediately with dipping sauce.',
+                    tip: 'Work quickly once the rice paper is wet. Assemble all your fillings before you start rolling.',
+                },
+            ],
+            proTips: [
+                {
+                    icon: '🍤',
+                    title: 'Shrimp placement is presentation',
+                    body: 'Place shrimp cut-side up in a single line close to the bottom of the wrapper. When you roll, they end up on the outside facing forward — a perfect pink row visible through the translucent rice paper.',
+                },
+                {
+                    icon: '🌿',
+                    title: 'Herbs are not optional',
+                    body: 'Fresh mint and cilantro are structural ingredients, not garnishes. They provide the brightness that makes gỏi cuốn sing. Be generous — a small, under-herbed roll is a missed opportunity.',
+                },
+                {
+                    icon: '⏱',
+                    title: 'Serve immediately',
+                    body: 'Rice paper hardens and sticks as it dries. Gỏi cuốn must be eaten within 30 minutes of rolling. If making for guests, roll in batches just before serving.',
+                },
+                {
+                    icon: '🥜',
+                    title: 'The peanut sauce makes it',
+                    body: 'Make the sauce first and let it sit for 10 minutes before serving. The garlic mellows and the flavours meld. A good gỏi cuốn sauce should be thick, nutty, slightly sweet, and bright with lime.',
+                },
+            ],
+            nutrition: [
+                { label: 'Calories', value: '290 kcal' },
+                { label: 'Protein', value: '24g' },
+                { label: 'Carbs', value: '32g' },
+                { label: 'Fat', value: '7g' },
+                { label: 'Sodium', value: '620mg' },
+            ],
+            relatedSlugs: ['banh-mi', 'bun-cha-hanoi', 'hanoi-beef-pho'],
+        },
     },
 }
 
