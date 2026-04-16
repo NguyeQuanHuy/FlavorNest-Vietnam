@@ -93,7 +93,7 @@ export default async function Navbar() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6"
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6 overflow-hidden"
             style={{ boxShadow: '0 1px 0 rgba(75,46,26,0.04), 0 4px 16px rgba(0,0,0,0.04)' }}>
             <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-6">
 
@@ -102,7 +102,8 @@ export default async function Navbar() {
                     <img
                         src="/logo.png"
                         alt="FlavorNest"
-                        className="h-8 w-auto max-w-[40px] object-contain transition-all duration-300 group-hover:scale-105"
+                        className="h-7 w-7 object-contain flex-shrink-0
+                        transition-all duration-300 group-hover:scale-105"
                     />
                     <div className="hidden lg:flex flex-col leading-none">
                         <span className="text-[17px] font-bold text-fn-brown tracking-tight">FlavorNest</span>
