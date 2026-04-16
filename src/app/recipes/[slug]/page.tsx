@@ -263,7 +263,7 @@ function fadeUp(delay = 0) {
 
 // ─── Page Component ───────────────────────────────────────────────────────────
 export default function RecipeDetailPage({ params }: { params: { slug: string } }) {
-    const recipe = RECIPE_DB[params.slug]
+    const recipe = RECIPE_DB[params.slug] ?? RECIPE_DB[decodeURIComponent(params.slug)]
 
     const [servings, setServings] = useState(recipe?.servings ?? 4)
     const [checkedSteps, setCheckedSteps] = useState<Set<number>>(new Set())
