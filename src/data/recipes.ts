@@ -180,7 +180,7 @@ export const RECIPES: Recipe[] = [
 
     // ── 7. Bun Rieu ─────────────────────────────────────────────────────────
     {
-        slug: 'bun-rieu',
+        slug: 'bun-rieu-cua',
         title: 'Crab & Tomato Vermicelli Soup',
         subtitle: 'Bún Riêu Cua',
         shortDescription: 'A vibrant scarlet broth of fried tomatoes and fluffy crab-and-pork dumplings, loaded with tofu and a wild herb plate.',
