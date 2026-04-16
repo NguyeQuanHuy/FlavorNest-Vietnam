@@ -56,21 +56,23 @@ export default async function Navbar() {
 
     function DropdownMenu({ menu }: { menu: typeof recipesMenu }) {
         return (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="bg-white rounded-2xl shadow-2xl border border-fn-brown/5 p-6 w-[440px] grid grid-cols-2 gap-8">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 z-50">
+                {/* Arrow */}
+                <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-fn-brown/8 rotate-45 z-10" />
+                <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(75,46,26,0.12)] border border-fn-brown/6 p-5 w-[420px] grid grid-cols-2 gap-6 relative">
                     {menu.cols.map((col, idx) => (
                         <div key={idx}>
-                            <p className="text-[10px] font-black text-fn-amber uppercase tracking-[0.2em] mb-4 border-b border-fn-amber/10 pb-1">
+                            <p className="text-[9px] font-black text-fn-amber uppercase tracking-[0.22em] mb-3 pb-2 border-b border-fn-amber/10">
                                 {col.head}
                             </p>
-                            <div className="flex flex-col gap-3.5">
+                            <div className="flex flex-col gap-2.5">
                                 {col.items.map((item, i) => (
-                                    <Link key={i} href={item.url} className="flex flex-col group/item">
-                                        <span className="text-sm font-semibold text-fn-brown/80 group-hover/item:text-fn-amber transition-colors">
+                                    <Link key={i} href={item.url} className="flex flex-col group/item py-0.5 px-2 -mx-2 rounded-lg hover:bg-fn-amber/5 transition-colors">
+                                        <span className="text-[13px] font-semibold text-fn-brown/75 group-hover/item:text-fn-amber transition-colors leading-tight">
                                             {item.name}
                                         </span>
                                         {item.desc && (
-                                            <span className="text-[10px] text-fn-brown/40 -mt-0.5">
+                                            <span className="text-[10px] text-fn-brown/35 mt-0.5">
                                                 {item.desc}
                                             </span>
                                         )}
@@ -79,8 +81,9 @@ export default async function Navbar() {
                             </div>
                         </div>
                     ))}
-                    <div className="col-span-2 pt-4 border-t border-fn-brown/5 text-center">
-                        <Link href={menu.link} className="text-[10px] font-bold text-fn-brown/40 hover:text-fn-amber uppercase tracking-[0.1em] transition-colors">
+                    <div className="col-span-2 pt-3 border-t border-fn-brown/5 flex items-center justify-between">
+                        <span className="text-[10px] text-fn-brown/30">100+ authentic recipes</span>
+                        <Link href={menu.link} className="text-[11px] font-bold text-fn-amber hover:text-fn-brown transition-colors flex items-center gap-1">
                             {menu.title} →
                         </Link>
                     </div>
@@ -90,73 +93,105 @@ export default async function Navbar() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-fn-brown/5">
-            <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6"
+            style={{ boxShadow: '0 1px 0 rgba(75,46,26,0.04), 0 4px 16px rgba(0,0,0,0.04)' }}>
+            <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-6">
 
-                {/* Logo */}
-                <div className="flex-shrink-0">
-                    <Link href="/" className="flex items-center group">
-                        <img src="/logo.png" alt="Flavor Nest Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
-                        <div className="ml-3 hidden lg:block">
-                            <span className="block text-xl font-bold text-fn-brown leading-none">FlavorNest</span>
-                            <span className="text-[10px] text-fn-amber font-medium tracking-[0.2em] uppercase">Vietnam Gourmet</span>
-                        </div>
-                    </Link>
-                </div>
+                {/* ── Logo ── */}
+                <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
+                    <img
+                        src="/logo.png"
+                        alt="FlavorNest"
+                        className="h-10 w-auto object-contain transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+                    />
+                    <div className="hidden lg:flex flex-col leading-none">
+                        <span className="text-[17px] font-bold text-fn-brown tracking-tight">FlavorNest</span>
+                        <span className="text-[9px] text-fn-amber font-semibold tracking-[0.22em] uppercase mt-0.5">Vietnam Gourmet</span>
+                    </div>
+                </Link>
 
-                {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-10 h-full">
-                    <Link href="/" className="group relative py-2">
-                        <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Home</span>
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
+                {/* ── Desktop Nav ── */}
+                <div className="hidden md:flex items-center gap-1 h-full flex-1 justify-center">
+                    {/* Home */}
+                    <Link href="/"
+                        className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200">
+                        Home
                     </Link>
+
+                    {/* Recipes dropdown */}
                     <div className="group relative h-full flex items-center">
-                        <Link href="/recipes" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Recipes</Link>
+                        <Link href="/recipes"
+                            className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200 flex items-center gap-1">
+                            Recipes
+                            <svg className="w-3 h-3 opacity-40 group-hover:opacity-70 transition-all group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </Link>
                         <DropdownMenu menu={recipesMenu} />
-                        <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </div>
+
+                    {/* Stories dropdown */}
                     <div className="group relative h-full flex items-center">
-                        <Link href="/stories" className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">Stories</Link>
+                        <Link href="/stories"
+                            className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200 flex items-center gap-1">
+                            Stories
+                            <svg className="w-3 h-3 opacity-40 group-hover:opacity-70 transition-all group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </Link>
                         <DropdownMenu menu={storiesMenu} />
-                        <span className="absolute bottom-5 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
                     </div>
-                    <Link href="/about" className="group relative py-2">
-                        <span className="text-fn-brown/70 group-hover:text-fn-amber font-medium transition-colors">About</span>
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-fn-amber transition-all group-hover:w-full" />
+
+                    {/* About */}
+                    <Link href="/about"
+                        className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200">
+                        About
                     </Link>
                 </div>
 
-                {/* Right utilities */}
-                <div className="flex items-center gap-3 sm:gap-4">
-                    <SearchModal />
+                {/* ── Right utilities ── */}
+                <div className="flex items-center gap-2 flex-shrink-0">
 
+                    {/* Search */}
+                    <div className="text-fn-brown/50 hover:text-fn-amber transition-colors">
+                        <SearchModal />
+                    </div>
+
+                    {/* Favorites */}
                     <Link href="/favorites" title="My Favorites"
-                        className="p-2.5 text-fn-brown/60 hover:text-red-500 bg-fn-brown/5 hover:bg-red-50 transition-all duration-300 rounded-xl group border border-transparent hover:border-red-100">
-                        <Heart className="w-5 h-5 transition-transform group-hover:scale-110" />
+                        className="w-9 h-9 flex items-center justify-center text-fn-brown/50 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all duration-200 border border-transparent hover:border-red-100">
+                        <Heart className="w-[18px] h-[18px]" />
                     </Link>
 
-                    {/* Desktop: Sign In / Avatar */}
-                    <div className="hidden md:flex items-center gap-4">
-                        <div className="h-8 w-[1px] bg-fn-brown/10" />
+                    {/* Divider */}
+                    <div className="hidden md:block h-6 w-px bg-fn-brown/10 mx-1" />
+
+                    {/* Desktop: Avatar / Sign In */}
+                    <div className="hidden md:flex items-center">
                         {session?.user ? (
-                            <Link href="/account" className="flex items-center gap-3 group bg-fn-brown/5 p-1 pr-4 rounded-full border border-transparent hover:border-fn-amber/30 hover:bg-white transition-all duration-300 shadow-sm">
-                                <div className="relative">
+                            <Link href="/account"
+                                className="flex items-center gap-2.5 group bg-fn-brown/4 hover:bg-fn-amber/8 px-2 py-1.5 pr-3.5 rounded-full border border-fn-brown/8 hover:border-fn-amber/25 transition-all duration-250"
+                                style={{ background: 'rgba(75,46,26,0.04)' }}>
+                                <div className="relative flex-shrink-0">
                                     <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
-                                    <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" />
+                                    <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full" />
                                 </div>
-                                <div className="flex-col items-start hidden sm:flex">
-                                    <span className="text-[9px] uppercase tracking-tighter text-fn-brown/40 font-black">FlavorNest Chef</span>
-                                    <span className="text-sm font-bold text-fn-brown group-hover:text-fn-amber transition-colors">{session.user.name}</span>
+                                <div className="flex flex-col leading-none">
+                                    <span className="text-[8px] uppercase tracking-widest text-fn-brown/35 font-black">Chef</span>
+                                    <span className="text-[12.5px] font-bold text-fn-brown group-hover:text-fn-amber transition-colors max-w-[100px] truncate">
+                                        {session.user.name?.split(' ').pop()}
+                                    </span>
                                 </div>
                             </Link>
                         ) : (
-                            <Link href="/login" className="inline-flex items-center justify-center px-7 py-2.5 font-bold text-white bg-fn-brown rounded-full hover:bg-fn-amber transition-all shadow-lg shadow-fn-brown/10">
-                                <span className="text-sm tracking-wide">Sign In</span>
+                            <Link href="/login"
+                                className="inline-flex items-center gap-2 px-5 py-2 text-[13px] font-bold text-white bg-fn-brown hover:bg-fn-amber rounded-full transition-all duration-200 shadow-sm shadow-fn-brown/15 hover:shadow-fn-amber/20 hover:shadow-md">
+                                Sign In
                             </Link>
                         )}
                     </div>
 
-                    {/* Mobile: pass session to MobileMenu */}
+                    {/* Mobile menu */}
                     <MobileMenu session={session} />
                 </div>
             </div>
