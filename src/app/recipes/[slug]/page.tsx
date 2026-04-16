@@ -263,15 +263,11 @@ function fadeUp(delay = 0) {
 
 // ─── Page Component ───────────────────────────────────────────────────────────
 export default function RecipeDetailPage({ params }: { params: { slug: string } }) {
-    const recipe = RECIPE_DB[params.slug]
+    const slug = params.slug
+    console.log('slug:', slug, 'keys:', Object.keys(RECIPE_DB))
+    const recipe = RECIPE_DB[slug]
 
     const [servings, setServings] = useState(recipe?.servings ?? 4)
-    const [checkedSteps, setCheckedSteps] = useState<Set<number>>(new Set())
-    const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(new Set())
-    const [showStickyTitle, setShowStickyTitle] = useState(false)
-    const [isSaved, setIsSaved] = useState(false)
-    const [saveToast, setSaveToast] = useState(false)
-    const heroRef = useRef<HTMLDivElement>(null)
 
     // Sticky title on scroll
     useEffect(() => {
