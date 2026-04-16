@@ -340,9 +340,320 @@ const RECIPE_DB: Record<string, RecipeData> = {
             { label: 'Sodium', value: '620mg' },
         ],
         relatedSlugs: ['banh-mi', 'bun-cha-hanoi', 'hanoi-beef-pho'],
-    },
-    // Paste after 'fresh-spring-rolls' entry in RECIPE_DB
 
+
+    },
+    // Paste all 3 after 'vietnamese-chicken-pho' in RECIPE_DB
+
+    'bun-rieu-cua': {
+        slug: 'bun-rieu-cua',
+        title: 'Crab & Tomato Vermicelli Soup',
+        subtitle: 'Bún Riêu Cua',
+        description: 'A vivid, tangy tomato broth with crab meat dumplings, tofu and vermicelli — one of Vietnam\'s most beloved comfort soups.',
+        story: `Bún riêu cua is the soup that tells you it is Vietnamese the moment you see it. The broth is not golden and clear like phở — it is red-orange and bright, from a generous hand with tomatoes and annatto oil. Floating on the surface are soft, pillow-like crab and pork dumplings that form naturally as the broth heats. It is rustic, vivid, and completely its own thing.\n\nThe crab is what makes it. Traditional cooks use freshwater field crabs, pounded to a paste and strained — a process that takes patience but produces a uniquely sweet, mineral-rich broth that no other ingredient can replicate. This recipe uses a practical combination of crab paste and fresh crabmeat that delivers the same depth with far less effort.\n\nBún riêu is eaten differently to phở. You add things yourself — a squeeze of lime, a dollop of fermented shrimp paste, fresh herbs, raw banana blossom. It is an interactive bowl, and every person's version tastes slightly different.`,
+        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1400&q=80',
+        category: 'Soup', region: 'Northern', difficulty: 'Medium',
+        time: '50 min', prepTime: '20 min', cookTime: '30 min',
+        servings: 4, rating: '4.8', reviews: 167, calories: 410,
+        tags: ['Crab', 'Tomato', 'Noodles', 'Soup', 'Northern'],
+        ingredients: [
+            {
+                group: 'Broth',
+                items: [
+                    '200g fresh crabmeat (or 2 tbsp crab paste)',
+                    '150g minced pork',
+                    '2 eggs',
+                    '1 tbsp fish sauce',
+                    '4 ripe tomatoes, cut into wedges',
+                    '2 tbsp annatto oil (or 1 tsp annatto seeds in 2 tbsp oil)',
+                    '3 shallots, sliced',
+                    '2 cloves garlic, minced',
+                    '1.5 liters chicken or pork stock',
+                    '1 tbsp fish sauce + salt to taste',
+                ],
+            },
+            {
+                group: 'Toppings',
+                items: [
+                    '300g dried rice vermicelli',
+                    '200g firm tofu, fried until golden',
+                    '100g blood cake (tiết canh), optional',
+                    '2 spring onions, sliced',
+                    'Fried shallots',
+                ],
+            },
+            {
+                group: 'Serve With',
+                items: [
+                    'Fresh bean sprouts',
+                    'Raw banana blossom, shredded',
+                    'Fresh mint and perilla',
+                    'Lime wedges',
+                    'Fermented shrimp paste (mắm tôm) — optional but traditional',
+                    'Sliced fresh chilli',
+                ],
+            },
+        ],
+        steps: [
+            {
+                title: 'Make the crab mixture',
+                body: 'Combine crabmeat, minced pork, eggs, and 1 tbsp fish sauce. Mix well. This will form the dumplings when added to the hot broth.',
+            },
+            {
+                title: 'Fry the tomatoes',
+                body: 'Heat annatto oil in a large pot over medium-high heat. Fry shallots and garlic until fragrant, 1 minute. Add tomato wedges and cook, stirring, for 3-4 minutes until slightly broken down and the oil turns deep orange.',
+                tip: 'The annatto oil gives the broth its signature red-orange colour. If unavailable, a pinch of paprika in regular oil works.',
+            },
+            {
+                title: 'Build the broth',
+                body: 'Pour in the stock and bring to a boil. Season with fish sauce and salt. Reduce to a gentle simmer.',
+            },
+            {
+                title: 'Add the crab dumplings',
+                body: 'Spoon the crab mixture into the simmering broth in large dollops — do not stir. The heat will set them into soft, pillowy dumplings. Cook undisturbed for 5 minutes.',
+                tip: 'Stirring breaks the dumplings. Let them float and set naturally.',
+            },
+            {
+                title: 'Add tofu and finish',
+                body: 'Add fried tofu pieces to the broth. Simmer 5 more minutes. Adjust seasoning. Prepare noodles by soaking in cold water 15 minutes then blanching 30 seconds.',
+            },
+            {
+                title: 'Assemble and serve',
+                body: 'Place noodles in bowls. Ladle broth over with crab dumplings and tofu. Top with spring onion and fried shallots. Serve with the full herb and condiment plate — each person customises their own bowl.',
+            },
+        ],
+        proTips: [
+            {
+                icon: '🦀',
+                title: 'Do not stir the dumplings',
+                body: 'The crab and pork mixture sets into soft dumplings when it hits the hot broth. Stirring breaks them apart. Add in dollops and leave them alone for at least 5 minutes.',
+            },
+            {
+                icon: '🍅',
+                title: 'Ripe tomatoes only',
+                body: 'Bún riêu needs deeply ripe, flavourful tomatoes. Underripe tomatoes give a thin, acidic broth. In winter, a tablespoon of tomato paste added alongside fresh tomatoes helps.',
+            },
+            {
+                icon: '🧅',
+                title: 'Annatto oil makes the colour',
+                body: 'That beautiful deep orange-red colour comes from annatto seeds fried in oil. Find them at any Asian grocery store. Without it, the broth is still delicious but visually very different.',
+            },
+        ],
+        nutrition: [
+            { label: 'Calories', value: '410 kcal' },
+            { label: 'Protein', value: '28g' },
+            { label: 'Carbs', value: '48g' },
+            { label: 'Fat', value: '11g' },
+            { label: 'Sodium', value: '1150mg' },
+        ],
+        relatedSlugs: ['hanoi-beef-pho', 'vietnamese-chicken-pho', 'bun-cha-hanoi'],
+    },
+
+    'com-tam-saigon': {
+        slug: 'com-tam-saigon',
+        title: 'Saigon Broken Rice Plate',
+        subtitle: 'Cơm Tấm Sài Gòn',
+        description: 'The definitive Saigon breakfast — broken rice with grilled lemongrass pork chop, shredded pork skin, steamed egg cake and a glossy sweet fish sauce.',
+        story: `Cơm tấm — literally "broken rice" — was born from frugality. Broken rice grains were the ones that split during milling, cheaper and considered inferior. Saigon street vendors turned this into something extraordinary: the smaller, irregular grains cook up lighter and slightly stickier than whole jasmine rice, with a texture that holds sauce and grilled meats perfectly.\n\nA proper cơm tấm plate is an exercise in balance. The centrepiece is sườn nướng — a pork chop marinated in lemongrass and fish sauce, chargrilled until caramelised and slightly charred. Around it: bì (shredded pork skin tossed with rice powder), chả trứng (a dense steamed egg cake), and cucumber slices. Everything is drizzled with nước chấm — a sweet, garlicky dipping sauce.\n\nIn Saigon, cơm tấm is eaten morning, noon and night. It is the city's defining dish — a plate that tells you exactly where you are.`,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=80',
+        category: 'Rice', region: 'Southern', difficulty: 'Easy',
+        time: '20 min', prepTime: '15 min', cookTime: '15 min',
+        servings: 4, rating: '4.9', reviews: 298, calories: 620,
+        tags: ['Pork', 'Rice', 'Grilled', 'Saigon', 'Southern'],
+        ingredients: [
+            {
+                group: 'Grilled Pork Chop (Sườn Nướng)',
+                items: [
+                    '4 pork chops (bone-in, about 200g each)',
+                    '2 stalks lemongrass, white part, minced',
+                    '3 cloves garlic, minced',
+                    '2 shallots, minced',
+                    '2 tbsp fish sauce',
+                    '1 tbsp oyster sauce',
+                    '1 tbsp sugar',
+                    '1 tbsp neutral oil',
+                    '1/2 tsp black pepper',
+                ],
+            },
+            {
+                group: 'Sweet Fish Sauce (Nước Chấm)',
+                items: [
+                    '4 tbsp fish sauce',
+                    '4 tbsp sugar',
+                    '6 tbsp warm water',
+                    '2 tbsp lime juice',
+                    '2 cloves garlic, minced',
+                    '1 red chilli, sliced',
+                ],
+            },
+            {
+                group: 'To Serve',
+                items: [
+                    '600g cooked broken rice (cơm tấm) or jasmine rice',
+                    '1 cucumber, thinly sliced',
+                    '2 tomatoes, sliced',
+                    '4 spring onions, sliced',
+                    '2 tbsp fried shallots',
+                    'Sliced fresh chilli',
+                ],
+            },
+        ],
+        steps: [
+            {
+                title: 'Marinate the pork chops',
+                body: 'Combine lemongrass, garlic, shallots, fish sauce, oyster sauce, sugar, oil, and pepper. Score the pork chops lightly on both sides. Coat well in the marinade. Marinate at least 30 minutes — overnight is better.',
+                tip: 'Scoring helps the marinade penetrate and creates more caramelised surface area on the grill.',
+            },
+            {
+                title: 'Make the nước chấm',
+                body: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste — it should be sweet, sour, salty and garlicky. This sauce is the heart of the dish. Set aside.',
+            },
+            {
+                title: 'Grill the pork chops',
+                body: 'Grill over high charcoal heat or in a very hot cast iron pan for 4-5 minutes per side until deeply caramelised and slightly charred at the edges. Rest 3 minutes before serving.',
+                tip: 'The char is essential. Do not move the chops constantly — let them sit until they release naturally.',
+            },
+            {
+                title: 'Make the spring onion oil',
+                body: 'Heat 2 tbsp oil in a small pan until shimmering. Pour over sliced spring onions in a bowl. It should sizzle. Add a pinch of salt. This fragrant oil is drizzled over the rice.',
+            },
+            {
+                title: 'Assemble the plate',
+                body: 'Place a mound of broken rice on each plate. Lay the pork chop alongside. Add cucumber and tomato slices. Drizzle spring onion oil over the rice. Scatter fried shallots. Serve with a generous bowl of nước chấm on the side.',
+            },
+        ],
+        proTips: [
+            {
+                icon: '🔥',
+                title: 'Charcoal is the soul of cơm tấm',
+                body: 'Authentic sườn nướng is cooked over charcoal. The smoke penetrates the meat and creates a caramelisation that a gas grill or pan cannot replicate. If possible, use charcoal. If not, a cast iron pan on maximum heat for the longest possible contact time.',
+            },
+            {
+                icon: '🍚',
+                title: 'Broken rice is worth finding',
+                body: 'Broken rice (gạo tấm) is available at all Asian grocery stores. It cooks slightly differently to whole jasmine rice — use a little less water and check earlier. The smaller grains absorb sauce beautifully.',
+            },
+            {
+                icon: '🧅',
+                title: 'Spring onion oil is not optional',
+                body: 'That fragrant, sizzling spring onion oil drizzled over the rice is what makes cơm tấm taste like Saigon. It takes 90 seconds to make and transforms the plate.',
+            },
+        ],
+        nutrition: [
+            { label: 'Calories', value: '620 kcal' },
+            { label: 'Protein', value: '38g' },
+            { label: 'Carbs', value: '72g' },
+            { label: 'Fat', value: '18g' },
+            { label: 'Sodium', value: '1200mg' },
+        ],
+        relatedSlugs: ['suon-nuong-sa', 'banh-mi', 'bun-cha-hanoi'],
+    },
+
+    'suon-nuong-sa': {
+        slug: 'suon-nuong-sa',
+        title: 'Grilled Lemongrass Pork Chops',
+        subtitle: 'Sườn Nướng Sả',
+        description: 'Juicy pork chops marinated in lemongrass, garlic and fish sauce — grilled until caramelised and fragrant. One of Vietnam\'s most craveable dishes.',
+        story: `Sườn nướng sả is Vietnamese grilling at its most elemental. A pork chop. Lemongrass. Fish sauce. Garlic. Fire. That is the entire recipe, and it is one of the most satisfying things you can put on a plate.\n\nLemongrass is the ingredient that makes Vietnamese grilled pork unmistakable. It contributes a citrusy, slightly floral fragrance that perfumes the meat all the way through, and when it hits the heat of a grill, it caramelises into something almost magical — complex, sweet, and deeply savoury all at once.\n\nSườn nướng is eaten everywhere in Vietnam: on cơm tấm plates for breakfast, over rice for lunch, as a party dish for dinner. It is endlessly versatile and reliably delicious. This recipe is the foundation — learn it once and you will make it for years.`,
+        image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1400&q=80',
+        category: 'Grilled', region: 'Southern', difficulty: 'Easy',
+        time: '12 min', prepTime: '10 min', cookTime: '12 min',
+        servings: 4, rating: '4.9', reviews: 312, calories: 480,
+        tags: ['Pork', 'Grilled', 'Lemongrass', 'Quick', 'Southern'],
+        ingredients: [
+            {
+                group: 'Pork & Marinade',
+                items: [
+                    '4 pork chops (bone-in, 1.5-2cm thick)',
+                    '3 stalks lemongrass, white part only, very finely minced',
+                    '4 cloves garlic, minced',
+                    '3 shallots, minced',
+                    '2 tbsp fish sauce',
+                    '1 tbsp oyster sauce',
+                    '1.5 tbsp sugar',
+                    '1 tbsp neutral oil',
+                    '1/2 tsp black pepper',
+                    '1/2 tsp turmeric powder (optional, for colour)',
+                ],
+            },
+            {
+                group: 'Dipping Sauce',
+                items: [
+                    '3 tbsp fish sauce',
+                    '3 tbsp sugar',
+                    '5 tbsp warm water',
+                    '2 tbsp lime juice',
+                    '2 cloves garlic, minced',
+                    '1 red chilli, sliced',
+                ],
+            },
+            {
+                group: 'To Serve',
+                items: [
+                    'Steamed jasmine rice',
+                    'Cucumber slices',
+                    'Tomato slices',
+                    'Fresh herbs',
+                    'Spring onion oil (spring onions + hot oil)',
+                ],
+            },
+        ],
+        steps: [
+            {
+                title: 'Prepare the lemongrass',
+                body: 'Remove the tough outer layers of lemongrass and use only the tender white inner part. Mince as finely as possible — the finer the mince, the more evenly it coats the meat and the better it caramelises.',
+                tip: 'A food processor makes quick work of lemongrass. Pulse until it becomes an almost-paste.',
+            },
+            {
+                title: 'Marinate',
+                body: 'Combine all marinade ingredients. Score the pork chops on both sides — two or three diagonal cuts about 5mm deep. This helps the marinade penetrate and prevents the chops from curling on the grill. Coat thoroughly and marinate for at least 1 hour. Overnight is significantly better.',
+                tip: 'The longer the marinade, the deeper the lemongrass flavour penetrates. 24 hours in the fridge transforms a good chop into an exceptional one.',
+            },
+            {
+                title: 'Make the dipping sauce',
+                body: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Balance to taste — sweet, sour, and savoury should be in harmony.',
+            },
+            {
+                title: 'Grill',
+                body: 'Grill over high charcoal or in a very hot cast iron pan. Cook 4-5 minutes per side without moving — let the crust form. The chops should be deeply caramelised with charred edges. Rest 3-4 minutes before serving.',
+                tip: 'The single most important step: do not move the chops once they are on the heat. Let them sit until they release naturally — that is when the caramelised crust has formed.',
+            },
+            {
+                title: 'Make spring onion oil and serve',
+                body: 'Slice spring onions thinly. Heat 2 tbsp oil until shimmering and pour over the spring onions — it should sizzle. Season with a pinch of salt. Drizzle over rice. Plate the pork chop with rice, cucumber, and tomato. Serve dipping sauce alongside.',
+            },
+        ],
+        proTips: [
+            {
+                icon: '🌿',
+                title: 'Mince the lemongrass very fine',
+                body: 'Coarsely chopped lemongrass burns before it caramelises and creates unpleasant fibrous bits on the meat. Take the time to mince it as finely as you can — or pulse it in a small food processor. Fine lemongrass creates an even, burnished crust.',
+            },
+            {
+                icon: '⏰',
+                title: 'Overnight marinade is transformative',
+                body: 'One hour gives good results. Four hours gives great results. Overnight gives you the best pork chops you have ever made. Plan ahead if you can.',
+            },
+            {
+                icon: '🔥',
+                title: 'One side at a time',
+                body: 'Flipping a pork chop repeatedly prevents the Maillard reaction from creating a proper crust. Put the chop down, walk away, come back in 4-5 minutes. Flip once. That is the technique.',
+            },
+            {
+                icon: '🍚',
+                title: 'Serve with broken rice',
+                body: 'Sườn nướng sả is the star of a cơm tấm plate — Saigon\'s iconic broken rice dish. If you can find broken rice (gạo tấm) at an Asian grocery store, use it. The smaller grains hold the sauce and fat from the pork chop in a way whole rice cannot.',
+            },
+        ],
+        nutrition: [
+            { label: 'Calories', value: '480 kcal' },
+            { label: 'Protein', value: '36g' },
+            { label: 'Carbs', value: '12g' },
+            { label: 'Fat', value: '32g' },
+            { label: 'Sodium', value: '980mg' },
+        ],
+        relatedSlugs: ['com-tam-saigon', 'banh-mi', 'bun-cha-hanoi'],
+    },
     'banh-xeo': {
         slug: 'banh-xeo',
         title: 'Crispy Vietnamese Sizzling Pancake',
@@ -569,6 +880,8 @@ const RECIPE_DB: Record<string, RecipeData> = {
         ],
         relatedSlugs: ['hanoi-beef-pho', 'banh-mi', 'fresh-spring-rolls'],
     },
+
+
 }
 
 // Related recipe card thumbnails
