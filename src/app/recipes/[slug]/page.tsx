@@ -17,7 +17,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, use } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -262,8 +262,9 @@ function fadeUp(delay = 0) {
 }
 
 // ─── Page Component ───────────────────────────────────────────────────────────
-export default function RecipeDetailPage({ params }: { params: { slug: string } }) {
-    const recipe = RECIPE_DB[params.slug] ?? RECIPE_DB[decodeURIComponent(params.slug)]
+export default function RecipeDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params)
+    const recipe = RECIPE_DB[slug]
 
     const [servings, setServings] = useState(recipe?.servings ?? 4)
     const [checkedSteps, setCheckedSteps] = useState<Set<number>>(new Set())
