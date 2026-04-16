@@ -449,8 +449,8 @@ const RECIPE_DB: Record<string, RecipeData> = {
         relatedSlugs: ['hanoi-beef-pho', 'vietnamese-chicken-pho', 'bun-cha-hanoi'],
     },
 
-    'com-tam-saigon': {
-        slug: 'com-tam-saigon',
+    'com-tam': {
+        slug: 'com-tam',
         title: 'Saigon Broken Rice Plate',
         subtitle: 'Cơm Tấm Sài Gòn',
         description: 'The definitive Saigon breakfast — broken rice with grilled lemongrass pork chop, shredded pork skin, steamed egg cake and a glossy sweet fish sauce.',
@@ -549,10 +549,10 @@ const RECIPE_DB: Record<string, RecipeData> = {
         relatedSlugs: ['suon-nuong-sa', 'banh-mi', 'bun-cha-hanoi'],
     },
 
-    'suon-nuong-sa': {
-        slug: 'suon-nuong-sa',
+    'grilled-lemongrass-pork': {
+        slug: 'grilled-lemongrass-pork':,
         title: 'Grilled Lemongrass Pork Chops',
-        subtitle: 'Sườn Nướng Sả',
+        subtitle: 'grilled-lemongrass-pork':,
         description: 'Juicy pork chops marinated in lemongrass, garlic and fish sauce — grilled until caramelised and fragrant. One of Vietnam\'s most craveable dishes.',
         story: `Sườn nướng sả is Vietnamese grilling at its most elemental. A pork chop. Lemongrass. Fish sauce. Garlic. Fire. That is the entire recipe, and it is one of the most satisfying things you can put on a plate.\n\nLemongrass is the ingredient that makes Vietnamese grilled pork unmistakable. It contributes a citrusy, slightly floral fragrance that perfumes the meat all the way through, and when it hits the heat of a grill, it caramelises into something almost magical — complex, sweet, and deeply savoury all at once.\n\nSườn nướng is eaten everywhere in Vietnam: on cơm tấm plates for breakfast, over rice for lunch, as a party dish for dinner. It is endlessly versatile and reliably delicious. This recipe is the foundation — learn it once and you will make it for years.`,
         image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1400&q=80',
