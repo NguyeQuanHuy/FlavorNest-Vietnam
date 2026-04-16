@@ -239,6 +239,8 @@ const RECIPE_DB: Record<string, RecipeData> = {
         ],
         relatedSlugs: ['hanoi-beef-pho', 'banh-mi'],
     },
+
+
     'fresh-spring-rolls': {
         slug: 'fresh-spring-rolls',
         title: 'Fresh Shrimp & Pork Spring Rolls',
@@ -338,6 +340,124 @@ const RECIPE_DB: Record<string, RecipeData> = {
             { label: 'Sodium', value: '620mg' },
         ],
         relatedSlugs: ['banh-mi', 'bun-cha-hanoi', 'hanoi-beef-pho'],
+    },
+    // Paste after 'fresh-spring-rolls' entry in RECIPE_DB
+
+    'banh-xeo': {
+        slug: 'banh-xeo',
+        title: 'Crispy Vietnamese Sizzling Pancake',
+        subtitle: 'Bánh Xèo',
+        description: 'A golden turmeric crêpe sizzling with shrimp, pork and bean sprouts — wrapped in lettuce with fresh herbs and dipped in nước chấm.',
+        story: `The name means "sizzling cake" — bánh xèo — named for the explosive hiss the batter makes when it hits the screaming-hot pan. It is one of the most theatrical sounds in Vietnamese cooking, and one of the most satisfying.\n\nBánh xèo is a dish of contrasts held in perfect balance. The crêpe is paper-thin and shatteringly crisp on the outside, yet yielding and fragrant with turmeric within. The filling is hot and savoury. But you break it by hand, wrap it in cool mustard leaf or lettuce, pack in fresh herbs, and dip it in a bright nước chấm. Hot and cool. Crispy and soft. Rich and fresh. All at once.\n\nThe Southern Vietnamese version — made famous in Saigon and the Mekong Delta — is enormous, almost the size of a dinner plate, and loaded generously. The Central version is smaller and even crispier. This recipe follows the Southern tradition: bigger is better, and the crunch is everything.`,
+        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1400&q=80',
+        category: 'Street Food', region: 'Southern', difficulty: 'Easy',
+        time: '40 min', prepTime: '20 min', cookTime: '20 min',
+        servings: 4, rating: '4.8', reviews: 156, calories: 390,
+        tags: ['Shrimp', 'Pork', 'Crispy', 'Street Food', 'Gluten Free'],
+        ingredients: [
+            {
+                group: 'Batter',
+                items: [
+                    '200g rice flour',
+                    '1 tsp turmeric powder',
+                    '1/2 tsp salt',
+                    '400ml coconut milk',
+                    '100ml cold water',
+                    '2 spring onions, thinly sliced',
+                ],
+            },
+            {
+                group: 'Filling',
+                items: [
+                    '200g medium shrimp, peeled and deveined',
+                    '150g pork belly, thinly sliced',
+                    '200g bean sprouts',
+                    '1 onion, thinly sliced',
+                    '2 cloves garlic, minced',
+                    'Neutral oil for frying',
+                ],
+            },
+            {
+                group: 'Nước Chấm Dipping Sauce',
+                items: [
+                    '3 tbsp fish sauce',
+                    '3 tbsp sugar',
+                    '5 tbsp warm water',
+                    '2 tbsp lime juice',
+                    '1 clove garlic, minced',
+                    '1 red chilli, thinly sliced',
+                ],
+            },
+            {
+                group: 'To Serve',
+                items: [
+                    'Mustard greens or butter lettuce leaves',
+                    'Fresh mint',
+                    'Fresh perilla (tía tô)',
+                    'Fresh cilantro',
+                    'Cucumber, thinly sliced',
+                ],
+            },
+        ],
+        steps: [
+            {
+                title: 'Make the batter',
+                body: 'Whisk together rice flour, turmeric, and salt. Gradually add coconut milk and cold water, whisking until completely smooth. Stir in spring onions. The batter should be thin — thinner than pancake batter. Rest for 15 minutes.',
+                tip: 'Resting the batter allows the rice flour to fully hydrate. This gives a crispier result.',
+            },
+            {
+                title: 'Make the dipping sauce',
+                body: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste and adjust — it should be bright, sweet, sour, and savoury in equal measure. Set aside.',
+            },
+            {
+                title: 'Prepare the filling',
+                body: 'Season shrimp lightly with salt and pepper. Season pork slices similarly. Have bean sprouts and sliced onion ready. Prep the herb plate and wash lettuce leaves.',
+            },
+            {
+                title: 'Cook the pancake',
+                body: 'Heat a 26-28cm non-stick or cast iron pan over high heat. Add 1.5 tbsp oil. When smoking, add a few pork slices and cook 1 minute. Add shrimp and onion, cook 1 minute more. Ladle in enough batter to coat the pan thinly — swirl immediately to spread. Add a handful of bean sprouts over one half. Cover and cook 2 minutes.',
+                tip: 'The pan must be very hot before the batter goes in. This is what creates the lacy, crispy edges.',
+            },
+            {
+                title: 'Crisp and fold',
+                body: 'Remove the lid. Drizzle a little oil around the edges of the pancake. Cook uncovered for another 2-3 minutes until the edges are deeply golden and the pancake lifts easily from the pan. Fold in half over the filling and slide onto a plate.',
+            },
+            {
+                title: 'Wrap and eat',
+                body: 'Break pieces of the pancake by hand. Place a piece on a lettuce or mustard green leaf, add fresh herbs and cucumber, wrap loosely, and dip into the nước chấm. Eat immediately — bánh xèo waits for no one.',
+                tip: 'Cook and eat one at a time. The crunch is everything, and it fades fast.',
+            },
+        ],
+        proTips: [
+            {
+                icon: '🔥',
+                title: 'Temperature is everything',
+                body: 'The pan must be smoking hot before the batter goes in. If the pan is not hot enough, the batter steams instead of sizzles — and you get a soft, pale pancake instead of a golden, crispy one. Wait until you see the oil shimmer and smoke.',
+            },
+            {
+                icon: '🥥',
+                title: 'Coconut milk is non-negotiable',
+                body: 'Coconut milk gives bánh xèo its richness and helps the edges crisp and blister. Do not substitute with regular milk or water — the result will be pale and flat-tasting.',
+            },
+            {
+                icon: '🌿',
+                title: 'The herb plate is half the dish',
+                body: 'Bánh xèo eaten without herbs is just a pancake. Pack the mustard leaf wrap with fresh mint, perilla, and cilantro. The herbal freshness is what cuts through the richness of the filling and makes every bite complete.',
+            },
+            {
+                icon: '🍽️',
+                title: 'Cook small batches',
+                body: 'Make one pancake at a time and eat it immediately. Vietnamese street vendors do exactly this — they cook to order, one at a time. The moment the crunch is gone, something is lost. Plan for a rolling, social meal rather than making everything at once.',
+            },
+        ],
+        nutrition: [
+            { label: 'Calories', value: '390 kcal' },
+            { label: 'Protein', value: '22g' },
+            { label: 'Carbs', value: '38g' },
+            { label: 'Fat', value: '16g' },
+            { label: 'Sodium', value: '890mg' },
+        ],
+        relatedSlugs: ['fresh-spring-rolls', 'banh-mi', 'bun-cha-hanoi'],
     },
 }
 
