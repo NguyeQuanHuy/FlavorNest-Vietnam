@@ -459,6 +459,116 @@ const RECIPE_DB: Record<string, RecipeData> = {
         ],
         relatedSlugs: ['fresh-spring-rolls', 'banh-mi', 'bun-cha-hanoi'],
     },
+    // Paste after 'banh-xeo' entry in RECIPE_DB
+
+    'vietnamese-chicken-pho': {
+        slug: 'vietnamese-chicken-pho',
+        title: 'Vietnamese Chicken Pho',
+        subtitle: 'Phở Gà',
+        description: 'A lighter, gentler cousin of beef pho — golden chicken broth perfumed with ginger and star anise, silky rice noodles, and tender poached chicken.',
+        story: `If beef pho is Hanoi at 5am, then chicken pho is Hanoi on a Sunday morning — quieter, gentler, more forgiving. Phở gà has always been the everyday version: quicker to make, lighter on the stomach, and somehow more delicate without being any less satisfying.\n\nThe broth is the heart of it. Where beef pho takes hours and bones, chicken pho builds its depth in under two hours from a whole bird — the carcass giving body, the meat giving sweetness, the ginger and charred onion giving that signature warmth. The result is a golden broth that is clear, fragrant, and restorative in a way that makes you understand why Vietnamese families serve it when someone is unwell.\n\nDo not rush the simmer. The slower and gentler it goes, the clearer and more beautiful the broth becomes.`,
+        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=1400&q=80',
+        category: 'Soup', region: 'Northern', difficulty: 'Easy',
+        time: '2 hrs', prepTime: '20 min', cookTime: '1.5 hrs',
+        servings: 4, rating: '4.9', reviews: 203, calories: 380,
+        tags: ['Chicken', 'Noodles', 'Soup', 'Northern', 'Gluten Free'],
+        ingredients: [
+            {
+                group: 'Broth',
+                items: [
+                    '1 whole chicken (about 1.5kg)',
+                    '1 large onion, halved',
+                    '6cm fresh ginger, halved lengthways',
+                    '3 star anise',
+                    '1 cinnamon stick',
+                    '4 whole cloves',
+                    '1 tsp coriander seeds',
+                    '2 tbsp fish sauce',
+                    '1 tsp sugar',
+                    'Salt to taste',
+                    '2.5 liters cold water',
+                ],
+            },
+            {
+                group: 'Noodles & Toppings',
+                items: [
+                    '400g flat rice noodles (bánh phở)',
+                    '4 spring onions, thinly sliced',
+                    '2 tbsp fried shallots',
+                    'Fresh cilantro',
+                    'Fresh Vietnamese coriander (rau răm) if available',
+                ],
+            },
+            {
+                group: 'Serve With',
+                items: [
+                    'Bean sprouts',
+                    'Lime wedges',
+                    'Sliced fresh chilli',
+                    'Hoisin sauce',
+                    'Sriracha',
+                ],
+            },
+        ],
+        steps: [
+            {
+                title: 'Char the aromatics',
+                body: 'Place the halved onion and ginger cut-side down directly over a gas flame or under a broiler. Char until deeply blackened in spots — about 5 minutes. This adds smokiness and depth to the broth.',
+                tip: 'Do not skip the charring. It is what separates a great phở gà from a plain chicken soup.',
+            },
+            {
+                title: 'Toast the spices',
+                body: 'In a dry pan over medium heat, toast star anise, cinnamon stick, cloves, and coriander seeds for 2 minutes until fragrant. Tie them in a cheesecloth bundle or place in a spice bag.',
+            },
+            {
+                title: 'Start the broth',
+                body: 'Place the whole chicken in a large pot. Cover with 2.5 liters of cold water. Bring to a boil, then immediately reduce to a bare simmer. Skim any foam that rises to the surface — this is important for a clear broth.',
+                tip: 'Starting with cold water and bringing it up slowly draws more impurities to the surface, making it easier to skim.',
+            },
+            {
+                title: 'Add aromatics and simmer',
+                body: 'Add the charred onion, ginger, spice bundle, fish sauce, and sugar. Simmer very gently — the surface should barely tremble — for 45-60 minutes until the chicken is fully cooked and tender. Do not boil.',
+            },
+            {
+                title: 'Remove and shred the chicken',
+                body: 'Carefully lift out the whole chicken and let it cool enough to handle. Remove the breast meat and thigh meat. Shred or slice thinly. Return the carcass to the broth and simmer for another 20 minutes. Strain the broth, adjust seasoning with fish sauce and salt.',
+            },
+            {
+                title: 'Cook noodles and assemble',
+                body: 'Soak rice noodles in cold water for 20 minutes, then blanch in boiling water for 30-60 seconds. Divide into bowls. Top with shredded chicken. Ladle the boiling broth over. Garnish with spring onion, fried shallots, and cilantro. Serve with the condiment plate.',
+            },
+        ],
+        proTips: [
+            {
+                icon: '🐓',
+                title: 'Use a whole chicken',
+                body: 'A whole chicken gives you broth from the carcass and beautiful meat from the breast and thigh. Using just breast fillets gives you neither the body nor the flavour. The bones are what make the broth.',
+            },
+            {
+                icon: '🌡️',
+                title: 'Never boil the broth',
+                body: 'A rolling boil makes the broth cloudy and the chicken tough. Keep it at the gentlest possible simmer — the surface should barely move. Patience here is rewarded with a crystal-clear, silky broth.',
+            },
+            {
+                icon: '🧅',
+                title: 'Char deeply, not lightly',
+                body: 'The onion and ginger need to be genuinely blackened in spots — not just golden. The char caramelises sugars and adds a subtle smokiness that defines the broth. Timid charring gives timid flavour.',
+            },
+            {
+                icon: '🍜',
+                title: 'Vietnamese coriander changes everything',
+                body: 'If you can find rau răm (Vietnamese coriander / laksa leaf), use it as a garnish. It has a peppery, slightly citrusy flavour that is completely different from regular cilantro and is the traditional herb for phở gà in the north.',
+            },
+        ],
+        nutrition: [
+            { label: 'Calories', value: '380 kcal' },
+            { label: 'Protein', value: '42g' },
+            { label: 'Carbs', value: '38g' },
+            { label: 'Fat', value: '7g' },
+            { label: 'Sodium', value: '1050mg' },
+        ],
+        relatedSlugs: ['hanoi-beef-pho', 'banh-mi', 'fresh-spring-rolls'],
+    },
 }
 
 // Related recipe card thumbnails
