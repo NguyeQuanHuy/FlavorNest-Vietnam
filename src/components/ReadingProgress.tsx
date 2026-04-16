@@ -47,7 +47,7 @@ export default function ReadingProgress() {
                 transition={{ duration: 0.3 }}
                 style={{
                     position: 'fixed',
-                    top: 80, // below 80px navbar
+                    top: 68,
                     left: 0,
                     right: 0,
                     height: 3,
