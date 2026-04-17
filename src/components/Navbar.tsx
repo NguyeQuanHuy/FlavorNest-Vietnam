@@ -93,7 +93,7 @@ export default async function Navbar() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6 overflow-hidden"
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6"
             style={{ boxShadow: '0 1px 0 rgba(75,46,26,0.04), 0 4px 16px rgba(0,0,0,0.04)' }}>
             <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-6">
 
