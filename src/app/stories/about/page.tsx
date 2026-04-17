@@ -11,9 +11,9 @@ import { motion } from 'framer-motion'
 
 const TEAM = [
     {
-        name: 'Mai Linh Nguyen',
+        name: 'Quan Huy Nguyen',
         role: 'Head of Recipes & Food Writing',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80',
+        image: '/images/team/nguyen-quan-huy.jpg',
         bio: 'Born in Hanoi, raised between her grandmother\'s kitchen and Saigon\'s street corners. Mai Linh has spent 15 years documenting traditional Vietnamese recipes before they disappear.',
         region: 'Northern Vietnam',
     },
@@ -25,9 +25,9 @@ const TEAM = [
         region: 'Central Vietnam',
     },
     {
-        name: 'Huong Thu Pham',
+        name: 'Nguyen Quan Huy',
         role: 'Recipe Testing & Cultural Research',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
+        image: '/images/team/quan-huy-nguyen.jpg',
         bio: 'A trained chef who left fine dining to research how Vietnamese home cooks actually cook — without measurements, without timers, and with a profound intuition built over decades.',
         region: 'Southern Vietnam',
     },
