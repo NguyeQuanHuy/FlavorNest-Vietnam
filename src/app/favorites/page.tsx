@@ -69,7 +69,7 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         slug: 'hanoi-beef-pho',
         title: 'Hanoi Beef Pho',
         subtitle: 'Phở Bò Hà Nội',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Steaming bowl of Hanoi beef pho',
         cookTime: '3 hrs',
         difficulty: 'Medium',
@@ -80,7 +80,7 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         slug: 'banh-mi',
         title: 'Lemongrass Pork Bánh Mì',
         subtitle: 'Bánh Mì Thịt Nướng',
-        image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1600454069829-55b48f63aeff?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Vietnamese banh mi sandwich',
         cookTime: '40 min',
         difficulty: 'Easy',
@@ -91,7 +91,7 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         slug: 'bun-cha-hanoi',
         title: 'Hanoi Grilled Pork Vermicelli',
         subtitle: 'Bún Chả Hà Nội',
-        image: 'https://images.unsplash.com/photo-1623682785702-f0c9fcfe2fc0?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Bun Cha with grilled pork and noodles',
         cookTime: '45 min',
         difficulty: 'Easy',
@@ -102,7 +102,7 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         slug: 'fresh-spring-rolls',
         title: 'Fresh Spring Rolls',
         subtitle: 'Gỏi Cuốn Tôm Thịt',
-        image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Vietnamese fresh spring rolls',
         cookTime: '45 min',
         difficulty: 'Easy',
@@ -113,7 +113,7 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         slug: 'com-tam',
         title: 'Saigon Broken Rice Plate',
         subtitle: 'Cơm Tấm Sài Gòn',
-        image: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80',
         imageAlt: 'Saigon broken rice with pork chop',
         cookTime: '35 min',
         difficulty: 'Easy',
@@ -121,7 +121,6 @@ const DEMO_RECIPES: FavoriteRecipe[] = [
         savedAt: Date.now() - 2 * 86_400_000,
     },
 ]
-
 // ─────────────────────────────────────────────────────────────────────────────
 //  SkeletonCard
 // ─────────────────────────────────────────────────────────────────────────────
