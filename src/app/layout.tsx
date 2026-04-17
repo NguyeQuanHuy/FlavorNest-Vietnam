@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ReadingProgress from '@/components/ReadingProgress'
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
+import AuthProvider from "@/components/providers/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,31 +74,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-  className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}    >
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body
         className="min-h-full flex flex-col"
         style={{
-          // Prevent content shift on mobile when scrollbar appears
           overflowX: "hidden",
-          // Smooth scrolling
           scrollBehavior: "smooth",
-          // Better text rendering on mobile
           WebkitFontSmoothing: "antialiased",
           MozOsxFontSmoothing: "grayscale",
-          // Prevent tap highlight on mobile
           WebkitTapHighlightColor: "transparent",
-          // Prevent text size adjustment on orientation change
           WebkitTextSizeAdjust: "100%",
         }}
       >
-        <Navbar />
-        <ReadingProgress />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <ReadingProgress />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </AuthProvider>
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
       </body>
     </html>
+  );
   );
 }
