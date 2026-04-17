@@ -549,7 +549,7 @@ const RECIPE_DB: Record<string, RecipeData> = {
         relatedSlugs: ['suon-nuong-sa', 'banh-mi', 'bun-cha-hanoi'],
     },
 
-    'grilled-lemongrass-pork' {
+'grilled-lemongrass-pork': {
         slug: 'grilled-lemongrass-pork',
         title: 'Grilled Lemongrass Pork Chops',
         subtitle: 'Sườn Nướng Sả',
