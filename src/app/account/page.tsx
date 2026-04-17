@@ -167,11 +167,25 @@ export default function AccountPage() {
     const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0]
         if (!file) return
+    
+        // Validate file size (max 2MB để tránh localStorage quota)
+        if (file.size > 2 * 1024 * 1024) {
+            alert('Ảnh quá lớn. Vui lòng chọn ảnh dưới 2MB.')
+            return
+        }
+    
         const reader = new FileReader()
         reader.onload = () => {
             const avatarData = reader.result as string
             setUser(prev => ({ ...prev, avatar: avatarData }))
-            try { localStorage.setItem('fn_avatar', avatarData) } catch { }
+            try {
+                localStorage.setItem('fn_avatar', avatarData)
+                // Bắn sự kiện để UserAvatar ở Navbar tự refresh ngay lập tức
+                window.dispatchEvent(new CustomEvent('fn-avatar-updated', { detail: avatarData }))
+            } catch (err) {
+                console.error('Không lưu được avatar:', err)
+                alert('Không lưu được avatar. localStorage có thể đã đầy.')
+            }
         }
         reader.readAsDataURL(file)
     }
