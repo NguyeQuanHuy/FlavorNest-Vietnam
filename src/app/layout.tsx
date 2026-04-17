@@ -97,7 +97,6 @@ export default function RootLayout({
         </AuthProvider>
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
       </body>
-    </html>
-  );
+</html>
   );
 }
