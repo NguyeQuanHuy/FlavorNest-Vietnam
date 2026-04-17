@@ -1,293 +1,918 @@
-'use client'
+'use client';
 
 /**
- * FlavorNest Vietnam — About / Behind the Scenes Page
+ * FlavorNest Vietnam — About Page
  * src/app/stories/about/page.tsx
+ *
+ * Story angle: A Vietnamese man from Phú Yên, now living in Germany,
+ * documenting his home country's cuisine — starting with the food he misses most.
+ * Real story. Honest numbers. Emotional without pretending.
  */
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-const TEAM = [
-    {
-        name: 'Quan Huy Nguyen',
-        role: 'Head of Recipes & Food Writing',
-        image: '/images/team/nguyen-quan-huy.jpg',
-        bio: 'Born in Hanoi, raised between her grandmother\'s kitchen and Saigon\'s street corners. Mai Linh has spent 15 years documenting traditional Vietnamese recipes before they disappear.',
-        region: 'Northern Vietnam',
-    },
-    {
-        name: 'Huy Nguyen',
-        role: 'Food Photographer & Visual Director',
-        image: '/images/team/huy-nguyen.jpg',
-        bio: 'Shot food for hotels and restaurants across Southeast Asia before realising the best food he had ever seen was on plastic stools in Hội An. Now he photographs only what he would eat himself.',
-        region: 'Central Vietnam',
-    },
-    {
-        name: 'Nguyen Quan Huy',
-        role: 'Recipe Testing & Cultural Research',
-        image: '/images/team/quan-huy-nguyen.jpg',
-        bio: 'A trained chef who left fine dining to research how Vietnamese home cooks actually cook — without measurements, without timers, and with a profound intuition built over decades.',
-        region: 'Southern Vietnam',
-    },
-]
-
-const MILESTONES = [
-    { year: '2022', event: 'FlavorNest founded in a Saigon apartment with 12 recipes and a phone camera' },
-    { year: '2023', event: 'First 50 recipes published. 10,000 monthly visitors. Zero paid promotion.' },
-    { year: '2024', event: 'Travel guide launched. Partnerships with home cooks across all three regions.' },
-    { year: '2025', event: '100+ recipes. Community of 50,000+ food lovers across 40 countries.' },
-]
-
+// ── Values: what FlavorNest actually stands for ──
 const VALUES = [
     {
         icon: '🏠',
-        title: 'Home Kitchen First',
-        body: 'Every recipe we publish has been tested in a real home kitchen with a real home stove. If it requires a commercial burner or a $500 knife, it is not on FlavorNest.',
+        title: 'The Home Kitchen Test',
+        body: 'Every recipe is tested in a real home kitchen with a normal stove — mine, here in Germany. If it needs equipment a home cook doesn\'t have, it doesn\'t make it here.',
     },
     {
         icon: '📖',
         title: 'Story Before Recipe',
-        body: 'We believe a recipe without context is just a set of instructions. Every dish we share comes with the story of where it came from, who made it first, and why it matters.',
-    },
-    {
-        icon: '🤝',
-        title: 'Made With Vietnamese Cooks',
-        body: 'We do not invent. We document, test, and amplify. Every recipe on FlavorNest was learned from a Vietnamese cook — a grandmother, a street vendor, a home cook who has been making the same dish for 40 years.',
+        body: 'Every dish comes with context — where it\'s from, who taught it, why it matters. A recipe without story is just a list of ingredients.',
     },
     {
         icon: '🌱',
-        title: 'Preserving What Could Be Lost',
-        body: 'Dozens of traditional Vietnamese dishes are disappearing as younger generations move to cities and simpler food. We are building the most complete archive of Vietnamese home cooking on the internet.',
+        title: 'Before It Disappears',
+        body: 'Younger generations are moving to cities, eating faster, cooking less. Some traditional recipes exist only in a grandmother\'s memory. FlavorNest is, in small part, an attempt to write them down.',
     },
-]
+    {
+        icon: '🤝',
+        title: 'No Shortcuts, No Fakes',
+        body: 'We don\'t substitute fish sauce with soy. We don\'t "Westernize" recipes for easier ingredients. If the real version takes 10 hours, we write the 10-hour version — and tell you honestly.',
+    },
+];
 
+// ── Timeline: real milestones, real dates ──
+const JOURNEY = [
+    {
+        year: '2023',
+        event: 'The first draft of FlavorNest was written on a laptop in a small apartment in Thuringia, Germany — between shifts, between homesickness.',
+    },
+    {
+        year: '2024',
+        event: 'The first twenty recipes went live. Most of them were dishes from Phú Yên — the ones I missed the most.',
+    },
+    {
+        year: '2025',
+        event: 'The project expanded to Northern and Southern Vietnamese cuisine. Longform stories about pho, bánh mì, and bánh xèo were added.',
+    },
+    {
+        year: '2026',
+        event: 'Still writing. Still testing. Still one person in a kitchen, trying to get it right.',
+    },
+];
+
+// ── Animation helper ──
 const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: 24 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
     transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
-})
+});
 
 export default function AboutPage() {
     return (
-        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+        <main
+            style={{
+                minHeight: '100vh',
+                background: '#FAFAF7',
+                fontFamily: "'DM Sans', system-ui, sans-serif",
+            }}
+        >
             <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap');
                 * { box-sizing: border-box; }
             `}</style>
 
-            {/* HERO */}
-            <section style={{ background: 'linear-gradient(135deg, #1A0E07 0%, #2D1A0E 100%)', padding: '120px 24px 80px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 60% 40%, rgba(217,119,6,0.08) 0%, transparent 55%)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative' }}>
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}>
-                        {[['Home', '/'], ['Stories', '/stories'], ['Behind the Scenes', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>}
-                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+            {/* ════════════════════════════════════════
+                HERO — Dark, intimate, full-bleed
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    position: 'relative',
+                    minHeight: '90vh',
+                    display: 'flex',
+                    alignItems: 'center',
+                    overflow: 'hidden',
+                    background: '#1A0E07',
+                }}
+            >
+                {/* Hero background image */}
+                <div style={{ position: 'absolute', inset: 0 }}>
+                    <Image
+                        src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1920&q=85"
+                        alt="Steaming bowl of Vietnamese food"
+                        fill
+                        priority
+                        quality={85}
+                        style={{ objectFit: 'cover', opacity: 0.45 }}
+                        sizes="100vw"
+                    />
+                    <div
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background:
+                                'linear-gradient(180deg, rgba(26,14,7,0.5) 0%, rgba(26,14,7,0.85) 100%)',
+                        }}
+                    />
+                </div>
+
+                {/* Hero content */}
+                <div
+                    style={{
+                        position: 'relative',
+                        maxWidth: 1100,
+                        margin: '0 auto',
+                        padding: '100px 24px 60px',
+                        width: '100%',
+                    }}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 10,
+                                marginBottom: 28,
+                            }}
+                        >
+                            <div
+                                style={{
+                                    width: 36,
+                                    height: 2,
+                                    background: '#D97706',
+                                }}
+                            />
+                            <span
+                                style={{
+                                    fontSize: 12,
+                                    fontWeight: 700,
+                                    letterSpacing: '0.24em',
+                                    color: '#D97706',
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                About FlavorNest
                             </span>
-                        ))}
-                    </nav>
+                        </div>
 
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.12)', border: '1px solid rgba(217,119,6,0.25)', borderRadius: 100, padding: '7px 18px', marginBottom: 22 }}>
-                        <span style={{ fontSize: 14 }}>🎬</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Our Food Journey</span>
-                    </div>
+                        <h1
+                            style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: 'clamp(48px, 8vw, 104px)',
+                                fontWeight: 700,
+                                color: 'white',
+                                margin: '0 0 32px',
+                                lineHeight: 0.95,
+                                letterSpacing: '-0.02em',
+                            }}
+                        >
+                            The food I grew up with
+                            <br />
+                            <span
+                                style={{
+                                    color: '#D97706',
+                                    fontStyle: 'italic',
+                                    fontWeight: 400,
+                                }}
+                            >
+                                deserves to be written down.
+                            </span>
+                        </h1>
 
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(44px, 7vw, 90px)', fontWeight: 800, color: 'white', margin: '0 0 20px', lineHeight: 0.95 }}>
-                        Behind<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>FlavorNest</span>
-                    </h1>
+                        <p
+                            style={{
+                                color: 'rgba(255,255,255,0.65)',
+                                fontSize: 'clamp(17px, 2vw, 20px)',
+                                maxWidth: 640,
+                                lineHeight: 1.7,
+                                margin: '0 0 40px',
+                            }}
+                        >
+                            FlavorNest is a small, honest project. One person, one kitchen,
+                            writing down the recipes of a country I left — before I, or
+                            anyone else, forgets them.
+                        </p>
 
-                    <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 18, maxWidth: 560, lineHeight: 1.78, margin: '0 0 48px' }}>
-                        We are not a restaurant, a magazine, or a TV show. We are a small team of people who believe Vietnamese home cooking is one of the great cuisines of the world — and that it deserves to be shared, documented, and celebrated.
-                    </p>
-
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}>
-                        {[
-                            ['100+', 'Recipes Published'],
-                            ['50K+', 'Monthly Readers'],
-                            ['40', 'Countries Reached'],
-                            ['3', 'Years of Research'],
-                        ].map(([val, lbl], i) => (
-                            <div key={lbl} style={{ borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.1)' : 'none', paddingLeft: i > 0 ? 28 : 0, paddingRight: 28, marginBottom: 12 }}>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, fontWeight: 700, color: 'white', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase', marginTop: 5 }}>{lbl}</div>
-                            </div>
-                        ))}
-                    </div>
+                        {/* Scroll cue */}
+                        <motion.div
+                            animate={{ y: [0, 8, 0] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                            style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 12,
+                                color: 'rgba(255,255,255,0.4)',
+                                fontSize: 13,
+                                fontWeight: 500,
+                                letterSpacing: '0.12em',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            <span>Read the story</span>
+                            <span style={{ fontSize: 18 }}>↓</span>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* OUR STORY */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 24px 0' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 64, alignItems: 'center' }}>
+            {/* ════════════════════════════════════════
+                THE STORY — Long-form, two-column
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    maxWidth: 1200,
+                    margin: '0 auto',
+                    padding: '100px 24px 80px',
+                }}
+            >
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
+                        gap: 80,
+                        alignItems: 'start',
+                    }}
+                >
+                    {/* Left: text */}
                     <motion.div {...fadeUp(0)}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 12,
+                                marginBottom: 20,
+                            }}
+                        >
                             <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Our Story</span>
+                            <span
+                                style={{
+                                    fontSize: 11,
+                                    fontWeight: 700,
+                                    letterSpacing: '0.2em',
+                                    color: '#D97706',
+                                    textTransform: 'uppercase',
+                                }}
+                            >
+                                The Beginning
+                            </span>
                         </div>
-                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#2D1A0E', margin: '0 0 20px', lineHeight: 1.1 }}>
-                            It started with a bowl of Pho at 6am in Hanoi
+
+                        <h2
+                            style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: 'clamp(32px, 5vw, 52px)',
+                                fontWeight: 700,
+                                color: '#2D1A0E',
+                                margin: '0 0 36px',
+                                lineHeight: 1.08,
+                            }}
+                        >
+                            It started with
+                            <br />
+                            <span style={{ color: '#D97706', fontStyle: 'italic' }}>
+                                a bowl of bánh canh hẹ.
+                            </span>
                         </h2>
-                        <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.65)', lineHeight: 1.8, margin: '0 0 18px' }}>
-                            In 2022, our founder sat on a plastic stool on Bát Đàn street, eating what she still considers the best bowl of phở she has ever had. She asked the owner for the recipe. The owner laughed and said: "I have been making this for forty years. I do not have a recipe."
-                        </p>
-                        <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.65)', lineHeight: 1.8, margin: '0 0 18px' }}>
-                            That conversation became FlavorNest. We spent the next three years travelling through all three regions of Vietnam — sitting in kitchens, watching hands, asking questions, eating everything — to document the recipes that live in memory, not in books.
-                        </p>
-                        <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.65)', lineHeight: 1.8, margin: 0 }}>
-                            Every recipe on FlavorNest has been tested in a real home kitchen and written for people who want to cook real Vietnamese food — not a simplified version, not a substitution-heavy adaptation, but the real thing.
-                        </p>
+
+                        <div
+                            style={{
+                                fontSize: 17,
+                                lineHeight: 1.85,
+                                color: '#4B2E1A',
+                                fontFamily:
+                                    'Georgia, "Iowan Old Style", "Palatino Linotype", serif',
+                            }}
+                        >
+                            <p style={{ margin: '0 0 24px' }}>
+                                I grew up in Phú Yên — a small coastal province in central
+                                Vietnam that most food writers skip when they talk about
+                                Vietnamese cuisine. We don't have phở or bánh mì on every
+                                corner. What we have is the quiet, specific food of a fishing
+                                coast: bánh canh hẹ at dawn, mắm cá cơm fermenting in clay jars
+                                on the porch, bún bắp eaten standing up on market days.
+                            </p>
+
+                            <p style={{ margin: '0 0 24px' }}>
+                                When I moved to Germany, I assumed I could find these flavors
+                                somewhere. I couldn't. I could find pho, yes — a slightly
+                                softened version of it. I could find spring rolls. But the food
+                                of my childhood, the food of my mother's kitchen, was invisible.
+                                Nobody was writing it down in English. Nobody outside the
+                                province knew it existed.
+                            </p>
+
+                            <p style={{ margin: 0 }}>
+                                FlavorNest began on a cold evening in Thuringia in 2023. I was
+                                trying to recreate my mother's bánh canh from memory, failing,
+                                calling her on WhatsApp to ask her how to temper the broth.
+                                Halfway through the conversation I realized: if I don't write
+                                this down, properly and publicly, nobody will.
+                            </p>
+                        </div>
                     </motion.div>
 
-                    <motion.div {...fadeUp(0.15)} style={{ position: 'relative', height: 520, borderRadius: 24, overflow: 'hidden' }}>
+                    {/* Right: image */}
+                    <motion.div
+                        {...fadeUp(0.15)}
+                        style={{
+                            position: 'relative',
+                            height: 640,
+                            borderRadius: 24,
+                            overflow: 'hidden',
+                        }}
+                    >
                         <Image
-                            src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=85"
-                            alt="FlavorNest team researching Vietnamese cuisine"
-                            fill style={{ objectFit: 'cover' }} quality={85} sizes="50vw"
+                            src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=85"
+                            alt="Vietnamese countryside kitchen"
+                            fill
+                            quality={85}
+                            sizes="(max-width:768px) 100vw, 50vw"
+                            style={{ objectFit: 'cover' }}
                         />
-                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(45,26,14,0.4) 0%, transparent 60%)' }} />
-                        <div style={{ position: 'absolute', bottom: 24, left: 24, right: 24, background: 'rgba(255,255,255,0.92)', backdropFilter: 'blur(12px)', borderRadius: 16, padding: '16px 18px' }}>
-                            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 14, fontStyle: 'italic', color: '#4B2E1A', margin: 0, lineHeight: 1.6 }}>
-                                "We do not invent recipes. We find the people who already know them — and we write it down before the world forgets."
+                        <div
+                            style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background:
+                                    'linear-gradient(to top, rgba(45,26,14,0.35) 0%, transparent 55%)',
+                            }}
+                        />
+                        {/* Quote overlay */}
+                        <div
+                            style={{
+                                position: 'absolute',
+                                bottom: 28,
+                                left: 28,
+                                right: 28,
+                                background: 'rgba(255,255,255,0.94)',
+                                backdropFilter: 'blur(14px)',
+                                borderRadius: 18,
+                                padding: '22px 24px',
+                            }}
+                        >
+                            <p
+                                style={{
+                                    fontFamily: "'Playfair Display', serif",
+                                    fontSize: 16,
+                                    fontStyle: 'italic',
+                                    color: '#2D1A0E',
+                                    margin: 0,
+                                    lineHeight: 1.55,
+                                }}
+                            >
+                                "The best food in Vietnam isn't in five-star restaurants. It's
+                                in the kitchens of mothers and grandmothers — in the pots they
+                                never measure, in the instincts built over forty years."
                             </p>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* VALUES */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 24px 0' }}>
-                <motion.div {...fadeUp(0)} style={{ marginBottom: 40 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>What We Stand For</span>
-                    </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Our Values</h2>
-                </motion.div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
-                    {VALUES.map((v, i) => (
-                        <motion.div key={v.title} {...fadeUp(i * 0.1)}
-                            style={{ background: 'white', borderRadius: 20, padding: '28px', border: '1px solid rgba(75,46,26,0.07)', boxShadow: '0 2px 12px rgba(75,46,26,0.04)' }}>
-                            <div style={{ fontSize: 28, marginBottom: 14 }}>{v.icon}</div>
-                            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px' }}>{v.title}</h3>
-                            <p style={{ fontSize: 14, color: 'rgba(75,46,26,0.6)', lineHeight: 1.75, margin: 0 }}>{v.body}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* TEAM */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 24px 0' }}>
-                <motion.div {...fadeUp(0)} style={{ marginBottom: 40 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The People Behind It</span>
-                    </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Our Team</h2>
-                </motion.div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
-                    {TEAM.map((member, i) => (
-                        <motion.div key={member.name} {...fadeUp(i * 0.1)}
-                            style={{ background: 'white', borderRadius: 24, overflow: 'hidden', border: '1px solid rgba(75,46,26,0.07)', boxShadow: '0 2px 16px rgba(75,46,26,0.05)' }}>
-                            <div style={{ position: 'relative', height: 220, overflow: 'hidden', background: '#f0ebe4' }}>
-                                <Image src={member.image} alt={member.name} fill style={{ objectFit: 'cover', objectPosition: 'top' }} sizes="33vw" quality={80} />
-                                <div style={{ position: 'absolute', bottom: 14, left: 14, background: 'rgba(217,119,6,0.9)', color: 'white', fontSize: 10, fontWeight: 700, padding: '4px 12px', borderRadius: 100, letterSpacing: '0.06em' }}>
-                                    {member.region}
-                                </div>
-                            </div>
-                            <div style={{ padding: '20px 22px 24px' }}>
-                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontWeight: 700, color: '#2D1A0E', margin: '0 0 4px' }}>{member.name}</h3>
-                                <p style={{ fontSize: 12, fontWeight: 600, color: '#D97706', letterSpacing: '0.05em', textTransform: 'uppercase', margin: '0 0 12px' }}>{member.role}</p>
-                                <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.62)', lineHeight: 1.72, margin: 0 }}>{member.bio}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* TIMELINE */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 24px 0' }}>
-                <motion.div {...fadeUp(0)} style={{ marginBottom: 40 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>How We Got Here</span>
-                    </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Our Journey</h2>
-                </motion.div>
-                <div style={{ position: 'relative', paddingLeft: 40 }}>
-                    <div style={{ position: 'absolute', left: 16, top: 8, bottom: 8, width: 2, background: 'rgba(217,119,6,0.2)', borderRadius: 100 }} />
-                    {MILESTONES.map((m, i) => (
-                        <motion.div key={m.year} {...fadeUp(i * 0.1)} style={{ position: 'relative', marginBottom: 32 }}>
-                            <div style={{ position: 'absolute', left: -31, top: 4, width: 14, height: 14, borderRadius: '50%', background: '#D97706', border: '3px solid #FAFAF7', boxShadow: '0 0 0 2px rgba(217,119,6,0.3)' }} />
-                            <div style={{ background: 'white', borderRadius: 16, padding: '18px 22px', border: '1px solid rgba(75,46,26,0.07)', display: 'flex', alignItems: 'center', gap: 20 }}>
-                                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#D97706', flexShrink: 0 }}>{m.year}</span>
-                                <p style={{ fontSize: 15, color: 'rgba(75,46,26,0.7)', margin: 0, lineHeight: 1.6 }}>{m.event}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 24px 96px' }}>
-                <motion.div {...fadeUp(0)} style={{ background: 'linear-gradient(135deg, #2D1A0E 0%, #4B2E1A 100%)', borderRadius: 28, padding: 'clamp(40px,6vw,64px)', textAlign: 'center' }}>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px,4vw,44px)', fontWeight: 700, color: 'white', margin: '0 0 16px', lineHeight: 1.1 }}>
-                        Ready to Cook?
-                    </h2>
-                    <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 17, maxWidth: 480, margin: '0 auto 32px', lineHeight: 1.72 }}>
-                        Explore 100+ authentic Vietnamese recipes — from quick weeknight dinners to weekend feasts.
-                    </p>
-                    <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <Link href="/recipes" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#D97706', color: 'white', fontSize: 14, fontWeight: 700, padding: '14px 28px', borderRadius: 100, textDecoration: 'none', transition: 'background 0.2s' }}
-                            onMouseEnter={e => (e.currentTarget.style.background = '#B45309')}
-                            onMouseLeave={e => (e.currentTarget.style.background = '#D97706')}
+            {/* ════════════════════════════════════════
+                WHY IT MATTERS — Second emotional beat
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    background: '#F5EDE3',
+                    padding: '100px 24px',
+                }}
+            >
+                <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
+                    <motion.div {...fadeUp(0)}>
+                        <div
+                            style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 12,
+                                marginBottom: 24,
+                            }}
                         >
-                            Explore All Recipes →
-                        </Link>
-                        <Link href="/stories/travel" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.1)', color: 'white', fontSize: 14, fontWeight: 600, padding: '14px 28px', borderRadius: 100, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.15)', transition: 'background 0.2s' }}
-                            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.16)')}
-                            onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
-                        >
-                            Travel Guide
-                        </Link>
-                    </div>
-                </motion.div>
-            </section>
-
-            {/* FOOTER NAV */}
-            <section style={{ background: '#2D1A0E', padding: '64px 24px 80px' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>More to Explore</span>
-                    </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: 'white', margin: '0 0 32px' }}>Everything on FlavorNest</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12 }}>
-                        {[
-                            { label: 'All Recipes', emoji: '🍜', href: '/recipes' },
-                            { label: 'Culinary Culture', emoji: '📖', href: '/stories/culture' },
-                            { label: "Chef's Secrets", emoji: '👨‍🍳', href: '/stories/chef-secrets' },
-                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel' },
-                            { label: 'Northern Cuisine', emoji: '🏯', href: '/recipes/north' },
-                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
-                        ].map(item => (
-                            <Link key={item.href} href={item.href}
-                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '18px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.2s' }}
-                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.38)'; el.style.background = 'rgba(217,119,6,0.07)'; el.style.transform = 'translateY(-4px)'; }}
-                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.08)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
+                            <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                            <span
+                                style={{
+                                    fontSize: 11,
+                                    fontWeight: 700,
+                                    letterSpacing: '0.2em',
+                                    color: '#D97706',
+                                    textTransform: 'uppercase',
+                                }}
                             >
-                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
-                                <span style={{ fontSize: 13, fontWeight: 600, color: 'white', textAlign: 'center' }}>{item.label}</span>
-                            </Link>
-                        ))}
-                    </div>
+                                Why It Matters
+                            </span>
+                            <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        </div>
+
+                        <h2
+                            style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: 'clamp(32px, 5vw, 48px)',
+                                fontWeight: 700,
+                                color: '#2D1A0E',
+                                margin: '0 0 40px',
+                                lineHeight: 1.2,
+                            }}
+                        >
+                            Some recipes live only in memory.
+                            <br />
+                            <span
+                                style={{
+                                    color: '#166534',
+                                    fontStyle: 'italic',
+                                    fontWeight: 600,
+                                }}
+                            >
+                                We want to keep them alive.
+                            </span>
+                        </h2>
+
+                        <p
+                            style={{
+                                fontSize: 18,
+                                lineHeight: 1.8,
+                                color: 'rgba(75,46,26,0.75)',
+                                margin: 0,
+                                fontFamily: 'Georgia, serif',
+                                fontStyle: 'italic',
+                            }}
+                        >
+                            Every year, more young Vietnamese leave their villages for the
+                            cities. They eat faster. They cook less. The recipes their
+                            grandmothers knew by heart — the ones that were never written down
+                            because they lived in hands, in pots, in instincts — are beginning
+                            to thin out.
+                            <br />
+                            <br />
+                            FlavorNest is not going to stop that. But it can, in small
+                            measurable ways, slow it down. One recipe, tested honestly, written
+                            clearly, made accessible to anyone with an internet connection and a
+                            stove.
+                        </p>
+                    </motion.div>
                 </div>
+            </section>
+
+            {/* ════════════════════════════════════════
+                VALUES
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    maxWidth: 1200,
+                    margin: '0 auto',
+                    padding: '100px 24px 60px',
+                }}
+            >
+                <motion.div {...fadeUp(0)} style={{ marginBottom: 48 }}>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 12,
+                            marginBottom: 14,
+                        }}
+                    >
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        <span
+                            style={{
+                                fontSize: 11,
+                                fontWeight: 700,
+                                letterSpacing: '0.2em',
+                                color: '#D97706',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            What We Stand For
+                        </span>
+                    </div>
+                    <h2
+                        style={{
+                            fontFamily: "'Playfair Display', serif",
+                            fontSize: 'clamp(32px, 4.5vw, 48px)',
+                            fontWeight: 700,
+                            color: '#2D1A0E',
+                            margin: 0,
+                        }}
+                    >
+                        Four promises we keep.
+                    </h2>
+                </motion.div>
+
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: 20,
+                    }}
+                >
+                    {VALUES.map((v, i) => (
+                        <motion.div
+                            key={v.title}
+                            {...fadeUp(i * 0.1)}
+                            style={{
+                                background: 'white',
+                                borderRadius: 22,
+                                padding: '32px 28px',
+                                border: '1px solid rgba(75,46,26,0.07)',
+                                boxShadow: '0 2px 14px rgba(75,46,26,0.04)',
+                                transition: 'transform 0.3s, box-shadow 0.3s',
+                            }}
+                        >
+                            <div style={{ fontSize: 34, marginBottom: 18 }}>{v.icon}</div>
+                            <h3
+                                style={{
+                                    fontFamily: "'Playfair Display', serif",
+                                    fontSize: 20,
+                                    fontWeight: 700,
+                                    color: '#2D1A0E',
+                                    margin: '0 0 12px',
+                                }}
+                            >
+                                {v.title}
+                            </h3>
+                            <p
+                                style={{
+                                    fontSize: 14.5,
+                                    color: 'rgba(75,46,26,0.68)',
+                                    lineHeight: 1.8,
+                                    margin: 0,
+                                }}
+                            >
+                                {v.body}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ════════════════════════════════════════
+                THE PERSON BEHIND — Solo, honest
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    maxWidth: 1000,
+                    margin: '0 auto',
+                    padding: '80px 24px',
+                }}
+            >
+                <motion.div
+                    {...fadeUp(0)}
+                    style={{
+                        background: 'white',
+                        borderRadius: 28,
+                        padding: 'clamp(32px, 5vw, 56px)',
+                        border: '1px solid rgba(75,46,26,0.07)',
+                        boxShadow: '0 4px 28px rgba(75,46,26,0.06)',
+                        display: 'grid',
+                        gridTemplateColumns: 'auto 1fr',
+                        gap: 40,
+                        alignItems: 'center',
+                    }}
+                >
+                    {/* Photo */}
+                    <div
+                        style={{
+                            position: 'relative',
+                            width: 180,
+                            height: 180,
+                            borderRadius: '50%',
+                            overflow: 'hidden',
+                            flexShrink: 0,
+                            boxShadow: '0 8px 24px rgba(75,46,26,0.15)',
+                        }}
+                    >
+                        <Image
+                            src="/images/team/huy-nguyen.jpg"
+                            alt="Quan Huy Nguyen, founder of FlavorNest"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            sizes="180px"
+                        />
+                    </div>
+
+                    {/* Bio */}
+                    <div>
+                        <div
+                            style={{
+                                fontSize: 11,
+                                fontWeight: 700,
+                                letterSpacing: '0.2em',
+                                color: '#D97706',
+                                textTransform: 'uppercase',
+                                marginBottom: 10,
+                            }}
+                        >
+                            Founder & Writer
+                        </div>
+                        <h3
+                            style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: 'clamp(26px, 3.5vw, 36px)',
+                                fontWeight: 700,
+                                color: '#2D1A0E',
+                                margin: '0 0 16px',
+                                lineHeight: 1.15,
+                            }}
+                        >
+                            Quan Huy Nguyen
+                        </h3>
+                        <p
+                            style={{
+                                fontSize: 16,
+                                color: 'rgba(75,46,26,0.72)',
+                                lineHeight: 1.8,
+                                margin: '0 0 16px',
+                            }}
+                        >
+                            Born in Phú Yên, Vietnam. Moved to Germany in my twenties for work
+                            and never quite stopped missing the food I grew up with. FlavorNest
+                            is my attempt, in spare evenings and weekends, to bring that food
+                            into writing — and to share it with anyone willing to stand at a
+                            stove for a few hours.
+                        </p>
+                        <p
+                            style={{
+                                fontSize: 14,
+                                color: 'rgba(75,46,26,0.55)',
+                                fontStyle: 'italic',
+                                margin: 0,
+                                lineHeight: 1.7,
+                            }}
+                        >
+                            Currently writing from Gotha, Thuringia. Cooking on a small
+                            four-burner stove. Still learning.
+                        </p>
+                    </div>
+                </motion.div>
+            </section>
+
+            {/* ════════════════════════════════════════
+                JOURNEY — Timeline
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    maxWidth: 900,
+                    margin: '0 auto',
+                    padding: '60px 24px 80px',
+                }}
+            >
+                <motion.div {...fadeUp(0)} style={{ marginBottom: 48, textAlign: 'center' }}>
+                    <div
+                        style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 12,
+                            marginBottom: 14,
+                        }}
+                    >
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        <span
+                            style={{
+                                fontSize: 11,
+                                fontWeight: 700,
+                                letterSpacing: '0.2em',
+                                color: '#D97706',
+                                textTransform: 'uppercase',
+                            }}
+                        >
+                            How We Got Here
+                        </span>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                    </div>
+                    <h2
+                        style={{
+                            fontFamily: "'Playfair Display', serif",
+                            fontSize: 'clamp(30px, 4vw, 44px)',
+                            fontWeight: 700,
+                            color: '#2D1A0E',
+                            margin: 0,
+                        }}
+                    >
+                        A short, honest timeline.
+                    </h2>
+                </motion.div>
+
+                <div style={{ position: 'relative', paddingLeft: 40 }}>
+                    <div
+                        style={{
+                            position: 'absolute',
+                            left: 16,
+                            top: 8,
+                            bottom: 8,
+                            width: 2,
+                            background: 'rgba(217,119,6,0.25)',
+                            borderRadius: 100,
+                        }}
+                    />
+                    {JOURNEY.map((m, i) => (
+                        <motion.div
+                            key={m.year}
+                            {...fadeUp(i * 0.08)}
+                            style={{ position: 'relative', marginBottom: 28 }}
+                        >
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    left: -31,
+                                    top: 6,
+                                    width: 14,
+                                    height: 14,
+                                    borderRadius: '50%',
+                                    background: '#D97706',
+                                    border: '3px solid #FAFAF7',
+                                    boxShadow: '0 0 0 2px rgba(217,119,6,0.3)',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    background: 'white',
+                                    borderRadius: 16,
+                                    padding: '20px 24px',
+                                    border: '1px solid rgba(75,46,26,0.07)',
+                                    display: 'flex',
+                                    alignItems: 'flex-start',
+                                    gap: 20,
+                                }}
+                            >
+                                <span
+                                    style={{
+                                        fontFamily: "'Playfair Display', serif",
+                                        fontSize: 22,
+                                        fontWeight: 700,
+                                        color: '#D97706',
+                                        flexShrink: 0,
+                                        lineHeight: 1.3,
+                                    }}
+                                >
+                                    {m.year}
+                                </span>
+                                <p
+                                    style={{
+                                        fontSize: 15,
+                                        color: 'rgba(75,46,26,0.72)',
+                                        margin: 0,
+                                        lineHeight: 1.7,
+                                    }}
+                                >
+                                    {m.event}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ════════════════════════════════════════
+                CTA — Warm, inviting, not pushy
+            ═══════════════════════════════════════ */}
+            <section
+                style={{
+                    maxWidth: 1200,
+                    margin: '0 auto',
+                    padding: '60px 24px 100px',
+                }}
+            >
+                <motion.div
+                    {...fadeUp(0)}
+                    style={{
+                        background:
+                            'linear-gradient(135deg, #2D1A0E 0%, #4B2E1A 50%, #166534 130%)',
+                        borderRadius: 32,
+                        padding: 'clamp(48px, 7vw, 72px)',
+                        textAlign: 'center',
+                        position: 'relative',
+                        overflow: 'hidden',
+                    }}
+                >
+                    {/* Decorative */}
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: -60,
+                            right: -60,
+                            width: 200,
+                            height: 200,
+                            borderRadius: '50%',
+                            background: 'rgba(217,119,6,0.1)',
+                            filter: 'blur(40px)',
+                        }}
+                    />
+                    <div
+                        style={{
+                            position: 'absolute',
+                            bottom: -40,
+                            left: -40,
+                            width: 160,
+                            height: 160,
+                            borderRadius: '50%',
+                            background: 'rgba(22,101,52,0.15)',
+                            filter: 'blur(40px)',
+                        }}
+                    />
+
+                    <div style={{ position: 'relative' }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Playfair Display', serif",
+                                fontSize: 'clamp(30px, 4.5vw, 48px)',
+                                fontWeight: 700,
+                                color: 'white',
+                                margin: '0 0 20px',
+                                lineHeight: 1.15,
+                            }}
+                        >
+                            Come cook with us.
+                            <br />
+                            <span
+                                style={{
+                                    color: '#D97706',
+                                    fontStyle: 'italic',
+                                    fontWeight: 400,
+                                }}
+                            >
+                                No experience needed.
+                            </span>
+                        </h2>
+                        <p
+                            style={{
+                                color: 'rgba(255,255,255,0.68)',
+                                fontSize: 17,
+                                maxWidth: 540,
+                                margin: '0 auto 40px',
+                                lineHeight: 1.75,
+                            }}
+                        >
+                            Start with a recipe that sounds good. If it turns out well, try
+                            another. That's how a home cook is made — and that's how we build
+                            this together.
+                        </p>
+                        <div
+                            style={{
+                                display: 'flex',
+                                gap: 14,
+                                justifyContent: 'center',
+                                flexWrap: 'wrap',
+                            }}
+                        >
+                            <Link
+                                href="/recipes"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: 8,
+                                    background: '#D97706',
+                                    color: 'white',
+                                    fontSize: 15,
+                                    fontWeight: 700,
+                                    padding: '16px 32px',
+                                    borderRadius: 100,
+                                    textDecoration: 'none',
+                                    transition: 'all 0.25s',
+                                    boxShadow: '0 8px 24px rgba(217,119,6,0.35)',
+                                }}
+                                onMouseEnter={e => {
+                                    (e.currentTarget as HTMLAnchorElement).style.background = '#B45309';
+                                    (e.currentTarget as HTMLAnchorElement).style.transform =
+                                        'translateY(-2px)';
+                                }}
+                                onMouseLeave={e => {
+                                    (e.currentTarget as HTMLAnchorElement).style.background = '#D97706';
+                                    (e.currentTarget as HTMLAnchorElement).style.transform = 'none';
+                                }}
+                            >
+                                Browse the recipes →
+                            </Link>
+                            <Link
+                                href="/stories"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: 8,
+                                    background: 'rgba(255,255,255,0.08)',
+                                    color: 'white',
+                                    fontSize: 15,
+                                    fontWeight: 600,
+                                    padding: '16px 32px',
+                                    borderRadius: 100,
+                                    textDecoration: 'none',
+                                    border: '1px solid rgba(255,255,255,0.15)',
+                                    transition: 'background 0.2s',
+                                }}
+                                onMouseEnter={e =>
+                                ((e.currentTarget as HTMLAnchorElement).style.background =
+                                    'rgba(255,255,255,0.14)')
+                                }
+                                onMouseLeave={e =>
+                                ((e.currentTarget as HTMLAnchorElement).style.background =
+                                    'rgba(255,255,255,0.08)')
+                                }
+                            >
+                                Read the stories
+                            </Link>
+                        </div>
+                    </div>
+                </motion.div>
             </section>
         </main>
-    )
+    );
 }
