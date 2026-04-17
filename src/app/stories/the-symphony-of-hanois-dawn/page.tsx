@@ -441,7 +441,7 @@ export default function SymphonyOfHanoisDawnPage() {
                                 margin: '0 0 4px',
                             }}
                         >
-                            Quan Huy Nguyen
+                        Huy Nguyen
                         </p>
                         <p
                             style={{
