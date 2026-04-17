@@ -1,9 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Data 6 món — tạm inline, sau này tách ra file data riêng
 const RECIPES: Record<string, {
     title: string;
     subtitle: string;
@@ -90,14 +87,16 @@ const RECIPES: Record<string, {
     },
 };
 
-export default function RecipeDetailPage({ params }: { params: { slug: string } }) {
-    const recipe = RECIPES[params.slug];
+export default async function RecipeDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const recipe = RECIPES[slug];
 
     if (!recipe) {
         return (
-            <div style={{ minHeight: '100vh', background: '#FAFAF7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 16 }}>
+            <div style={{ minHeight: '100vh', background: '#FAFAF7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 16, fontFamily: "'DM Sans', system-ui, sans-serif" }}>
                 <div style={{ fontSize: 60 }}>🍜</div>
                 <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, color: '#2D1A0E' }}>Recipe not found</p>
+                <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.5)' }}>Slug: {slug}</p>
                 <Link href="/recipes" style={{ color: '#D97706', fontWeight: 600, textDecoration: 'none' }}>
                     ← Back to Recipes
                 </Link>
@@ -107,7 +106,6 @@ export default function RecipeDetailPage({ params }: { params: { slug: string } 
 
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif", paddingTop: 88 }}>
-            {/* Hero */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px 48px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20, fontSize: 13, color: 'rgba(75,46,26,0.5)' }}>
                     <Link href="/" style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none' }}>Home</Link>
@@ -154,7 +152,6 @@ export default function RecipeDetailPage({ params }: { params: { slug: string } 
                 </div>
             </section>
 
-            {/* Placeholder cho nội dung chi tiết */}
             <section style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px 80px' }}>
                 <div style={{ background: 'white', borderRadius: 24, padding: 48, textAlign: 'center', border: '1px dashed rgba(217,119,6,0.3)' }}>
                     <div style={{ fontSize: 40, marginBottom: 12 }}>👨‍🍳</div>
