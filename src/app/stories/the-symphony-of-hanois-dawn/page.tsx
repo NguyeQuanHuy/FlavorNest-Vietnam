@@ -145,7 +145,7 @@ export default function SymphonyOfHanoisDawnPage() {
                                     fontFamily: 'DM Sans, sans-serif',
                                 }}
                             >
-                                <span>By Quan Huy Nguyen</span>
+                                <span>By Huy Nguyen</span>
                                 <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'currentColor' }} />
                                 <span>April 2, 2026</span>
                                 <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'currentColor' }} />
