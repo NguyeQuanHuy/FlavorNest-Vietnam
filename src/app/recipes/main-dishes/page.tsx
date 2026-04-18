@@ -37,7 +37,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: 'Comfort Classic', tagColor: '#D97706',
-        description: "Vietnam's ultimate comfort dish — pork belly and eggs slow-braised in coconut water and caramel until the sauce turns amber and glossy. Served over steamed rice, it tastes like home.",
+        description: "Pork belly glistens amber under a caramel lacquer that catches the light like dark honey. Slow-braised for hours in coconut water with whole boiled eggs and deep palm-sugar caramel, the fat turns silky while the yolks drink up the sauce. Spooned over hot rice on a rainy afternoon, it tastes like every Vietnamese grandmother's kitchen.",
         tags: ['Pork', 'Eggs', 'Slow Cook', 'Coconut'],
     },
     {
@@ -47,7 +47,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 198, cal: 320, tag: 'Southern Icon', tagColor: '#059669',
-        description: "Thick fillets of catfish lacquered in a dark, intensely savoury caramel with chilli and ginger. The clay pot keeps it sizzling at the table — the smell alone is unforgettable.",
+        description: "Thick catfish fillets arrive still bubbling, coated in a near-black caramel that smells of burnt sugar, ginger and chilli. Layered with fish sauce, pork fat and cracked pepper, then braised slowly in an earthenware pot until the sauce clings like varnish. The pot keeps sizzling at the table — one sniff and no one waits politely for rice.",
         tags: ['Fish', 'Caramel', 'Clay Pot', 'Spicy'],
     },
     {
@@ -57,7 +57,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 276, cal: 420, tag: 'Restaurant Favourite', tagColor: '#7C3AED',
-        description: "Tender cubes of beef wok-tossed in butter, oyster sauce and garlic — the 'shaking' technique creates a beautiful crust while keeping the inside pink. Served on watercress with lime and pepper dipping salt.",
+        description: "Cubes of tender beef hit a screaming-hot wok with butter, garlic and oyster sauce, caramelising in seconds while the cook 'shakes' the pan to toss them. The crust is deep and glossy; the centre stays blushing pink. Served on peppery watercress with a lime-salt-pepper dip — the Saigon steakhouse classic French colonists left behind.",
         tags: ['Beef', 'Wok', 'Quick', 'French-Inspired'],
     },
     {
@@ -67,7 +67,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 143, cal: 360, tag: 'Weeknight Hero', tagColor: '#EA580C',
-        description: "A weeknight staple in every Vietnamese household — chicken pieces caramelised with fish sauce, ginger, and a touch of chilli. The sauce is thick, sticky, and completely addictive.",
+        description: "Bone-in chicken thighs simmer in fish sauce, palm sugar and a generous fistful of julienned young ginger until the sauce reduces to a sticky, fragrant glaze. The ginger turns sweet and mellow, the skin burnished mahogany. A weeknight staple in every Northern household — cheap, fast, and the kind of dish that makes plain rice feel like home.",
         tags: ['Chicken', 'Ginger', 'Quick', 'Family'],
     },
     {
@@ -77,7 +77,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 167, cal: 510, tag: 'Grill Night', tagColor: '#D97706',
-        description: "Pork ribs marinated overnight in lemongrass, garlic, fish sauce, and honey — then grilled over charcoal until caramelised and charred at the edges. The smell is pure Saigon street corner.",
+        description: "Ribs marinate overnight in crushed lemongrass, garlic, fish sauce and a whisper of honey, then meet glowing charcoal until the edges char and the fat renders into smoke. Each bite is sweet, smoky and citrus-bright, with that unmistakable Saigon street-corner perfume. Serve with broken rice, pickled carrots and a fried egg — cơm tấm, the city's favourite dinner.",
         tags: ['Pork', 'Grilled', 'Lemongrass', 'BBQ'],
     },
     {
@@ -87,7 +87,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.6', reviews: 112, cal: 340, tag: 'Northern Home Cook', tagColor: '#0284C7',
-        description: "A crispy pan-fried fish fillet nestled in a vibrant tomato, scallion and dill sauce — the contrast of crunch and tangy sauce is what makes this Hanoi home-cooking classic irresistible.",
+        description: "A whole pan-fried fish, skin shattering-crisp, bathes in a vibrant tomato sauce loud with scallions and dill. The crunch of the crust against the tangy sauce is pure Hanoi home cooking — unfussy, balanced, endlessly comforting. It's the dish every Northern mother makes when she wants to show love without saying anything at all.",
         tags: ['Fish', 'Tomato', 'Crispy', 'Quick'],
     },
     {
@@ -97,7 +97,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 189, cal: 220, tag: 'Vegan Favourite', tagColor: '#059669',
-        description: "Golden-fried tofu simmered in a sweet-savoury tomato and spring onion sauce. Deceptively simple, endlessly satisfying — this is the dish that makes non-vegetarians love tofu.",
+        description: "Golden squares of fried tofu, crisp at the edges and custardy inside, simmer in a bright tomato-scallion sauce until they soak up every drop. Humble, vegan, and on the table of nearly every Vietnamese family at least once a week. Proof that the best comfort food needs nothing more than three ingredients and a little patience.",
         tags: ['Tofu', 'Vegan', 'Tomato', 'Quick'],
     },
     {
@@ -107,7 +107,7 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 134, cal: 380, tag: 'Party Dish', tagColor: '#BE185D',
-        description: "Seasoned minced beef wrapped in fragrant lá lốt leaves, then grilled until the leaf chars slightly and perfumes the meat. One of Vietnam's great party dishes — eaten in rice paper with herbs.",
+        description: "Seasoned ground beef — perfumed with lemongrass, garlic and a hint of five-spice — wrapped snugly in glossy betel leaves, then grilled until the leaves blister and release their peppery, smoky aroma. One of Vietnam's great party dishes, eaten in rice paper rolls with herbs, pickles and nước chấm, fingers sticky, beer cold, everyone talking at once.",
         tags: ['Beef', 'Grilled', 'Herbs', 'Wraps'],
     },
     {
@@ -117,11 +117,10 @@ const RECIPES: Recipe[] = [
         image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Medium', time: '40 min',
         rating: '4.9', reviews: 221, cal: 350, tag: "Hanoi's Best", tagColor: '#D97706',
-        description: "Arguably Hanoi's greatest dish — turmeric and galangal-marinated fish sizzled in a pan with mountains of fresh dill and spring onion at the table. Eaten with rice vermicelli, peanuts and shrimp paste.",
+        description: "Arguably Hanoi's greatest dish. Snakehead fillets marinate in turmeric and galangal-fermented shrimp paste, then finish sizzling tableside in a pan of dill and spring onion so abundant it looks like a green bouquet. Eaten with rice vermicelli, roasted peanuts, fresh herbs and mắm tôm — a ritual invented on Chả Cá Street and jealously guarded for 150 years.",
         tags: ['Fish', 'Turmeric', 'Dill', 'Heritage'],
     },
 ]
-
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
