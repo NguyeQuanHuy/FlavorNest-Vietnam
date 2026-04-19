@@ -624,7 +624,7 @@ export default function AboutPage() {
                                 margin: '0 0 16px',
                             }}
                         >
-                            Born in Phú Yên, Vietnam. Moved to Germany in my twenties for work
+                            Born in Phú Yên, Vietnam. Moved to Germany in my twenties to the family
                             and never quite stopped missing the food I grew up with. FlavorNest
                             is my attempt, in spare evenings and weekends, to bring that food
                             into writing — and to share it with anyone willing to stand at a
