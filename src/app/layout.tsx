@@ -3,18 +3,25 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReadingProgress from '@/components/ReadingProgress'
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// ── Display font — editorial serif for headings ──
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// ── Body font — clean geometric sans for readability ──
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 // ── Viewport — prevents zoom, ensures proper mobile rendering ──
@@ -24,7 +31,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FAFAF7" },
+    { media: "(prefers-color-scheme: light)", color: "#F5EDE3" },
     { media: "(prefers-color-scheme: dark)", color: "#1C1009" },
   ],
 }
@@ -73,11 +80,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="vi"
+      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body
-        className="min-h-full flex flex-col"
+        className="min-h-full flex flex-col font-body"
         style={{
           overflowX: "hidden",
           scrollBehavior: "smooth",
@@ -97,6 +104,6 @@ export default function RootLayout({
         </AuthProvider>
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
       </body>
-</html>
+    </html>
   );
 }
