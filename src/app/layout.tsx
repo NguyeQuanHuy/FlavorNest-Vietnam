@@ -80,7 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="vi"
+      lang="en"
       className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body
