@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 // ── Body font — clean geometric sans for readability ──
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
-  subsets: ["latin", "vietnamese"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
