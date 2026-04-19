@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getRecipeDetailed } from "@/data/recipes-detailed";
 import { RecipeSchema } from "@/components/RecipeSchema";
+import { IngredientsPanel } from "@/components/recipe/IngredientsPanel";
 
 // ─────────────────────────────────────────────────────────────
 //  Legacy fallback data — 6 placeholder recipes from v1
@@ -230,52 +231,13 @@ function DetailedRecipeView({
             {/* ── Ingredients + Instructions grid ── */}
             <section className="max-w-fn-content mx-auto px-6 pb-24">
                 <div className="grid lg:grid-cols-[1fr_2fr] gap-12">
-                    {/* Ingredients (left sticky sidebar) */}
-                    <aside className="lg:sticky lg:top-24 h-fit">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="h-[1px] w-7 bg-fn-amber" />
-                            <span className="text-fn-amber uppercase tracking-fn-wide text-fn-xs font-semibold">
-                                Ingredients
-                            </span>
-                        </div>
-                        <h2 className="font-heading text-3xl text-fn-brown-night mb-6">
-                            What you'll need
-                        </h2>
-
-                        {recipe.ingredients.map((group) => (
-                            <div key={group.section} className="mb-6">
-                                <h3 className="font-heading text-fn-lg font-semibold text-fn-brown-deep mb-3">
-                                    {group.section}
-                                </h3>
-                                <ul className="space-y-2.5">
-                                    {group.items.map((ingredient, idx) => (
-                                        <li
-                                            key={idx}
-                                            className="flex items-baseline gap-2 text-fn-base text-fn-brown/80"
-                                        >
-                                            <span className="text-fn-amber">•</span>
-                                            <span>
-                                                <strong className="font-semibold text-fn-brown-night">
-                                                    {ingredient.amount}
-                                                </strong>{" "}
-                                                {ingredient.name}
-                                                {ingredient.nameVi && (
-                                                    <em className="text-fn-amber italic ml-1">
-                                                        ({ingredient.nameVi})
-                                                    </em>
-                                                )}
-                                                {ingredient.note && (
-                                                    <span className="block text-fn-xs text-fn-brown/50 mt-0.5 pl-4">
-                                                        ↳ {ingredient.note}
-                                                    </span>
-                                                )}
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </aside>
+                    {/* Ingredients (left sticky sidebar) — interactive with scaler */}
+                    <IngredientsPanel
+                        ingredients={recipe.ingredients}
+                        slug={recipe.slug}
+                        baseServings={recipe.servings}
+                        yieldLabel={recipe.yield}
+                    />
 
                     {/* Instructions (right main) */}
                     <div>
