@@ -339,4 +339,13 @@ export const DIFF_COLORS: Record<Difficulty, string> = {
     Medium: 'bg-[#D97706]/12 text-[#D97706]',
     Hard: 'bg-red-100 text-red-600',
 }
-export const recipes = RECIPES;
+// ─── Merged export: detailed recipes (priority) + legacy RECIPES ───
+// Imported dynamically to avoid circular dependency
+import { getDetailedAsLegacy } from "./recipes-detailed";
+
+const _detailedAsLegacy = getDetailedAsLegacy();
+const _detailedSlugs = new Set(_detailedAsLegacy.map((r) => r.slug));
+const _uniqueLegacy = RECIPES.filter((r) => !_detailedSlugs.has(r.slug));
+
+// `recipes` now includes 3 detailed recipes first, then unique legacy recipes
+export const recipes = [..._detailedAsLegacy, ..._uniqueLegacy];
