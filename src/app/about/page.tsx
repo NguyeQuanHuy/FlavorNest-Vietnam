@@ -10,26 +10,26 @@ export const metadata: Metadata = {
 const VALUES = [
     {
         icon: '🏮',
-        title: 'Gìn giữ truyền thống',
-        desc: 'Không biến tấu quá đà, giữ nguyên hương vị gốc của từng vùng miền.',
+        title: 'Keeping traditions alive',
+        desc: 'Pure Taste. Original Regions.',
     },
     {
         icon: '👨‍🍳',
-        title: 'Đơn giản hóa',
-        desc: 'Hướng dẫn chi tiết để ai cũng có thể nấu ngon như đầu bếp tại nhà.',
+        title: 'Pure Tradition',
+        desc: 'Chef Secrets Made Simple.',
     },
     {
         icon: '🌿',
-        title: 'Sức khỏe làm đầu',
-        desc: 'Ưu tiên nguyên liệu tươi sạch, cân bằng dinh dưỡng trong từng bữa ăn.',
+        title: 'Health Above All',
+        desc: 'Fresh Ingredients. Balanced Meals.',
     },
 ]
 
 const STATS = [
-    { value: '100+', label: 'Công thức' },
-    { value: '3', label: 'Miền ẩm thực' },
-    { value: '15K+', label: 'Người nấu' },
-    { value: '4.9★', label: 'Đánh giá TB' },
+    { value: '100+', label: 'Recipes' },
+    { value: '3', label: 'Culinary Land' },
+    { value: '15K+', label: 'The Home Chef' },
+    { value: '4.9★', label: 'Avg. Rating' },
 ]
 
 export default function AboutPage() {
