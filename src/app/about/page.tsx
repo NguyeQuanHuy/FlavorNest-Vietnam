@@ -60,7 +60,7 @@ export default function AboutPage() {
                         Our <em className="text-[#D97706] not-italic">Story</em>
                     </h1>
                     <p className="text-white/70 text-lg max-w-md mx-auto">
-                        Mang linh hồn bếp Việt vào từng gian bếp hiện đại.
+                    Bringing the soul of Vietnamese cuisine into every modern kitchen.
                     </p>
                 </div>
             </section>
