@@ -31,7 +31,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-mi-thit-nuong',
         title: 'Grilled Pork Bánh Mì',
-        subtitle: 'Bánh Mì Thịt Nướng',
+        subtitle: 'Banh mi thit nuong',
         image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '40 min',
         rating: '4.9', reviews: 341, cal: 420, tag: 'World Famous', tagColor: '#D97706',
@@ -41,7 +41,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-thit-nuong',
         title: 'Grilled Pork Vermicelli Bowl',
-        subtitle: 'Bún Thịt Nướng',
+        subtitle: 'Bun thit nuong',
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '35 min',
         rating: '4.8', reviews: 224, cal: 390, tag: "Saigon Lunch", tagColor: '#059669',
@@ -51,7 +51,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-trang-nuong',
         title: 'Grilled Rice Paper Pizza',
-        subtitle: 'Bánh Tráng Nướng',
+        subtitle: 'Banh trang nuong',
         image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80',
         region: 'Central', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 187, cal: 280, tag: 'Da Lat Classic', tagColor: '#7C3AED',
@@ -61,7 +61,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'goi-cuon',
         title: 'Fresh Rice Paper Rolls',
-        subtitle: 'Gỏi Cuốn Tôm Thịt',
+        subtitle: 'Goi cuon tom thit',
         image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '30 min',
         rating: '4.8', reviews: 298, cal: 220, tag: 'Light & Fresh', tagColor: '#0284C7',
@@ -71,7 +71,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-xeo',
         title: 'Sizzling Savoury Crêpe',
-        subtitle: 'Bánh Xèo',
+        subtitle: 'Banh xeo',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 263, cal: 380, tag: 'Must Try', tagColor: '#D97706',
@@ -81,7 +81,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-tam',
         title: 'Saigon Broken Rice Plate',
-        subtitle: 'Cơm Tấm Sài Gòn',
+        subtitle: 'Com tam Sai Gon',
         image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '35 min',
         rating: '4.9', reviews: 312, cal: 510, tag: "Saigon Staple", tagColor: '#EA580C',
@@ -91,7 +91,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'Bánh Cuốn',
+        subtitle: 'Banh cuon',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Medium', time: '50 min',
         rating: '4.8', reviews: 176, cal: 290, tag: 'Hanoi Morning', tagColor: '#BE185D',
@@ -101,7 +101,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-dau-mam-tom',
         title: 'Rice Vermicelli with Shrimp Paste',
-        subtitle: 'Bún Đậu Mắm Tôm',
+        subtitle: 'Bun dau mam tom',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '25 min',
         rating: '4.6', reviews: 143, cal: 410, tag: 'Adventurous Eat', tagColor: '#166534',
