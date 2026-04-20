@@ -557,9 +557,110 @@ const banhBao: RecipeDetailed = {
 //  Export all detailed recipes
 // ─────────────────────────────────────────────────────────────
 export const RECIPES_DETAILED: RecipeDetailed[] = [
-    banhCanhHe,
-    bunBoHue,
-    banhBao,
+    {
+    slug: "pho-bo-ha-noi",
+    title: "Hanoi Beef Pho",
+    subtitle: "Phở Bò Hà Nội",
+    shortDescription: "Experience the soul of Vietnamese cuisine. Authentic Hanoi-style Pho features a crystal-clear, savory broth, tender beef slices, and delicate rice noodles without the southern sweetness.",
+    description: "Born in Northern Vietnam in the early 1900s, Phở began as a humble street food carried on shoulder poles (phở gánh). Unlike its Southern cousin, Hanoi Pho focuses on the purity of the broth—subtle, fragrant, and clear as amber.\n\nThe secret lies in an 8-hour simmer of marrow bones, charred ginger, and toasted spices. Every bowl is a balance of textures: the silky 'bánh phở', the crunch of fresh scallions, and the tender richness of beef shank and rare flank.\n\nPreparing an authentic bowl at home is a labor of love. While it takes nearly 5 hours, most of that time is passive simmering, allowing the aromas to fill your kitchen with the scent of old Hanoi.",
+    storySnippet: "I still remember the chilly Hanoi mornings, sitting on a tiny plastic stool, watching the steam rise from a giant cauldron. That first sip of clear, scalding broth is a memory I try to recreate in every bowl.",
+    image: "https://images.unsplash.com/photo-1583032015879-e5022cb87c6c?auto=format&fit=crop&w=1200&q=85",
+    imageAlt: "Steaming bowl of Hanoi beef pho with thinly sliced beef, herbs and lime wedges",
+    prepTime: "30 min",
+    cookTime: "4 hr 30 min",
+    totalTime: "5 hr",
+    servings: 4,
+    yield: "4 bowls",
+    difficulty: "Hard",
+    category: "Soup",
+    cuisine: "Vietnamese",
+    rating: 4.9,
+    ratingCount: 248,
+    tags: ["Hanoi", "Soup", "Classic"],
+    ingredients: [
+      {
+        section: "For the broth",
+        items: [
+          { amount: "2 kg (4.4 lb)", name: "Beef bones", nameVi: "Xương bò", note: "marrow + knuckle mix" },
+          { amount: "500 g (1.1 lb)", name: "Beef shank", nameVi: "Bắp bò", note: "whole piece" },
+          { amount: "2 large", name: "Yellow onion", nameVi: "Hành tây", note: "halved, unpeeled" },
+          { amount: "1 large piece", name: "Ginger", nameVi: "Gừng", note: "halved lengthwise" },
+          { amount: "6 pods", name: "Star anise", nameVi: "Hoa hồi" },
+          { amount: "2 sticks", name: "Cinnamon", nameVi: "Quế", note: "Vietnamese cassia" },
+          { amount: "4", name: "Cloves", nameVi: "Đinh hương" },
+          { amount: "1 tbsp", name: "Coriander seeds", nameVi: "Hạt ngò rí" },
+          { amount: "3", name: "Cardamom pods", nameVi: "Thảo quả", note: "black preferred" },
+          { amount: "3 L (12 cups)", name: "Water", nameVi: "Nước" },
+          { amount: "3 tbsp", name: "Fish sauce", nameVi: "Nước mắm", note: "Phú Quốc" },
+          { amount: "2 tbsp", name: "Rock sugar", nameVi: "Đường phèn" },
+          { amount: "1 tbsp", name: "Salt", nameVi: "Muối", note: "to taste" }
+        ]
+      },
+      {
+        section: "For serving",
+        items: [
+          { amount: "300 g (10 oz)", name: "Beef eye round", nameVi: "Thịt thăn bò", note: "sliced paper-thin for tái" },
+          { amount: "500 g (1.1 lb)", name: "Fresh pho noodles", nameVi: "Bánh phở tươi", note: "flat rice noodles" },
+          { amount: "3 stalks", name: "Scallion", nameVi: "Hành lá", note: "white + green, thin sliced" },
+          { amount: "1 bunch", name: "Cilantro", nameVi: "Ngò rí", note: "chopped" }
+        ]
+      },
+      {
+        section: "Herb plate & garnish",
+        items: [
+          { amount: "1", name: "Lime", nameVi: "Chanh", note: "cut into wedges" },
+          { amount: "2", name: "Bird's eye chilies", nameVi: "Ớt hiểm", note: "sliced" },
+          { amount: "1", name: "Yellow onion", nameVi: "Hành tây", note: "very thin slices, soaked" },
+          { amount: "to taste", name: "Culantro", nameVi: "Ngò gai", note: "optional" }
+        ]
+      }
+    ],
+    instructions: [
+      {
+        title: "Parboil the bones",
+        description: "Boil bones in water for 10 minutes until grey foam rises. Drain and scrub bones clean under cold water. This is non-negotiable for a clear broth.",
+        duration: "10 min",
+        tip: "Hanoi pho broth MUST be clear — this step determines it."
+      },
+      {
+        title: "Char the aromatics",
+        description: "Char onion and ginger directly over a gas flame or under a broiler until the skins are blackened and fragrant, about 10 minutes. Rinse off excess char lightly.",
+        duration: "10 min",
+        tip: "Smoky char flavor defines pho — don't skip."
+      },
+      {
+        title: "Toast the spices",
+        description: "Dry-toast star anise, cinnamon, cloves, coriander seeds, and cardamom in a pan for 3-5 minutes until highly fragrant. Tie them in a cheesecloth bag.",
+        duration: "5 min"
+      },
+      {
+        title: "Deep simmer",
+        description: "Add cleaned bones, shank, charred aromatics, and the spice bag to a pot with 3L water. Bring to a boil, then immediately reduce to a gentle simmer. Skim foam constantly for the first 15 mins. Simmer for 4 hours total.",
+        duration: "4 hr",
+        tip: "Never boil — only gentle simmer. Rolling boil = cloudy broth."
+      },
+      {
+        title: "Season and Assemble",
+        description: "Strain the broth. Season with fish sauce, rock sugar, and salt. Blanch fresh noodles for 30 seconds. Top with sliced shank and raw beef, then pour the BOILING broth over to cook the meat instantly.",
+        duration: "10 min",
+        tip: "The broth must be boiling when poured to cook the raw beef slices safely."
+      }
+    ],
+    tips: [
+      "8+ hour broth = deeper flavor. Overnight simmer on lowest heat works too.",
+      "Slice beef paper-thin — freeze for 30 min first for easier cutting.",
+      "Bánh phở tươi (fresh) beats dried 10:1. Find them at Asian markets."
+    ],
+    nutrition: {
+      calories: 480,
+      protein: "34 g",
+      fat: "14 g",
+      carbs: "52 g"
+    },
+    keywords: ["pho recipe", "hanoi pho", "authentic vietnamese soup", "beef noodle soup"],
+    datePublished: "2026-04-20",
+    author: "FlavorNest Vietnam"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────
