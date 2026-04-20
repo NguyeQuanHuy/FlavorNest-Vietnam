@@ -307,6 +307,7 @@ export default function AboutPage() {
                                 trying to recreate my mother's bánh canh from memory, failing,
                                 searching on Internet how to cook but it was so complicated.
                                 So I created this website in order to give people the easier visually tutorials to make Vietnamese foods (or Asian foods).
+                                Thanks for reading and discovering about more recipes!
                             </p>
                         </div>
                     </motion.div>
