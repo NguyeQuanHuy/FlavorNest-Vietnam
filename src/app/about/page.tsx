@@ -129,7 +129,7 @@ export default function AboutPage() {
                         <div className="flex items-center justify-center gap-2 mb-3">
                             <div className="w-6 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Giá trị cốt lõi
+                                Our pure values
                             </span>
                             <div className="w-6 h-px bg-[#D97706]" />
                         </div>
@@ -179,13 +179,13 @@ export default function AboutPage() {
                                 href="/recipes"
                                 className="inline-flex items-center justify-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white font-bold px-8 py-4 rounded-2xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D97706]/30"
                             >
-                                Khám phá công thức →
+                                Discover Recipes →
                             </Link>
                             <Link
                                 href="/stories"
                                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border border-white/20 transition-all hover:-translate-y-0.5"
                             >
-                                Đọc Kitchen Stories
+                                Read Kitchen Stories
                             </Link>
                         </div>
                     </div>
