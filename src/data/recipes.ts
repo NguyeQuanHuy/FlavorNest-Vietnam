@@ -55,7 +55,7 @@ export const RECIPES: Recipe[] = [
 
     // ── 1. Hanoi Beef Pho ───────────────────────────────────────────────────
     {
-        slug: ''pho-bo-ha-noi',
+        slug: 'pho-bo-ha-noi',
         title: 'Hanoi Beef Pho',
         subtitle: 'Phở Bò Hà Nội',
         shortDescription: 'A crystal-clear bone broth simmered for hours with charred ginger and star anise — the soul of Vietnamese cuisine in one perfect bowl.',
