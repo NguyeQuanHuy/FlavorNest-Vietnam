@@ -16,18 +16,18 @@ export default async function Navbar() {
                 head: "Categories",
                 items: [
                     { name: "Breakfast", desc: "", url: "/recipes/breakfast" },
-                    { name: "Main Dishes", desc: "Món chính", url: "/recipes/main-dishes" },
-                    { name: "Desserts", desc: "Tráng miệng", url: "/recipes/desserts" },
-                    { name: "Specialty Drinks", desc: "Đồ uống đặc biệt", url: "/recipes/drinks" },
+                    { name: "Main Dishes", desc: "", url: "/recipes/main-dishes" },
+                    { name: "Desserts", desc: "", url: "/recipes/desserts" },
+                    { name: "Specialty Drinks", desc: "", url: "/recipes/drinks" },
                 ]
             },
             {
                 head: "Regions",
                 items: [
-                    { name: "Northern Cuisine", desc: "Ẩm thực miền Bắc", url: "/recipes/north" },
-                    { name: "Central Cuisine", desc: "Ẩm thực miền Trung", url: "/recipes/central" },
-                    { name: "Southern Cuisine", desc: "Ẩm thực miền Nam", url: "/recipes/south" },
-                    { name: "Street Food", desc: "Món ăn đường phố", url: "/recipes/street-food" },
+                    { name: "Northern Cuisine", desc: "", url: "/recipes/north" },
+                    { name: "Central Cuisine", desc: "", url: "/recipes/central" },
+                    { name: "Southern Cuisine", desc: "", url: "/recipes/south" },
+                    { name: "Street Food", desc: "", url: "/recipes/street-food" },
                 ]
             }
         ]
