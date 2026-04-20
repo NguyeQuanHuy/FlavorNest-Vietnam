@@ -321,6 +321,11 @@ function RecipesInner() {
                 r.category.toLowerCase().includes(q) ||
                 r.region.toLowerCase().includes(q);
             return catMatch && regionMatch && searchMatch;
+        return catMatch && regionMatch && searchMatch;
+        }).sort((a, b) => {
+            if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
+            if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
+            return b.reviews - a.reviews;
         });
         .sort((a, b) => {
             if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
