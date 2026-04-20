@@ -15,10 +15,10 @@ export default async function Navbar() {
             {
                 head: "Categories",
                 items: [
-                    { name: "Breakfast", desc: "", url: "/recipes/breakfast" },
-                    { name: "Main Dishes", desc: "", url: "/recipes/main-dishes" },
-                    { name: "Desserts", desc: "", url: "/recipes/desserts" },
-                    { name: "Specialty Drinks", desc: "", url: "/recipes/drinks" },
+                    { name: "Breakfast", desc: "Start your day light and energized", url: "/recipes/breakfast" },
+                    { name: "Main Dishes", desc: "Hearty and balanced meals for lunch or dinner", url: "/recipes/main-dishes" },
+                    { name: "Desserts", desc: "Sweet treats to finish your meal perfectly", url: "/recipes/desserts" },
+                    { name: "Specialty Drinks", desc: "Creative, refreshing drinks anytime", url: "/recipes/drinks" },
                 ]
             },
             {
