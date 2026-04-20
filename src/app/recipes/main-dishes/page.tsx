@@ -33,7 +33,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-kho-tau',
         title: 'Caramelised Pork & Eggs',
-        subtitle: 'Thịt Kho Tàu',
+        subtitle: 'Thit kho tau',
         image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: 'Comfort Classic', tagColor: '#D97706',
@@ -43,7 +43,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-kho-to',
         title: 'Clay Pot Caramelised Fish',
-        subtitle: 'Cá Kho Tộ',
+        subtitle: 'Ca kho to',
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 198, cal: 320, tag: 'Southern Icon', tagColor: '#059669',
@@ -53,7 +53,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bo-luc-lac',
         title: 'Shaking Beef',
-        subtitle: 'Bò Lúc Lắc',
+        subtitle: 'Bo luc lac',
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 276, cal: 420, tag: 'Restaurant Favourite', tagColor: '#7C3AED',
@@ -63,7 +63,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ga-kho-gung',
         title: 'Ginger Braised Chicken',
-        subtitle: 'Gà Kho Gừng',
+        subtitle: 'Ga kho gung',
         image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 143, cal: 360, tag: 'Weeknight Hero', tagColor: '#EA580C',
@@ -73,7 +73,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'suon-nuong-xa',
         title: 'Lemongrass Pork Ribs',
-        subtitle: 'Sườn Nướng Xả',
+        subtitle: 'Suon nuong sa',
         image: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 167, cal: 510, tag: 'Grill Night', tagColor: '#D97706',
@@ -83,7 +83,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-chien-sot-ca',
         title: 'Crispy Fish in Tomato Sauce',
-        subtitle: 'Cá Chiên Sốt Cà',
+        subtitle: 'Ca chien sot ca',
         image: 'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.6', reviews: 112, cal: 340, tag: 'Northern Home Cook', tagColor: '#0284C7',
@@ -93,7 +93,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'dau-hu-sot-ca',
         title: 'Tofu in Tomato Sauce',
-        subtitle: 'Đậu Hũ Sốt Cà',
+        subtitle: 'Dau hu sot ca',
         image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 189, cal: 220, tag: 'Vegan Favourite', tagColor: '#059669',
@@ -103,7 +103,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bo-nuong-la-lot',
         title: 'Beef in Betel Leaf',
-        subtitle: 'Bò Nướng Lá Lốt',
+        subtitle: 'Bo nuong la lot',
         image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 134, cal: 380, tag: 'Party Dish', tagColor: '#BE185D',
@@ -113,7 +113,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'cha-ca-la-vong',
         title: "Hanoi Turmeric Fish with Dill",
-        subtitle: 'Chả Cá Lã Vọng',
+        subtitle: 'Cha ca La Vong',
         image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
         region: 'Northern', difficulty: 'Medium', time: '40 min',
         rating: '4.9', reviews: 221, cal: 350, tag: "Hanoi's Best", tagColor: '#D97706',
