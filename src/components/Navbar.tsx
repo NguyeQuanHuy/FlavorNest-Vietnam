@@ -24,10 +24,10 @@ export default async function Navbar() {
             {
                 head: "Regions",
                 items: [
-                    { name: "Northern Cuisine", desc: "Balanced flavors with subtle, refined taste", url: "/recipes/north" },
-                    { name: "Central Cuisine", desc: "Bold, spicy dishes full of rich flavors", url: "/recipes/central" },
-                    { name: "Southern Cuisine", desc: "Sweet, rich, and vibrant tropical flavors", url: "/recipes/south" },
-                    { name: "Street Food", desc: "Quick, flavorful bites from local streets", url: "/recipes/street-food" },
+                    { name: "Northern Cuisine", desc: "Balanced, subtle flavors", url: "/recipes/north" },
+                    { name: "Central Cuisine", desc: "Bold & spicy dishes", url: "/recipes/central" },
+                    { name: "Southern Cuisine", desc: "Sweet tropical richness", url: "/recipes/south" },
+                    { name: "Street Food", desc: "Quick street bites", url: "/recipes/street-food" },
                 ]
             }
         ]
