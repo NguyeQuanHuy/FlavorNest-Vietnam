@@ -134,7 +134,7 @@ export default function AboutPage() {
                             <div className="w-6 h-px bg-[#D97706]" />
                         </div>
                         <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A]">
-                            Điều chúng tôi <em className="text-[#D97706] not-italic">tin tưởng</em>
+                            What we really <em className="text-[#D97706] not-italic">belive</em>
                         </h2>
                     </div>
 
