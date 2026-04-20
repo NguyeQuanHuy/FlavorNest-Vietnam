@@ -84,12 +84,12 @@ export default function AboutPage() {
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-6 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Câu chuyện của chúng tôi
+                                Our Story
                             </span>
                         </div>
                         <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A] leading-tight mb-6">
-                            Những món ngon nhất nằm trong{' '}
-                            <em className="text-[#D97706] not-italic">căn bếp của mẹ.</em>
+                            The best dishes are found{' '}
+                            <em className="text-[#D97706] not-italic">in Mom’s countryside kitchen</em>
                         </h2>
                         <div className="space-y-5 text-[#4B2E1A]/65 leading-relaxed">
                             <p>
