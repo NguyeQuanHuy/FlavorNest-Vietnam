@@ -37,7 +37,7 @@ const BREAKFAST_RECIPES = [
         slug: 'xoi-xeo',
         title: 'Mung Bean Sticky Rice',
         subtitle: 'Xoi xeo',
-        image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1579856896394-07dfa10d7c5b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         time: '1 hr',
         difficulty: 'Easy',
         rating: '4.8',
