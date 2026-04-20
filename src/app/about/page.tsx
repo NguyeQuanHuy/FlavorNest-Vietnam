@@ -96,7 +96,7 @@ export default function AboutPage() {
                                 At FlavorNest, we believe the best Vietnamese flavors belong to home kitchens, not five-star restaurants.
                             </p>
                             <p>
-                                We traveled across Vietnam—from Hanoi’s midnight Pho to the bold flavors of the Mekong Delta—to capture and standardize 'unwritten' recipes
+                                We traveled across Vietnam—from Hanoi’s midnight Pho to the bold flavors of the Mekong Delta—to capture and standardize 'unwritten' recipes.
                             </p>
                             <p>
                                Every FlavorNest recipe is kitchen-tested with real ingredients—so you can cook with confidence from the very first try.
