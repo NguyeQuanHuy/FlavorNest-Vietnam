@@ -15,7 +15,7 @@ export default async function Navbar() {
             {
                 head: "Categories",
                 items: [
-                    { name: "Breakfast", desc: "Món ăn sáng", url: "/recipes/breakfast" },
+                    { name: "Breakfast", desc: "", url: "/recipes/breakfast" },
                     { name: "Main Dishes", desc: "Món chính", url: "/recipes/main-dishes" },
                     { name: "Desserts", desc: "Tráng miệng", url: "/recipes/desserts" },
                     { name: "Specialty Drinks", desc: "Đồ uống đặc biệt", url: "/recipes/drinks" },
