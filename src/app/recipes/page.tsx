@@ -328,8 +328,7 @@ function RecipesInner() {
             return b.reviews - a.reviews;
         });
        
-    }, [activeCategory, activeRegion, localQuery]);
-
+}, [activeCategory, activeRegion, localQuery, sortBy]);
     const clearSearch = () => {
         setLocalQuery("");
         router.replace("/recipes");
