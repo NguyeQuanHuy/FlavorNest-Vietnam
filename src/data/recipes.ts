@@ -75,99 +75,26 @@ export const RECIPES: Recipe[] = [
     },
 
     // ── 2. Bun Cha Hanoi ────────────────────────────────────────────────────
+    // ── 2. Bun Cha Hanoi ────────────────────────────────────────────────────
     {
-    slug: "bun-cha-ha-noi",
-    title: "Hanoi Grilled Pork Vermicelli",
-    subtitle: "Bún Chả Hà Nội",
-    shortDescription: "Experience the smoky charm of Hanoi's streets. Tender grilled pork patties in a warm, tangy dipping sauce, served with fresh herbs and cool vermicelli noodles.",
-    description: "Bún Chả is more than just a meal; it's the aroma of Hanoi's sidewalks at lunchtime. The dish is defined by its balance: the smoky, charred heat of the pork, the cool freshness of the herbs, and the sweet-sour-salty harmony of the dipping sauce.\n\nTraditionally grilled over charcoal (than hoa), the pork absorbs a deep, rustic flavor that's impossible to replicate on a stove. The dipping sauce is served warm, often with crunchy green papaya or kohlrabi pickles, creating a comforting experience that famously captivated Anthony Bourdain and Barack Obama.",
-    storySnippet: "Living in Germany, whenever I fire up the outdoor grill, the smell of lemongrass and caramelizing pork instantly transports me back to the small alleys of Hanoi's Old Quarter.",
-    image: "https://images.unsplash.com/photo-1742893368398-128bded9c656?auto=format&fit=crop&w=1200&q=85",
-    imageAlt: "Bun Cha Hanoi with grilled pork and herbs",
-    prepTime: "20 min",
-    cookTime: "25 min",
-    totalTime: "45 min",
-    servings: 4,
-    yield: "4 bowls",
-    difficulty: "Medium",
-    category: "Noodles",
-    cuisine: "Vietnamese",
-    rating: 4.8,
-    ratingCount: 218,
-    tags: ["Hanoi Classic", "Grilled"],
-    ingredients: [
-      {
-        section: "The Meat (Chả)",
-        items: [
-          { amount: "500 g", name: "Pork shoulder", nameVi: "Thịt nạc vai sấn", note: "minced for patties" },
-          { amount: "500 g", name: "Pork belly", nameVi: "Thịt ba chỉ", note: "thinly sliced" },
-          { amount: "2 tbsp", name: "Caramel sauce", nameVi: "Nước hàng", note: "for deep golden color" },
-          { amount: "2 tbsp", name: "Fish sauce", nameVi: "Nước mắm" },
-          { amount: "1 tbsp", name: "Minced shallots", nameVi: "Hành tím băm" }
-        ]
-      },
-      {
-        section: "The Dipping Sauce (Linh hồn món ăn)",
-        items: [
-          { amount: "100 ml", name: "Fish sauce", nameVi: "Nước mắm" },
-          { amount: "100 g", name: "Sugar", nameVi: "Đường" },
-          { amount: "100 ml", name: "Vinegar", nameVi: "Giấm" },
-          { amount: "500 ml", name: "Warm water", nameVi: "Nước ấm", note: "Ratio 1:1:1:5" }
-        ]
-      },
-      {
-        section: "Sides & Herbs",
-        items: [
-          { amount: "1 kg", name: "Fresh rice vermicelli", nameVi: "Bún tươi" },
-          { amount: "1 cup", name: "Pickled papaya/carrot", nameVi: "Dưa góp" },
-          { amount: "to taste", name: "Fresh herbs", nameVi: "Rau sống", note: "Lettuce, perilla, mint" }
-        ]
-      }
-    ],
-    instructions: [
-      {
-        step: 1,
-        title: "Marinate the pork",
-        description: "Mix pork with fish sauce, caramel sauce, shallots, and pepper. Let it rest for at least 30 minutes to absorb the flavors.",
-        duration: "30 min",
-        tip: "Add a little vegetable oil to the marinade so the meat doesn't dry out while grilling."
-      },
-      {
-        step: 2,
-        title: "Prepare the sauce",
-        description: "Combine fish sauce, sugar, vinegar, and warm water. Stir until dissolved. The sauce should be savory, sweet, and slightly tangy.",
-        duration: "10 min",
-        tip: "Keep the sauce warm on the stove at around 40-50°C before serving."
-      },
-      {
-        step: 3,
-        title: "Grill the meat",
-        description: "Shape minced pork into patties. Grill both patties and belly slices over charcoal until charred and golden brown.",
-        duration: "15 min",
-        tip: "Charcoal (than hoa) is the secret to authentic Bun Cha flavor."
-      },
-      {
-        step: 4,
-        title: "Assemble",
-        description: "Place the grilled pork in a bowl of warm sauce. Serve with a side of vermicelli, dưa góp, and a large plate of fresh herbs.",
-        duration: "5 min"
-      }
-    ],
-    tips: [
-      "Use pork shoulder with a bit of fat for the juiciest patties.",
-      "In Germany, if you can't find fresh Bun, dried rice vermicelli works too—just boil and rinse with cold water.",
-      "Always serve the sauce warm!"
-    ],
-    nutrition: {
-      calories: 510,
-      protein: "28 g",
-      fat: "22 g",
-      carbs: "45 g"
+        slug: 'bun-cha-hanoi',
+        title: 'Hanoi Grilled Pork Vermicelli',
+        subtitle: 'Bún Chả Hà Nội',
+        shortDescription: 'Smoky chargrilled pork patties in a tangy warm broth, paired with cool rice vermicelli and a mountain of fresh herbs.',
+        image: 'https://images.unsplash.com/photo-1742893368398-128bded9c656?auto=format&fit=crop&w=800&q=80',
+        imageAlt: 'Bun Cha Hanoi with grilled pork and herbs',
+        prepTime: '20 min',
+        cookTime: '25 min',
+        totalTime: '45 min',
+        servings: 4,
+        difficulty: 'Easy',
+        category: 'Noodles',
+        rating: 4.8,
+        ratingCount: 218,
+        tags: ['Trending', 'Hanoi Classic'],
+        isFeatured: true,
+        calories: 510,
     },
-    keywords: ["bun cha hanoi", "grilled pork noodles", "hanoi street food", "authentic bun cha"],
-    datePublished: "2026-04-20",
-    author: "FlavorNest Vietnam"
-  },
 
     // ── 3. Vietnamese Banh Mi ───────────────────────────────────────────────
     {
