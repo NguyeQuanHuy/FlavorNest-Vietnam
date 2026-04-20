@@ -76,7 +76,7 @@ export const RECIPES: Recipe[] = [
 
     // ── 2. Bun Cha Hanoi ────────────────────────────────────────────────────
     {
-        slug: 'bun-cha-hanoi',
+        slug: 'bun-cha-ha-noi',
         title: 'Hanoi Grilled Pork Vermicelli',
         subtitle: 'Bún Chả Hà Nội',
         shortDescription: 'Smoky chargrilled pork patties in a tangy warm broth, paired with cool rice vermicelli and a mountain of fresh herbs.',
