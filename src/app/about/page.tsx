@@ -168,11 +168,11 @@ export default function AboutPage() {
                     <div className="relative z-10">
                         <p className="text-4xl mb-5">🪺</p>
                         <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                            Bạn đã sẵn sàng vào bếp{' '}
-                            <em className="text-[#D97706] not-italic">cùng chúng tôi?</em>
+                            Ready to cook{' '}
+                            <em className="text-[#D97706] not-italic">with us?</em>
                         </h2>
                         <p className="text-white/55 mb-8 max-w-sm mx-auto">
-                            Khám phá 100+ công thức Việt Nam được kiểm chứng — từ Hà Nội, Huế đến Sài Gòn.
+                            Explore 100+ proven Vietnamese recipes — from Hanoi and Hue, Phu Yen to Saigon
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <Link
