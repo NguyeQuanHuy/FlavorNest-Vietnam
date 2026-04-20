@@ -40,7 +40,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-ba-mau',
         name: 'Three-Colour Dessert',
-        viet: 'Chè Ba Màu',
+        viet: 'Che ba mau',
         type: 'Chè',
         image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85',
         description: 'Saigon\'s most photogenic glass — layers of mung bean, red jelly, and pandan jelly over crushed ice, crowned with coconut cream.',
@@ -57,7 +57,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-flan',
         name: 'Vietnamese Caramel Flan',
-        viet: 'Bánh Flan',
+        viet: 'Banh Flan',
         type: 'Fusion',
         image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85',
         description: 'Silky, trembling custard with a pool of dark caramel — a French inheritance that Vietnam made its own, often served over crushed ice.',
@@ -74,7 +74,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-thai',
         name: 'Thai-Style Fruit Dessert',
-        viet: 'Chè Thái',
+        viet: 'Che Thai',
         type: 'Chè',
         image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85',
         description: 'A tropical abundance — jackfruit, lychee, toddy palm seeds, grass jelly, and water chestnuts swimming in sweetened coconut milk over ice.',
@@ -90,7 +90,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-chuoi-nuong',
         name: 'Baked Banana Cake',
-        viet: 'Bánh Chuối Nướng',
+        viet: 'Banh chuoi nuong',
         type: 'Bánh',
         image: 'https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?auto=format&fit=crop&w=900&q=85',
         description: 'Ripe bananas baked into a dense, aromatic coconut-milk custard until the top caramelises to a deep amber — the smell alone is worth making it.',
@@ -107,7 +107,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'sua-chua-nep-cam',
         name: 'Black Glutinous Rice Yoghurt',
-        viet: 'Sữa Chua Nếp Cẩm',
+        viet: 'Sua chua nep cam',
         type: 'Traditional',
         image: 'https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?auto=format&fit=crop&w=900&q=85',
         description: 'Tangy Vietnamese yoghurt layered with sweetened purple sticky rice — a textural contrast of creamy and chewy that has no equal.',
@@ -123,7 +123,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'kem-chuoi',
         name: 'Frozen Banana Coconut Bar',
-        viet: 'Kem Chuối',
+        viet: 'Kem chuoi',
         type: 'Frozen',
         image: 'https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?auto=format&fit=crop&w=900&q=85',
         description: 'A Vietnamese street-corner classic — banana and sticky rice wrapped in coconut cream, frozen on a stick, rolled in toasted peanuts.',
@@ -139,7 +139,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-buoi',
         name: 'Pomelo Dessert Soup',
-        viet: 'Chè Bưởi',
+        viet: 'Chè buoi',
         type: 'Chè',
         image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=85',
         description: 'Translucent pomelo pith pearls, soft mung bean, and tapioca in warm pandan-scented coconut broth — delicate and profoundly comforting.',
@@ -156,7 +156,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-cam',
         name: 'Sesame Fried Dough Balls',
-        viet: 'Bánh Cam',
+        viet: 'Banh Cam',
         type: 'Bánh',
         image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=85',
         description: 'Crispy golden spheres of glutinous rice, hollow inside with a heart of sweetened mung bean paste, rolled in sesame seeds and fried to order.',
@@ -172,7 +172,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau-do',
         name: 'Sweet Red Bean Soup',
-        viet: 'Chè Đậu Đỏ',
+        viet: 'Che dau do',
         type: 'Chè',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=85',
         description: 'Slow-simmered red beans in a lightly sweet, pandan-perfumed broth with chewy tapioca pearls — simple, ancient, deeply satisfying.',
@@ -188,7 +188,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-troi-nuoc',
         name: 'Floating Rice Dumplings',
-        viet: 'Bánh Trôi Nước',
+        viet: 'Banh troi nuoc',
         type: 'Traditional',
         image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85',
         description: 'Soft white glutinous rice balls with a core of brown sugar and ginger — served in warm ginger syrup. They float when they\'re ready.',
@@ -708,7 +708,7 @@ export default function DessertsPage() {
 export const dessertPageMetadata = {
     title: 'Vietnamese Desserts — Chè, Bánh & Sweet Traditions | FlavorNest Vietnam',
     description:
-        'Discover 10+ authentic Vietnamese dessert recipes — from silky Bánh Flan and colourful Chè Ba Màu to baked banana cake and sesame dough balls. Sweet traditions worth making at home.',
+        'Discover 10+ authentic Vietnamese dessert recipes — from silky Bánh Flan and colourful Che ba mau to baked banana cake and sesame dough balls. Sweet traditions worth making at home.',
     keywords: [
         'vietnamese desserts', 'che ba mau', 'banh flan recipe', 'che thai', 'banh chuoi nuong',
         'sua chua nep cam', 'kem chuoi', 'che buoi', 'banh cam', 'vietnamese sweets',
