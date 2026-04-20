@@ -93,13 +93,13 @@ export default function AboutPage() {
                         </h2>
                         <div className="space-y-5 text-[#4B2E1A]/65 leading-relaxed">
                             <p>
-                                FlavorNest bắt đầu từ một niềm tin đơn giản: Những món ăn Việt Nam ngon nhất không nằm ở những nhà hàng 5 sao, mà nằm trong căn bếp của những người bà, người mẹ.
+                                At FlavorNest, we believe the best Vietnamese flavors belong to home kitchens, not five-star restaurants.
                             </p>
                             <p>
-                                Chúng tôi đã đi dọc dải đất hình chữ S, từ những gánh phở đêm Hà Nội đến những tô bún mắm đậm đà miền Tây, để thu thập và chuẩn hóa những công thức "không viết thành lời".
+                                We traveled across Vietnam—from Hanoi’s midnight Pho to the bold flavors of the Mekong Delta—to capture and standardize 'unwritten' recipes
                             </p>
                             <p>
-                                Mỗi công thức trên FlavorNest đều được thử nghiệm nhiều lần trong bếp thật, với nguyên liệu thật — để bạn tự tin nấu ngay lần đầu tiên.
+                               Every FlavorNest recipe is kitchen-tested with real ingredients—so you can cook with confidence from the very first try.
                             </p>
                         </div>
                     </div>
