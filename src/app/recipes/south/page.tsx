@@ -30,7 +30,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-kho-tau',
         title: 'Caramelised Pork & Eggs',
-        subtitle: 'Thịt Kho Tàu',
+        subtitle: 'Thit kho tau',
         image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.9', reviews: 387, cal: 480, tag: 'Southern Soul', tagColor: '#D97706',
@@ -40,7 +40,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-tam-saigon',
         title: 'Saigon Broken Rice Plate',
-        subtitle: 'Cơm Tấm Sài Gòn',
+        subtitle: 'Com tam Sai Gon',
         image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '35 min',
         rating: '4.9', reviews: 412, cal: 510, tag: 'Saigon Icon', tagColor: '#EA580C',
@@ -50,7 +50,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-thit-nuong',
         title: 'Grilled Pork Vermicelli Bowl',
-        subtitle: 'Bún Thịt Nướng',
+        subtitle: 'Bun thit nuong',
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '35 min',
         rating: '4.8', reviews: 298, cal: 390, tag: 'Lunch Classic', tagColor: '#059669',
@@ -60,7 +60,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-xeo-mien-tay',
         title: 'Mekong Sizzling Crepe',
-        subtitle: 'Bánh Xèo Miền Tây',
+        subtitle: 'Banh xeo mien Tay',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 263, cal: 380, tag: 'Mekong Special', tagColor: '#D97706',
@@ -70,7 +70,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'hu-tieu-nam-vang',
         title: 'Phnom Penh Noodle Soup',
-        subtitle: 'Hủ Tiếu Nam Vang',
+        subtitle: 'Hu tieu Nam Vang',
         image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 187, cal: 420, tag: 'Saigon Favourite', tagColor: '#7C3AED',
@@ -80,7 +80,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-kho-to',
         title: 'Clay Pot Caramelised Fish',
-        subtitle: 'Cá Kho Tộ',
+        subtitle: 'Ca kho to',
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 221, cal: 320, tag: 'River Delta Classic', tagColor: '#166534',
@@ -90,7 +90,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'lau-thai',
         title: 'Thai-Style Hot Pot',
-        subtitle: 'Lẩu Thái',
+        subtitle: 'Lau Thai',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 198, cal: 350, tag: 'Social Feast', tagColor: '#BE185D',
@@ -100,7 +100,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bo-luc-lac',
         title: 'Shaking Beef',
-        subtitle: 'Bò Lúc Lắc',
+        subtitle: 'Bo luc lac',
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 312, cal: 420, tag: 'Restaurant Star', tagColor: '#D97706',
