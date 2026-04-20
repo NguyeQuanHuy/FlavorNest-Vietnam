@@ -159,13 +159,25 @@ export default function BreakfastPage() {
 
                 <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
                     {/* Breadcrumb */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20, fontSize: 13, color: 'rgba(75,46,26,0.5)' }}>
+                                    {/* ── BREADCRUMB STICKY ── */}
+                <div style={{ 
+                    position: 'sticky', 
+                    top: 0, 
+                    zIndex: 100, 
+                    background: 'rgba(250, 250, 247, 0.9)', 
+                    backdropFilter: 'blur(8px)',
+                    padding: '12px 24px',
+                    fontSize: 13,
+                    borderBottom: '1px solid rgba(75,46,26,0.05)'
+                }}>
+                    <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 8 }}>
                         <Link href="/" style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>Home</Link>
                         <span>›</span>
                         <Link href="/recipes" style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>Recipes</Link>
                         <span>›</span>
                         <span style={{ color: '#D97706', fontWeight: 600 }}>Breakfast</span>
                     </div>
+                </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 40, alignItems: 'center' }}>
                         <div>
