@@ -617,29 +617,34 @@ export const RECIPES_DETAILED: RecipeDetailed[] = [
     ],
     instructions: [
       {
+        step: 1,
         title: "Parboil the bones",
         description: "Boil bones in water for 10 minutes until grey foam rises. Drain and scrub bones clean under cold water. This is non-negotiable for a clear broth.",
         duration: "10 min",
         tip: "Hanoi pho broth MUST be clear — this step determines it."
       },
       {
+        step: 2,
         title: "Char the aromatics",
         description: "Char onion and ginger directly over a gas flame or under a broiler until the skins are blackened and fragrant, about 10 minutes. Rinse off excess char lightly.",
         duration: "10 min",
         tip: "Smoky char flavor defines pho — don't skip."
       },
       {
+        step: 3,
         title: "Toast the spices",
         description: "Dry-toast star anise, cinnamon, cloves, coriander seeds, and cardamom in a pan for 3-5 minutes until highly fragrant. Tie them in a cheesecloth bag.",
         duration: "5 min"
       },
       {
+        step: 4,
         title: "Deep simmer",
         description: "Add cleaned bones, shank, charred aromatics, and the spice bag to a pot with 3L water. Bring to a boil, then immediately reduce to a gentle simmer. Skim foam constantly for the first 15 mins. Simmer for 4 hours total.",
         duration: "4 hr",
         tip: "Never boil — only gentle simmer. Rolling boil = cloudy broth."
       },
       {
+        step: 5,
         title: "Season and Assemble",
         description: "Strain the broth. Season with fish sauce, rock sugar, and salt. Blanch fresh noodles for 30 seconds. Top with sliced shank and raw beef, then pour the BOILING broth over to cook the meat instantly.",
         duration: "10 min",
