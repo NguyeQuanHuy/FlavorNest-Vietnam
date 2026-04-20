@@ -8,7 +8,7 @@ const BREAKFAST_RECIPES = [
     {
         slug: 'pho-bo',
         title: 'Hanoi Beef Pho',
-        subtitle: 'Phở Bò Hà Nội',
+        subtitle: 'Pho bo Ha Noi',
         image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=800&q=80',
         time: '3 hrs',
         difficulty: 'Medium',
@@ -21,8 +21,8 @@ const BREAKFAST_RECIPES = [
     },
     {
         slug: 'banh-mi-trung',
-        title: 'Egg Bánh Mì',
-        subtitle: 'Bánh Mì Trứng Ốp La',
+        title: 'Egg Banh Mi',
+        subtitle: 'Banh mi op la',
         image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
         time: '15 min',
         difficulty: 'Easy',
@@ -36,7 +36,7 @@ const BREAKFAST_RECIPES = [
     {
         slug: 'xoi-xeo',
         title: 'Mung Bean Sticky Rice',
-        subtitle: 'Xôi Xéo',
+        subtitle: 'Xoi xeo',
         image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=800&q=80',
         time: '1 hr',
         difficulty: 'Easy',
@@ -50,7 +50,7 @@ const BREAKFAST_RECIPES = [
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'Bánh Cuốn',
+        subtitle: 'Banh cuon',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80',
         time: '45 min',
         difficulty: 'Medium',
@@ -64,7 +64,7 @@ const BREAKFAST_RECIPES = [
     {
         slug: 'chao-long',
         title: 'Pork Congee',
-        subtitle: 'Cháo Lòng',
+        subtitle: 'Chao long',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80',
         time: '1.5 hrs',
         difficulty: 'Easy',
@@ -78,7 +78,7 @@ const BREAKFAST_RECIPES = [
     {
         slug: 'banh-trang-tron',
         title: 'Rice Paper Salad',
-        subtitle: 'Bánh Tráng Trộn',
+        subtitle: 'Banh trang ',
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80',
         time: '20 min',
         difficulty: 'Easy',
@@ -178,7 +178,7 @@ export default function BreakfastPage() {
                                 <span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
                             </h1>
                             <p style={{ color: 'rgba(75,46,26,0.6)', fontSize: 17, maxWidth: 460, lineHeight: 1.7, margin: '16px 0 32px' }}>
-                                Start your day the Vietnamese way — from steaming bowls of phở to crispy bánh mì, these are the morning meals that fuel a nation.
+                                Start your day the Vietnamese way — from steaming bowls of phở to crispy Banh mi, these are the morning meals that fuel a nation.
                             </p>
 
                             {/* Stats */}
