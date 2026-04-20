@@ -30,7 +30,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-bo-hue',
         title: 'Hue Spicy Beef Noodle Soup',
-        subtitle: 'Bún Bò Huế',
+        subtitle: 'Bun bo Hue',
         image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Hard', time: '2.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: "Hue's Finest", tagColor: '#DC2626',
@@ -40,7 +40,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'cao-lau',
         title: 'Hoi An Cao Lau Noodles',
-        subtitle: 'Cao Lầu Hội An',
+        subtitle: 'Cao lau Hoi An',
         image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.9', reviews: 287, cal: 420, tag: 'Hoi An Only', tagColor: '#7C3AED',
@@ -50,7 +50,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'mi-quang',
         title: 'Quang-Style Turmeric Noodles',
-        subtitle: 'Mì Quảng',
+        subtitle: 'Mi Quang',
         image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.8', reviews: 198, cal: 440, tag: 'Da Nang Staple', tagColor: '#D97706',
@@ -60,7 +60,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-beo',
         title: 'Steamed Rice Cakes with Shrimp',
-        subtitle: 'Bánh Bèo',
+        subtitle: 'Banh beo',
         image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '45 min',
         rating: '4.7', reviews: 143, cal: 280, tag: 'Royal Snack', tagColor: '#BE185D',
@@ -70,7 +70,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-hen',
         title: 'Baby Clam Rice',
-        subtitle: 'Cơm Hến',
+        subtitle: 'Com hen',
         image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.8', reviews: 167, cal: 380, tag: 'Hue Hidden Gem', tagColor: '#059669',
@@ -80,7 +80,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-xeo-mien-trung',
         title: 'Central-Style Sizzling Crepe',
-        subtitle: 'Bánh Xèo Miền Trung',
+        subtitle: 'Banh xeo mien Trung',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Medium', time: '40 min',
         rating: '4.7', reviews: 134, cal: 350, tag: 'Street Favourite', tagColor: '#EA580C',
@@ -90,7 +90,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-nam',
         title: 'Flat Steamed Rice Dumplings',
-        subtitle: 'Bánh Nậm',
+        subtitle: 'Banh nam',
         image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Hard', time: '1.5 hrs',
         rating: '4.6', reviews: 98, cal: 240, tag: 'Hue Heritage', tagColor: '#166534',
@@ -100,7 +100,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'chao-long-hue',
         title: 'Hue Pork Congee',
-        subtitle: 'Cháo Lòng Huế',
+        subtitle: 'Chao long Hue',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
         difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.7', reviews: 112, cal: 320, tag: 'Morning Comfort', tagColor: '#D97706',
