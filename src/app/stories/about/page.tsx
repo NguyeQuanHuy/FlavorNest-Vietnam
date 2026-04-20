@@ -614,7 +614,7 @@ export default function AboutPage() {
                                 lineHeight: 1.15,
                             }}
                         >
-                            Quan Huy Nguyen
+                            Huy Nguyen
                         </h3>
                         <p
                             style={{
