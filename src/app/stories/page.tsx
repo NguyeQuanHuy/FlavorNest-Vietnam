@@ -38,7 +38,7 @@ export const STORIES: Story[] = [
         categoryColor: 'amber',
         title: "The Symphony of Hanoi's Dawn",
         subtitle: 'Traditional Beef Pho',
-        excerpt: 'Phở không dành cho những người vội vã. Để có được sự tinh khiết trong vắt như gương, người nấu phải kiên nhẫn hầm xương bò suốt 10 tiếng đồng hồ.',
+        excerpt: 'Pho is not for the hurried. To achieve a broth as clear as a mirror, the cook must patiently simmer beef bones for ten full hours.',
         image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?w=900&q=80',
         imageAlt: 'Hanoi beef pho',
         tag: 'Hanoi Heritage',
