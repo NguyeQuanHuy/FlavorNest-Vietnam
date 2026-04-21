@@ -71,7 +71,7 @@
 
 | Amount | Name (English) | Name (Vietnamese) | Prep note |
 |---|---|---|---|
-| 2 kg (4.4 lb) | Beef bones | Xuong  | marrow + knuckle mix |
+| 2 kg (4.4 lb) | Beef bones | Xương bò | marrow + knuckle mix |
 | 500 g (1.1 lb) | Beef shank | Bắp bò | whole piece |
 | 2 large | Yellow onion | Hành tây | halved, unpeeled |
 | 1 large piece | Ginger | Gừng | halved lengthwise |
