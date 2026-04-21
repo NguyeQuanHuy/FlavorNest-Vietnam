@@ -202,8 +202,7 @@ export default function SymphonyOfHanoisDawnPage() {
                         borderLeft: '3px solid #D97706',
                     }}
                 >
-                    "Phở không dành cho những người vội vã. Để có được sự tinh khiết trong
-                    vắt như gương, người nấu phải kiên nhẫn hầm xương bò suốt 10 tiếng đồng hồ."
+                    "Pho is not for the hurried. To achieve a broth as clear as a mirror, the cook must patiently simmer beef bones for ten full hours."
                     <span
                         style={{
                             display: 'block',
@@ -214,8 +213,7 @@ export default function SymphonyOfHanoisDawnPage() {
                             fontFamily: 'DM Sans, sans-serif',
                         }}
                     >
-                        — Pho is not for the hurried. To achieve a broth as clear as a mirror,
-                        the cook must patiently simmer beef bones for ten full hours.
+                        — The Vietnamese writer Thach Lam
                     </span>
                 </motion.p>
 
