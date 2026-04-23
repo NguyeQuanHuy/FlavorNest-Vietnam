@@ -47,6 +47,7 @@ export const metadata: Metadata = {
   keywords: ["Vietnamese recipes", "Pho", "Banh Mi", "Vietnamese food blog", "authentic Vietnamese cooking"],
   authors: [{ name: "FlavorNest Vietnam" }],
   creator: "FlavorNest Vietnam",
+  metadataBase: new URL("https://flavor-nest-vietnam.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,23 +55,26 @@ export const metadata: Metadata = {
     siteName: "FlavorNest Vietnam",
     title: "FlavorNest Vietnam – Authentic Vietnamese Recipes",
     description: "100+ authentic Vietnamese recipes made simple at home.",
-    images: [{
-      url: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80",
-      width: 1200,
-      height: 630,
-      alt: "FlavorNest Vietnam",
-    }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "FlavorNest Vietnam – Authentic Vietnamese Recipes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "FlavorNest Vietnam",
     description: "Authentic Vietnamese recipes made simple at home.",
+    images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+  manifest: "/site.webmanifest",
+  themeColor: "#D97706",
+  other: {
+    "apple-mobile-web-app-title": "FlavorNest VN",
   },
-  manifest: "/manifest.json",
 }
 
 export default function RootLayout({

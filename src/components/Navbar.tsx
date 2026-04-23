@@ -5,6 +5,8 @@ import MobileMenu from './MobileMenu';
 import { Heart } from 'lucide-react';
 import { auth } from '../auth';
 
+
+
 export default async function Navbar() {
     const session = await auth();
 
