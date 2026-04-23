@@ -1,250 +1,220 @@
-# Recipe Template — FlavorNest Vietnam
+# Phở Bò Hà Nội — Draft Skeleton
 
-> Copy this entire file to `docs/drafts/{slug}.md`, fill in the fields, then hand it to Claude to convert into TypeScript and ship.
->
-> **Fields with `// REQUIRED` must be filled. Fields with `// OPTIONAL` can be left blank or deleted.**
-> **Round brackets like `(guidance)` are hints — delete them when writing your content.**
+> Status: PLACEHOLDER — fill with real content before publishing
 
 ---
 
 ## 1. Identity
 
-- **slug**: `pho-bo-ha-noi` // REQUIRED — kebab-case English, e.g. `banh-mi-thit-nuong`
-- **title**: `` // REQUIRED — English title, e.g. "Lemongrass Pork Bánh Mì"
-- **subtitle**: `` // REQUIRED — Vietnamese name with full diacritics, e.g. "Bánh Mì Thịt Nướng"
+- **slug**: `pho-bo-ha-noi`
+- **title**: `Hanoi Beef Pho`
+- **subtitle**: `Phở Bò Hà Nội`
 
 ---
 
 ## 2. Descriptions
 
-### shortDescription 
-<!-- REQUIRED · 1-2 sentences · Used in cards + meta description · ~25-35 words -->
+### shortDescription
+<!-- ~25-35 words -->
+(The hook. Angle: Vietnam's national dish. Hanoi-style is the original — clearer broth, less sweet, fewer toppings than Saigon version.)
 
-(Write 1-2 sentences describing what makes this dish special. Think: what would make someone click to read more?)
+### description
+<!-- 2-3 paragraphs, 150-250 words -->
 
-### description 
-<!-- REQUIRED · 2-3 paragraphs · Full hero story · ~150-250 words total -->
+**Paragraph 1** (context):
+(Origin: Born in northern Vietnam early 1900s. Street food served at dawn by "phở gánh" (carrying poles). Hanoi: clear broth, subtle. Saigon: sweeter, more herbs.)
 
-**Paragraph 1** (context): 
-(Where is this dish from? What's its place in Vietnamese culture? Who eats it and when?)
-
-**Paragraph 2** (sensory/technique):
-(What does it taste/smell/look like? What's the technique that makes it special?)
+**Paragraph 2** (technique):
+(Critical: 8+ hour broth simmer, charred onion + ginger, whole spices (star anise, cinnamon, cloves, coriander), beef shank for depth + raw slices for freshness.)
 
 **Paragraph 3** (logistics):
-(How long does it take? Beginner-friendly or advanced? Serves how many?)
+(~4-5 hours total, mostly passive simmering. Advanced but achievable. Serves 4 generously.)
 
-### storySnippet 
-<!-- OPTIONAL · 2-4 sentences · Personal anecdote · Shown as blockquote -->
-
-(A personal memory if you have one. The more specific, the better. Examples:
-- "My grandmother in Phú Yên used to..."
-- "The first time I had banh mi in Germany, I..."
-- "Every Tết in Saigon, my family would..."
-If you don't have one, delete this section.)
+### storySnippet
+<!-- Your personal story — e.g. first pho at dawn in Hanoi, grandmother's secret, or recreating in Germany -->
+(Optional)
 
 ---
 
 ## 3. Media
 
-- **image**: `` // REQUIRED — Unsplash URL ending with `?auto=format&fit=crop&w=1200&q=85`
-  - Search on https://unsplash.com using terms like "pho", "vietnamese food", "banh mi"
-  - Click the image → right-click "Copy image address"
-  - Add `?auto=format&fit=crop&w=1200&q=85` at the end
-- **imageAlt**: `` // REQUIRED — Describe the image for accessibility + SEO, e.g. "Bowl of steaming pho with fresh herbs and lime wedges"
+- **image**: ``
+  (Search Unsplash: "pho", "vietnamese pho", "pho bo")
+- **imageAlt**: `Steaming bowl of Hanoi beef pho with thinly sliced beef, herbs and lime wedges`
 
 ---
 
 ## 4. Timing & Metadata
 
-- **prepTime**: `` // REQUIRED — e.g. "20 min" (use "min" or "hr" only)
-- **cookTime**: `` // REQUIRED — e.g. "1 hr 30 min"
-- **totalTime**: `` // REQUIRED — e.g. "1 hr 50 min"
-- **servings**: `` // REQUIRED — number, e.g. 4
-- **yield**: `` // REQUIRED — readable output, e.g. "4 bowls" | "12 buns" | "8 rolls"
-- **difficulty**: `` // REQUIRED — one of: Easy | Medium | Hard
-- **category**: `` // REQUIRED — one of: Soup | Noodles | Street Food | Rice | Grilled | Rolls | Dessert | Vegetarian
-- **cuisine**: `Vietnamese` // leave as-is
+- **prepTime**: `30 min`
+- **cookTime**: `4 hr 30 min`
+- **totalTime**: `5 hr`
+- **servings**: `4`
+- **yield**: `4 bowls`
+- **difficulty**: `Hard`
+- **category**: `Soup`
+- **cuisine**: `Vietnamese`
 
 ---
 
 ## 5. Engagement
 
-- **rating**: `` // REQUIRED — number 4.5-5.0, e.g. 4.8
-- **ratingCount**: `` // REQUIRED — integer, e.g. 127 (realistic-looking number)
-- **tags**: `` // REQUIRED — 2-4 short tags, e.g. ["Street Food", "Quick", "Saigon Classic"]
-- **isFeatured**: `` // OPTIONAL — `true` if you want it in homepage featured, otherwise delete
-- **isNew**: `` // OPTIONAL — `true` for first 2 weeks after publishing, otherwise delete
+- **rating**: `4.9`
+- **ratingCount**: `248`
+- **tags**: `["Hanoi", "Soup", "Classic"]`
 
 ---
 
 ## 6. Ingredients
 
-<!-- 
-REQUIRED — Group ingredients by section ("For the broth", "For the sauce", "For garnish")
-Each ingredient should have:
-  - amount: "500 g (1.1 lb)" — metric primary, imperial in parens
-  - name: "Pork belly" (English)
-  - nameVi: "Thịt ba chỉ" (Vietnamese, OPTIONAL)
-  - note: "skin removed, cut into 2cm cubes" (OPTIONAL prep instruction)
-
-Aim for 15-30 ingredients total across 2-5 groups.
--->
-
-### Group 1: (e.g. "For the marinade")
+### Group 1: For the broth
 
 | Amount | Name (English) | Name (Vietnamese) | Prep note |
 |---|---|---|---|
-| 500 g (1.1 lb) | Pork shoulder | Thịt vai heo | sliced 3mm thin |
-| 2 stalks | Lemongrass | Sả | white parts only, minced |
-| 3 cloves | Garlic | Tỏi | minced |
-| 1 tbsp | Fish sauce | Nước mắm | Phú Quốc brand preferred |
-<!-- Add more rows as needed -->
+| 2 kg (4.4 lb) | Beef bones | Xương bò | marrow + knuckle mix |
+| 500 g (1.1 lb) | Beef shank | Bắp bò | whole piece |
+| 2 large | Yellow onion | Hành tây | halved, unpeeled |
+| 1 large piece | Ginger | Gừng | halved lengthwise |
+| 6 pods | Star anise | Hoa hồi | |
+| 2 sticks | Cinnamon | Quế | Vietnamese (cassia) |
+| 4 | Cloves | Đinh hương | |
+| 1 tbsp | Coriander seeds | Hạt ngò rí | |
+| 3 | Cardamom pods | Thảo quả | black preferred |
+| 3 L (12 cups) | Water | Nước | |
+| 3 tbsp | Fish sauce | Nước mắm | Phú Quốc |
+| 2 tbsp | Rock sugar | Đường phèn | |
+| 1 tbsp | Salt | Muối | to taste |
 
-### Group 2: (e.g. "For assembly")
+### Group 2: For serving
 
 | Amount | Name (English) | Name (Vietnamese) | Prep note |
 |---|---|---|---|
-| 4 | Vietnamese baguettes | Bánh mì | fresh, not stale |
-| 1 | Cucumber | Dưa chuột | cut into long strips |
+| 300 g (10 oz) | Beef eye round | Thịt thăn bò | sliced paper-thin for tái |
+| 500 g (1.1 lb) | Fresh pho noodles | Bánh phở tươi | flat rice noodles |
+| 3 stalks | Scallion | Hành lá | white + green, thin sliced |
+| 1 bunch | Cilantro | Ngò rí | chopped |
 
-### Group 3: (optional — add as many groups as needed)
+### Group 3: Herb plate & garnish
 
 | Amount | Name (English) | Name (Vietnamese) | Prep note |
 |---|---|---|---|
-|  |  |  |  |
+| 1 | Lime | Chanh | cut into wedges |
+| 2 | Bird's eye chilies | Ớt hiểm | sliced |
+| 1 | Yellow onion | Hành tây | very thin slices, soaked in water |
+| | Culantro | Ngò gai | optional (more Saigon) |
 
 ---
 
 ## 7. Instructions
 
-<!-- 
-REQUIRED — 6-10 steps. Each step should have:
-  - title: "Marinate the pork" (3-5 words, action-oriented)
-  - description: 2-4 sentences (~60-100 words) with clear actionable steps
-  - duration: "15 min" (OPTIONAL — only if this step has a specific timer)
-  - tip: "The smell when the lemongrass hits the hot oil tells you it's ready" (OPTIONAL chef secret)
-
-Write in present tense. Address the reader directly (you, your).
--->
-
-### Step 1: (Action verb + object, e.g. "Marinate the pork")
-- **Duration**: `` // OPTIONAL, e.g. "30 min (minimum)"
+### Step 1: Parboil the bones
+- **Duration**: `10 min`
 - **Description**: 
-  (2-4 sentences. Start with the action. Describe what to do, watch for visual/sensory cues, end with what ready looks/smells like.)
-- **Tip**: 
-  (OPTIONAL — a chef's secret or common mistake to avoid. Delete if no tip.)
+  (Boil bones in water 5-10 min. Grey foam rises. Drain. Scrub bones clean. This is non-negotiable for clear broth.)
+- **Tip**: (Hanoi pho broth MUST be clear — this step determines it.)
 
-### Step 2: (e.g. "Prepare the pickles")
-- **Duration**: ``
+### Step 2: Char the aromatics
+- **Duration**: `10 min`
 - **Description**: 
-- **Tip**: 
+  (Char onion + ginger directly over gas flame or under broiler until blackened outside, 8-10 min. Rinse off char lightly.)
+- **Tip**: (Smoky char flavor defines pho — don't skip.)
 
-### Step 3: (e.g. "Grill the pork")
-- **Duration**: ``
+### Step 3: Toast the spices
+- **Duration**: `5 min`
 - **Description**: 
-- **Tip**: 
+  (Dry-toast star anise, cinnamon, cloves, coriander, cardamom in pan 3-5 min until fragrant. Tie in cheesecloth.)
 
-<!-- Continue for steps 4, 5, 6... up to 8-10 steps -->
-
-### Step 4:
-- **Duration**: ``
+### Step 4: Start the broth
+- **Duration**: `15 min`
 - **Description**: 
-- **Tip**: 
+  (Add cleaned bones + shank to pot, cover with water. Bring to boil, reduce to gentle simmer. Skim foam first 15 min.)
 
-### Step 5:
-- **Duration**: ``
+### Step 5: First simmer with shank
+- **Duration**: `1 hr 30 min`
 - **Description**: 
-- **Tip**: 
+  (Simmer bones + shank 1.5 hrs. Remove shank (don't overcook), cool in cold water bath. Slice thinly for topping.)
 
-### Step 6:
-- **Duration**: ``
+### Step 6: Deep simmer
+- **Duration**: `2 hr 30 min`
 - **Description**: 
-- **Tip**: 
+  (Add charred onion + ginger + spice bundle. Simmer 2.5 more hrs. Broth reduces and deepens.)
+- **Tip**: (Never boil — only gentle simmer. Rolling boil = cloudy broth.)
 
-### Step 7:
-- **Duration**: ``
+### Step 7: Season the broth
+- **Duration**: `5 min`
 - **Description**: 
-- **Tip**: 
+  (Strain broth. Season with fish sauce, rock sugar, salt. Taste: balanced savory-sweet-salty. Return to gentle simmer.)
+
+### Step 8: Blanch noodles + prep bowls
+- **Duration**: `3 min`
+- **Description**: 
+  (Quickly blanch fresh pho noodles 30 sec in boiling water. Divide among warmed bowls.)
+
+### Step 9: Assemble
+- **Duration**: `5 min`
+- **Description**: 
+  (Top noodles with sliced shank (chín) + raw paper-thin beef (tái). Ladle boiling broth over — cooks the raw beef. Scatter scallion + cilantro.)
+- **Tip**: (The broth must be BOILING when poured. Thin beef cooks in seconds.)
+
+### Step 10: Serve with herb plate
+- **Duration**: `2 min`
+- **Description**: 
+  (Serve with lime, chilies, raw onion slices on the side. Hanoi style: less herbs than Saigon. Add to taste at table.)
 
 ---
 
-## 8. Tips (Chef's Secrets)
+## 8. Tips
 
-<!-- OPTIONAL · 3-5 tips · Each tip is 1 sentence (~15-30 words) -->
-
-- (Tip 1: e.g. "Make the pickles at least 1 hour ahead — they taste better after the flavors meld.")
-- (Tip 2: e.g. "If you don't have a grill, broil at 250°C for 8 minutes per side.")
-- (Tip 3: e.g. "Leftover marinated pork freezes well for up to 3 months.")
+- (Tip 1: 8+ hour broth = deeper flavor. Overnight simmer on lowest heat works too.)
+- (Tip 2: Slice beef paper-thin — freeze 30 min first for easier cutting.)
+- (Tip 3: Bánh phở tươi (fresh) beats dried 10:1. Find at Asian markets.)
+- (Tip 4: Hanoi version: NO hoisin, NO sriracha at table. Saigon: yes to both.)
 
 ---
 
 ## 9. Variations
 
-<!-- OPTIONAL · 2-4 variations · Regional variants or dietary swaps -->
-
-- **Regional variant**: (e.g. "Hanoi-style: use char siu instead of grilled pork, skip lemongrass.")
-- **Dietary variant**: (e.g. "Vegetarian: replace pork with marinated tofu and mushrooms.")
-- **Quick variant**: (e.g. "30-minute version: use thinly sliced pork belly, skip overnight marinade.")
+- **Phở Tái**: Only raw beef — no cooked shank.
+- **Phở Nạm Gầu**: With brisket + beef flank — richer.
+- **Phở Saigon**: Sweeter broth, herb plate, hoisin + sriracha offered.
 
 ---
 
-## 10. Nutrition (per serving)
+## 10. Nutrition (per bowl)
 
-<!-- OPTIONAL but RECOMMENDED — Google Rich Results love nutrition data -->
-
-- **calories**: `` // e.g. 420
-- **protein**: `` // e.g. "28 g"
-- **fat**: `` // e.g. "12 g"
-- **carbs**: `` // e.g. "48 g"
-- **sodium**: `` // OPTIONAL, e.g. "980 mg"
-- **fiber**: `` // OPTIONAL, e.g. "3 g"
+- **calories**: `480`
+- **protein**: `34 g`
+- **fat**: `14 g`
+- **carbs**: `52 g`
+- **sodium**: `1600 mg`
+- **fiber**: `2 g`
 
 ---
 
 ## 11. SEO Keywords
 
-<!-- REQUIRED · 5-10 keywords · Comma-separated English phrases people would search -->
-
-Examples:
-- banh mi recipe
-- vietnamese sandwich
-- lemongrass pork recipe
-- authentic banh mi
-- vietnamese street food
-- how to make banh mi at home
-
-**Your keywords**:
-- 
-- 
-- 
-- 
-- 
-- 
+- pho recipe
+- pho bo recipe
+- authentic hanoi pho
+- vietnamese beef noodle soup
+- pho bo ha noi
+- how to make pho at home
+- pho broth recipe
+- vietnamese pho
 
 ---
 
 ## 12. Publishing Info
 
-- **datePublished**: `2026-04-20` // REQUIRED — YYYY-MM-DD format, e.g. "2026-04-20"
-- **author**: `FlavorNest Vietnam` // leave as-is
+- **datePublished**: `2026-04-20`
+- **author**: `FlavorNest Vietnam`
 
 ---
 
-## ✅ Ready to Ship Checklist
+## ✅ TODO Before Publishing
 
-Before handing this to Claude, verify:
-
-- [ ] All REQUIRED fields filled
-- [ ] No `(guidance text)` left in the content
-- [ ] Vietnamese diacritics correct (Phở not Pho)
-- [ ] Image URL tested (opens the right photo)
-- [ ] Timing math correct (prep + cook = total)
-- [ ] Servings number matches yield (4 servings → "4 bowls")
-- [ ] At least 15 ingredients, 6 steps
-- [ ] Nutrition estimated realistically
-
-When ready, paste this entire file to Claude and say:
-> "Convert this recipe to TypeScript and add to recipes-detailed.ts"
-
-Claude will handle the rest.
+- [ ] Fill all `(guidance text)`
+- [ ] Personal story — Hanoi Vietnam OR Germany recreation
+- [ ] Unsplash URL
+- [ ] Double-check timing (4.5-5 hrs realistic)
+- [ ] Verify diacritics

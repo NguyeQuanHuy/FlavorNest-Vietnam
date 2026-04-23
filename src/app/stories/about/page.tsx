@@ -303,11 +303,11 @@ export default function AboutPage() {
                             </p>
 
                             <p style={{ margin: 0 }}>
-                                FlavorNest began on a cold evening in Thuringia in 2023. I was
+                                FlavorNest began on a cold evening in Thuringia in 2026. I was
                                 trying to recreate my mother's bánh canh from memory, failing,
-                                calling her on WhatsApp to ask her how to temper the broth.
-                                Halfway through the conversation I realized: if I don't write
-                                this down, properly and publicly, nobody will.
+                                searching on Internet how to cook but it was so complicated.
+                                So I created this website in order to give people the easier visually tutorials to make Vietnamese foods (or Asian foods).
+                                Thanks for reading and discovering about more recipes!
                             </p>
                         </div>
                     </motion.div>
@@ -614,7 +614,7 @@ export default function AboutPage() {
                                 lineHeight: 1.15,
                             }}
                         >
-                            Quan Huy Nguyen
+                            Huy Nguyen
                         </h3>
                         <p
                             style={{

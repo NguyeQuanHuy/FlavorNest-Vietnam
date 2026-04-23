@@ -10,7 +10,7 @@ const RECIPES = [
     {
         slug: 'hanoi-beef-pho',
         title: 'Hanoi Beef Pho',
-        subtitle: 'Phở Bò Hà Nội',
+        subtitle: 'Pho bo Ha Noi',
         image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=80',
         time: '3 hrs', difficulty: 'Medium', rating: '4.9', reviews: 248, cal: 420,
         tag: 'Iconic', tagColor: '#D97706',
@@ -19,7 +19,7 @@ const RECIPES = [
     {
         slug: 'bun-cha-hanoi',
         title: 'Hanoi Grilled Pork Vermicelli',
-        subtitle: 'Bún Chả Hà Nội',
+        subtitle: 'Bun cha Ha Noi',
         image: 'https://images.unsplash.com/photo-1623682785702-f0c9fcfe2fc0?auto=format&fit=crop&w=900&q=80',
         time: '45 min', difficulty: 'Easy', rating: '4.7', reviews: 142, cal: 380,
         tag: 'Street Classic', tagColor: '#059669',
@@ -28,7 +28,7 @@ const RECIPES = [
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'Bánh Cuốn Hà Nội',
+        subtitle: 'Banh cuon Ha Noi',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
         time: '45 min', difficulty: 'Medium', rating: '4.8', reviews: 167, cal: 290,
         tag: 'Morning Ritual', tagColor: '#7C3AED',
@@ -36,8 +36,8 @@ const RECIPES = [
     },
     {
         slug: 'xoi-xeo',
-        title: 'Mung Bean Sticky Rice',
-        subtitle: 'Xôi Xéo',
+        title: 'Xoi xeo',
+        subtitle: 'Xoi xeo',
         image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=900&q=80',
         time: '1 hr', difficulty: 'Easy', rating: '4.8', reviews: 134, cal: 380,
         tag: 'Breakfast', tagColor: '#EA580C',
@@ -46,7 +46,7 @@ const RECIPES = [
     {
         slug: 'cha-ca-la-vong',
         title: 'Turmeric Fish with Dill',
-        subtitle: 'Chả Cá Lã Vọng',
+        subtitle: 'Cha ca La Vong',
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
         time: '40 min', difficulty: 'Medium', rating: '4.9', reviews: 89, cal: 340,
         tag: 'Heritage', tagColor: '#D97706',
@@ -55,7 +55,7 @@ const RECIPES = [
     {
         slug: 'bun-thang',
         title: 'Hanoi Vermicelli Soup',
-        subtitle: 'Bún Thang',
+        subtitle: 'Bun Thang',
         image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=80',
         time: '2 hrs', difficulty: 'Hard', rating: '4.8', reviews: 76, cal: 310,
         tag: 'Royal Kitchen', tagColor: '#BE185D',
@@ -357,9 +357,9 @@ export default function NorthernCuisinePage() {
                     </h2>
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Central Cuisine', sub: 'Ẩm thực miền Trung', emoji: '🌶️', href: '/recipes/central' },
-                            { label: 'Southern Cuisine', sub: 'Ẩm thực miền Nam', emoji: '🌴', href: '/recipes/south' },
-                            { label: 'Street Food', sub: 'Món ăn đường phố', emoji: '🥢', href: '/recipes/street-food' },
+                            { label: 'Central Cuisine', sub: 'Thanh Hoa to Binh Thuan', emoji: '🌶️', href: '/recipes/central' },
+                            { label: 'Southern Cuisine', sub:'Ninh Thuan to Ca Mau', emoji: '🌴', href: '/recipes/south' },
+                            { label: 'Street Food', sub: 'on streets everywhere', emoji: '🥢', href: '/recipes/street-food' },
                             { label: 'All Recipes', sub: 'Browse everything', emoji: '🍜', href: '/recipes' },
                         ].map(item => (
                             <Link key={item.href} href={item.href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '20px 28px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.09)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.22s', minWidth: 150 }}

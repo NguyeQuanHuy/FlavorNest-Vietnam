@@ -10,26 +10,26 @@ export const metadata: Metadata = {
 const VALUES = [
     {
         icon: '🏮',
-        title: 'Gìn giữ truyền thống',
-        desc: 'Không biến tấu quá đà, giữ nguyên hương vị gốc của từng vùng miền.',
+        title: 'Keeping traditions alive',
+        desc: 'Pure Taste. Original Regions.',
     },
     {
         icon: '👨‍🍳',
-        title: 'Đơn giản hóa',
-        desc: 'Hướng dẫn chi tiết để ai cũng có thể nấu ngon như đầu bếp tại nhà.',
+        title: 'Pure Tradition',
+        desc: 'Chef Secrets Made Simple.',
     },
     {
         icon: '🌿',
-        title: 'Sức khỏe làm đầu',
-        desc: 'Ưu tiên nguyên liệu tươi sạch, cân bằng dinh dưỡng trong từng bữa ăn.',
+        title: 'Health Above All',
+        desc: 'Fresh Ingredients. Balanced Meals.',
     },
 ]
 
 const STATS = [
-    { value: '100+', label: 'Công thức' },
-    { value: '3', label: 'Miền ẩm thực' },
-    { value: '15K+', label: 'Người nấu' },
-    { value: '4.9★', label: 'Đánh giá TB' },
+    { value: '100+', label: 'Recipes' },
+    { value: '3', label: 'Culinary Land' },
+    { value: '15K+', label: 'The Home Chef' },
+    { value: '4.9★', label: 'Avg. Rating' },
 ]
 
 export default function AboutPage() {
@@ -60,7 +60,7 @@ export default function AboutPage() {
                         Our <em className="text-[#D97706] not-italic">Story</em>
                     </h1>
                     <p className="text-white/70 text-lg max-w-md mx-auto">
-                        Mang linh hồn bếp Việt vào từng gian bếp hiện đại.
+                    Bringing the soul of Vietnamese cuisine into every modern kitchen.
                     </p>
                 </div>
             </section>
@@ -84,22 +84,22 @@ export default function AboutPage() {
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-6 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Câu chuyện của chúng tôi
+                                Our Story
                             </span>
                         </div>
                         <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A] leading-tight mb-6">
-                            Những món ngon nhất nằm trong{' '}
-                            <em className="text-[#D97706] not-italic">căn bếp của mẹ.</em>
+                            The best dishes are found{' '}
+                            <em className="text-[#D97706] not-italic">in Mom’s countryside kitchen</em>
                         </h2>
                         <div className="space-y-5 text-[#4B2E1A]/65 leading-relaxed">
                             <p>
-                                FlavorNest bắt đầu từ một niềm tin đơn giản: Những món ăn Việt Nam ngon nhất không nằm ở những nhà hàng 5 sao, mà nằm trong căn bếp của những người bà, người mẹ.
+                                At FlavorNest, we believe the best Vietnamese flavors belong to home kitchens, not five-star restaurants.
                             </p>
                             <p>
-                                Chúng tôi đã đi dọc dải đất hình chữ S, từ những gánh phở đêm Hà Nội đến những tô bún mắm đậm đà miền Tây, để thu thập và chuẩn hóa những công thức "không viết thành lời".
+                                We traveled across Vietnam—from Hanoi’s midnight Pho to the bold flavors of the Mekong Delta—to capture and standardize 'unwritten' recipes.
                             </p>
                             <p>
-                                Mỗi công thức trên FlavorNest đều được thử nghiệm nhiều lần trong bếp thật, với nguyên liệu thật — để bạn tự tin nấu ngay lần đầu tiên.
+                               Every FlavorNest recipe is kitchen-tested with real ingredients—so you can cook with confidence from the very first try.
                             </p>
                         </div>
                     </div>
@@ -129,12 +129,12 @@ export default function AboutPage() {
                         <div className="flex items-center justify-center gap-2 mb-3">
                             <div className="w-6 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Giá trị cốt lõi
+                                Our pure values
                             </span>
                             <div className="w-6 h-px bg-[#D97706]" />
                         </div>
                         <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A]">
-                            Điều chúng tôi <em className="text-[#D97706] not-italic">tin tưởng</em>
+                            What we really <em className="text-[#D97706] not-italic">belive</em>
                         </h2>
                     </div>
 
@@ -168,24 +168,24 @@ export default function AboutPage() {
                     <div className="relative z-10">
                         <p className="text-4xl mb-5">🪺</p>
                         <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                            Bạn đã sẵn sàng vào bếp{' '}
-                            <em className="text-[#D97706] not-italic">cùng chúng tôi?</em>
+                            Ready to cook{' '}
+                            <em className="text-[#D97706] not-italic">with us?</em>
                         </h2>
                         <p className="text-white/55 mb-8 max-w-sm mx-auto">
-                            Khám phá 100+ công thức Việt Nam được kiểm chứng — từ Hà Nội, Huế đến Sài Gòn.
+                            Explore 100+ proven Vietnamese recipes — from Hanoi and Hue, Phu Yen to Saigon
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <Link
                                 href="/recipes"
                                 className="inline-flex items-center justify-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white font-bold px-8 py-4 rounded-2xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D97706]/30"
                             >
-                                Khám phá công thức →
+                                Discover Recipes →
                             </Link>
                             <Link
                                 href="/stories"
                                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border border-white/20 transition-all hover:-translate-y-0.5"
                             >
-                                Đọc Kitchen Stories
+                                Read Kitchen Stories
                             </Link>
                         </div>
                     </div>

@@ -17,19 +17,19 @@ export default async function Navbar() {
             {
                 head: "Categories",
                 items: [
-                    { name: "Breakfast", desc: "Món ăn sáng", url: "/recipes/breakfast" },
-                    { name: "Main Dishes", desc: "Món chính", url: "/recipes/main-dishes" },
-                    { name: "Desserts", desc: "Tráng miệng", url: "/recipes/desserts" },
-                    { name: "Specialty Drinks", desc: "Đồ uống đặc biệt", url: "/recipes/drinks" },
+                    { name: "Breakfast", desc: "Light & energizing start", url: "/recipes/breakfast" },
+                    { name: "Main Dishes", desc: "Balanced everyday meals", url: "/recipes/main-dishes" },
+                    { name: "Desserts", desc: "Sweet finishing treats", url: "/recipes/desserts" },
+                    { name: "Specialty Drinks", desc: "Creative refreshing drinks", url: "/recipes/drinks" },
                 ]
             },
             {
                 head: "Regions",
                 items: [
-                    { name: "Northern Cuisine", desc: "Ẩm thực miền Bắc", url: "/recipes/north" },
-                    { name: "Central Cuisine", desc: "Ẩm thực miền Trung", url: "/recipes/central" },
-                    { name: "Southern Cuisine", desc: "Ẩm thực miền Nam", url: "/recipes/south" },
-                    { name: "Street Food", desc: "Món ăn đường phố", url: "/recipes/street-food" },
+                    { name: "Northern Cuisine", desc: "Balanced, subtle flavors", url: "/recipes/north" },
+                    { name: "Central Cuisine", desc: "Bold & spicy dishes", url: "/recipes/central" },
+                    { name: "Southern Cuisine", desc: "Sweet tropical richness", url: "/recipes/south" },
+                    { name: "Street Food", desc: "Quick street bites", url: "/recipes/street-food" },
                 ]
             }
         ]

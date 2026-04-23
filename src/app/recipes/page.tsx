@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import Image from "next/image";
 import { useState, useEffect, useMemo, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -301,6 +302,7 @@ function RecipesInner() {
     const [activeRegion, setActiveRegion] = useState("All Regions");
     const [localQuery, setLocalQuery] = useState(urlSearch);
     const [hovered, setHovered] = useState<string | null>(null);
+    const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
 
     useEffect(() => {
         setLocalQuery(urlSearch);
@@ -319,10 +321,14 @@ function RecipesInner() {
                 r.tags.some((t) => t.toLowerCase().includes(q)) ||
                 r.category.toLowerCase().includes(q) ||
                 r.region.toLowerCase().includes(q);
-            return catMatch && regionMatch && searchMatch;
+        return catMatch && regionMatch && searchMatch;
+        }).sort((a, b) => {
+            if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
+            if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
+            return b.reviews - a.reviews;
         });
-    }, [activeCategory, activeRegion, localQuery]);
-
+       
+}, [activeCategory, activeRegion, localQuery, sortBy]);
     const clearSearch = () => {
         setLocalQuery("");
         router.replace("/recipes");
@@ -417,6 +423,28 @@ function RecipesInner() {
                             {r}
                         </button>
                     ))}
+                    <div style={{width:1,height:22,background:'rgba(75,46,26,0.1)',margin:'0 4px',flexShrink:0}}/>
+                    <select
+                        value={sortBy}
+                        onChange={e => setSortBy(e.target.value as 'popular' | 'rating' | 'quickest')}
+                        style={{
+                            border:'1.5px solid rgba(75,46,26,0.12)',
+                            borderRadius:100,
+                            padding:'7px 18px',
+                            fontSize:13,
+                            fontWeight:500,
+                            color:'rgba(75,46,26,0.7)',
+                            background:'transparent',
+                            cursor:'pointer',
+                            fontFamily:'inherit',
+                            outline:'none',
+                            flexShrink:0,
+                        }}
+                    >
+                        <option value="popular">Most Popular</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="quickest">Quickest</option>
+                    </select>
                 </div>
             </div>
 

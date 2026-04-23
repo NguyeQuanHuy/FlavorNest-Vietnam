@@ -32,7 +32,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-phe-trung',
         title: 'Vietnamese Egg Coffee',
-        subtitle: 'Cà Phê Trứng',
+        subtitle: 'Ca phe trung',
         image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80',
         type: 'Coffee', difficulty: 'Medium', time: '15 min',
         rating: '4.9', reviews: 387, cal: 180, tag: 'Hanoi Icon', tagColor: '#D97706', cold: false,
@@ -42,7 +42,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-phe-sua-da',
         title: 'Vietnamese Iced Coffee',
-        subtitle: 'Cà Phê Sữa Đá',
+        subtitle: 'Ca phe sua da',
         image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80',
         type: 'Coffee', difficulty: 'Easy', time: '10 min',
         rating: '4.9', reviews: 512, cal: 160, tag: 'National Drink', tagColor: '#059669', cold: true,
@@ -52,7 +52,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tra-da',
         title: 'Vietnamese Iced Green Tea',
-        subtitle: 'Trà Đá',
+        subtitle: 'Tra da',
         image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=80',
         type: 'Tea', difficulty: 'Easy', time: '5 min',
         rating: '4.7', reviews: 198, cal: 5, tag: 'Free Everywhere', tagColor: '#166534', cold: true,
@@ -62,7 +62,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'sinh-to-bo',
         title: 'Avocado Smoothie',
-        subtitle: 'Sinh Tố Bơ',
+        subtitle: 'Sinh to bo',
         image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=900&q=80',
         type: 'Smoothie', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 276, cal: 290, tag: 'Saigon Favourite', tagColor: '#7C3AED', cold: true,
@@ -72,7 +72,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-mia',
         title: 'Fresh Sugarcane Juice',
-        subtitle: 'Nước Mía',
+        subtitle: 'Nuoc mia',
         image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=900&q=80',
         type: 'Traditional', difficulty: 'Easy', time: '5 min',
         rating: '4.8', reviews: 241, cal: 120, tag: 'Street Cart Classic', tagColor: '#EA580C', cold: true,
@@ -82,7 +82,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-phe-muoi',
         title: 'Salted Coffee',
-        subtitle: 'Cà Phê Muối',
+        subtitle: 'Ca phe muoi',
         image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80',
         type: 'Coffee', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 203, cal: 170, tag: 'Hue Specialty', tagColor: '#BE185D', cold: false,
@@ -92,7 +92,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tra-thai',
         title: 'Thai-Style Milk Tea',
-        subtitle: 'Trà Sữa Thái',
+        subtitle: 'Tra sua Thai',
         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
         type: 'Tea', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 167, cal: 240, tag: 'Boba Generation', tagColor: '#D97706', cold: true,
@@ -102,7 +102,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-sam',
         title: 'Herbal Cooling Drink',
-        subtitle: 'Nước Sâm',
+        subtitle: 'Nuoc sam',
         image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80',
         type: 'Traditional', difficulty: 'Medium', time: '30 min',
         rating: '4.6', reviews: 112, cal: 80, tag: 'Traditional Medicine', tagColor: '#166534', cold: true,

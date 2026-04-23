@@ -55,7 +55,7 @@ export const RECIPES: Recipe[] = [
 
     // ── 1. Hanoi Beef Pho ───────────────────────────────────────────────────
     {
-        slug: 'hanoi-beef-pho',
+        slug: 'pho-bo-ha-noi',
         title: 'Hanoi Beef Pho',
         subtitle: 'Phở Bò Hà Nội',
         shortDescription: 'A crystal-clear bone broth simmered for hours with charred ginger and star anise — the soul of Vietnamese cuisine in one perfect bowl.',
@@ -74,6 +74,7 @@ export const RECIPES: Recipe[] = [
         calories: 420,
     },
 
+    // ── 2. Bun Cha Hanoi ────────────────────────────────────────────────────
     // ── 2. Bun Cha Hanoi ────────────────────────────────────────────────────
     {
         slug: 'bun-cha-hanoi',
