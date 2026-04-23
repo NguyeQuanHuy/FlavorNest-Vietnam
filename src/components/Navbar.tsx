@@ -101,14 +101,20 @@ export default async function Navbar() {
 
                 {/* ── Logo ── */}
                 <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-                    <div className="relative w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <div
+                        className="relative w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
+                        style={{
+                            borderRadius: '50%',
+                            overflow: 'hidden',
+                            boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25)',
+                        }}
+                    >
                         <img
                             src="/logo.svg"
                             alt="FlavorNest Vietnam"
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-cover"
                             style={{
-                                filter: 'drop-shadow(0 2px 8px rgba(217, 119, 6, 0.25))',
-                                mixBlendMode: 'multiply',
+                                transform: 'scale(1.15)',
                             }}
                         />
                     </div>
