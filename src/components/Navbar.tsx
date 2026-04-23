@@ -100,16 +100,25 @@ export default async function Navbar() {
             <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-6">
 
                 {/* ── Logo ── */}
-                <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-                    <img
-                        src="/logo.png"
-                        alt="FlavorNest"
-                        className="h-7 w-7 object-contain flex-shrink-0
-                        transition-all duration-300 group-hover:scale-105"
-                    />
-                    <div className="hidden lg:flex flex-col leading-none">
-                        <span className="text-[17px] font-bold text-fn-brown tracking-tight">FlavorNest</span>
-                        <span className="text-[9px] text-fn-amber font-semibold tracking-[0.22em] uppercase mt-0.5">Vietnam Gourmet</span>
+                <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+                    <div className="relative w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                        <img
+                            src="/logo.svg"
+                            alt="FlavorNest Vietnam"
+                            className="w-full h-full object-contain"
+                            style={{
+                                filter: 'drop-shadow(0 2px 8px rgba(217, 119, 6, 0.25))',
+                                mixBlendMode: 'multiply',
+                            }}
+                        />
+                    </div>
+                    <div className="hidden sm:flex flex-col leading-none">
+                        <span className="text-[19px] font-bold text-fn-brown tracking-tight">
+                            FlavorNest
+                        </span>
+                        <span className="text-[9px] text-fn-amber font-semibold tracking-[0.22em] uppercase mt-0.5">
+                            Vietnam Gourmet
+                        </span>
                     </div>
                 </Link>
 
