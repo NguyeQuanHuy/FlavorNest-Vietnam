@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { RECIPE_CATEGORIES, RECIPE_REGIONS, type NavItem } from "@/lib/nav-data";
@@ -10,22 +10,22 @@ type Props = {
   onClose: () => void;
 };
 
-const dropdownVariants = {
+const dropdownVariants: Variants = {
   hidden: {
     opacity: 0,
     y: -8,
     scale: 0.98,
-    transition: { duration: 0.15, ease: [0.4, 0, 0.2, 1] as const },
+    transition: { duration: 0.15, ease: [0.4, 0, 0.2, 1] },
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.22, ease: [0.4, 0, 0.2, 1] as const },
+    transition: { duration: 0.22, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
-const columnVariants = {
+const columnVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -33,12 +33,12 @@ const columnVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: -6 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] as const },
+    transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
