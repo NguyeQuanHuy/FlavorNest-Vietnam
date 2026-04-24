@@ -47,6 +47,9 @@ export const metadata: Metadata = {
   keywords: ["Vietnamese recipes", "Pho", "Banh Mi", "Vietnamese food blog", "authentic Vietnamese cooking"],
   authors: [{ name: "FlavorNest Vietnam" }],
   creator: "FlavorNest Vietnam",
+  verification: {
+    google: 'uWW4XXIzgki21f1o-KFkiDqE1z_DU7Io--zpuPBBV5g',
+  },
   metadataBase: new URL("https://flavor-nest-vietnam.vercel.app"),
   openGraph: {
     type: "website",
