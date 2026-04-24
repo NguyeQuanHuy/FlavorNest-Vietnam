@@ -66,5 +66,6 @@ const recipe: RecipeData = {
         },
         {
             title: 'Boil until they float',
-            description:
-                'Bring a large pot of water to a rolling boil. Drop dumplings in batches of 8–10, stirring gently to pre
+            description: `Bring a large pot of water to a rolling boil. Drop dumplings in batches of 8–10, stirring gently to prevent sticking to the bottom. Cook until they float to the surface, then continue for 2 more minutes. Remove with a slotted spoon and transfer directly into the ginger syrup.`,
+
+
