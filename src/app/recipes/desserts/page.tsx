@@ -170,7 +170,6 @@ const DESSERTS: Dessert[] = [
         tags: ['Fried', 'Glutinous Rice', 'Street Food'],
     },
     {
-        {
         slug: 'che-dau',
         name: 'Sweet Mung Bean Soup',
         viet: 'Che Dau Xanh',
@@ -185,7 +184,6 @@ const DESSERTS: Dessert[] = [
         difficulty: 'Easy',
         cal: 210,
         tags: ['Vegan', 'Pandan', 'No-Bake'],
-},
     },
     {
         slug: 'banh-troi-nuoc',
