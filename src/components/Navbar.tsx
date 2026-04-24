@@ -12,6 +12,7 @@ import {
 import RecipesDropdown from "./RecipesDropdown";
 import StoriesDropdown from "./StoriesDropdown";
 import { useSession, signOut } from 'next-auth/react'
+import SearchModal from "./SearchModal"
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +20,8 @@ export default function Navbar() {
   const [storiesOpen, setStoriesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
+  
 
 const { data: session } = useSession()
   useEffect(() => {
@@ -177,6 +180,7 @@ const { data: session } = useSession()
           <div className="flex items-center gap-2.5">
             <button
               aria-label="Search"
+              onClick={() => setSearchOpen(true)}
               className="hidden sm:flex items-center justify-center transition-all duration-200"
               style={{
                 width: 36,
@@ -671,7 +675,8 @@ const { data: session } = useSession()
             </motion.div>
           </>
         )}
-      </AnimatePresence>
-    </>
-  );
+      </AnimatePresence>      
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+  </>
+);
 }
