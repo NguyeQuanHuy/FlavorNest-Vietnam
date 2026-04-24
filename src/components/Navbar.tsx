@@ -1,218 +1,616 @@
-import Link from 'next/link';
-import UserAvatar from './UserAvatar';
-import SearchModal from './SearchModal';
-import MobileMenu from './MobileMenu';
-import { Heart } from 'lucide-react';
-import { auth } from '../auth';
+"use client";
 
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  NAV_LINKS,
+  RECIPE_CATEGORIES,
+  RECIPE_REGIONS,
+} from "@/lib/nav-data";
+import RecipesDropdown from "./RecipesDropdown";
 
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [recipesOpen, setRecipesOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
-export default async function Navbar() {
-    const session = await auth();
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    const recipesMenu = {
-        title: "Explore All Recipes",
-        link: "/recipes",
-        cols: [
-            {
-                head: "Categories",
-                items: [
-                    { name: "Breakfast", desc: "Light & energizing start", url: "/recipes/breakfast" },
-                    { name: "Main Dishes", desc: "Balanced everyday meals", url: "/recipes/main-dishes" },
-                    { name: "Desserts", desc: "Sweet finishing treats", url: "/recipes/desserts" },
-                    { name: "Specialty Drinks", desc: "Creative refreshing drinks", url: "/recipes/drinks" },
-                ]
-            },
-            {
-                head: "Regions",
-                items: [
-                    { name: "Northern Cuisine", desc: "Balanced, subtle flavors", url: "/recipes/north" },
-                    { name: "Central Cuisine", desc: "Bold & spicy dishes", url: "/recipes/central" },
-                    { name: "Southern Cuisine", desc: "Sweet tropical richness", url: "/recipes/south" },
-                    { name: "Street Food", desc: "Quick street bites", url: "/recipes/street-food" },
-                ]
-            }
-        ]
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
     };
+  }, [mobileOpen]);
 
-    const storiesMenu = {
-        title: "Read All Stories",
-        link: "/stories",
-        cols: [
-            {
-                head: "Insights",
-                items: [
-                    { name: "Culinary Culture", desc: "Traditions & History", url: "/stories/culture" },
-                    { name: "Chef's Secrets", desc: "Pro Tips & Techniques", url: "/stories/chef-secrets" },
-                ]
-            },
-            {
-                head: "Guides",
-                items: [
-                    { name: "Travel Guide", desc: "Where to eat in VN", url: "/stories/travel" },
-                    { name: "Behind the Scenes", desc: "Our food journey", url: "/stories/about" },
-                ]
-            }
-        ]
-    };
-
-    function DropdownMenu({ menu }: { menu: typeof recipesMenu }) {
-        return (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-250 z-50">
-                {/* Arrow */}
-                <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-fn-brown/8 rotate-45 z-10" />
-                <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(75,46,26,0.12)] border border-fn-brown/6 p-5 w-[420px] grid grid-cols-2 gap-6 relative">
-                    {menu.cols.map((col, idx) => (
-                        <div key={idx}>
-                            <p className="text-[9px] font-black text-fn-amber uppercase tracking-[0.22em] mb-3 pb-2 border-b border-fn-amber/10">
-                                {col.head}
-                            </p>
-                            <div className="flex flex-col gap-2.5">
-                                {col.items.map((item, i) => (
-                                    <Link key={i} href={item.url} className="flex flex-col group/item py-0.5 px-2 -mx-2 rounded-lg hover:bg-fn-amber/5 transition-colors">
-                                        <span className="text-[13px] font-semibold text-fn-brown/75 group-hover/item:text-fn-amber transition-colors leading-tight">
-                                            {item.name}
-                                        </span>
-                                        {item.desc && (
-                                            <span className="text-[10px] text-fn-brown/35 mt-0.5">
-                                                {item.desc}
-                                            </span>
-                                        )}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                    <div className="col-span-2 pt-3 border-t border-fn-brown/5 flex items-center justify-between">
-                        <span className="text-[10px] text-fn-brown/30">100+ authentic recipes</span>
-                        <Link href={menu.link} className="text-[11px] font-bold text-fn-amber hover:text-fn-brown transition-colors flex items-center gap-1">
-                            {menu.title} →
-                        </Link>
-                    </div>
-                </div>
+  return (
+    <>
+      <motion.nav
+        initial={false}
+        animate={{
+          background: scrolled
+            ? "rgba(245, 237, 227, 0.72)"
+            : "rgba(245, 237, 227, 0.02)",
+          borderBottomColor: scrolled
+            ? "rgba(75, 46, 26, 0.08)"
+            : "rgba(245, 237, 227, 0.12)",
+        }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        className="fixed top-0 left-0 right-0 z-40"
+        style={{
+          backdropFilter: scrolled
+            ? "blur(20px) saturate(180%)"
+            : "blur(8px) saturate(140%)",
+          WebkitBackdropFilter: scrolled
+            ? "blur(20px) saturate(180%)"
+            : "blur(8px) saturate(140%)",
+          borderBottom: "1px solid",
+        }}
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 lg:px-8">
+          <Link
+            href="/"
+            className="flex items-center gap-2.5"
+            style={{ textDecoration: "none" }}
+          >
+            <div
+              style={{
+                width: 32,
+                height: 32,
+                borderRadius: 8,
+                background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontFamily: "var(--font-playfair), Georgia, serif",
+                color: "#F5EDE3",
+                fontWeight: 700,
+                fontSize: 16,
+                fontStyle: "italic",
+                boxShadow: "0 2px 8px rgba(217,119,6,0.25)",
+              }}
+            >
+              F
             </div>
-        )
-    }
+            <span
+              style={{
+                fontFamily: "var(--font-playfair), Georgia, serif",
+                color: scrolled ? "#2D1A0E" : "#F5EDE3",
+                fontSize: 18,
+                fontWeight: 600,
+                letterSpacing: "-0.3px",
+                transition: "color 0.3s",
+              }}
+            >
+              FlavorNest
+            </span>
+          </Link>
 
-    return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-fn-brown/6"
-            style={{ boxShadow: '0 1px 0 rgba(75,46,26,0.04), 0 4px 16px rgba(0,0,0,0.04)' }}>
-            <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between gap-6">
+          <div className="hidden lg:flex items-center gap-1 relative">
+            {NAV_LINKS.map((link) => {
+              const isRecipes = link.label === "Recipes";
 
-                {/* ── Logo ── */}
-                <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-                    <div
-                        className="relative w-11 h-11 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-                        style={{
-                            borderRadius: '50%',
-                            overflow: 'hidden',
-                            boxShadow: '0 2px 8px rgba(217, 119, 6, 0.25)',
+              return (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => isRecipes && setRecipesOpen(true)}
+                  onMouseLeave={() => isRecipes && setRecipesOpen(false)}
+                >
+                  <Link
+                    href={link.href}
+                    className="flex items-center gap-1.5 transition-all duration-200"
+                    style={{
+                      padding: link.hasDropdown
+                        ? "8px 14px 8px 16px"
+                        : "8px 16px",
+                      background:
+                        isRecipes && recipesOpen
+                          ? scrolled
+                            ? "rgba(75,46,26,0.08)"
+                            : "rgba(245,237,227,0.15)"
+                          : "transparent",
+                      color: scrolled
+                        ? "rgba(45,26,14,0.85)"
+                        : "rgba(245,237,227,0.85)",
+                      fontSize: 14,
+                      fontWeight: isRecipes && recipesOpen ? 600 : 500,
+                      borderRadius: 8,
+                      textDecoration: "none",
+                    }}
+                  >
+                    {link.label}
+                    {link.hasDropdown && (
+                      <motion.svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        animate={{
+                          rotate: isRecipes && recipesOpen ? 180 : 0,
                         }}
-                    >
-                        <img
-                            src="/logo.svg"
-                            alt="FlavorNest Vietnam"
-                            className="w-full h-full object-cover"
-                            style={{
-                                transform: 'scale(1.15)',
-                            }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <path
+                          d="M3 5L6 8L9 5"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
+                      </motion.svg>
+                    )}
+                  </Link>
+
+                  {isRecipes && (
+                    <RecipesDropdown
+                      isOpen={recipesOpen}
+                      onClose={() => setRecipesOpen(false)}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex items-center gap-2.5">
+            <button
+              aria-label="Search"
+              className="hidden sm:flex items-center justify-center transition-all duration-200"
+              style={{
+                width: 36,
+                height: 36,
+                borderRadius: "50%",
+                border: `1px solid ${
+                  scrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
+                }`,
+                background: scrolled
+                  ? "rgba(75,46,26,0.04)"
+                  : "rgba(245,237,227,0.08)",
+                color: scrolled ? "#2D1A0E" : "#F5EDE3",
+                cursor: "pointer",
+              }}
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M20 20L16.5 16.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
+            <Link
+              href="/auth/signin"
+              className="hidden sm:inline-flex transition-all duration-200"
+              style={{
+                padding: "8px 18px",
+                borderRadius: 999,
+                background:
+                  "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
+                color: "#F5EDE3",
+                fontSize: 13,
+                fontWeight: 600,
+                textDecoration: "none",
+                boxShadow: "0 4px 14px rgba(217, 119, 6, 0.35)",
+              }}
+            >
+              Sign in
+            </Link>
+
+            <button
+              aria-label="Open menu"
+              onClick={() => setMobileOpen(true)}
+              className="lg:hidden flex items-center justify-center"
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                background: scrolled
+                  ? "rgba(75,46,26,0.06)"
+                  : "rgba(245,237,227,0.1)",
+                border: `1px solid ${
+                  scrolled ? "rgba(75,46,26,0.1)" : "rgba(245,237,227,0.15)"
+                }`,
+                color: scrolled ? "#2D1A0E" : "#F5EDE3",
+                cursor: "pointer",
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M3 5H15M3 9H15M3 13H15"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </motion.nav>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 z-50"
+              style={{
+                background: "rgba(45, 26, 14, 0.5)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+              }}
+            />
+
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              drag="y"
+              dragConstraints={{ top: 0, bottom: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.y > 120 || info.velocity.y > 500) {
+                  setMobileOpen(false);
+                }
+              }}
+              className="fixed bottom-0 left-0 right-0 z-50 flex flex-col"
+              style={{
+                height: "92vh",
+                background: "#F5EDE3",
+                borderTopLeftRadius: 24,
+                borderTopRightRadius: 24,
+                boxShadow: "0 -10px 40px rgba(45,26,14,0.25)",
+              }}
+            >
+              <div className="flex justify-center pt-3 pb-2 flex-shrink-0">
+                <div
+                  style={{
+                    width: 40,
+                    height: 4,
+                    borderRadius: 999,
+                    background: "rgba(75,46,26,0.2)",
+                  }}
+                />
+              </div>
+
+              <div
+                className="flex items-center justify-between px-6 pb-4 flex-shrink-0"
+                style={{ borderBottom: "1px solid rgba(75,46,26,0.08)" }}
+              >
+                <div className="flex items-center gap-2.5">
+                  <div
+                    style={{
+                      width: 32,
+                      height: 32,
+                      borderRadius: 8,
+                      background:
+                        "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "var(--font-playfair), Georgia, serif",
+                      color: "#F5EDE3",
+                      fontWeight: 700,
+                      fontSize: 16,
+                      fontStyle: "italic",
+                    }}
+                  >
+                    F
+                  </div>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-playfair), Georgia, serif",
+                      color: "#2D1A0E",
+                      fontSize: 18,
+                      fontWeight: 600,
+                    }}
+                  >
+                    FlavorNest
+                  </span>
+                </div>
+                <button
+                  aria-label="Close menu"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center"
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: "50%",
+                    background: "rgba(75,46,26,0.06)",
+                    border: "none",
+                    color: "#2D1A0E",
+                    cursor: "pointer",
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M4 4L12 12M12 4L4 12"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto px-6 py-5">
+                {NAV_LINKS.map((link) => {
+                  const isRecipes = link.label === "Recipes";
+                  const expanded = mobileExpanded === link.label;
+
+                  if (link.hasDropdown && isRecipes) {
+                    return (
+                      <div key={link.label} className="mb-1">
+                        <button
+                          onClick={() =>
+                            setMobileExpanded(expanded ? null : link.label)
+                          }
+                          className="w-full flex items-center justify-between py-4"
+                          style={{
+                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontSize: 20,
+                            fontWeight: 600,
+                            color: "#2D1A0E",
+                            background: "transparent",
+                            border: "none",
+                            cursor: "pointer",
+                            textAlign: "left",
+                          }}
+                        >
+                          {link.label}
+                          <motion.svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            animate={{ rotate: expanded ? 180 : 0 }}
+                            transition={{ duration: 0.2 }}
+                            style={{ color: "#D97706" }}
+                          >
+                            <path
+                              d="M4 6L8 10L12 6"
+                              stroke="currentColor"
+                              strokeWidth="1.8"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </motion.svg>
+                        </button>
+
+                        <AnimatePresence>
+                          {expanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              style={{ overflow: "hidden" }}
+                            >
+                              <div className="pb-4">
+                                <div
+                                  style={{
+                                    fontSize: 11,
+                                    fontWeight: 600,
+                                    letterSpacing: "1.5px",
+                                    color: "#D97706",
+                                    textTransform: "uppercase",
+                                    marginTop: 8,
+                                    marginBottom: 10,
+                                  }}
+                                >
+                                  Categories
+                                </div>
+                                <div className="grid grid-cols-2 gap-2 mb-5">
+                                  {RECIPE_CATEGORIES.map((item) => (
+                                    <Link
+                                      key={item.href}
+                                      href={item.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="flex flex-col gap-2 p-3"
+                                      style={{
+                                        borderRadius: 14,
+                                        background: "#FFFFFF",
+                                        border: "1px solid rgba(75,46,26,0.08)",
+                                        textDecoration: "none",
+                                      }}
+                                    >
+                                      <div
+                                        className="relative w-full overflow-hidden"
+                                        style={{
+                                          aspectRatio: "4/3",
+                                          borderRadius: 10,
+                                        }}
+                                      >
+                                        <Image
+                                          src={item.image}
+                                          alt={item.name}
+                                          fill
+                                          sizes="(max-width: 768px) 45vw, 200px"
+                                          className="object-cover"
+                                        />
+                                      </div>
+                                      <div>
+                                        <div
+                                          style={{
+                                            fontFamily:
+                                              "var(--font-playfair), Georgia, serif",
+                                            fontSize: 14,
+                                            fontWeight: 600,
+                                            color: "#2D1A0E",
+                                          }}
+                                        >
+                                          {item.name}
+                                        </div>
+                                        <div
+                                          style={{
+                                            fontSize: 11,
+                                            color: "rgba(75,46,26,0.6)",
+                                            marginTop: 2,
+                                          }}
+                                        >
+                                          {item.description}
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+
+                                <div
+                                  style={{
+                                    fontSize: 11,
+                                    fontWeight: 600,
+                                    letterSpacing: "1.5px",
+                                    color: "#D97706",
+                                    textTransform: "uppercase",
+                                    marginBottom: 10,
+                                  }}
+                                >
+                                  Regions
+                                </div>
+                                <div className="grid grid-cols-2 gap-2">
+                                  {RECIPE_REGIONS.map((item) => (
+                                    <Link
+                                      key={item.href}
+                                      href={item.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="flex flex-col gap-2 p-3"
+                                      style={{
+                                        borderRadius: 14,
+                                        background: "#FFFFFF",
+                                        border: "1px solid rgba(75,46,26,0.08)",
+                                        textDecoration: "none",
+                                      }}
+                                    >
+                                      <div
+                                        className="relative w-full overflow-hidden"
+                                        style={{
+                                          aspectRatio: "4/3",
+                                          borderRadius: 10,
+                                        }}
+                                      >
+                                        <Image
+                                          src={item.image}
+                                          alt={item.name}
+                                          fill
+                                          sizes="(max-width: 768px) 45vw, 200px"
+                                          className="object-cover"
+                                        />
+                                      </div>
+                                      <div>
+                                        <div
+                                          style={{
+                                            fontFamily:
+                                              "var(--font-playfair), Georgia, serif",
+                                            fontSize: 14,
+                                            fontWeight: 600,
+                                            color: "#2D1A0E",
+                                          }}
+                                        >
+                                          {item.name}
+                                        </div>
+                                        <div
+                                          style={{
+                                            fontSize: 11,
+                                            color: "rgba(75,46,26,0.6)",
+                                            marginTop: 2,
+                                          }}
+                                        >
+                                          {item.description}
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                        <div
+                          style={{
+                            height: 1,
+                            background: "rgba(75,46,26,0.06)",
+                          }}
+                        />
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div key={link.label}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block py-4"
+                        style={{
+                          fontFamily: "var(--font-playfair), Georgia, serif",
+                          fontSize: 20,
+                          fontWeight: 600,
+                          color: "#2D1A0E",
+                          textDecoration: "none",
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                      <div
+                        style={{
+                          height: 1,
+                          background: "rgba(75,46,26,0.06)",
+                        }}
+                      />
                     </div>
-                    <div className="hidden sm:flex flex-col leading-none">
-                        <span className="text-[19px] font-bold text-fn-brown tracking-tight">
-                            FlavorNest
-                        </span>
-                        <span className="text-[9px] text-fn-amber font-semibold tracking-[0.22em] uppercase mt-0.5">
-                            Vietnam Gourmet
-                        </span>
-                    </div>
+                  );
+                })}
+              </div>
+
+              <div
+                className="px-6 py-4 flex-shrink-0"
+                style={{ borderTop: "1px solid rgba(75,46,26,0.08)" }}
+              >
+                <Link
+                  href="/auth/signin"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center w-full"
+                  style={{
+                    padding: "14px",
+                    borderRadius: 999,
+                    background:
+                      "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
+                    color: "#F5EDE3",
+                    fontSize: 15,
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    boxShadow: "0 6px 18px rgba(217, 119, 6, 0.35)",
+                  }}
+                >
+                  Sign in
                 </Link>
-
-                {/* ── Desktop Nav ── */}
-                <div className="hidden md:flex items-center gap-1 h-full flex-1 justify-center">
-                    {/* Home */}
-                    <Link href="/"
-                        className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200">
-                        Home
-                    </Link>
-
-                    {/* Recipes dropdown */}
-                    <div className="group relative h-full flex items-center">
-                        <Link href="/recipes"
-                            className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200 flex items-center gap-1">
-                            Recipes
-                            <svg className="w-3 h-3 opacity-40 group-hover:opacity-70 transition-all group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </Link>
-                        <DropdownMenu menu={recipesMenu} />
-                    </div>
-
-                    {/* Stories dropdown */}
-                    <div className="group relative h-full flex items-center">
-                        <Link href="/stories"
-                            className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200 flex items-center gap-1">
-                            Stories
-                            <svg className="w-3 h-3 opacity-40 group-hover:opacity-70 transition-all group-hover:rotate-180 duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </Link>
-                        <DropdownMenu menu={storiesMenu} />
-                    </div>
-
-                    {/* About */}
-                    <Link href="/about"
-                        className="px-4 py-2 text-[13.5px] font-medium text-fn-brown/65 hover:text-fn-brown hover:bg-fn-brown/5 rounded-xl transition-all duration-200">
-                        About
-                    </Link>
-                </div>
-
-                {/* ── Right utilities ── */}
-                <div className="flex items-center gap-2 flex-shrink-0">
-
-                    {/* Search */}
-                    <div className="text-fn-brown/50 hover:text-fn-amber transition-colors">
-                        <SearchModal />
-                    </div>
-
-                    {/* Favorites */}
-                    <Link href="/favorites" title="My Favorites"
-                        className="w-9 h-9 flex items-center justify-center text-fn-brown/50 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all duration-200 border border-transparent hover:border-red-100">
-                        <Heart className="w-[18px] h-[18px]" />
-                    </Link>
-
-                    {/* Divider */}
-                    <div className="hidden md:block h-6 w-px bg-fn-brown/10 mx-1" />
-
-                    {/* Desktop: Avatar / Sign In */}
-                    <div className="hidden md:flex items-center">
-                        {session?.user ? (
-                            <Link href="/account"
-                                className="flex items-center gap-2.5 group bg-fn-brown/4 hover:bg-fn-amber/8 px-2 py-1.5 pr-3.5 rounded-full border border-fn-brown/8 hover:border-fn-amber/25 transition-all duration-250"
-                                style={{ background: 'rgba(75,46,26,0.04)' }}>
-                                <div className="relative flex-shrink-0">
-                                    <UserAvatar src={session.user.image || ''} name={session.user.name || ''} />
-                                    <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full" />
-                                </div>
-                                <div className="flex flex-col leading-none">
-                                    <span className="text-[8px] uppercase tracking-widest text-fn-brown/35 font-black">Chef</span>
-                                    <span className="text-[12.5px] font-bold text-fn-brown group-hover:text-fn-amber transition-colors max-w-[100px] truncate">
-                                        {session.user.name?.split(' ').pop()}
-                                    </span>
-                                </div>
-                            </Link>
-                        ) : (
-                            <Link href="/login"
-                                className="inline-flex items-center gap-2 px-5 py-2 text-[13px] font-bold text-white bg-fn-brown hover:bg-fn-amber rounded-full transition-all duration-200 shadow-sm shadow-fn-brown/15 hover:shadow-fn-amber/20 hover:shadow-md">
-                                Sign In
-                            </Link>
-                        )}
-                    </div>
-
-                    {/* Mobile menu */}
-                    <MobileMenu session={session} />
-                </div>
-            </div>
-        </nav>
-    );
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
