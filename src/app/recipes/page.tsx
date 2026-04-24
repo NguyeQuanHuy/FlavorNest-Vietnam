@@ -65,16 +65,6 @@ const LEGACY_CARDS: Array<{
             tags: ["Shrimp", "No Cook", "Healthy"],
         },
         {
-            slug: "com-tam",
-            title: "Saigon Broken Rice Plate",
-            subtitle: "Cơm Tấm Sài Gòn",
-            image: "https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=800&q=80",
-            category: "Rice", region: "Southern", difficulty: "Easy",
-            time: "35 min", rating: "4.9", reviews: 271,
-            description: "Saigon's iconic street breakfast — grilled pork chop over broken rice with scallion oil.",
-            tags: ["Pork", "Rice", "Classic"],
-        },
-        {
             slug: "banh-cuon",
             title: "Steamed Rice Rolls",
             subtitle: "Bánh Cuốn Hà Nội",
