@@ -33,7 +33,7 @@ export default function RecipeCard({ title, image, description, id, category, di
           aria-label={liked ? "Bỏ yêu thích" : "Thêm yêu thích"}
           onClick={(e) => {
             e.preventDefault();
-            toggle({ slug, title, image, category, cookTime: time });
+            toggle({ id: slug, slug, title, image, category, cookTime: time });
           }}
           whileTap={{ scale: 0.8 }}
           style={{
