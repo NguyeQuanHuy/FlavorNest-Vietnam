@@ -13,8 +13,8 @@ import { loginSchema } from '@/lib/validations/auth'
 export const authConfig: NextAuthConfig = {
     // 1. Cấu hình các trang tùy chỉnh
     pages: {
-        signIn: '/login',      // Khi chưa đăng nhập sẽ bị đá về đây
-        error: '/login',       // Khi có lỗi cũng quay về đây
+    signIn: '/auth/signin',
+    error: '/auth/signin',
     },
 
     // 2. Chiến lược lưu trữ session (dùng JWT cho nhanh và nhẹ)
