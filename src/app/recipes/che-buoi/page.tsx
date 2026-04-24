@@ -62,6 +62,6 @@ const recipe: RecipeData = {
             tip: 'The pearls are ready when they look like small jellyfish — translucent on the outside with the white pith still faintly visible inside.',
         },
         {
-            title: 'Make the pandan broth',
-            description:
-                'Combine water and pandan leaves in a saucepan. Bring to a boil and simmer for 10 minutes until fragrant and pale green. Remove pandan leaves. Add sugar and salt, stir to dissolve. Reduce heat to low and stir in coconut milk. Do not
+    title: 'Make the pandan broth',
+    description: `Combine water and pandan leaves in a saucepan. Bring to a boil and simmer for 10 minutes until fragrant and pale green. Remove pandan leaves. Add sugar and salt, stir to dissolve. Reduce heat to low and stir in coconut milk. Do not boil after adding coconut milk.`,
+        },
