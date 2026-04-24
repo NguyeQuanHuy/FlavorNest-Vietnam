@@ -74,6 +74,46 @@ const LEGACY_CARDS: Array<{
             description: "Saigon's iconic street breakfast — grilled pork chop over broken rice with scallion oil.",
             tags: ["Pork", "Rice", "Classic"],
         },
+        {
+            slug: "banh-cuon",
+            title: "Steamed Rice Rolls",
+            subtitle: "Bánh Cuốn Hà Nội",
+            image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80",
+            category: "Rolls", region: "Northern", difficulty: "Medium",
+            time: "45 min", rating: "4.8", reviews: 167,
+            description: "Silky steamed rice sheets rolled with seasoned pork and wood ear mushrooms.",
+            tags: ["Pork", "Steamed", "Morning"],
+        },
+        {
+            slug: "xoi-xeo",
+            title: "Golden Sticky Rice with Mung Bean",
+            subtitle: "Xôi Xéo",
+            image: "https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=800&q=80",
+            category: "Rice", region: "Northern", difficulty: "Easy",
+            time: "1 hr", rating: "4.8", reviews: 134,
+            description: "Golden sticky rice topped with split mung bean paste and crispy fried shallots.",
+            tags: ["Rice", "Breakfast", "Vegan"],
+        },
+        {
+            slug: "cha-ca-la-vong",
+            title: "Turmeric Fish with Dill",
+            subtitle: "Chả Cá Lã Vọng",
+            image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80",
+            category: "Grilled", region: "Northern", difficulty: "Medium",
+            time: "40 min", rating: "4.9", reviews: 221,
+            description: "Hanoi's most celebrated dish — turmeric fish sizzled tableside with fresh dill and spring onions.",
+            tags: ["Fish", "Grilled", "Heritage"],
+        },
+        {
+            slug: "bun-thang",
+            title: "Hanoi Vermicelli Soup",
+            subtitle: "Bún Thang",
+            image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=800&q=80",
+            category: "Soup", region: "Northern", difficulty: "Hard",
+            time: "2 hrs", rating: "4.8", reviews: 76,
+            description: "The most refined bowl in Vietnamese cuisine — crystal-clear broth with egg ribbons and shredded chicken.",
+            tags: ["Chicken", "Soup", "Royal"],
+        },
     ];
 
 // ─── Convert RecipeDetailed (mapped as Recipe) to card format ───
@@ -321,14 +361,14 @@ function RecipesInner() {
                 r.tags.some((t) => t.toLowerCase().includes(q)) ||
                 r.category.toLowerCase().includes(q) ||
                 r.region.toLowerCase().includes(q);
-        return catMatch && regionMatch && searchMatch;
+            return catMatch && regionMatch && searchMatch;
         }).sort((a, b) => {
             if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
             if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
             return b.reviews - a.reviews;
         });
-       
-}, [activeCategory, activeRegion, localQuery, sortBy]);
+
+    }, [activeCategory, activeRegion, localQuery, sortBy]);
     const clearSearch = () => {
         setLocalQuery("");
         router.replace("/recipes");
@@ -423,22 +463,22 @@ function RecipesInner() {
                             {r}
                         </button>
                     ))}
-                    <div style={{width:1,height:22,background:'rgba(75,46,26,0.1)',margin:'0 4px',flexShrink:0}}/>
+                    <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 4px', flexShrink: 0 }} />
                     <select
                         value={sortBy}
                         onChange={e => setSortBy(e.target.value as 'popular' | 'rating' | 'quickest')}
                         style={{
-                            border:'1.5px solid rgba(75,46,26,0.12)',
-                            borderRadius:100,
-                            padding:'7px 18px',
-                            fontSize:13,
-                            fontWeight:500,
-                            color:'rgba(75,46,26,0.7)',
-                            background:'transparent',
-                            cursor:'pointer',
-                            fontFamily:'inherit',
-                            outline:'none',
-                            flexShrink:0,
+                            border: '1.5px solid rgba(75,46,26,0.12)',
+                            borderRadius: 100,
+                            padding: '7px 18px',
+                            fontSize: 13,
+                            fontWeight: 500,
+                            color: 'rgba(75,46,26,0.7)',
+                            background: 'transparent',
+                            cursor: 'pointer',
+                            fontFamily: 'inherit',
+                            outline: 'none',
+                            flexShrink: 0,
                         }}
                     >
                         <option value="popular">Most Popular</option>
