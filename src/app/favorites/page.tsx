@@ -51,12 +51,12 @@ export default function FavoritesPage() {
                 lineHeight: 1.1,
               }}
             >
-              Món ăn yêu thích
+              My Favorites
             </h1>
           </div>
           <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 15 }}>
             {favorites.length > 0
-              ? `${favorites.length} công thức đã lưu`
+              ? `${favorites.length} Saved Recipes`
               : "No recipes saved yet."}
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ export default function FavoritesPage() {
                   marginBottom: 10,
                 }}
               >
-                Chưa có món yêu thích
+                No favorite dishes yet
               </h2>
               <p
                 style={{
