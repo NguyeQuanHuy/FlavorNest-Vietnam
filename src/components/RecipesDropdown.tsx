@@ -121,7 +121,7 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className="absolute left-1/2 -translate-x-1/2 z-50"
+          className="absolute left-1/2 -translate-x-1/2"
           style={{
             top: "calc(100% + 12px)",
             width: 620,
@@ -134,6 +134,7 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
             boxShadow:
               "0 20px 60px -10px rgba(45,26,14,0.35), 0 8px 20px -8px rgba(45,26,14,0.2), inset 0 1px 0 rgba(255,255,255,0.9)",
             transformOrigin: "top center",
+            zIndex: 9999,
           }}
           onMouseLeave={onClose}
         >
