@@ -107,6 +107,26 @@ const RECIPES: Recipe[] = [
         description: "Tender beef cubes wok-tossed in butter, garlic and oyster sauce — the 'shaking' technique builds a beautiful crust while keeping the centre pink. Served on watercress with a lime and black pepper dipping salt. Fast, brilliant, unforgettable.",
         tags: ['Beef', 'Wok', 'Quick', 'French-Inspired'],
     },
+    {
+        slug: 'lau-mam',
+        title: 'Fermented Fish Hot Pot',
+        subtitle: 'Lau mam mien Tay',
+        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
+        difficulty: 'Medium', time: '1 hr',
+        rating: '4.8', reviews: 143, cal: 420, tag: 'Mekong Bold', tagColor: '#B45309',
+        description: `The boldest hot pot in Vietnam — fermented fish broth with eggplant, pork, prawns and a mountain of fresh herbs. The Mekong Delta's dish for celebrations.`,
+        tags: ['Fermented', 'Seafood', 'Hot Pot', 'Mekong'],
+    },
+    {
+        slug: 'banh-mi-saigon',
+        title: 'Saigon Banh Mi',
+        subtitle: 'Banh mi Sai Gon',
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
+        difficulty: 'Easy', time: '30 min',
+        rating: '4.9', reviews: 521, cal: 380, tag: 'Saigon Street Icon', tagColor: '#EA580C',
+        description: `The greatest sandwich in the world — a shatteringly crisp baguette filled with pate, cha lua, pickled daikon, fresh coriander and chilli. Five minutes. Perfect every time.`,
+        tags: ['Pork', 'Bread', 'Street Food', 'Classic'],
+    },
 ]
 
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
@@ -134,7 +154,7 @@ function saveFav(recipe: Recipe, add: boolean) {
             arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
         }
         localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch {}
+    } catch { }
 }
 
 function HeartBtn({ recipe }: { recipe: Recipe }) {
