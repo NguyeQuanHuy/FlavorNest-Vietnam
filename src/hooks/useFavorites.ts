@@ -3,13 +3,13 @@
 import { useState, useEffect, useCallback } from "react";
 
 export interface FavoriteRecipe {
-  id: string;        // = slug, dùng làm unique key
+  id: string;
   slug: string;
   title: string;
   image: string;
   category?: string;
   cookTime?: string;
-  savedAt: number;   // Date.now() khi lưu
+  savedAt: number;
 }
 
 const KEY = "fn_favorites";
@@ -26,7 +26,6 @@ export function useFavorites() {
     setHydrated(true);
   }, []);
 
-  // mounted = alias của hydrated — Navbar dùng tên này
   const mounted = hydrated;
 
   const persist = useCallback((items: FavoriteRecipe[]) => {
@@ -36,9 +35,8 @@ export function useFavorites() {
     } catch {}
   }, []);
 
-  /** Toggle thêm/bỏ — Navbar & RecipeCard dùng */
   const toggle = useCallback(
-    (recipe: Omit<FavoriteRecipe, "id" | "savedAt">) => {
+    (recipe: Omit<FavoriteRecipe, "savedAt">) => {
       const exists = favorites.some((f) => f.slug === recipe.slug);
       persist(
         exists
@@ -49,27 +47,32 @@ export function useFavorites() {
     [favorites, persist]
   );
 
-  /** Xóa theo id — FavoritesPage dùng */
-  const removeFavorite = useCallback(
-    (id: string) => persist(favorites.filter((f) => f.id !== id)),
-    [favorites, persist]
-  );
+  // alias — FavoriteButton.tsx dùng
+  const toggleFavorite = toggle;
 
-  /** Xóa tất cả — FavoritesPage dùng */
-  const clearFavorites = useCallback(() => persist([]), [persist]);
-
-  /** Kiểm tra slug */
   const isFavorite = useCallback(
     (slug: string) => favorites.some((f) => f.slug === slug),
     [favorites]
   );
 
+  // alias — FavoriteButton.tsx dùng (nhận id = slug)
+  const isFavorited = isFavorite;
+
+  const removeFavorite = useCallback(
+    (id: string) => persist(favorites.filter((f) => f.id !== id)),
+    [favorites, persist]
+  );
+
+  const clearFavorites = useCallback(() => persist([]), [persist]);
+
   return {
     favorites,
-    hydrated,       // FavoritesPage dùng
-    mounted,        // Navbar dùng (alias)
+    hydrated,
+    mounted,
     toggle,
+    toggleFavorite,
     isFavorite,
+    isFavorited,
     removeFavorite,
     clearFavorites,
   };
