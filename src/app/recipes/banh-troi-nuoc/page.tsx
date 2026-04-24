@@ -65,7 +65,7 @@ const recipe: RecipeData = {
             tip: 'Keep finished dumplings covered with a damp cloth while you work — exposed dough dries out quickly and cracks when boiled.',
         },
         {
-            title: 'Boil until they float',
-            description: `Bring a large pot of water to a rolling boil. Drop dumplings in batches of 8–10, stirring gently to prevent sticking to the bottom. Cook until they float to the surface, then continue for 2 more minutes. Remove with a slotted spoon and transfer directly into the ginger syrup.`,
-
-
+    title: 'Boil until they float',
+    description: `Bring a large pot of water to a rolling boil. Drop dumplings in batches of 8 to 10, stirring gently to prevent sticking to the bottom. Cook until they float to the surface, then continue for 2 more minutes. Remove with a slotted spoon and transfer directly into the ginger syrup.`,
+    tip: 'The floating is the signal, not the timer. Trust the float.',
+        },
