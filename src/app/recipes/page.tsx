@@ -319,10 +319,16 @@ const getDetailedCards = () => {
 
 // ─── Helper: infer region from slug or category for consistency ───
 function inferRegion(category: string, slug: string): string {
-    if (slug.includes("phu-yen") || slug.includes("hue") || slug.includes("central")) return "Central";
-    if (slug.includes("hanoi") || slug.includes("northern") || slug.includes("north")) return "Northern";
-    if (slug.includes("saigon") || slug.includes("southern") || slug.includes("south")) return "Southern";
-    return "Central"; // default for our 3 new recipes (Phu Yen, Hue are Central; Banh Bao spans Vietnam)
+    const northern = ['hanoi-beef-pho', 'pho-bo-ha-noi', 'bun-cha-hanoi', 'banh-cuon', 'xoi-xeo', 'cha-ca-la-vong', 'bun-thang', 'hanoi-beef-pho'];
+    const central = ['bun-bo-hue', 'hue-spicy-beef-noodle-soup', 'cao-lau', 'mi-quang', 'banh-beo', 'com-hen', 'banh-xeo-mien-trung', 'banh-nam', 'phu-yen-chives-noodle-soup', 'ga-la-e-phu-yen'];
+    const southern = ['thit-kho-tau', 'com-tam-saigon', 'com-tam', 'bun-thit-nuong', 'banh-xeo-mien-tay', 'hu-tieu-nam-vang', 'ca-kho-to', 'lau-thai', 'bo-luc-lac', 'lau-mam', 'banh-mi-saigon'];
+    if (northern.includes(slug)) return "Northern";
+    if (central.includes(slug)) return "Central";
+    if (southern.includes(slug)) return "Southern";
+    if (slug.includes("phu-yen") || slug.includes("hue")) return "Central";
+    if (slug.includes("hanoi")) return "Northern";
+    if (slug.includes("saigon") || slug.includes("mekong")) return "Southern";
+    return "Northern";
 }
 
 // ─── Merge detailed (priority) + legacy cards, dedupe by slug ───
