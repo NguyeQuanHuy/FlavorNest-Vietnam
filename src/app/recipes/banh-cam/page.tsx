@@ -54,4 +54,4 @@ const recipe: RecipeData = {
         {
             title: 'Make the dough',
             description:
-                'Combine glutinous rice flour, mashed potato, sugar,
+                description: `Combine glutinous rice flour, mashed potato, sugar, and salt. Add warm water gradually, mixing until a soft, smooth, non-sticky dough forms. It should be pliable like playdough — add water or flour a teaspoon at a time to adjust. Divide into 16 equal portions.`,
