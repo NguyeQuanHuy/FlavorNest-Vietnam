@@ -10,10 +10,12 @@ import {
   RECIPE_REGIONS,
 } from "@/lib/nav-data";
 import RecipesDropdown from "./RecipesDropdown";
+import StoriesDropdown from "./StoriesDropdown";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [recipesOpen, setRecipesOpen] = useState(false);
+  const [storiesOpen, setStoriesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
@@ -97,13 +99,25 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-1 relative">
             {NAV_LINKS.map((link) => {
               const isRecipes = link.label === "Recipes";
+              const isStories = link.label === "Stories";
+              const isActive =
+                (isRecipes && recipesOpen) || (isStories && storiesOpen);
+
+              const handleEnter = () => {
+                if (isRecipes) setRecipesOpen(true);
+                if (isStories) setStoriesOpen(true);
+              };
+              const handleLeave = () => {
+                if (isRecipes) setRecipesOpen(false);
+                if (isStories) setStoriesOpen(false);
+              };
 
               return (
                 <div
                   key={link.label}
                   className="relative"
-                  onMouseEnter={() => isRecipes && setRecipesOpen(true)}
-                  onMouseLeave={() => isRecipes && setRecipesOpen(false)}
+                  onMouseEnter={handleEnter}
+                  onMouseLeave={handleLeave}
                 >
                   <Link
                     href={link.href}
@@ -112,17 +126,16 @@ export default function Navbar() {
                       padding: link.hasDropdown
                         ? "8px 14px 8px 16px"
                         : "8px 16px",
-                      background:
-                        isRecipes && recipesOpen
-                          ? scrolled
-                            ? "rgba(75,46,26,0.08)"
-                            : "rgba(245,237,227,0.15)"
-                          : "transparent",
+                      background: isActive
+                        ? scrolled
+                          ? "rgba(75,46,26,0.08)"
+                          : "rgba(245,237,227,0.15)"
+                        : "transparent",
                       color: scrolled
                         ? "rgba(45,26,14,0.85)"
                         : "rgba(245,237,227,0.85)",
                       fontSize: 14,
-                      fontWeight: isRecipes && recipesOpen ? 600 : 500,
+                      fontWeight: isActive ? 600 : 500,
                       borderRadius: 8,
                       textDecoration: "none",
                     }}
@@ -134,9 +147,7 @@ export default function Navbar() {
                         height="12"
                         viewBox="0 0 12 12"
                         fill="none"
-                        animate={{
-                          rotate: isRecipes && recipesOpen ? 180 : 0,
-                        }}
+                        animate={{ rotate: isActive ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
                       >
                         <path
@@ -154,6 +165,12 @@ export default function Navbar() {
                     <RecipesDropdown
                       isOpen={recipesOpen}
                       onClose={() => setRecipesOpen(false)}
+                    />
+                  )}
+                  {isStories && (
+                    <StoriesDropdown
+                      isOpen={storiesOpen}
+                      onClose={() => setStoriesOpen(false)}
                     />
                   )}
                 </div>
