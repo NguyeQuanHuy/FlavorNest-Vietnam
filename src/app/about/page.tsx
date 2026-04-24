@@ -1,197 +1,242 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import type { Metadata } from 'next'
+'use client';
 
-export const metadata: Metadata = {
-    title: 'About | FlavorNest Vietnam',
-    description: 'Our story — bringing the soul of Vietnamese cuisine into every modern kitchen.',
-}
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const STATS = [
+    { value: '100+', label: 'Recipes tested' },
+    { value: '3', label: 'Regions covered' },
+    { value: '1', label: 'Kitchen in Germany' },
+    { value: '∞', label: 'Bowls of pho consumed' },
+];
 
 const VALUES = [
     {
-        icon: '🏮',
-        title: 'Keeping traditions alive',
-        desc: 'Pure Taste. Original Regions.',
+        icon: '🏠',
+        title: 'The Home Kitchen Test',
+        body: `Every recipe on this site has been cooked in my apartment kitchen in Gotha, Thuringia — on a four-burner stove, with ingredients I can actually find at the Asian supermarket forty minutes away. If I can't make it work here, it doesn't go up.`,
     },
     {
-        icon: '👨‍🍳',
-        title: 'Pure Tradition',
-        desc: 'Chef Secrets Made Simple.',
+        icon: '📖',
+        title: 'Story Before Recipe',
+        body: `I refuse to publish a recipe without telling you where it comes from, who taught it, and why it matters. A list of ingredients without context is just instructions. Context is what makes you care enough to actually cook it.`,
     },
     {
-        icon: '🌿',
-        title: 'Health Above All',
-        desc: 'Fresh Ingredients. Balanced Meals.',
+        icon: '🌱',
+        title: 'Before It Disappears',
+        body: `Every year, more young Vietnamese leave their villages for the cities. The recipes their grandmothers knew by heart — never written down because they lived in hands and instinct — are beginning to thin out. FlavorNest is, in small part, an attempt to slow that down.`,
     },
-]
+    {
+        icon: '🤝',
+        title: 'No Shortcuts, No Fakes',
+        body: `I don't substitute fish sauce with soy. I don't simplify recipes to make them more "accessible." If the real version takes 10 hours, I write the 10-hour version — and I tell you honestly what you can skip and what you absolutely cannot.`,
+    },
+];
 
-const STATS = [
-    { value: '100+', label: 'Recipes' },
-    { value: '3', label: 'Culinary Land' },
-    { value: '15K+', label: 'The Home Chef' },
-    { value: '4.9★', label: 'Avg. Rating' },
-]
+const JOURNEY = [
+    {
+        year: '2023',
+        event: `I moved to Germany and quickly discovered that the food I missed most was completely invisible here. Not just hard to find — invisible. Nobody was writing about banh canh he in English. Nobody outside of Phu Yen province even knew it existed.`,
+    },
+    {
+        year: '2024',
+        event: `The first version of FlavorNest went live — twenty recipes, mostly from my mother's kitchen, written the way she taught them to me over phone calls that stretched past midnight German time.`,
+    },
+    {
+        year: '2025',
+        event: `The project expanded beyond Phu Yen. Northern pho, Hue bun bo, Saigon com tam. Stories about fermentation, rice civilisation, the royal kitchens of the Nguyen dynasty. The site became what I actually wanted it to be.`,
+    },
+    {
+        year: '2026',
+        event: `Still writing. Still testing. Still calling my mother when a recipe doesn't taste right. Some things do not change and should not.`,
+    },
+];
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-[#FAFAF8]">
+        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <style>{`
+                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+                * { box-sizing: border-box; }
+            `}</style>
 
-            {/* ── Hero ─────────────────────────────────────────────────────── */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1800&q=85"
-                    alt="Vietnamese cuisine"
-                    fill
-                    priority
-                    quality={85}
-                    className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#1C1009]/70 via-[#4B2E1A]/50 to-[#1C1009]/80" />
-
-                <div className="relative z-10 text-center px-5">
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                        <div className="w-8 h-px bg-[#D97706]" />
-                        <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                            FlavorNest Vietnam
-                        </span>
-                        <div className="w-8 h-px bg-[#D97706]" />
-                    </div>
-                    <h1 className="font-display text-6xl sm:text-7xl font-extrabold text-white leading-tight mb-4">
-                        Our <em className="text-[#D97706] not-italic">Story</em>
-                    </h1>
-                    <p className="text-white/70 text-lg max-w-md mx-auto">
-                    Bringing the soul of Vietnamese cuisine into every modern kitchen.
-                    </p>
+            {/* ── HERO ── */}
+            <section style={{ background: 'linear-gradient(135deg, #1A0E07 0%, #2D1A0E 100%)', padding: '140px 24px 100px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 75% 50%, rgba(217,119,6,0.09) 0%, transparent 60%)', pointerEvents: 'none' }} />
+                <div style={{ maxWidth: 860, margin: '0 auto', position: 'relative' }}>
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.12)', border: '1px solid rgba(217,119,6,0.25)', borderRadius: 100, padding: '7px 18px', marginBottom: 28 }}>
+                            <span style={{ fontSize: 13 }}>🍜</span>
+                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Our Story</span>
+                        </div>
+                        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(38px, 6vw, 72px)', fontWeight: 800, color: 'white', margin: '0 0 24px', lineHeight: 1.05 }}>
+                            This started with<br />
+                            <span style={{ color: '#D97706', fontStyle: 'italic' }}>missing home.</span>
+                        </h1>
+                        <p style={{ fontSize: 19, color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, maxWidth: 620, margin: 0 }}>
+                            FlavorNest is a Vietnamese food blog built in a small apartment in Germany, by someone who moved away from Vietnam and could not stop thinking about what he left behind on the table.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* ── Stats bar ────────────────────────────────────────────────── */}
-            <section className="bg-[#4B2E1A]">
-                <div className="max-w-5xl mx-auto px-5 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {/* ── STATS ── */}
+            <section style={{ background: '#4B2E1A' }}>
+                <div style={{ maxWidth: 860, margin: '0 auto', padding: '32px 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 0 }}>
                     {STATS.map((s, i) => (
-                        <div key={i} className="text-center">
-                            <p className="font-display text-3xl font-extrabold text-[#D97706]">{s.value}</p>
-                            <p className="text-white/55 text-xs mt-1 uppercase tracking-wider">{s.label}</p>
+                        <div key={i} style={{ textAlign: 'center', padding: '16px 0', borderRight: i < STATS.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}>
+                            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 800, color: '#D97706', margin: 0, lineHeight: 1 }}>{s.value}</p>
+                            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', margin: '8px 0 0' }}>{s.label}</p>
                         </div>
                     ))}
                 </div>
             </section>
 
-            {/* ── Story section ─────────────────────────────────────────────── */}
-            <section className="max-w-5xl mx-auto px-5 py-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-6 h-px bg-[#D97706]" />
-                            <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Our Story
-                            </span>
-                        </div>
-                        <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A] leading-tight mb-6">
-                            The best dishes are found{' '}
-                            <em className="text-[#D97706] not-italic">in Mom’s countryside kitchen</em>
-                        </h2>
-                        <div className="space-y-5 text-[#4B2E1A]/65 leading-relaxed">
-                            <p>
-                                At FlavorNest, we believe the best Vietnamese flavors belong to home kitchens, not five-star restaurants.
-                            </p>
-                            <p>
-                                We traveled across Vietnam—from Hanoi’s midnight Pho to the bold flavors of the Mekong Delta—to capture and standardize 'unwritten' recipes.
-                            </p>
-                            <p>
-                               Every FlavorNest recipe is kitchen-tested with real ingredients—so you can cook with confidence from the very first try.
-                            </p>
-                        </div>
-                    </div>
+            {/* ── FOUNDER ── */}
+            <section style={{ maxWidth: 860, margin: '0 auto', padding: '96px 24px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 48 }}>
+                    <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Founder</span>
+                </div>
 
-                    <div className="relative">
-                        <div className="rounded-3xl overflow-hidden shadow-2xl shadow-[#4B2E1A]/15 rotate-1 hover:rotate-0 transition-transform duration-500">
+                <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 56, alignItems: 'start' }}>
+                    {/* Photo */}
+                    <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                        <div style={{ width: 200, height: 240, borderRadius: 24, overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 24px 60px rgba(75,46,26,0.2)', border: '3px solid rgba(217,119,6,0.2)' }}>
                             <Image
-                                src="/Pho.jpg"
-                                alt="Authentic Vietnamese Pho"
-                                width={600}
-                                height={600}
-                                className="w-full aspect-square object-cover"
+                                src="/images/team/huy-nguyen.jpg"
+                                alt="Nguyen Quan Huy — Founder of FlavorNest Vietnam"
+                                fill
+                                style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                                sizes="200px"
+                                onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.style.display = 'none';
+                                    if (target.parentElement) {
+                                        target.parentElement.style.background = 'linear-gradient(135deg, #D97706, #4B2E1A)';
+                                        target.parentElement.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;font-family:Playfair Display,serif;font-size:48px;font-weight:700;color:white">QH</div>`;
+                                    }
+                                }}
                             />
                         </div>
-                        <div className="absolute -bottom-5 -left-5 bg-[#D97706] text-white px-6 py-4 rounded-2xl shadow-xl shadow-[#D97706]/30">
-                            <p className="text-2xl font-extrabold leading-none">100%</p>
-                            <p className="text-[10px] uppercase font-bold tracking-widest opacity-80 mt-0.5">Authentic</p>
+                        <div style={{ marginTop: 20, textAlign: 'center' }}>
+                            <p style={{ fontSize: 13, fontWeight: 700, color: '#2D1A0E', margin: '0 0 4px' }}>Nguyen Quan Huy</p>
+                            <p style={{ fontSize: 11, color: '#D97706', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0 }}>Founder & Writer</p>
+                            <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.5)', margin: '6px 0 0', fontStyle: 'italic' }}>Gotha, Thuringia, Germany</p>
                         </div>
-                    </div>
+                    </motion.div>
+
+                    {/* Bio */}
+                    <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
+                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, color: '#2D1A0E', margin: '0 0 28px', lineHeight: 1.15 }}>
+                            I grew up in Phu Yen province,<br />
+                            <span style={{ color: '#D97706', fontStyle: 'italic' }}>on the south-central coast of Vietnam.</span>
+                        </h2>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 18, fontSize: 17, lineHeight: 1.85, color: 'rgba(45,26,14,0.78)' }}>
+                            <p style={{ margin: 0 }}>
+                                My mother cooked every morning before the rest of the house woke up. Banh canh he — thick rice noodles in pork broth, finished with a fistful of raw garlic chives — was Sunday breakfast. Pork braised in coconut water with hard-boiled eggs was the smell of every Tet. I did not know any of this was special. It was just what food was.
+                            </p>
+                            <p style={{ margin: 0 }}>
+                                Then I moved to Germany, and I found out what food was to everyone else. Good food — genuinely good food — but not my food. I searched for banh canh he in English and found nothing. I searched for ga la e — the chicken dish made with litsea leaves that grow wild in the hills above my hometown — and found nothing. It was as if the food I grew up eating did not exist outside the province where I was born.
+                            </p>
+                            <p style={{ margin: 0 }}>
+                                That was when I understood that I needed to write it down.
+                            </p>
+                            <blockquote style={{ borderLeft: '3px solid #D97706', margin: '8px 0', padding: '4px 0 4px 24px' }}>
+                                <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontStyle: 'italic', color: '#4B2E1A', lineHeight: 1.5, margin: 0 }}>
+                                    "FlavorNest is my attempt, in spare evenings and weekends, to bring that food into writing — and to share it with anyone willing to stand at a stove for a few hours."
+                                </p>
+                            </blockquote>
+                            <p style={{ margin: 0 }}>
+                                I am not a professional chef. I am not a food scientist. I am a person who misses home and has learned to cook my way back to it. Every recipe on this site was tested in my kitchen here in Gotha, usually late at night, often after calling my mother to ask why it didn't taste right. She always knows why.
+                            </p>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
-            {/* ── Values ───────────────────────────────────────────────────── */}
-            <section className="bg-[#F5EDE3] py-24 px-5">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-14">
-                        <div className="flex items-center justify-center gap-2 mb-3">
-                            <div className="w-6 h-px bg-[#D97706]" />
-                            <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                                Our pure values
-                            </span>
-                            <div className="w-6 h-px bg-[#D97706]" />
-                        </div>
-                        <h2 className="font-display text-4xl font-extrabold text-[#4B2E1A]">
-                            What we really <em className="text-[#D97706] not-italic">belive</em>
-                        </h2>
+            {/* ── MISSION ── */}
+            <section style={{ background: '#2D1A0E', padding: '96px 24px' }}>
+                <div style={{ maxWidth: 860, margin: '0 auto' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Why This Exists</span>
                     </div>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 5vw, 52px)', fontWeight: 800, color: 'white', margin: '0 0 28px', lineHeight: 1.1 }}>
+                        Some of the best dishes in Vietnam<br />
+                        <span style={{ color: '#D97706', fontStyle: 'italic' }}>have never been written down.</span>
+                    </h2>
+                    <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', lineHeight: 1.85, maxWidth: 680, margin: '0 0 56px' }}>
+                        They live in grandmothers' hands, in village kitchens, in the muscle memory of cooks who have never needed a recipe because they have made the same dish every week for forty years. When those cooks are gone, the recipe goes with them. FlavorNest is, in small part, an attempt to write them down before that happens.
+                    </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {VALUES.map((item, i) => (
-                            <div
-                                key={i}
-                                className="bg-white rounded-3xl p-8 border border-[#D97706]/8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center group"
-                            >
-                                <div className="text-4xl mb-5 group-hover:scale-110 transition-transform duration-300">
-                                    {item.icon}
-                                </div>
-                                <h3 className="font-display text-lg font-bold text-[#4B2E1A] mb-3">
-                                    {item.title}
-                                </h3>
-                                <p className="text-[#4B2E1A]/55 text-sm leading-relaxed">
-                                    {item.desc}
-                                </p>
-                            </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+                        {VALUES.map((v, i) => (
+                            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+                                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '28px 24px' }}>
+                                <span style={{ fontSize: 28, display: 'block', marginBottom: 14 }}>{v.icon}</span>
+                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'white', margin: '0 0 10px' }}>{v.title}</h3>
+                                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, margin: 0 }}>{v.body}</p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── CTA ──────────────────────────────────────────────────────── */}
-            <section className="py-24 px-5">
-                <div className="max-w-3xl mx-auto bg-[#4B2E1A] rounded-[32px] p-14 text-center relative overflow-hidden">
-                    <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#D97706]/15 rounded-full blur-3xl pointer-events-none" />
-                    <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#166534]/10 rounded-full blur-3xl pointer-events-none" />
+            {/* ── JOURNEY ── */}
+            <section style={{ maxWidth: 860, margin: '0 auto', padding: '96px 24px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 56 }}>
+                    <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>How We Got Here</span>
+                </div>
 
-                    <div className="relative z-10">
-                        <p className="text-4xl mb-5">🪺</p>
-                        <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
-                            Ready to cook{' '}
-                            <em className="text-[#D97706] not-italic">with us?</em>
-                        </h2>
-                        <p className="text-white/55 mb-8 max-w-sm mx-auto">
-                            Explore 100+ proven Vietnamese recipes — from Hanoi and Hue, Phu Yen to Saigon
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                            <Link
-                                href="/recipes"
-                                className="inline-flex items-center justify-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white font-bold px-8 py-4 rounded-2xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#D97706]/30"
-                            >
-                                Discover Recipes →
-                            </Link>
-                            <Link
-                                href="/stories"
-                                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border border-white/20 transition-all hover:-translate-y-0.5"
-                            >
-                                Read Kitchen Stories
-                            </Link>
-                        </div>
-                    </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                    {JOURNEY.map((j, i) => (
+                        <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
+                            style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: 32, paddingBottom: i < JOURNEY.length - 1 ? 48 : 0, position: 'relative' }}>
+                            {i < JOURNEY.length - 1 && (
+                                <div style={{ position: 'absolute', left: 39, top: 40, bottom: 0, width: 1, background: 'rgba(75,46,26,0.12)' }} />
+                            )}
+                            <div style={{ textAlign: 'center', paddingTop: 4 }}>
+                                <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#D97706', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto', boxShadow: '0 0 0 6px rgba(217,119,6,0.1)' }}>
+                                    <span style={{ fontSize: 11, fontWeight: 800, color: 'white' }}>{j.year.slice(2)}</span>
+                                </div>
+                                <p style={{ fontSize: 13, fontWeight: 700, color: '#D97706', margin: '8px 0 0' }}>{j.year}</p>
+                            </div>
+                            <div style={{ paddingTop: 8 }}>
+                                <p style={{ fontSize: 16, color: 'rgba(45,26,14,0.75)', lineHeight: 1.8, margin: 0 }}>{j.event}</p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </section>
 
+            {/* ── CTA ── */}
+            <section style={{ background: 'linear-gradient(135deg, #1A0E07, #2D1A0E)', padding: '80px 24px' }}>
+                <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+                    style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: 'white', margin: '0 0 16px', lineHeight: 1.15 }}>
+                        Ready to cook something real?
+                    </h2>
+                    <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.75, margin: '0 0 36px' }}>
+                        Start with the recipes I miss most — the ones from home.
+                    </p>
+                    <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <Link href="/recipes" style={{ display: 'inline-block', background: '#D97706', color: 'white', fontWeight: 700, fontSize: 15, padding: '14px 32px', borderRadius: 100, textDecoration: 'none', transition: 'all 0.2s' }}
+                            onMouseEnter={e => (e.currentTarget.style.background = '#B45309')}
+                            onMouseLeave={e => (e.currentTarget.style.background = '#D97706')}>
+                            Browse All Recipes →
+                        </Link>
+                        <Link href="/stories" style={{ display: 'inline-block', background: 'rgba(255,255,255,0.08)', color: 'white', fontWeight: 600, fontSize: 15, padding: '14px 32px', borderRadius: 100, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.15)', transition: 'all 0.2s' }}
+                            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.14)')}
+                            onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}>
+                            Read the Stories
+                        </Link>
+                    </div>
+                </motion.div>
+            </section>
         </main>
-    )
+    );
 }
