@@ -13,23 +13,9 @@ export default function SecretsOfTheSouthBanhXeoPage() {
 
     const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
     const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
-    const progressBar = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
     return (
         <article ref={scrollRef} style={{ backgroundColor: '#FAFAF7' }}>
-            {/* Reading Progress Bar */}
-            <motion.div
-                style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    height: '3px',
-                    backgroundColor: '#D97706',
-                    width: progressBar,
-                    zIndex: 100,
-                    transformOrigin: 'left',
-                }}
-            />
 
             {/* Hero Section */}
             <motion.section
@@ -258,7 +244,7 @@ export default function SecretsOfTheSouthBanhXeoPage() {
                     plantations made it cheap enough to use freely. The coconut transformed
                     the dish. It softened the rice flour, deepened the color, gave the edges
                     that distinctive shatter-glass crunch. The Hanoi version, called <em>bánh
-                    khoái</em>, never made the leap. To this day, northern bánh xèo is thicker,
+                        khoái</em>, never made the leap. To this day, northern bánh xèo is thicker,
                     eggier, more like a French crêpe than the brittle southern translation.
                 </Section>
 
