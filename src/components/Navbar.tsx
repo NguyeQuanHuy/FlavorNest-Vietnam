@@ -15,6 +15,7 @@ import StoriesDropdown from "./StoriesDropdown";
 import { useSession, signOut } from "next-auth/react";
 import SearchModal from "./SearchModal";
 import { useFavorites } from "@/hooks/useFavorites";
+import { useState, useRef, useEffect } from 'react';
 
 // Các trang có background sáng — navbar luôn dùng dark mode
 const LIGHT_BG_PAGES = ["/favorites", "/recipes", "/stories", "/about", "/auth"];
@@ -26,6 +27,7 @@ export default function Navbar() {
   const forceScrolled = isLightPage || scrolled;
   const [recipesOpen, setRecipesOpen] = useState(false);
   const [storiesOpen, setStoriesOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -115,12 +117,16 @@ export default function Navbar() {
                 (isRecipes && recipesOpen) || (isStories && storiesOpen);
 
               const handleEnter = () => {
-                if (isRecipes) setRecipesOpen(true);
-                if (isStories) setStoriesOpen(true);
+                if (closeTimer.current) clearTimeout(closeTimer.current);
+                if (isRecipes) { setRecipesOpen(true); setStoriesOpen(false); }
+                if (isStories) { setStoriesOpen(true); setRecipesOpen(false); }
               };
+
               const handleLeave = () => {
-                if (isRecipes) setRecipesOpen(false);
-                if (isStories) setStoriesOpen(false);
+                closeTimer.current = setTimeout(() => {
+                  if (isRecipes) setRecipesOpen(false);
+                  if (isStories) setStoriesOpen(false);
+                }, 120);
               };
 
               return (
@@ -200,9 +206,8 @@ export default function Navbar() {
                 width: 36,
                 height: 36,
                 borderRadius: "50%",
-                border: `1px solid ${
-                  forceScrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
-                }`,
+                border: `1px solid ${forceScrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
+                  }`,
                 background: forceScrolled
                   ? "rgba(75,46,26,0.04)"
                   : "rgba(245,237,227,0.08)",
@@ -237,9 +242,8 @@ export default function Navbar() {
                 width: 36,
                 height: 36,
                 borderRadius: "50%",
-                border: `1px solid ${
-                  forceScrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
-                }`,
+                border: `1px solid ${forceScrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
+                  }`,
                 background: forceScrolled
                   ? "rgba(75,46,26,0.04)"
                   : "rgba(245,237,227,0.08)",
@@ -342,11 +346,10 @@ export default function Navbar() {
                     padding: "6px 14px",
                     borderRadius: 999,
                     background: "transparent",
-                    border: `1px solid ${
-                      forceScrolled
-                        ? "rgba(75,46,26,0.3)"
-                        : "rgba(245,237,227,0.4)"
-                    }`,
+                    border: `1px solid ${forceScrolled
+                      ? "rgba(75,46,26,0.3)"
+                      : "rgba(245,237,227,0.4)"
+                      }`,
                     color: forceScrolled ? "#4B2E1A" : "#F5EDE3",
                     fontSize: 12,
                     fontWeight: 600,
@@ -387,9 +390,8 @@ export default function Navbar() {
                 background: forceScrolled
                   ? "rgba(75,46,26,0.06)"
                   : "rgba(245,237,227,0.1)",
-                border: `1px solid ${
-                  forceScrolled ? "rgba(75,46,26,0.1)" : "rgba(245,237,227,0.15)"
-                }`,
+                border: `1px solid ${forceScrolled ? "rgba(75,46,26,0.1)" : "rgba(245,237,227,0.15)"
+                  }`,
                 color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
                 cursor: "pointer",
               }}
