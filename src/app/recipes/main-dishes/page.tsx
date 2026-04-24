@@ -71,7 +71,7 @@ const RECIPES: Recipe[] = [
         tags: ['Chicken', 'Ginger', 'Quick', 'Family'],
     },
     {
-        slug: 'suon-nuong-xa',
+        slug: 'suon-nuong-a',
         title: 'Lemongrass Pork Ribs',
         subtitle: 'Suon nuong sa',
         image: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?auto=format&fit=crop&w=900&q=80',
