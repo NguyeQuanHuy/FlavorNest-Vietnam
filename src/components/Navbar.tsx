@@ -63,25 +63,19 @@ export default function Navbar() {
             className="flex items-center gap-2.5"
             style={{ textDecoration: "none" }}
           >
-            <div
+            <Image
+              src="/logo.svg"
+              alt="FlavorNest"
+              width={36}
+              height={36}
+              priority
               style={{
-                width: 32,
-                height: 32,
-                borderRadius: 8,
-                background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                color: "#F5EDE3",
-                fontWeight: 700,
-                fontSize: 16,
-                fontStyle: "italic",
-                boxShadow: "0 2px 8px rgba(217,119,6,0.25)",
+                filter: scrolled
+                  ? "none"
+                  : "drop-shadow(0 2px 6px rgba(0,0,0,0.25))",
+                transition: "filter 0.3s",
               }}
-            >
-              F
-            </div>
+            />
             <span
               style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
@@ -317,25 +311,12 @@ export default function Navbar() {
                 style={{ borderBottom: "1px solid rgba(75,46,26,0.08)" }}
               >
                 <div className="flex items-center gap-2.5">
-                  <div
-                    style={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: 8,
-                      background:
-                        "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontFamily: "var(--font-playfair), Georgia, serif",
-                      color: "#F5EDE3",
-                      fontWeight: 700,
-                      fontSize: 16,
-                      fontStyle: "italic",
-                    }}
-                  >
-                    F
-                  </div>
+                  <Image
+                    src="/logo.svg"
+                    alt="FlavorNest"
+                    width={36}
+                    height={36}
+                  />
                   <span
                     style={{
                       fontFamily: "var(--font-playfair), Georgia, serif",
