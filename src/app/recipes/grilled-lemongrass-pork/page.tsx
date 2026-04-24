@@ -57,4 +57,5 @@ const recipe: RecipeData = {
         },
         {
             title: 'Assemble the plate',
-            description: 'Plate broken rice. Top with grilled pork chop and fried egg. Drizzle scallion oil over the rice. Add cucumber and pickled vegetables on the side. Serve nuoc cham generously alongside — pour it over everything a 
+            description: `Plate broken rice. Top with grilled pork chop and fried egg. Drizzle scallion oil over the rice. Add cucumber and pickled vegetables on the side. Serve nuoc cham generously alongside — pour it over everything at the table.`,
+        }
