@@ -107,6 +107,26 @@ const RECIPES: Recipe[] = [
         description: "Silky rice porridge enriched with pork offal, fresh herbs, ginger and a scattering of fried shallots. Hue's version is more deeply flavoured than other regions — a warming, restorative bowl eaten at dawn in narrow shophouse restaurants.",
         tags: ['Pork', 'Congee', 'Comfort', 'Breakfast'],
     },
+    {
+    slug: 'phu-yen-chives-noodle-soup',
+    title: 'Phu Yen Chives Noodle Soup',
+    subtitle: 'Banh canh he Phu Yen',
+    image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80',
+    difficulty: 'Medium', time: '1 hr 30 min',
+    rating: '4.9', reviews: 87, cal: 385, tag: 'Phu Yen Special', tagColor: '#0284C7',
+    description: 'Thick chewy noodles in a clear pork and dried anchovy broth, finished with a generous handful of fresh garlic chives. The breakfast of Phu Yen province.',
+    tags: ['Coastal', 'Pork', 'Noodles', 'Hometown'],
+},
+{
+    slug: 'ga-la-e-phu-yen',
+    title: 'Phu Yen Litsea Leaf Chicken',
+    subtitle: 'Ga la e Phu Yen',
+    image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=900&q=80',
+    difficulty: 'Medium', time: '45 min',
+    rating: '4.8', reviews: 64, cal: 340, tag: 'Phu Yen Hidden Gem', tagColor: '#166534',
+    description: 'Free-range chicken stir-fried with fresh litsea leaves (la e) — a wild herb unique to the central highlands. Intensely aromatic, slightly citrusy, and completely unlike anything else in Vietnamese cuisine.',
+    tags: ['Chicken', 'Herbs', 'Phu Yen', 'Unique'],
+},
 ]
 
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
