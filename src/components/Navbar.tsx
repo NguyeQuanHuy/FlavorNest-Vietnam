@@ -11,6 +11,7 @@ import {
 } from "@/lib/nav-data";
 import RecipesDropdown from "./RecipesDropdown";
 import StoriesDropdown from "./StoriesDropdown";
+import { useSession, signOut } from 'next-auth/react'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +20,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
+const { data: session } = useSession()
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     handleScroll();
@@ -207,23 +209,52 @@ export default function Navbar() {
               </svg>
             </button>
 
-            <Link
-              href="/auth/signin"
-              className="hidden sm:inline-flex transition-all duration-200"
-              style={{
-                padding: "8px 18px",
-                borderRadius: 999,
-                background:
-                  "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
-                color: "#F5EDE3",
-                fontSize: 13,
-                fontWeight: 600,
-                textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(217, 119, 6, 0.35)",
-              }}
-            >
-              Sign in
-            </Link>
+            {session?.user ? (
+  <div className="hidden sm:flex items-center gap-2">
+    <Image
+      src={session.user.image ?? '/logo.svg'}
+      alt={session.user.name ?? 'User'}
+      width={34}
+      height={34}
+      style={{ borderRadius: '50%', border: '2px solid #D97706', objectFit: 'cover' }}
+    />
+    <span style={{ fontSize: 13, fontWeight: 600, color: scrolled ? '#2D1A0E' : '#F5EDE3' }}>
+      {session.user.name?.split(' ')[0]}
+    </span>
+    <button
+      onClick={() => signOut({ callbackUrl: '/' })}
+      style={{
+        padding: '6px 14px',
+        borderRadius: 999,
+        background: 'transparent',
+        border: `1px solid ${scrolled ? 'rgba(75,46,26,0.3)' : 'rgba(245,237,227,0.4)'}`,
+        color: scrolled ? '#4B2E1A' : '#F5EDE3',
+        fontSize: 12,
+        fontWeight: 600,
+        cursor: 'pointer',
+      }}
+    >
+      Đăng xuất
+    </button>
+  </div>
+) : (
+  <Link
+    href="/auth/signin"
+    className="hidden sm:inline-flex transition-all duration-200"
+    style={{
+      padding: '8px 18px',
+      borderRadius: 999,
+      background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
+      color: '#F5EDE3',
+      fontSize: 13,
+      fontWeight: 600,
+      textDecoration: 'none',
+      boxShadow: '0 4px 14px rgba(217, 119, 6, 0.35)',
+    }}
+  >
+    Sign in
+  </Link>
+)}
 
             <button
               aria-label="Open menu"
@@ -586,24 +617,45 @@ export default function Navbar() {
                 className="px-6 py-4 flex-shrink-0"
                 style={{ borderTop: "1px solid rgba(75,46,26,0.08)" }}
               >
-                <Link
-                  href="/auth/signin"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center w-full"
-                  style={{
-                    padding: "14px",
-                    borderRadius: 999,
-                    background:
-                      "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
-                    color: "#F5EDE3",
-                    fontSize: 15,
-                    fontWeight: 600,
-                    textDecoration: "none",
-                    boxShadow: "0 6px 18px rgba(217, 119, 6, 0.35)",
-                  }}
-                >
-                  Sign in
-                </Link>
+                {session?.user ? (
+          <div className="flex items-center gap-3 mb-3 p-3" style={{ background: '#fff', borderRadius: 14, border: '1px solid rgba(75,46,26,0.08)' }}>
+            <Image
+              src={session.user.image ?? '/logo.svg'}
+              alt={session.user.name ?? 'User'}
+              width={40}
+              height={40}
+              style={{ borderRadius: '50%', border: '2px solid #D97706' }}
+            />
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 600, color: '#2D1A0E', fontSize: 14 }}>{session.user.name}</div>
+              <div style={{ fontSize: 12, color: '#9B7B60' }}>{session.user.email}</div>
+            </div>
+            <button
+              onClick={() => signOut({ callbackUrl: '/' })}
+              style={{ fontSize: 12, color: '#DC2626', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              Xuất
+            </button>
+          </div>
+        ) : (
+          <Link
+            href="/auth/signin"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center justify-center w-full"
+            style={{
+              padding: '14px',
+              borderRadius: 999,
+              background: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)',
+              color: '#F5EDE3',
+              fontSize: 15,
+              fontWeight: 600,
+              textDecoration: 'none',
+              boxShadow: '0 6px 18px rgba(217, 119, 6, 0.35)',
+            }}
+          >
+            Sign in
+          </Link>
+        )}
               </div>
             </motion.div>
           </>
