@@ -62,7 +62,7 @@ export default function Navbar() {
             : "rgba(245, 237, 227, 0.12)",
         }}
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-        className="fixed top-0 left-0 right-0 z-40"
+        className="fixed top-0 left-0 right-0 z-[100]"
         style={{
           backdropFilter: forceScrolled
             ? "blur(20px) saturate(180%)"
