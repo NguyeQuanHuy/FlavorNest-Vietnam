@@ -47,7 +47,6 @@ export function useFavorites() {
     [favorites, persist]
   );
 
-  // alias — FavoriteButton.tsx dùng
   const toggleFavorite = toggle;
 
   const isFavorite = useCallback(
@@ -55,7 +54,6 @@ export function useFavorites() {
     [favorites]
   );
 
-  // alias — FavoriteButton.tsx dùng (nhận id = slug)
   const isFavorited = isFavorite;
 
   const removeFavorite = useCallback(
@@ -65,8 +63,12 @@ export function useFavorites() {
 
   const clearFavorites = useCallback(() => persist([]), [persist]);
 
+  // NavFavoriteIcon dùng
+  const count = favorites.length;
+
   return {
     favorites,
+    count,
     hydrated,
     mounted,
     toggle,
