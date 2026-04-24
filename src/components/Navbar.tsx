@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from 'react';
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -15,7 +15,6 @@ import StoriesDropdown from "./StoriesDropdown";
 import { useSession, signOut } from "next-auth/react";
 import SearchModal from "./SearchModal";
 import { useFavorites } from "@/hooks/useFavorites";
-import { useState, useRef, useEffect } from 'react';
 
 // Các trang có background sáng — navbar luôn dùng dark mode
 const LIGHT_BG_PAGES = ["/favorites", "/recipes", "/stories", "/about", "/auth"];
