@@ -55,6 +55,6 @@ const recipe: RecipeData = {
             tip: 'The tapioca starch gives the coconut topping a silky body that floats beautifully on the bean soup rather than sinking in.',
         },
         {
-            title: 'Serve',
-            description:
-                'Ladle warm chè into bowls. Spoon coconut cream topping over the surface — do not stir. Serve w
+    title: 'Serve',
+    description: `Ladle warm che into bowls. Spoon coconut cream topping over the surface. Do not stir. Serve warm in cool weather, or over crushed ice in summer. The coconut cream stays on top until the last spoonful.`,
+        },
