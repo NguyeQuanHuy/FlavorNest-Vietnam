@@ -1,86 +1,76 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'thit-kho-tau',
-    title: 'Caramelised Pork & Eggs',
-    subtitle:
-        'Thịt Kho Tàu — pork belly and whole eggs slow-braised in coconut water and palm-sugar caramel until the sauce turns amber and glossy.',
+    title: 'Caramelised Pork and Eggs',
+    subtitle: 'The dish that defines comfort food in Southern Vietnam.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr 30 min',
     rating: 4.9,
-    baseServings: 6,
-    heroImage:
-        'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=1600&q=80',
-    intro:
-        'Every Vietnamese family has their version of thịt kho tàu, and every version is the correct one. In the South it arrives on the Tết table in a clay pot the size of a small child; in Huế it is smaller, sharper, more peppery. What unites them is the slow marriage of pork belly, coconut water, fish sauce and burnt palm sugar — a braise that cannot be rushed and pays back every minute you give it.',
+    baseServings: 4,
+    heroImage: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1600&q=85',
+    intro: `Thit kho tau is the dish every Vietnamese family makes for Tet and every other time the house needs to feel like home. Pork belly and hard-boiled eggs slow-braised in coconut water with fish sauce and caramel until the sauce reduces to a dark, glossy coating and the pork fat turns translucent and trembling. The eggs absorb the colour of the broth and take on a faint sweetness. It is eaten over steamed rice with a side of pickled mustard greens to cut the richness. No other dish in the Southern repertoire says family quite as loudly.`,
     ingredientSections: [
         {
-            title: 'Pork and eggs',
+            title: 'Main',
             items: [
-                { amount: 1, unit: 'kg', name: 'pork belly', note: 'skin on, cut in 4cm cubes' },
-                { amount: 8, name: 'eggs', note: 'hard-boiled and peeled' },
-                { amount: 4, name: 'shallots', note: 'finely minced' },
-                { amount: 6, name: 'garlic cloves', note: 'minced' },
+                { amount: 700, unit: 'g', name: 'pork belly', note: 'skin on, cut into 4cm pieces' },
+                { amount: 6, name: 'eggs', note: 'hard-boiled and peeled' },
+                { amount: 400, unit: 'ml', name: 'young coconut water', note: 'fresh or canned, not coconut milk' },
+                { amount: 200, unit: 'ml', name: 'water' },
             ],
         },
         {
-            title: 'Caramel and braise',
+            title: 'Seasoning',
             items: [
-                { amount: 80, unit: 'g', name: 'palm sugar', note: 'or yellow rock sugar' },
-                { amount: 3, unit: 'tbsp', name: 'fish sauce', note: 'Phú Quốc or Red Boat' },
-                { amount: 500, unit: 'ml', name: 'fresh coconut water', note: 'not coconut milk' },
-                { amount: 1, unit: 'tsp', name: 'freshly ground black pepper' },
-                { amount: 2, name: 'bird\'s eye chillies', note: 'optional, whole' },
+                { amount: 3, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 2, unit: 'tbsp', name: 'sugar', note: 'for caramel' },
+                { amount: 1, unit: 'tbsp', name: 'sugar', note: 'for seasoning' },
+                { amount: 3, name: 'shallots', note: 'minced' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 1, name: 'pinch of pepper' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 600, unit: 'g', name: 'steamed jasmine rice' },
-                { amount: 1, name: 'small head of pickled mustard greens (dưa cải)', note: 'traditional pairing' },
+                { amount: 1, name: 'bunch spring onions', note: 'sliced' },
+                { amount: 200, unit: 'g', name: 'pickled mustard greens (dua cai)', note: 'served alongside' },
             ],
         },
     ],
     steps: [
         {
             title: 'Blanch the pork',
-            description:
-                'Bring a pot of water to a rolling boil and blanch the pork belly cubes for 3 minutes. Drain, rinse under cold water, and pat dry. This step removes the scum and any off-smell — skip it and your braise will turn cloudy.',
-            tip: 'Leave the skin on. It melts into silk after an hour of braising and is the best part of the dish.',
+            description: 'Place pork belly in a pot of cold water. Bring to a boil and cook 5 minutes. Drain and rinse under cold water. Pat dry. This removes impurities and firms the skin.',
         },
         {
-            title: 'Marinate while the caramel rests',
-            description:
-                'In a bowl, combine the blanched pork with shallots, garlic, fish sauce and black pepper. Toss to coat and let it sit for 20 minutes at room temperature. The marinade will start drawing out the pork\'s savour even before the heat begins.',
+            title: 'Make the caramel',
+            description: 'Heat a heavy pot or clay pot over medium heat. Add 2 tablespoons sugar and cook without stirring until it melts and turns deep amber. Swirl the pot gently if needed. The caramel should be the colour of dark honey — not pale, not burnt.',
+            tip: 'The caramel is the foundation of the dish. Pale caramel gives no depth; burnt caramel makes the whole pot bitter. Watch it closely.',
         },
         {
-            title: 'Build the caramel (nước màu)',
-            description:
-                'In a heavy clay pot or Dutch oven, melt the palm sugar with 2 tablespoons of water over medium heat. Do not stir — swirl the pan. Cook until the sugar turns the colour of dark amber, about 4–5 minutes. The moment it smells like toasted caramel, pull it off the heat.',
-            tip: 'Too pale and the dish tastes flat; too dark and it turns bitter. Aim for the colour of strong tea.',
+            title: 'Brown the pork',
+            description: 'Add shallots and garlic to the caramel and stir quickly for 30 seconds. Add pork belly and toss to coat in the caramel. Sear over medium-high heat for 3 to 4 minutes until the pork is golden on all sides.',
         },
         {
-            title: 'Sear and deglaze',
-            description:
-                'Return the pot to medium-high heat and add the marinated pork. Sear for 4–5 minutes, turning once, until the edges catch colour in the caramel. Pour in the coconut water — it should come just halfway up the pork — and bring to a gentle simmer.',
+            title: 'Braise in coconut water',
+            description: 'Pour in coconut water, water, fish sauce, and remaining sugar. Bring to a boil, skim foam, then reduce to a low simmer. Add peeled boiled eggs. Cover and cook for 45 minutes, turning eggs occasionally so they colour evenly.',
+            tip: 'Young coconut water is essential. It adds a natural sweetness and keeps the broth light. Do not substitute with coconut milk.',
         },
         {
-            title: 'Slow-braise for one hour',
-            description:
-                'Add the peeled boiled eggs and the whole chillies if using. Reduce the heat to low, cover loosely, and simmer for 60 minutes. The pork is ready when a chopstick slides through the skin with no resistance and the sauce has reduced to a glossy, amber lacquer.',
-            tip: 'Resist the urge to stir. Let the pork settle; stirring breaks the fat down and muddies the sauce.',
+            title: 'Reduce the sauce',
+            description: 'Remove lid and increase heat to medium. Cook uncovered for 15 to 20 minutes until the sauce reduces by half and becomes glossy and coating. Taste and adjust fish sauce. The sauce should cling to the pork and eggs like lacquer.',
         },
         {
-            title: 'Rest, then serve',
-            description:
-                'Pull the pot off the heat and let it stand for 15 minutes — this dish tastes even better on day two, after the eggs have fully soaked up the caramel. Serve over hot jasmine rice with a small pile of pickled mustard greens on the side to cut through the richness.',
+            title: 'Serve',
+            description: 'Scatter spring onions over the top. Serve hot over steamed jasmine rice with pickled mustard greens on the side. Thit kho tau is even better the next day as the flavours deepen overnight.',
         },
     ],
 };
 
 export default function Page() {
     return <RecipeLayout recipe={recipe} />;
-}
+} 

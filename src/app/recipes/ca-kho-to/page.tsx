@@ -1,80 +1,66 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-kho-to',
     title: 'Clay Pot Caramelised Fish',
-    subtitle:
-        'Cá Kho Tộ — thick catfish fillets lacquered in a near-black caramel of fish sauce, ginger and cracked pepper, braised in the earthenware pot that gives the dish its name.',
+    subtitle: 'Catfish braised in dark caramel with chilli and ginger — the clay pot keeps it sizzling at the table.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1600&q=80',
-    intro:
-        'Cá kho tộ is the Mekong Delta on a plate — a dish born from preservation, perfected by patience. The clay pot (tộ) retains heat long after the stove is off, letting the fish continue to drink the caramel right up to the moment it hits the table. It arrives still bubbling; the smell alone stops conversation.',
+    heroImage: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=85',
+    intro: `Ca kho to is the everyday fish dish of the Mekong Delta, where catfish swim in every canal and every household keeps a clay pot for braising. The technique is the same as thit kho — caramel, fish sauce, coconut water — but applied to fish, which cooks faster and absorbs the dark, intense sauce differently. The clay pot retains heat and arrives at the table still bubbling. You eat it with plain steamed rice and let the sauce do all the work.`,
     ingredientSections: [
         {
-            title: 'Fish and aromatics',
+            title: 'Main',
             items: [
-                { amount: 600, unit: 'g', name: 'catfish or basa fillets', note: 'cut in 3cm chunks, bone-in if possible' },
-                { amount: 3, name: 'shallots', note: 'minced' },
-                { amount: 4, name: 'garlic cloves', note: 'minced' },
-                { amount: 20, unit: 'g', name: 'young ginger', note: 'julienned' },
-                { amount: 2, name: 'bird\'s eye chillies', note: 'sliced' },
+                { amount: 600, unit: 'g', name: 'catfish steaks (ca tre)', note: 'or any firm white fish, cut into thick pieces' },
+                { amount: 200, unit: 'ml', name: 'young coconut water' },
+                { amount: 100, unit: 'ml', name: 'water' },
             ],
         },
         {
-            title: 'Braising liquid',
+            title: 'Caramel and seasoning',
             items: [
-                { amount: 60, unit: 'g', name: 'palm sugar' },
+                { amount: 3, unit: 'tbsp', name: 'sugar', note: 'for caramel' },
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 2, unit: 'tbsp', name: 'pork fat or neutral oil' },
-                { amount: 200, unit: 'ml', name: 'coconut water' },
-                { amount: 1, unit: 'tsp', name: 'freshly cracked black pepper' },
-            ],
-        },
-        {
-            title: 'To serve',
-            items: [
-                { amount: 600, unit: 'g', name: 'steamed jasmine rice' },
-                { amount: 2, name: 'spring onions', note: 'thinly sliced' },
+                { amount: 1, unit: 'tbsp', name: 'sugar', note: 'for seasoning' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'shallots', note: 'minced' },
+                { amount: 20, unit: 'g', name: 'fresh ginger', note: 'julienned' },
+                { amount: 2, name: 'red chillies', note: 'sliced' },
+                { amount: 1, name: 'pinch of pepper' },
             ],
         },
     ],
     steps: [
         {
             title: 'Marinate the fish',
-            description: 'TODO — marinate fish with half the shallots, garlic, fish sauce, pepper; rest 20 minutes.',
-            tip: 'TODO',
+            description: 'Combine fish sauce, sugar, garlic, shallots, ginger, chilli, and pepper. Toss fish pieces to coat. Marinate 20 minutes.',
         },
         {
-            title: 'Build the caramel',
-            description: 'TODO — melt palm sugar in the clay pot until dark amber.',
+            title: 'Make the caramel',
+            description: 'Heat a clay pot or heavy saucepan over medium heat. Add 3 tablespoons sugar and cook without stirring until it turns deep amber. Remove from heat immediately when the caramel reaches a rich brown colour.',
+            tip: 'The caramel continues cooking from residual heat after removal from the flame. Pull it off the heat slightly before it reaches target colour.',
         },
         {
-            title: 'Bloom the aromatics',
-            description: 'TODO — add pork fat, remaining shallots, garlic, ginger and chilli; fry until fragrant.',
+            title: 'Sear and braise',
+            description: 'Return pot to medium heat. Add marinated fish pieces in a single layer and sear 2 minutes per side. Pour in coconut water and water. Bring to a gentle simmer.',
         },
         {
-            title: 'Sear the fish',
-            description: 'TODO — lay fish in a single layer, sear one side.',
-            tip: 'TODO — do not flip more than once or the fillets will break.',
+            title: 'Braise until lacquered',
+            description: 'Simmer uncovered for 20 to 25 minutes, basting the fish occasionally, until the sauce reduces to a thick, glossy coating. The fish should be deeply coloured and the sauce almost syrupy.',
+            tip: 'Do not stir the fish once it is in the pot — catfish breaks apart easily. Baste with a spoon instead.',
         },
         {
-            title: 'Braise low and slow',
-            description: 'TODO — add coconut water to halfway; simmer covered 25 minutes.',
-        },
-        {
-            title: 'Reduce and serve bubbling',
-            description: 'TODO — uncover, reduce until sauce clings like varnish; scatter spring onion; bring to table still sizzling.',
+            title: 'Serve',
+            description: 'Bring the clay pot directly to the table while still sizzling. Serve with steamed jasmine rice. The sauce is the star — spoon it generously over the rice.',
         },
     ],
 };
 
 export default function Page() {
     return <RecipeLayout recipe={recipe} />;
-}
+} 
