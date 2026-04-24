@@ -353,7 +353,7 @@ export default function Navbar() {
                     cursor: "pointer",
                   }}
                 >
-                  Đăng xuất
+                  Log out
                 </button>
               </div>
             ) : (
