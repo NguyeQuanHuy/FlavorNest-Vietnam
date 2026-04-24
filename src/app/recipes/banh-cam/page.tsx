@@ -52,6 +52,6 @@ const recipe: RecipeData = {
             tip: 'The filling must be completely cool and firm before wrapping — warm filling makes the dough sticky and hard to seal.',
         },
         {
-            title: 'Make the dough',
-            description:
-                description: `Combine glutinous rice flour, mashed potato, sugar, and salt. Add warm water gradually, mixing until a soft, smooth, non-sticky dough forms. It should be pliable like playdough — add water or flour a teaspoon at a time to adjust. Divide into 16 equal portions.`,
+    title: 'Make the dough',
+    description: `Combine glutinous rice flour, mashed potato, sugar, and salt. Add warm water gradually, mixing until a soft, smooth, non-sticky dough forms. It should be pliable like playdough. Add water or flour a teaspoon at a time to adjust. Divide into 16 equal portions.`,
+        },
