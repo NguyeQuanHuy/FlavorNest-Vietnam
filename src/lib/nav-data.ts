@@ -67,3 +67,57 @@ export const NAV_LINKS = [
   { label: "Stories", href: "/stories", hasDropdown: true },
   { label: "About", href: "/about", hasDropdown: false },
 ];
+
+export const STORY_TOPICS: NavItem[] = [
+  {
+    name: "Culinary Heritage",
+    description: "Stories behind the dishes",
+    href: "/stories/heritage",
+    image: "https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?w=200&q=80",
+  },
+  {
+    name: "Chef Interviews",
+    description: "Voices from the kitchen",
+    href: "/stories/chefs",
+    image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=200&q=80",
+  },
+  {
+    name: "Food Journeys",
+    description: "Travel through flavors",
+    href: "/stories/journeys",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=200&q=80",
+  },
+  {
+    name: "Family Recipes",
+    description: "Passed down generations",
+    href: "/stories/family",
+    image: "https://images.unsplash.com/photo-1511909525232-61113c912358?w=200&q=80",
+  },
+];
+
+export const STORY_REGIONS: NavItem[] = [
+  {
+    name: "Hanoi Tales",
+    description: "Stories from the North",
+    href: "/stories/hanoi",
+    image: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=200&q=80",
+  },
+  {
+    name: "Hue Legends",
+    description: "Imperial culinary roots",
+    href: "/stories/hue",
+    image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=200&q=80",
+  },
+  {
+    name: "Saigon Bites",
+    description: "Southern street life",
+    href: "/stories/saigon",
+    image: "https://images.unsplash.com/photo-1583077874340-79db6564672e?w=200&q=80",
+  },
+  {
+    name: "Diaspora Flavors",
+    description: "Vietnamese around the world",
+    href: "/stories/diaspora",
+    image: "https://images.unsplash.com/photo-1576866209830-589e1bfbaa8d?w=200&q=80",
+  },
+];
