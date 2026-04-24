@@ -211,13 +211,24 @@ const { data: session } = useSession()
 
             {session?.user ? (
   <div className="hidden sm:flex items-center gap-2">
-    <Image
-      src={session.user.image ?? '/logo.svg'}
-      alt={session.user.name ?? 'User'}
-      width={34}
-      height={34}
-      style={{ borderRadius: '50%', border: '2px solid #D97706', objectFit: 'cover' }}
-    />
+    <div style={{
+  width: 34,
+  height: 34,
+  borderRadius: '50%',
+  border: '2px solid #D97706',
+  overflow: 'hidden',
+  flexShrink: 0,
+  background: '#4B2E1A',
+}}>
+  <img
+    src={session.user.image ?? '/logo.svg'}
+    alt={session.user.name ?? 'User'}
+    width={34}
+    height={34}
+    referrerPolicy="no-referrer"
+    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+  />
+</div>
     <span style={{ fontSize: 13, fontWeight: 600, color: scrolled ? '#2D1A0E' : '#F5EDE3' }}>
       {session.user.name?.split(' ')[0]}
     </span>
