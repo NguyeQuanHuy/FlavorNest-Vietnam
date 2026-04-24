@@ -62,10 +62,62 @@ const SOCIAL = [
 export default function Footer() {
     return (
         <footer style={{ background: '#2D1A0E', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+            <style>{`
+        .footer-main-grid {
+            display: grid;
+            grid-template-columns: minmax(0,1.8fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+            gap: 48px;
+        }
+        .footer-brand-col { grid-column: auto; }
+        .footer-newsletter-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .footer-newsletter-inputs {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .footer-newsletter-inputs input {
+            min-width: 220px;
+        }
+        @media (max-width: 768px) {
+            .footer-main-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+            .footer-brand-col {
+                grid-column: 1 / -1 !important;
+            }
+            .footer-newsletter-row {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            .footer-newsletter-inputs {
+                width: 100% !important;
+                flex-direction: column !important;
+            }
+            .footer-newsletter-inputs input {
+                width: 100% !important;
+                min-width: unset !important;
+            }
+            .footer-newsletter-inputs button {
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-main-grid {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+            }
+        }
+    `}</style>
 
             {/* ── Top newsletter band ── */}
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', padding: '52px 24px' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, flexWrap: 'wrap' }}>
+                <div className="footer-newsletter-row" style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div style={{ maxWidth: 460 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
                             <div style={{ width: 24, height: 1.5, background: '#D97706' }} />
@@ -78,11 +130,11 @@ export default function Footer() {
                             Join 50,000+ home cooks who get our best Vietnamese recipes delivered before they go live.
                         </p>
                     </div>
-                    <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', flexShrink: 0 }}>
+                    <div className="footer-newsletter-inputs">
                         <input
                             type="email"
                             placeholder="your@email.com"
-                            style={{ padding: '12px 18px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: 'white', fontSize: 14, fontFamily: 'inherit', outline: 'none', minWidth: 220 }}
+                            style={{ padding: '12px 18px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: 'white', fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
                         />
                         <button style={{ padding: '12px 24px', borderRadius: 100, background: '#D97706', color: 'white', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap' }}>
                             Subscribe →
@@ -93,10 +145,10 @@ export default function Footer() {
 
             {/* ── Main footer grid ── */}
             <div style={{ maxWidth: 1200, margin: '0 auto', padding: '56px 24px 48px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.8fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)', gap: 48 }}>
+                <div className="footer-main-grid">
 
                     {/* Brand column */}
-                    <div>
+                    <div style={{ gridColumn: '1 / -1' }} className="footer-brand-col">
                         <div style={{ marginBottom: 20 }}>
                             <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: 'white', display: 'block', lineHeight: 1 }}>FlavorNest</span>
                             <span style={{ fontSize: 10, color: '#D97706', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: 3, display: 'block' }}>Vietnam Gourmet</span>
@@ -119,7 +171,6 @@ export default function Footer() {
                             ))}
                         </div>
                     </div>
-
                     {/* Recipes column */}
                     <div>
                         <h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase', margin: '0 0 18px' }}>Recipes</h4>
