@@ -65,10 +65,10 @@ export default function SignInPage() {
               margin: 0,
             }}
           >
-            Chào mừng trở lại
+            Glad to have you back!
           </h1>
           <p style={{ color: '#9B7B60', fontSize: 14, marginTop: 8 }}>
-            Đăng nhập để lưu công thức yêu thích
+            Log in to save your favorite recipes
           </p>
         </div>
 
@@ -197,14 +197,14 @@ export default function SignInPage() {
               transition: 'background 0.2s',
             }}
           >
-            {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
+            {loading ? 'Logging in...' : 'Log in'}
           </motion.button>
         </form>
 
         <p style={{ textAlign: 'center', marginTop: 24, fontSize: 14, color: '#9B7B60' }}>
-          Chưa có tài khoản?{' '}
+          Don't have an account?{' '}
           <a href="/auth/register" style={{ color: '#D97706', fontWeight: 600, textDecoration: 'none' }}>
-            Đăng ký
+            Sign up
           </a>
         </p>
       </motion.div>
