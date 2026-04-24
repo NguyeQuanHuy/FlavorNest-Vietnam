@@ -59,7 +59,16 @@ export default function AboutPage() {
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
                 * { box-sizing: border-box; }
-            `}</style>
+                .stats-grid { grid-template-columns: repeat(4, 1fr); }
+                @media (max-width: 640px) {
+                    .founder-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+                    .founder-grid > div:first-child { margin: 0 auto; }
+                    .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+                    .values-grid { grid-template-columns: 1fr !important; }
+                    .journey-grid { grid-template-columns: 60px 1fr !important; gap: 20px !important; }
+                    .cta-buttons { flex-direction: column !important; align-items: center !important; }
+                }
+`}</style>
 
             {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #1A0E07 0%, #2D1A0E 100%)', padding: '140px 24px 100px', position: 'relative', overflow: 'hidden' }}>
@@ -83,9 +92,21 @@ export default function AboutPage() {
 
             {/* ── STATS ── */}
             <section style={{ background: '#4B2E1A' }}>
-                <div style={{ maxWidth: 860, margin: '0 auto', padding: '32px 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 0 }}>
+                <div style={{
+                    maxWidth: 860, margin: '0 auto', padding: '32px 24px',
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: 0,
+                }}
+                    className="stats-grid"
+                >
                     {STATS.map((s, i) => (
-                        <div key={i} style={{ textAlign: 'center', padding: '16px 0', borderRight: i < STATS.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}>
+                        <div key={i} style={{
+                            textAlign: 'center',
+                            padding: '20px 0',
+                            borderRight: i % 2 === 0 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+                            borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+                        }}>
                             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 800, color: '#D97706', margin: 0, lineHeight: 1 }}>{s.value}</p>
                             <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', margin: '8px 0 0' }}>{s.label}</p>
                         </div>
@@ -100,7 +121,8 @@ export default function AboutPage() {
                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Founder</span>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 56, alignItems: 'start' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: 56, alignItems: 'start' }}
+                    className="founder-grid">
                     {/* Photo */}
                     <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                         <div style={{ width: 200, height: 240, borderRadius: 24, overflow: 'hidden', position: 'relative', flexShrink: 0, boxShadow: '0 24px 60px rgba(75,46,26,0.2)', border: '3px solid rgba(217,119,6,0.2)' }}>
