@@ -19,7 +19,7 @@ export default function FavoritesPage() {
           transition={{ duration: 1.5, repeat: Infinity }}
           style={{ color: "#D97706", fontSize: 16, fontWeight: 500 }}
         >
-          Đang tải...
+          Loading...
         </motion.div>
       </div>
     );
@@ -57,7 +57,7 @@ export default function FavoritesPage() {
           <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 15 }}>
             {favorites.length > 0
               ? `${favorites.length} công thức đã lưu`
-              : "Chưa có công thức nào được lưu"}
+              : "No recipes saved yet."}
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ export default function FavoritesPage() {
                   lineHeight: 1.6,
                 }}
               >
-                Nhấn vào biểu tượng ❤️ trên các công thức để lưu lại những món bạn yêu thích.
+                Tap the ❤️ icon on recipes to save your favorites.
               </p>
               <Link
                 href="/recipes"
@@ -114,7 +114,7 @@ export default function FavoritesPage() {
                   boxShadow: "0 6px 18px rgba(217,119,6,0.35)",
                 }}
               >
-                Khám phá công thức
+                Explore recipes
               </Link>
             </motion.div>
           ) : (
