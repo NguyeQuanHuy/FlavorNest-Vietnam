@@ -190,7 +190,7 @@ export default function MobileMenu({ session }: MobileMenuProps) {
 
     return (
         <>
-            <button onClick={() => setOpen(!open)} className="md:hidden flex items-center gap-2 transition-all" aria-label="Toggle menu">
+            <button onClick={() => setOpen(!open)} className="lg:hidden flex items-center gap-2 transition-all" aria-label="Toggle menu">
                 {isLoggedIn ? (
                     <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #D97706, #F59E0B)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: 'white', overflow: 'hidden', position: 'relative', border: '2px solid rgba(217,119,6,0.3)' }}>
                         {session?.user?.image ? (
