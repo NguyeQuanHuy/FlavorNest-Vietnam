@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { FNIcon } from "@/components/Icons";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -231,21 +232,7 @@ export default function Navbar() {
                 cursor: "pointer",
               }}
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
-                <circle
-                  cx="11"
-                  cy="11"
-                  r="7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M20 20L16.5 16.5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <FNIcon name="search" size={15} />
             </button>
 
             {/* ── Favorites heart icon ── */}
@@ -267,21 +254,12 @@ export default function Navbar() {
                 textDecoration: "none",
               }}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill={favCount > 0 ? "#D97706" : "none"}
-                style={{ transition: "fill 0.2s" }}
-              >
-                <path
-                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <FNIcon
+                name="favorite"
+                size={16}
+                color="currentColor"
+                className={favCount > 0 ? "fn-heart-filled" : ""}
+              />
 
               {/* Badge số lượng */}
               <AnimatePresence>
@@ -413,14 +391,8 @@ export default function Navbar() {
               }}
             >
               {mobileOpen ? (
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M4 4L14 14M14 4L4 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
-              ) : (
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 5H15M3 9H15M3 13H15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
-              )}
+                <FNIcon name={mobileOpen ? "close" : "menu"} size={18} />
+              ) : null}
             </button>
           </div>
         </div>
@@ -515,14 +487,7 @@ export default function Navbar() {
                     cursor: "pointer",
                   }}
                 >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M4 4L12 12M12 4L4 12"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+                  <FNIcon name="close" size={16} />
                 </button>
               </div>
 
@@ -771,21 +736,11 @@ export default function Navbar() {
                       textDecoration: "none",
                     }}
                   >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill={favCount > 0 ? "#D97706" : "none"}
-                      style={{ transition: "fill 0.2s", flexShrink: 0 }}
-                    >
-                      <path
-                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
-                        stroke="#D97706"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <FNIcon
+                      name="favorite"
+                      size={20}
+                      color="#D97706"
+                    />
                     Favorites
                     {hydrated && favCount > 0 && (
                       <span

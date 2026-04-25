@@ -31,8 +31,7 @@ export default function SecretsOfTheSouthBanhXeoPage() {
                     style={{
                         position: 'absolute',
                         inset: 0,
-                        backgroundImage:
-                            'url(https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=1920&q=80)',
+                        backgroundImage: 'url(/images/recipes/banh-xeo.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         scale: heroScale,
