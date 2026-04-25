@@ -13,8 +13,8 @@ import { loginSchema } from '@/lib/validations/auth'
 export const authConfig: NextAuthConfig = {
     // 1. Cấu hình các trang tùy chỉnh
     pages: {
-    signIn: '/auth/signin',
-    error: '/auth/signin',
+        signIn: '/auth/signin',
+        error: '/auth/signin',
     },
 
     // 2. Chiến lược lưu trữ session (dùng JWT cho nhanh và nhẹ)
@@ -48,7 +48,7 @@ export const authConfig: NextAuthConfig = {
                 if (email && password.length >= 8) {
                     return {
                         id: '1',
-                        name: 'FlavorNest Chef',
+                        name: parsed.data.email.split('@')[0],
                         email: email,
                         image: 'https://images.unsplash.com/photo-1577214459173-ee34fm7a0807?q=80&w=100&auto=format&fit=crop',
                     }
