@@ -46,7 +46,7 @@ const GUIDES: Guide[] = [
         type: 'Street Food',
         tag: 'Iconic',
         tagColor: '#D97706',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=85',
+        image: '/images/recipes/xoixoai.jpg',
         intro: 'At 6am on a cold Hanoi morning, a plastic stool on Bát Đàn street is the best seat in the world.',
         story: 'The broth has been simmering since 3am. You smell it before you see the stall — that low, bone-deep perfume of charred ginger and star anise that only comes with hours of patience. This is not fast food. This is devotion in a bowl.',
         mustTry: ['Rare & Well-Done Beef Pho at Phở Bát Đàn', 'Pho Spring Rolls at Ngũ Xá street', 'Chicken Pho at any corner stall in Old Quarter'],

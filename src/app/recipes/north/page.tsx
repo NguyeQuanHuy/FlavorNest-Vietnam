@@ -11,7 +11,7 @@ const RECIPES = [
         slug: 'hanoi-beef-pho',
         title: 'Hanoi Beef Pho',
         subtitle: 'Pho bo Ha Noi',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/pho-bo-ha-noi.webp',
         time: '3 hrs', difficulty: 'Medium', rating: '4.9', reviews: 248, cal: 420,
         tag: 'Iconic', tagColor: '#D97706',
         description: 'The national soul food — slow-charred bones, aromatic spice bundle, silky noodles.',
@@ -20,7 +20,7 @@ const RECIPES = [
         slug: 'bun-cha-hanoi',
         title: 'Hanoi Grilled Pork Vermicelli',
         subtitle: 'Bun cha Ha Noi',
-        image: 'https://images.unsplash.com/photo-1623682785702-f0c9fcfe2fc0?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bunchahanoi.jpg',
         time: '45 min', difficulty: 'Easy', rating: '4.7', reviews: 142, cal: 380,
         tag: 'Street Classic', tagColor: '#059669',
         description: 'Chargrilled pork patties in sweet-savory dipping broth with rice vermicelli.',
@@ -29,7 +29,7 @@ const RECIPES = [
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
         subtitle: 'Banh cuon Ha Noi',
-        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-cuon.jpg',
         time: '45 min', difficulty: 'Medium', rating: '4.8', reviews: 167, cal: 290,
         tag: 'Morning Ritual', tagColor: '#7C3AED',
         description: 'Silky steamed rice sheets rolled with seasoned pork and wood ear mushrooms.',
@@ -38,7 +38,7 @@ const RECIPES = [
         slug: 'xoi-xeo',
         title: 'Xoi xeo',
         subtitle: 'Xoi xeo',
-        image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/xoi-xeo.jpg',
         time: '1 hr', difficulty: 'Easy', rating: '4.8', reviews: 134, cal: 380,
         tag: 'Breakfast', tagColor: '#EA580C',
         description: 'Golden sticky rice with split mung bean and crispy fried shallots.',
@@ -47,7 +47,7 @@ const RECIPES = [
         slug: 'cha-ca-la-vong',
         title: 'Turmeric Fish with Dill',
         subtitle: 'Cha ca La Vong',
-        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/cha-ca-la-vong.jpg',
         time: '40 min', difficulty: 'Medium', rating: '4.9', reviews: 89, cal: 340,
         tag: 'Heritage', tagColor: '#D97706',
         description: 'Hanoi\'s most celebrated dish — turmeric-marinated fish sizzled with fresh dill.',
@@ -56,7 +56,7 @@ const RECIPES = [
         slug: 'bun-thang',
         title: 'Hanoi Vermicelli Soup',
         subtitle: 'Bun Thang',
-        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bun-thang.jpg',
         time: '2 hrs', difficulty: 'Hard', rating: '4.8', reviews: 76, cal: 310,
         tag: 'Royal Kitchen', tagColor: '#BE185D',
         description: 'Delicate chicken broth with egg ribbons, shredded chicken, and crab cake.',
@@ -205,7 +205,7 @@ export default function NorthernCuisinePage() {
                 <div style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '0 32px 72px' }}>
                     <div className="fade-up" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.18)', border: '1px solid rgba(217,119,6,0.35)', backdropFilter: 'blur(10px)', borderRadius: 100, padding: '7px 18px', marginBottom: 22 }}>
                         <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D97706', display: 'inline-block' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Ẩm Thực Miền Bắc</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Northern Vietnamese Cuisine</span>
                     </div>
 
                     <h1 className="fade-up-2" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 7vw, 88px)', fontWeight: 800, color: 'white', margin: 0, lineHeight: 0.95, marginBottom: 22 }}>
@@ -358,7 +358,7 @@ export default function NorthernCuisinePage() {
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
                             { label: 'Central Cuisine', sub: 'Thanh Hoa to Binh Thuan', emoji: '🌶️', href: '/recipes/central' },
-                            { label: 'Southern Cuisine', sub:'Ninh Thuan to Ca Mau', emoji: '🌴', href: '/recipes/south' },
+                            { label: 'Southern Cuisine', sub: 'Ninh Thuan to Ca Mau', emoji: '🌴', href: '/recipes/south' },
                             { label: 'Street Food', sub: 'on streets everywhere', emoji: '🥢', href: '/recipes/street-food' },
                             { label: 'All Recipes', sub: 'Browse everything', emoji: '🍜', href: '/recipes' },
                         ].map(item => (

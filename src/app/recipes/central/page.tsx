@@ -31,7 +31,7 @@ const RECIPES: Recipe[] = [
         slug: 'bun-bo-hue',
         title: 'Hue Spicy Beef Noodle Soup',
         subtitle: 'Bun bo Hue',
-        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bun-bo-hue.webp',
         difficulty: 'Hard', time: '2.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: "Hue's Finest", tagColor: '#DC2626',
         description: "The dish that deserves more global fame than it gets. Lemongrass-perfumed beef broth, thick round noodles, sliced beef shank, pork knuckle and crab paste — bold, spicy, deeply aromatic. The royal city's greatest contribution to Vietnamese cuisine.",
@@ -41,7 +41,7 @@ const RECIPES: Recipe[] = [
         slug: 'cao-lau',
         title: 'Hoi An Cao Lau Noodles',
         subtitle: 'Cao lau Hoi An',
-        image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/cao-lau-hoi-an.jpg',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.9', reviews: 287, cal: 420, tag: 'Hoi An Only', tagColor: '#7C3AED',
         description: "A dish so unique it can only truly be made in Hoi An — legend says the noodles require water from a single ancient well in the old town. Thick ash-treated noodles with roasted pork, crispy rice crackers and fresh herbs. Quietly extraordinary.",
@@ -51,7 +51,7 @@ const RECIPES: Recipe[] = [
         slug: 'mi-quang',
         title: 'Quang-Style Turmeric Noodles',
         subtitle: 'Mi Quang',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/mi-quang.jpg',
         difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.8', reviews: 198, cal: 440, tag: 'Da Nang Staple', tagColor: '#D97706',
         description: "Wide turmeric-yellow noodles with just enough broth to coat — not a soup, not a dry dish. Topped with shrimp, pork, quail eggs, peanuts and sesame rice crackers. The pride of Quảng Nam province.",
@@ -61,7 +61,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-beo',
         title: 'Steamed Rice Cakes with Shrimp',
         subtitle: 'Banh beo',
-        image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-beo.webp',
         difficulty: 'Medium', time: '45 min',
         rating: '4.7', reviews: 143, cal: 280, tag: 'Royal Snack', tagColor: '#BE185D',
         description: "Delicate steamed rice flour discs the size of a saucer, served in small clay bowls, topped with dried shrimp, scallion oil and a drizzle of fish sauce. A traditional Hue snack eaten one tiny bowl at a time.",
@@ -71,7 +71,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-hen',
         title: 'Baby Clam Rice',
         subtitle: 'Com hen',
-        image: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-hen.jpg',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.8', reviews: 167, cal: 380, tag: 'Hue Hidden Gem', tagColor: '#059669',
         description: "One of Hue's most beloved and least-known dishes — tiny river clams stir-fried with lemongrass and chilli, served over cold rice with a complex array of toppings: herbs, peanuts, sesame, cracklings and fermented shrimp paste.",
@@ -81,7 +81,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-xeo-mien-trung',
         title: 'Central-Style Sizzling Crepe',
         subtitle: 'Banh xeo mien Trung',
-        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-xeo-mien-trung.jpg',
         difficulty: 'Medium', time: '40 min',
         rating: '4.7', reviews: 134, cal: 350, tag: 'Street Favourite', tagColor: '#EA580C',
         description: "Smaller and crispier than the southern version — Central Vietnamese bánh xèo uses less batter and more heat, creating a thinner, crunchier shell filled with shrimp, pork and bean sprouts. Eaten wrapped in mustard leaf with nuoc cham.",
@@ -91,7 +91,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-nam',
         title: 'Flat Steamed Rice Dumplings',
         subtitle: 'Banh nam',
-        image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-nam.jpg',
         difficulty: 'Hard', time: '1.5 hrs',
         rating: '4.6', reviews: 98, cal: 240, tag: 'Hue Heritage', tagColor: '#166534',
         description: "Paper-thin parcels of rice flour, steamed in banana leaf with a filling of seasoned ground pork and wood ear mushroom. One of the most delicate dumplings in Vietnamese cuisine — the banana leaf imparts a subtle fragrance you cannot replicate.",
@@ -101,32 +101,32 @@ const RECIPES: Recipe[] = [
         slug: 'chao-long-hue',
         title: 'Hue Pork Congee',
         subtitle: 'Chao long Hue',
-        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/chao-long-hue.jpg',
         difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.7', reviews: 112, cal: 320, tag: 'Morning Comfort', tagColor: '#D97706',
         description: "Silky rice porridge enriched with pork offal, fresh herbs, ginger and a scattering of fried shallots. Hue's version is more deeply flavoured than other regions — a warming, restorative bowl eaten at dawn in narrow shophouse restaurants.",
         tags: ['Pork', 'Congee', 'Comfort', 'Breakfast'],
     },
     {
-    slug: 'phu-yen-chives-noodle-soup',
-    title: 'Phu Yen Chives Noodle Soup',
-    subtitle: 'Banh canh he Phu Yen',
-    image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80',
-    difficulty: 'Medium', time: '1 hr 30 min',
-    rating: '4.9', reviews: 87, cal: 385, tag: 'Phu Yen Special', tagColor: '#0284C7',
-    description: 'Thick chewy noodles in a clear pork and dried anchovy broth, finished with a generous handful of fresh garlic chives. The breakfast of Phu Yen province.',
-    tags: ['Coastal', 'Pork', 'Noodles', 'Hometown'],
-},
-{
-    slug: 'ga-la-e-phu-yen',
-    title: 'Phu Yen Litsea Leaf Chicken',
-    subtitle: 'Ga la e Phu Yen',
-    image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=900&q=80',
-    difficulty: 'Medium', time: '45 min',
-    rating: '4.8', reviews: 64, cal: 340, tag: 'Phu Yen Hidden Gem', tagColor: '#166534',
-    description: 'Free-range chicken stir-fried with fresh litsea leaves (la e) — a wild herb unique to the central highlands. Intensely aromatic, slightly citrusy, and completely unlike anything else in Vietnamese cuisine.',
-    tags: ['Chicken', 'Herbs', 'Phu Yen', 'Unique'],
-},
+        slug: 'phu-yen-chives-noodle-soup',
+        title: 'Phu Yen Chives Noodle Soup',
+        subtitle: 'Banh canh he Phu Yen',
+        image: '/images/recipes/banh-canh-he.jpg',
+        difficulty: 'Medium', time: '1 hr 30 min',
+        rating: '4.9', reviews: 87, cal: 385, tag: 'Phu Yen Special', tagColor: '#0284C7',
+        description: 'Thick chewy noodles in a clear pork and dried anchovy broth, finished with a generous handful of fresh garlic chives. The breakfast of Phu Yen province.',
+        tags: ['Coastal', 'Pork', 'Noodles', 'Hometown'],
+    },
+    {
+        slug: 'ga-la-e-phu-yen',
+        title: 'Phu Yen Litsea Leaf Chicken',
+        subtitle: 'Ga la e Phu Yen',
+        image: '/images/recipes/ga-la-e-phu-yen.jpg',
+        difficulty: 'Medium', time: '45 min',
+        rating: '4.8', reviews: 64, cal: 340, tag: 'Phu Yen Hidden Gem', tagColor: '#166534',
+        description: 'Free-range chicken stir-fried with fresh litsea leaves (la e) — a wild herb unique to the central highlands. Intensely aromatic, slightly citrusy, and completely unlike anything else in Vietnamese cuisine.',
+        tags: ['Chicken', 'Herbs', 'Phu Yen', 'Unique'],
+    },
 ]
 
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
@@ -154,7 +154,7 @@ function saveFav(recipe: Recipe, add: boolean) {
             arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
         }
         localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch {}
+    } catch { }
 }
 
 function HeartBtn({ recipe }: { recipe: Recipe }) {
@@ -226,7 +226,7 @@ export default function CentralCuisinePage() {
 
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(220,38,38,0.15)', border: '1px solid rgba(220,38,38,0.3)', borderRadius: 100, padding: '7px 18px', marginBottom: 24 }}>
                         <span style={{ fontSize: 14 }}>🌶️</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FCA5A5' }}>Ẩm Thực Miền Trung</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FCA5A5' }}>Central Vietnamese Cuisine</span>
                     </div>
 
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(44px, 7vw, 88px)', fontWeight: 800, color: 'white', margin: '0 0 20px', lineHeight: 0.95 }}>
