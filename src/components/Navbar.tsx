@@ -803,47 +803,42 @@ export default function Navbar() {
                 style={{ borderTop: "1px solid rgba(75,46,26,0.08)" }}
               >
                 {session?.user ? (
-                  <div
-                    className="flex items-center gap-3 mb-3 p-3"
-                    style={{
-                      background: "#fff",
-                      borderRadius: 14,
-                      border: "1px solid rgba(75,46,26,0.08)",
-                    }}
-                  >
-                    <Image
-                      src={session.user.image ?? "/logo.svg"}
-                      alt={session.user.name ?? "User"}
-                      width={40}
-                      height={40}
-                      style={{ borderRadius: "50%", border: "2px solid #D97706" }}
-                    />
-                    <div style={{ flex: 1 }}>
-                      <div
-                        style={{
-                          fontWeight: 600,
-                          color: "#2D1A0E",
-                          fontSize: 14,
-                        }}
-                      >
+                  <div style={{
+                    display: 'flex', alignItems: 'center', gap: 12,
+                    margin: '0 0 16px',
+                    padding: '14px 16px',
+                    background: 'white',
+                    borderRadius: 18,
+                    border: '1px solid rgba(75,46,26,0.08)',
+                  }}>
+                    <div style={{
+                      width: 44, height: 44, borderRadius: '50%', flexShrink: 0,
+                      border: '2px solid #D97706', overflow: 'hidden', background: '#4B2E1A',
+                    }}>
+                      <img
+                        src={session.user.image ?? '/logo.svg'}
+                        alt={session.user.name ?? 'User'}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {session.user.name}
-                      </div>
-                      <div style={{ fontSize: 12, color: "#9B7B60" }}>
+                      </p>
+                      <p style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', margin: '2px 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                         {session.user.email}
-                      </div>
+                      </p>
                     </div>
                     <button
-                      onClick={() => signOut({ callbackUrl: "/" })}
+                      onClick={() => signOut({ callbackUrl: '/' })}
                       style={{
-                        fontSize: 12,
-                        color: "#DC2626",
-                        fontWeight: 600,
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
+                        fontSize: 12, fontWeight: 700, color: '#D97706',
+                        background: 'rgba(217,119,6,0.08)', border: '1px solid rgba(217,119,6,0.2)',
+                        borderRadius: 8, padding: '6px 10px', cursor: 'pointer', flexShrink: 0,
                       }}
                     >
-                      Xuất
+                      Sign out
                     </button>
                   </div>
                 ) : (
