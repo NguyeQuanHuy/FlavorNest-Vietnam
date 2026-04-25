@@ -81,7 +81,7 @@ export default function Navbar() {
             style={{ textDecoration: "none" }}
           >
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="FlavorNest"
               width={36}
               height={36}
@@ -317,7 +317,7 @@ export default function Navbar() {
                   }}
                 >
                   <img
-                    src={session.user.image ?? "/logo.svg"}
+                    src={session.user.image ?? "/logo.png"}
                     alt={session.user.name ?? "User"}
                     width={34}
                     height={34}
@@ -467,7 +467,7 @@ export default function Navbar() {
               >
                 <div className="flex items-center gap-2.5">
                   <Image
-                    src="/logo.svg"
+                    src="/logo.png"
                     alt="FlavorNest"
                     width={36}
                     height={36}
@@ -816,7 +816,7 @@ export default function Navbar() {
                       border: '2px solid #D97706', overflow: 'hidden', background: '#4B2E1A',
                     }}>
                       <img
-                        src={session.user.image ?? '/logo.svg'}
+                        src={session.user.image ?? '/logo.png'}
                         alt={session.user.name ?? 'User'}
                         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                         referrerPolicy="no-referrer"
