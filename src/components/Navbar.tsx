@@ -381,7 +381,7 @@ export default function Navbar() {
             <button
               aria-label="Open menu"
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden flex items-center justify-center"
+              className="hidden flex items-center justify-center"
               style={{
                 width: 40,
                 height: 40,
