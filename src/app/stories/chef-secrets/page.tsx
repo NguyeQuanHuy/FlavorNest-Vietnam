@@ -29,7 +29,7 @@ const TIPS: Tip[] = [
         id: 'perfect-broth',
         title: 'The Secret to a Perfect Vietnamese Broth',
         subtitle: 'Why charring, not boiling, is the key to depth',
-        image: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1200&q=85',
+        image: '/images/recipes/nuoc-dung-pho.webp',
         category: 'Soups & Broths',
         categoryColor: '#D97706',
         level: 'Intermediate',

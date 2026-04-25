@@ -11,7 +11,7 @@ const story: StoryData = {
     subtitle: 'A dish you can only truly eat in one town on Earth',
     date: 'January 2025',
     readTime: '5 min read',
-    heroImage: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hoi-an (2).jpg',
     sections: [
         {
             body: `Legend says the noodles can only be made with water from a single ancient Cham well in Hoi An's old town. Whether or not you believe the legend, cao lau is undeniably tied to one place. Take it out of Hoi An and something changes. The noodles are thick and chewy — ash-treated, slightly yellow, with a texture between Chinese noodles and Japanese udon. Topped with crispy rice crackers, sliced char siu pork, and a thicket of fresh herbs, with just enough broth to moisten everything. It is not a soup. It is its own category.`,
@@ -24,7 +24,7 @@ const story: StoryData = {
         {
             heading: 'Where to Go',
             body: `Truong Minh Luong at 45 Tran Phu in the old town is the most celebrated address — a small shophouse with outdoor seating and a recipe unchanged for decades. Arrive before 10am. Co Ba Hoi An near the market is the local favourite — simpler surroundings, shorter queue, equally good bowl. Avoid any restaurant on the main tourist drag that lists cao lau alongside twenty other dishes — the best cao lau comes from vendors who make only cao lau.`,
-            image: 'https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=85',
+            image: '/images/recipes/nguoi-hoi-an.jpg',
             imageCaption: 'Hoi An old town — lanterns, ancient streets, and the best noodles in Central Vietnam',
         },
         {

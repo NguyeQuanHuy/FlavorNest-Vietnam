@@ -11,7 +11,7 @@ const story: StoryData = {
     subtitle: 'A baguette that conquered the world from a sidewalk cart',
     date: 'February 2025',
     readTime: '5 min read',
-    heroImage: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-mi-sai-gon.webp',
     sections: [
         {
             body: `No culinary invention tells Vietnam's history better than a banh mi. The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and more shattering, the crumb lighter and more airy, and then filled it with things no French baker ever imagined. The bread shatters when you bite — that perfect crust — and then everything inside hits at once: silky pate, smoky grilled pork, the sharp bite of pickled daikon, cool cucumber, and a ghost of Maggi. It costs 20,000 dong. It is extraordinary.`,

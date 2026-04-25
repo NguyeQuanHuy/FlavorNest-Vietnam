@@ -11,7 +11,7 @@ const story: StoryData = {
     subtitle: "The royal city's fiery, forgotten masterpiece",
     date: 'December 2024',
     readTime: '6 min read',
-    heroImage: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hue.jpg',
     sections: [
         {
             body: `Ask any Vietnamese chef which noodle soup deserves more global fame, and most will say: Bun Bo Hue. While pho gets the headlines, Hue's royal noodle soup quietly sits there being more complex, more layered, more brazenly spiced. The broth is lemongrass-forward and shrimp-paste-deep, tinted red from annatto oil. Thick round noodles. Slices of beef shank. A chunk of pork knuckle. It is theatrical and delicious.`,
