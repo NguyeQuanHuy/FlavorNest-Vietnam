@@ -380,7 +380,7 @@ export default function Navbar() {
             {/* Mobile hamburger */}
             <button
               aria-label="Open menu"
-              onClick={() => setMobileOpen(true)}
+              onClick={() => setMobileOpen(prev => !prev)}
               className="lg:hidden flex items-center justify-center"
               style={{
                 width: 40,
@@ -395,14 +395,15 @@ export default function Navbar() {
                 cursor: "pointer",
               }}
             >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path
-                  d="M3 5H15M3 9H15M3 13H15"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
-              </svg>
+              {mobileOpen ? (
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M4 4L14 14M14 4L4 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M3 5H15M3 9H15M3 13H15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
