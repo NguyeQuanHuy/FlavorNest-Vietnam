@@ -77,34 +77,51 @@ export default function Navbar() {
           {/* ── Logo ── */}
           <Link
             href="/"
-            className="flex items-center gap-2.5"
+            className="flex items-center gap-1 group"
             style={{ textDecoration: "none" }}
           >
             <Image
               src="/logo.png"
               alt="FlavorNest"
-              width={36}
-              height={36}
+              width={56}
+              height={56}
               priority
+              className="transition-transform duration-300 group-hover:scale-110"
               style={{
                 filter: forceScrolled
-                  ? "none"
-                  : "drop-shadow(0 2px 6px rgba(0,0,0,0.25))",
+                  ? "drop-shadow(0 2px 6px rgba(217, 119, 6, 0.3))"
+                  : "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4))",
                 transition: "filter 0.3s",
               }}
             />
-            <span
-              style={{
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
-                fontSize: 18,
-                fontWeight: 600,
-                letterSpacing: "-0.3px",
-                transition: "color 0.3s",
-              }}
-            >
-              FlavorNest
-            </span>
+            <div className="flex flex-col leading-none">
+              <span
+                style={{
+                  fontFamily: "var(--font-playfair), Georgia, serif",
+                  color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
+                  fontSize: 22,
+                  fontWeight: 700,
+                  letterSpacing: "-0.3px",
+                  transition: "color 0.3s",
+                }}
+              >
+                FlavorNest
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  color: forceScrolled ? "#D97706" : "#D97706",
+                  fontSize: 9,
+                  fontWeight: 600,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  marginTop: 2,
+                  transition: "color 0.3s",
+                }}
+              >
+                Vietnam Gourmet
+              </span>
+            </div>
           </Link>
 
           {/* ── Desktop nav links ── */}
