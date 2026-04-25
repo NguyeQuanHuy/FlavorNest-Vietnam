@@ -17,7 +17,7 @@ import SearchModal from "./SearchModal";
 import { useFavorites } from "@/hooks/useFavorites";
 
 // Các trang có background sáng — navbar luôn dùng dark mode
-const LIGHT_BG_PAGES = ["/favorites", "/recipes", "/stories", "/about", "/auth"];
+const LIGHT_BG_PAGES = ["/favorites", "/recipes", "/stories", "/about", "/auth", "/privacy", "/impressum"];
 
 export default function Navbar() {
   const pathname = usePathname();
