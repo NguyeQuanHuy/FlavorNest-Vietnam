@@ -374,25 +374,29 @@ export default function Navbar() {
 
             {/* Mobile hamburger */}
             <button
-              aria-label="Open menu"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
               onClick={() => setMobileOpen(prev => !prev)}
               className="lg:hidden flex items-center justify-center"
               style={{
                 width: 40,
                 height: 40,
                 borderRadius: 10,
-                background: forceScrolled
-                  ? "rgba(75,46,26,0.06)"
-                  : "rgba(245,237,227,0.1)",
-                border: `1px solid ${forceScrolled ? "rgba(75,46,26,0.1)" : "rgba(245,237,227,0.15)"
-                  }`,
-                color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
+                background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                color: "#FFFFFF",
+                boxShadow: "0 4px 14px rgba(217,119,6,0.45), inset 0 1px 0 rgba(255,255,255,0.2)",
+                transition: "all 0.25s ease",
                 cursor: "pointer",
               }}
             >
-              {mobileOpen ? (
-                <FNIcon name={mobileOpen ? "close" : "menu"} size={18} />
-              ) : null}
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M3 5H15M3 9H15M3 13H15"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -417,62 +421,44 @@ export default function Navbar() {
             />
 
             <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              drag="y"
-              dragConstraints={{ top: 0, bottom: 0 }}
-              dragElastic={0.2}
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 32, stiffness: 320 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.15}
               onDragEnd={(_, info) => {
-                if (info.offset.y > 120 || info.velocity.y > 500) {
+                if (info.offset.x > 120 || info.velocity.x > 500) {
                   setMobileOpen(false);
                 }
               }}
-              className="fixed bottom-0 left-0 right-0 z-50 flex flex-col"
+              className="fixed top-0 right-0 bottom-0 z-50 flex flex-col"
               style={{
-                height: "92vh",
+                width: "min(86vw, 380px)",
                 background: "#F5EDE3",
                 borderTopLeftRadius: 24,
-                borderTopRightRadius: 24,
-                boxShadow: "0 -10px 40px rgba(45,26,14,0.25)",
+                borderBottomLeftRadius: 24,
+                boxShadow: "-10px 0 40px rgba(45,26,14,0.25)",
               }}
             >
-              {/* Drag handle */}
-              <div className="flex justify-center pt-3 pb-2 flex-shrink-0">
-                <div
-                  style={{
-                    width: 40,
-                    height: 4,
-                    borderRadius: 999,
-                    background: "rgba(75,46,26,0.2)",
-                  }}
-                />
-              </div>
-
               {/* Header */}
               <div
-                className="flex items-center justify-between px-6 pb-4 flex-shrink-0"
+                className="flex items-center justify-between px-6 pt-6 pb-4 flex-shrink-0"
                 style={{ borderBottom: "1px solid rgba(75,46,26,0.08)" }}
               >
-                <div className="flex items-center gap-2.5">
-                  <Image
-                    src="/logo.png"
-                    alt="FlavorNest"
-                    width={36}
-                    height={36}
-                  />
-                  <span
-                    style={{
-                      fontFamily: "var(--font-playfair), Georgia, serif",
-                      color: "#2D1A0E",
-                      fontSize: 18,
-                      fontWeight: 600,
-                    }}
-                  >
-                    FlavorNest
-                  </span>
-                </div>
+                <span
+                  style={{
+                    fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                    fontSize: 14,
+                    fontWeight: 600,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    letterSpacing: "-0.3px",
+                  }}
+                >
+                  Menu
+                </span>
                 <button
                   aria-label="Close menu"
                   onClick={() => setMobileOpen(false)}
