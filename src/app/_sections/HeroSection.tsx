@@ -42,13 +42,16 @@ export default function HeroSection() {
             aria-label="Hero – FlavorNest Vietnam"
         >
             {/* ── Background image with parallax ── */}
-            <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110 will-change-transform">
-                <Image
-                    src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=1800&q=85"
-                    alt="A stunning spread of authentic Vietnamese dishes — pho, banh mi, spring rolls and more"
-                    fill priority quality={85} sizes="100vw"
-                    className="object-cover"
-                />
+            <motion.div style={{ y: imgY }} className="absolute inset-0 scale-105 will-change-transform hidden md:block">
+                <div className="absolute inset-0 md:hidden">
+                    <Image
+                        src="/hero-bg.jpg"
+                        alt="A stunning spread of authentic Vietnamese dishes — pho, banh mi, spring rolls and more"
+                        fill priority fetchPriority="high" quality={82} sizes="100vw"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAA//Z"
+                        className="object-cover"
+                    />
             </motion.div>
 
             {/* ── FIX 1: Stronger gradient overlay for better text contrast ── */}
