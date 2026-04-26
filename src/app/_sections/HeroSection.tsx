@@ -121,7 +121,7 @@ export default function HeroSection() {
                         <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
                             Vietnamese Flavors.
                         </span>
-                    </motion.h1>
+                    </h1>
 
                     {/* Subheading */}
                     <motion.p variants={item} className="text-white/80 text-lg sm:text-xl max-w-xl leading-relaxed mb-10"
