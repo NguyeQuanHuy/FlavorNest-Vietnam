@@ -95,7 +95,7 @@ export default function HeroSection() {
                 style={{ y: textY }}
                 className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20"
             >
-                <motion.div variants={container} initial="hidden" animate="show" className="max-w-3xl">
+                <div className="max-w-3xl">
 
                     {/* Live badge */}
                     <motion.div variants={item} className="mb-6">
@@ -163,7 +163,7 @@ export default function HeroSection() {
                             </div>
                         ))}
                     </motion.div>
-                </motion.div>
+                </div>
             </motion.div>
 
             {/* ── Scroll cue ── */}
@@ -180,6 +180,6 @@ export default function HeroSection() {
                     />
                 </div>
             </motion.div>
-        </section>
+        </section >
     )
 }
