@@ -22,11 +22,13 @@ import Script from 'next/script'
 
 // Section components (each in its own file for maintainability)
 import HeroSection from './_sections/HeroSection'
-import FeaturedRecipes from './_sections/FeaturedRecipes'
-import CategoriesSection from './_sections/CategoriesSection'
-import KitchenStories from './_sections/KitchenStories'
-import WhyFlavorNest from './_sections/WhyFlavorNest'
-import NewsletterSection from './_sections/NewsletterSection'
+import dynamic from 'next/dynamic'
+
+const FeaturedRecipes = dynamic(() => import('./_sections/FeaturedRecipes'))
+const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
+const KitchenStories = dynamic(() => import('./_sections/KitchenStories'))
+const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
+const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
 import Image from "next/image";
 
