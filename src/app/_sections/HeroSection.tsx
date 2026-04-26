@@ -89,7 +89,6 @@ export default function HeroSection() {
                     </motion.div>
                 ))}
             </motion.div>
-
             {/* ── Main content ── */}
             <motion.div
                 style={{ y: textY }}
@@ -98,17 +97,17 @@ export default function HeroSection() {
                 <div className="max-w-3xl">
 
                     {/* Live badge */}
-                    <motion.div variants={item} className="mb-6">
+                    <div className="mb-6">
                         <span className="inline-flex items-center gap-2.5 bg-white/12 backdrop-blur-md border border-white/20 text-white text-xs font-medium px-4 py-2 rounded-full">
                             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
                             🇻🇳 &nbsp; 6 new recipes added this week
                         </span>
-                    </motion.div>
+                    </div>
 
                     {/* Eyebrow */}
-                    <motion.p variants={item} className="font-display text-lg italic text-[#F59E0B] font-medium mb-2">
+                    <p className="font-display text-lg italic text-[#F59E0B] font-medium mb-2">
                         FlavorNest Vietnam
-                    </motion.p>
+                    </p>
 
                     {/* H1 */}
                     <h1 className="font-display font-extrabold leading-[1.04] mb-6">
@@ -124,15 +123,15 @@ export default function HeroSection() {
                     </h1>
 
                     {/* Subheading */}
-                    <motion.p variants={item} className="text-white/80 text-lg sm:text-xl max-w-xl leading-relaxed mb-10"
+                    <p className="text-white/80 text-lg sm:text-xl max-w-xl leading-relaxed mb-10"
                         style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
                         Made Simple at Home.{' '}
                         <strong className="text-white font-semibold">100+ tested recipes</strong>{' '}
                         from Hanoi, Hue and Saigon — crafted for every home kitchen.
-                    </motion.p>
+                    </p>
 
                     {/* CTAs */}
-                    <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-14">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-14">
                         <Link
                             href="/recipes"
                             className="group inline-flex items-center justify-center gap-2.5 bg-[#D97706] hover:bg-[#B45309] text-white font-bold text-sm px-9 py-4 rounded-2xl shadow-[0_8px_32px_rgba(217,119,6,.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_48px_rgba(217,119,6,.5)]"
@@ -149,10 +148,9 @@ export default function HeroSection() {
                         >
                             Kitchen Stories
                         </Link>
-                    </motion.div>
-
+                    </div>
                     {/* Stats row (mobile) */}
-                    <motion.div variants={item} className="flex items-center gap-6 lg:hidden">
+                    <div className="flex items-center gap-6 lg:hidden">
                         {STATS.map((s, i) => (
                             <div key={s.label} className="flex items-center gap-5">
                                 {i > 0 && <div className="w-px h-9 bg-white/25" />}
@@ -162,7 +160,7 @@ export default function HeroSection() {
                                 </div>
                             </div>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </motion.div>
 
@@ -180,6 +178,6 @@ export default function HeroSection() {
                     />
                 </div>
             </motion.div>
-        </section >
+        </section>
     )
 }
