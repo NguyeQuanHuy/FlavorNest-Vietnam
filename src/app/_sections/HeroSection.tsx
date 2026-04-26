@@ -111,7 +111,7 @@ export default function HeroSection() {
                     </motion.p>
 
                     {/* H1 */}
-                    <motion.h1 variants={item} className="font-display font-extrabold leading-[1.04] mb-6">
+                    <h1 className="font-display font-extrabold leading-[1.04] mb-6">
                         <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
                             Your Nest of
                         </span>
