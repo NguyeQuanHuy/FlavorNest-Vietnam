@@ -454,7 +454,6 @@ export default function Navbar() {
                     fontWeight: 600,
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    letterSpacing: "-0.3px",
                   }}
                 >
                   Menu
