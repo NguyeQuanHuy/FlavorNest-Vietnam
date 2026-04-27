@@ -49,28 +49,30 @@ const recipe: RecipeData = {
         {
             title: 'Marinate the chicken',
             description: 'Combine the chicken pieces in a bowl with fish sauce, palm sugar, half of your julienned ginger, and a pinch of black pepper. Mix thoroughly to ensure every piece is coated, then let it rest for 20 minutes to allow the flavors to penetrate the meat.',
+            tip: 'Using chicken thighs or drumsticks with the bone in will result in much juicier meat and a more flavorful sauce than using breast meat.',
         },
         {
             title: 'Build a light caramel',
-            description: 'TODO — melt a tablespoon of palm sugar until amber; do not let it burn.',
-            tip: 'TODO',
+            description: 'Heat a tablespoon of oil and a tablespoon of palm sugar in a pot over medium heat. Stir continuously until the sugar melts and transforms into a deep amber color, being careful to remove it from the heat if it starts to smoke to avoid a bitter taste.',
+            tip: 'If you are new to making Vietnamese caramel (nước màu), keep a small cup of warm water nearby. If the sugar darkens too fast, add a teaspoon of water to stop the cooking process instantly.',
         },
         {
             title: 'Bloom the aromatics',
-            description: 'TODO — oil, shallots, garlic, remaining ginger; fry until golden and fragrant.',
+            description: 'Once the caramel is ready, toss in the minced shallots, garlic, and the remaining half of the ginger. Sauté them quickly until they turn golden and the kitchen is filled with a spicy, fragrant aroma.',
         },
         {
             title: 'Sear the chicken skin',
-            description: 'TODO — add marinated chicken skin-down; let it catch colour before stirring.',
-            tip: 'TODO — resist stirring for the first 3 minutes.',
+            description: 'Place the marinated chicken into the pot, ideally skin-side down, and increase the heat slightly. Resist stirring for the first 3 minutes to allow the skin to sear properly and develop a rich, caramelized color.',
+            tip: 'Resist the urge to stir for the first 3 minutes. This allows the skin to firm up and brown beautifully, preventing it from sticking to the pot or tearing.',
         },
         {
             title: 'Reduce to a sticky glaze',
-            description: 'TODO — add coconut water if using; simmer uncovered 20 minutes until sauce clings.',
+            description: 'Pour in coconut water (or plain water) until the chicken is halfway submerged, then simmer uncovered for about 20 minutes. As the liquid evaporates, it will thicken into a savory, sticky glaze that clings beautifully to the chicken.',
         },
         {
             title: 'Finish with pepper and spring onion',
-            description: 'TODO — crack fresh pepper, scatter spring onion, serve over hot rice.',
+            description: 'Once the sauce has reduced to your liking, turn off the heat. Top the dish with a generous amount of freshly cracked black pepper and a handful of chopped spring onions, then serve immediately over hot jasmine rice.',
+            tip: 'Always use freshly cracked pepper at the very end rather than pre-ground pepper. The heat of the dish will release the pepper's oils, providing a sharp aromatic contrast to the sweet and salty sauce..',
         },
     ],
 };
