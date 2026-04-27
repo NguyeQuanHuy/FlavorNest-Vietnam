@@ -24,7 +24,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isLightPage = LIGHT_BG_PAGES.some((p) => pathname?.startsWith(p));
   const [scrolled, setScrolled] = useState(false);
-  const forceScrolled = isLightPage || scrolled;
+  const forceScrolled = false;
   const [recipesOpen, setRecipesOpen] = useState(false);
   const [storiesOpen, setStoriesOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
