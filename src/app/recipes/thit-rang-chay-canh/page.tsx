@@ -46,29 +46,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Par-boil the pork',
-            description: 'TODO — blanch pork cubes in salted boiling water 8 minutes, drain, pat completely dry.',
-            tip: 'TODO — wet pork will not crisp. Dry it twice.',
+            description: 'Blanch the pork belly cubes in salted boiling water for about 8 minutes. This firms up the meat and removes impurities. Drain the pork and use paper towels to pat each piece completely dry before frying.',
+            tip: 'Wet pork will not crisp; it will steam instead. Dry the meat twice—once right after draining and again just before it hits the wok—to ensure a golden, crunchy exterior.',
         },
         {
             title: 'Render the fat',
-            description: 'TODO — dry wok over medium heat, add pork cubes fat-side down; let them release oil for 10 minutes.',
+            description: 'Place a dry wok over medium heat and add the pork cubes, placing them fat-side down. Let them sit undisturbed for about 10 minutes to allow the natural pork fat to render out and pool in the bottom of the pan.',
         },
         {
             title: 'Slow-fry to crisp',
-            description: 'TODO — once fat pools, increase heat and fry pork 12 minutes, tossing, until edges blacken and crackle.',
-            tip: 'TODO — keep moving the cubes or one side will char before the others develop.',
+            description: 'Once enough fat has pooled, increase the heat slightly and fry the pork for another 12 minutes. Toss the pieces continuously until the edges begin to blacken, blister, and develop a deep, crackling texture.',
+            tip: 'Keep the cubes moving constantly. If they sit too long on one side, they will char and become bitter before the other sides have a chance to develop a proper crust.',
         },
         {
             title: 'Drain excess fat',
-            description: 'TODO — tilt wok and spoon out all but 2 tablespoons of fat.',
+            description: 'Once the pork is crispy and golden, tilt the wok to one side. Use a spoon to carefully remove the majority of the rendered lard, leaving only about 2 tablespoons in the pan to serve as the base for your glaze.',
         },
         {
             title: 'Build the glaze',
-            description: 'TODO — add palm sugar to remaining fat; when it melts to dark amber, add shallots, garlic, chilli and fish sauce.',
+            description: 'Add palm sugar directly into the remaining fat. Once it melts into a dark amber syrup, toss in the minced shallots, garlic, and sliced chilies. Pour in the fish sauce, letting it bubble and thicken into a fragrant, savory glaze.',
         },
         {
             title: 'Toss and serve',
-            description: 'TODO — toss pork in the bubbling glaze 60 seconds until each cube is lacquered; finish with pepper and spring onion; serve over hot rice.',
+            description: 'Toss the crispy pork back into the bubbling glaze for 60 seconds until every cube is perfectly lacquered. Finish with a generous crack of black pepper and chopped spring onions, then serve immediately over a bowl of hot jasmine rice.',
         },
     ],
 };
