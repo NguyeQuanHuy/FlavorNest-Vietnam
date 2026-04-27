@@ -9,7 +9,7 @@ const BREAKFAST_RECIPES = [
         slug: 'pho-bo',
         title: 'Hanoi Beef Pho',
         subtitle: 'Pho bo Ha Noi',
-        image: '/images/recipes/pho-bo.jpg',
+       '/images/recipes/phohanoi.jpg',
         time: '3 hrs',
         difficulty: 'Medium',
         rating: '4.9',
