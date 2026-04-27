@@ -46,31 +46,31 @@ const recipe: RecipeData = {
         },
     ],
     steps: [
-        {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
-        },
-        {
-            title: 'Prep the vegetable',
-            description: 'TODO — peel and cube winter melon (or slice your chosen vegetable) while pork marinates.',
-        },
-        {
-            title: 'Poach the pork into flecks',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it cooks into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
-        },
-        {
-            title: 'Skim carefully',
-            description: 'TODO — skim foam for 2 minutes until broth runs clear.',
-        },
-        {
-            title: 'Simmer with the vegetable',
-            description: 'TODO — add winter melon (or your chosen veg), simmer 8 minutes until tender but not collapsed.',
-        },
-        {
-            title: 'Season and serve',
-            description: 'TODO — adjust fish sauce; scatter spring onion, cilantro and pepper; serve alongside rice and a salty main.',
-        },
+    {
+        title: 'Marinate the pork',
+        description: 'In a small bowl, combine the minced pork with finely chopped shallots, fish sauce, a pinch of salt, and white pepper. Mix well and let the meat rest for 10 minutes to ensure the savory aromatics are fully absorbed into the protein.',
+    },
+    {
+        title: 'Prep the vegetable',
+        description: 'While the pork is marinating, peel the winter melon, remove the seeds, and cut it into bite-sized cubes. If you are using other vegetables like chayote or carrots, slice them into thin, even pieces to ensure they cook at the same rate.',
+    },
+    {
+        title: 'Poach the pork into flecks',
+        description: 'Bring a pot of water to a gentle simmer. Instead of adding the pork all at once, drop it in small, loose pinches while stirring the water constantly. This technique allows the meat to separate into tender, flavorful flecks that light up the broth.',
+        tip: 'Dumping the pork in one large clump will cause it to bind together into a single, dense meatball. For a traditional "flecked" broth, the stirring motion is essential.',
+    },
+    {
+        title: 'Skim carefully',
+        description: 'As the water comes back to a boil, a layer of gray foam will rise to the top. Use a fine mesh spoon to skim this foam off for about 2 minutes until the broth runs perfectly clear and looks appetizing.',
+    },
+    {
+        title: 'Simmer with the vegetable',
+        description: 'Add the winter melon cubes to the pot and increase the heat slightly. Simmer for about 8 minutes—just long enough for the melon to become translucent and tender, but not so long that it loses its shape or collapses into a mush.',
+    },
+    {
+        title: 'Season and serve',
+        description: 'Taste the soup and add a splash more fish sauce if needed. Turn off the heat and scatter a handful of chopped spring onions, cilantro, and a dash of black pepper over the top. Serve hot as a refreshing balance to a salty main dish and rice.',
+    },
     ],
 };
 
