@@ -45,29 +45,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Beat the eggs properly',
-            description: 'TODO — whisk eggs with fish sauce, sugar and white pepper for a full 30 seconds until light and foamy.',
-            tip: 'TODO — under-beaten eggs give a dense omelette. You want air in there.',
+            description: 'In a bowl, combine the eggs with a splash of fish sauce, a pinch of sugar, and ground white pepper. Whisk the mixture vigorously for at least 30 seconds until it is light, pale, and covered in a thick layer of foam.',
+            tip: 'Under-beaten eggs result in a dense, heavy omelette. You want to incorporate as much air as possible so the omelette puffs up beautifully when it hits the hot oil.',
         },
         {
             title: 'Fold in the add-ins',
-            description: 'TODO — stir in spring onion and any pre-cooked pork or wood ear.',
+            description: 'Gently stir in a handful of chopped spring onions and any optional extras like rehydrated wood ear mushrooms or finely minced pork that has been pre-cooked to ensure everything is evenly distributed.',
         },
         {
             title: 'Heat oil until it shimmers',
-            description: 'TODO — pan must be hot enough to puff the eggs the moment they hit.',
-            tip: 'TODO — a cool pan gives you scrambled eggs, not an omelette.',
+            description: 'Heat a tablespoon of oil in a non-stick pan over medium-high heat. The oil is ready when it shimmers and moves like water across the surface; it must be hot enough to instantly sizzle the eggs.',
+            tip: 'A cool pan gives you flat, greasy scrambled eggs rather than a light omelette. Wait for that shimmering heat to achieve the signature crispy, "lacy" edges.',
         },
         {
             title: 'Pour in one motion',
-            description: 'TODO — tilt pan, pour eggs, swirl once to spread; edges should bubble immediately.',
+            description: 'Pour the egg mixture into the center of the pan in one steady motion. Immediately tilt the pan in a circular movement to spread the eggs to the edges; you should see the egg mixture bubble and rise instantly.',
         },
         {
             title: 'Flip when edges are lace',
-            description: 'TODO — when underside is golden-brown with crispy edges, flip once; cook the second side 30 seconds.',
+            description: 'Cook for about 1-2 minutes until the underside is a deep golden-brown with crispy, lacy edges. Carefully flip the omelette over with a spatula and cook the second side for only 30 seconds to set the remaining egg.',
         },
         {
             title: 'Serve with rice and soy',
-            description: 'TODO — slide onto plate; serve with hot rice and a small dish of soy sauce or fish sauce with chilli.',
+            description: 'Slide the omelette onto a plate while it is still hot. Serve immediately with a bowl of steaming jasmine rice and a small side dish of soy sauce or fish sauce with freshly sliced bird\'s eye chilies.',
         },
     ],
 };
