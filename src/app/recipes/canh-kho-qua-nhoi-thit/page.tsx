@@ -51,29 +51,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Hollow the bitter melons',
-            description: 'TODO — cut each melon in 3 rings; scoop seeds and white pith with a teaspoon.',
-            tip: 'TODO — the whiter you scrape, the less bitter the final dish.',
+            description: 'Cut each bitter melon into 3 or 4 even rings. Use the handle of a teaspoon to carefully scoop out the seeds and the spongy white pith from the center of each segment.',
+            tip: 'The whiter you scrape, the less bitter the final dish. That inner white lining holds the majority of the melon’s intense bitterness, so a clean scrape ensures a milder, more balanced flavor.',
         },
         {
             title: 'Tame the bitterness',
-            description: 'TODO — rub hollowed rings with salt, rest 15 minutes, rinse. Optional: blanch 1 minute in boiling water.',
+            description: 'Rub the hollowed rings thoroughly with salt and let them rest for 15 minutes to draw out the bitter juices, then rinse under cold water. For an even milder taste, blanch the rings in boiling water for 1 minute before stuffing.',
         },
         {
             title: 'Mix the filling',
-            description: 'TODO — combine pork with wood ear, glass noodles, shallots, egg, fish sauce and seasonings. Knead 2 minutes until sticky.',
+            description: 'In a mixing bowl, combine ground pork with rehydrated wood ear mushrooms, chopped glass noodles, minced shallots, an egg, fish sauce, and a pinch of sugar. Knead the mixture by hand for about 2 minutes until it becomes tacky and sticky.',
         },
         {
             title: 'Stuff the rings',
-            description: 'TODO — press filling into each ring, mounding slightly above the rim.',
+            description: 'Carefully press the pork filling into the hollowed centers of each ring. Use your thumb to pack it tightly so there are no air pockets, mounding the filling slightly above the rim for a professional, rounded look.',
         },
         {
             title: 'Simmer in pork stock',
-            description: 'TODO — lower stuffed rings into simmering stock; cook 30 minutes, skimming foam.',
-            tip: 'TODO — do not let it boil hard or the filling will leak out.',
+            description: 'Gently lower the stuffed rings into a pot of simmering pork or chicken stock. Cook over medium-low heat for about 30 minutes, frequently skimming the foam off the surface to keep the broth crystal clear.',
+            tip: 'Do not let the soup boil hard; a rolling boil can cause the meat to expand too quickly and leak out of the rings. Keep it at a gentle simmer to ensure the melon softens without falling apart.',
         },
         {
             title: 'Season and serve',
-            description: 'TODO — adjust with fish sauce, scatter spring onion, cilantro and pepper; serve with steamed rice.',
+            description: 'Taste the broth and adjust the seasoning with a splash of fish sauce and a pinch of salt. Scatter a handful of chopped spring onions, cilantro, and freshly cracked black pepper over the top before serving hot with steamed jasmine rice.',
         },
     ],
 };
