@@ -45,29 +45,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            description: 'Strip the green leaves from the tough woody stems and wash them thoroughly. Take handfuls of the leaves and rub them firmly between your palms until they are slightly crushed and turn a darker, bruised green.',
+            tip: 'Bruising is what makes the leaves cook evenly and release their natural sweetness into the broth. If left whole and unbruised, the leaves can remain tough and chewy even after boiling. Do not skip this step.',
         },
         {
             title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            description: 'In a small bowl, mix the minced pork with finely chopped shallots, a splash of fish sauce, a pinch of salt, and a dash of white pepper. Let the meat rest for 10 minutes to allow the aromatics to season the protein.',
         },
         {
             title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            description: 'Bring a pot of water to a gentle simmer. Instead of dropping the meat in all at once, add the pork in small, loose pinches while stirring the water constantly. This technique allows the pork to poach into tender, separate flecks throughout the soup.',
+            tip: 'Dumping the pork in one large clump gives you a single, dense meatball rather than a delicate, flecked broth that distributes the savory flavor in every spoonful.',
         },
         {
             title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            description: 'As the water comes back to a boil, skim off any gray foam that rises to the surface for about 2 minutes to ensure a clear broth. Taste and adjust the seasoning with a little more fish sauce or salt to your preference.',
         },
         {
             title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            description: 'Stir in the bruised rau ngót leaves and bring the heat up slightly. Simmer for only 3 minutes until the leaves are a vibrant deep green and just tender enough to eat.',
         },
         {
             title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            description: 'Turn off the heat and finish with a tiny drizzle of cooking oil for a glossy look and a fresh crack of black pepper. Serve hot as a cooling balance alongside steamed rice and a salty main dish like caramelized pork or fish.',
         },
     ],
 };
