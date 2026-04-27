@@ -169,31 +169,50 @@ export default function ChefSecretsPage() {
                 .tip-bullet:last-child { border-bottom: none; }
             `}</style>
 
-            {/* HERO */}
-            <section style={{ background: 'linear-gradient(135deg, #0D0A07 0%, #1A1208 60%, #231608 100%)', padding: '120px 24px 80px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.07) 0%, transparent 55%)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative' }}>
+                {/* ── HERO ── */}
+            <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+                {/* Background image */}
+                <div style={{ position: 'absolute', inset: 0 }}>
+                    <Image
+                        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1800&q=85"
+                        alt="Vietnamese chef preparing food in a kitchen"
+                        fill
+                        priority
+                        quality={85}
+                        sizes="100vw"
+                        style={{ objectFit: 'cover' }}
+                    />
+                </div>
+                {/* Dark overlay */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
+
+                {/* Content */}
+                <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}>
                         {[['Home', '/'], ['Stories', '/stories'], ["Chef's Secrets", '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>}
-                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
+                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
                         ))}
                     </nav>
 
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.12)', border: '1px solid rgba(217,119,6,0.25)', borderRadius: 100, padding: '7px 18px', marginBottom: 22 }}>
-                        <span style={{ fontSize: 14 }}>👨‍🍳</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Pro Tips & Techniques</span>
+                    {/* Eyebrow */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}>
+                        <div style={{ width: 32, height: 2, background: '#D97706' }} />
+                        <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>Pro Tips & Techniques</span>
                     </div>
 
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(44px, 7vw, 90px)', fontWeight: 800, color: 'white', margin: '0 0 20px', lineHeight: 0.95 }}>
-                        Chef's<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Secrets</span>
+                    {/* Title */}
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}>
+                        The small things<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>that make all the difference.</span>
                     </h1>
 
-                    <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 18, maxWidth: 520, lineHeight: 1.78, margin: 0 }}>
-                        The techniques Vietnamese home cooks learn from their mothers and grandmothers — the small things that make the difference between a good dish and an extraordinary one.
+                    {/* Subtitle */}
+                    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}>
+                        The techniques Vietnamese home cooks learn from their mothers and grandmothers — the quiet wisdom that separates a good dish from an extraordinary one.
                     </p>
                 </div>
             </section>
