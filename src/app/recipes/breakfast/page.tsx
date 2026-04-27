@@ -151,63 +151,49 @@ export default function BreakfastPage() {
                 }
             `}</style>
 
-            {/* ── HERO ── */}
-            <section style={{ position: 'relative', background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 60%, #FBD99A 100%)', paddingTop: 120, paddingBottom: 80, overflow: 'hidden' }}>
-                {/* Decorative blobs */}
-                <div style={{ position: 'absolute', top: 60, right: '8%', width: 260, height: 260, borderRadius: '50%', background: 'rgba(217,119,6,0.08)', pointerEvents: 'none' }} />
-                <div style={{ position: 'absolute', bottom: 40, left: '3%', width: 160, height: 160, borderRadius: '50%', background: 'rgba(217,119,6,0.06)', pointerEvents: 'none' }} />
-
-                <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
+ {/* ── HERO ── */}
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '120px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
+                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     {/* Breadcrumb */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20, fontSize: 13, color: 'rgba(75,46,26,0.5)' }}>
-                        <Link href="/" style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>Home</Link>
-                        <span>›</span>
-                        <Link href="/recipes" style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>Recipes</Link>
-                        <span>›</span>
-                        <span style={{ color: '#D97706', fontWeight: 600 }}>Breakfast</span>
+                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                        {[['Home', '/'], ['Recipes', '/recipes'], ['Breakfast', '']].map(([label, href], i) => (
+                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                {href ?
+                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                            </span>
+                        ))}
+                    </nav>
+
+                    {/* Eyebrow */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Morning Ritual</span>
                     </div>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', maxWidth: 640 }}>
-                        <div>
-                            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.12)', borderRadius: 100, padding: '6px 16px', marginBottom: 18 }}>
-                                <span style={{ fontSize: 16 }}>🌅</span>
-                                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#92580A' }}>Morning Recipes</span>
-                            </div>
-                            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(40px, 6vw, 68px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05 }}>
-                                Vietnamese<br />
-                                <span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
-                            </h1>
-                            <p style={{ color: 'rgba(75,46,26,0.6)', fontSize: 17, maxWidth: 460, lineHeight: 1.7, margin: '16px 0 32px' }}>
-                                Start your day the Vietnamese way — from steaming bowls of phở to crispy Banh mi, these are the morning meals that fuel a nation.
-                            </p>
+                    {/* Title */}
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(42px, 6vw, 76px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
+                        Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
+                    </h1>
 
-                            {/* Stats */}
-                            <div style={{ display: 'flex', gap: 28 }}>
-                                {[['🍜', `${BREAKFAST_RECIPES.length}`, 'Recipes'], ['⏱', '15 min', 'Quickest'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
-                                    <div key={lbl} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                        <span style={{ fontSize: 13 }}>{icon}</span>
-                                        <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</span>
-                                        <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    {/* Subtitle */}
+                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
+                        Start your day the Vietnamese way — from steaming bowls of phở to crispy bánh mì, these are the morning meals that fuel a nation.
+                    </p>
 
-                        {/* Hero image collage */}
-                        <div style={{ display: 'grid', gridTemplateColumns: '120px 120px', gridTemplateRows: '120px 120px', gap: 10, flexShrink: 0 }} className="hidden sm:grid">
-                            {BREAKFAST_RECIPES.slice(0, 4).map((r, i) => (
-                                <div key={r.slug} style={{ borderRadius: 16, overflow: 'hidden', position: 'relative', gridRow: i === 0 ? '1 / span 2' : 'auto', gridColumn: i === 0 ? '1' : '2' }}>
-                                    <Image src={r.image} alt={r.title} fill style={{ objectFit: 'cover' }} sizes="130px" />
-                                </div>
-                            ))}
-                        </div>
+                    {/* Stats */}
+                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                        {[['🍜', `${BREAKFAST_RECIPES.length}`, 'Recipes'], ['⏱', '15 min', 'Quickest'], ['🌏', '3', 'Regions'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                            <div key={lbl}>
+                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-
-                {/* Wave */}
-                <svg className="hero-wave" viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z" fill="#FAFAF7" />
-                </svg>
             </section>
 
             {/* ── FILTER BAR ── */}
