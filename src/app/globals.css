@@ -102,3 +102,39 @@ body {
         padding: 2px 6px !important;
     }
 }
+
+/* ── Homepage Featured Recipes: compact mobile cards ── */
+@media (max-width: 640px) {
+    /* Section grid của Homepage Featured */
+    section[aria-labelledby="featured-heading"] .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    /* Card wrapper */
+    section[aria-labelledby="featured-heading"] article a.group {
+        border-radius: 14px !important;
+    }
+    /* Ảnh (đang h-52 = 208px) → ép xuống 100px */
+    section[aria-labelledby="featured-heading"] article .relative.h-52 {
+        height: 100px !important;
+    }
+    /* Padding card body */
+    section[aria-labelledby="featured-heading"] article a.group > div:not(.relative) {
+        padding: 8px 10px 10px !important;
+    }
+    /* Title */
+    section[aria-labelledby="featured-heading"] article h3 {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+    /* Hide subtitle italic, badges, footer rating row to slim */
+    section[aria-labelledby="featured-heading"] article p,
+    section[aria-labelledby="featured-heading"] article .flex.items-center {
+        display: none !important;
+    }
+    /* Show only 1 small badge on image */
+    section[aria-labelledby="featured-heading"] article .absolute {
+        font-size: 9px !important;
+        padding: 2px 6px !important;
+    }
+}
