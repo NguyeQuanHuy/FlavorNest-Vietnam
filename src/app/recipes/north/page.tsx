@@ -175,86 +175,48 @@ export default function NorthernCuisinePage() {
                 .fade-up-3 { animation: fadeUp 0.7s 0.28s ease both; }
             `}</style>
 
-            {/* ── HERO ── */}
-            <div className="hero-parallax" ref={heroRef}>
-                <Image
-                    src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85"
-                    alt="Northern Vietnamese cuisine"
-                    fill
-                    className="hero-img"
-                    style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
-                    priority
-                    quality={90}
-                />
-                <div className="hero-gradient" />
+{/* ── HERO ── */}
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '120px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
+                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+                    {/* Breadcrumb */}
+                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                        {[['Home', '/'], ['Recipes', '/recipes'], ['Northern', '']].map(([label, href], i) => (
+                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                {href ?
+                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                            </span>
+                        ))}
+                    </nav>
 
-                {/* Breadcrumb top */}
-                <div style={{ position: 'absolute', top: 104, left: 0, right: 0, padding: '0 32px' }}>
-                    <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                        <nav className="breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13 }}>
-                            <Link href="/">Home</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-                            <Link href="/recipes">Recipes</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.25)' }}>›</span>
-                            <span style={{ color: '#D97706', fontWeight: 600 }}>Northern Cuisine</span>
-                        </nav>
-                    </div>
-                </div>
-
-                {/* Hero content */}
-                <div style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '0 32px 72px' }}>
-                    <div className="fade-up" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.18)', border: '1px solid rgba(217,119,6,0.35)', backdropFilter: 'blur(10px)', borderRadius: 100, padding: '7px 18px', marginBottom: 22 }}>
-                        <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D97706', display: 'inline-block' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Northern Vietnamese Cuisine</span>
+                    {/* Eyebrow */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Hanoi & The North</span>
                     </div>
 
-                    <h1 className="fade-up-2" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 7vw, 88px)', fontWeight: 800, color: 'white', margin: 0, lineHeight: 0.95, marginBottom: 22 }}>
-                        Northern<br />
-                        <span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 700 }}>Vietnamese</span><br />
-                        Cuisine
+                    {/* Title */}
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(42px, 6vw, 76px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
+                        Northern<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Cuisine</span>
                     </h1>
 
-                    <p className="fade-up-3" style={{ fontSize: 'clamp(15px, 2vw, 18px)', color: 'rgba(255,255,255,0.6)', maxWidth: 520, lineHeight: 1.75, margin: '0 0 44px' }}>
-                        Born in the ancient capital of Thăng Long, Northern cooking is Vietnam's most refined — restrained, deeply aromatic, and steeped in a thousand years of history.
+                    {/* Subtitle */}
+                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
+                        From the dawn pho stalls of Hanoi to the smoky bún chả of Le Van Huu street — Northern Vietnamese cuisine is defined by restraint, clarity, and the quiet confidence of a thousand-year capital.
                     </p>
 
                     {/* Stats */}
-                    <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}>
-                        {[
-                            { val: `${RECIPES.length}`, lbl: 'Recipes' },
-                            { val: '1000+', lbl: 'Years of History' },
-                            { val: '4.8★', lbl: 'Avg Rating' },
-                            { val: 'Hanoi', lbl: 'Origin City' },
-                        ].map((s, i) => (
-                            <div key={s.lbl} className="stat-block" style={{ paddingRight: 24, marginBottom: 12 }}>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 700, color: 'white', lineHeight: 1 }}>{s.val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: 4 }}>{s.lbl}</div>
+                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                        {[['🏯', `${RECIPES.length}`, 'Recipes'], ['⏱', '40 min', 'Quickest'], ['🌏', '1', 'Region'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                            <div key={lbl}>
+                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
                             </div>
                         ))}
                     </div>
-                </div>
-
-                {/* Scroll hint */}
-                <div style={{ position: 'absolute', bottom: 28, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: scrolled ? 0 : 1, transition: 'opacity 0.4s' }}>
-                    <span style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase' }}>Scroll</span>
-                    <div style={{ width: 1, height: 32, background: 'linear-gradient(to bottom, rgba(255,255,255,0.4), transparent)' }} />
-                </div>
-            </div>
-
-            {/* ── CULTURAL NOTES ── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 32px 0' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 32 }}>
-                    <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Story Behind</span>
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
-                    {CULTURAL_NOTES.map(c => (
-                        <div key={c.title} className="culture-card">
-                            <div style={{ fontSize: 28, marginBottom: 14 }}>{c.icon}</div>
-                            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'white', margin: '0 0 10px' }}>{c.title}</h3>
-                            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7, margin: 0 }}>{c.body}</p>
-                        </div>
-                    ))}
                 </div>
             </section>
 
