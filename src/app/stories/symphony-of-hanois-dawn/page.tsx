@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 export default function SymphonyOfHanoisDawnPage() {
@@ -99,9 +100,7 @@ export default function SymphonyOfHanoisDawnPage() {
             On the secret rhythm of pho — and why the soul of a city still wakes up at four in the morning to skim a pot of broth.
         </motion.p>
     </div>
-</section>
-
-    {/* Scroll indicator */}
+{/* Scroll indicator */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 1, 1, 0] }}
@@ -121,17 +120,6 @@ export default function SymphonyOfHanoisDawnPage() {
                     SCROLL TO READ ↓
                 </motion.div>
             </section>
-
-            {/* Article Body */}
-            <div
-                style={{
-                    maxWidth: '720px',
-                    margin: '0 auto',
-                    padding: '80px 24px 40px',
-                    fontFamily: 'Georgia, "Iowan Old Style", "Palatino Linotype", serif',
-                    color: '#2D1A0E',
-                }}
-            >
 
             {/* Article Body */}
             <div
