@@ -47,33 +47,38 @@ const recipe: RecipeData = {
             ],
         },
     ],
-    steps: [
-        {
-            title: 'Dry and season the fish',
-            description: 'TODO — pat fish completely dry; rub salt and turmeric inside the score marks.',
-            tip: 'TODO — wet fish + hot oil = a steam explosion. Dry the fish twice.',
-        },
-        {
-            title: 'Fry to golden',
-            description: 'TODO — fry in hot oil 5 minutes per side until skin is shattering-crisp. Remove and rest on rack.',
-        },
-        {
-            title: 'Build the sauce base',
-            description: 'TODO — in the same pan, fry shallots and garlic in remaining oil.',
-        },
-        {
-            title: 'Break down the tomatoes',
-            description: 'TODO — add tomatoes, fish sauce, sugar; simmer until they collapse into a sauce, ~10 minutes.',
-        },
-        {
-            title: 'Return the fish to the sauce',
-            description: 'TODO — nestle fish in, spoon sauce over; simmer 3 minutes to marry.',
-        },
-        {
-            title: 'Shower with dill and scallion',
-            description: 'TODO — off heat, scatter spring onion and dill; crack pepper over the top; serve with rice.',
-        },
-    ],
+     steps: [
+            {
+                title: 'Dry and season the fish',
+                description: 'Use paper towels to pat the fish completely dry on both sides and inside the cavity. Score the flesh in a criss-cross pattern and rub a mixture of salt and turmeric powder into the marks to enhance flavor and achieve a vibrant color.',
+                tip: 'Wet fish + hot oil = a steam explosion. Dry the fish twice—once when you bring it home and once more right before it hits the pan to ensure maximum crispiness.',
+            },
+            {
+                title: 'Fry to golden',
+                description: 'Heat oil in a wok or large pan until it shimmers. Carefully slide the fish in and fry for about 5 to 7 minutes per side over medium-high heat until the skin is shattering-crisp and the meat is cooked through. Remove the fish and let it rest on a wire rack to prevent the bottom from getting soggy.',
+                tip: 'Do not flip the fish too early. Wait until the edges look golden and the fish releases easily from the pan surface.',
+            },
+            {
+                title: 'Build the sauce base',
+                description: 'Drain most of the frying oil, leaving about two tablespoons in the pan. Toss in finely minced shallots and garlic, sautéing them over medium heat until they turn a pale golden brown and fill the kitchen with their aroma.',
+                tip: 'Using the same oil used for frying the fish adds an extra layer of savory seafood depth to your tomato sauce.',
+            },
+            {
+                title: 'Break down the tomatoes',
+                description: 'Add chopped tomatoes to the pan along with fish sauce, a pinch of sugar, and a splash of water. Cover and simmer for about 10 minutes, mashing the tomatoes occasionally with your spatula until they collapse into a thick, jammy sauce.',
+                tip: 'If the tomatoes aren’t juicy enough, add a tablespoon of tomato paste to boost the color and provide a richer "umami" base.',
+            },
+            {
+                title: 'Return the fish to the sauce',
+                description: 'Gently nestle the fried fish back into the pan. Use a spoon to pour the bubbling tomato sauce over the fish, ensuring it seeps into the score marks. Simmer for 3 minutes to allow the flavors to marry without losing the skin\'s crunch.',
+                tip: 'Keep the heat low during this stage so the sauce thickens slightly rather than burning off.',
+            },
+            {
+                title: 'Shower with dill and scallion',
+                description: 'Turn off the heat and immediately scatter a generous handful of chopped spring onions and fresh dill over the fish. Finish with a final crack of black pepper and serve immediately alongside a bowl of hot jasmine rice.',
+                tip: 'Dill is the "secret ingredient" for Vietnamese fish dishes; its citrusy notes cut through the richness of the fried fish perfectly.',
+            },
+        ],
 };
 
 export default function Page() {
