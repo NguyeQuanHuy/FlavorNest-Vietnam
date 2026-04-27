@@ -15,7 +15,7 @@ const VALUES = [
     {
         icon: '🏠',
         title: 'The Home Kitchen Test',
-        body: `Every recipe on this site has been cooked in my apartment kitchen in Gotha, Thuringia — on a four-burner stove, with ingredients I can actually find at the Asian supermarket forty minutes away. If I can't make it work here, it doesn't go up.`,
+        body: `Every recipe on this site has been cooked in my apartment kitchen in Waltershausen, Thuringia — on a four-burner stove, with ingredients I can actually find at the Asian supermarket forty minutes away. If I can't make it work here, it doesn't go up.`,
     },
     {
         icon: '📖',
@@ -145,7 +145,7 @@ export default function AboutPage() {
                         <div style={{ marginTop: 20, textAlign: 'center' }}>
                             <p style={{ fontSize: 13, fontWeight: 700, color: '#2D1A0E', margin: '0 0 4px' }}>Nguyen Quan Huy</p>
                             <p style={{ fontSize: 11, color: '#D97706', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', margin: 0 }}>Founder & Writer</p>
-                            <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.5)', margin: '6px 0 0', fontStyle: 'italic' }}>Gotha, Thuringia, Germany</p>
+                            <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.5)', margin: '6px 0 0', fontStyle: 'italic' }}>Waltershausen, Thuringia, Germany</p>
                         </div>
                     </motion.div>
 
@@ -172,7 +172,7 @@ export default function AboutPage() {
                                 </p>
                             </blockquote>
                             <p style={{ margin: 0 }}>
-                                I am not a professional chef. I am not a food scientist. I am a person who misses home and has learned to cook my way back to it. Every recipe on this site was tested in my kitchen here in Gotha, usually late at night, often after calling my mother to ask why it didn't taste right. She always knows why.
+                                I am not a professional chef. I am not a food scientist. I am a person who misses home and has learned to cook my way back to it. Every recipe on this site was tested in my kitchen here in Waltershausen, usually late at night, often after calling my mother to ask why it didn't taste right. She always knows why.
                             </p>
                         </div>
                     </motion.div>
