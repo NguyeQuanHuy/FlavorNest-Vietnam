@@ -11,13 +11,13 @@ interface Category {
 }
 
 const CATEGORIES: Category[] = [
-    { href: '/categories#pho', emoji: '🍜', label: 'Phở', count: '12 recipes', accent: 'hover:bg-[#D97706]/18' },
-    { href: '/categories#bun', emoji: '🥢', label: 'Bún', count: '9 recipes', accent: 'hover:bg-[#D97706]/18' },
-    { href: '/categories#banhmi', emoji: '🥖', label: 'Bánh Mì', count: '7 recipes', accent: 'hover:bg-[#166534]/12' },
+    { href: '/categories#pho', emoji: '🍜', label: 'Pho', count: '12 recipes', accent: 'hover:bg-[#D97706]/18' },
+    { href: '/categories#bun', emoji: '🥢', label: 'Rice noodles', count: '9 recipes', accent: 'hover:bg-[#D97706]/18' },
+    { href: '/categories#banhmi', emoji: '🥖', label: 'Banh Mi', count: '7 recipes', accent: 'hover:bg-[#166534]/12' },
     { href: '/categories#rolls', emoji: '🌯', label: 'Fresh Rolls', count: '6 recipes', accent: 'hover:bg-[#166534]/12' },
-    { href: '/categories#com', emoji: '🍚', label: 'Cơm Tấm', count: '8 recipes', accent: 'hover:bg-[#D97706]/18' },
+    { href: '/categories#com', emoji: '🍚', label: 'Broken rice', count: '8 recipes', accent: 'hover:bg-[#D97706]/18' },
     { href: '/categories#street', emoji: '🏮', label: 'Street Food', count: '14 recipes', accent: 'hover:bg-[#4B2E1A]/8' },
-    { href: '/categories#dessert', emoji: '🍮', label: 'Chè & Sweets', count: '10 recipes', accent: 'hover:bg-[#D97706]/18' },
+    { href: '/categories#dessert', emoji: '🍮', label: 'Sweet soup', count: '10 recipes', accent: 'hover:bg-[#D97706]/18' },
     { href: '/categories#grilled', emoji: '🔥', label: 'Grilled', count: '5 recipes', accent: 'hover:bg-red-50' },
 ]
 
