@@ -193,39 +193,45 @@ export default function StreetFoodPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-            {/* HERO */}
-            <section style={{ background: 'linear-gradient(135deg, #1A0E07 0%, #2D1A0E 60%, #3D2415 100%)', paddingTop: 120, paddingBottom: 80, padding: '120px 24px 80px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 70% 50%, rgba(217,119,6,0.12) 0%, transparent 60%)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative' }}>
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}>
+        {/* ── HERO ── */}
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '120px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
+                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+                    {/* Breadcrumb */}
+                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Street Food', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>}
-                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                {href ?
+                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
                         ))}
                     </nav>
 
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.15)', border: '1px solid rgba(217,119,6,0.3)', borderRadius: 100, padding: '7px 18px', marginBottom: 24 }}>
-                        <span style={{ fontSize: 14 }}>🥢</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#FBB040' }}>Sidewalk Classics</span>
+                    {/* Eyebrow */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Sidewalk Classics</span>
                     </div>
 
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(44px, 7vw, 88px)', fontWeight: 800, color: 'white', margin: '0 0 20px', lineHeight: 0.95 }}>
+                    {/* Title */}
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(42px, 6vw, 76px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
                         Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Street Food</span>
                     </h1>
 
-                    <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 17, maxWidth: 520, lineHeight: 1.78, margin: '0 0 44px' }}>
+                    {/* Subtitle */}
+                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
                         The best food in Vietnam has never been served in restaurants. It lives on plastic stools, steaming carts, and narrow laneways where the recipes are older than the buildings around them.
                     </p>
 
-                    <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}>
-                        {[['🥢', `${RECIPES.length}`, 'Recipes'], ['⏱', '20 min', 'Quickest'], ['🌏', '3', 'Regions'], ['⭐', '4.8', 'Avg Rating']].map((s, i) => (
-                            <div key={s[2]} style={{ borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.1)' : 'none', paddingLeft: i > 0 ? 24 : 0, paddingRight: 24, marginBottom: 10 }}>
-                                <span style={{ fontSize: 13 }}>{s[0]}</span>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: 'white', lineHeight: 1 }}>{s[1]}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase', marginTop: 4 }}>{s[2]}</div>
+                    {/* Stats */}
+                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                        {[['🥢', `${RECIPES.length}`, 'Recipes'], ['⏱', '20 min', 'Quickest'], ['🌏', '3', 'Regions'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                            <div key={lbl}>
+                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
                             </div>
                         ))}
                     </div>
