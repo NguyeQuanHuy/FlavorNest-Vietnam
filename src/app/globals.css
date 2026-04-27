@@ -62,25 +62,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* ── Mobile recipe grid: force 2 columns on small screens ── */
+/* ── Mobile recipe grid: ultra-compact 2 columns ── */
 @media (max-width: 640px) {
     section > div[style*="repeat(auto-fill, minmax(320px"],
     section > div[style*="repeat(auto-fill, minmax(330px"] {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
+        gap: 10px !important;
     }
-    /* Compact card content padding on mobile */
     .r-card > div:last-child,
     a.r-card > div:last-child {
-        padding: 12px 14px 14px !important;
+        padding: 10px 12px 12px !important;
     }
-    /* Smaller image height on mobile cards */
     .r-card > div:first-child {
-        height: 130px !important;
+        height: 100px !important;
     }
-    /* Smaller title on mobile cards */
     .r-card h2 {
-        font-size: 15px !important;
-        line-height: 1.25 !important;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 2px !important;
+    }
+    /* Hide region label & subtitle on mobile to slim cards */
+    .r-card div[style*="letter-spacing: 0.12em"],
+    .r-card div[style*="letterSpacing: '0.12em'"] {
+        display: none !important;
+    }
+    /* Smaller badges on image */
+    .r-card div[style*="position: absolute"] {
+        font-size: 9px !important;
+        padding: 3px 7px !important;
     }
 }
