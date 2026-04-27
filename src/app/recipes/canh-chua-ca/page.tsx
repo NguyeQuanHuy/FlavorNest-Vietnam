@@ -50,29 +50,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare the tamarind',
-            description: 'TODO — soak tamarind in hot water 10 minutes, mash, strain through sieve. Discard seeds and fibre.',
+            description: 'Place dried tamarind pulp in a small bowl of hot water and let it soak for 10 minutes to soften. Mash the pulp with a spoon to release the juices, then strain the mixture through a fine-mesh sieve into a bowl, discarding the seeds and tough fibers.',
         },
         {
             title: 'Build the sour broth',
-            description: 'TODO — bring water to simmer, add tamarind liquid, pineapple, fish sauce and sugar. Simmer 10 minutes.',
-            tip: 'TODO — taste now. The broth should taste noticeably sour; the fish will mellow it.',
+            description: 'Bring a pot of water to a gentle simmer and stir in the concentrated tamarind liquid, pineapple chunks, fish sauce, and sugar. Let the base simmer for 10 minutes so the pineapple can infuse the water with its natural acidity and sweetness.',
+            tip: 'Taste the broth now. It should taste noticeably sharp and sour; the proteins from the fish will later mellow the acidity and round out the flavor profile.',
         },
         {
             title: 'Add the hardier vegetables',
-            description: 'TODO — add tomato wedges and elephant ear stems; simmer 3 minutes.',
+            description: 'Add the tomato wedges and sliced elephant ear stems (bạc hà) to the pot. Simmer for about 3 minutes until the stems start to soften slightly and absorb the flavored broth like a sponge.',
         },
         {
             title: 'Poach the fish',
-            description: 'TODO — slide fish into simmering broth; cook 4 minutes until just opaque. Do not boil.',
-            tip: 'TODO — a hard boil breaks the fillets. Keep it at a lazy bubble.',
+            description: 'Carefully slide the fish steaks or fillets into the simmering broth. Cook for about 4 to 5 minutes until the flesh is just opaque and flaky. Ensure the liquid remains at a gentle simmer rather than a rolling boil.',
+            tip: 'A hard boil will agitate and break the delicate fish fillets into small pieces. Keep the broth at a "lazy bubble" to poach the fish gently and keep it intact.',
         },
         {
             title: 'Add okra and bean sprouts',
-            description: 'TODO — off heat, add okra and bean sprouts; residual heat cooks them to just-tender.',
+            description: 'Turn off the heat and immediately add the sliced okra and fresh bean sprouts. The residual heat of the soup is enough to cook these vegetables to a just-tender state while maintaining their signature crunch.',
         },
         {
             title: 'Finish with herbs and fried garlic',
-            description: 'TODO — shower rice paddy herb, sawtooth herb, fried garlic and chilli; serve with steamed rice on the side.',
+            description: 'Shower the soup with a generous mix of chopped rice paddy herb (ngò ôm), sawtooth herb (ngò gai), crispy fried garlic, and sliced red chilies. Serve hot with a side of steamed jasmine rice and a small saucer of fish sauce for dipping.',
         },
     ],
 };
