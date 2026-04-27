@@ -51,29 +51,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Season and knead the filling',
-            description: 'TODO — combine all filling ingredients; knead 2 minutes until sticky. Rest 15 minutes.',
-            tip: 'TODO — kneading develops the bind so rolls hold together on the grill.',
+            description: 'In a large bowl, combine ground beef with minced lemongrass, garlic, shallots, soy sauce, and a touch of five-spice powder. Knead the mixture vigorously for about 2 minutes until it becomes tacky and sticky. Let it rest for 15 minutes to allow the spices to meld.',
+            tip: 'Kneading develops the protein bind, acting like a natural glue so the rolls hold their shape and stay juicy on the grill instead of crumbling.',
         },
         {
             title: 'Prepare the leaves',
-            description: 'TODO — lay leaves vein-side up, shiny side down.',
+            description: 'Wash the Piper sarmentosum (Lá Lốt) leaves carefully and pat them dry. Lay each leaf flat on your workspace with the matte, textured vein-side facing up and the vibrant, shiny side facing down.',
+            tip: 'If the leaves are too stiff to roll, blanch them in hot water for 2 seconds or leave them out to wilt slightly so they become more pliable.',
         },
         {
             title: 'Roll the parcels',
-            description: 'TODO — 1 tablespoon filling near stem; roll tight, tuck sides, pierce with skewer in pairs.',
+            description: 'Place about one tablespoon of the beef filling near the stem end of the leaf. Roll it tightly toward the tip, tucking the sides in as you go. Secure the roll by piercing it through the center with a bamboo skewer, grouping them in pairs to make flipping easier.',
+            tip: 'Keep the rolls uniform in size to ensure they all cook through at the same rate on the grill.',
         },
         {
             title: 'Brush with oil and grill',
-            description: 'TODO — oil keeps the leaves from burning. Grill over medium-hot coals 3 minutes per side.',
-            tip: 'TODO — the leaf should blister and darken, not turn to ash.',
+            description: 'Lightly brush each parcel with neutral oil to keep the leaves from burning. Place the skewers over medium-hot coals or a grill pan, cooking for about 3 minutes per side until the beef is firm and the leaves are fragrant.',
+            tip: 'The goal is for the leaf to blister and darken into a deep forest green, releasing its signature peppery aroma, without letting it turn to ash.',
         },
         {
             title: 'Rest briefly',
-            description: 'TODO — 2 minutes on a plate so the juices redistribute.',
+            description: 'Remove the skewers from the heat and let the rolls rest on a warm plate for about 2 minutes. This allows the internal juices to redistribute, ensuring every bite is moist.',
+            tip: 'During this time, the residual heat finishes cooking the very center of the beef without drying out the exterior.',
         },
         {
             title: 'Build the table',
-            description: 'TODO — serve rolls alongside rice paper, vermicelli, herbs and dip; everyone wraps their own.',
+            description: 'Arrange the hot rolls on a platter alongside rice paper, thin vermicelli noodles (bánh hỏi), a variety of fresh herbs, and a bowl of Mắm Nêm (fermented pineapple anchovy dip) so everyone can wrap their own rolls at the table.',
+            tip: 'For the best experience, include starfruit or green banana slices in your herb platter to provide a sour and astringent contrast to the savory beef.',
         },
     ],
 };
