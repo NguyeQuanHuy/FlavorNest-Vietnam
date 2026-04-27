@@ -53,29 +53,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Extract the crab essence',
-            description: 'TODO — clean crabs, pound in mortar with salt, strain twice through muslin to get crab milk. Reserve.',
-            tip: 'TODO — the pounding releases the protein that forms the rieu rafts. A blender will not do it.',
+            description: 'Clean the paddy crabs and remove the shells. Place the crab bodies in a mortar with a pinch of salt and pound vigorously into a fine paste. Add water, stir well, and strain the mixture twice through a muslin cloth or fine sieve to collect the "crab milk," discarding the gritty shell fragments.',
+            tip: 'The traditional pounding action releases the specific proteins needed to form thick, fluffy "rieu" rafts. A blender blades chop the fibers too finely, which often results in a weak, sandy texture instead of solid clouds.',
         },
         {
             title: 'Bring to the raft stage',
-            description: 'TODO — heat crab liquid slowly, stirring once only. At 80°C the protein rises as clouds; skim them onto a plate.',
-            tip: 'TODO — boiling breaks the rafts apart. Keep it below a simmer.',
+            description: 'Pour the crab liquid into a pot and heat it very slowly over medium-low heat, stirring once at the beginning to prevent sticking. As the temperature reaches approximately 80°C, the protein will coagulate and rise to the surface in large, soft clouds; carefully skim these rafts onto a separate plate.',
+            tip: 'Boiling is the enemy of a good raft. If the liquid boils aggressively, the turbulence will break the delicate protein clouds apart into tiny grains. Keep the heat strictly below a simmer.',
         },
         {
             title: 'Build the tomato base',
-            description: 'TODO — fry shallots, garlic in annatto oil; add tomatoes and sugar; cook until they collapse.',
+            description: 'In a separate pan, sauté minced shallots and garlic in annatto oil until fragrant and vibrant red. Add the tomato wedges and a sprinkle of sugar, cooking them over medium heat until they soften and collapse into a rich, colorful base.',
         },
         {
             title: 'Combine and season',
-            description: 'TODO — pour tomato base into crab stock; add mắm tôm and mẻ. Simmer 10 minutes.',
+            description: 'Pour the sautéed tomato base into the main pot containing the crab stock. Season the broth with fermented shrimp paste (mắm tôm), fermented rice (mẻ) for a subtle sourness, and salt. Let the broth simmer gently for 10 minutes to develop depth.',
         },
         {
             title: 'Return the rafts',
-            description: 'TODO — gently slide the reserved rieu back onto the surface. Add fried tofu.',
+            description: 'Gently slide the reserved crab "rieu" rafts back onto the surface of the simmering broth so they stay intact. Add the deep-fried tofu puffs, allowing them to bob on the surface and soak up the savory, tangy soup.',
         },
         {
             title: 'Assemble the bowls',
-            description: 'TODO — vermicelli in bowls, ladle broth with rieu over, top with herbs and banana blossom; lime on the side.',
+            description: 'Place fresh rice vermicelli in bowls and carefully ladle the hot broth over the noodles, ensuring everyone gets a generous portion of the crab raft and tofu. Serve with a platter of split water spinach, shredded banana blossom, and fresh herbs, with lime wedges and extra mắm tôm on the side.',
         },
     ],
 };
