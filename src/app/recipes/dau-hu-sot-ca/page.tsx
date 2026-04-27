@@ -45,34 +45,38 @@ const recipe: RecipeData = {
             ],
         },
     ],
-    steps: [
-        {
-            title: 'Press and dry the tofu',
-            description: 'TODO — sandwich tofu between towels under a plate for 15 minutes.',
-            tip: 'TODO — wet tofu never crisps.',
-        },
-        {
-            title: 'Fry to golden crust',
-            description: 'TODO — fry cubes in hot oil 2 minutes per side; drain on paper.',
-        },
-        {
-            title: 'Soften the shallots',
-            description: 'TODO — in the same pan, fry shallots and garlic until fragrant.',
-        },
-        {
-            title: 'Collapse the tomatoes',
-            description: 'TODO — add tomato wedges, paste, soy, sugar; cook until saucy, ~7 minutes.',
-        },
-        {
-            title: 'Return the tofu',
-            description: 'TODO — fold tofu into sauce; simmer 3 minutes so it drinks the flavour.',
-            tip: 'TODO — longer than 5 minutes and the crust dissolves.',
-        },
-        {
-            title: 'Scatter and serve',
-            description: 'TODO — spring onion, black pepper, serve over rice.',
-        },
-    ],
+     steps: [
+            {
+                title: 'Press and dry the tofu',
+                description: 'Cut the tofu into bite-sized cubes and sandwich them between layers of paper towels or a clean kitchen cloth. Place a heavy plate on top for about 15 minutes to squeeze out the excess moisture.',
+                tip: 'Wet tofu never crisps. Removing the internal water not only helps it brown better but also creates a "sponge" effect so the tofu can soak up more tomato sauce later.',
+            },
+            {
+                title: 'Fry to golden crust',
+                description: 'Heat oil in a pan over medium-high heat. Carefully add the tofu cubes and fry for about 2-3 minutes per side until each face has a light golden-brown, crispy crust. Drain the cubes on paper towels to remove excess grease.',
+                tip: 'Don’t crowd the pan; if the temperature drops too much, the tofu will boil in the oil rather than fry, resulting in a soggy texture.',
+            },
+            {
+                title: 'Soften the shallots',
+                description: 'Wipe the pan or leave a tablespoon of oil. Add the finely minced shallots and garlic, sautéing them over medium heat until they become translucent, soft, and highly fragrant.',
+                tip: 'Low and slow is key here; you want to extract the sweetness of the shallots without burning the garlic.',
+            },
+            {
+                title: 'Collapse the tomatoes',
+                description: 'Add the tomato wedges, a teaspoon of tomato paste for color, soy sauce, and a pinch of sugar. Stir frequently and cook for about 7 minutes, mashing some of the tomatoes with your spatula until they collapse into a rich, pulpy sauce.',
+                tip: 'Add a small splash of water if the pan looks too dry to help the tomatoes break down into a smooth consistency.',
+            },
+            {
+                title: 'Return the tofu',
+                description: 'Gently fold the fried tofu cubes back into the pan, ensuring each piece is well-coated. Simmer for 3 minutes over low heat so the tofu "drinks" the flavor of the sauce while retaining its structure.',
+                tip: 'Keep an eye on the clock: simmer for no longer than 5 minutes, or the crispy crust will dissolve and the tofu will become mushy.',
+            },
+            {
+                title: 'Scatter and serve',
+                description: 'Turn off the heat and scatter a handful of chopped spring onions and a generous crack of black pepper over the top. Serve immediately in a shallow bowl alongside steaming hot jasmine rice.',
+                tip: 'For an extra touch of freshness, you can also add a few sprigs of cilantro (coriander) right before serving.',
+            },
+        ],
 };
 
 export default function Page() {
