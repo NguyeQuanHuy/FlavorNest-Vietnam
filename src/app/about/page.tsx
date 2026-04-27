@@ -36,15 +36,15 @@ const VALUES = [
 
 const JOURNEY = [
     {
-        year: '2023',
+        year: '2024',
         event: `I moved to Germany and quickly discovered that the food I missed most was completely invisible here. Not just hard to find — invisible. Nobody was writing about banh canh he in English. Nobody outside of Phu Yen province even knew it existed.`,
     },
     {
-        year: '2024',
+        year: '2026',
         event: `The first version of FlavorNest went live — twenty recipes, mostly from my mother's kitchen, written the way she taught them to me over phone calls that stretched past midnight German time.`,
     },
     {
-        year: '2025',
+        year: '2026',
         event: `The project expanded beyond Phu Yen. Northern pho, Hue bun bo, Saigon com tam. Stories about fermentation, rice civilisation, the royal kitchens of the Nguyen dynasty. The site became what I actually wanted it to be.`,
     },
     {
