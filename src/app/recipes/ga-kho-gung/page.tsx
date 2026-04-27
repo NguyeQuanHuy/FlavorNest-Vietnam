@@ -48,7 +48,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate the chicken',
-            description: 'TODO — toss chicken with fish sauce, palm sugar, half the ginger, pepper; rest 20 minutes.',
+            description: 'Combine the chicken pieces in a bowl with fish sauce, palm sugar, half of your julienned ginger, and a pinch of black pepper. Mix thoroughly to ensure every piece is coated, then let it rest for 20 minutes to allow the flavors to penetrate the meat.',
         },
         {
             title: 'Build a light caramel',
