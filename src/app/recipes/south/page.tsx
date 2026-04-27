@@ -226,7 +226,7 @@ export default function SouthernCuisinePage() {
 
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.3)', borderRadius: 100, padding: '7px 18px', marginBottom: 24 }}>
                         <span style={{ fontSize: 14 }}>🌴</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#6EE7B7' }}>Ẩm Thực Miền Nam</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#6EE7B7' }}>Southern cuisine</span>
                     </div>
 
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(44px, 7vw, 88px)', fontWeight: 800, color: 'white', margin: '0 0 20px', lineHeight: 0.95 }}>
