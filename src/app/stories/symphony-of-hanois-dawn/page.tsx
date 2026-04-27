@@ -30,71 +30,84 @@ export default function SymphonyOfHanoisDawnPage() {
                     transformOrigin: 'left',
                 }}
             />
+{/* ── HERO SECTION ── */}
+<section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+    {/* Background image */}
+    <div style={{ position: 'absolute', inset: 0 }}>
+        <Image
+            src="https://images.unsplash.com/photo-1583224994076-ae3a3025f8eb?auto=format&fit=crop&w=1800&q=85"
+            alt="The Symphony of Hanoi's Dawn"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+        />
+    </div>
+    
+    {/* Overlays */}
+    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
+    <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
-{/* ── HERO ── */}
-            <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-                {/* Background image */}
-                <div style={{ position: 'absolute', inset: 0 }}>
-                    <Image
-                        src="https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=1800&q=85"
-                        alt="Vietnamese cookbook and dishes on a wooden table"
-                        fill
-                        priority
-                        quality={85}
-                        sizes="100vw"
-                        style={{ objectFit: 'cover' }}
-                    />
-                </div>
-                {/* Dark overlay */}
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
+    {/* Content Container */}
+    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
+        
+        {/* Breadcrumbs */}
+        <motion.nav
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}
+        >
+            {[['Home', '/'], ['Stories', '/stories'], ['Hanoi Heritage', '']].map(([label, href], i) => (
+                <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
+                    {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                        : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                </span>
+            ))}
+        </motion.nav>
 
-                {/* Content with animation */}
-                <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
-                    <motion.nav
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                        style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}
-                    >
-                        {[['Home', '/'], ['Stories', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
-                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
-                            </span>
-                        ))}
-                    </motion.nav>
+        {/* Tagline */}
+        <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}
+        >
+            <div style={{ width: 32, height: 2, background: '#D97706' }} />
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>Hanoi Heritage · Longread</span>
+        </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 16 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-                        style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}
-                    >
-                        <div style={{ width: 32, height: 2, background: '#D97706' }} />
-                        <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>Kitchen Stories</span>
-                    </motion.div>
+        {/* Headline */}
+        <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}
+        >
+            The Symphony<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>of Hanoi's Dawn.</span>
+        </motion.h1>
 
-                    <motion.h1
-                        initial={{ opacity: 0, y: 24 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                        style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}
-                    >
-                        The stories<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>behind the food.</span>
-                    </motion.h1>
+        {/* Sub-description */}
+        <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}
+        >
+            On the secret rhythm of pho — and why the soul of a city still wakes up at four in the morning to skim a pot of broth.
+        </motion.p>
+    </div>
+</section>
 
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                        style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}
-                    >
-                        Heritage, technique, travel, and the quiet wisdom passed from one Vietnamese kitchen to the next.
-                    </motion.p>
-                </div>
-            </section>
+{/* ── ARTICLE BODY ── */}
+<article style={{ position: 'relative', background: '#fff', padding: '80px 0' }}>
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+        {/* Nội dung bài viết của bạn bắt đầu từ đây */}
+        <p>Nội dung bài viết...</p>
+    </div>
+</article>
 
                 {/* Scroll indicator */}
                 <motion.div
