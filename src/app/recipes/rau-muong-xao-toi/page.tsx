@@ -45,29 +45,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Blanch to lock the colour',
-            description: 'TODO — drop water spinach into salted boiling water for 30 seconds; plunge into ice water; drain hard.',
-            tip: 'TODO — the ice bath is non-negotiable. It keeps the stems emerald-green through the wok.',
+            description: 'Drop the water spinach into a large pot of salted boiling water for exactly 30 seconds. Immediately remove and plunge the greens into a bowl of ice water to stop the cooking process, then drain thoroughly and squeeze out any excess moisture.',
+            tip: 'The ice bath is non-negotiable. It "shocks" the chlorophyll to keep the stems emerald-green and crunchy even after they hit the high heat of the wok.',
         },
         {
             title: 'Heat the wok until it smokes',
-            description: 'TODO — dry wok over highest heat until a water drop evaporates instantly.',
+            description: 'Place a dry wok or large skillet over the highest possible heat. Wait until the metal begins to shimmer and a drop of water flicked onto the surface evaporates instantly with a loud hiss.',
         },
         {
             title: 'Bloom the garlic',
-            description: 'TODO — add oil, then garlic; fry 15 seconds only until edges turn pale gold.',
-            tip: 'TODO — burnt garlic ruins the dish. Pull it just before it colours.',
+            description: 'Swirl in 2 tablespoons of oil, then immediately add a generous amount of crushed garlic. Stir-fry for only 15 seconds until the garlic is fragrant and the edges just begin to turn a pale golden hue.',
+            tip: 'Burnt garlic becomes bitter and ruins the delicate flavor of the greens. Pull the garlic or add the vegetables just before it fully colors to account for carry-over cooking.',
         },
         {
             title: 'Toss the greens in',
-            description: 'TODO — add water spinach in one go, toss continuously for 60 seconds.',
+            description: 'Add the blanched water spinach into the wok all at once. Using a spatula or tongs, toss the greens continuously for about 60 seconds to ensure every stem is coated in the hot, garlic-infused oil.',
         },
         {
             title: 'Season at the end',
-            description: 'TODO — push spinach up the sides, pour fish sauce and sugar into the bottom of the wok, toss once more.',
+            description: 'Push the spinach up the sides of the wok to create a clear space in the center. Pour in a splash of fish sauce and a pinch of sugar; let the sauce bubble for a second to caramelize slightly, then toss everything together one final time.',
         },
         {
             title: 'Plate immediately',
-            description: 'TODO — pile onto a warm plate; serve with lime and the dipping fish sauce on the side.',
+            description: 'Pile the glistening greens onto a warm plate. Serve immediately while the stems are still crisp, accompanied by a wedge of lime and a small saucer of chili-infused fish sauce for dipping.',
         },
     ],
 };
