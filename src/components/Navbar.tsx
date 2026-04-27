@@ -431,10 +431,9 @@ export default function Navbar() {
               }}
               className="fixed top-0 right-0 bottom-0 z-50 flex flex-col"
               style={{
-                width: "min(86vw, 380px)",
+                width: "100vw",
+                maxWidth: "100vw",
                 background: "#F5EDE3",
-                borderTopLeftRadius: 24,
-                borderBottomLeftRadius: 24,
                 boxShadow: "-10px 0 40px rgba(45,26,14,0.25)",
               }}
             >
