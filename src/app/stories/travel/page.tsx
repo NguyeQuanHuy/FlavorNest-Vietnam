@@ -323,101 +323,69 @@ export default function TravelGuidePage() {
         a { color: inherit; }
       `}</style>
 
-            {/* ── HERO ────────────────────────────────────────────────────────────── */}
-            <section
-                ref={heroRef}
-                style={{ position: 'relative', height: '100vh', minHeight: 600, maxHeight: 960, overflow: 'hidden', display: 'flex', alignItems: 'flex-end' }}
-                aria-label="Travel Guide hero — Where to Eat in Vietnam"
-            >
-                {/* Parallax image */}
-                <motion.div style={{ position: 'absolute', inset: '-10% 0', y: heroY }}>
+  {/* ── HERO ── */}
+            <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+                {/* Background image */}
+                <div style={{ position: 'absolute', inset: 0 }}>
                     <Image
                         src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1800&q=85"
-                        alt="Street food stalls in Vietnam at golden hour"
+                        alt="Vietnamese street food market at golden hour"
                         fill
-                        style={{ objectFit: 'cover', objectPosition: 'center 55%' }}
                         priority
-                        quality={90}
+                        quality={85}
+                        sizes="100vw"
+                        style={{ objectFit: 'cover' }}
                     />
-                </motion.div>
-
-                {/* Layered gradients for depth */}
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(13,8,4,0.25) 0%, rgba(13,8,4,0.05) 35%, rgba(13,8,4,0.55) 70%, rgba(13,8,4,0.97) 100%)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(13,8,4,0.4) 0%, transparent 60%)' }} />
-
-                {/* Breadcrumb */}
-                <div style={{ position: 'absolute', top: 104, left: 0, right: 0, padding: '0 40px' }}>
-                    <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                        <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13 }} aria-label="Breadcrumb">
-                            <Link href="/" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>Home</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>
-                            <Link href="/stories" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>Stories</Link>
-                            <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>
-                            <span style={{ color: '#D97706', fontWeight: 600 }}>Travel Guide</span>
-                        </nav>
-                    </div>
                 </div>
+                {/* Dark overlay */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
-                {/* Hero content */}
-                <motion.div
-                    style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '0 40px 80px', opacity: heroOpacity }}
-                >
-                    {/* Label */}
-                    <motion.div variants={heroText} initial="hidden" animate="show"
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(217,119,6,0.15)', border: '1px solid rgba(217,119,6,0.35)', backdropFilter: 'blur(12px)', borderRadius: 100, padding: '8px 20px', marginBottom: 28 }}
+                {/* Content with animation */}
+                <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
+                    <motion.nav
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}
                     >
-                        <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D97706', display: 'inline-block', boxShadow: '0 0 8px #D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#FBB040' }}>Where to Eat in Vietnam</span>
+                        {[['Home', '/'], ['Stories', '/stories'], ['Travel', '']].map(([label, href], i) => (
+                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
+                                {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                            </span>
+                        ))}
+                    </motion.nav>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}
+                    >
+                        <div style={{ width: 32, height: 2, background: '#D97706' }} />
+                        <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>Where to Eat in Vietnam</span>
                     </motion.div>
 
-                    {/* Headline */}
                     <motion.h1
-                        variants={heroText} initial="hidden" animate="show"
-                        style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(52px, 8vw, 100px)', fontWeight: 800, color: 'white', margin: 0, lineHeight: 0.92, marginBottom: 28, letterSpacing: '-0.02em' }}
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}
                     >
-                        Your Guide<br />
-                        to <span style={{ color: '#D97706', fontStyle: 'italic' }}>Vietnam's</span><br />
-                        Greatest Tables
+                        Eat the country<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>one street at a time.</span>
                     </motion.h1>
 
-                    {/* Subtext */}
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-                        style={{ fontSize: 'clamp(15px, 2vw, 19px)', color: 'rgba(255,255,255,0.62)', maxWidth: 540, lineHeight: 1.75, margin: '0 0 44px' }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}
                     >
-                        From a plastic stool on a Hanoi laneway to a fishing village in Vũng Tàu, we've eaten our way through Vietnam so you know exactly where to go — and what to order.
+                        From plastic stools in Hanoi alleys to seafood shacks on Vung Tau cliffs — a guide to where Vietnam actually eats.
                     </motion.p>
-
-                    {/* Stats row */}
-                    <motion.div
-                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}
-                        style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}
-                    >
-                        {[
-                            { val: `${GUIDES.length}`, lbl: 'Destination Guides' },
-                            { val: '3', lbl: 'Regions Covered' },
-                            { val: '200+', lbl: 'Restaurants Visited' },
-                            { val: '10 yrs', lbl: 'Eating Around Vietnam' },
-                        ].map((s, i) => (
-                            <div key={s.lbl} style={{ borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.12)' : 'none', paddingLeft: i > 0 ? 28 : 0, paddingRight: 28, marginBottom: 12 }}>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 28, fontWeight: 700, color: 'white', lineHeight: 1 }}>{s.val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.38)', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: 5 }}>{s.lbl}</div>
-                            </div>
-                        ))}
-                    </motion.div>
-                </motion.div>
-
-                {/* Scroll indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-                    style={{ position: 'absolute', bottom: 28, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 7 }}
-                >
-                    <span style={{ fontSize: 10, letterSpacing: '0.2em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>Scroll to explore</span>
-                    <motion.div
-                        animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
-                        style={{ width: 1, height: 36, background: 'linear-gradient(to bottom, rgba(255,255,255,0.5), transparent)' }}
-                    />
-                </motion.div>
+                </div>
             </section>
 
             {/* ── EDITOR'S NOTE ───────────────────────────────────────────────────── */}
