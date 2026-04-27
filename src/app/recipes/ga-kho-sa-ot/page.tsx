@@ -47,33 +47,33 @@ const recipe: RecipeData = {
         },
     ],
     steps: [
-        {
-            title: 'Marinate the chicken',
-            description: 'TODO — combine chicken with fish sauce, palm sugar, turmeric, pepper and half the lemongrass; rest 30 minutes.',
-        },
-        {
-            title: 'Bloom the aromatics',
-            description: 'TODO — oil in a heavy pot, add shallots, garlic, remaining lemongrass and chilli; fry 2 minutes until kitchen smells loud.',
-            tip: 'TODO — this is where you decide the heat of the final dish. Taste a strand of lemongrass now.',
-        },
-        {
-            title: 'Sear the chicken',
-            description: 'TODO — add marinated chicken skin-down; let it catch deep colour before stirring, 3 minutes.',
-        },
-        {
-            title: 'Reduce slowly',
-            description: 'TODO — add 200ml water, cover loosely, simmer 20 minutes turning once.',
-        },
-        {
-            title: 'Reduce to glaze',
-            description: 'TODO — uncover, raise heat, reduce another 5 minutes until sauce is syrupy and coats every piece.',
-            tip: 'TODO — stop the moment the sauce clings. Any longer and it turns to paste.',
-        },
-        {
-            title: 'Finish and serve',
-            description: 'TODO — crack pepper, scatter spring onion, serve over hot rice with a simple clear soup on the side.',
-        },
-    ],
+    {
+        title: 'Marinate the chicken',
+        description: 'In a mixing bowl, combine the chicken pieces with fish sauce, palm sugar, turmeric powder, ground pepper, and half of your finely minced lemongrass. Massage the seasonings into the meat and let it rest for at least 30 minutes so the earthy turmeric and citrusy lemongrass can penetrate deeply.',
+    },
+    {
+        title: 'Bloom the aromatics',
+        description: 'Heat oil in a heavy-bottomed pot over medium heat. Add the minced shallots, garlic, the remaining half of the lemongrass, and chopped chilies. Fry for about 2 minutes, stirring constantly, until the aromatics turn golden and the kitchen smells "loud" with a spicy, citrusy fragrance.',
+        tip: 'This is where you decide the heat of the final dish. Taste a strand of the fried lemongrass now; if you want it spicier, add a few more slices of chili before the chicken goes in.',
+    },
+    {
+        title: 'Sear the chicken',
+        description: 'Add the marinated chicken to the pot, ideally placing the pieces skin-side down. Let them sear undisturbed for about 3 minutes to allow the skin to catch a deep, golden-yellow color from the turmeric and render out some of its fat.',
+    },
+    {
+        title: 'Reduce slowly',
+        description: 'Pour in approximately 200ml of water (or coconut water for extra richness). Cover the pot loosely and let it simmer over medium-low heat for 20 minutes, turning the chicken pieces once halfway through to ensure they cook evenly and soak up the sauce.',
+    },
+    {
+        title: 'Reduce to glaze',
+        description: 'Uncover the pot and raise the heat slightly. Simmer for another 5 minutes, allowing the liquid to evaporate until the sauce becomes thick, syrupy, and beautifully coats every single piece of chicken.',
+        tip: 'Stop the cooking process the moment the sauce clings to the meat. Any longer and the sugars will over-concentrate, turning your silky glaze into a dry, sticky paste.',
+    },
+    {
+        title: 'Finish and serve',
+        description: 'Finish with a generous crack of fresh black pepper and a handful of sliced spring onions. Serve the chicken over hot jasmine rice, ideally with a simple clear vegetable soup (canh) on the side to balance the bold, spicy flavors.',
+    },
+],
 };
 
 export default function Page() {
