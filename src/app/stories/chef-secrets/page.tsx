@@ -169,7 +169,7 @@ export default function ChefSecretsPage() {
                 .tip-bullet:last-child { border-bottom: none; }
             `}</style>
 
-                {/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
                 {/* Background image */}
                 <div style={{ position: 'absolute', inset: 0 }}>
@@ -187,9 +187,14 @@ export default function ChefSecretsPage() {
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
-                {/* Content */}
+                {/* Content with animation */}
                 <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}>
+                    <motion.nav
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}
+                    >
                         {[['Home', '/'], ['Stories', '/stories'], ["Chef's Secrets", '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                                 {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
@@ -197,23 +202,38 @@ export default function ChefSecretsPage() {
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
                         ))}
-                    </nav>
+                    </motion.nav>
 
                     {/* Eyebrow */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}
+                    >
                         <div style={{ width: 32, height: 2, background: '#D97706' }} />
                         <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>Pro Tips & Techniques</span>
-                    </div>
+                    </motion.div>
 
                     {/* Title */}
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 104px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em' }}
+                    >
                         The small things<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>that make all the difference.</span>
-                    </h1>
+                    </motion.h1>
 
                     {/* Subtitle */}
-                    <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                        style={{ color: 'rgba(255,255,255,0.65)', fontSize: 'clamp(17px, 2vw, 20px)', maxWidth: 640, lineHeight: 1.7, margin: 0 }}
+                    >
                         The techniques Vietnamese home cooks learn from their mothers and grandmothers — the quiet wisdom that separates a good dish from an extraordinary one.
-                    </p>
+                    </motion.p>
                 </div>
             </section>
 
