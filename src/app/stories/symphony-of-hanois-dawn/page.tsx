@@ -241,7 +241,7 @@ export default function SymphonyOfHanoisDawnPage() {
 
                 <Section>
                     By 1910 the dish had migrated north to Hanoi. By the 1930s it was being sold
-                    from shoulder-pole carts along Hàng Bột and Cầu Gỗ streets, the vendors calling
+                    from shoulder-pole carts along Hàng Bột and Cau Go streets, the vendors calling
                     out <em>"phở-ơ!"</em> at dawn, the long second syllable rising like a question.
                     Old men in the Old Quarter still remember the call. They will imitate it for you
                     if you ask, their voices catching slightly on the high note, the way a singer's
