@@ -31,129 +31,95 @@ export default function SymphonyOfHanoisDawnPage() {
                 }}
             />
 
-            {/* Hero Section */}
-            <motion.section
-                style={{
-                    position: 'relative',
-                    height: '100vh',
-                    minHeight: '600px',
-                    overflow: 'hidden',
-                    opacity: heroOpacity,
-                }}
-            >
-                <motion.div
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        backgroundImage:
-                            'url(https://images.unsplash.com/photo-1583224994076-ae3a3025f8eb?w=1920&q=80)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        scale: heroScale,
-                    }}
-                />
-                <div
-                    style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background:
-                            'linear-gradient(180deg, rgba(45,26,14,0.45) 0%, rgba(45,26,14,0.3) 40%, rgba(45,26,14,0.95) 100%)',
-                    }}
-                />
+ {/* ── HERO SECTION: HANOI HERITAGE ── */}
+<section style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+    {/* Background image */}
+    <div style={{ position: 'absolute', inset: 0 }}>
+        <Image
+            src="https://images.unsplash.com/photo-1583224994076-ae3a3025f8eb?auto=format&fit=crop&w=1920&q=80"
+            alt="The Symphony of Hanoi's Dawn"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+        />
+    </div>
 
-                <div
-                    style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        padding: '0 24px 80px',
-                    }}
-                >
-                    <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4, duration: 1 }}
-                        >
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '12px',
-                                    marginBottom: '20px',
-                                }}
-                            >
-                                <span
-                                    style={{
-                                        width: '8px',
-                                        height: '8px',
-                                        borderRadius: '50%',
-                                        backgroundColor: '#D97706',
-                                    }}
-                                />
-                                <span
-                                    style={{
-                                        color: '#D97706',
-                                        fontSize: '12px',
-                                        letterSpacing: '2px',
-                                        fontWeight: 700,
-                                        fontFamily: 'DM Sans, sans-serif',
-                                    }}
-                                >
-                                    HANOI HERITAGE · LONGREAD
-                                </span>
-                            </div>
+    {/* Dark overlay & Ambient Light */}
+    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
+    <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
-                            <h1
-                                style={{
-                                    fontFamily: 'Playfair Display, serif',
-                                    color: '#FFF',
-                                    fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
-                                    fontWeight: 700,
-                                    lineHeight: 1.05,
-                                    letterSpacing: '-0.02em',
-                                    marginBottom: '24px',
-                                    maxWidth: '900px',
-                                }}
-                            >
-                                The Symphony of Hanoi's Dawn
-                            </h1>
+    {/* Content with animation */}
+    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
+        
+        {/* Breadcrumbs Navigation */}
+        <motion.nav
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 28 }}
+        >
+            {[['Home', '/'], ['Stories', '/stories'], ['Heritage', '']].map(([label, href], i) => (
+                <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {i > 0 && <span style={{ color: 'rgba(255,255,255,0.3)' }}>›</span>}
+                    {href ? <Link href={href} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                        : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                </span>
+            ))}
+        </motion.nav>
 
-                            <p
-                                style={{
-                                    fontFamily: 'Playfair Display, serif',
-                                    fontStyle: 'italic',
-                                    color: 'rgba(255,255,255,0.85)',
-                                    fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-                                    maxWidth: '700px',
-                                    lineHeight: 1.5,
-                                    marginBottom: '32px',
-                                }}
-                            >
-                                On the secret rhythm of pho — and why the soul of a city
-                                still wakes up at four in the morning to skim a pot of broth.
-                            </p>
+        {/* Category Tag */}
+        <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 22 }}
+        >
+            <div style={{ width: 32, height: 2, background: '#D97706' }} />
+            <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.24em', color: '#D97706', textTransform: 'uppercase' }}>HANOI HERITAGE · LONGREAD</span>
+        </motion.div>
 
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '24px',
-                                    color: 'rgba(255,255,255,0.6)',
-                                    fontSize: '14px',
-                                    fontFamily: 'DM Sans, sans-serif',
-                                }}
-                            >
-                                <span>By Huy Nguyen</span>
-                                <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'currentColor' }} />
-                                <span>April 2, 2026</span>
-                                <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'currentColor' }} />
-                                <span>6 min read</span>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
+        {/* Main Headline */}
+        <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(48px, 8vw, 96px)', fontWeight: 700, color: 'white', margin: '0 0 32px', lineHeight: 0.95, letterSpacing: '-0.02em', maxWidth: '900px' }}
+        >
+            The Symphony<br /><span style={{ color: '#D97706', fontStyle: 'italic', fontWeight: 400 }}>of Hanoi's Dawn.</span>
+        </motion.h1>
+
+        {/* Description & Metadata */}
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        >
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 'clamp(18px, 2vw, 22px)', maxWidth: 640, lineHeight: 1.6, margin: '0 0 32px', fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
+                On the secret rhythm of pho — and why the soul of a city still wakes up at four in the morning to skim a pot of broth.
+            </p>
+
+            <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '16px', 
+                color: 'rgba(255,255,255,0.45)', 
+                fontSize: '13px', 
+                fontFamily: 'DM Sans, sans-serif',
+                borderTop: '1px solid rgba(255,255,255,0.1)',
+                paddingTop: '24px',
+                width: 'fit-content'
+            }}>
+                <span style={{ color: 'white' }}>By Huy Nguyen</span>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: '#D97706' }} />
+                <span>April 2, 2026</span>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: '#D97706' }} />
+                <span>6 min read</span>
+            </div>
+        </motion.div>
+    </div>
+</section>
 
                 {/* Scroll indicator */}
                 <motion.div
