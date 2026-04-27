@@ -24,7 +24,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isLightPage = LIGHT_BG_PAGES.some((p) => pathname?.startsWith(p));
   const [scrolled, setScrolled] = useState(false);
-  const forceScrolled = false;
+  const forceScrolled = false; // Always dark mode
   const [recipesOpen, setRecipesOpen] = useState(false);
   const [storiesOpen, setStoriesOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -55,12 +55,8 @@ export default function Navbar() {
       <motion.nav
         initial={false}
         animate={{
-          background: forceScrolled
-            ? "rgba(245, 237, 227, 0.72)"
-            : "rgba(245, 237, 227, 0.02)",
-          borderBottomColor: forceScrolled
-            ? "rgba(75, 46, 26, 0.08)"
-            : "rgba(245, 237, 227, 0.12)",
+          background: "rgba(45, 26, 14, 0.85)",
+          borderBottomColor: "rgba(245, 237, 227, 0.12)",
         }}
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
         className="fixed top-0 left-0 right-0 z-[100]"
