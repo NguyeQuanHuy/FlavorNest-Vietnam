@@ -72,7 +72,7 @@ const recipe: RecipeData = {
         {
             title: 'Finish with pepper and spring onion',
             description: 'Once the sauce has reduced to your liking, turn off the heat. Top the dish with a generous amount of freshly cracked black pepper and a handful of chopped spring onions, then serve immediately over hot jasmine rice.',
-            tip: 'Always use freshly cracked pepper at the very end rather than pre-ground pepper. The heat of the dish will release the pepper's oils, providing a sharp aromatic contrast to the sweet and salty sauce..',
+            tip: 'Always use freshly cracked pepper at the very end rather than pre-ground pepper. The heat of the dish will release the pepper\'s oils, providing a sharp aromatic contrast to the sweet and salty sauce..',
         },
     ],
 };
