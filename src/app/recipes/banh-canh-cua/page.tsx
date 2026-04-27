@@ -52,29 +52,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Simmer the pork stock',
-            description: 'TODO — blanch pork knuckle, refresh, then simmer 45 minutes with onion until broth is sweet.',
-            tip: 'TODO — skim aggressively in the first 10 minutes for a clean broth.',
+            description: 'Blanch the pork knuckles in boiling water for 5 minutes, then refresh under cold water. Simmer them again in fresh water for about 45 minutes with a charred onion and dried shrimp until the broth is naturally sweet and the meat is tender.',
+            tip: 'Skim the surface aggressively in the first 10 minutes of simmering to remove all impurities. This ensures the base of your broth remains clean and ready to absorb the seafood flavors.',
         },
         {
             title: 'Steam the crab',
-            description: 'TODO — steam crab pieces 10 minutes; reserve shells and fat separately.',
+            description: 'Steam whole crabs or crab pieces for about 10 minutes. Once cooled, carefully extract the meat, keeping the leg segments intact, and reserve the shells to further flavor the stock. Be sure to scrape out and save the creamy crab fat (roe) separately.',
         },
         {
             title: 'Bloom the crab fat',
-            description: 'TODO — warm annatto oil gently, stir in crab fat until fragrant and deep orange.',
-            tip: 'TODO — do not fry hot or the fat turns bitter.',
+            description: 'Warm a tablespoon of annatto oil in a small pan over low heat, then gently stir in the reserved crab fat. Sauté for a minute until the oil becomes fragrant and takes on a deep, vibrant orange hue.',
+            tip: 'Low temperature is crucial here; do not fry the crab fat at high heat or the delicate oils will scorch and turn bitter, ruining the richness of the soup.',
         },
         {
             title: 'Build and thicken',
-            description: 'TODO — strain pork broth, add crab oil and fish sauce; whisk in tapioca slurry until glossy.',
+            description: 'Strain the pork broth into a clean pot and stir in the bloomed crab fat and fish sauce. Slowly whisk in a tapioca starch slurry while simmering until the broth transforms from a thin liquid into a glossy, thick, and silky consistency.',
         },
         {
             title: 'Cook the noodles and meatballs',
-            description: 'TODO — blanch bánh canh 2 minutes; poach meatballs in broth until they float.',
+            description: 'Blanch the thick tapioca noodles (bánh canh) for 2 minutes until translucent. Meanwhile, drop shrimp or pork meatballs into the bubbling broth, poaching them until they float to the surface, signaling they are cooked through.',
         },
         {
             title: 'Assemble',
-            description: 'TODO — noodles in bowls, crab and meatballs over, ladle broth, top with quail eggs, herbs and pepper.',
+            description: 'Arrange the noodles in bowls and top with generous portions of crab meat, meatballs, and peeled quail eggs. Ladle the thick, orange-tinted broth over the top and garnish with chopped scallions, cilantro, and a heavy dust of white pepper.',
         },
     ],
 };
