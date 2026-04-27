@@ -101,15 +101,7 @@ export default function SymphonyOfHanoisDawnPage() {
     </div>
 </section>
 
-{/* ── ARTICLE BODY ── */}
-<article style={{ position: 'relative', background: '#fff', padding: '80px 0' }}>
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
-        {/* Nội dung bài viết của bạn bắt đầu từ đây */}
-        <p>Nội dung bài viết...</p>
-    </div>
-</article>
-
-                {/* Scroll indicator */}
+    {/* Scroll indicator */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0, 1, 1, 0] }}
@@ -128,7 +120,18 @@ export default function SymphonyOfHanoisDawnPage() {
                 >
                     SCROLL TO READ ↓
                 </motion.div>
-            </motion.section>
+            </section>
+
+            {/* Article Body */}
+            <div
+                style={{
+                    maxWidth: '720px',
+                    margin: '0 auto',
+                    padding: '80px 24px 40px',
+                    fontFamily: 'Georgia, "Iowan Old Style", "Palatino Linotype", serif',
+                    color: '#2D1A0E',
+                }}
+            >
 
             {/* Article Body */}
             <div
