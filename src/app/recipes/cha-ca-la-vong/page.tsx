@@ -50,30 +50,30 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate the fish for 4 hours',
-            description: 'TODO — combine fish with all marinade ingredients; massage in; rest 4 hours refrigerated.',
-            tip: 'TODO — under 2 hours, the turmeric will not penetrate. Do not shortcut this.',
+            description: 'Cut firm white fish (like catfish or tilapia) into thick chunks. Combine with a marinade of galangal, turmeric, fermented rice (mẻ), shrimp paste, and oil. Massage the mixture thoroughly into the flesh and let it rest in the refrigerator for 4 hours.',
+            tip: 'Under 2 hours, the turmeric and galangal will not penetrate the density of the fish. Do not shortcut this, as the deep yellow hue and earthy aroma require time to develop.',
         },
         {
             title: 'Grill over charcoal',
-            description: 'TODO — thread fish on skewers; grill over medium coals 3 minutes per side until edges char.',
-            tip: 'TODO — a cast-iron grill pan indoors works; a broiler does not — you lose the smoke.',
+            description: 'Thread the marinated fish chunks onto skewers or place them in a grilling basket. Grill over medium-hot charcoal for about 3 minutes per side until the exterior is firm, golden-orange, and the edges begin to char slightly.',
+            tip: 'A cast-iron grill pan indoors works well to achieve the necessary sear; however, a broiler does not—you lose the essential smoky "breath" that defines this dish.',
         },
         {
             title: 'Heat the tableside pan',
-            description: 'TODO — bring a small cast-iron pan with oil to the table over a portable burner.',
+            description: 'To serve traditionally, bring a small cast-iron skillet filled with about 2-3 tablespoons of oil to the dining table. Place it over a portable gas burner or charcoal stove until the oil is hot and shimmering.',
         },
         {
             title: 'Add fish and the green bouquet',
-            description: 'TODO — when oil shimmers, add grilled fish, then dump in dill and spring onion. It should erupt in smoke.',
+            description: 'Once the oil shimmers, slide the grilled fish chunks into the pan. Immediately dump in a large "bouquet" of fresh dill and sliced spring onions. The cold herbs hitting the hot oil should cause the pan to erupt in fragrant smoke.',
         },
         {
             title: 'Toss until herbs wilt',
-            description: 'TODO — 60 seconds, no more. Herbs should be bright green, just collapsed.',
-            tip: 'TODO — overcooked dill turns bitter. Watch the colour.',
+            description: 'Use your chopsticks to gently toss the fish with the herbs for 60 seconds—no more. The dill and onions should be bright green and just barely collapsed from the heat.',
+            tip: 'Overcooked dill turns stringy and loses its citrusy sweetness, becoming bitter. Watch the color closely; as soon as it wilts, it is ready to eat.',
         },
         {
             title: 'Build the bowl',
-            description: 'TODO — noodles in a bowl, fish and herbs over, peanuts on top, spoon mắm tôm dip alongside.',
+            description: 'Place cold rice vermicelli (bún) into a bowl, then top with a generous portion of the hot fish and wilted herbs. Scatter roasted peanuts on top and serve with a bowl of Mắm Tôm (fermented shrimp paste) whisked with lime juice and chili.',
         },
     ],
 };
