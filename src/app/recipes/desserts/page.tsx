@@ -432,168 +432,49 @@ export default function DessertsPage() {
         .search-input::placeholder { color: rgba(75,46,26,0.35); }
       `}</style>
 
-            {/* ── HERO ───────────────────────────────────────────────────────────── */}
-            <section
-                ref={heroRef}
-                aria-label="Vietnamese Desserts hero"
-                style={{
-                    position: 'relative', height: '100vh',
-                    minHeight: 600, maxHeight: 900,
-                    overflow: 'hidden', display: 'flex', alignItems: 'flex-end',
-                }}
-            >
-                {/* Parallax image */}
-                <motion.div style={{ position: 'absolute', inset: '-8% 0', y: imgY }}>
-                    <Image
-                        src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1800&q=90"
-                        alt="Vietnamese desserts and chè — colourful bowls of sweet treats"
-                        fill
-                        style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
-                        priority
-                        quality={92}
-                    />
-                </motion.div>
+        {/* ── HERO ── */}
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '120px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
+                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+                    {/* Breadcrumb */}
+                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                        {[['Home', '/'], ['Recipes', '/recipes'], ['Desserts', '']].map(([label, href], i) => (
+                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                {href ?
+                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                            </span>
+                        ))}
+                    </nav>
 
-                {/* Dual gradient — depth + warmth */}
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(245,237,227,0.15) 0%, rgba(75,46,26,0.08) 40%, rgba(45,26,14,0.92) 100%)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(45,26,14,0.5) 0%, transparent 55%)' }} />
-
-                {/* Breadcrumb */}
-                <div style={{ position: 'absolute', top: 104, left: 0, right: 0, padding: '0 40px' }}>
-                    <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                        <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13 }} aria-label="Breadcrumb">
-                            {[['Home', '/'], ['Recipes', '/recipes'], ['Desserts', '']].map(([label, href], i) => (
-                                <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                    {i > 0 && <span style={{ color: 'rgba(255,255,255,0.2)' }}>›</span>}
-                                    {href
-                                        ? <Link href={href} style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                        : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>
-                                    }
-                                </span>
-                            ))}
-                        </nav>
+                    {/* Eyebrow */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Sweet Finale</span>
                     </div>
-                </div>
 
-                {/* Hero text */}
-                <motion.div
-                    style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '0 40px 80px', opacity: textOpacity }}
-                >
-                    {/* Label chip */}
-                    <motion.div
-                        variants={heroLine(0)}
-                        initial="hidden" animate="show"
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(217,119,6,0.16)', border: '1px solid rgba(217,119,6,0.38)', backdropFilter: 'blur(14px)', borderRadius: 100, padding: '8px 20px', marginBottom: 26 }}
-                    >
-                        <span style={{ fontSize: 16 }}>🍮</span>
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#FBB040' }}>Vietnamese Desserts</span>
-                    </motion.div>
+                    {/* Title */}
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(42px, 6vw, 76px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
+                        Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Desserts</span>
+                    </h1>
 
-                    {/* Headline */}
-                    <motion.h1
-                        variants={heroLine(0.1)}
-                        initial="hidden" animate="show"
-                        style={{
-                            fontFamily: "'Playfair Display', serif",
-                            fontSize: 'clamp(52px, 8.5vw, 106px)',
-                            fontWeight: 800, color: 'white',
-                            margin: 0, lineHeight: 0.9,
-                            marginBottom: 24, letterSpacing: '-0.025em',
-                        }}
-                    >
-                        Sweet<br />
-                        <span style={{ color: '#D97706', fontStyle: 'italic' }}>Traditions</span><br />
-                        of Vietnam
-                    </motion.h1>
-
-                    {/* Subheading */}
-                    <motion.p
-                        variants={heroLine(0.22)}
-                        initial="hidden" animate="show"
-                        style={{ fontSize: 'clamp(15px, 2vw, 18px)', color: 'rgba(255,255,255,0.6)', maxWidth: 500, lineHeight: 1.8, margin: '0 0 44px' }}
-                    >
-                        From trembling caramel flans to jewel-coloured chè — Vietnamese desserts are not an afterthought. They are an entire language of care.
-                    </motion.p>
+                    {/* Subtitle */}
+                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
+                        From silky chè to caramel-kissed bánh flan — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
+                    </p>
 
                     {/* Stats */}
-                    <motion.div
-                        variants={heroLine(0.32)}
-                        initial="hidden" animate="show"
-                        style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}
-                    >
-                        {[
-                            { val: `${DESSERTS.length}`, lbl: 'Recipes' },
-                            { val: '5', lbl: 'Categories' },
-                            { val: '15 min', lbl: 'Quickest Recipe' },
-                            { val: '4.8★', lbl: 'Avg Rating' },
-                        ].map((s, i) => (
-                            <div key={s.lbl} style={{ borderLeft: i > 0 ? '1px solid rgba(255,255,255,0.12)' : 'none', paddingLeft: i > 0 ? 26 : 0, paddingRight: 26, marginBottom: 10 }}>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 27, fontWeight: 700, color: 'white', lineHeight: 1 }}>{s.val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.36)', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', marginTop: 5 }}>{s.lbl}</div>
+                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                        {[['🍮', `${DESSERTS.length}`, 'Recipes'], ['⏱', '20 min', 'Quickest'], ['🌏', '3', 'Regions'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                            <div key={lbl}>
+                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
                             </div>
                         ))}
-                    </motion.div>
-                </motion.div>
-
-                {/* Scroll hint */}
-                <motion.div
-                    initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}
-                    style={{ position: 'absolute', bottom: 26, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 7 }}
-                >
-                    <span style={{ fontSize: 10, letterSpacing: '0.2em', color: 'rgba(255,255,255,0.28)', textTransform: 'uppercase' }}>Scroll</span>
-                    <motion.div
-                        animate={{ y: [0, 9, 0] }} transition={{ repeat: Infinity, duration: 1.7, ease: 'easeInOut' }}
-                        style={{ width: 1, height: 34, background: 'linear-gradient(to bottom, rgba(255,255,255,0.45), transparent)' }}
-                    />
-                </motion.div>
-            </section>
-
-            {/* ── EDITOR'S INTRO ─────────────────────────────────────────────────── */}
-            <section style={{ background: 'linear-gradient(to bottom, #F5EDE3, #FAFAF7)', padding: '72px 40px 56px' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.7 }}
-                    style={{ maxWidth: 780, margin: '0 auto' }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
-                        <div style={{ width: 36, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', color: '#D97706', textTransform: 'uppercase' }}>A Note on Sweetness</span>
-                        <div style={{ width: 36, height: 1.5, background: '#D97706' }} />
                     </div>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(18px, 2.5vw, 24px)', fontStyle: 'italic', color: '#4B2E1A', lineHeight: 1.7, margin: '0 0 16px' }}>
-                        In Vietnam, desserts are rarely reserved for the end of a meal. They exist on their own terms — sold from street carts at midday, shared between friends on a hot afternoon, spooned into bowls at dawn markets.
-                    </p>
-                    <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.6)', lineHeight: 1.8, margin: 0 }}>
-                        They are less sweet than their Western counterparts, more textural, more herbal — pandan and coconut and ginger weaving through everything. These are not desserts that shout. They are the ones you remember.
-                    </p>
-                </motion.div>
-            </section>
-
-            {/* ── SIGNATURE HIGHLIGHTS ──────────────────────────────────────────── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '12px 40px 48px' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }} transition={{ duration: 0.6 }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Signature Picks</span>
-                    </div>
-                    <div style={{ display: 'flex', gap: 14, overflowX: 'auto', paddingBottom: 8 }}>
-                        {DESSERTS.filter(d => d.isSignature).map((d, i) => (
-                            <Link key={d.slug} href={`/recipes/${d.slug}`}
-                                style={{ position: 'relative', flexShrink: 0, width: 180, height: 110, borderRadius: 18, overflow: 'hidden', textDecoration: 'none' }}
-                            >
-                                <Image src={d.image} alt={d.name} fill style={{ objectFit: 'cover' }} sizes="190px" quality={70} />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(45,26,14,0.85) 0%, transparent 55%)' }} />
-                                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 13px' }}>
-                                    <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 13, fontWeight: 700, color: 'white', margin: 0, lineHeight: 1.2 }}>{d.name}</p>
-                                    <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.5)', margin: '2px 0 0', fontStyle: 'italic' }}>{d.viet}</p>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </motion.div>
+                </div>
             </section>
 
             {/* ── FILTER + SEARCH BAR ───────────────────────────────────────────── */}
