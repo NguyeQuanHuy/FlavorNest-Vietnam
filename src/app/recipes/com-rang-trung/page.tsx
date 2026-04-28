@@ -1,3 +1,7 @@
+'use client';
+
+import RecipeLayout, { RecipeData } from '../../_components/RecipeLayout';
+
 const recipe: RecipeData = {
     slug: 'com-rang-trung',
     title: 'Vietnamese Egg Fried Rice',
@@ -52,3 +56,7 @@ const recipe: RecipeData = {
         },
     ],
 };
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
