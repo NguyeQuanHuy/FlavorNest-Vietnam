@@ -223,7 +223,7 @@ const DESSERTS: Dessert[] = [
         slug: 'che-khoai-mon',
         name: 'Taro & Sticky Rice Soup',
         viet: 'Chè Khoai Môn',
-        type: 'Southern Style',
+        type: 'Chè',
         image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85',
         description: 'Creamy taro chunks cooked with fragrant sticky rice and pandan leaves, served with thick coconut cream.',
         story: 'A comforting Southern staple where the earthiness of taro meets the velvety richness of coconut.',
