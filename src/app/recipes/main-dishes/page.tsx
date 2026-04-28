@@ -235,7 +235,7 @@ const RECIPES: Recipe[] = [
         title: 'Vietnamese Egg Fried Rice',
         subtitle: 'Cơm Rang Trứng',
         image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80',
-        region: 'National', difficulty: 'Easy', time: '15 min',
+        region: 'Southern', difficulty: 'Easy', time: '15 min',
         rating: '4.6', reviews: 128, cal: 350, tag: 'Quick Meal', tagColor: '#059669',
         description: "The ultimate comfort food found in every Vietnamese kitchen. Day-old cold rice is tossed in a screaming hot wok with golden egg yolks and fragrant scallions until every grain is toasted and separated. Simple, humble, and deeply satisfying.",
         tags: ['Rice', 'Eggs', 'Quick', 'Budget'],
