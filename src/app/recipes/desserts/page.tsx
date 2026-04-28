@@ -213,16 +213,6 @@ const DESSERTS: Dessert[] = [
         tags: ['Dessert', 'Mixed', 'Traditional', 'Beans'],
     },
     {
-        slug: 'che-buoi',
-        title: 'Pomelo Peel Dessert',
-        subtitle: 'Chè Bưởi',
-        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80',
-        region: 'Southern', difficulty: 'Hard', time: '90 min',
-        rating: '4.9', reviews: 428, cal: 290, tag: 'Crispy Texture', tagColor: '#EA580C',
-        description: "A masterpiece of resourcefulness. The white pith of pomelo is processed meticulously to remove bitterness, then coated in starch to create a crunchy, jelly-like texture. Served in a thick mung bean soup with coconut cream.",
-        tags: ['Pomelo', 'Crunchy', 'Southern', 'Unique'],
-    },
-    {
         slug: 'che-khoai-mon',
         title: 'Taro Sweet Soup with Sticky Rice',
         subtitle: 'Chè Khoai Môn',
