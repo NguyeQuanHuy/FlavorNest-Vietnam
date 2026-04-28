@@ -203,16 +203,6 @@ const DESSERTS: Dessert[] = [
         isSignature: true,
     },
     {
-        slug: 'che-ba-mau',
-        title: 'Three-Color Dessert',
-        subtitle: 'Chè Ba Màu',
-        image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80',
-        region: 'Southern', difficulty: 'Medium', time: '45 min',
-        rating: '4.8', reviews: 245, cal: 320, tag: 'Colorful Sweet', tagColor: '#059669',
-        description: "A visually stunning layered dessert with yellow mung bean paste, green pandan jelly, and red kidney beans. Topped with a generous pour of rich coconut milk and crushed ice, it is the ultimate refreshment for a tropical afternoon.",
-        tags: ['Dessert', 'Coconut Milk', 'Southern', 'Beans'],
-    },
-    {
         slug: 'che-thap-cam',
         title: 'Mixed Sweet Soup',
         subtitle: 'Chè Thập Cẩm',
