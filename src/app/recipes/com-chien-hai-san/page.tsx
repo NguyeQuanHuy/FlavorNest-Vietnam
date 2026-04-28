@@ -1,45 +1,61 @@
+'use client';
+import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
+
 const recipe: RecipeData = {
     slug: 'com-chien-hai-san',
-    title: 'Seafood Fried Rice',
-    subtitle: 'Cơm Chiên Hải Sản — a coastal treasure featuring fresh shrimp, squid, and vibrant vegetables.',
+    title: 'Lemongrass Pork Banh Mi',
+    subtitle: 'A shatteringly crisp baguette — the greatest sandwich in the world.',
     category: 'MAIN COURSE',
-    difficulty: 'Medium',
-    totalTime: '25 min',
-    rating: 4.8,
-    baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1512058560366-cd242d5930df?w=1600&q=80',
-    intro: 'This dish brings the flavor of the Vietnamese seaside to your table. Unlike the simple egg version, seafood fried rice is a medley of textures—the snap of the shrimp, the chew of the squid, and the crunch of the rice.',
+    difficulty: 'Easy',
+    totalTime: '40 min',
+    rating: 4.9,
+    baseServings: 4,
+    heroImage: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1600&q=85',
+    intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and more shattering, the crumb lighter, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon, fresh coriander, sliced chilli, and Maggi seasoning sauce. The result is one of the greatest street foods on earth.`,
     ingredientSections: [
         {
-            title: 'Seafood and Rice',
+            title: 'Lemongrass pork',
             items: [
-                { amount: 2, unit: 'bowls', name: 'cold rice' },
-                { amount: 100, unit: 'g', name: 'shrimp', note: 'peeled and diced' },
-                { amount: 100, unit: 'g', name: 'squid', note: 'cut into small rings' },
-                { amount: 50, unit: 'g', name: 'frozen peas and carrots' },
+                { amount: 400, unit: 'g', name: 'pork shoulder', note: 'thinly sliced' },
+                { amount: 2, name: 'lemongrass stalks', note: 'white part, minced' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 2, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
             ],
         },
         {
-            title: 'Seasoning',
+            title: 'Assembly',
             items: [
-                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
-                { amount: 1, unit: 'tsp', name: 'soy sauce' },
-                { amount: 1, unit: 'tbsp', name: 'minced garlic' },
+                { amount: 4, name: 'Vietnamese baguettes' },
+                { amount: 4, unit: 'tbsp', name: 'pork liver pate' },
+                { amount: 4, unit: 'tbsp', name: 'mayonnaise', note: 'Kewpie preferred' },
+                { amount: 80, unit: 'g', name: 'pickled daikon and carrot' },
+                { amount: 1, name: 'cucumber', note: 'cut into spears' },
+                { amount: 1, name: 'bunch fresh coriander' },
+                { amount: 2, name: 'red chillies', note: 'sliced' },
+                { amount: 1, unit: 'tsp', name: 'Maggi seasoning sauce' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Prep the seafood',
-            description: 'Quickly blanch or sear the shrimp and squid in a hot pan for 1 minute. Remove and set aside to prevent overcooking.',
+            title: 'Marinate the pork',
+            description: 'Combine lemongrass, fish sauce, sugar, oyster sauce, and garlic. Toss sliced pork to coat. Marinate at least 30 minutes.',
         },
         {
-            title: 'Fry the base',
-            description: 'Fry garlic until golden. Add the vegetables and cold rice, tossing on high heat.',
+            title: 'Grill the pork',
+            description: 'Grill over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred.',
+            tip: 'The caramel char on the pork is everything. Do not crowd the pan — cook in batches.',
         },
         {
-            title: 'Combine',
-            description: 'Return the seafood to the pan. Season with oyster sauce and soy sauce. Toss until everything is piping hot and evenly glazed.',
+            title: 'Toast the bread',
+            description: 'Split baguettes lengthwise. Toast cut-side down in a dry pan for 1 to 2 minutes until golden and crisp.',
+        },
+        {
+            title: 'Assemble',
+            description: 'Spread pate on one side, mayonnaise on the other. Drizzle Maggi inside. Layer grilled pork, pickled vegetables, cucumber, coriander, and chilli. Eat within 5 minutes.',
         },
     ],
 };
+export default function Page() { return <RecipeLayout recipe={recipe} />; } 
