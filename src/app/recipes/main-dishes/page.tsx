@@ -281,7 +281,7 @@ const RECIPES: Recipe[] = [
         tags: ['Seafood', 'Caramel', 'Savory', 'Quick'],
     },
     {
-        slug: 'banh-beo',
+        slug: 'banh-beo-phu-yen',
         title: 'Water Fern Rice Cakes',
         subtitle: 'Bánh Bèo',
         image: 'https://images.unsplash.com/photo-1625244695851-1fc873994270?auto=format&fit=crop&w=900&q=80',
