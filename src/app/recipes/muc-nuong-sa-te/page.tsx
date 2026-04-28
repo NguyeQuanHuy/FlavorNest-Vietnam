@@ -50,18 +50,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prepare the satay marinade',
-            description: 'In a bowl, mix:
-            
-            2 tbsp chili satay sauce
-            1 tbsp soy sauce
-            1 tbsp oyster sauce
-            1 tsp garlic (minced)
-            1 tsp lemongrass (finely chopped)
-            1 tsp sugar
-            1 tbsp lime juice
-            1 tbsp vegetable oil
-            
-            Stir until smooth and fragrant.',
+            description: 'In a bowl, mix:2 tbsp chili satay sauce, 1 tbsp soy sauce, 1 tbsp oyster sauce, 1 tsp garlic (minced), 1 tsp lemongrass (finely chopped), 1 tsp sugar, 1 tbsp lime juice, 1 tbsp vegetable oil. Stir until smooth and fragrant.',
         },
         {
             title: 'Marinate the squid',
