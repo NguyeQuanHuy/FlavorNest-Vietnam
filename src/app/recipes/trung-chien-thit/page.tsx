@@ -1,39 +1,61 @@
+'use client';
+import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
+
 const recipe: RecipeData = {
-    slug: 'trung-chien-thit',
-    title: 'Minced Pork Omelette',
-    subtitle: 'Trứng Chiên Thịt — a savory, protein-packed omelette with lacy, golden-brown edges.',
-    category: 'SIDE DISH',
+    slug: 'banh-mi',
+    title: 'Lemongrass Pork Banh Mi',
+    subtitle: 'A shatteringly crisp baguette — the greatest sandwich in the world.',
+    category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '15 min',
-    rating: 4.7,
-    baseServings: 3,
-    heroImage: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=1600&q=80',
-    intro: 'The ultimate "rice killer" (món đưa cơm). This isn’t a fluffy French omelette; it’s a rustic, thin pancake of eggs and pork that is savory, slightly salty, and incredibly aromatic thanks to the fried shallots.',
+    totalTime: '40 min',
+    rating: 4.9,
+    baseServings: 4,
+    heroImage: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1600&q=85',
+    intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and more shattering, the crumb lighter, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon, fresh coriander, sliced chilli, and Maggi seasoning sauce. The result is one of the greatest street foods on earth.`,
     ingredientSections: [
         {
-            title: 'The Mixture',
+            title: 'Lemongrass pork',
             items: [
-                { amount: 4, name: 'eggs' },
-                { amount: 150, unit: 'g', name: 'minced pork', note: 'with a bit of fat' },
-                { amount: 2, name: 'shallots', note: 'thinly sliced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'pepper' },
+                { amount: 400, unit: 'g', name: 'pork shoulder', note: 'thinly sliced' },
+                { amount: 2, name: 'lemongrass stalks', note: 'white part, minced' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 2, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+            ],
+        },
+        {
+            title: 'Assembly',
+            items: [
+                { amount: 4, name: 'Vietnamese baguettes' },
+                { amount: 4, unit: 'tbsp', name: 'pork liver pate' },
+                { amount: 4, unit: 'tbsp', name: 'mayonnaise', note: 'Kewpie preferred' },
+                { amount: 80, unit: 'g', name: 'pickled daikon and carrot' },
+                { amount: 1, name: 'cucumber', note: 'cut into spears' },
+                { amount: 1, name: 'bunch fresh coriander' },
+                { amount: 2, name: 'red chillies', note: 'sliced' },
+                { amount: 1, unit: 'tsp', name: 'Maggi seasoning sauce' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Whisk and mix',
-            description: 'Beat the eggs thoroughly. Add the minced pork, shallots, fish sauce, and pepper. Use a fork to break up the pork so it disperses evenly.',
-            tip: 'Adding a teaspoon of water or oil to the mix makes the omelette extra tender.',
+            title: 'Marinate the pork',
+            description: 'Combine lemongrass, fish sauce, sugar, oyster sauce, and garlic. Toss sliced pork to coat. Marinate at least 30 minutes.',
         },
         {
-            title: 'Fry until lacy',
-            description: 'Heat a generous amount of oil in a flat pan. Once hot, pour the egg mixture in, tilting the pan to spread it thin.',
+            title: 'Grill the pork',
+            description: 'Grill over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred.',
+            tip: 'The caramel char on the pork is everything. Do not crowd the pan — cook in batches.',
         },
         {
-            title: 'Flip and finish',
-            description: 'Cook for 3 minutes until the bottom is golden. Flip and cook for another 2 minutes until the pork inside is fully done.',
+            title: 'Toast the bread',
+            description: 'Split baguettes lengthwise. Toast cut-side down in a dry pan for 1 to 2 minutes until golden and crisp.',
+        },
+        {
+            title: 'Assemble',
+            description: 'Spread pate on one side, mayonnaise on the other. Drizzle Maggi inside. Layer grilled pork, pickled vegetables, cucumber, coriander, and chilli. Eat within 5 minutes.',
         },
     ],
 };
+export default function Page() { return <RecipeLayout recipe={recipe} />; } 
