@@ -1,6 +1,6 @@
 'use client';
 
-import RecipeLayout, { RecipeData } from '../../_components/RecipeLayout';
+import RecipeLayout, { RecipeData } from '@/app/recipes/_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'com-rang-trung',
