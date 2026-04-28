@@ -49,7 +49,7 @@ const recipe: RecipeData = {
             title: 'Make the batter',
             description:
                 'Mash bananas thoroughly in a large bowl — some small lumps are fine and add texture. Add coconut milk, coconut cream, tapioca starch, rice flour, sugar, salt, and vanilla. Mix until smooth and no dry flour remains. The batter will be thick and pourable.',
-            tip: 'Chuối sứ (apple bananas) are traditional and have a firmer texture. Standard Cavendish bananas work well too — just make sure they are very ripe.',
+            tip: 'Apple bananas (Chuối sứ) are traditional and have a firmer texture. Standard Cavendish bananas work well too — just make sure they are very ripe.',
         },
         {
             title: 'Bake first layer',
