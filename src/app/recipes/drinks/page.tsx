@@ -189,6 +189,36 @@ const RECIPES: Recipe[] = [
         description: "A thick, buttery blend of ripe avocados, condensed milk, and fresh milk. Unlike savory preparations elsewhere, Vietnam treats avocado as a luscious dessert fruit in this velvety green shake.",
         tags: ['Avocado', 'Creamy', 'Nutritious', 'Sweet'],
     },
+    {
+        slug: 'sinh-to-mang-cau',
+        title: 'Soursop Smoothie',
+        subtitle: 'Sinh Tố Mãng Cầu',
+        image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=80',
+        type: 'Smoothie', difficulty: 'Easy', time: '10 min',
+        rating: '4.7', reviews: 184, cal: 220, tag: 'Tropical Tangy', tagColor: '#65a30d', cold: true,
+        description: "A creamy, white smoothie made from the fibrous and tangy flesh of the soursop fruit. Blended with condensed milk and ice, it offers a complex flavor profile that is simultaneously sweet, sour, and floral.",
+        tags: ['Soursop', 'Creamy', 'Tropical', 'Vitamin C'],
+    },
+    {
+        slug: 'nuoc-ep-cam',
+        title: 'Fresh Orange Juice',
+        subtitle: 'Nước Ép Cam',
+        image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80',
+        type: 'Smoothie', difficulty: 'Easy', time: '5 min',
+        rating: '4.9', reviews: 412, cal: 110, tag: 'Morning Energy', tagColor: '#ea580c', cold: true,
+        description: "Vietnamese oranges (Cam Sành) are known for their dark green skin and deep orange, intensely flavored interior. Pressed fresh to order, this juice is the perfect balance of tartness and natural sweetness to start your day.",
+        tags: ['Citrus', 'Fresh', 'Healthy', 'Breakfast'],
+    },
+    {
+        slug: 'nuoc-ep-dua-hau',
+        title: 'Watermelon Juice',
+        subtitle: 'Nước Ép Dưa Hấu',
+        image: 'https://images.unsplash.com/photo-1543158181-e6f9f670c5b5?auto=format&fit=crop&w=900&q=80',
+        type: 'Smoothie', difficulty: 'Easy', time: '5 min',
+        rating: '4.6', reviews: 256, cal: 90, tag: 'Instant Hydration', tagColor: '#dc2626', cold: true,
+        description: "Pure, vibrant red watermelon juice that acts as a natural thirst quencher. It is light, refreshing, and rich in lycopene, making it a favorite choice during the peak of the Vietnamese tropical summer.",
+        tags: ['Watermelon', 'Hydration', 'Summer', 'Light'],
+    },
 ]
 
 const TYPE_FILTERS = ['All', 'Coffee', 'Tea', 'Smoothie', 'Traditional']
