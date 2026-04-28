@@ -240,7 +240,7 @@ const DESSERTS: Dessert[] = [
         slug: 'che-dau-xanh',
         name: 'Mung Bean Sweet Soup',
         viet: 'Chè Đậu Xanh',
-        type: 'Basic',
+        type: 'Chè',
         image: 'https://images.unsplash.com/photo-1596797038530-2c396b57ea41?auto=format&fit=crop&w=900&q=85',
         description: 'A light and cooling dessert made from peeled mung beans, prized for its refreshing and detoxifying properties.',
         story: 'The most honest dessert in any Vietnamese home, often prepared by grandmothers to beat the summer heat.',
