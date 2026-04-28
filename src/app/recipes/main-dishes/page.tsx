@@ -390,6 +390,26 @@ const RECIPES: Recipe[] = [
         description: "Fresh squid scored and marinated in a fiery lemongrass sate paste. Grilled quickly over high heat until the tentacles curl and the sauce caramelizes into a spicy, smoky crust.",
         tags: ['Squid', 'Spicy', 'Seafood', 'Quick'],
     },
+    {
+        slug: 'com-tam-suon-bi-cha',
+        title: 'Broken Rice with Grilled Pork & Egg Meatloaf',
+        subtitle: 'Cơm Tấm Sườn Bì Chả',
+        image: 'https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=900&q=80',
+        region: 'Southern', difficulty: 'Medium', time: '60 min',
+        rating: '4.9', reviews: 856, cal: 650, tag: 'Saigon Signature', tagColor: '#B91C1C',
+        description: "The quintessential breakfast of Saigon. Fragrant broken rice grains topped with a charcoal-grilled pork chop, shredded pork skin (bi), and a savory steamed egg meatloaf (cha). Served with a side of sweet-and-sour fish sauce and pickled vegetables, it is a harmonious explosion of smoky, savory, and tangy flavors.",
+        tags: ['Pork Chop', 'Rice', 'Signature', 'Southern'],
+    },
+    {
+        slug: 'com-ga-hoi-an',
+        title: 'Hoi An Chicken Rice',
+        subtitle: 'Cơm Gà Hội An',
+        image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80',
+        region: 'Central', difficulty: 'Medium', time: '50 min',
+        rating: '4.8', reviews: 412, cal: 520, tag: 'Ancient Town Flavor', tagColor: '#D97706',
+        description: "An elegant dish from the ancient town of Hoi An. The rice is cooked in chicken broth and turmeric to achieve a beautiful golden hue, then topped with shredded free-range chicken, thin onions, and Vietnamese coriander. The secret lies in the tiny bowl of rich giblet gravy and the spicy chili jam served on the side.",
+        tags: ['Chicken', 'Turmeric Rice', 'Central', 'Traditional'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
