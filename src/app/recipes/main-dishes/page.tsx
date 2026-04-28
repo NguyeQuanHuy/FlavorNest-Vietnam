@@ -410,6 +410,36 @@ const RECIPES: Recipe[] = [
         description: "An elegant dish from the ancient town of Hoi An. The rice is cooked in chicken broth and turmeric to achieve a beautiful golden hue, then topped with shredded free-range chicken, thin onions, and Vietnamese coriander. The secret lies in the tiny bowl of rich giblet gravy and the spicy chili jam served on the side.",
         tags: ['Chicken', 'Turmeric Rice', 'Central', 'Traditional'],
     },
+    {
+        slug: 'nem-chua',
+        title: 'Cured Fermented Pork',
+        subtitle: 'Nem Chua',
+        image: 'https://images.unsplash.com/photo-1583090752239-8bd2bb205096?auto=format&fit=crop&w=900&q=80',
+        region: 'Northern', difficulty: 'Hard', time: '48 hour',
+        rating: '4.8', reviews: 215, cal: 150, tag: 'Traditional Snack', tagColor: '#DC2626',
+        description: "A unique Vietnamese delicacy made from fresh ground pork, sliced pigskin, and a blend of garlic, chili, and peppercorns. Wrapped in banana leaves and left to ferment naturally, it develops a signature sour, spicy, and garlicky tang that is addictive.",
+        tags: ['Pork', 'Fermented', 'Snack', 'Northern'],
+    },
+    {
+        slug: 'bun-cha-gio',
+        title: 'Rice Vermicelli with Spring Rolls',
+        subtitle: 'Bún Chả Giò',
+        image: 'https://images.unsplash.com/photo-1544070078-a212eda27b49?auto=format&fit=crop&w=900&q=80',
+        region: 'Southern', difficulty: 'Medium', time: '40 min',
+        rating: '4.7', reviews: 342, cal: 480, tag: 'Quick Lunch', tagColor: '#059669',
+        description: "A refreshing noodle bowl featuring crispy fried spring rolls (cha gio) served over fresh rice vermicelli and a bed of shredded lettuce, herbs, and cucumber. Drizzled with 'nuoc mam pha' and topped with peanuts for a perfect balance of hot, cold, crunchy, and soft.",
+        tags: ['Noodles', 'Spring Rolls', 'Southern', 'Lunch'],
+    },
+    {
+        slug: 'ga-xao-sa-ot',
+        title: 'Lemongrass & Chili Stir-fry Chicken',
+        subtitle: 'Gà Xào Sả Ớt',
+        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80',
+        region: 'Southern', difficulty: 'Easy', time: '25 min',
+        rating: '4.6', reviews: 189, cal: 320, tag: 'Rice Killer', tagColor: '#D97706',
+        description: "A spicy and highly aromatic stir-fry that is a staple in Vietnamese family meals. Tender chicken pieces are tossed with minced lemongrass, turmeric, and bird's eye chilies, creating a vibrant yellow dish that makes it impossible to eat just one bowl of rice.",
+        tags: ['Chicken', 'Spicy', 'Lemongrass', 'Quick'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
