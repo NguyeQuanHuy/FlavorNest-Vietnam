@@ -220,6 +220,16 @@ const RECIPES: Recipe[] = [
         description: "A clear, gentle broth with minced pork poached into tender flecks, often brightened with winter melon, gourd or young mustard greens. The soup Vietnamese mothers make when they want something easy, comforting and respectful of a small budget. Unshowy, deeply home-cooking, and proof that the quietest dishes are often the ones that define a cuisine.",
         tags: ['Pork', 'Light', 'Quick', 'Comfort'],
     },
+    {
+        slug: 'thit-kho-hot-vit',
+        title: 'Caramelised Pork Belly with Eggs',
+        subtitle: 'Thịt Kho Hột Vịt',
+        image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80',
+        region: 'Southern', difficulty: 'Medium', time: '90 min',
+        rating: '4.9', reviews: 312, cal: 580, tag: 'Lunar New Year', tagColor: '#DC2626',
+        description: "Chunks of tender pork belly and hard-boiled eggs braised in fresh coconut water and fish sauce until the meat melts at the touch of a chopstick. This golden-hued stew is the soul of Southern Vietnamese cuisine, especially during Tet (Lunar New Year). The balance of savory-sweet flavors and the richness of the caramelised sauce make it a true comfort masterpiece that tastes even better the next day.",
+        tags: ['Pork Belly', 'Eggs', 'Slow-cooked', 'Traditional'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
