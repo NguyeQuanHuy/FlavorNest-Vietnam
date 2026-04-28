@@ -2,7 +2,7 @@
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
-    slug: 'banh-mi',
+    slug: 'com-chien-hai-san',
     title: 'Lemongrass Pork Banh Mi',
     subtitle: 'A shatteringly crisp baguette — the greatest sandwich in the world.',
     category: 'MAIN COURSE',
