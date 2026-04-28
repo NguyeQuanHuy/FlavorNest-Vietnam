@@ -44,30 +44,41 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
+            title: 'Clean the squid',
+            description: 'Rinse the squid thoroughly under cold water. Remove the innards, quill, and skin if desired. Pat dry with paper towels. Score the body lightly with diagonal cuts to help the marinade absorb better.',
             tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Prepare the satay marinade',
+            description: 'In a bowl, mix:
+            
+            2 tbsp chili satay sauce
+            1 tbsp soy sauce
+            1 tbsp oyster sauce
+            1 tsp garlic (minced)
+            1 tsp lemongrass (finely chopped)
+            1 tsp sugar
+            1 tbsp lime juice
+            1 tbsp vegetable oil
+            
+            Stir until smooth and fragrant.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
+            title: 'Marinate the squid',
+            description: 'Place the squid into the marinade and coat evenly. Cover and let it rest for 30–60 minutes in the fridge. Don’t over-marinate, or the texture may become rubbery.',
             tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Preheat the grill',
+            description: 'Heat your grill or grill pan to medium-high. Lightly oil the surface to prevent sticking and help create those beautiful char marks.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            title: 'Grill the squid',
+            description: 'Place squid on the hot grill. Cook for 2–3 minutes per side until it turns opaque and slightly charred. Avoid overcooking — squid becomes tough quickly if left too long.',
         },
         {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Serve and finish',
+            description: 'Remove from heat, slice into rings, and drizzle a little extra satay sauce or lime juice on top. Serve immediately with fresh herbs or cucumber for balance 🥒✨',
         },
     ],
 };
