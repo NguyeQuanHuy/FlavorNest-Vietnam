@@ -423,6 +423,23 @@ const DESSERTS: Dessert[] = [
         tags: ['Ginger', 'Warm', 'Traditional'],
         isSignature: false,
     },
+    {
+        slug: 'che-thap-cam',
+        name: 'Vietnamese Mixed Sweet Soup',
+        viet: 'Chè Thập Cẩm',
+        type: 'Traditional',
+        image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85',
+        description: 'A colorful, textures-rich medley of various beans, jellies, and pearls in a lightly sweetened coconut milk broth.',
+        story: 'The "everything" dessert that defines Vietnamese street food culture. It is a nostalgic journey in a glass, where every spoonful offers a different surprise.',
+        prepTime: '30 min',
+        cookTime: '60 min',
+        totalTime: '1.5 hrs',
+        servings: 5,
+        difficulty: 'Medium',
+        cal: 380,
+        tags: ['Mixed', 'Street Food', 'Traditional'],
+        isSignature: true,
+    },
 ]
 
 const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'Bánh', 'Frozen', 'Fusion']
