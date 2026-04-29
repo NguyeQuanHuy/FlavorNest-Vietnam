@@ -22,7 +22,7 @@ export function useFavorites() {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) setFavorites(JSON.parse(raw));
-    } catch {}
+    } catch { }
     setHydrated(true);
   }, []);
 
@@ -32,7 +32,7 @@ export function useFavorites() {
     setFavorites(items);
     try {
       localStorage.setItem(KEY, JSON.stringify(items));
-    } catch {}
+    } catch { }
   }, []);
 
   const toggle = useCallback(
@@ -57,7 +57,7 @@ export function useFavorites() {
   const isFavorited = isFavorite;
 
   const removeFavorite = useCallback(
-    (id: string) => persist(favorites.filter((f) => f.slug !== id && f.id !== id))
+    (id: string) => persist(favorites.filter((f) => f.slug !== id && f.id !== id)),
     [favorites, persist]
   );
 
