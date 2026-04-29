@@ -10,16 +10,17 @@ import { useRef } from 'react'
 import { recipes } from '@/data/recipes'
 
 // ─ Dynamic stats: count + avg rating from recipes data ─
-const recipeCount = recipes.length
-const avgRating = (
+const count = recipeCount ?? recipes.length
+    const avgRating = (
     recipes.reduce((sum, r) => sum + r.rating, 0) / recipes.length
 ).toFixed(1)
 
 const STATS = [
-    { value: `100+`, label: 'Recipes', delay: 0.8 },
+    { value: `${count}+`, label: 'Recipes', delay: 0.8 },
     { value: `${avgRating}★`, label: 'Avg. Rating', delay: 1.0 },
     { value: '15K+', label: 'Home Cooks', delay: 1.15 },
 ]
+
 const container = {
     hidden: {},
     show: { transition: { staggerChildren: 0.12 } },
