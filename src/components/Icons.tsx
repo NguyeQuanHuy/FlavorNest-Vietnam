@@ -142,6 +142,7 @@ type FNIconProps = {
   size?: number;
   color?: string;
   className?: string;
+  filled?: boolean;
 };
 
 export function FNIcon({ name, size = 24, color = "#D97706", className }: FNIconProps) {
