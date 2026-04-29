@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { BookOpen, Sparkles } from 'lucide-react'
 import { useRef } from 'react'
 import { recipes } from '@/data/recipes'
-import { BookOpen, Sparkles } from 'lucide-react'
 
 const avgRating = (
     recipes.reduce((sum, r) => sum + r.rating, 0) / recipes.length
