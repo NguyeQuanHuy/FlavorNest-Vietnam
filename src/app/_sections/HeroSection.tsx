@@ -16,7 +16,7 @@ const avgRating = (
 ).toFixed(1)
 
 const STATS = [
-    { value: `${recipeCount}+`, label: 'Recipes', delay: 0.8 },
+    { value: `100+`, label: 'Recipes', delay: 0.8 },
     { value: `${avgRating}★`, label: 'Avg. Rating', delay: 1.0 },
     { value: '15K+', label: 'Home Cooks', delay: 1.15 },
 ]
