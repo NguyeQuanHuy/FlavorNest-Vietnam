@@ -679,10 +679,7 @@ style={{ position: "sticky", top: 72, zIndex: 40, background: "rgba(250,250,247,
         <option value="quickest">Quickest</option>
       </select>
     </div>
-
-  </div>
-</div>
-
+            
             {/* SEARCH BANNER */}
             <AnimatePresence>
                 {localQuery && (
