@@ -89,13 +89,8 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                 className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20"
             >
                 <div className="max-w-3xl">
-                    <div className="mb-6">
-                        <span className="inline-flex items-center gap-2.5 bg-white/12 backdrop-blur-md border border-white/20 text-white text-xs font-medium px-4 py-2 rounded-full">
-                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
-                            <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" strokeWidth={2.2} />
+                    <Sparkles className="w-3 h-3 flex-shrink-0" strokeWidth={2.5} />
                             6 new recipes added this week
-                        </span>
-                    </div>
 
                     <p className="font-display text-lg italic text-[#F59E0B] font-medium mb-2">
                         FlavorNest Vietnam
