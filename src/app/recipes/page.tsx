@@ -8,6 +8,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { getDetailedAsLegacy } from "@/data/recipes-detailed";
 import type { Recipe } from "@/data/recipes";
+import { FNIcon } from "@/components/Icons";
 
 // ─── Legacy recipe cards (rewritten clean, Vietnamese names preserved) ───
 const LEGACY_CARDS: Array<{
@@ -608,63 +609,81 @@ function RecipesInner() {
             </section>
 
             {/* FILTER BAR */}
-            <div style={{ position: "sticky", top: 72, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "12px 20px" }}>
-                <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 8, overflowX: "auto", alignItems: "center", flexWrap: "nowrap" }}>
-                    <div style={{ position: "relative", flexShrink: 0 }}>
-                        <span style={{ position: "absolute", left: 15, top: "50%", transform: "translateY(-50%)", color: "#D97706", fontSize: 15 }}>🔍</span>
-                        <input
-                            className="search-bar"
-                            type="text"
-                            placeholder="Search recipes..."
-                            value={localQuery}
-                            onChange={(e) => setLocalQuery(e.target.value)}
-                            aria-label="Search recipes"
-                        />
-                        {localQuery && (
-                            <button
-                                onClick={clearSearch}
-                                style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", background: "none", border: "none", cursor: "pointer", color: "rgba(75,46,26,0.4)", fontSize: 16 }}
-                            >
-                                ✕
-                            </button>
-                        )}
-                    </div>
-                    <div style={{ width: 1, height: 22, background: "rgba(75,46,26,0.1)", margin: "0 4px", flexShrink: 0 }} />
-                    {CATEGORIES.map((cat) => (
-                        <button key={cat} onClick={() => setActiveCategory(cat)} className={`filter-pill ${activeCategory === cat ? "active" : ""}`}>
-                            {cat}
-                        </button>
-                    ))}
-                    <div style={{ width: 1, height: 22, background: "rgba(75,46,26,0.1)", margin: "0 2px", flexShrink: 0 }} />
-                    {REGIONS.map((r) => (
-                        <button key={r} onClick={() => setActiveRegion(r)} className={`filter-pill ${activeRegion === r ? "active" : ""}`}>
-                            {r}
-                        </button>
-                    ))}
-                    <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 4px', flexShrink: 0 }} />
-                    <select
-                        value={sortBy}
-                        onChange={e => setSortBy(e.target.value as 'popular' | 'rating' | 'quickest')}
-                        style={{
-                            border: '1.5px solid rgba(75,46,26,0.12)',
-                            borderRadius: 100,
-                            padding: '7px 18px',
-                            fontSize: 13,
-                            fontWeight: 500,
-                            color: 'rgba(75,46,26,0.7)',
-                            background: 'transparent',
-                            cursor: 'pointer',
-                            fontFamily: 'inherit',
-                            outline: 'none',
-                            flexShrink: 0,
-                        }}
-                    >
-                        <option value="popular">Most Popular</option>
-                        <option value="rating">Highest Rated</option>
-                        <option value="quickest">Quickest</option>
-                    </select>
-                </div>
-            </div>
+<div style={{ position: "sticky", top: 72, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "10px 20px" }}>
+  <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 6, overflowX: "auto", alignItems: "center", flexWrap: "nowrap" }}>
+    
+    {/* Search */}
+    <div style={{ position: "relative", flexShrink: 0 }}>
+      <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", display: "flex", alignItems: "center" }}>
+        <FNIcon name="search" size={14} color="#D97706" />
+      </span>
+      <input
+        className="search-bar"
+        type="text"
+        placeholder="Search recipes..."
+        value={localQuery}
+        onChange={(e) => setLocalQuery(e.target.value)}
+        aria-label="Search recipes"
+        style={{ paddingLeft: 34 }}
+      />
+      {localQuery && (
+        <button
+          onClick={clearSearch}
+          style={{ position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)", background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
+        >
+          <FNIcon name="close" size={13} color="rgba(75,46,26,0.4)" />
+        </button>
+      )}
+    </div>
+
+    <div style={{ width: 1, height: 20, background: "rgba(75,46,26,0.1)", margin: "0 2px", flexShrink: 0 }} />
+
+    {/* Category pills */}
+    {CATEGORIES.map((cat) => (
+      <button key={cat} onClick={() => setActiveCategory(cat)} className={`filter-pill ${activeCategory === cat ? "active" : ""}`}>
+        {cat}
+      </button>
+    ))}
+
+    <div style={{ width: 1, height: 20, background: "rgba(75,46,26,0.1)", margin: "0 2px", flexShrink: 0 }} />
+
+    {/* Region pills */}
+    {REGIONS.map((r) => (
+      <button key={r} onClick={() => setActiveRegion(r)} className={`filter-pill ${activeRegion === r ? "active" : ""}`}>
+        {r}
+      </button>
+    ))}
+
+    <div style={{ width: 1, height: 20, background: "rgba(75,46,26,0.1)", margin: "0 2px", flexShrink: 0 }} />
+
+    {/* Sort */}
+    <div style={{ position: "relative", flexShrink: 0, display: "flex", alignItems: "center" }}>
+      <FNIcon name="filter" size={13} color="rgba(75,46,26,0.5)" />
+      <select
+        value={sortBy}
+        onChange={e => setSortBy(e.target.value as 'popular' | 'rating' | 'quickest')}
+        style={{
+          border: "1.5px solid rgba(75,46,26,0.12)",
+          borderRadius: 100,
+          padding: "7px 14px 7px 8px",
+          fontSize: 13,
+          fontWeight: 500,
+          color: "rgba(75,46,26,0.7)",
+          background: "transparent",
+          cursor: "pointer",
+          fontFamily: "inherit",
+          outline: "none",
+          flexShrink: 0,
+        }}
+      >
+        <option value="popular">Most Popular</option>
+        <option value="rating">Highest Rated</option>
+        <option value="quickest">Quickest</option>
+      </select>
+    </div>
+
+  </div>
+</div>
 
             {/* SEARCH BANNER */}
             <AnimatePresence>
