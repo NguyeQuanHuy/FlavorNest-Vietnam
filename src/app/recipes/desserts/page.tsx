@@ -663,6 +663,9 @@ const DESSERTS: Dessert[] = [
     },
 ]
 
+const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
+const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
+
 const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'Bánh', 'Frozen', 'Fusion']
 
 const DIFF_COLOR: Record<string, string> = {
@@ -850,6 +853,8 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function DessertsPage() {
     const [activeType, setActiveType] = useState<DessertType>('All')
+    const [diff, setDiff] = useState('All')
+    const [region, setRegion] = useState('All Regions')
     const [query, setQuery] = useState('')
 
     const heroRef = useRef<HTMLDivElement>(null)
