@@ -135,7 +135,7 @@ export default function FavoritesPage() {
                     textUnderlineOffset: 3,
                   }}
                 >
-                  Xóa tất cả
+                  Remove favorite dishes
                 </button>
               </div>
 
