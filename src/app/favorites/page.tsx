@@ -161,7 +161,7 @@ export default function FavoritesPage() {
                 color: "rgba(75,46,26,0.55)", fontSize: 15,
                 maxWidth: 340, marginBottom: 28, lineHeight: 1.6,
               }}>
-                Tap the ❤️ icon on recipes to save your favorites.
+                Tap  ❤️ to save your favorites.
               </p>
               <Link href="/recipes" style={{
                 padding: "12px 28px", borderRadius: 999,
