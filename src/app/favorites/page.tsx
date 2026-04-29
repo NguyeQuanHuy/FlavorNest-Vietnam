@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useFavorites } from "@/hooks/useFavorites";
+import { FNIcon } from "@/components/Icons";
 
 export default function FavoritesPage() {
   const { favorites, hydrated, removeFavorite, clearFavorites } = useFavorites();
