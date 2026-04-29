@@ -70,10 +70,10 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                         transition={{ duration: 0.55, delay: s.delay }}
                         className="rounded-2xl px-5 py-3 text-center min-w-[120px]"
                         style={{
-                            background: 'rgba(28, 16, 9, 0.75)',
+                            background: 'rgba(217,119,6,0.15)',
                             backdropFilter: 'blur(16px)',
-                            border: '1.5px solid rgba(255,255,255,0.22)',
-                            boxShadow: '0 8px 32px rgba(0,0,0,0.35)',
+                            border: '1.5px solid rgba(217,119,6,0.45)',
+                            boxShadow: '0 8px 32px rgba(217,119,6,0.2)',
                         }}
                     >
                         <div className="text-white font-display font-extrabold text-2xl leading-none">{s.value}</div>
