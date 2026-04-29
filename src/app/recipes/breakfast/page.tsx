@@ -90,20 +90,16 @@ const BREAKFAST_RECIPES = [
         isPopular: false,
     },
 ]
-
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
-const REGIONS_F = ['All Regions', 'Northern', 'Central', 'Southern']
-
+const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 const DIFF_COLOR: Record<string, string> = {
     Easy: '#10b981',
     Medium: '#f59e0b',
     Hard: '#ef4444',
 }
-
 export default function BreakfastPage() {
     const [diff, setDiff] = useState('All')
     const [region, setRegion] = useState('All Regions')
-
     const filtered = BREAKFAST_RECIPES.filter(r => {
         const dMatch = diff === 'All' || r.difficulty === diff
         const rMatch = region === 'All Regions' || r.region === region
