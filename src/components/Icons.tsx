@@ -172,3 +172,4 @@ export function FNIcon({ name, size = 24, color = "#D97706", className, filled }
       );
     default: return null;
   }
+ }
