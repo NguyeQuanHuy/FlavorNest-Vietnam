@@ -85,7 +85,7 @@ export default function NorthernCuisinePage() {
     const filtered = RECIPES.filter(r => filter === 'All' || r.difficulty === filter)
 
     return (
-        <main style={{ minHeight: '100vh', background: '#0D0A07', fontFamily: "'DM Sans', system-ui, sans-serif", color: 'white' }}>
+        background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif", color: '#2D1A0E'
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap');
 
@@ -233,7 +233,7 @@ export default function NorthernCuisinePage() {
                             <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Collection</span>
                         </div>
-                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, color: 'white', margin: 0 }}>
+                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>
                             All Northern Recipes
                         </h2>
                     </div>
@@ -246,7 +246,7 @@ export default function NorthernCuisinePage() {
                     </div>
                 </div>
 
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.28)', marginBottom: 32, fontWeight: 500 }}>
+                <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.5)', marginBottom: 32, fontWeight: 500 }}>
                     {filtered.length} recipes
                 </p>
 
