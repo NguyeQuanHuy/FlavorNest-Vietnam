@@ -305,29 +305,29 @@ export default function CentralCuisinePage() {
             </section>
 
             {/* OTHER REGIONS */}
-            <section style={{ background: '#2D1A0E', padding: '64px 24px 80px' }}>
+            <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 24px 80px', background: '#FAFAF7' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
                         <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Explore Vietnam</span>
                     </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: 'white', margin: '0 0 32px' }}>Other Regions & Categories</h2>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: '#2D1A0E', margin: '0 0 32px' }}>Other Regions & Categories</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12 }}>
                         {[
-                            { label: 'Northern Cuisine', emoji: '🏯', href: '/recipes/north' },
-                            { label: 'Southern Cuisine', emoji: '🌴', href: '/recipes/south' },
-                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
-                            { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes' },
-                            { label: 'Desserts', emoji: '🍮', href: '/recipes/desserts' },
-                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel' },
-                        ].map(item => (
-                            <Link key={item.href} href={item.href}
-                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '18px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.2s' }}
-                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.38)'; el.style.background = 'rgba(217,119,6,0.07)'; el.style.transform = 'translateY(-4px)'; }}
-                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.08)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
+                            { label: 'Northern Cuisine', Icon: Castle, href: '/recipes/north' },
+                            { label: 'Southern Cuisine', Icon: Palmtree, href: '/recipes/south' },
+                            { label: 'Street Food', Icon: Soup, href: '/recipes/street-food' },
+                            { label: 'Main Dishes', Icon: Utensils, href: '/recipes/main-dishes' },
+                            { label: 'Desserts', Icon: IceCream, href: '/recipes/desserts' },
+                            { label: 'Travel Guide', Icon: Map, href: '/stories/travel' },
+                        ].map(({ label, Icon, href }) => (
+                            <Link key={href} href={href}
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '20px 16px', borderRadius: 18, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s' }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
                             >
-                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
-                                <span style={{ fontSize: 13, fontWeight: 600, color: 'white', textAlign: 'center' }}>{item.label}</span>
+                                <Icon size={24} strokeWidth={1.6} color="#D97706" />
+                                <span style={{ fontSize: 13, fontWeight: 700, color: '#2D1A0E', textAlign: 'center' }}>{label}</span>
                             </Link>
                         ))}
                     </div>
