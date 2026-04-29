@@ -29,7 +29,7 @@ const item = {
     show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as any } },
 }
 
-export default function HeroSection() {
+export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
     const ref = useRef<HTMLElement>(null)
     const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
     const imgY = useTransform(scrollYProgress, [0, 1], ['0%', '28%'])
