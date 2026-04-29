@@ -1,5 +1,6 @@
 "use client";
 
+import { FNIcon } from "@/components/Icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,9 +40,7 @@ export default function FavoritesPage() {
           className="mb-10"
         >
           <div className="flex items-center gap-3 mb-2">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="#D97706">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
+            <FNIcon name="favorite" size={28} color="#D97706" filled />
             <h1
               style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
@@ -209,9 +208,7 @@ export default function FavoritesPage() {
                                 boxShadow: "0 2px 8px rgba(217,119,6,0.4)",
                               }}
                             >
-                              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5EDE3">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                              </svg>
+                              <FNIcon name="favorite" size={14} color="#F5EDE3" filled />
                             </button>
                           </div>
                         </Link>
@@ -256,10 +253,7 @@ export default function FavoritesPage() {
                                 fontSize: 13,
                               }}
                             >
-                              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
-                                <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                              </svg>
+                              <FNIcon name="clock" size={13} color="rgba(75,46,26,0.55)" />
                               {recipe.cookTime}
                             </div>
                           )}
