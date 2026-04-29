@@ -145,8 +145,7 @@ type FNIconProps = {
   filled?: boolean;
 };
 
-export function FNIcon({ name, size = 24, color = "#D97706", className, filled }: FNIconProps) {
-#D97706", className }: FNIconProps) {
+export function FNIcon({ name, size = 24, color = "#D97706", className, filled }: FNIconProps) {#D97706", className }: FNIconProps) {
   const props = { size, color, className };
   switch (name) {
     case "home":       return <IconHome {...props} />;
