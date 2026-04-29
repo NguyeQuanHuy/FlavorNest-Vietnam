@@ -936,23 +936,17 @@ export default function DessertsPage() {
                 </div>
             </section>
 
-            {/* ── FILTER + SEARCH BAR ───────────────────────────────────────────── */}
-            <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(18px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 40px' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 10, overflowX: 'auto', alignItems: 'center', flexWrap: 'nowrap' }}>
-                    {/* Search */}
-                    <div style={{ position: 'relative', flexShrink: 0 }}>
-                        <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', fontSize: 15, color: 'rgba(75,46,26,0.38)' }}>🔍</span>
-                        <input
-                            className="search-input"
-                            type="text"
-                            placeholder="Search desserts…"
-                            value={query}
-                            onChange={e => setQuery(e.target.value)}
-                            aria-label="Search desserts"
-                        />
-                    </div>
-
-                    <div style={{ width: 1, height: 24, background: 'rgba(75,46,26,0.1)', margin: '0 4px', flexShrink: 0 }} />
+            {/* ── FILTER BAR ── */}
+            <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
+                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
+                    {FILTERS.map(f => <button key={f} onClick={() => setDiff(f)} className={`pill ${diff === f ? 'on' : ''}`}>{f}</button>)}
+                    <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 6px', flexShrink: 0 }} />
+                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Region</span>
+                    {REGIONS.map(r => <button key={r} onClick={() => setRegion(r)} className={`pill ${region === r ? 'on' : ''}`}>{r}</button>)}
+                    <span style={{ marginLeft: 'auto', fontSize: 13, color: 'rgba(75,46,26,0.38)', flexShrink: 0, fontWeight: 500 }}>{filtered.length} recipes</span>
+                </div>
+            </div>
 
                     {/* Type filters */}
                     {TYPES.map(t => (
