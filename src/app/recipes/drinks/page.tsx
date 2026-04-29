@@ -219,6 +219,36 @@ const RECIPES: Recipe[] = [
         description: "Pure, vibrant red watermelon juice that acts as a natural thirst quencher. It is light, refreshing, and rich in lycopene, making it a favorite choice during the peak of the Vietnamese tropical summer.",
         tags: ['Watermelon', 'Hydration', 'Summer', 'Light'],
     },
+    {
+        slug: 'nuoc-mat-ong-chanh',
+        title: 'Honey Lime Water',
+        subtitle: 'Nước Mật Ong Chanh',
+        image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80',
+        type: 'Traditional', difficulty: 'Easy', time: '5 min',
+        rating: '4.8', reviews: 156, cal: 120, tag: 'Immunity Boost', tagColor: '#d97706', cold: true,
+        description: "A soothing and revitalizing blend of raw honey and fresh lime juice. This simple elixir is a staple in Vietnamese households, known for its ability to soothe the throat, aid digestion, and provide a natural energy lift.",
+        tags: ['Honey', 'Lime', 'Detox', 'Healthy'],
+    },
+    {
+        slug: 'nuoc-rau-ma',
+        title: 'Pennywort Juice',
+        subtitle: 'Nước Rau Má',
+        image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=900&q=80',
+        type: 'Traditional', difficulty: 'Medium', time: '15 min',
+        rating: '4.7', reviews: 289, cal: 60, tag: 'Body Cooling', tagColor: '#166534', cold: true,
+        description: "An earthy, emerald-green herbal juice made from fresh pennywort leaves. Prized in traditional medicine for its 'cooling' properties, it is often enjoyed plain or mixed with mung bean paste for a creamier, richer texture.",
+        tags: ['Herbal', 'Cooling', 'Traditional', 'Green'],
+    },
+    {
+        slug: 'nuoc-la-dua',
+        title: 'Pandan Leaf Tea',
+        subtitle: 'Nước Lá Dứa',
+        image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=80',
+        type: 'Traditional', difficulty: 'Easy', time: '20 min',
+        rating: '4.5', reviews: 98, cal: 10, tag: 'Aromatic Relax', tagColor: '#15803d', cold: true,
+        description: "A delicately fragrant infusion made from boiled pandan leaves. This tea carries a subtle vanilla-like aroma and is often served as a complimentary refreshment in Vietnamese restaurants to calm the palate.",
+        tags: ['Pandan', 'Aromatic', 'Tea', 'Light'],
+    },
 ]
 
 const TYPE_FILTERS = ['All', 'Coffee', 'Tea', 'Smoothie', 'Traditional']
