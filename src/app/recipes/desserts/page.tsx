@@ -960,6 +960,7 @@ export default function DessertsPage() {
                         {filtered.length} recipes
                     </span>
                 </div>
+            </div>
 
             {/* ── DESSERT GRID ──────────────────────────────────────────────────── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 40px 96px' }} aria-label="Dessert recipes grid">
