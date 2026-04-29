@@ -488,8 +488,8 @@ function RecipesInner() {
             </section>
 
             {/* FILTER BAR */}
-            <div style={{ position: "sticky", top: 76, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "10px 20px", marginTop: 8, borderRadius: "0 0 16px 16px", boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
-                <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 6, overflowX: "auto", alignItems: "center", flexWrap: "nowrap" }}>
+            <div style={{ position: "sticky", top: 76, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 24px", marginTop: 8, borderRadius: "0 0 16px 16px", boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
+                <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 8, overflowX: "auto", alignItems: "center", flexWrap: "nowrap", padding: "4px 0" }}>
                     <div style={{ position: "relative", flexShrink: 0 }}>
                         <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", display: "flex", alignItems: "center" }}>
                             <FNIcon name="search" size={14} color="#D97706" />
@@ -559,7 +559,7 @@ function RecipesInner() {
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
                                         <span style={{ position: "absolute", top: 14, left: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", color: "#4B2E1A", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 100 }}>{recipe.category}</span>
                                         <span style={{ position: "absolute", top: 14, right: 14, background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)", color: "white", fontSize: 11, fontWeight: 500, padding: "5px 11px", borderRadius: 100 }}>⏱ {recipe.time}</span>
-                                        <div style={{ position: "absolute", bottom: 14, left: 14, display: "flex", alignItems: "center", gap: 6 }}>
+                                        <div style={{ position: "absolute", bottom: 14, left: 14, display: "flex", alignItems: "center", gap: 8 }}>
                                             <div style={{ width: 7, height: 7, borderRadius: "50%", background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: "white", fontSize: 11, fontWeight: 600, textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>{recipe.difficulty}</span>
                                         </div>
