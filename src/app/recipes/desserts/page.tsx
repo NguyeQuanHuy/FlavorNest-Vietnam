@@ -202,7 +202,7 @@ const DESSERTS: Dessert[] = [
         cal: 190,
         tags: ['Glutinous Rice', 'Festive', 'Ginger'],
         isSignature: true,
-    },    
+    },
     {
         slug: 'che-buoi',
         name: 'Pomelo Peel Dessert',
@@ -879,7 +879,7 @@ export default function DessertsPage() {
         * { box-sizing: border-box; }
         .pill {
           border: 1.5px solid rgba(75,46,26,0.12); border-radius:100px;
-          padding: 8px 20px; font-size: 13px; font-weight: 500;
+          padding: 7px 16px; font-size: 13px; font-weight: 500;
           color: rgba(75,46,26,0.55); background: transparent;
           cursor: pointer; transition: all 0.18s; white-space: nowrap;
           font-family: inherit;
@@ -897,7 +897,7 @@ export default function DessertsPage() {
         .search-input::placeholder { color: rgba(75,46,26,0.35); }
       `}</style>
 
-        {/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -929,7 +929,7 @@ export default function DessertsPage() {
                         From silky chè to caramel-kissed bánh flan — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
                     </p>
 
-                   {/* Stats */}
+                    {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                         {[
                             { Icon: Utensils, val: `${DESSERTS.length}`, lbl: 'Recipes' },
