@@ -37,26 +37,6 @@ const VALUES = [
     },
 ];
 
-// ── Timeline: real milestones, real dates ──
-const JOURNEY = [
-    {
-        year: '2023',
-        event: 'The first draft of FlavorNest was written on a laptop in a small apartment in Thuringia, Germany — between shifts, between homesickness.',
-    },
-    {
-        year: '2024',
-        event: 'The first twenty recipes went live. Most of them were dishes from Phú Yên — the ones I missed the most.',
-    },
-    {
-        year: '2025',
-        event: 'The project expanded to Northern and Southern Vietnamese cuisine. Longform stories about pho, bánh mì, and bánh xèo were added.',
-    },
-    {
-        year: '2026',
-        event: 'Still writing. Still testing. Still one person in a kitchen, trying to get it right.',
-    },
-];
-
 // ── Animation helper ──
 const fadeUp = (delay: number) => ({
     initial: { opacity: 0, y: 24 },
@@ -563,33 +543,9 @@ export default function AboutPage() {
                         padding: 'clamp(32px, 5vw, 56px)',
                         border: '1px solid rgba(75,46,26,0.07)',
                         boxShadow: '0 4px 28px rgba(75,46,26,0.06)',
-                        display: 'grid',
-                        gridTemplateColumns: 'auto 1fr',
-                        gap: 40,
-                        alignItems: 'center',
                     }}
                 >
-                    {/* Photo */}
-                    <div
-                        style={{
-                            position: 'relative',
-                            width: 180,
-                            height: 180,
-                            borderRadius: '50%',
-                            overflow: 'hidden',
-                            flexShrink: 0,
-                            boxShadow: '0 8px 24px rgba(75,46,26,0.15)',
-                        }}
-                    >
-                        <Image
-                            src="/images/team/huy-nguyen.jpg"
-                            alt="Quan Huy Nguyen, founder of FlavorNest"
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            sizes="180px"
-                        />
-                    </div>
-
+                    
                     {/* Bio */}
                     <div>
                         <div
@@ -604,162 +560,71 @@ export default function AboutPage() {
                         >
                             Founder & Writer
                         </div>
-                        <h3
+                       <h3
                             style={{
                                 fontFamily: "'Playfair Display', serif",
                                 fontSize: 'clamp(26px, 3.5vw, 36px)',
                                 fontWeight: 700,
                                 color: '#2D1A0E',
-                                margin: '0 0 16px',
+                                margin: '0 0 20px',
                                 lineHeight: 1.15,
                             }}
                         >
-                            Huy Nguyen
+                            Nguyen Quan Huy
                         </h3>
                         <p
                             style={{
                                 fontSize: 16,
                                 color: 'rgba(75,46,26,0.72)',
-                                lineHeight: 1.8,
+                                lineHeight: 1.85,
                                 margin: '0 0 16px',
                             }}
                         >
-                            Born in Phú Yên, Vietnam. Moved to Germany in my twenties to the family
-                            and never quite stopped missing the food I grew up with. FlavorNest
-                            is my attempt, in spare evenings and weekends, to bring that food
-                            into writing — and to share it with anyone willing to stand at a
-                            stove for a few hours.
+                            Born and raised in Phú Yên, in central Vietnam. I came to Germany in 2019 — carrying with me memories of my mother’s home-cooked meals, early-morning bowls of *bánh canh hẹ*, and pots of *thịt kho tàu* during Tết. FlavorNest is my way of preserving those things — writing them down before they fade from memory.
                         </p>
                         <p
                             style={{
+                                fontSize: 16,
+                                color: 'rgba(75,46,26,0.72)',
+                                lineHeight: 1.85,
+                                margin: '0 0 20px',
+                            }}
+                        >
+                            Each recipe here has been tested in a real kitchen — my own kitchen in Waltershausen, Thuringia — with four burners and ingredients sourced from the nearest Asian supermarket. No shortcuts, no Westernization. If the original takes 10 hours, I write the 10-hour version.
+                        </p>
+                        <blockquote
+                            style={{
+                                borderLeft: '3px solid #D97706',
+                                margin: '0 0 20px',
+                                padding: '4px 0 4px 20px',
+                            }}
+                        >
+                            <p
+                                style={{
+                                    fontFamily: "'Playfair Display', serif",
+                                    fontSize: 19,
+                                    fontStyle: 'italic',
+                                    color: '#4B2E1A',
+                                    lineHeight: 1.6,
+                                    margin: 0,
+                                }}
+                            >
+                               "There are dishes that exist only in a grandmother’s memory. FlavorNest is a small attempt to write them down — before it’s too late."
+                            </p>
+                        </blockquote>
+                        <p
+                            style={{
                                 fontSize: 14,
-                                color: 'rgba(75,46,26,0.55)',
+                                color: 'rgba(75,46,26,0.5)',
                                 fontStyle: 'italic',
                                 margin: 0,
                                 lineHeight: 1.7,
                             }}
                         >
-                            Currently writing from Gotha, Thuringia. Cooking on a small
-                            four-burner stove. Still learning.
+                          Currently writing from Waltershausen, Thuringia. Still learning. Still calling my mother when a recipe doesn’t turn out right.
                         </p>
                     </div>
                 </motion.div>
-            </section>
-
-            {/* ════════════════════════════════════════
-                JOURNEY — Timeline
-            ═══════════════════════════════════════ */}
-            <section
-                style={{
-                    maxWidth: 900,
-                    margin: '0 auto',
-                    padding: '60px 24px 80px',
-                }}
-            >
-                <motion.div {...fadeUp(0)} style={{ marginBottom: 48, textAlign: 'center' }}>
-                    <div
-                        style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 12,
-                            marginBottom: 14,
-                        }}
-                    >
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span
-                            style={{
-                                fontSize: 11,
-                                fontWeight: 700,
-                                letterSpacing: '0.2em',
-                                color: '#D97706',
-                                textTransform: 'uppercase',
-                            }}
-                        >
-                            How We Got Here
-                        </span>
-                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                    </div>
-                    <h2
-                        style={{
-                            fontFamily: "'Playfair Display', serif",
-                            fontSize: 'clamp(30px, 4vw, 44px)',
-                            fontWeight: 700,
-                            color: '#2D1A0E',
-                            margin: 0,
-                        }}
-                    >
-                        A short, honest timeline.
-                    </h2>
-                </motion.div>
-
-                <div style={{ position: 'relative', paddingLeft: 40 }}>
-                    <div
-                        style={{
-                            position: 'absolute',
-                            left: 16,
-                            top: 8,
-                            bottom: 8,
-                            width: 2,
-                            background: 'rgba(217,119,6,0.25)',
-                            borderRadius: 100,
-                        }}
-                    />
-                    {JOURNEY.map((m, i) => (
-                        <motion.div
-                            key={m.year}
-                            {...fadeUp(i * 0.08)}
-                            style={{ position: 'relative', marginBottom: 28 }}
-                        >
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    left: -31,
-                                    top: 6,
-                                    width: 14,
-                                    height: 14,
-                                    borderRadius: '50%',
-                                    background: '#D97706',
-                                    border: '3px solid #FAFAF7',
-                                    boxShadow: '0 0 0 2px rgba(217,119,6,0.3)',
-                                }}
-                            />
-                            <div
-                                style={{
-                                    background: 'white',
-                                    borderRadius: 16,
-                                    padding: '20px 24px',
-                                    border: '1px solid rgba(75,46,26,0.07)',
-                                    display: 'flex',
-                                    alignItems: 'flex-start',
-                                    gap: 20,
-                                }}
-                            >
-                                <span
-                                    style={{
-                                        fontFamily: "'Playfair Display', serif",
-                                        fontSize: 22,
-                                        fontWeight: 700,
-                                        color: '#D97706',
-                                        flexShrink: 0,
-                                        lineHeight: 1.3,
-                                    }}
-                                >
-                                    {m.year}
-                                </span>
-                                <p
-                                    style={{
-                                        fontSize: 15,
-                                        color: 'rgba(75,46,26,0.72)',
-                                        margin: 0,
-                                        lineHeight: 1.7,
-                                    }}
-                                >
-                                    {m.event}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
             </section>
 
             {/* ════════════════════════════════════════
