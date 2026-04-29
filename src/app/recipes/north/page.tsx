@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
+import { Utensils, Clock, Globe, Star, Flame, Palmtree, Soup, BookOpen } from 'lucide-react'
 
 const RECIPES = [
     {
@@ -311,30 +312,30 @@ export default function NorthernCuisinePage() {
             </section>
 
             {/* ── EXPLORE MORE ── */}
-            <section style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '64px 32px 88px' }}>
+            <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>
                         <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Vietnam Has More</span>
                         <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                     </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: 'white', margin: '0 0 36px' }}>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: '#2D1A0E', margin: '0 0 36px' }}>
                         Explore Other Regions
                     </h2>
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Central Cuisine', sub: 'Thanh Hoa to Binh Thuan', emoji: '🌶️', href: '/recipes/central' },
-                            { label: 'Southern Cuisine', sub: 'Ninh Thuan to Ca Mau', emoji: '🌴', href: '/recipes/south' },
-                            { label: 'Street Food', sub: 'on streets everywhere', emoji: '🥢', href: '/recipes/street-food' },
-                            { label: 'All Recipes', sub: 'Browse everything', emoji: '🍜', href: '/recipes' },
-                        ].map(item => (
-                            <Link key={item.href} href={item.href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '20px 28px', borderRadius: 20, border: '1px solid rgba(255,255,255,0.09)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.22s', minWidth: 150 }}
-                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = 'rgba(217,119,6,0.06)'; el.style.transform = 'translateY(-4px)'; }}
-                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.09)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
+                            { label: 'Central Cuisine', sub: 'Thanh Hoa to Binh Thuan', Icon: Flame, href: '/recipes/central' },
+                            { label: 'Southern Cuisine', sub: 'Ninh Thuan to Ca Mau', Icon: Palmtree, href: '/recipes/south' },
+                            { label: 'Street Food', sub: 'on streets everywhere', Icon: Soup, href: '/recipes/street-food' },
+                            { label: 'All Recipes', sub: 'Browse everything', Icon: BookOpen, href: '/recipes' },
+                        ].map(({ label, sub, Icon, href }) => (
+                            <Link key={href} href={href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '24px 32px', borderRadius: 20, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s', minWidth: 170 }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
                             >
-                                <span style={{ fontSize: 28 }}>{item.emoji}</span>
-                                <span style={{ fontSize: 14, fontWeight: 600, color: 'white' }}>{item.label}</span>
-                                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', fontStyle: 'italic' }}>{item.sub}</span>
+                                <Icon size={26} strokeWidth={1.6} color="#D97706" />
+                                <span style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{label}</span>
+                                <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
                             </Link>
                         ))}
                     </div>
