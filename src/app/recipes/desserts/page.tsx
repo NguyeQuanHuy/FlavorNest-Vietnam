@@ -948,19 +948,6 @@ export default function DessertsPage() {
                 </div>
             </div>
 
-                    {/* Type filters */}
-                    {TYPES.map(t => (
-                        <button key={t} onClick={() => setActiveType(t)} className={`pill ${activeType === t ? 'on' : ''}`}>
-                            {t}
-                        </button>
-                    ))}
-
-                    {/* Result count */}
-                    <span style={{ marginLeft: 'auto', fontSize: 13, color: 'rgba(75,46,26,0.38)', fontWeight: 500, flexShrink: 0 }}>
-                        {filtered.length} recipes
-                    </span>
-                </div>
-
             {/* ── DESSERT GRID ──────────────────────────────────────────────────── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 40px 96px' }} aria-label="Dessert recipes grid">
                 <AnimatePresence mode="wait">
