@@ -928,17 +928,21 @@ export default function DessertsPage() {
                         From silky chè to caramel-kissed bánh flan — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
                     </p>
 
-                    {/* Stats */}
+                   {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[['🍮', `${DESSERTS.length}`, 'Recipes'], ['⏱', '20 min', 'Quickest'], ['🌏', '3', 'Regions'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                        {[
+                            { Icon: Utensils, val: `${DESSERTS.length}`, lbl: 'Recipes' },
+                            { Icon: Clock, val: '20 min', lbl: 'Quickest' },
+                            { Icon: Globe, val: '3', lbl: 'Regions' },
+                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
+                        ].map(({ Icon, val, lbl }) => (
                             <div key={lbl}>
-                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
                                 <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
                                 <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
                             </div>
                         ))}
                     </div>
-                </div>
             </section>
 
             {/* ── FILTER BAR ── */}
