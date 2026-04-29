@@ -812,9 +812,10 @@ function RecipesInner() {
                             style={{ marginTop: 16, padding: "10px 24px", borderRadius: 100, border: "1.5px solid rgba(75,46,26,0.15)", background: "transparent", color: "#D97706", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
                         >
                             Clear search
-                        </button>
+                    </button>
                     </motion.div>
                 )}
+            </AnimatePresence>
             </section>
         </main>
     );
