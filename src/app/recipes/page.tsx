@@ -815,7 +815,6 @@ function RecipesInner() {
                     </button>
                     </motion.div>
                 )}
-            </AnimatePresence>
             </section>
         </main>
     );
