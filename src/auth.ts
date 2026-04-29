@@ -41,26 +41,85 @@ export const authConfig: NextAuthConfig = {
 
                 if (!parsed.success) return null
 
-                // Chỗ này là nơi kiểm tra User trong Database thật
-                // Hiện tại đang để chế độ DEMO: Chấp nhận mọi email/pass đúng định dạng
                 const { email, password } = parsed.data
 
-                if (email && password.length >= 8) {
-                    return {
-                        id: '1',
-                        name: parsed.data.email.split('@')[0],
-                        email: email,
-                        image: 'https://images.unsplash.com/photo-1577214459173-ee34fm7a0807?q=80&w=100&auto=format&fit=crop',
-                    }
-                }
+                // Lazy import để tránh edge runtime issues với bcryptjs
+                const { prisma } = await import('@/lib/prisma')
+                const bcrypt = (await import('bcryptjs')).default
 
-                return null
+                const user = await prisma.user.findUnique({
+                    where: { email: email.toLowerCase() },
+                })
+
+                // User không tồn tại HOẶC đăng nhập bằng OAuth (không có password)
+                if (!user || !user.password) return null
+
+                const valid = await bcrypt.compare(password, user.password)
+                if (!valid) return null
+
+                return {
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    image: user.image,
+                }
             },
         }),
     ],
 
     // 4. Các hàm xử lý trung gian (Callbacks)
     callbacks: {
+        // ── Lưu OAuth user vào DB (Google/Facebook) ──
+        async signIn({ user, account }) {
+            // Credentials đã verify từ DB rồi → bỏ qua
+            if (account?.provider === 'credentials') return true
+
+            if (!user.email) return false
+
+            // Lazy import tránh edge runtime
+            const { prisma } = await import('@/lib/prisma')
+
+            try {
+                const existing = await prisma.user.findUnique({
+                    where: { email: user.email.toLowerCase() },
+                })
+
+                if (!existing) {
+                    // Tạo user mới từ OAuth profile
+                    const created = await prisma.user.create({
+                        data: {
+                            email: user.email.toLowerCase(),
+                            name: user.name ?? null,
+                            image: user.image ?? null,
+                            emailVerified: new Date(),
+                        },
+                    })
+                    user.id = created.id
+                } else {
+                    // User đã có → đồng bộ id thật từ DB vào object user
+                    user.id = existing.id
+                    // Update avatar/name nếu OAuth provider có data mới
+                    if (
+                        (user.image && user.image !== existing.image) ||
+                        (user.name && user.name !== existing.name)
+                    ) {
+                        await prisma.user.update({
+                            where: { id: existing.id },
+                            data: {
+                                name: user.name ?? existing.name,
+                                image: user.image ?? existing.image,
+                            },
+                        })
+                    }
+                }
+
+                return true
+            } catch (e) {
+                console.error('[signIn callback]', e)
+                return false
+            }
+        },
+
         // Chạy khi JWT được tạo/cập nhật
         async jwt({ token, user, account }) {
             if (user) {
@@ -83,12 +142,11 @@ export const authConfig: NextAuthConfig = {
         // Kiểm tra quyền truy cập trang
         authorized({ auth, request: { nextUrl } }) {
             const isLoggedIn = !!auth?.user
-            const isProtectedRoute = nextUrl.pathname.startsWith('/profile') ||
-                nextUrl.pathname.startsWith('/favorites')
+            const protectedPaths = ['/account', '/favorites']
+            const isProtected = protectedPaths.some(p => nextUrl.pathname.startsWith(p))
 
-            if (isProtectedRoute) {
-                if (isLoggedIn) return true
-                return false // Đá về trang login
+            if (isProtected && !isLoggedIn) {
+                return false
             }
             return true
         },

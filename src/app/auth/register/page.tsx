@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { signIn } from 'next-auth/react'
+import { registerUserAction } from '@/app/actions/users'
 
 export default function RegisterPage() {
     const [name, setName] = useState('')
@@ -16,16 +17,46 @@ export default function RegisterPage() {
         setLoading(true)
         setError('')
 
-        // TODO: call your real register API here
-        // For now, auto sign in after "register"
-        const res = await signIn('credentials', {
+        // 1. Tạo user thật trong DB
+        const result = await registerUserAction({
+            name,
+            email,
+            password,
+            confirmPassword: password,
+            agreeToTerms: true,
+        })
+
+        if (!result.ok) {
+            setLoading(false)
+            if (result.error === 'EMAIL_TAKEN') {
+                setError('This email is already registered. Try signing in.')
+            } else if (result.error === 'VALIDATION_ERROR') {
+                const issues = result.issues
+                const firstError =
+                    issues?.name?.[0] ||
+                    issues?.email?.[0] ||
+                    issues?.password?.[0] ||
+                    'Invalid input. Check your details.'
+                setError(firstError)
+            } else {
+                setError('Could not create account. Please try again.')
+            }
+            return
+        }
+
+        // 2. Auto sign-in sau khi tạo thành công
+        const signInRes = await signIn('credentials', {
             email,
             password,
             redirect: false,
         })
+
         setLoading(false)
-        if (res?.error) setError('Could not create account. Please try again.')
-        else window.location.href = '/'
+        if (signInRes?.error) {
+            setError('Account created but sign-in failed. Please log in manually.')
+        } else {
+            window.location.href = '/'
+        }
     }
 
     const handleGoogle = () => {
