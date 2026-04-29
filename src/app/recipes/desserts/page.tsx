@@ -943,6 +943,7 @@ export default function DessertsPage() {
                             </div>
                         ))}
                     </div>
+                </div>
             </section>
 
             {/* ── FILTER BAR ── */}
