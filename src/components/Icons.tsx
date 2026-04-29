@@ -151,7 +151,8 @@ export function FNIcon({ name, size = 24, color = "#D97706", className }: FNIcon
     case "home":       return <IconHome {...props} />;
     case "recipe":     return <IconRecipe {...props} />;
     case "search":     return <IconSearch {...props} />;
-    case "favorite": return <IconHeart {...props} filled={props.color !== "#9CA3AF"} />;    case "share":      return <IconShare {...props} />;
+    case "favorite": return <IconHeart {...props} filled={props.filled ?? props.color !== "#9CA3AF"} />;
+    case "share":      return <IconShare {...props} />;
     case "user":       return <IconUser {...props} />;
     case "filter":     return <IconFilter {...props} />;
     case "bowl":       return <IconBowl {...props} />;
