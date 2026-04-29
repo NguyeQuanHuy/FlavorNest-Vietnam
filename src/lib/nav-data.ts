@@ -23,57 +23,17 @@ export const RECIPE_REGIONS: NavItem[] = [
 ];
 
 export const STORY_TOPICS: NavItem[] = [
-  {
-    name: "Chef Secrets",
-    description: "Voices from the kitchen",
-    href: "/stories/chef-secrets",
-    image: "/images/recipes/cung-dinh-hue.jpg",
-  },
-  {
-    name: "Culture",
-    description: "Heritage behind the dishes",
-    href: "/stories/culture",
-    image: "/images/recipes/nguoi-hoi-an.jpg",
-  },
-  {
-    name: "Travel",
-    description: "Journey through flavors",
-    href: "/stories/travel",
-    image: "/images/recipes/hoi-an.jpg",
-  },
-  {
-    name: "About Stories",
-    description: "Our storytelling ethos",
-    href: "/stories/about",
-    image: "/images/recipes/ricefield.jpeg",
-  },
+  { name: "Chef Secrets", description: "Voices from the kitchen", href: "/stories/chef-secrets", image: "/images/recipes/cung-dinh-hue.jpg", icon: "recipe" },
+  { name: "Culture", description: "Heritage behind the dishes", href: "/stories/culture", image: "/images/recipes/nguoi-hoi-an.jpg", icon: "leaf" },
+  { name: "Travel", description: "Journey through flavors", href: "/stories/travel", image: "/images/recipes/hoi-an.jpg", icon: "bookmark" },
+  { name: "About Stories", description: "Our storytelling ethos", href: "/stories/about", image: "/images/recipes/ricefield.jpeg", icon: "star" },
 ];
 
 export const STORY_REGIONS: NavItem[] = [
-  {
-    name: "Hanoi's Dawn",
-    description: "Symphony of the North",
-    href: "/stories/symphony-of-hanois-dawn",
-    image: "/images/recipes/phohanoi.jpg",
-  },
-  {
-    name: "Southern Banh Xeo",
-    description: "Secrets of the South",
-    href: "/stories/secrets-of-the-south-banh-xeo",
-    image: "/images/recipes/banh-xeo-mien-tay.jpg",
-  },
-  {
-    name: "All Chef Stories",
-    description: "Behind the kitchen doors",
-    href: "/stories/chef-secrets",
-    image: "/images/recipes/hue.jpg",
-  },
-  {
-    name: "Travel Tales",
-    description: "From every region",
-    href: "/stories/travel",
-    image: "/images/recipes/hoi-an (2).jpg",
-  },
+  { name: "Hanoi's Dawn", description: "Symphony of the North", href: "/stories/symphony-of-hanois-dawn", image: "/images/recipes/phohanoi.jpg", icon: "bowl" },
+  { name: "Southern Banh Xeo", description: "Secrets of the South", href: "/stories/secrets-of-the-south-banh-xeo", image: "/images/recipes/banh-xeo-mien-tay.jpg", icon: "fire" },
+  { name: "All Chef Stories", description: "Behind the kitchen doors", href: "/stories/chef-secrets", image: "/images/recipes/hue.jpg", icon: "recipe" },
+  { name: "Travel Tales", description: "From every region", href: "/stories/travel", image: "/images/recipes/hoi-an (2).jpg", icon: "arrow" },
 ];
 
 export const NAV_LINKS = [
