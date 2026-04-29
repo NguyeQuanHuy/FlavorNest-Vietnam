@@ -813,6 +813,10 @@ function RecipesInner() {
                         >
                             Clear search
                         </button>
+                    </motion.div>
+                )}
+            </section>
+        </main>
     );
 }
 
