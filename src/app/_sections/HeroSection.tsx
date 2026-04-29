@@ -1,7 +1,3 @@
-// ─────────────────────────────────────────────────────────────────────────────
-//  app/_sections/HeroSection.tsx
-//  Fixes: contrast overlay, stat card opacity, search/heart icon size
-// ─────────────────────────────────────────────────────────────────────────────
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,17 +5,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { recipes } from '@/data/recipes'
 
-// ─ Dynamic stats: count + avg rating from recipes data ─
-const count = recipeCount ?? recipes.length
-    const avgRating = (
+const avgRating = (
     recipes.reduce((sum, r) => sum + r.rating, 0) / recipes.length
 ).toFixed(1)
-
-const STATS = [
-    { value: `${count}+`, label: 'Recipes', delay: 0.8 },
-    { value: `${avgRating}★`, label: 'Avg. Rating', delay: 1.0 },
-    { value: '15K+', label: 'Home Cooks', delay: 1.15 },
-]
 
 const container = {
     hidden: {},
@@ -36,13 +24,20 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
     const imgY = useTransform(scrollYProgress, [0, 1], ['0%', '28%'])
     const textY = useTransform(scrollYProgress, [0, 1], ['0%', '14%'])
 
+    const count = recipeCount ?? recipes.length
+
+    const STATS = [
+        { value: `${count}+`, label: 'Recipes', delay: 0.8 },
+        { value: `${avgRating}★`, label: 'Avg. Rating', delay: 1.0 },
+        { value: '15K+', label: 'Home Cooks', delay: 1.15 },
+    ]
+
     return (
         <section
             ref={ref}
             className="relative flex items-center min-h-screen overflow-hidden"
             aria-label="Hero – FlavorNest Vietnam"
         >
-            {/* ── Background image with parallax ── */}
             <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110 will-change-transform">
                 <Image
                     src="/hero-bg.jpg"
@@ -53,18 +48,14 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                     className="object-cover"
                 />
             </motion.div>
-            {/* ── FIX 1: Stronger gradient overlay for better text contrast ── */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#1C1009]/92 via-[#2D1A0E]/80 to-[#1C1009]/60" />
-            {/* Extra darkening layer behind text area */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#1C1009]/70 via-transparent to-transparent" />
 
-            {/* ── Glow blobs ── */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-[#D97706]/8 rounded-full blur-3xl" />
                 <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#166534]/10 rounded-full blur-3xl" />
             </div>
 
-            {/* ── FIX 2: Stat cards — higher opacity, solid border, better contrast ── */}
             <motion.div
                 initial={{ opacity: 0, x: 28 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -90,14 +81,12 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                     </motion.div>
                 ))}
             </motion.div>
-            {/* ── Main content ── */}
+
             <motion.div
                 style={{ y: textY }}
                 className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20"
             >
                 <div className="max-w-3xl">
-
-                    {/* Live badge */}
                     <div className="mb-6">
                         <span className="inline-flex items-center gap-2.5 bg-white/12 backdrop-blur-md border border-white/20 text-white text-xs font-medium px-4 py-2 rounded-full">
                             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
@@ -105,12 +94,10 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                         </span>
                     </div>
 
-                    {/* Eyebrow */}
                     <p className="font-display text-lg italic text-[#F59E0B] font-medium mb-2">
                         FlavorNest Vietnam
                     </p>
 
-                    {/* H1 */}
                     <h1 className="font-display font-extrabold leading-[1.04] mb-6">
                         <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
                             Your Nest of
@@ -123,15 +110,13 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                         </span>
                     </h1>
 
-                    {/* Subheading */}
                     <p className="text-white/80 text-lg sm:text-xl max-w-xl leading-relaxed mb-10"
                         style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
                         Made Simple at Home.{' '}
-                        <strong className="text-white font-semibold">100+ tested recipes</strong>{' '}
+                        <strong className="text-white font-semibold">{count}+ tested recipes</strong>{' '}
                         from Hanoi, Hue and Saigon — crafted for every home kitchen.
                     </p>
 
-                    {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-14">
                         <Link
                             href="/recipes"
@@ -150,7 +135,7 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                             Kitchen Stories
                         </Link>
                     </div>
-                    {/* Stats row (mobile) */}
+
                     <div className="flex items-center gap-6 lg:hidden">
                         {STATS.map((s, i) => (
                             <div key={s.label} className="flex items-center gap-5">
@@ -165,7 +150,6 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                 </div>
             </motion.div>
 
-            {/* ── Scroll cue ── */}
             <motion.div
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                 transition={{ delay: 1.4, duration: 0.8 }}
