@@ -72,7 +72,7 @@ export async function getMyFavoritesAction() {
     })
 
     return rows.map(r => ({
-        ...(r.recipeData as FavoriteRecipeData),
+        ...(r.recipeData as unknown as FavoriteRecipeData),
         savedAt: r.savedAt.getTime(),
         id: r.id,
     }))
