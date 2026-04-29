@@ -812,7 +812,7 @@ function RecipesInner() {
                         </p>
                         <button
                             onClick={clearSearch}
-</button>
+                        </button>
                     </motion.div>
                 )}
             </AnimatePresence>
