@@ -115,50 +115,49 @@ export default function NorthernCuisinePage() {
                     );
                 }
                 .pill-f {
-                    border: 1px solid rgba(255,255,255,0.15);
+                    border: 1px solid rgba(75,46,26,0.15);
                     border-radius: 100px;
                     padding: 8px 20px;
                     font-size: 13px;
                     font-weight: 500;
-                    color: rgba(255,255,255,0.5);
-                    background: transparent;
+                    color: rgba(75,46,26,0.6);
+                    background: white;
                     cursor: pointer;
                     transition: all 0.2s;
                     white-space: nowrap;
                     font-family: inherit;
                 }
-                .pill-f:hover { color: white; border-color: rgba(255,255,255,0.4); }
+                .pill-f:hover { color: #2D1A0E; border-color: rgba(75,46,26,0.4); }
                 .pill-f.on { background: #D97706; color: white; border-color: #D97706; }
 
-                .r-card {
-                    background: rgba(255,255,255,0.04);
-                    border: 1px solid rgba(255,255,255,0.07);
+                r-card {
+                    background: white;
+                    border: 1px solid rgba(75,46,26,0.08);
                     border-radius: 24px;
                     overflow: hidden;
                     text-decoration: none;
                     display: block;
-                    transition: transform 0.32s cubic-bezier(0.34,1.4,0.64,1), border-color 0.25s, background 0.25s;
+                    transition: transform 0.32s cubic-bezier(0.34,1.4,0.64,1), border-color 0.25s, box-shadow 0.25s;
                 }
                 .r-card:hover {
                     transform: translateY(-8px);
                     border-color: rgba(217,119,6,0.3);
-                    background: rgba(255,255,255,0.07);
+                    box-shadow: 0 16px 40px rgba(75,46,26,0.08);
                 }
                 .r-card:hover .r-img { transform: scale(1.07); }
                 .r-img { transition: transform 0.55s ease; }
 
                 .culture-card {
-                    background: rgba(255,255,255,0.03);
-                    border: 1px solid rgba(255,255,255,0.07);
+                    background: white;
+                    border: 1px solid rgba(75,46,26,0.08);
                     border-radius: 20px;
                     padding: 28px;
                     transition: background 0.2s, border-color 0.2s;
                 }
                 .culture-card:hover {
-                    background: rgba(255,255,255,0.06);
-                    border-color: rgba(217,119,6,0.2);
+                    background: #FEF3E2;
+                    border-color: rgba(217,119,6,0.3);
                 }
-
                 .breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; font-weight: 500; transition: color 0.15s; }
                 .breadcrumb a:hover { color: #D97706; }
 
@@ -285,15 +284,15 @@ export default function NorthernCuisinePage() {
 
                             {/* Body */}
                             <div style={{ padding: '18px 20px 20px' }}>
-                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontWeight: 700, color: 'white', margin: '0 0 2px', lineHeight: 1.2 }}>
+                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontWeight: 700, color: '#2D1A0E', margin: '0 0 2px', lineHeight: 1.2 }}>
                                     {recipe.title}
                                 </h3>
-                                <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
-                                <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.5)', lineHeight: 1.65, margin: '0 0 16px' }}>{recipe.description}</p>
-                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 13, borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+                                <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
+                                <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.65)', lineHeight: 1.65, margin: '0 0 16px' }}>{recipe.description}</p>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 13, borderTop: '1px solid rgba(75,46,26,0.1)' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                                         <span style={{ color: '#D97706', fontSize: 13, fontWeight: 700 }}>★ {recipe.rating}</span>
-                                        <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: 12 }}>({recipe.reviews})</span>
+                                        <span style={{ color: 'rgba(75,46,26,0.4)', fontSize: 12 }}>({recipe.reviews})</span>
                                     </div>
                                     <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706' }}>View Recipe →</span>
                                 </div>
@@ -303,7 +302,7 @@ export default function NorthernCuisinePage() {
                 </div>
 
                 {filtered.length === 0 && (
-                    <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(255,255,255,0.25)' }}>
+                    <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.4)' }}>
                         <div style={{ fontSize: 44, marginBottom: 12 }}>🍜</div>
                         <p>No recipes found for this filter.</p>
                     </div>
