@@ -34,9 +34,16 @@ export const IconSearch = ({ size = 24, color = "#D97706", className }: IconProp
   </svg>
 );
 
-export const IconHeart = ({ size = 24, color = "#D97706", className }: IconProps) => (
+export const IconHeart = ({ size = 24, color = "#D97706", filled = false, className }: IconProps & { filled?: boolean }) => (
   <svg width={size} height={size} viewBox="0 0 28 28" fill="none" className={className}>
-    <path d="M14,24 C9,19 2,14 2,8 C2,4 5,2 9,5 C11,6 13,8 14,10 C15,8 17,6 19,5 C23,2 26,4 26,8 C26,14 19,19 14,24 Z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+    <path
+      d="M14,24 C9,19 2,14 2,8 C2,4 5,2 9,5 C11,6 13,8 14,10 C15,8 17,6 19,5 C23,2 26,4 26,8 C26,14 19,19 14,24 Z"
+      stroke={color}
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill={filled ? color : "none"}
+    />
   </svg>
 );
 
