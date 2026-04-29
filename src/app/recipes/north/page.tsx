@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { Utensils, Clock, Globe, Star, Flame, Palmtree, Soup, BookOpen } from 'lucide-react'
 
 const RECIPES = [
