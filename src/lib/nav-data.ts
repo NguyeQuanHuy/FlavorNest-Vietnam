@@ -5,60 +5,21 @@ export type NavItem = {
   description: string;
   href: string;
   image: string;
+  icon?: string;
 };
 
 export const RECIPE_CATEGORIES: NavItem[] = [
-  {
-    name: "Breakfast",
-    description: "Light & energizing start",
-    href: "/recipes/breakfast",
-    image: "/images/recipes/xoi-xeo.jpg",
-  },
-  {
-    name: "Main Dishes",
-    description: "Balanced everyday meals",
-    href: "/recipes/main-dishes",
-    image: "/images/recipes/ca-kho-to.jpg",
-  },
-  {
-    name: "Desserts",
-    description: "Sweet finishing treats",
-    href: "/recipes/desserts",
-    image: "/images/recipes/tiramisu-caphe.jpg",
-  },
-  {
-    name: "Specialty Drinks",
-    description: "Creative refreshing drinks",
-    href: "/recipes/drinks",
-    image: "/images/recipes/ca-phe-muoi.jpg",
-  },
+  { name: "Breakfast", description: "Light & energizing start", href: "/recipes/breakfast", image: "/images/recipes/xoi-xeo.jpg", icon: "bowl" },
+  { name: "Main Dishes", description: "Balanced everyday meals", href: "/recipes/main-dishes", image: "/images/recipes/ca-kho-to.jpg", icon: "recipe" },
+  { name: "Desserts", description: "Sweet finishing treats", href: "/recipes/desserts", image: "/images/recipes/tiramisu-caphe.jpg", icon: "star" },
+  { name: "Specialty Drinks", description: "Creative refreshing drinks", href: "/recipes/drinks", image: "/images/recipes/ca-phe-muoi.jpg", icon: "leaf" },
 ];
 
 export const RECIPE_REGIONS: NavItem[] = [
-  {
-    name: "Northern Cuisine",
-    description: "Balanced, subtle flavors",
-    href: "/recipes/north",
-    image: "/images/recipes/pho-bo-ha-noi.jpg",
-  },
-  {
-    name: "Central Cuisine",
-    description: "Bold & spicy dishes",
-    href: "/recipes/central",
-    image: "/images/recipes/bun-bo-hue.webp",
-  },
-  {
-    name: "Southern Cuisine",
-    description: "Sweet tropical richness",
-    href: "/recipes/south",
-    image: "/images/recipes/banh-xeo-mekong.jpg",
-  },
-  {
-    name: "Street Food",
-    description: "Quick street bites",
-    href: "/recipes/street-food",
-    image: "/images/recipes/street-foods.jpg",
-  },
+  { name: "Northern Cuisine", description: "Balanced, subtle flavors", href: "/recipes/north", image: "/images/recipes/pho-bo-ha-noi.jpg", icon: "chopsticks" },
+  { name: "Central Cuisine", description: "Bold & spicy dishes", href: "/recipes/central", image: "/images/recipes/bun-bo-hue.webp", icon: "fire" },
+  { name: "Southern Cuisine", description: "Sweet tropical richness", href: "/recipes/south", image: "/images/recipes/banh-xeo-mekong.jpg", icon: "leaf" },
+  { name: "Street Food", description: "Quick street bites", href: "/recipes/street-food", image: "/images/recipes/street-foods.jpg", icon: "bowl" },
 ];
 
 export const STORY_TOPICS: NavItem[] = [
