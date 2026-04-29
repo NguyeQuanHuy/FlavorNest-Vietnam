@@ -212,7 +212,7 @@ export default function FavoritesPage() {
                             onMouseLeave={(e) => ((e.currentTarget as HTMLImageElement).style.transform = "scale(1)")}
                           />
                           <button
-                            onClick={(e) => { e.preventDefault(); removeFavorite(recipe.id); }}
+                            onClick={(e) => { e.preventDefault(); removeFavorite(recipe.id || recipe.slug); }}
                             aria-label="Bỏ yêu thích"
                             style={{
                               position: "absolute", top: 10, right: 10,
