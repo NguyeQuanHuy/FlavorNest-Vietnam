@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map } from 'lucide-react'
+
 interface Recipe {
     slug: string
     title: string
@@ -303,30 +304,31 @@ export default function CentralCuisinePage() {
                 </AnimatePresence>
             </section>
 
-            {/* OTHER REGIONS */}
-            <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 24px 80px', background: '#FAFAF7' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            {/* ── EXPLORE MORE ── */}
+            <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
+                <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>
                         <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Explore Vietnam</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Vietnam Has More</span>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                     </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: '#2D1A0E', margin: '0 0 32px' }}>Other Regions & Categories</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 12 }}>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: '#2D1A0E', margin: '0 0 36px' }}>
+                        Explore Other Regions
+                    </h2>
+                    <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Northern Cuisine', Icon: Castle, href: '/recipes/north' },
-                            { label: 'Southern Cuisine', Icon: Palmtree, href: '/recipes/south' },
-                            { label: 'Street Food', Icon: Soup, href: '/recipes/street-food' },
-                            { label: 'Main Dishes', Icon: Utensils, href: '/recipes/main-dishes' },
-                            { label: 'Desserts', Icon: IceCream, href: '/recipes/desserts' },
-                            { label: 'Travel Guide', Icon: Map, href: '/stories/travel' },
-                        ].map(({ label, Icon, href }) => (
-                            <Link key={href} href={href}
-                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '20px 16px', borderRadius: 18, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s' }}
+                            { label: 'Northern Cuisine', sub: 'Hanoi & The North', Icon: Castle, href: '/recipes/north' },
+                            { label: 'Southern Cuisine', sub: 'Saigon & The Mekong', Icon: Palmtree, href: '/recipes/south' },
+                            { label: 'Street Food', sub: 'on streets everywhere', Icon: Soup, href: '/recipes/street-food' },
+                            { label: 'All Recipes', sub: 'Browse everything', Icon: BookOpen, href: '/recipes' },
+                        ].map(({ label, sub, Icon, href }) => (
+                            <Link key={href} href={href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '24px 32px', borderRadius: 20, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s', minWidth: 170 }}
                                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
                                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
                             >
-                                <Icon size={24} strokeWidth={1.6} color="#D97706" />
-                                <span style={{ fontSize: 13, fontWeight: 700, color: '#2D1A0E', textAlign: 'center' }}>{label}</span>
+                                <Icon size={26} strokeWidth={1.6} color="#D97706" />
+                                <span style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{label}</span>
+                                <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
                             </Link>
                         ))}
                     </div>
