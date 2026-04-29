@@ -4,6 +4,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { STORY_TOPICS, STORY_REGIONS, type NavItem } from "@/lib/nav-data";
+import { FNIcon } from "@/components/Icons";
 
 type Props = {
   isOpen: boolean;
