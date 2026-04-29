@@ -1,5 +1,6 @@
 'use client';
 
+import { FNIcon } from '@/components/Icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,8 +25,9 @@ export default function RecipeCard({ title, image, description, id, category, di
             ✨ New
           </span>
         </div>
-        <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-full font-medium">
-          {time || "40 min"}
+        <div className="absolute top-4 right-4 bg-black/20 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-full font-medium flex items-center gap-1">
+  <FNIcon name="clock" size={11} color="#ffffff" />
+  {time || "40 min"}
         </div>
 
         {/* Nút tim */}
@@ -54,25 +56,11 @@ export default function RecipeCard({ title, image, description, id, category, di
           }}
         >
           <AnimatePresence mode="wait">
-            <motion.svg
-              key={liked ? 'filled' : 'empty'}
-              initial={{ scale: 0.6, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.6, opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill={liked ? '#D97706' : 'none'}
-            >
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"
-                stroke="#D97706"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </motion.svg>
+            <FNIcon
+            name="favorite"
+            size={16}
+            color={liked ? '#D97706' : 'none'}
+          />
           </AnimatePresence>
         </motion.button>
       </div>
