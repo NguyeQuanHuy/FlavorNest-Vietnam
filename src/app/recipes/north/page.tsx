@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { Utensils, Clock, Globe, Star, Flame, Palmtree, Soup, BookOpen } from 'lucide-react'
+import VietnamMap from '@/components/VietnamMap'
 
 const RECIPES = [
     {
@@ -173,52 +174,54 @@ export default function NorthernCuisinePage() {
                 .fade-up-3 { animation: fadeUp 0.7s 0.28s ease both; }
             `}</style>
 
-{/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    {/* Breadcrumb */}
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
-                        {[['Home', '/'], ['Recipes', '/recipes'], ['Northern', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
-                                {href ?
-                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
-                            </span>
-                        ))}
-                    </nav>
+                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
+                    <div>
+                        {/* Breadcrumb */}
+                        <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                            {[['Home', '/'], ['Recipes', '/recipes'], ['Northern', '']].map(([label, href], i) => (
+                                <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                    {href ?
+                                        <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                        : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                                </span>
+                            ))}
+                        </nav>
 
-                    {/* Eyebrow */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Hanoi & The North</span>
-                    </div>
+                        {/* Eyebrow */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                            <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Hanoi & The North</span>
+                        </div>
 
-                    {/* Title */}
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
-                        Northern<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Cuisine</span>
-                    </h1>
+                        {/* Title */}
+                        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
+                            Northern<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Cuisine</span>
+                        </h1>
 
-                    {/* Subtitle */}
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        From the dawn pho stalls of Hanoi to the smoky bún chả of Le Van Huu street — Northern Vietnamese cuisine is defined by restraint, clarity, and the quiet confidence of a thousand-year capital.
-                    </p>
+                        {/* Subtitle */}
+                        <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
+                            From the dawn pho stalls of Hanoi to the smoky bún chả of Le Van Huu street — Northern Vietnamese cuisine is defined by restraint, clarity, and the quiet confidence of a thousand-year capital.
+                        </p>
 
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[
-                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                            { Icon: Clock, val: '40 min', lbl: 'Quickest' },
-                            { Icon: Globe, val: '1', lbl: 'Region' },
-                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
-                        ].map(({ Icon, val, lbl }) => (
-                            <div key={lbl}>
-                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
-                            </div>
-                        ))}
+                        {/* Stats */}
+                        <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                            {[
+                                { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
+                                { Icon: Clock, val: '40 min', lbl: 'Quickest' },
+                                { Icon: Globe, val: '1', lbl: 'Region' },
+                                { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
+                            ].map(({ Icon, val, lbl }) => (
+                                <div key={lbl}>
+                                    <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
+                                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                    <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -336,6 +339,9 @@ export default function NorthernCuisinePage() {
                                 <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
                             </Link>
                         ))}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="hero-map">
+                        <VietnamMap region="north" size={140} />
                     </div>
                 </div>
             </section>
