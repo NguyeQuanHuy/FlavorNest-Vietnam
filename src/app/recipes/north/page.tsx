@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-
-
+import { Utensils, Clock, Globe, Star } from 'lucide-react'
 
 const RECIPES = [
     {
@@ -209,9 +208,14 @@ export default function NorthernCuisinePage() {
 
                     {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[['🏯', `${RECIPES.length}`, 'Recipes'], ['⏱', '40 min', 'Quickest'], ['🌏', '1', 'Region'], ['⭐', '4.8', 'Avg Rating']].map(([icon, val, lbl]) => (
+                        {[
+                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
+                            { Icon: Clock, val: '40 min', lbl: 'Quickest' },
+                            { Icon: Globe, val: '1', lbl: 'Region' },
+                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
+                        ].map(({ Icon, val, lbl }) => (
                             <div key={lbl}>
-                                <span style={{ fontSize: 14 }}>{icon}</span>
+                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
                                 <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
                                 <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
                             </div>
