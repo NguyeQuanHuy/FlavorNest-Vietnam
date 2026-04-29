@@ -55,13 +55,13 @@ export default function RecipeCard({ title, image, description, id, category, di
             boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
           }}
         >
-          <AnimatePresence mode="wait">
-            <FNIcon
-            name="favorite"
-            size={16}
-            color={liked ? '#D97706' : 'none'}
-          />
-          </AnimatePresence>
+         <AnimatePresence mode="wait">
+              <FNIcon
+                name="favorite"
+                size={16}
+                color={liked ? '#D97706' : '#9CA3AF'}
+              />
+        </AnimatePresence>
         </motion.button>
       </div>
 
