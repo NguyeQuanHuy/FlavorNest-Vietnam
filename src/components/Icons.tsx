@@ -128,3 +128,41 @@ export const IconChopsticks = ({ size = 24, color = "#D97706", className }: Icon
     <line x1="18" y1="2" x2="16" y2="26" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
   </svg>
 );
+
+// FNIcon wrapper — dùng cho Navbar và toàn site
+type FNIconProps = {
+  name: string;
+  size?: number;
+  color?: string;
+  className?: string;
+};
+
+export function FNIcon({ name, size = 24, color = "#D97706", className }: FNIconProps) {
+  const props = { size, color, className };
+  switch (name) {
+    case "home":       return <IconHome {...props} />;
+    case "recipe":     return <IconRecipe {...props} />;
+    case "search":     return <IconSearch {...props} />;
+    case "favorite":   return <IconHeart {...props} />;
+    case "share":      return <IconShare {...props} />;
+    case "user":       return <IconUser {...props} />;
+    case "filter":     return <IconFilter {...props} />;
+    case "bowl":       return <IconBowl {...props} />;
+    case "clock":      return <IconClock {...props} />;
+    case "fire":       return <IconFire {...props} />;
+    case "leaf":       return <IconLeaf {...props} />;
+    case "bookmark":   return <IconBookmark {...props} />;
+    case "star":       return <IconStar {...props} />;
+    case "menu":       return <IconMenu {...props} />;
+    case "arrow":      return <IconArrow {...props} />;
+    case "chopsticks": return <IconChopsticks {...props} />;
+    case "close":
+      return (
+        <svg width={size} height={size} viewBox="0 0 28 28" fill="none" className={className}>
+          <line x1="6" y1="6" x2="22" y2="22" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+          <line x1="22" y1="6" x2="6" y2="22" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+        </svg>
+      );
+    default: return null;
+  }
+}
