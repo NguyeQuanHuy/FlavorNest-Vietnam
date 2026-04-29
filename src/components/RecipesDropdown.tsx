@@ -4,6 +4,7 @@ import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { RECIPE_CATEGORIES, RECIPE_REGIONS, type NavItem } from "@/lib/nav-data";
+import { FNIcon } from "@/components/Icons";
 
 type Props = {
   isOpen: boolean;
@@ -51,21 +52,22 @@ function NavItemCard({ item }: { item: NavItem }) {
         style={{ textDecoration: "none" }}
       >
         <div
-          className="relative flex-shrink-0 overflow-hidden transition-all duration-200 group-hover:shadow-md"
+          className="flex-shrink-0 flex items-center justify-center transition-all duration-200"
           style={{
             width: 44,
             height: 44,
             borderRadius: 10,
-            border: "1px solid rgba(75,46,26,0.08)",
+            background: "rgba(217,119,6,0.08)",
+            border: "1px solid rgba(217,119,6,0.12)",
           }}
         >
-          <Image
-            src={item.image}
-            alt={item.name}
-            fill
-            sizes="44px"
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
+          {item.icon ? (
+            <FNIcon name={item.icon} size={22} color="#D97706" />
+          ) : (
+            <div className="relative w-full h-full overflow-hidden" style={{ borderRadius: 10 }}>
+              <Image src={item.image} alt={item.name} fill sizes="44px" className="object-cover" />
+            </div>
+          )}
         </div>
 
         <div className="flex-1 min-w-0">
@@ -80,13 +82,7 @@ function NavItemCard({ item }: { item: NavItem }) {
           >
             {item.name}
           </div>
-          <div
-            style={{
-              fontSize: 12,
-              color: "rgba(75,46,26,0.6)",
-              marginTop: 2,
-            }}
-          >
+          <div style={{ fontSize: 12, color: "rgba(75,46,26,0.6)", marginTop: 2 }}>
             {item.description}
           </div>
         </div>
@@ -99,13 +95,7 @@ function NavItemCard({ item }: { item: NavItem }) {
           className="transition-all duration-200 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0"
           style={{ color: "#D97706" }}
         >
-          <path
-            d="M5 3L9 7L5 11"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </Link>
     </motion.div>
