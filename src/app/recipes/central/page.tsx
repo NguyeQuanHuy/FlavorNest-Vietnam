@@ -197,7 +197,7 @@ export default function CentralCuisinePage() {
     const filtered = useMemo(() => RECIPES.filter(r => diff === 'All' || r.difficulty === diff), [diff])
 
     return (
-        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif", color: '#2D1A0E' }}>
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap');
                 * { box-sizing: border-box; }
