@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Utensils, Clock, Globe, Star } from 'lucide-react'
+import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map } from 'lucide-react'
 
 interface Recipe {
     slug: string
