@@ -19,6 +19,22 @@
 
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import fs from 'fs'
+import path from 'path'
+
+function countRecipePages(): number {
+  const recipesDir = path.join(process.cwd(), 'src/app/recipes')
+  const excludes = new Set(['[slug]', '_components', 'breakfast', 'desserts', 'drinks', 'main-dishes', 'north', 'central', 'south', 'street-food'])
+  try {
+    return fs.readdirSync(recipesDir)
+      .filter(f => {
+        const fullPath = path.join(recipesDir, f)
+        return fs.statSync(fullPath).isDirectory() && !excludes.has(f)
+      }).length
+  } catch { return 100 }
+}
+
+
 
 // Section components (each in its own file for maintainability)
 import HeroSection from './_sections/HeroSection'
@@ -92,9 +108,9 @@ const websiteSchema = {
 
 // ── Page (Server Component) ───────────────────────────────────────────────────
 export default function HomePage() {
+  const recipeCount = countRecipePages()
   return (
     <>
-      {/* Structured data injected in <head> via next/script */}
       <Script
         id="schema-org"
         type="application/ld+json"
@@ -103,23 +119,12 @@ export default function HomePage() {
         }}
       />
 
-      <main className="overflow-x-hidden">
-        {/* 1 ─ Hero */}
-        <HeroSection />
-
-        {/* 2 ─ Featured Recipes */}
+ <main className="overflow-x-hidden">
+        <HeroSection recipeCount={recipeCount} />
         <FeaturedRecipes recipes={recipes} />
-
-        {/* 3 ─ Popular Categories */}
         <CategoriesSection />
-
-        {/* 4 ─ Kitchen Stories */}
         <KitchenStories />
-
-        {/* 5 ─ Why FlavorNest */}
         <WhyFlavorNest />
-
-        {/* 6 ─ Newsletter */}
         <NewsletterSection />
       </main>
     </>
