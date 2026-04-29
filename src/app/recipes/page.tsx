@@ -819,9 +819,6 @@ function RecipesInner() {
                     </motion.div>
                 )}
             </section>
-        </main>
-    );
-}
 
 export default function RecipesPage() {
     return (
