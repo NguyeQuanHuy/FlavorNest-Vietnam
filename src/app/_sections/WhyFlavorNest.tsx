@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { recipes } from "@/data/recipes";
 
 const PILLARS = [
     {
@@ -34,9 +35,12 @@ const PILLARS = [
     },
 ]
 
+const recipeCount = recipes.length;
+const avgRating = (recipes.reduce((sum, r) => sum + (r.rating ?? 4.8), 0) / recipes.length).toFixed(1);
+
 const TRUST_STATS = [
-    { value: '100+', label: 'Recipes' },
-    { value: '4.9', label: 'Avg. Star Rating' },
+    { value: `${recipeCount}+`, label: 'Recipes' },
+    { value: avgRating, label: 'Avg. Star Rating' },
     { value: '15K+', label: 'Home Cooks' },
     { value: '3', label: 'Cities Explored' },
 ]
