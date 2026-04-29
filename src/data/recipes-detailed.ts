@@ -750,6 +750,10 @@ const bunChaHaNoi: RecipeDetailed = {
 //  Export all detailed recipes
 // ─────────────────────────────────────────────────────────────
 export const RECIPES_DETAILED: RecipeDetailed[] = [
+    banhCanhHe,
+    bunBoHue,
+    banhBao,
+    bunChaHaNoi,
     {
         slug: "pho-bo-ha-noi",
         title: "Hanoi Beef Pho",
