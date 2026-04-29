@@ -12,6 +12,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useRef, useMemo } from 'react'
+import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
