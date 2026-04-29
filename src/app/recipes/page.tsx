@@ -807,17 +807,12 @@ function RecipesInner() {
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
                         <div style={{ fontSize: 48, marginBottom: 14 }}>🔍</div>
-                        <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontStyle: "italic", color: "rgba(75,46,26,0.5)" }}>
-                            No recipes found for &quot;{localQuery}&quot;
-                        </p>
                         <button
                             onClick={clearSearch}
+                            style={{ marginTop: 16, padding: "10px 24px", borderRadius: 100, border: "1.5px solid rgba(75,46,26,0.15)", background: "transparent", color: "#D97706", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
+                        >
+                            Clear search
                         </button>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-            </section>
-        </main>
     );
 }
 
