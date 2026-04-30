@@ -98,10 +98,11 @@ export function useFavorites() {
   const mounted = hydrated;
 
   const persistLocal = useCallback((items: FavoriteRecipe[]) => {
-    try {
-      localStorage.setItem(KEY, JSON.stringify(items));
-    } catch { }
-  }, []);
+      try {
+        localStorage.setItem(KEY, JSON.stringify(items));
+        window.dispatchEvent(new StorageEvent("storage", { key: KEY, newValue: JSON.stringify(items) }));
+      } catch {}
+    }, []);
 
   // ── Toggle (add/remove) ──
   const toggle = useCallback(
