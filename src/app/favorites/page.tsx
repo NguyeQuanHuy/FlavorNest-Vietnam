@@ -266,6 +266,85 @@ export default function FavoritesPage() {
             </motion.div>
           )}
         </AnimatePresence>
+        </AnimatePresence>
+
+        {/* ── Confirm remove all modal ── */}
+        <AnimatePresence>
+          {showConfirm && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setShowConfirm(false)}
+                style={{
+                  position: "fixed", inset: 0, zIndex: 50,
+                  background: "rgba(45,26,14,0.5)",
+                  backdropFilter: "blur(4px)",
+                }}
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.92, y: 16 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.92, y: 16 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                style={{
+                  position: "fixed", top: "50%", left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 51,
+                  background: "#FFF",
+                  borderRadius: 20,
+                  padding: "32px 28px",
+                  width: "min(90vw, 360px)",
+                  boxShadow: "0 24px 60px rgba(45,26,14,0.2)",
+                  textAlign: "center",
+                }}
+              >
+                <div style={{ fontSize: 40, marginBottom: 12 }}>🗑️</div>
+                <h3 style={{
+                  fontFamily: "var(--font-playfair), Georgia, serif",
+                  fontSize: 20, fontWeight: 700, color: "#2D1A0E", marginBottom: 8,
+                }}>
+                  Remove all favorites?
+                </h3>
+                <p style={{ fontSize: 14, color: "rgba(75,46,26,0.6)", marginBottom: 24, lineHeight: 1.6 }}>
+                  This will permanently remove all {favorites.length} saved recipes.
+                </p>
+                <div style={{ display: "flex", gap: 10 }}>
+                  <button
+                    onClick={() => setShowConfirm(false)}
+                    style={{
+                      flex: 1, padding: "12px", borderRadius: 999,
+                      border: "1.5px solid rgba(75,46,26,0.15)",
+                      background: "transparent", color: "#4B2E1A",
+                      fontSize: 14, fontWeight: 600, cursor: "pointer",
+                    }}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={() => { clearFavorites(); setShowConfirm(false); }}
+                    style={{
+                      flex: 1, padding: "12px", borderRadius: 999,
+                      border: "none",
+                      background: "linear-gradient(135deg, #DC2626, #B91C1C)",
+                      color: "#fff",
+                      fontSize: 14, fontWeight: 600, cursor: "pointer",
+                      boxShadow: "0 4px 14px rgba(220,38,38,0.35)",
+                    }}
+                  >
+                    Remove all
+                  </button>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+
+      </div>
+    </div>
+  );
+}
       </div>
     </div>
   );
