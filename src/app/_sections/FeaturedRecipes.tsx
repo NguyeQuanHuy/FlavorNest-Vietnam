@@ -6,6 +6,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
 import SectionHeader from '../_components/SectionHeader'
 
 // 1. GIỮ NGUYÊN INTERFACE VÀ STYLES CỦA BẠN
@@ -46,7 +47,21 @@ export default function FeaturedRecipes({ recipes }: { recipes: any[] }) {
 
     // ƯU TIÊN DỮ LIỆU TRUYỀN VÀO (recipes)
     const displayRecipes = recipes && recipes.length > 0 ? recipes : [];
+    const displayRecipes = recipes && recipes.length > 0 ? recipes : [];
 
+    const scrollRef = useRef<HTMLDivElement>(null)
+    const [canScrollLeft, setCanScrollLeft] = useState(false)
+    const [canScrollRight, setCanScrollRight] = useState(true)
+    
+    const scroll = (dir: 'left' | 'right') => {
+        const el = scrollRef.current
+        if (!el) return
+        el.scrollBy({ left: dir === 'left' ? -360 : 360, behavior: 'smooth' })
+        setTimeout(() => {
+            setCanScrollLeft(el.scrollLeft > 0)
+            setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10)
+        }, 350)
+    }
     return (
         <section className="py-24 px-5 lg:px-8 bg-[#F5EDE3] dark:bg-[#1C1009]" aria-labelledby="featured-heading">
             <div className="max-w-7xl mx-auto">
