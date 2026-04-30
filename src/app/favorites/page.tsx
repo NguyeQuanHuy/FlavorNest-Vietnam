@@ -119,9 +119,7 @@ export default function FavoritesPage() {
               {/* Clear all */}
               <div className="flex justify-end mb-6">
                 <button
-                  onClick={() => {
-                    if (confirm("Xóa tất cả yêu thích?")) clearFavorites();
-                  }}
+                  onClick={() => setShowConfirm(true)}
                   style={{
                     fontSize: 13,
                     color: "rgba(75,46,26,0.5)",
