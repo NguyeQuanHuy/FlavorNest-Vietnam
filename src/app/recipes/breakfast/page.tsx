@@ -2,188 +2,180 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useFavorites } from '@/hooks/useFavorites'
 
-const BREAKFAST_RECIPES = [
+interface Recipe {
+    slug: string
+    title: string
+    subtitle: string
+    image: string
+    region: 'Northern' | 'Central' | 'Southern'
+    difficulty: 'Easy' | 'Medium' | 'Hard'
+    time: string
+    rating: string
+    reviews: number
+    cal: number
+    tag: string
+    tagColor: string
+    description: string
+    tags: string[]
+}
+
+const RECIPES: Recipe[] = [
     {
         slug: 'pho-bo',
         title: 'Hanoi Beef Pho',
-        subtitle: 'Pho bo Ha Noi',
+        subtitle: 'Phở Bò Hà Nội',
         image: '/images/recipes/phohanoi.jpg',
-        time: '3 hrs',
-        difficulty: 'Medium',
-        rating: '4.9',
-        reviews: 248,
-        region: 'Northern',
-        cal: 420,
-        description: 'Slow-simmered bone broth, silky noodles, paper-thin beef — the iconic Hanoi morning ritual.',
-        isPopular: true,
+        region: 'Northern', difficulty: 'Medium', time: '3 hrs',
+        rating: '4.9', reviews: 248, cal: 420, tag: 'Popular', tagColor: '#D97706',
+        description: "Slow-simmered bone broth, silky rice noodles, paper-thin slices of beef — the dish that defines Hanoi mornings. The secret is in the charred ginger and onion, the star anise and cinnamon that perfume the broth for hours. Served with a plate of fresh herbs, bean sprouts and lime, it is Vietnam's most beloved bowl.",
+        tags: ['Beef', 'Noodles', 'Slow Cook', 'Heritage'],
     },
     {
         slug: 'banh-mi-trung',
         title: 'Egg Banh Mi',
-        subtitle: 'Banh mi op la',
+        subtitle: 'Bánh Mì Ốp La',
         image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80',
-        time: '15 min',
-        difficulty: 'Easy',
-        rating: '4.7',
-        reviews: 189,
-        region: 'Southern',
-        cal: 310,
-        description: 'Crispy baguette with sunny-side-up egg, pâté, fresh herbs and a drizzle of Maggi — Saigon\'s 10-minute breakfast.',
-        isPopular: false,
+        region: 'Southern', difficulty: 'Easy', time: '15 min',
+        rating: '4.7', reviews: 189, cal: 310, tag: 'Quick & Easy', tagColor: '#059669',
+        description: "A crusty French baguette split open and loaded with a sunny-side-up egg, chicken pâté, pickled daikon and carrots, fresh cucumber, cilantro and a generous drizzle of Maggi seasoning sauce. Saigon's answer to the breakfast sandwich — done in ten minutes, eaten on the go, impossible to improve.",
+        tags: ['Bread', 'Eggs', 'Quick', 'Street Food'],
     },
     {
         slug: 'xoi-xeo',
         title: 'Mung Bean Sticky Rice',
-        subtitle: 'Xoi xeo',
-        image: 'https://images.unsplash.com/photo-1579856896394-07dfa10d7c5b?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        time: '1 hr',
-        difficulty: 'Easy',
-        rating: '4.8',
-        reviews: 134,
-        region: 'Northern',
-        cal: 380,
-        description: 'Golden sticky rice topped with fried shallots and split mung bean — a beloved Hanoi street breakfast.',
-        isPopular: true,
+        subtitle: 'Xôi Xéo',
+        image: 'https://images.unsplash.com/photo-1579856896394-07dfa10d7c5b?auto=format&fit=crop&w=800&q=80',
+        region: 'Northern', difficulty: 'Easy', time: '1 hr',
+        rating: '4.8', reviews: 134, cal: 380, tag: 'Popular', tagColor: '#D97706',
+        description: "Golden glutinous rice steamed over a bed of split mung bean until it turns soft and fragrant, then topped with crispy fried shallots and a drizzle of turmeric-infused scallion oil. A beloved Hanoi street breakfast sold from bamboo baskets since before dawn, wrapped in banana leaf and eaten standing up.",
+        tags: ['Rice', 'Vegan', 'Mung Bean', 'Northern'],
     },
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'Banh cuon',
+        subtitle: 'Bánh Cuốn',
         image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80',
-        time: '45 min',
-        difficulty: 'Medium',
-        rating: '4.8',
-        reviews: 167,
-        region: 'Northern',
-        cal: 290,
-        description: 'Silky steamed rice sheets filled with seasoned pork and wood ear mushrooms, served with nem chua and nuoc cham.',
-        isPopular: true,
+        region: 'Northern', difficulty: 'Medium', time: '45 min',
+        rating: '4.8', reviews: 167, cal: 290, tag: 'Popular', tagColor: '#D97706',
+        description: "Translucent sheets of steamed rice batter, almost impossibly thin, rolled around a filling of seasoned minced pork and wood ear mushrooms. Finished with crispy fried shallots, a scattering of fresh herbs and a bowl of nem chua dipping sauce. Each sheet is made to order on a cloth stretched over boiling water — breakfast as performance.",
+        tags: ['Rice Flour', 'Pork', 'Steamed', 'Heritage'],
     },
     {
         slug: 'chao-long',
         title: 'Pork Congee',
-        subtitle: 'Chao long',
+        subtitle: 'Cháo Lòng',
         image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80',
-        time: '1.5 hrs',
-        difficulty: 'Easy',
-        rating: '4.6',
-        reviews: 98,
-        region: 'Southern',
-        cal: 340,
-        description: 'Silky rice porridge with pork offal, ginger, and fresh herbs — Saigon\'s ultimate comfort breakfast.',
-        isPopular: false,
+        region: 'Southern', difficulty: 'Easy', time: '1.5 hrs',
+        rating: '4.6', reviews: 98, cal: 340, tag: 'Comfort Food', tagColor: '#7C3AED',
+        description: "Silky, slow-cooked rice porridge enriched with pork offal — intestines, liver and heart — gently simmered in a ginger-scented broth until the grains dissolve into pure comfort. Finished with fried garlic, fresh ginger, a drizzle of sesame oil and a crack of white pepper. Saigon's ultimate restorative breakfast.",
+        tags: ['Rice', 'Pork', 'Slow Cook', 'Comfort'],
     },
     {
         slug: 'banh-trang-tron',
         title: 'Rice Paper Salad',
-        subtitle: 'Banh trang ',
+        subtitle: 'Bánh Tráng Trộn',
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80',
-        time: '20 min',
-        difficulty: 'Easy',
-        rating: '4.7',
-        reviews: 212,
-        region: 'Southern',
-        cal: 220,
-        description: 'Shredded rice paper tossed with quail eggs, dried shrimp, mango and a tangy-spicy dressing.',
-        isPopular: false,
+        region: 'Southern', difficulty: 'Easy', time: '20 min',
+        rating: '4.7', reviews: 212, cal: 220, tag: 'Street Snack', tagColor: '#BE185D',
+        description: "Strips of dried rice paper tossed with quail eggs, dried shrimp, green mango, taro shreds and a fiery-tangy dressing of tamarind, chilli and satay. Topped with roasted peanuts and Vietnamese coriander. Born on the streets of Saigon, this technicolour tangle is technically a snack but tastes like an event.",
+        tags: ['Rice Paper', 'Vegetarian', 'Tangy', 'Quick'],
     },
 ]
+
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
-const DIFF_COLOR: Record<string, string> = {
-    Easy: '#10b981',
-    Medium: '#f59e0b',
-    Hard: '#ef4444',
+const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
+
+function HeartBtn({ recipe }: { recipe: Recipe }) {
+    const { toggle, isFavorite, mounted } = useFavorites()
+    const liked = mounted && isFavorite(recipe.slug)
+    const [burst, setBurst] = useState(false)
+    const [toast, setToast] = useState<'added' | 'removed' | null>(null)
+
+    const handleToggle = useCallback((e: React.MouseEvent) => {
+        e.preventDefault(); e.stopPropagation()
+        const next = !liked
+        toggle({ id: recipe.slug, slug: recipe.slug, title: recipe.title, image: recipe.image, category: 'Breakfast', cookTime: recipe.time })
+        if (next) setBurst(true)
+        setToast(next ? 'added' : 'removed')
+        setTimeout(() => setBurst(false), 600)
+        setTimeout(() => setToast(null), 2000)
+    }, [liked, recipe, toggle])
+
+    return (
+        <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
+            <AnimatePresence>
+                {toast && (
+                    <motion.div initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
+                        style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
+                        {toast === 'added' ? '♥ Saved' : '✕ Removed'}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <motion.button onClick={handleToggle} whileTap={{ scale: 0.82 }} aria-label={liked ? 'Remove from favorites' : 'Save recipe'}
+                style={{ width: 36, height: 36, borderRadius: '50%', background: liked ? 'rgba(217,119,6,0.92)' : 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(217,119,6,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s, box-shadow 0.25s', position: 'relative', overflow: 'hidden' }}>
+                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(217,119,6,0.3)', pointerEvents: 'none' }} />}
+                <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35 }}>
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill={liked ? 'white' : 'none'} stroke={liked ? 'none' : 'rgba(75,46,26,0.5)'} strokeWidth="1.8" strokeLinecap="round" />
+                </motion.svg>
+            </motion.button>
+        </div>
+    )
 }
+
 export default function BreakfastPage() {
     const [diff, setDiff] = useState('All')
     const [region, setRegion] = useState('All Regions')
-    const filtered = BREAKFAST_RECIPES.filter(r => {
-        const dMatch = diff === 'All' || r.difficulty === diff
-        const rMatch = region === 'All Regions' || r.region === region
-        return dMatch && rMatch
-    })
+
+    const filtered = useMemo(() =>
+        RECIPES.filter(r => (diff === 'All' || r.difficulty === diff) && (region === 'All Regions' || r.region === region))
+        , [diff, region])
 
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap');
+                * { box-sizing: border-box; }
+                .r-card { background: white; border-radius: 24px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: transform 0.33s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s, border-color 0.2s; }
+                .r-card:hover { transform: translateY(-7px); box-shadow: 0 28px 60px rgba(75,46,26,0.13); border-color: rgba(217,119,6,0.22); }
+                .r-card:hover .r-img { transform: scale(1.07); }
+                .r-img { transition: transform 0.55s ease; }
+                .pill { border: 1.5px solid rgba(75,46,26,0.12); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; color: rgba(75,46,26,0.55); background: transparent; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
+                .pill:hover { color: #D97706; border-color: rgba(217,119,6,0.38); }
+                .pill.on { background: #4B2E1A; color: white; border-color: #4B2E1A; }
+                .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
+            `}</style>
 
-                .r-card {
-                    background: white;
-                    border-radius: 22px;
-                    overflow: hidden;
-                    border: 1px solid rgba(75,46,26,0.07);
-                    text-decoration: none;
-                    display: block;
-                    transition: transform 0.32s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease, border-color 0.2s;
-                }
-                .r-card:hover {
-                    transform: translateY(-7px);
-                    box-shadow: 0 28px 60px rgba(75,46,26,0.12);
-                    border-color: rgba(217,119,6,0.22);
-                }
-                .r-card:hover .r-img { transform: scale(1.08); }
-                .r-img { transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94); }
-                .pill-btn {
-                    border: 1.5px solid rgba(75,46,26,0.12);
-                    border-radius: 100px;
-                    padding: 7px 18px;
-                    font-size: 13px;
-                    font-weight: 500;
-                    color: rgba(75,46,26,0.55);
-                    background: transparent;
-                    cursor: pointer;
-                    transition: all 0.18s;
-                    white-space: nowrap;
-                    font-family: inherit;
-                }
-                .pill-btn:hover { color: #D97706; border-color: rgba(217,119,6,0.35); }
-                .pill-btn.on { background: #4B2E1A; color: white; border-color: #4B2E1A; }
-                .hero-wave {
-                    position: absolute; bottom: -1px; left: 0; right: 0;
-                }
-            `}</style>
-
- {/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    {/* Breadcrumb */}
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Breakfast', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                                 {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
-                                {href ?
-                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
                         ))}
                     </nav>
-
-                    {/* Eyebrow */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
                         <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
                         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Morning Ritual</span>
                     </div>
-
-                    {/* Title */}
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
                         Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
                     </h1>
-
-                    {/* Subtitle */}
                     <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
                         Start your day the Vietnamese way — from steaming bowls of phở to crispy bánh mì, these are the morning meals that fuel a nation.
                     </p>
-
-                    {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                         {[
-                            { Icon: Utensils, val: `${BREAKFAST_RECIPES.length}`, lbl: 'Recipes' },
+                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
                             { Icon: Clock, val: '15 min', lbl: 'Quickest' },
                             { Icon: Globe, val: '3', lbl: 'Regions' },
                             { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
@@ -211,105 +203,79 @@ export default function BreakfastPage() {
             </div>
 
             {/* ── GRID ── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '44px 24px 88px' }}>
-                <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.38)', marginBottom: 28, fontWeight: 500 }}>
-                    Showing {filtered.length} breakfast recipes
-                </p>
-
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 24 }}>
-                    {filtered.map(recipe => (
-                        <Link key={recipe.slug} href={`/recipes/${recipe.slug}`} className="r-card">
-                            {/* Image */}
-                            <div style={{ position: 'relative', height: 210, overflow: 'hidden', background: '#f0ebe4' }}>
-                                <Image
-                                    src={recipe.image}
-                                    alt={recipe.title}
-                                    fill
-                                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                                    className="r-img"
-                                    style={{ objectFit: 'cover' }}
-                                    quality={80}
-                                />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%)' }} />
-
-                                {/* Popular badge */}
-                                {recipe.isPopular && (
-                                    <div style={{ position: 'absolute', top: 14, left: 14, background: '#D97706', color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 12px', borderRadius: 100 }}>
-                                        Popular
+            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
+                <AnimatePresence mode="wait">
+                    <motion.div key={`${diff}-${region}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
+                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))', gap: 24 }}>
+                        {filtered.map((recipe, i) => (
+                            <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
+                                <Link href={`/recipes/${recipe.slug}`} className="r-card">
+                                    <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#f0ebe4' }}>
+                                        <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
+                                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
+                                        <div style={{ position: 'absolute', top: 14, left: 14, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.07em', textTransform: 'uppercase', padding: '5px 13px', borderRadius: 100 }}>{recipe.tag}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
+                                        <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
+                                            <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
+                                            <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
+                                        </div>
+                                        <div style={{ position: 'absolute', bottom: 14, right: 54, color: 'rgba(255,255,255,0.65)', fontSize: 10, fontWeight: 600 }}>{recipe.cal} kcal</div>
+                                        <HeartBtn recipe={recipe} />
                                     </div>
-                                )}
-
-                                <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>
-                                    ⏱ {recipe.time}
-                                </div>
-
-                                {/* Difficulty */}
-                                <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
-                                    <div style={{ width: 7, height: 7, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
-                                    <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
-                                </div>
-
-                                {/* Cal */}
-                                <div style={{ position: 'absolute', bottom: 14, right: 14, background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(6px)', color: 'rgba(255,255,255,0.85)', fontSize: 10, fontWeight: 600, padding: '4px 10px', borderRadius: 100 }}>
-                                    {recipe.cal} kcal
-                                </div>
-                            </div>
-
-                            {/* Card body */}
-                            <div style={{ padding: '18px 20px 20px' }}>
-                                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>
-                                    {recipe.region} Vietnam
-                                </div>
-                                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: '#2D1A0E', margin: 0, marginBottom: 2, lineHeight: 1.2 }}>
-                                    {recipe.title}
-                                </h2>
-                                <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.38)', fontStyle: 'italic', margin: '0 0 10px' }}>
-                                    {recipe.subtitle}
-                                </p>
-                                <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 16px' }}>
-                                    {recipe.description}
-                                </p>
-
-                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 13, borderTop: '1px solid rgba(75,46,26,0.06)' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                                        <span style={{ color: '#D97706', fontSize: 13, fontWeight: 700 }}>★ {recipe.rating}</span>
-                                        <span style={{ color: 'rgba(75,46,26,0.32)', fontSize: 12 }}>({recipe.reviews})</span>
+                                    <div style={{ padding: '18px 20px 22px' }}>
+                                        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
+                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.2 }}>{recipe.title}</h2>
+                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
+                                        <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.62)', lineHeight: 1.68, margin: '0 0 14px' }}>{recipe.description}</p>
+                                        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 14 }}>
+                                            {recipe.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 13, borderTop: '1px solid rgba(75,46,26,0.07)' }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                                                <span style={{ color: '#D97706', fontSize: 13, fontWeight: 700 }}>★ {recipe.rating}</span>
+                                                <span style={{ color: 'rgba(75,46,26,0.32)', fontSize: 12 }}>({recipe.reviews})</span>
+                                            </div>
+                                            <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706' }}>View Recipe →</span>
+                                        </div>
                                     </div>
-                                    <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706' }}>
-                                        View Recipe →
-                                    </span>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </AnimatePresence>
 
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
                         <div style={{ fontSize: 44, marginBottom: 12 }}>🌅</div>
-                        <p style={{ fontSize: 16 }}>No recipes found for this filter.</p>
+                        <p style={{ fontSize: 16, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>No recipes match this filter.</p>
                     </div>
                 )}
+            </section>
 
-                {/* More categories */}
-                <div style={{ marginTop: 72, padding: '40px', background: 'white', borderRadius: 24, border: '1px solid rgba(75,46,26,0.07)', textAlign: 'center' }}>
-                    <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', color: 'rgba(75,46,26,0.38)', textTransform: 'uppercase', marginBottom: 10 }}>Explore More</p>
-                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: '#2D1A0E', margin: '0 0 24px' }}>
-                        Other Categories
-                    </h3>
-                    <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+            {/* ── OTHER CATEGORIES ── */}
+            <section style={{ background: '#2D1A0E', padding: '64px 24px 80px' }}>
+                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Keep Exploring</span>
+                    </div>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: 'white', margin: '0 0 32px' }}>More to Discover</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
                         {[
                             { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes' },
                             { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
                             { label: 'Desserts', emoji: '🍮', href: '/recipes/desserts' },
                             { label: 'Drinks', emoji: '🧋', href: '/recipes/drinks' },
-                        ].map(cat => (
-                            <Link key={cat.href} href={cat.href} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 22px', borderRadius: 100, border: '1.5px solid rgba(75,46,26,0.1)', color: 'rgba(75,46,26,0.65)', fontSize: 14, fontWeight: 600, textDecoration: 'none', transition: 'all 0.18s' }}
-                                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = '#D97706'; (e.currentTarget as HTMLAnchorElement).style.color = '#D97706'; }}
-                                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(75,46,26,0.1)'; (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(75,46,26,0.65)'; }}
+                            { label: 'Southern Cuisine', emoji: '🌿', href: '/recipes/southern' },
+                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel' },
+                        ].map(item => (
+                            <Link key={item.href} href={item.href}
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '18px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.2s' }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.38)'; el.style.background = 'rgba(217,119,6,0.07)'; el.style.transform = 'translateY(-4px)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.08)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
                             >
-                                <span style={{ fontSize: 18 }}>{cat.emoji}</span>
-                                {cat.label}
+                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
+                                <span style={{ fontSize: 13, fontWeight: 600, color: 'white', textAlign: 'center' }}>{item.label}</span>
                             </Link>
                         ))}
                     </div>
