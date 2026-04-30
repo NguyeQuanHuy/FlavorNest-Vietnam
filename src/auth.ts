@@ -123,7 +123,17 @@ export const authConfig: NextAuthConfig = {
         // Chạy khi JWT được tạo/cập nhật
         async jwt({ token, user, account }) {
             if (user) {
-                token.id = user.id
+                // Với OAuth: user.id lúc này đã được set đúng từ signIn callback
+                // Nhưng để chắc chắn, lookup lại DB theo email
+                if (account?.provider !== 'credentials' && user.email) {
+                    const { prisma } = await import('@/lib/prisma')
+                    const dbUser = await prisma.user.findUnique({
+                        where: { email: user.email.toLowerCase() },
+                    })
+                    token.id = dbUser?.id ?? user.id
+                } else {
+                    token.id = user.id
+                }
             }
             if (account) {
                 token.provider = account.provider
