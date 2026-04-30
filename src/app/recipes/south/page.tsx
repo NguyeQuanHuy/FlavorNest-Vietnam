@@ -133,31 +133,6 @@ const RECIPES: Recipe[] = [
 
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
-const LS_KEY = 'fn_favorites'
-
-function loadFavSlugs(): Set<string> {
-    try {
-        const raw = localStorage.getItem(LS_KEY)
-        if (!raw) return new Set()
-        const arr = JSON.parse(raw)
-        return new Set(arr.map((x: string | { slug: string }) => typeof x === 'string' ? x : x.slug))
-    } catch { return new Set() }
-}
-
-function saveFav(recipe: Recipe, add: boolean) {
-    try {
-        const raw = localStorage.getItem(LS_KEY)
-        let arr: object[] = raw ? JSON.parse(raw) : []
-        if (add) {
-            if (!arr.some((x: object) => (x as { slug: string }).slug === recipe.slug)) {
-                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, time: recipe.time, difficulty: recipe.difficulty, category: 'Southern Cuisine', savedAt: new Date().toISOString().split('T')[0] })
-            }
-        } else {
-            arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
-        }
-        localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch { }
-}
 
 function HeartBtn({ recipe }: { recipe: Recipe }) {
     const { toggle, isFavorite, mounted } = useFavorites()
