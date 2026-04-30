@@ -269,7 +269,26 @@ function RecipesInner() {
                 </AnimatePresence>
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
-                        <div style={{ fontSize: 48, marginBottom: 14 }}>🔍</div>
+                        <motion.div
+  animate={{ y: [0, -8, 0] }}
+  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+  style={{ marginBottom: 20 }}
+>
+  <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+    <circle cx="11" cy="11" r="7" stroke="#D97706" strokeWidth="1.5" />
+    <path d="M20 20L16.5 16.5" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M8 11h6M11 8v6" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+</motion.div>
+<p style={{
+  fontFamily: "var(--font-playfair), Georgia, serif",
+  fontSize: 22, fontWeight: 600, color: "#2D1A0E", marginBottom: 10,
+}}>
+  No recipes found
+</p>
+<p style={{ fontSize: 14, color: "rgba(75,46,26,0.5)", marginBottom: 20 }}>
+  Try searching in English or Vietnamese without accents
+</p>
                         <button onClick={clearSearch} style={{ marginTop: 16, padding: "10px 24px", borderRadius: 100, border: "1.5px solid rgba(75,46,26,0.15)", background: "transparent", color: "#D97706", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
                             Clear search
                         </button>
