@@ -107,12 +107,10 @@ export default function RootLayout({
       >
         <AuthProvider>
           <FavoritesProvider>
-          <Navbar />
-          <ReadingProgress />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
+            <Navbar />
+            <ReadingProgress />
+            <main className="flex-1">{children}</main>
+            <Footer />
           </FavoritesProvider>
         </AuthProvider>
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
