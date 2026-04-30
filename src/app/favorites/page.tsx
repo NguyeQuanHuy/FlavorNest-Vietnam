@@ -90,7 +90,7 @@ export default function FavoritesPage() {
                   marginBottom: 10,
                 }}
               >
-                No favorite dishes yet
+                You need to save something for your kitchen . . .
               </h2>
               <p style={{
                 color: "rgba(75,46,26,0.55)", fontSize: 15,
