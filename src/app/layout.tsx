@@ -6,6 +6,7 @@ import ReadingProgress from '@/components/ReadingProgress'
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 // ── Display font — editorial serif for headings ──
 const playfair = Playfair_Display({
@@ -105,12 +106,14 @@ export default function RootLayout({
         }}
       >
         <AuthProvider>
+          <FavoritesProvider>
           <Navbar />
           <ReadingProgress />
           <main className="flex-1">
             {children}
           </main>
           <Footer />
+          </FavoritesProvider>
         </AuthProvider>
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
       </body>
