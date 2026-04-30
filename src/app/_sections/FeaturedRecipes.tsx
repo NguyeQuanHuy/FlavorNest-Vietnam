@@ -47,7 +47,6 @@ export default function FeaturedRecipes({ recipes }: { recipes: any[] }) {
 
     // ƯU TIÊN DỮ LIỆU TRUYỀN VÀO (recipes)
     const displayRecipes = recipes && recipes.length > 0 ? recipes : [];
-    const displayRecipes = recipes && recipes.length > 0 ? recipes : [];
 
     const scrollRef = useRef<HTMLDivElement>(null)
     const [canScrollLeft, setCanScrollLeft] = useState(false)
