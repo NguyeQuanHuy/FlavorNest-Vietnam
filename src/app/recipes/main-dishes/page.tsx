@@ -463,7 +463,15 @@ function saveFav(recipe: Recipe, add: boolean) {
         let arr: object[] = raw ? JSON.parse(raw) : []
         if (add) {
             if (!arr.some((x: object) => (x as { slug: string }).slug === recipe.slug)) {
-                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, time: recipe.time, difficulty: recipe.difficulty, category: 'Main Dish', savedAt: new Date().toISOString().split('T')[0] })
+                arr.push({
+                    id: recipe.slug,
+                    slug: recipe.slug,
+                    title: recipe.title,
+                    image: recipe.image,
+                    category: 'Main Dish',
+                    cookTime: recipe.time,
+                    savedAt: Date.now(),
+                })
             }
         } else {
             arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
