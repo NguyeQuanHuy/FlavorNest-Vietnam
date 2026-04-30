@@ -86,19 +86,34 @@ function RecipesInner() {
 
     useEffect(() => { setLocalQuery(urlSearch); }, [urlSearch]);
 
-    const filtered = useMemo(() => {
-        const q = localQuery.toLowerCase().trim();
-        return RECIPES.filter((r) => {
-            const catMatch = activeCategory === "All" || r.category === activeCategory;
-            const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
-            const searchMatch = !q || r.title.toLowerCase().includes(q) || r.subtitle.toLowerCase().includes(q) || r.description.toLowerCase().includes(q) || r.tags.some((t) => t.toLowerCase().includes(q)) || r.category.toLowerCase().includes(q) || r.region.toLowerCase().includes(q);
-            return catMatch && regionMatch && searchMatch;
-        }).sort((a, b) => {
-            if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
-            if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
-            return b.reviews - a.reviews;
-        });
-    }, [activeCategory, activeRegion, localQuery, sortBy]);
+   const filtered = useMemo(() => {
+    const normalize = (str: string) =>
+      str.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d").replace(/Đ/g, "d");
+
+    const q = normalize(localQuery.trim());
+    const words = q.split(/\s+/).filter(Boolean);
+
+    return RECIPES.filter((r) => {
+      const catMatch = activeCategory === "All" || r.category === activeCategory;
+      const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
+
+      const searchable = normalize([
+        r.title, r.subtitle, r.description,
+        ...r.tags, r.category, r.region,
+      ].join(" "));
+
+      const searchMatch = words.length === 0 || words.every(w => searchable.includes(w));
+
+      return catMatch && regionMatch && searchMatch;
+    }).sort((a, b) => {
+      if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
+      if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
+      return b.reviews - a.reviews;
+    });
+  }, [activeCategory, activeRegion, localQuery, sortBy]);
 
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };
 
