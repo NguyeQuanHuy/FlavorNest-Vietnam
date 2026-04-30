@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { getDetailedAsLegacy } from "@/data/recipes-detailed";
 import type { Recipe } from "@/data/recipes";
 import { FNIcon } from "@/components/Icons";
+import { useFavorites } from "@/hooks/useFavorites";
 
 const LEGACY_CARDS: Array<{
     slug: string;
@@ -328,49 +329,21 @@ const REGIONS = ["All Regions", "Northern", "Central", "Southern"];
 const DIFF_COLOR: Record<string, string> = { Easy: "#10b981", Medium: "#f59e0b", Hard: "#ef4444" };
 const LS_KEY = "fn_favorites";
 
-function loadFavSlugs(): Set<string> {
-    try {
-        const raw = localStorage.getItem(LS_KEY);
-        if (!raw) return new Set();
-        const arr = JSON.parse(raw);
-        return new Set(arr.map((x: string | { slug: string }) => (typeof x === "string" ? x : x.slug)));
-    } catch {
-        return new Set();
-    }
-}
-
-function saveFav(slug: string, recipe: typeof RECIPES[0], add: boolean) {
-    try {
-        const raw = localStorage.getItem(LS_KEY);
-        let arr: object[] = raw ? JSON.parse(raw) : [];
-        if (add) {
-            const alreadyIn = arr.some((x: object) => (x as { slug: string }).slug === slug);
-            if (!alreadyIn) {
-                arr.push({ slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, time: recipe.time, difficulty: recipe.difficulty, category: recipe.category, savedAt: new Date().toISOString().split("T")[0] });
-            }
-        } else {
-            arr = arr.filter((x: object) => (x as { slug: string }).slug !== slug);
-        }
-        localStorage.setItem(LS_KEY, JSON.stringify(arr));
-    } catch { }
-}
-
 function HeartButton({ slug, recipe }: { slug: string; recipe: typeof RECIPES[0] }) {
-    const [liked, setLiked] = useState(false);
+    const { toggle, isFavorite, mounted } = useFavorites();
+    const liked = mounted && isFavorite(slug);
     const [burst, setBurst] = useState(false);
     const [toast, setToast] = useState<"added" | "removed" | null>(null);
 
-    useEffect(() => { setLiked(loadFavSlugs().has(slug)); }, [slug]);
-
-    const toggle = useCallback((e: React.MouseEvent) => {
+    const handleToggle = useCallback((e: React.MouseEvent) => {
         e.preventDefault(); e.stopPropagation();
         const next = !liked;
-        setLiked(next); saveFav(slug, recipe, next);
+        toggle({ id: slug, slug, title: recipe.title, image: recipe.image, category: recipe.category, cookTime: recipe.time });
         if (next) setBurst(true);
         setToast(next ? "added" : "removed");
         setTimeout(() => setBurst(false), 600);
         setTimeout(() => setToast(null), 2000);
-    }, [liked, slug, recipe]);
+    }, [liked, slug, recipe, toggle]);
 
     return (
         <div style={{ position: "absolute", bottom: 14, right: 14 }}>
@@ -385,11 +358,11 @@ function HeartButton({ slug, recipe }: { slug: string; recipe: typeof RECIPES[0]
                     </motion.div>
                 )}
             </AnimatePresence>
-            <motion.button onClick={toggle} whileTap={{ scale: 0.82 }} aria-label={liked ? "Remove from favorites" : "Add to favorites"}
-                style={{ width: 36, height: 36, borderRadius: "50%", background: liked ? "rgba(220,38,38,0.92)" : "rgba(255,255,255,0.85)", backdropFilter: "blur(10px)", border: liked ? "none" : "1px solid rgba(255,255,255,0.6)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: liked ? "0 4px 16px rgba(220,38,38,0.35)" : "0 2px 8px rgba(0,0,0,0.15)", transition: "background 0.25s, box-shadow 0.25s", position: "relative", overflow: "hidden" }}
+            <motion.button onClick={handleToggle} whileTap={{ scale: 0.82 }} aria-label={liked ? "Remove from favorites" : "Add to favorites"}
+                style={{ width: 36, height: 36, borderRadius: "50%", background: liked ? "rgba(217,119,6,0.92)" : "rgba(255,255,255,0.85)", backdropFilter: "blur(10px)", border: liked ? "none" : "1px solid rgba(255,255,255,0.6)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: liked ? "0 4px 16px rgba(217,119,6,0.35)" : "0 2px 8px rgba(0,0,0,0.15)", transition: "background 0.25s, box-shadow 0.25s", position: "relative", overflow: "hidden" }}
             >
-                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5, ease: "easeOut" }} style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "rgba(220,38,38,0.3)", pointerEvents: "none" }} />}
-                <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35, ease: "easeOut" }}>
+                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: "absolute", inset: 0, borderRadius: "50%", background: "rgba(217,119,6,0.3)", pointerEvents: "none" }} />}
+                <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35 }}>
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill={liked ? "white" : "none"} stroke={liked ? "none" : "rgba(75,46,26,0.5)"} strokeWidth="1.8" strokeLinecap="round" />
                 </motion.svg>
             </motion.button>
