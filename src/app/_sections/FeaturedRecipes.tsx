@@ -37,6 +37,7 @@ const cardVariants = {
     }),
 }
 
+
 export default function FeaturedRecipes({ recipes }: { recipes: any[] }) {
     const displayRecipes = recipes && recipes.length > 0 ? recipes : []
 
