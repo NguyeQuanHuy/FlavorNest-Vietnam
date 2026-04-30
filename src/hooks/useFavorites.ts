@@ -39,29 +39,20 @@ export function useFavorites() {
       if (status === "loading") return;
 
       if (isLoggedIn) {
-        // 1. Lấy favorites từ DB
         const dbFavs = await getMyFavoritesAction();
-
-        // 2. Migrate localStorage → DB nếu user vừa login lần đầu
         try {
           const raw = localStorage.getItem(KEY);
           if (raw) {
             const localFavs = JSON.parse(raw) as FavoriteRecipe[];
             const dbSlugs = new Set(dbFavs.map((f: FavoriteRecipe) => f.slug));
             const toMigrate = localFavs.filter((f) => !dbSlugs.has(f.slug));
-
             for (const f of toMigrate) {
               await toggleFavoriteAction({
-                slug: f.slug,
-                title: f.title,
-                image: f.image,
-                category: f.category,
-                cookTime: f.cookTime,
-                subtitle: f.subtitle,
-                difficulty: f.difficulty,
+                slug: f.slug, title: f.title, image: f.image,
+                category: f.category, cookTime: f.cookTime,
+                subtitle: f.subtitle, difficulty: f.difficulty,
               });
             }
-
             if (toMigrate.length > 0) {
               const merged = await getMyFavoritesAction();
               if (!cancelled) {
@@ -71,30 +62,37 @@ export function useFavorites() {
                 return;
               }
             }
-            // Đã có DB, xoá local để không lệch
             localStorage.removeItem(KEY);
           }
-        } catch { }
-
+        } catch {}
         if (!cancelled) {
           setFavorites(dbFavs as FavoriteRecipe[]);
           setHydrated(true);
         }
       } else {
-        // Chưa login → dùng localStorage như cũ
+        // Chưa login → localStorage + lắng nghe thay đổi realtime
         try {
           const raw = localStorage.getItem(KEY);
           if (raw && !cancelled) setFavorites(JSON.parse(raw));
-        } catch { }
+        } catch {}
         if (!cancelled) setHydrated(true);
+
+        // Sync badge khi component khác thay đổi localStorage
+        const onStorage = (e: StorageEvent) => {
+          if (e.key !== KEY) return;
+          try {
+            setFavorites(e.newValue ? JSON.parse(e.newValue) : []);
+          } catch {}
+        };
+        window.addEventListener("storage", onStorage);
+        return () => window.removeEventListener("storage", onStorage);
       }
     }
 
     load();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status, isLoggedIn, session?.user?.id]);
   }, [status, isLoggedIn, session?.user?.id]);
 
   const mounted = hydrated;
