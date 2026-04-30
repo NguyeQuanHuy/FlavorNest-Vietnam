@@ -70,7 +70,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <div className="mt-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-[1px] flex-1 bg-fn-brown/10"></div>
-                <p className="text-[10px] font-bold text-fn-brown/40 uppercase tracking-widest">Gợi ý hôm nay</p>
+                <p className="text-[10px] font-bold text-fn-brown/40 uppercase tracking-widest">I want to cook today. . .</p>
                 <div className="h-[1px] flex-1 bg-fn-brown/10"></div>
               </div>
               <div className="flex flex-wrap gap-2">
