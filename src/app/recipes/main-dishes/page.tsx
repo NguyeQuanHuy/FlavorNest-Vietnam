@@ -12,24 +12,6 @@ import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useFavorites } from '@/hooks/useFavorites'
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-interface Recipe {
-    slug: string
-    title: string
-    subtitle: string
-    image: string
-    region: 'Northern' | 'Central' | 'Southern'
-    difficulty: 'Easy' | 'Medium' | 'Hard'
-    time: string
-    rating: string
-    reviews: number
-    cal: number
-    tag: string
-    tagColor: string
-    description: string
-    tags: string[]
-}
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const RECIPES: Recipe[] = [
     {
