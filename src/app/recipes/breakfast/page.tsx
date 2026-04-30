@@ -85,6 +85,20 @@ const RECIPES: Recipe[] = [
         description: "Strips of dried rice paper tossed with quail eggs, dried shrimp, green mango, taro shreds and a fiery-tangy dressing of tamarind, chilli and satay. Topped with roasted peanuts and Vietnamese coriander. Born on the streets of Saigon, this technicolour tangle is technically a snack but tastes like an event.",
         tags: ['Rice Paper', 'Vegetarian', 'Tangy', 'Quick'],
     },
+    {
+        slug: 'banh-hoi-chao-long',
+        title: 'Woven Rice Vermicelli with Pork Congee',
+        subtitle: 'Banh hoi chao long',
+        image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=800&q=80',
+        time: '2.5 hrs',
+        difficulty: 'Hard',
+        rating: '4.9',
+        reviews: 94,
+        region: 'Central',
+        cal: 460,
+        description: "Feather-light woven mats of rice vermicelli served with silky pork congee, offal and fresh herbs — the dawn breakfast of Phú Yên.",
+        isPopular: true,
+    },
 ]
 
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
