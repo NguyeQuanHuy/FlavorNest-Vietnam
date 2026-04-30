@@ -93,7 +93,6 @@ export function useFavorites() {
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, isLoggedIn, session?.user?.id]);
-  }, [status, isLoggedIn, session?.user?.id]);
 
   const mounted = hydrated;
 
