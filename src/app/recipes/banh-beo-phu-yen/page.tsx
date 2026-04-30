@@ -44,30 +44,30 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Prepare the Batter',
+            description: 'In a large bowl, mix the rice flour, tapioca starch, and salt. Slowly pour in the water while stirring constantly until the mixture is smooth and there are no lumps. Let the batter rest for at least 30 minutes to ensure the cakes are soft and chewy.',
+            tip: 'The Specific Move: You must get the ceramic bowls searing hot before pouring the batter. This "heat shock" forces the batter to cook from the edges inward, creating that perfect indentation to hold your sauce.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Prep the Toppings',
+            description: 'While the batter rests, sauté minced scallions in hot oil to make mỡ hành. For the signature Phu Yen crunch, toast small cubes of dried bread in a pan with a little oil until golden brown and crispy',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Heat the Bowls',
+            description: 'Place small ceramic bowls (chén bèo) into a steamer. Cover and steam the empty bowls for about 3-5 minutes. Pro tip: Heating the bowls first prevents the batter from sticking and helps the cakes cook evenly.',
+            tip: 'The Specific Move: Before heating the bowls, use a brush to apply a very thin layer of cooking oil to the inside of each bowl. This ensures the cakes slide out easily when you eat.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Steam the Cakes',
+            description: 'Stir the batter again. Open the steamer and quickly pour the batter into each hot bowl (fill about 1/3 of the bowl). Cover and steam over high heat for 5–8 minutes until the cakes turn opaque and firm.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            title: 'Make the Sweet & Spicy Sauce',
+            description: 'Combine fish sauce, warm water, and sugar in a ratio of 1:2:1. Stir until the sugar dissolves, then add lime juice, minced garlic, and bird's eye chili. The sauce should be light, savory, and slightly sweet.',
         },
         {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Garnish and Serve',
+            description: 'Let the bowls cool slightly (they firm up as they cool). Add the scallion oil, a pinch of dried shrimp, and the crispy breadcrumbs. Serve with the spicy fish sauce on the side.',
         },
     ],
 };
