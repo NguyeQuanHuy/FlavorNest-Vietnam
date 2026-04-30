@@ -15,7 +15,7 @@ const recipe: RecipeData = {
     heroImage:
         'https://images.unsplash.com/photo-1583337426008-2fef51aa841b?w=1600&q=85',
     intro:
-        'If phở is the quiet poetry of Hanoi, bún bò Huế is the defiant opera of central Vietnam. Born in the imperial city that once served the Nguyễn dynasty, this soup refuses to be polite. The broth is deep red-orange from annatto oil, perfumed with lemongrass, and funked with mắm ruốc — a fermented shrimp paste that divides first-time tasters and converts them for life. Anthony Bourdain called it "the greatest soup in the world." He wasn\'t wrong. Most of the 3 hours is passive simmering; the result tastes even better on day two.',
+        `If phở is the quiet poetry of Hanoi, bún bò Huế is the defiant opera of central Vietnam. Born in the imperial city that once served the Nguyễn dynasty, this soup refuses to be polite. The broth is deep red-orange from annatto oil, perfumed with lemongrass, and funked with mắm ruốc — a fermented shrimp paste that divides first-time tasters and converts them for life. Anthony Bourdain called it "the greatest soup in the world." He wasn\'t wrong. Most of the 3 hours is passive simmering; the result tastes even better on day two.`,
     ingredientSections: [
         {
             title: 'Broth and meats',
