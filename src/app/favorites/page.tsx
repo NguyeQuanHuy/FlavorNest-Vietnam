@@ -8,7 +8,7 @@ import { FNIcon } from "@/components/Icons";
 
 export default function FavoritesPage() {
   const { favorites, hydrated, removeFavorite, clearFavorites } = useFavorites();
-
+  const [showConfirm, setShowConfirm] = useState(false);
   if (!hydrated) {
     return (
       <div
