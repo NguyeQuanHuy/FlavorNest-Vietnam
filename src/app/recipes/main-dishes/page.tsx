@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useFavorites } from '@/hooks/useFavorites'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Recipe {
