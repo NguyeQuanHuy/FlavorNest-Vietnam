@@ -64,8 +64,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 placeholder="Type recipe or dish name..."
                 className="w-full bg-fn-brown/5 border-none rounded-2xl py-3.5 pl-12 pr-4 text-fn-brown outline-none focus:ring-2 ring-fn-amber/20 transition-all"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                
+                onChange={(e) => setQuery(e.target.value)}                
               />
             </form>
             <div className="mt-6">
