@@ -28,7 +28,8 @@ export async function toggleFavoriteAction(recipe: FavoriteRecipeData) {
     }
 
     const userId = session.user.id
-
+    console.log('[toggle] userId:', userId, 'slug:', recipe.slug)
+    
     try {
         const existing = await prisma.favorite.findUnique({
             where: {
