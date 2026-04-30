@@ -59,13 +59,13 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <form onSubmit={handleSearch} className="relative mt-2">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-fn-amber w-5 h-5" />
               <input
-                ref={inputRef}
-                type="text"
-                placeholder="Type recipe or dish name..."
-                className="w-full bg-fn-brown/5 border-none rounded-2xl py-3.5 pl-12 pr-4 text-fn-brown outline-none focus:ring-2 ring-fn-amber/20 transition-all"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}                
-              />
+              ref={inputRef}
+              type="text"
+              placeholder="Type recipe or dish name..."
+              className="w-full bg-fn-brown/5 border-none rounded-2xl py-3.5 pl-12 pr-4 text-fn-brown outline-none focus:ring-2 ring-fn-amber/20 transition-all"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
             </form>
             <div className="mt-6">
               <div className="flex items-center gap-3 mb-4">
