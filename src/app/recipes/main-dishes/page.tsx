@@ -442,22 +442,16 @@ const RECIPES: Recipe[] = [
         description: "A spicy and highly aromatic stir-fry that is a staple in Vietnamese family meals. Tender chicken pieces are tossed with minced lemongrass, turmeric, and bird's eye chilies, creating a vibrant yellow dish that makes it impossible to eat just one bowl of rice.",
         tags: ['Chicken', 'Spicy', 'Lemongrass', 'Quick'],
     },
-    interface Recipe {
-    slug: string
-    title: string
-    subtitle: string
-    image: string
-    region: 'Northern' | 'Central' | 'Southern'
-    difficulty: 'Easy' | 'Medium' | 'Hard'
-    time: string
-    rating: string
-    reviews: number
-    cal: number
-    tag: string
-    tagColor: string
-    description: string
-    tags: string[]
-}
+    {
+        slug: 'banh-hoi-chao-long',
+        title: 'Woven Rice Vermicelli with Pork Congee',
+        subtitle: 'Bánh Hỏi Cháo Lòng',
+        image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80',
+        region: 'Central', difficulty: 'Hard', time: '2.5 hrs',
+        rating: '4.9', reviews: 94, cal: 460, tag: 'Phu Yen Pride', tagColor: '#0284C7',
+        description: "The dawn breakfast of Phú Yên — feather-light woven mats of rice vermicelli served alongside a bowl of silky pork congee studded with offal, fresh herbs and a crack of black pepper. The vermicelli arrives painted with scallion oil; the congee carries the depth of bones simmered since 4am. Eaten together, never apart.",
+        tags: ['Pork', 'Rice', 'Congee', 'Hometown'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
