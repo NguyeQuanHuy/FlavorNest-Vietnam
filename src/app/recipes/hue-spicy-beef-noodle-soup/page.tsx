@@ -76,4 +76,44 @@ const recipe: RecipeData = {
         {
             title: 'Build and simmer the broth',
             description:
-                'Return the rinsed meats and bones to the cleaned pot. Cover with 4 litres of fresh water. Add the charred onion, ginger and the bundles of bruised lemongrass. Bring to a gentle simmer, ski
+                'Return the rinsed meats and bones to the cleaned pot. Cover with 4 litres of fresh water. Add the charred onion, ginger and the bundles of bruised lemongrass. Bring to a gentle simmer, skim aggressively for the first 15 minutes, then reduce heat to low. Simmer uncovered for 90 minutes.',
+            tip: 'Never let it boil hard. A lazy simmer keeps the broth crystal-clear and the meats tender.',
+        },
+        {
+            title: 'Pull the meats',
+            description:
+                'After 90 minutes, the beef shank should be fork-tender and the pork knuckle should be falling off the bone. Remove both, plunge them into a bowl of ice water for 5 minutes (this firms the texture for slicing), then set aside. Continue simmering the bones for another 30 minutes.',
+        },
+        {
+            title: 'Make the annatto red oil',
+            description:
+                'In a small saucepan, warm the oil with the annatto seeds over low heat for 2 minutes until the oil turns deep red. Strain out the seeds and discard. Return the red oil to the pan, add minced shallots, garlic and chilli flakes; fry 90 seconds until fragrant. This oil is what gives bún bò Huế its signature crimson sheen.',
+            tip: 'Don\'t overheat the annatto — it turns bitter above 80°C. Keep the heat gentle.',
+        },
+        {
+            title: 'Finish the broth',
+            description:
+                'Strain the simmered broth through a fine-mesh sieve into a clean pot. Discard the solids. Dissolve the mắm ruốc in a cup of hot broth, then strain it back into the pot through a fine sieve (this catches any sand). Add fish sauce, rock sugar and sa tế. Stir in half of the red oil. Taste and adjust — it should be deeply savoury, slightly sweet, pleasantly spicy, and unmistakably funky from the shrimp paste.',
+        },
+        {
+            title: 'Slice the meats',
+            description:
+                'Slice the cooled beef shank against the grain into 3mm slices. Cut the pork knuckle into smaller serving pieces. Slice the chả Huế if using.',
+        },
+        {
+            title: 'Cook the noodles',
+            description:
+                'Bring a separate pot of water to a boil. Cook the bún bò noodles according to package instructions — usually 5–7 minutes for dried, 2 minutes for fresh. Drain and divide among 6 large bowls.',
+        },
+        {
+            title: 'Assemble and serve',
+            description:
+                'Top each bowl with slices of beef shank, a piece of pork knuckle, chả Huế and pig blood if using. Ladle the hot broth over everything, then drizzle an extra spoonful of red oil on top for colour. Serve immediately with the herb plate, lime wedges and sliced chillies on the side. Each person adds herbs and squeezes lime to their own bowl. Eat it hot — this soup is meant to make you sweat.',
+            tip: 'First-time eaters: start with a small spoonful of broth to adjust to the shrimp paste. By bowl end, you\'ll be a convert.',
+        },
+    ],
+};
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
