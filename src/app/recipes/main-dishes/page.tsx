@@ -482,21 +482,27 @@ function saveFav(recipe: Recipe, add: boolean) {
 
 // ─── Heart Button ─────────────────────────────────────────────────────────────
 function HeartBtn({ recipe }: { recipe: Recipe }) {
-    const [liked, setLiked] = useState(false)
+    const { toggle, isFavorite, mounted } = useFavorites()
+    const liked = mounted && isFavorite(recipe.slug)
     const [burst, setBurst] = useState(false)
     const [toast, setToast] = useState<'added' | 'removed' | null>(null)
 
-    useEffect(() => { setLiked(loadFavSlugs().has(recipe.slug)) }, [recipe.slug])
-
-    const toggle = useCallback((e: React.MouseEvent) => {
+    const handleToggle = useCallback((e: React.MouseEvent) => {
         e.preventDefault(); e.stopPropagation()
         const next = !liked
-        setLiked(next); saveFav(recipe, next)
+        toggle({
+            id: recipe.slug,
+            slug: recipe.slug,
+            title: recipe.title,
+            image: recipe.image,
+            category: 'Main Dish',
+            cookTime: recipe.time,
+        })
         if (next) setBurst(true)
         setToast(next ? 'added' : 'removed')
         setTimeout(() => setBurst(false), 600)
         setTimeout(() => setToast(null), 2000)
-    }, [liked, recipe])
+    }, [liked, recipe, toggle])
 
     return (
         <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
@@ -510,10 +516,10 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                     </motion.div>
                 )}
             </AnimatePresence>
-            <motion.button onClick={toggle} whileTap={{ scale: 0.82 }} aria-label={liked ? 'Remove from favorites' : 'Save recipe'}
-                style={{ width: 36, height: 36, borderRadius: '50%', background: liked ? 'rgba(220,38,38,0.92)' : 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(220,38,38,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s, box-shadow 0.25s', position: 'relative', overflow: 'hidden' }}
+            <motion.button onClick={handleToggle} whileTap={{ scale: 0.82 }} aria-label={liked ? 'Remove from favorites' : 'Save recipe'}
+                style={{ width: 36, height: 36, borderRadius: '50%', background: liked ? 'rgba(217,119,6,0.92)' : 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(217,119,6,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s, box-shadow 0.25s', position: 'relative', overflow: 'hidden' }}
             >
-                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(220,38,38,0.3)', pointerEvents: 'none' }} />}
+                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(217,119,6,0.3)', pointerEvents: 'none' }} />}
                 <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35 }}>
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill={liked ? 'white' : 'none'} stroke={liked ? 'none' : 'rgba(75,46,26,0.5)'} strokeWidth="1.8" strokeLinecap="round" />
                 </motion.svg>
