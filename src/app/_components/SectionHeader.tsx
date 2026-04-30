@@ -20,8 +20,8 @@ export default function SectionHeader({
     align = 'left',
 }: SectionHeaderProps) {
     return (
-        <div className={`flex flex-col sm:flex-row sm:items-end justify-between gap-5 ${align === 'center' ? 'items-center text-center' : ''}`}>
-            <div className={align === 'center' ? 'text-center' : ''}>
+        <div className={`flex flex-col sm:flex-row sm:items-end justify-between gap-6 ${align === 'center' ? 'items-center text-center' : ''}`}>
+            <div className={align === 'center' ? 'text-center' : ''} style={{ maxWidth: 520 }}>
                 <div className={`flex items-center gap-2 mb-2 ${align === 'center' ? 'justify-center' : ''}`}>
                     <div className="w-7 h-px bg-[#D97706]" />
                     <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.18em]">{eyebrow}</span>
@@ -32,7 +32,7 @@ export default function SectionHeader({
                 </h2>
             </div>
 
-            <div className={`flex flex-col items-start gap-3 ${align === 'center' ? 'items-center' : ''}`}>
+            <div className={`flex flex-col items-start gap-3 flex-shrink-0 ${align === 'center' ? 'items-center' : ''}`} style={{ maxWidth: 260 }}>
                 <p className="text-[#4B2E1A]/55 dark:text-[#F5EDE3]/45 text-sm leading-relaxed max-w-xs">{subheading}</p>
                 {cta && (
                     <Link
