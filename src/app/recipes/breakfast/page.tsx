@@ -181,7 +181,9 @@ const RECIPES: Recipe[] = [
         region: 'Southern',
         cal: 520,
         description: 'Springy rice noodles tossed with sweet soy, fried garlic oil and a small mountain of toppings — shrimp, pork, ground pork, quail eggs — with a steaming bowl of pork broth on the side. Saigon mornings prefer this format.',
-
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Pork', 'Saigon', 'Dry Noodles'],
     },
     {
         slug: 'bo-kho',
@@ -195,7 +197,9 @@ const RECIPES: Recipe[] = [
         region: 'Southern',
         cal: 540,
         description: 'Tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth stained red with annatto — eaten with a crusty banh mi for dipping or over rice noodles. Saigon family Sunday in a pot.',
-
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Beef', 'Stew', 'Hearty'],
     },
 ]
 
