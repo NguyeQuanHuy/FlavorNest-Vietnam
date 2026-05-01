@@ -291,7 +291,7 @@ export default function CentralCuisinePage() {
                         </div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <VietnamMap region="central" size={300} />
+                        <VietnamMap region="central" size={200} />
                     </div>
                 </div>
             </section>
