@@ -165,7 +165,9 @@ const RECIPES: Recipe[] = [
         region: 'Northern',
         cal: 380,
         description: 'A bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli — Hai Phong style. Lighter than pho, and the favourite of those who want fish, not beef, before noon.',
-
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Fish', 'Noodle Soup', 'Northern'],
     },
     {
         slug: 'hu-tieu-kho',
