@@ -11,6 +11,7 @@ import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map, BookOpen } from 'lucide-react'
 import { useFavorites } from '@/hooks/useFavorites'
+import VietnamMap from '@/components/VietnamMap'
 
 interface Recipe {
     slug: string
@@ -240,56 +241,61 @@ export default function CentralCuisinePage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-{/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    {/* Breadcrumb */}
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
-                        {[['Home', '/'], ['Recipes', '/recipes'], ['Central', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
-                                {href ?
-                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
-                            </span>
-                        ))}
-                    </nav>
+                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
+                    <div>
+                        {/* Breadcrumb */}
+                        <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                            {[['Home', '/'], ['Recipes', '/recipes'], ['Central', '']].map(([label, href], i) => (
+                                <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                    {href ?
+                                        <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
+                                        : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                                </span>
+                            ))}
+                        </nav>
 
-                    {/* Eyebrow */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Huế, Hội An & The Coast</span>
+                        {/* Eyebrow */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
+                            <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
+                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Huế, Hội An & The Coast</span>
+                        </div>
+
+                        {/* Title */}
+                        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
+                            Central<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Cuisine</span>
+                        </h1>
+
+                        {/* Subtitle */}
+                        <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
+                            Imperial courts in Huế, lantern-lit alleys in Hội An, fishing villages along the South China Sea — Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
+                        </p>
+
+                        {/* Stats */}
+                        <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+                            {[
+                                { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
+                                { Icon: Clock, val: '30 min', lbl: 'Quickest' },
+                                { Icon: Globe, val: '1', lbl: 'Region' },
+                                { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
+                            ].map(({ Icon, val, lbl }) => (
+                                <div key={lbl}>
+                                    <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
+                                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
+                                    <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-
-                    {/* Title */}
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
-                        Central<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Cuisine</span>
-                    </h1>
-
-                    {/* Subtitle */}
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        Imperial courts in Huế, lantern-lit alleys in Hội An, fishing villages along the South China Sea — Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
-                    </p>
-
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[
-                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                            { Icon: Clock, val: '30 min', lbl: 'Quickest' },
-                            { Icon: Globe, val: '1', lbl: 'Region' },
-                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
-                        ].map(({ Icon, val, lbl }) => (
-                            <div key={lbl}>
-                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
-                            </div>
-                        ))}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="central" size={220} />
                     </div>
                 </div>
             </section>
-            
+
             {/* GRID */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
