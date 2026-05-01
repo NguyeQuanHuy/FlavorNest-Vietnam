@@ -97,7 +97,9 @@ const RECIPES: Recipe[] = [
         region: 'Central',
         cal: 460,
         description: "Feather-light woven mats of rice vermicelli served with silky pork congee, offal and fresh herbs — the dawn breakfast of Phú Yên.",
-        isPopular: true,
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Hearty', 'Pork', 'Comforting'],
     },
     {
         slug: 'hu-tieu',
@@ -131,7 +133,9 @@ const RECIPES: Recipe[] = [
         region: 'Northern',
         cal: 310,
         description: 'Translucent mung bean noodles in a fragrant chicken broth, topped with shredded poached chicken, wood ear mushrooms and a violent crack of black pepper.',
-        isPopular: true,
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Chicken', 'Glass Noodle', 'Light'],
     },
     {
         slug: 'xoi-man',
@@ -145,7 +149,9 @@ const RECIPES: Recipe[] = [
         region: 'Southern',
         cal: 460,
         description: 'Steamed glutinous rice piled high with Chinese sausage, shredded chicken, dried shrimp, fried shallots and a drizzle of soy — Saigon street breakfast in a banana leaf.',
-        isPopular: false,
+        tag: 'Breakfast',
+        tagColor: '#EA580C',
+        tags: ['Sticky Rice', 'Hearty', 'Saigon'],
     },
     {
         slug: 'bun-ca',
@@ -159,7 +165,7 @@ const RECIPES: Recipe[] = [
         region: 'Northern',
         cal: 380,
         description: 'A bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli — Hai Phong style. Lighter than pho, and the favourite of those who want fish, not beef, before noon.',
-        isPopular: false,
+
     },
     {
         slug: 'hu-tieu-kho',
@@ -173,7 +179,7 @@ const RECIPES: Recipe[] = [
         region: 'Southern',
         cal: 520,
         description: 'Springy rice noodles tossed with sweet soy, fried garlic oil and a small mountain of toppings — shrimp, pork, ground pork, quail eggs — with a steaming bowl of pork broth on the side. Saigon mornings prefer this format.',
-        isPopular: true,
+
     },
     {
         slug: 'bo-kho',
@@ -187,7 +193,7 @@ const RECIPES: Recipe[] = [
         region: 'Southern',
         cal: 540,
         description: 'Tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth stained red with annatto — eaten with a crusty banh mi for dipping or over rice noodles. Saigon family Sunday in a pot.',
-        isPopular: true,
+
     },
 ]
 
@@ -358,33 +364,33 @@ export default function BreakfastPage() {
 
             {/* ── OTHER CATEGORIES ── */}
             {/* ── OTHER CATEGORIES ── */}
-<section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
-    <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>
-            <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Keep Exploring</span>
-            <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-        </div>
-        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: '#2D1A0E', margin: '0 0 36px' }}>More to Discover</h2>
-        <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            {[
-                { label: 'Main Dishes', sub: 'The heart of the table', Icon: Utensils, href: '/recipes/main-dishes' },
-                { label: 'Street Food', sub: 'On streets everywhere', Icon: Clock, href: '/recipes/street-food' },
-                { label: 'Desserts', sub: 'Sweet endings', Icon: Star, href: '/recipes/desserts' },
-                { label: 'All Recipes', sub: 'Browse everything', Icon: Globe, href: '/recipes' },
-            ].map(({ label, sub, Icon, href }) => (
-                <Link key={href} href={href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '24px 32px', borderRadius: 20, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s', minWidth: 170 }}
-                    onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
-                    onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
-                >
-                    <Icon size={26} strokeWidth={1.6} color="#D97706" />
-                    <span style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{label}</span>
-                    <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
-                </Link>
-            ))}
-        </div>
-    </div>
-</section>
+            <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
+                <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Keep Exploring</span>
+                        <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
+                    </div>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: '#2D1A0E', margin: '0 0 36px' }}>More to Discover</h2>
+                    <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+                        {[
+                            { label: 'Main Dishes', sub: 'The heart of the table', Icon: Utensils, href: '/recipes/main-dishes' },
+                            { label: 'Street Food', sub: 'On streets everywhere', Icon: Clock, href: '/recipes/street-food' },
+                            { label: 'Desserts', sub: 'Sweet endings', Icon: Star, href: '/recipes/desserts' },
+                            { label: 'All Recipes', sub: 'Browse everything', Icon: Globe, href: '/recipes' },
+                        ].map(({ label, sub, Icon, href }) => (
+                            <Link key={href} href={href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '24px 32px', borderRadius: 20, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s', minWidth: 170 }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
+                            >
+                                <Icon size={26} strokeWidth={1.6} color="#D97706" />
+                                <span style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{label}</span>
+                                <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

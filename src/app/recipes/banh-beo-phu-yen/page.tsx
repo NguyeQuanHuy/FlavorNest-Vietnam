@@ -63,7 +63,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the Sweet & Spicy Sauce',
-            description: 'Combine fish sauce, warm water, and sugar in a ratio of 1:2:1. Stir until the sugar dissolves, then add lime juice, minced garlic, and bird's eye chili. The sauce should be light, savory, and slightly sweet.',
+            description: 'Combine fish sauce, warm water, and sugar in a ratio of 1:2:1. Stir until the sugar dissolves, then add lime juice, minced garlic, and bird&apos;s eye chili. The sauce should be light, savory, and slightly sweet.',
         },
         {
             title: 'Garnish and Serve',
