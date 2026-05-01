@@ -290,10 +290,8 @@ export default function CentralCuisinePage() {
                             ))}
                         </div>
                     </div>
-                    <div style={{ position: 'relative', width: 240, alignSelf: 'stretch', minHeight: 320 }}>
-                        <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)' }}>
-                            <VietnamMap region="central" size={280} />
-                        </div>
+                    <div style={{ position: 'relative', width: 240, alignSelf: 'stretch', minHeight: 320, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="central" size={280} />
                     </div>
                 </div>
             </section>
