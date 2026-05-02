@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 8,
     heroImage:
-        'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=1600&q=85',
+        '/images/recipes/kem-chuoi.jpg',
     intro:
         'Kem chuối is the ice cream of Saigon\'s alleyways — sold from styrofoam boxes by vendors who have been making the same recipe for decades. There is no churning, no special equipment, no eggs. Just ripe bananas blended with sweetened coconut milk, poured into moulds, and frozen. The magic is in the toppings: crushed roasted peanuts and toasted shredded coconut pressed into the surface before the final freeze. Each bite is cold, creamy, sweet, and faintly salty from the peanuts.',
     ingredientSections: [

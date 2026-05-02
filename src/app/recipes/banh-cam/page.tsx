@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 15 min',
     rating: 4.8,
     baseServings: 16,
-    heroImage: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-cam.jpg',
     intro: 'Banh cam is the street food dessert that announces itself — the sizzle of sesame seeds hitting hot oil, the hollow thud when you tap the golden shell. The dough is glutinous rice flour mixed with boiled potato for extra chewiness; the filling is sweetened mung bean paste, dense and fragrant with pandan. When fried correctly the shell puffs up around the filling, creating an air pocket that makes each bite simultaneously crispy, chewy, and soft. They are best eaten within minutes of leaving the oil.',
     ingredientSections: [
         {

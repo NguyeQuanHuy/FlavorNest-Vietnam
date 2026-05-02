@@ -14,6 +14,7 @@ import {
 import RecipesDropdown from "./RecipesDropdown";
 import StoriesDropdown from "./StoriesDropdown";
 import { useSession, signOut } from "next-auth/react";
+import { isAdmin } from "@/lib/admin";
 import SearchModal from "./SearchModal";
 import { useFavorites } from "@/hooks/useFavorites";
 
@@ -330,6 +331,26 @@ export default function Navbar() {
                 >
                   {session.user.name?.split(" ")[0]}
                 </span>
+
+                {isAdmin(session.user.email) && (
+                  <Link
+                    href="/admin/users"
+                    style={{
+                      padding: "6px 14px",
+                      borderRadius: 999,
+                      background: "linear-gradient(135deg, #D97706, #B45309)",
+                      border: "1px solid transparent",
+                      color: "#fff",
+                      fontSize: 12,
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      marginRight: 4,
+                    }}
+                  >
+                    Admin
+                  </Link>
+                )}
+
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
                   style={{

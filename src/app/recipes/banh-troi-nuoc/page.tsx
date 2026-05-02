@@ -1,72 +1,87 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-troi-nuoc',
-    title: 'Floating Rice Dumplings',
-    subtitle: 'Small, white, and perfectly round — glutinous rice dumplings filled with palm sugar, boiled until they float.',
+    title: 'Floating Glutinous Rice Balls',
+    subtitle: 'Banh troi nuoc — chewy rice balls filled with mung bean paste, served in a warm ginger-syrup with toasted sesame.',
     category: 'DESSERT',
-    difficulty: 'Easy',
-    totalTime: '45 min',
+    difficulty: 'Medium',
+    totalTime: '1 hr',
     rating: 4.8,
-    baseServings: 20,
-    heroImage: 'https://images.unsplash.com/photo-1607301406259-dfb186e15de8?auto=format&fit=crop&w=1600&q=85',
-    intro: 'Banh troi nuoc is one of Vietnam\'s oldest desserts, eaten on the Cold Food Festival on the third day of the third lunar month. The name means floating cake — the dumplings are done when they rise to the surface of boiling water. Inside each smooth white ball is a small cube of raw palm sugar that melts during cooking into a dark, caramel pool. They are served in a ginger-scented syrup and finished with toasted sesame seeds and shredded coconut.',
+    baseServings: 4,
+    heroImage: '/images/recipes/banh-troi-nuoc.jpg',
+    intro: 'Banh troi nuoc is the dessert that arrives at the Cold Foods Festival in early March (Tet Han Thuc) — round white rice balls filled with sweet mung bean paste, floating in a warm syrup perfumed with ginger. The dish has 4,000 years of Chinese-Vietnamese ancestry and a quiet philosophical weight: the round shape symbolises completeness, the white colour symbolises purity, and the floating in syrup symbolises the human passage through life. None of which prevents it from being delicious. The chewy outer shell and warm sweet centre is one of those textures you cannot describe but never forget.',
     ingredientSections: [
         {
-            title: 'Dough',
+            title: 'Mung bean filling',
             items: [
-                { amount: 250, unit: 'g', name: 'glutinous rice flour' },
-                { amount: 160, unit: 'ml', name: 'warm water', note: 'adjust gradually' },
-                { amount: 1, name: 'pinch of salt' },
+                { amount: 100, unit: 'g', name: 'split peeled mung beans', note: 'soaked 2 hours' },
+                { amount: 60, unit: 'g', name: 'caster sugar' },
+                { amount: 60, unit: 'ml', name: 'coconut milk' },
+                { amount: 1, name: 'pinch of sea salt' },
+                { amount: 1, unit: 'tsp', name: 'pomelo flower water', note: 'optional, traditional' },
             ],
         },
         {
-            title: 'Filling',
+            title: 'Rice ball wrapper',
             items: [
-                { amount: 80, unit: 'g', name: 'palm sugar', note: 'cut into 20 small cubes' },
+                { amount: 250, unit: 'g', name: 'glutinous rice flour' },
+                { amount: 180, unit: 'ml', name: 'warm water', note: 'roughly, adjust as needed' },
+                { amount: 1, name: 'pinch of salt' },
             ],
         },
         {
             title: 'Ginger syrup',
             items: [
-                { amount: 500, unit: 'ml', name: 'water' },
-                { amount: 80, unit: 'g', name: 'caster sugar' },
-                { amount: 30, unit: 'g', name: 'fresh ginger', note: 'peeled, thinly sliced' },
+                { amount: 100, unit: 'g', name: 'palm sugar' },
+                { amount: 600, unit: 'ml', name: 'water' },
+                { amount: 30, unit: 'g', name: 'fresh ginger', note: 'sliced thin' },
+                { amount: 2, name: 'fresh pandan leaves', note: 'tied in a knot' },
             ],
         },
         {
-            title: 'Topping',
+            title: 'To serve',
             items: [
-                { amount: 2, unit: 'tbsp', name: 'toasted sesame seeds' },
-                { amount: 2, unit: 'tbsp', name: 'shredded coconut', note: 'toasted until golden' },
+                { amount: 3, unit: 'tbsp', name: 'roasted sesame seeds' },
+                { amount: 60, unit: 'ml', name: 'coconut cream', note: 'optional drizzle' },
+                { amount: 30, unit: 'g', name: 'shredded fresh coconut', note: 'optional' },
             ],
         },
     ],
     steps: [
         {
+            title: 'Cook and mash the mung beans',
+            description: 'Drain the soaked mung beans. Steam over simmering water for 25 minutes until completely soft. While still hot, transfer to a heavy pan with sugar, coconut milk and salt. Cook over low heat, stirring constantly, for 8 minutes until the mixture pulls away from the pan and forms a smooth dry paste. Off heat, stir in pomelo flower water if using. Cool completely.',
+            tip: 'The filling must be dry enough to hold a shape. If it sticks to your fingers, cook longer.',
+        },
+        {
+            title: 'Form the filling balls',
+            description: 'Divide the cooled mung bean paste into 16 small balls about the size of a hazelnut. Roll each between your palms until smooth and round. Set on a plate.',
+        },
+        {
+            title: 'Make the rice flour dough',
+            description: 'In a bowl, combine glutinous rice flour and salt. Slowly add warm water while mixing until a soft pliable dough forms — it should be smooth and not sticky. Knead for 3 minutes. Cover with a damp cloth and rest 10 minutes.',
+            tip: 'Add water a tablespoon at a time at the end. Too wet and the dough sticks; too dry and it cracks.',
+        },
+        {
+            title: 'Wrap each ball',
+            description: 'Divide rice flour dough into 16 portions. Flatten each into a small disc. Place a mung bean ball in the centre and pull the edges of the disc up around it, pinching to seal. Roll between your palms until smooth and round. The finished ball should be about 3cm across.',
+            tip: 'Wet your hands lightly before rolling. It stops the dough from cracking and gives a glossy surface.',
+        },
+        {
             title: 'Make the ginger syrup',
-            description: 'Combine water, sugar, and ginger slices in a small saucepan. Bring to a boil, stir to dissolve sugar, then simmer for 10 minutes until lightly fragrant. Remove from heat and set aside.',
+            description: 'In a wide saucepan, combine palm sugar, water, sliced ginger and pandan leaves. Bring to a gentle simmer for 8 minutes until the sugar dissolves and the syrup turns faintly amber and aromatic with ginger.',
         },
         {
-            title: 'Make the dough',
-            description: 'Combine glutinous rice flour and salt in a bowl. Add warm water gradually, mixing with your hands until a smooth, pliable dough forms. Cover with a damp cloth and rest for 10 minutes.',
-            tip: 'The dough should not crack when you roll it into a ball. If it does, it needs a little more water.',
+            title: 'Boil the rice balls',
+            description: 'Lower the rice balls gently into the simmering ginger syrup. Cook for 5 minutes. The balls are ready when they all float to the surface and the dough turns translucent. Remove pandan leaves.',
+            tip: 'The balls sinking and floating is the visual cue. They are not done until every one floats.',
         },
         {
-            title: 'Wrap the dumplings',
-            description: 'Divide dough into 20 equal portions. Flatten each into a disc. Place one palm sugar cube in the centre, gather edges, and pinch firmly to seal with no cracks. Roll between palms into a smooth, round ball.',
-            tip: 'Keep finished dumplings covered with a damp cloth while you work. Exposed dough dries out and cracks when boiled.',
-        },
-        {
-            title: 'Boil until they float',
-            description: 'Bring a large pot of water to a rolling boil. Drop dumplings in batches of 8 to 10, stirring gently to prevent sticking. Cook until they float to the surface, then continue for 2 more minutes. Remove with a slotted spoon and transfer into the ginger syrup.',
-            tip: 'The floating is the signal, not the timer. Trust the float.',
-        },
-        {
-            title: 'Serve',
-            description: 'Arrange 4 to 5 dumplings in each bowl with a ladleful of warm ginger syrup. Scatter toasted sesame seeds and shredded coconut generously over the top. Serve warm — the palm sugar centre should still be molten when you break the dumpling open.',
+            title: 'Serve warm',
+            description: 'Ladle 4 balls and a generous amount of ginger syrup into each small bowl. Drizzle with coconut cream and shower with toasted sesame seeds and shredded coconut. Eat immediately while warm — the ginger fragrance and the chewy-soft contrast of shell and filling is at its peak in the first 5 minutes.',
+            tip: 'Banh troi nuoc does not keep. Eat the same day; reheating turns the rice balls gummy.',
         },
     ],
 };

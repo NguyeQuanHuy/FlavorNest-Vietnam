@@ -1,68 +1,86 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'che-buoi',
-    title: 'Pomelo Sweet Soup',
-    subtitle: 'Translucent pomelo pith pearls in fragrant pandan coconut milk — delicate, floral, and unlike anything else.',
+    title: 'Pomelo Peel Sweet Soup',
+    subtitle: 'Che buoi — crunchy candied pomelo pith with mung beans in a thick coconut soup. The masterpiece of patience.',
     category: 'DESSERT',
-    difficulty: 'Medium',
+    difficulty: 'Hard',
     totalTime: '1 hr 30 min',
-    rating: 4.7,
-    baseServings: 6,
-    heroImage: 'https://images.unsplash.com/photo-1621955964441-c173e01c135b?auto=format&fit=crop&w=1600&q=85',
-    intro: 'Che buoi is the most labour-intensive dessert in this collection and the most rewarding. The white pith of a pomelo is soaked, squeezed, and coated in tapioca starch until each piece becomes a translucent, chewy pearl with a faintly bitter edge that cuts through the sweetness of pandan-scented coconut milk. It takes patience. The result is unlike any other Vietnamese dessert: subtle, textural, and quietly extraordinary.',
+    rating: 4.8,
+    baseServings: 4,
+    heroImage: '/images/recipes/che-buoi-mien-nam.jpg',
+    intro: 'Che buoi is one of those Vietnamese desserts that demonstrates how a culture transforms scarcity into beauty. The bitter white pith of a pomelo — the part everyone else discards — is washed, salted, and squeezed obsessively for an hour to remove every trace of bitterness. Then it is dredged in tapioca starch and boiled until the squares turn translucent and glassy, with a slight crunch that no other dessert in the world has. Combined with soft yellow mung beans in a thick coconut soup, this is a Southern Vietnamese masterpiece of patience.',
     ingredientSections: [
         {
-            title: 'Pomelo pith pearls',
+            title: 'Pomelo pith',
             items: [
-                { amount: 1, name: 'large pomelo', note: 'white pith only, no fruit flesh' },
-                { amount: 100, unit: 'g', name: 'tapioca starch', note: 'for coating' },
-                { amount: 3, unit: 'tbsp', name: 'caster sugar' },
-                { amount: 1, name: 'pinch of salt' },
+                { amount: 200, unit: 'g', name: 'pomelo peel pith', note: 'white inner part only, green skin removed' },
+                { amount: 2, unit: 'tbsp', name: 'sea salt', note: 'for soaking' },
+                { amount: 60, unit: 'g', name: 'tapioca starch', note: 'for dredging' },
+                { amount: 50, unit: 'g', name: 'sugar' },
             ],
         },
         {
-            title: 'Pandan coconut broth',
+            title: 'Mung beans',
             items: [
-                { amount: 600, unit: 'ml', name: 'water' },
-                { amount: 4, name: 'pandan leaves', note: 'tied in a knot' },
-                { amount: 100, unit: 'g', name: 'caster sugar' },
-                { amount: 200, unit: 'ml', name: 'coconut milk', note: 'full-fat' },
-                { amount: 1, name: 'pinch of salt' },
+                { amount: 100, unit: 'g', name: 'split peeled mung beans', note: 'soaked 2 hours' },
+                { amount: 500, unit: 'ml', name: 'water' },
             ],
         },
         {
-            title: 'Topping',
+            title: 'Coconut soup',
             items: [
-                { amount: 60, unit: 'ml', name: 'coconut cream' },
-                { amount: 1, unit: 'tbsp', name: 'toasted sesame seeds' },
+                { amount: 400, unit: 'ml', name: 'coconut milk' },
+                { amount: 200, unit: 'ml', name: 'coconut cream' },
+                { amount: 100, unit: 'g', name: 'palm sugar' },
+                { amount: 2, name: 'fresh pandan leaves', note: 'tied in a knot' },
+                { amount: 1, name: 'pinch of sea salt' },
+                { amount: 2, unit: 'tbsp', name: 'tapioca starch', note: 'mixed with 60ml water' },
+            ],
+        },
+        {
+            title: 'To serve',
+            items: [
+                { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'crushed' },
+                { amount: 2, unit: 'tbsp', name: 'roasted sesame seeds' },
+                { amount: 4, unit: 'cups', name: 'crushed ice', note: 'optional' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Prepare the pomelo pith',
-            description: 'Peel the pomelo and remove all yellow skin. Tear the white pith into small pieces roughly 1 to 2 cm. Soak in cold water for 30 minutes, then squeeze out all water firmly. Repeat soaking and squeezing 3 times to remove bitterness.',
-            tip: 'Do not skip the repeated soaking. One soak leaves the pith too bitter; three soaks brings it to the right balance.',
+            title: 'Strip the bitter pomelo skin',
+            description: 'Peel the green outer skin from the pomelo, being careful to remove all of it — any green left will turn the dessert bitter. You should be left with only the soft white pith. Cut the pith into 1cm squares.',
+            tip: 'A vegetable peeler works better than a knife for stripping the green oil glands cleanly.',
         },
         {
-            title: 'Coat with tapioca starch',
-            description: 'Squeeze the pith completely dry one final time. Toss with sugar and salt, then coat thoroughly in tapioca starch until every piece is well covered. Shake off any excess.',
+            title: 'Salt and squeeze the pith',
+            description: 'Place pith squares in a bowl, sprinkle generously with salt, and massage with your hands for 5 minutes — the pith will release a yellow-green bitter liquid. Rinse thoroughly under cold running water, then squeeze the pith squares hard between your palms to release more liquid. Repeat the salt-massage-rinse-squeeze cycle 3 to 4 times until the squeezed liquid runs clear and the pith no longer tastes bitter.',
+            tip: 'This step is the entire dessert. Skipping or shortcutting will give a bitter unpleasant result. Allow the full 30 minutes.',
         },
         {
-            title: 'Blanch the pearls',
-            description: 'Bring a large pot of water to a rolling boil. Drop in the coated pith pieces and cook for 3 to 4 minutes until the tapioca coating turns completely translucent. Remove with a slotted spoon and transfer immediately to cold water to stop cooking.',
-            tip: 'The pearls are ready when they look translucent on the outside with the white pith still faintly visible inside.',
+            title: 'Sweeten and starch',
+            description: 'Toss the squeezed pith with 50g sugar and let macerate 15 minutes. Drain off any liquid. Dredge the squares thoroughly in tapioca starch until each is fully coated.',
         },
         {
-            title: 'Make the pandan broth',
-            description: 'Combine water and pandan leaves in a saucepan. Bring to a boil and simmer for 10 minutes until fragrant and pale green. Remove pandan leaves. Add sugar and salt, stir to dissolve. Reduce heat to low and stir in coconut milk. Do not boil after adding coconut milk.',
+            title: 'Boil the pith squares',
+            description: 'Bring a pot of water to a boil. Drop in the starched pith squares and cook for 3 minutes — they will turn translucent and float to the surface. Drain and immediately plunge into ice water to set the texture and stop cooking. The pith should now be glassy with a slight crunch.',
         },
         {
-            title: 'Assemble and serve',
-            description: 'Drain the pomelo pearls and divide among bowls. Ladle warm pandan coconut broth over the top. Finish with a spoonful of coconut cream and a scatter of toasted sesame seeds. Serve warm or at room temperature.',
+            title: 'Cook the mung beans',
+            description: 'Drain soaked mung beans. Place in a pot with 500ml water and simmer 20 minutes until tender but still holding their shape. Drain and set aside.',
+        },
+        {
+            title: 'Build the coconut soup',
+            description: 'In a heavy pot, combine coconut milk, coconut cream, palm sugar, pandan leaves and salt. Warm gently, stirring until the sugar dissolves. Whisk in the tapioca slurry and simmer 3 minutes until the soup is thickened and silky. Remove pandan leaves.',
+            tip: 'Never boil coconut milk hard. It separates and turns oily.',
+        },
+        {
+            title: 'Combine and serve',
+            description: 'Stir the cooked mung beans and the glassy pomelo pith into the warm coconut soup. Warm through 2 minutes. Ladle into bowls. Top with crushed peanuts and sesame seeds. Serve warm in winter or over crushed ice in summer.',
+            tip: 'The texture of glassy crunchy pith against soft mung beans is what defines che buoi. Both elements are essential.',
         },
     ],
 };

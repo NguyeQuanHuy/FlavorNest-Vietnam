@@ -14,21 +14,21 @@ import { useFavorites } from '@/hooks/useFavorites'
 
 // ─── TYPE ─────────────────────────────────────────────────────────────────────
 interface Recipe {
-        slug: string
-        title: string
-        subtitle: string
-        image: string
-        region: 'Northern' | 'Central' | 'Southern'
-        difficulty: 'Easy' | 'Medium' | 'Hard'
-        time: string
-        rating: string
-        reviews: number
-        cal: number
-        tag: string
-        tagColor: string
-        description: string
-        tags: string[]
-    }
+    slug: string
+    title: string
+    subtitle: string
+    image: string
+    region: 'Northern' | 'Central' | 'Southern'
+    difficulty: 'Easy' | 'Medium' | 'Hard'
+    time: string
+    rating: string
+    reviews: number
+    cal: number
+    tag: string
+    tagColor: string
+    description: string
+    tags: string[]
+}
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const RECIPES: Recipe[] = [
@@ -36,7 +36,7 @@ const RECIPES: Recipe[] = [
         slug: 'thit-kho-tau',
         title: 'Caramelised Pork & Eggs',
         subtitle: 'Thit kho tau',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/thit-kho-tau.jpg',
         region: 'Southern', difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: 'Comfort Classic', tagColor: '#D97706',
         description: "Pork belly glistens amber under a caramel lacquer that catches the light like dark honey. Slow-braised for hours in coconut water with whole boiled eggs and deep palm-sugar caramel, the fat turns silky while the yolks drink up the sauce. Spooned over hot rice on a rainy afternoon, it tastes like every Vietnamese grandmother's kitchen.",
@@ -46,7 +46,7 @@ const RECIPES: Recipe[] = [
         slug: 'ca-kho-to',
         title: 'Clay Pot Caramelised Fish',
         subtitle: 'Ca kho to',
-        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ca-kho-to.jpg',
         region: 'Southern', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 198, cal: 320, tag: 'Southern Icon', tagColor: '#059669',
         description: "Thick catfish fillets arrive still bubbling, coated in a near-black caramel that smells of burnt sugar, ginger and chilli. Layered with fish sauce, pork fat and cracked pepper, then braised slowly in an earthenware pot until the sauce clings like varnish. The pot keeps sizzling at the table — one sniff and no one waits politely for rice.",
@@ -55,8 +55,8 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bo-luc-lac',
         title: 'Shaking Beef',
-        subtitle: 'Bo luc lac',
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+        subtitle: 'Bò lúc lắc',
+        image: '/images/recipes/bo-luc-lac.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 276, cal: 420, tag: 'Restaurant Favourite', tagColor: '#7C3AED',
         description: "Cubes of tender beef hit a screaming-hot wok with butter, garlic and oyster sauce, caramelising in seconds while the cook 'shakes' the pan to toss them. The crust is deep and glossy; the centre stays blushing pink. Served on peppery watercress with a lime-salt-pepper dip — the Saigon steakhouse classic French colonists left behind.",
@@ -65,18 +65,18 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ga-kho-gung',
         title: 'Ginger Braised Chicken',
-        subtitle: 'Ga kho gung',
-        image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=900&q=80',
+        subtitle: 'Gà kho gừng',
+        image: '/images/recipes/ga-kho-gung.jpg',
         region: 'Northern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 143, cal: 360, tag: 'Weeknight Hero', tagColor: '#EA580C',
         description: "Bone-in chicken thighs simmer in fish sauce, palm sugar and a generous fistful of julienned young ginger until the sauce reduces to a sticky, fragrant glaze. The ginger turns sweet and mellow, the skin burnished mahogany. A weeknight staple in every Northern household — cheap, fast, and the kind of dish that makes plain rice feel like home.",
         tags: ['Chicken', 'Ginger', 'Quick', 'Family'],
     },
     {
-        slug: 'suon-nuong-a',
+        slug: 'suon-nuong-sa',
         title: 'Lemongrass Pork Ribs',
-        subtitle: 'Suon nuong sa',
-        image: 'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?auto=format&fit=crop&w=900&q=80',
+        subtitle: 'Sườn nướng sả',
+        image: '/images/recipes/suon-nuong-sa.jpg',
         region: 'Southern', difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 167, cal: 510, tag: 'Grill Night', tagColor: '#D97706',
         description: "Ribs marinate overnight in crushed lemongrass, garlic, fish sauce and a whisper of honey, then meet glowing charcoal until the edges char and the fat renders into smoke. Each bite is sweet, smoky and citrus-bright, with that unmistakable Saigon street-corner perfume. Serve with broken rice, pickled carrots and a fried egg — cơm tấm, the city's favourite dinner.",
@@ -85,8 +85,8 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-chien-sot-ca',
         title: 'Crispy Fish in Tomato Sauce',
-        subtitle: 'Ca chien sot ca',
-        image: 'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?auto=format&fit=crop&w=900&q=80',
+        subtitle: 'Cá chiên sốt cà',
+        image: '/images/recipes/ca-chien-sot-ca.jpg',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.6', reviews: 112, cal: 340, tag: 'Northern Home Cook', tagColor: '#0284C7',
         description: "A whole pan-fried fish, skin shattering-crisp, bathes in a vibrant tomato sauce loud with scallions and dill. The crunch of the crust against the tangy sauce is pure Hanoi home cooking — unfussy, balanced, endlessly comforting. It's the dish every Northern mother makes when she wants to show love without saying anything at all.",
@@ -96,7 +96,7 @@ const RECIPES: Recipe[] = [
         slug: 'dau-hu-sot-ca',
         title: 'Tofu in Tomato Sauce',
         subtitle: 'Dau hu sot ca',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/dau-hu-sot-ca.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 189, cal: 220, tag: 'Vegan Favourite', tagColor: '#059669',
         description: "Golden squares of fried tofu, crisp at the edges and custardy inside, simmer in a bright tomato-scallion sauce until they soak up every drop. Humble, vegan, and on the table of nearly every Vietnamese family at least once a week. Proof that the best comfort food needs nothing more than three ingredients and a little patience.",
@@ -106,7 +106,7 @@ const RECIPES: Recipe[] = [
         slug: 'bo-nuong-la-lot',
         title: 'Beef in Betel Leaf',
         subtitle: 'Bo nuong la lot',
-        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bo-nuong-la-lot.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 134, cal: 380, tag: 'Party Dish', tagColor: '#BE185D',
         description: "Seasoned ground beef — perfumed with lemongrass, garlic and a hint of five-spice — wrapped snugly in glossy betel leaves, then grilled until the leaves blister and release their peppery, smoky aroma. One of Vietnam's great party dishes, eaten in rice paper rolls with herbs, pickles and nước chấm, fingers sticky, beer cold, everyone talking at once.",
@@ -116,7 +116,7 @@ const RECIPES: Recipe[] = [
         slug: 'cha-ca-la-vong',
         title: "Hanoi Turmeric Fish with Dill",
         subtitle: 'Cha ca La Vong',
-        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/cha-ca-la-vong.jpg',
         region: 'Northern', difficulty: 'Medium', time: '40 min',
         rating: '4.9', reviews: 221, cal: 350, tag: "Hanoi's Best", tagColor: '#D97706',
         description: "Arguably Hanoi's greatest dish. Snakehead fillets marinate in turmeric and galangal-fermented shrimp paste, then finish sizzling tableside in a pan of dill and spring onion so abundant it looks like a green bouquet. Eaten with rice vermicelli, roasted peanuts, fresh herbs and mắm tôm — a ritual invented on Chả Cá Street and jealously guarded for 150 years.",
@@ -126,7 +126,7 @@ const RECIPES: Recipe[] = [
         slug: 'bun-rieu',
         title: 'Crab & Tomato Noodle Soup',
         subtitle: 'Bún Riêu',
-        image: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bun-rieu.jpg',
         region: 'Northern', difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.8', reviews: 187, cal: 410, tag: 'Market Classic', tagColor: '#DC2626',
         description: "A crimson broth built from fresh paddy crab and ripe tomatoes, crowned with fluffy crab-and-egg rafts that float like clouds. The sour note comes from fermented rice vinegar and a whisper of shrimp paste. Ladled over rice vermicelli with a mountain of water spinach, perilla and banana blossom, it's Hanoi's favourite rainy-day lunch.",
@@ -136,7 +136,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-canh-cua',
         title: 'Thick Tapioca Noodles with Crab',
         subtitle: 'Bánh Canh Cua',
-        image: 'https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-canh-cua.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1 hr',
         rating: '4.7', reviews: 156, cal: 480, tag: 'Saigon Street', tagColor: '#D97706',
         description: "Fat, chewy tapioca-and-rice noodles suspended in a velvety orange broth thickened to a near-gravy with crab fat. Generous chunks of mud crab, quail eggs and pork knuckle bob at the surface, finished with cilantro and a crack of black pepper. Eaten with chopsticks and a spoon — slurping is mandatory, table manners optional.",
@@ -146,7 +146,7 @@ const RECIPES: Recipe[] = [
         slug: 'canh-chua-ca',
         title: 'Southern Sour Fish Soup',
         subtitle: 'Canh Chua Cá',
-        image: 'https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/canh-chua-ca.jpg',
         region: 'Southern', difficulty: 'Easy', time: '40 min',
         rating: '4.8', reviews: 174, cal: 290, tag: 'Mekong Favourite', tagColor: '#059669',
         description: "The Mekong Delta in a bowl — a bright, herbaceous broth soured with tamarind, sweetened with pineapple, and scattered with tomato wedges, okra and elephant-ear stems. Chunks of catfish simmer just until tender, then the whole thing is showered with rice paddy herb and fried garlic. Tart, sweet, savoury and fragrant in a single spoonful.",
@@ -156,7 +156,7 @@ const RECIPES: Recipe[] = [
         slug: 'canh-kho-qua-nhoi-thit',
         title: 'Stuffed Bitter Melon Soup',
         subtitle: 'Canh Khổ Qua Nhồi Thịt',
-        image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/canh-kho-qua-nhoi-thit.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1 hr',
         rating: '4.6', reviews: 128, cal: 260, tag: 'Lunar New Year', tagColor: '#7C3AED',
         description: "Whole bitter melons hollowed out and stuffed with seasoned pork and wood ear mushrooms, then simmered in a clear pork broth until the skin turns jade-green and tender. The name khổ qua means 'bitterness passes' — eaten at Tết to leave the previous year's hardships behind. Bitter, savoury, unexpectedly comforting.",
@@ -166,7 +166,7 @@ const RECIPES: Recipe[] = [
         slug: 'canh-rau-ngot-thit-bam',
         title: 'Sweet Leaf Soup with Minced Pork',
         subtitle: 'Canh Rau Ngót Thịt Băm',
-        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/canh-rau-ngot-thit-bam.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 156, cal: 140, tag: 'Daily Staple', tagColor: '#059669',
         description: "A clear, jade-green broth where bruised sweet leaves release their slightly nutty, almost sweet flavour into lightly seasoned pork stock. The minced pork forms tender flecks throughout. Every Northern household has this soup on the table at least twice a week — cooling in summer, nourishing year-round, ready in the time it takes to cook a pot of rice.",
@@ -176,7 +176,7 @@ const RECIPES: Recipe[] = [
         slug: 'rau-muong-xao-toi',
         title: 'Stir-Fried Water Spinach with Garlic',
         subtitle: 'Rau Muống Xào Tỏi',
-        image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/rau-muong-xao-toi.jpg',
         region: 'Northern', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 203, cal: 120, tag: 'Everyday Green', tagColor: '#059669',
         description: "Water spinach hits a screaming wok with smashed garlic, a splash of fish sauce and nothing else — cooked so fast the stems stay crunchy and the leaves barely wilt. The national green vegetable of Vietnam, served at every family meal from Hanoi to the Mekong. Ten minutes, three ingredients, impossible to get tired of.",
@@ -186,7 +186,7 @@ const RECIPES: Recipe[] = [
         slug: 'trung-chien',
         title: 'Vietnamese Fried Egg Omelette',
         subtitle: 'Trứng Chiên',
-        image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/trung-chien.jpg',
         region: 'Southern', difficulty: 'Easy', time: '10 min',
         rating: '4.6', reviews: 142, cal: 220, tag: 'Home Cook', tagColor: '#D97706',
         description: "Eggs beaten with a splash of fish sauce, a handful of spring onion and sometimes a spoonful of minced pork, fried in generous oil until the edges go lace-crisp and the centre stays just set. The unsung hero of Vietnamese home cooking — cheap, fast, and the dish every student learns to make when they leave home.",
@@ -196,7 +196,7 @@ const RECIPES: Recipe[] = [
         slug: 'thit-rang-chay-canh',
         title: 'Caramelised Crispy Pork',
         subtitle: 'Thịt Rang Cháy Cạnh',
-        image: 'https://images.unsplash.com/photo-1625398407937-2993c7d2b33b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/thit-rang-chay-canh.jpg',
         region: 'Northern', difficulty: 'Easy', time: '35 min',
         rating: '4.8', reviews: 189, cal: 430, tag: 'Rice Killer', tagColor: '#EA580C',
         description: "Cubes of pork belly slow-fried in their own fat until the edges turn mahogany-black and shatter-crisp, glazed with fish sauce caramel and finished with black pepper. The name means 'burnt edges' — and those burnt edges are the whole point. Eaten with steamed rice and nothing else needed, it disappears faster than any other dish on the table.",
@@ -206,7 +206,7 @@ const RECIPES: Recipe[] = [
         slug: 'ga-kho-sa-ot',
         title: 'Lemongrass Chilli Chicken',
         subtitle: 'Gà Kho Sả Ớt',
-        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ga-kho-sa-ot.jpg',
         region: 'Central', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 167, cal: 390, tag: 'Central Fire', tagColor: '#DC2626',
         description: "Chicken thighs braised with a small mountain of minced lemongrass, bird's eye chilli and fish sauce caramel until the sauce clings like glaze and the kitchen smells like a Hue market. Spicier and more aromatic than its Northern cousin, this is the dish that explains why Central Vietnamese cooking has its own devoted following.",
@@ -216,7 +216,7 @@ const RECIPES: Recipe[] = [
         slug: 'canh-thit-bam',
         title: 'Clear Soup with Minced Pork',
         subtitle: 'Canh Thịt Băm',
-        image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/canh-thit-bam.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.5', reviews: 118, cal: 160, tag: 'Weeknight Basic', tagColor: '#0284C7',
         description: "A clear, gentle broth with minced pork poached into tender flecks, often brightened with winter melon, gourd or young mustard greens. The soup Vietnamese mothers make when they want something easy, comforting and respectful of a small budget. Unshowy, deeply home-cooking, and proof that the quietest dishes are often the ones that define a cuisine.",
@@ -226,7 +226,7 @@ const RECIPES: Recipe[] = [
         slug: 'thit-kho-hot-vit',
         title: 'Caramelised Pork Belly with Eggs',
         subtitle: 'Thịt Kho Hột Vịt',
-        image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/thit-kho-hot-vit.jpg',
         region: 'Southern', difficulty: 'Medium', time: '90 min',
         rating: '4.9', reviews: 312, cal: 580, tag: 'Lunar New Year', tagColor: '#DC2626',
         description: "Chunks of tender pork belly and hard-boiled eggs braised in fresh coconut water and fish sauce until the meat melts at the touch of a chopstick. This golden-hued stew is the soul of Southern Vietnamese cuisine, especially during Tet (Lunar New Year). The balance of savory-sweet flavors and the richness of the caramelised sauce make it a true comfort masterpiece that tastes even better the next day.",
@@ -236,7 +236,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-rang-trung',
         title: 'Vietnamese Egg Fried Rice',
         subtitle: 'Cơm Rang Trứng',
-        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-rang-trung.jpg',
         region: 'Southern', difficulty: 'Easy', time: '15 min',
         rating: '4.6', reviews: 128, cal: 350, tag: 'Quick Meal', tagColor: '#059669',
         description: "The ultimate comfort food found in every Vietnamese kitchen. Day-old cold rice is tossed in a screaming hot wok with golden egg yolks and fragrant scallions until every grain is toasted and separated. Simple, humble, and deeply satisfying.",
@@ -246,7 +246,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-chien-hai-san',
         title: 'Seafood Fried Rice',
         subtitle: 'Cơm Chiên Hải Sản',
-        image: 'https://images.unsplash.com/photo-1512058560366-cd242d5930df?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-chien-hai-san.jpg',
         region: 'Central', difficulty: 'Medium', time: '25 min',
         rating: '4.8', reviews: 215, cal: 480, tag: 'Coastal Classic', tagColor: '#0284C7',
         description: "A premium twist on fried rice featuring succulent shrimp, tender squid, and sweet peas. The rice is fried until slightly crispy, absorbing the savory essence of the seafood and the aroma of fried garlic. A staple at seaside restaurants across Vietnam.",
@@ -256,7 +256,7 @@ const RECIPES: Recipe[] = [
         slug: 'trung-chien-thit',
         title: 'Minced Pork Omelette',
         subtitle: 'Trứng Chiên Thịt',
-        image: 'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/trung-chien-thit.jpg',
         region: 'Central', difficulty: 'Easy', time: '15 min',
         rating: '4.7', reviews: 184, cal: 310, tag: 'Home Cook', tagColor: '#D97706',
         description: "Beaten eggs mixed with seasoned minced pork and thin shallot slices, pan-fried until the edges are golden-crisp and lacy. This hearty omelette is a beloved side dish that turns a simple bowl of rice into a complete, nourishing meal.",
@@ -266,7 +266,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-chien-duong-chau',
         title: 'Yangzhou Fried Rice',
         subtitle: 'Cơm Chiên Dương Châu',
-        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-chien-duong-chau.jpg',
         region: 'Southern', difficulty: 'Medium', time: '30 min',
         rating: '4.9', reviews: 420, cal: 520, tag: 'Party Favorite', tagColor: '#B91C1C',
         description: "A colorful mosaic of flavors featuring diced Chinese sausage (Lap Xuong), char siu pork, shrimp, and mixed vegetables. Every bite is a balance of sweet, savory, and smoky, making it the star of Vietnamese banquet tables.",
@@ -276,7 +276,7 @@ const RECIPES: Recipe[] = [
         slug: 'tom-rim-man-ngot',
         title: 'Caramelised Savory Shrimp',
         subtitle: 'Tôm Rim Mặn Ngọt',
-        image: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/tom-rim-man-ngot.jpg',
         region: 'Southern', difficulty: 'Easy', time: '20 min',
         rating: '4.8', reviews: 156, cal: 280, tag: 'Rice Killer', tagColor: '#EA580C',
         description: "Whole shrimp simmered in a sticky, garlic-infused fish sauce caramel until the shells turn translucent and crispy. The perfect balance of salty and sweet that compels you to keep reaching for more rice.",
@@ -285,8 +285,8 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-beo-phu-yen',
         title: 'Water Fern Rice Cakes',
-        subtitle: 'Bánh Bèo',
-        image: 'https://images.unsplash.com/photo-1625244695851-1fc873994270?auto=format&fit=crop&w=900&q=80',
+        subtitle: 'Bánh Bèo Phú Yên',
+        image: '/images/recipes/banh-beo-phu-yen.jpg',
         region: 'Central', difficulty: 'Hard', time: '60 min',
         rating: '4.9', reviews: 289, cal: 210, tag: 'Hue Specialty', tagColor: '#7C3AED',
         description: "Delicate, steamed rice discs topped with savory dried shrimp flakes, crispy pork rinds, and scallion oil. Served with a special sweet-and-spicy fish sauce, these 'fern cakes' are the jewel of Central Vietnamese street food.",
@@ -296,7 +296,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-mi-cha-ca',
         title: 'Fish Cake Banh Mi',
         subtitle: 'Bánh Mì Chả Cá',
-        image: 'https://images.unsplash.com/photo-1600454021970-351eff4a6554?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-mi-cha-ca.jpg',
         region: 'Central', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 312, cal: 420, tag: 'Street Breakfast', tagColor: '#059669',
         description: "A crispy baguette stuffed with hot, fried fish cakes, pungent Vietnamese coriander (rau ram), and a zesty garlic-chili sauce. A specialty of coastal towns that has become a favorite morning grab-and-go across the country.",
@@ -306,7 +306,7 @@ const RECIPES: Recipe[] = [
         slug: 'nem-nuong',
         title: 'Grilled Pork Sausage Skewers',
         subtitle: 'Nem Nướng',
-        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/nem-nuong.jpg',
         region: 'Central', difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 245, cal: 380, tag: 'Nha Trang Style', tagColor: '#7C3AED',
         description: "Springy, savory-sweet pork patties grilled over charcoal. A specialty of Nha Trang, traditionally wrapped in rice paper with crispy fried rolls, fresh herbs, and a signature warm peanut dipping sauce.",
@@ -316,7 +316,7 @@ const RECIPES: Recipe[] = [
         slug: 'thit-nuong-xien',
         title: 'Street Style Pork Skewers',
         subtitle: 'Thịt Nướng Xiên',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6e9481bfa?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/thit-nuong-xien.jpg',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.8', reviews: 189, cal: 320, tag: 'Street Snack', tagColor: '#059669',
         description: "The quintessential aroma of Hanoi's afternoons. Thin slices of pork shoulder marinated in lemongrass, honey, and sesame oil, grilled fast over hot coals until the edges are caramelized and smoky.",
@@ -326,7 +326,7 @@ const RECIPES: Recipe[] = [
         slug: 'ga-nuong-mat-ong',
         title: 'Honey Glazed Grilled Chicken',
         subtitle: 'Gà Nướng Mật Ong',
-        image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ga-nuong-mat-ong.jpg',
         region: 'Southern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 156, cal: 450, tag: 'Family Dinner', tagColor: '#D97706',
         description: "Juicy chicken thighs bathed in a glossy amber glaze of wild honey and five-spice powder. The skin is rendered crispy and sweet, while the meat remains tender and infused with aromatic spices.",
@@ -336,7 +336,7 @@ const RECIPES: Recipe[] = [
         slug: 'ga-nuong-muoi-ot',
         title: 'Chili Salt Grilled Chicken',
         subtitle: 'Gà Nướng Muối Ớt',
-        image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ga-nuong-muoi-ot.jpg',
         region: 'Southern', difficulty: 'Medium', time: '50 min',
         rating: '4.9', reviews: 212, cal: 410, tag: 'Spicy Kick', tagColor: '#DC2626',
         description: "A bold, rustic dish where chicken is rubbed with a fiery paste of Tay Ninh chili salt and crushed bird's eye chilies. Grilled until the skin is shatter-crisp and the heat resonates in every bite.",
@@ -346,7 +346,7 @@ const RECIPES: Recipe[] = [
         slug: 'vit-quay',
         title: 'Vietnamese Roasted Duck',
         subtitle: 'Vịt Quay',
-        image: 'https://images.unsplash.com/photo-1518492104633-130d0cc84637?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/vit-quay.jpg',
         region: 'Northern', difficulty: 'Hard', time: '120 min',
         rating: '4.9', reviews: 342, cal: 620, tag: 'Festive Roast', tagColor: '#B91C1C',
         description: "Aromatic duck with glass-like crispy skin and juicy meat infused with star anise and cinnamon. A centerpiece of Northern celebrations, served with a thick, savory soy-based dipping sauce.",
@@ -356,7 +356,7 @@ const RECIPES: Recipe[] = [
         slug: 'heo-quay',
         title: 'Crispy Roasted Pork Belly',
         subtitle: 'Heo Quay',
-        image: 'https://images.unsplash.com/photo-1593448323291-04e088197167?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/heo-quay.jpg',
         region: 'Southern', difficulty: 'Hard', time: '90 min',
         rating: '4.9', reviews: 512, cal: 580, tag: 'Crispy Gold', tagColor: '#EA580C',
         description: "Famous for its 'shatter-crisp' crackling skin and melting layers of fat. This pork belly is meticulously poked and salted before roasting to achieve a bubbly, golden texture that is addictive.",
@@ -366,7 +366,7 @@ const RECIPES: Recipe[] = [
         slug: 'ca-nuong-trui',
         title: 'Straw-Roasted Snakehead Fish',
         subtitle: 'Cá Nướng Trui',
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ca-nuong-trui.jpg',
         region: 'Southern', difficulty: 'Medium', time: '40 min',
         rating: '4.8', reviews: 167, cal: 290, tag: 'Mekong Rustic', tagColor: '#059669',
         description: "The soul of Mekong Delta cuisine. Whole fish is skewered on bamboo, buried in rice straw, and set ablaze. The charred skin is scraped away to reveal steaming, smoky, and incredibly sweet white flesh.",
@@ -376,7 +376,7 @@ const RECIPES: Recipe[] = [
         slug: 'ca-nuong-giay-bac',
         title: 'Foil-Wrapped Grilled Fish',
         subtitle: 'Cá Nướng Giấy Bạc',
-        image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ca-nuong-giay-bac.jpg',
         region: 'Central', difficulty: 'Easy', time: '35 min',
         rating: '4.7', reviews: 134, cal: 310, tag: 'Seafood Feast', tagColor: '#0284C7',
         description: "Delicate white fish steamed-grilled in its own juices with julienned ginger, galangal, and scallions. The foil wrap locks in all the umami, creating a tender and aromatic seafood experience.",
@@ -386,7 +386,7 @@ const RECIPES: Recipe[] = [
         slug: 'muc-nuong-sa-te',
         title: 'Spicy Sate Grilled Squid',
         subtitle: 'Mực Nướng Sa Tế',
-        image: 'https://images.unsplash.com/photo-1533630846283-6878262f489b?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/muc-nuong-sa-te.jpg',
         region: 'Central', difficulty: 'Easy', time: '20 min',
         rating: '4.8', reviews: 198, cal: 260, tag: 'Beach BBQ', tagColor: '#DC2626',
         description: "Fresh squid scored and marinated in a fiery lemongrass sate paste. Grilled quickly over high heat until the tentacles curl and the sauce caramelizes into a spicy, smoky crust.",
@@ -396,7 +396,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-tam-suon-bi-cha',
         title: 'Broken Rice with Grilled Pork & Egg Meatloaf',
         subtitle: 'Cơm Tấm Sườn Bì Chả',
-        image: 'https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-tam-suon-bi-cha.jpg',
         region: 'Southern', difficulty: 'Medium', time: '60 min',
         rating: '4.9', reviews: 856, cal: 650, tag: 'Saigon Signature', tagColor: '#B91C1C',
         description: "The quintessential breakfast of Saigon. Fragrant broken rice grains topped with a charcoal-grilled pork chop, shredded pork skin (bi), and a savory steamed egg meatloaf (cha). Served with a side of sweet-and-sour fish sauce and pickled vegetables, it is a harmonious explosion of smoky, savory, and tangy flavors.",
@@ -406,7 +406,7 @@ const RECIPES: Recipe[] = [
         slug: 'com-ga-hoi-an',
         title: 'Hoi An Chicken Rice',
         subtitle: 'Cơm Gà Hội An',
-        image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/com-ga-hoi-an.jpg',
         region: 'Central', difficulty: 'Medium', time: '50 min',
         rating: '4.8', reviews: 412, cal: 520, tag: 'Ancient Town Flavor', tagColor: '#D97706',
         description: "An elegant dish from the ancient town of Hoi An. The rice is cooked in chicken broth and turmeric to achieve a beautiful golden hue, then topped with shredded free-range chicken, thin onions, and Vietnamese coriander. The secret lies in the tiny bowl of rich giblet gravy and the spicy chili jam served on the side.",
@@ -416,7 +416,7 @@ const RECIPES: Recipe[] = [
         slug: 'nem-chua',
         title: 'Cured Fermented Pork',
         subtitle: 'Nem Chua',
-        image: 'https://images.unsplash.com/photo-1583090752239-8bd2bb205096?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/nem-chua.jpg',
         region: 'Northern', difficulty: 'Hard', time: '48 hour',
         rating: '4.8', reviews: 215, cal: 150, tag: 'Traditional Snack', tagColor: '#DC2626',
         description: "A unique Vietnamese delicacy made from fresh ground pork, sliced pigskin, and a blend of garlic, chili, and peppercorns. Wrapped in banana leaves and left to ferment naturally, it develops a signature sour, spicy, and garlicky tang that is addictive.",
@@ -426,7 +426,7 @@ const RECIPES: Recipe[] = [
         slug: 'bun-cha-gio',
         title: 'Rice Vermicelli with Spring Rolls',
         subtitle: 'Bún Chả Giò',
-        image: 'https://images.unsplash.com/photo-1544070078-a212eda27b49?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/bun-cha-gio.jpg',
         region: 'Southern', difficulty: 'Medium', time: '40 min',
         rating: '4.7', reviews: 342, cal: 480, tag: 'Quick Lunch', tagColor: '#059669',
         description: "A refreshing noodle bowl featuring crispy fried spring rolls (cha gio) served over fresh rice vermicelli and a bed of shredded lettuce, herbs, and cucumber. Drizzled with 'nuoc mam pha' and topped with peanuts for a perfect balance of hot, cold, crunchy, and soft.",
@@ -436,7 +436,7 @@ const RECIPES: Recipe[] = [
         slug: 'ga-xao-sa-ot',
         title: 'Lemongrass & Chili Stir-fry Chicken',
         subtitle: 'Gà Xào Sả Ớt',
-        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/ga-xao-sa-ot.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.6', reviews: 189, cal: 320, tag: 'Rice Killer', tagColor: '#D97706',
         description: "A spicy and highly aromatic stir-fry that is a staple in Vietnamese family meals. Tender chicken pieces are tossed with minced lemongrass, turmeric, and bird's eye chilies, creating a vibrant yellow dish that makes it impossible to eat just one bowl of rice.",
@@ -446,7 +446,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-hoi-chao-long',
         title: 'Woven Rice Vermicelli with Pork Congee',
         subtitle: 'Bánh Hỏi Cháo Lòng',
-        image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/banh-hoi-chao-long.jpg',
         region: 'Central', difficulty: 'Hard', time: '2.5 hrs',
         rating: '4.9', reviews: 94, cal: 460, tag: 'Phu Yen Pride', tagColor: '#0284C7',
         description: "The dawn breakfast of Phú Yên — feather-light woven mats of rice vermicelli served alongside a bowl of silky pork congee studded with offal, fresh herbs and a crack of black pepper. The vermicelli arrives painted with scallion oil; the congee carries the depth of bones simmered since 4am. Eaten together, never apart.",
@@ -488,7 +488,7 @@ function saveFav(recipe: Recipe, add: boolean) {
             arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
         }
         localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch {}
+    } catch { }
 }
 
 // ─── Heart Button ─────────────────────────────────────────────────────────────

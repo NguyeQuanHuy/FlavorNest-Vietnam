@@ -26,7 +26,7 @@ export default function VietnamMap({ region, size = 200 }: Props) {
 
     // Inject style + sizing into SVG
     const styled = svg
-        .replace('<svg', `<svg width="${size}" height="${size * 2.4}" data-region="${region}"`)
+        .replace('<svg', `<svg width="${size}" height="${size * 1.5}" data-region="${region}"`)
         .replace('</svg>', `<style>
             [id^="VN"] { fill: rgba(75,46,26,0.1); stroke: rgba(75,46,26,0.25); transition: fill 0.4s; }
             ${activeIds.map(id => `#${id}`).join(', ')} { fill: #D97706 !important; stroke: #B45309; }

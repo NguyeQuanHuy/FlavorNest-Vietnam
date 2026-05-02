@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     rating: 4.7,
     baseServings: 8,
     heroImage:
-        'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=1600&q=85',
+        '/images/recipes/banh-chuoi-nuong.jpg',
     intro:
         'Bánh chuối nướng is the dessert that smells like home. Overripe bananas — the ones too soft and sweet to eat fresh — are folded into a coconut milk batter, poured into a tray, and baked until the top turns golden and the edges caramelise into something between cake and custard. It is simple food made extraordinary by patience and the right bananas. Use the ones with black-spotted skins. The blacker, the better.',
     ingredientSections: [
