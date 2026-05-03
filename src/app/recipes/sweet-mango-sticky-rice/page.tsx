@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '30 min + overnight soak',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=80',
+    heroImage: '/images/recipes/sweet-mango-sticky-rice.jpg',
     intro:
         'The Vietnamese version of mango sticky rice is lighter and less sugary than its Thai cousin, often finished with a scatter of steamed mung bean and toasted sesame. The magic is in the contrast — cold ripe mango against warm, just-cooked rice soaked in salted coconut cream.',
     ingredientSections: [

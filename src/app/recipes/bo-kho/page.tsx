@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs 30 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1604908554027-1a23a96d6b28?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bo-kho.jpg',
     intro: 'Bo kho is what every Saigon family makes on a Sunday morning when they have time. The beef goes into the pot at 8am with lemongrass, star anise, ginger and a splash of coconut water; by 10am the kitchen smells of a small festival, and by 11am everyone is at the table tearing crusty banh mi to dip in the rust-red broth. Eaten with bread, with rice noodles, or simply over rice — bo kho is the rare Vietnamese dish that can be all three meals of the day, and most often is.',
     ingredientSections: [
         {

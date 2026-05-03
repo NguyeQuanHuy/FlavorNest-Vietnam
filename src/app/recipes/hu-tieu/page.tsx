@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hu-tieu.jpg',
     intro: 'Hu tieu is the Southern Vietnamese answer to pho — and it could not be more different. Where pho is brooding and cinnamon-deep, hu tieu is bright, clean, almost translucent. The broth is built on pork bones and dried squid (or dried shrimp), giving it a faint sweetness of the sea. The noodles are slim, springy rice strands. The toppings are generous: shrimp, sliced pork loin, ground pork, quail eggs, crispy fried garlic. Eaten "nuoc" (in soup) or "kho" (dry, with the broth on the side) — the choice is a small local identity test. Each Mekong town has its own version.',
     ingredientSections: [
         {

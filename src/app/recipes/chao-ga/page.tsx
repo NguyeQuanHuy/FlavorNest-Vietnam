@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/chao-ga.jpg',
     intro: 'Chao ga is the soup every Vietnamese mother makes when someone has a cold — and the soup that proves she was right. The rice is toasted briefly to deepen the flavour, then simmered low and slow with a whole chicken until the grains break down into something between a porridge and a soup. The chicken is pulled, shredded, and returned at the end. Finished with fried shallots, spring onion, a handful of fresh herbs and a violent crack of black pepper. Served with a small saucer of fish sauce mixed with fresh chilli for dipping the chicken pieces.',
     ingredientSections: [
         {

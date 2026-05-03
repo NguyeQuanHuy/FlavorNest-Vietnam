@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: '/images/recipes/che-buoi-mien-nam.jpg',
+    heroImage: '/images/recipes/che-buoi.jpg',
     intro: 'Che buoi is one of those Vietnamese desserts that demonstrates how a culture transforms scarcity into beauty. The bitter white pith of a pomelo — the part everyone else discards — is washed, salted, and squeezed obsessively for an hour to remove every trace of bitterness. Then it is dredged in tapioca starch and boiled until the squares turn translucent and glassy, with a slight crunch that no other dessert in the world has. Combined with soft yellow mung beans in a thick coconut soup, this is a Southern Vietnamese masterpiece of patience.',
     ingredientSections: [
         {

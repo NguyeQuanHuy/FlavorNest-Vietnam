@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/goi-cuon.jpg',
     intro: `Goi cuon is the anti-spring-roll — no frying, no heat, no grease. Fresh prawns, sliced pork, rice vermicelli, lettuce, and Vietnamese herbs wrapped tightly in a translucent rice paper sheet until you can see every layer inside. Dipped in hoisin-peanut sauce, each roll is cool, clean, and refreshing in a way that feels almost medicinal in the Saigon heat. They are assembled at the table, eaten immediately, and impossible to eat just one of.`,
     ingredientSections: [
         {

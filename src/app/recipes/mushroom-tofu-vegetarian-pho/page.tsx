@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.7,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1585103228236-9b6fdce30f21?w=1600&q=80',
+    heroImage: '/images/recipes/mushroom-tofu-vegetarian-pho.jpg',
     intro:
         'Phở chay is not pho with the meat removed — it is its own tradition, refined over centuries in the Buddhist kitchens of Huế and Đà Lạt. Three mushrooms stand in for bones and brisket: shiitake for depth, king oyster for texture, straw mushrooms for softness. The spice profile stays pure pho.',
     ingredientSections: [

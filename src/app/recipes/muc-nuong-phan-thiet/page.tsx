@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '25 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1533630846283-6878262f489b?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/muc-nuong-phan-thiet.jpg',
     intro: 'In Phan Thiet, fishermen come back at dawn and grill the morning catch right on the beach — squid scored on a board, brushed with fish sauce caramel, and laid on a metal grate over smouldering coconut husks. The husks burn slowly and impart a faint sweet smoke that gas can never replicate. Within four minutes the tentacles curl, the body blisters, and the coastal town wakes up to that smell. There is no marinade, no preparation, almost no recipe. There is the squid, the salt, the smoke, and the sea two metres away.',
     ingredientSections: [
         {

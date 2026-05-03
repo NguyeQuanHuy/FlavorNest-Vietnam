@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '35 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-thit-nuong.jpg',
     intro: `Bun thit nuong is Saigon's definitive weekday lunch. Unlike pho or bun bo Hue, there is no broth to babysit, no bones to simmer for hours. Cold rice vermicelli, chargrilled lemongrass pork, a crispy spring roll cut in half, crushed peanuts, pickled vegetables, fresh mint, bean sprouts, and a flood of nuoc cham poured over everything at the table. You mix it yourself. It is bright, textural, and satisfying in a way that feels effortless.`,
     ingredientSections: [
         {

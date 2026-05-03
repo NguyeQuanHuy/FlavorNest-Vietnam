@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-xeo.jpg',
     intro: `Banh xeo — the name is onomatopoeia for the sound the batter makes hitting the hot pan. A giant turmeric-yellow crepe, crispy at the edges and stuffed with shrimp, pork belly, and bean sprouts. You do not eat it with a fork. You break it apart with your hands, wrap each piece in a mustard leaf with fresh herbs, and dip into nuoc cham. The eating is as important as the cooking.`,
     ingredientSections: [
         {

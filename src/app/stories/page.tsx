@@ -54,7 +54,7 @@ export const STORIES: Story[] = [
         title: "Secrets of the South: Banh Xeo",
         subtitle: 'Sizzling Vietnamese Pancake',
         excerpt: 'The name itself is the recipe. "Xèo" — that violent, joyful sizzle as rice batter meets a white-hot pan.',
-        image: '/images/recipes/banh-xeo.jpg',
+        image: '/images/recipes/banh-xeo-mien-trung.jpg',
         imageAlt: 'Banh Xeo',
         tag: 'Saigon Street Food',
         tagColor: 'forest',

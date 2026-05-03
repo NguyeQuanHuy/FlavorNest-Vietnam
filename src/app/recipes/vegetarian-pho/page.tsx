@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 20 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1555126634-323283e090sa?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/vegetarian-pho.jpg',
     intro: `The pho spice bundle — star anise, cinnamon, cloves, cardamom, charred ginger — is what makes pho taste like pho, not the beef. This version builds its broth on mushroom and kombu dashi, adds miso for depth, and delivers a bowl that is genuinely extraordinary on its own terms. Not a compromise. An alternative.`,
     ingredientSections: [
         {

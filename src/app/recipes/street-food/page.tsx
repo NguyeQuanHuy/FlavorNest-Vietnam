@@ -63,7 +63,7 @@ const RECIPES: Recipe[] = [
         slug: 'goi-cuon',
         title: 'Fresh Rice Paper Rolls',
         subtitle: 'Goi cuon tom thit',
-        image: '/images/recipes/goi-cuon.jpg',
+        image: '/images/recipes/goi-cuon-tom-thit.jpg',
         region: 'Southern', difficulty: 'Easy', time: '30 min',
         rating: '4.8', reviews: 298, cal: 220, tag: 'Light & Fresh', tagColor: '#0284C7',
         description: "Translucent rice paper wrapped around plump prawns, pork, rice vermicelli, lettuce and a tangle of fresh herbs. Dipped in hoisin-peanut sauce — clean, light and refreshing in the Saigon heat.",
@@ -73,7 +73,7 @@ const RECIPES: Recipe[] = [
         slug: 'banh-xeo',
         title: 'Sizzling Savoury Crêpe',
         subtitle: 'Banh xeo',
-        image: '/images/recipes/banh-xeo.jpg',
+        image: '/images/recipes/banh-xeo-1.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 263, cal: 380, tag: 'Must Try', tagColor: '#D97706',
         description: "Named for the sound it makes when batter hits a hot wok — a giant turmeric-yellow crêpe, crispy-edged and stuffed with shrimp, pork and bean sprouts. Broken apart by hand, wrapped in mustard leaf and dunked into nuoc cham.",
@@ -137,7 +137,7 @@ function saveFav(recipe: Recipe, add: boolean) {
             arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
         }
         localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch {}
+    } catch { }
 }
 
 function HeartBtn({ recipe }: { recipe: Recipe }) {
@@ -194,7 +194,7 @@ export default function StreetFoodPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-        {/* ── HERO ── */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>

@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1600&q=85',
+    heroImage: '/images/recipes/phu-yen-chives-noodle-soup.jpg',
     intro:
         'Bánh canh hẹ is the breakfast of Phú Yên, a fishing province on Vietnam\'s south-central coast. Unlike the more famous bánh canh cua of Saigon or bánh canh Trảng Bàng of Tây Ninh, the Phú Yên version is defined by two humble ingredients: dried anchovies (cá cơm khô) that lend the broth a whisper of the sea, and Vietnamese garlic chives (hẹ) sliced raw on top for a bright, pungent finish. Every Sunday morning my mother would start the broth before sunrise — pork bones, a handful of dried anchovies, and patience. By the time my siblings and I woke up, the kitchen smelled of the sea. She always said: "The chives go in last. Never cook them. They should still be alive when you taste them."',
     ingredientSections: [

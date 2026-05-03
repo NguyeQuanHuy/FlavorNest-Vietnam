@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1600&q=80',
+    heroImage: '/images/recipes/banh-mi-cha-ca.jpg',
     intro:
         'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
     ingredientSections: [

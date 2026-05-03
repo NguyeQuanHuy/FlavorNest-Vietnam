@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/chao-canh.jpg',
     intro: 'Chao canh is the breakfast of Quang Binh province — that narrow strip of Central Vietnam squeezed between the Truong Son mountains and the sea. The noodles are wheat, hand-rolled flat into rough rectangles by hand each morning, chewier and more rustic than industrial pasta. The broth is built on pork bones and dried shrimp, kept clear and gentle so the noodles can do the talking. It is the kind of regional dish that locals get protective about: every other province makes a version called chao canh, and Quang Binh will tell you politely that none of them are real.',
     ingredientSections: [
         {

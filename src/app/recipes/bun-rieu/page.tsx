@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1552611052-33e04de081de?w=1600&q=80',
+    heroImage: '/images/recipes/bun-rieu.jpg',
     intro:
         'Bún riêu is the Hanoi market lunch that makes a strong argument for freshwater crab. The rieu — those cloud-like rafts on the surface — are pure crab meat bound with egg, lifted by a broth soured with fermented rice vinegar and given its crimson colour by a splash of annatto oil. Every stall claims a different ratio of crab to tomato; the best ones taste of both in equal measure.',
     ingredientSections: [

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.7,
     baseServings: 1,
-    heroImage: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/tra-tac.jpg',
     intro: 'Tra tac is the drink that proves Saigonese street culture is alive. At sidewalk cafes from 4pm onwards, vendors pile small kumquats — peel and all — into a glass, crush them with a wooden pestle, drown them in cold strong jasmine tea, and top the whole thing with crushed ice. The bitter pith of the kumquat balances the sugar; the citrus oils float on the surface in tiny gold droplets. It is the drink of long arguments about football and slow Saturday afternoons.',
     ingredientSections: [
         {

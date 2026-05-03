@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 /**
  * FlavorNest Vietnam — Desserts Page
@@ -11,11 +11,11 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo, useEffect } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// --- Types --------------------------------------------------------------------
 type DessertType = 'All' | 'Traditional' | 'Chè' | 'Bánh' | 'Frozen' | 'Fusion'
 
 interface Dessert {
@@ -36,7 +36,7 @@ interface Dessert {
     isSignature?: boolean
 }
 
-// ─── Dessert Data ──────────────────────────────────────────────────────────────
+// --- Dessert Data --------------------------------------------------------------
 const DESSERTS: Dessert[] = [
     {
         slug: 'che-ba-mau',
@@ -58,7 +58,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-flan',
         name: 'Vietnamese Caramel Flan',
-        viet: 'Bánh Flan',
+        viet: 'bánh Flan',
         type: 'Fusion',
         image: '/images/recipes/banh-flan.jpg',
         description: 'Silky, trembling custard with a pool of dark caramel — a French inheritance that Vietnam made its own, often served over crushed ice.',
@@ -91,8 +91,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-chuoi-nuong',
         name: 'Baked Banana Cake',
-        viet: 'Bánh chuối nướng',
-        type: 'Bánh',
+        viet: 'Bánh Chuối Nướng',
+        type: 'bánh',
         image: '/images/recipes/banh-chuoi-nuong.jpg',
         description: 'Ripe bananas baked into a dense, aromatic coconut-milk custard until the top caramelises to a deep amber — the smell alone is worth making it.',
         story: 'Every Vietnamese grandmother has a version. None of them ever wrote it down. This is our best attempt to preserve it.',
@@ -157,8 +157,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-cam',
         name: 'Sesame Fried Dough Balls',
-        viet: 'Bánh Cam',
-        type: 'Bánh',
+        viet: 'bánh Cam',
+        type: 'bánh',
         image: '/images/recipes/banh-cam.jpg',
         description: 'Crispy golden spheres of glutinous rice, hollow inside with a heart of sweetened mung bean paste, rolled in sesame seeds and fried to order.',
         story: 'Bite through the sesame crust, through the crisp shell, and the mung bean filling releases like a warm secret.',
@@ -173,7 +173,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau',
         name: 'Sweet Mung Bean Soup',
-        viet: 'Chè Đậu Xanh',
+        viet: 'Ch? ??u Xanh',
         type: 'Traditional',
         image: '/images/recipes/che-dau-xanh.jpg',
         description: 'Split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with salted coconut cream.',
@@ -206,7 +206,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-buoi-mien-nam',
         name: 'Pomelo Peel Dessert',
-        viet: 'Chè Bưởi Miền Nam',
+        viet: 'Chè bưởi Miền Nam',
         type: 'Traditional',
         image: '/images/recipes/che-buoi-mien-nam.jpg',
         description: 'Crunchy, glass-like pomelo pith paired with soft mung beans in a thick, fragrant sweet soup.',
@@ -240,7 +240,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau-xanh',
         name: 'Mung Bean Sweet Soup',
-        viet: 'Chè Đậu Xanh',
+        viet: 'Ch? ??u Xanh',
         type: 'Chè',
         image: '/images/recipes/che-dau-xanh.jpg',
         description: 'A light and cooling dessert made from peeled mung beans, prized for its refreshing and detoxifying properties.',
@@ -312,7 +312,7 @@ const DESSERTS: Dessert[] = [
         type: 'Chè',
         image: '/images/recipes/che-sen.jpg',
         description: 'Pure, steamed lotus seeds in a crystal clear syrup, highlighting the natural earthy flavor of the seed.',
-        story: 'A zen-like experience in a bowl, capturing the essence of the lotus—Vietnam’s national flower.',
+        story: 'A zen-like experience in a bowl, capturing the essence of the lotus — Vietnams national flower.',
         prepTime: '20 min',
         cookTime: '40 min',
         totalTime: '1 hr',
@@ -393,7 +393,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-troi-nuoc-nhan-dau-xanh',
         name: 'Sticky Rice Balls in Ginger',
-        viet: 'Bánh Trôi Nước Nhân Đậu Xanh',
+        viet: 'Bánh Trôi Nước Nh?n ??u Xanh',
         type: 'Traditional',
         image: '/images/recipes/banh-troi-nuoc-nhan-dau-xanh.jpg',
         description: 'Glutinous rice balls filled with mung bean floating in a warm, spicy ginger and rock sugar syrup.',
@@ -412,7 +412,7 @@ const DESSERTS: Dessert[] = [
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 
-const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'Bánh', 'Frozen', 'Fusion']
+const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'bánh', 'Frozen', 'Fusion']
 
 const DIFF_COLOR: Record<string, string> = {
     Easy: '#059669',
@@ -422,13 +422,14 @@ const DIFF_COLOR: Record<string, string> = {
 
 const TYPE_COLOR: Record<string, string> = {
     Traditional: '#7C3AED',
-    Chè: '#0284C7',
-    Bánh: '#D97706',
+    'Chè': '#0284C7',
+    'Bánh': '#D97706',
     Frozen: '#0891B2',
     Fusion: '#BE185D',
 }
 
-// ─── Animation variants ───────────────────────────────────────────────────────
+
+// --- Animation variants -------------------------------------------------------
 const cardVariant = {
     hidden: { opacity: 0, y: 36 },
     show: (i: number) => ({
@@ -443,7 +444,7 @@ const heroLine = (delay: number) => ({
     show: { opacity: 1, y: 0, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay } },
 })
 
-// ─── Dessert Card ─────────────────────────────────────────────────────────────
+// --- Dessert Card -------------------------------------------------------------
 function DessertCard({ item, index }: { item: Dessert; index: number }) {
     const [hovered, setHovered] = useState(false)
 
@@ -472,7 +473,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                 onMouseLeave={() => setHovered(false)}
                 aria-label={`View recipe for ${item.name}`}
             >
-                {/* ── Image ── */}
+                {/* -- Image -- */}
                 <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#f5ede3' }}>
                     <Image
                         src={item.image}
@@ -497,7 +498,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                     {/* Signature badge */}
                     {item.isSignature && (
                         <div style={{ position: 'absolute', top: 14, left: 14, background: '#D97706', color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100 }}>
-                            ✦ Signature
+                            — Signature
                         </div>
                     )}
 
@@ -522,7 +523,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                     </div>
                 </div>
 
-                {/* ── Body ── */}
+                {/* -- Body -- */}
                 <div style={{ padding: '18px 20px 22px' }}>
                     {/* Story quote */}
                     <p style={{
@@ -586,9 +587,9 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                                 display: 'inline-block',
                                 transform: hovered ? 'translateX(5px)' : 'translateX(0)',
                                 transition: 'transform 0.22s ease',
-                            }}>→</span>
+                            }}>?</span>
                         </span>
-                        <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.3)', fontWeight: 500 }}>⏱ {item.totalTime}</span>
+                        <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.3)', fontWeight: 500 }}>? {item.totalTime}</span>
                     </div>
                 </div>
             </Link>
@@ -596,7 +597,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
     )
 }
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
+// --- Page ---------------------------------------------------------------------
 export default function DessertsPage() {
     const [activeType, setActiveType] = useState<DessertType>('All')
     const [diff, setDiff] = useState('All')
@@ -604,6 +605,7 @@ export default function DessertsPage() {
     const [query, setQuery] = useState('')
 
     const heroRef = useRef<HTMLElement>(null)
+
     const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
     const imgY = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])
     const textOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
@@ -642,7 +644,7 @@ export default function DessertsPage() {
         .search-input::placeholder { color: rgba(75,46,26,0.35); }
       `}</style>
 
-            {/* ── HERO ── */}
+            {/* -- HERO -- */}
             <section ref={heroRef} style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -650,7 +652,7 @@ export default function DessertsPage() {
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Desserts', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>?</span>}
                                 {href ?
                                     <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
@@ -692,7 +694,7 @@ export default function DessertsPage() {
                 </div>
             </section>
 
-            {/* ── FILTER BAR ── */}
+            {/* -- FILTER BAR -- */}
             <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
@@ -704,7 +706,7 @@ export default function DessertsPage() {
                 </div>
             </div>
 
-            {/* ── DESSERT GRID ──────────────────────────────────────────────────── */}
+            {/* -- DESSERT GRID ---------------------------------------------------- */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 40px 96px' }} aria-label="Dessert recipes grid">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -725,7 +727,7 @@ export default function DessertsPage() {
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                         style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}
                     >
-                        <div style={{ fontSize: 48, marginBottom: 14 }}>🍮</div>
+                        <div style={{ fontSize: 48, marginBottom: 14 }}>??</div>
                         <p style={{ fontSize: 17, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
                             No desserts match your search — yet.
                         </p>
@@ -739,7 +741,7 @@ export default function DessertsPage() {
                 )}
             </section>
 
-            {/* ── EXPLORE MORE CATEGORIES ───────────────────────────────────────── */}
+            {/* -- EXPLORE MORE CATEGORIES ----------------------------------------- */}
             <section style={{ background: '#2D1A0E', padding: '72px 40px 80px' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }}
@@ -755,12 +757,12 @@ export default function DessertsPage() {
                     </h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
                         {[
-                            { label: 'Breakfast', emoji: '🌅', href: '/recipes/breakfast', sub: 'Start the day right' },
-                            { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes', sub: 'The heart of the table' },
-                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food', sub: 'Sidewalk classics' },
-                            { label: 'Northern Cuisine', emoji: '🏯', href: '/recipes/north', sub: "Hanoi's finest" },
+                            { label: 'Breakfast', emoji: '??', href: '/recipes/breakfast', sub: 'Start the day right' },
+                            { label: 'Main Dishes', emoji: '??', href: '/recipes/main-dishes', sub: 'The heart of the table' },
+                            { label: 'Street Food', emoji: '??', href: '/recipes/street-food', sub: 'Sidewalk classics' },
+                            { label: 'Northern Cuisine', emoji: '??', href: '/recipes/north', sub: "Hanoi's finest" },
 
-                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel', sub: 'Where to eat in Vietnam' },
+                            { label: 'Travel Guide', emoji: '???', href: '/stories/travel', sub: 'Where to eat in Vietnam' },
                         ].map(item => (
                             <Link
                                 key={item.href} href={item.href}
@@ -780,7 +782,7 @@ export default function DessertsPage() {
     )
 }
 
-// ─── SEO Metadata (use in layout or as generateMetadata) ─────────────────────
+// --- SEO Metadata (use in layout or as generateMetadata) ---------------------
 export const dessertPageMetadata = {
     title: 'Vietnamese Desserts — Chè, Bánh & Sweet Traditions | FlavorNest Vietnam',
     description:
@@ -792,7 +794,7 @@ export const dessertPageMetadata = {
     ],
     openGraph: {
         title: 'Vietnamese Desserts | FlavorNest Vietnam',
-        description: '10+ authentic Vietnamese dessert recipes — chè, bánh, frozen treats and fusion sweets.',
+        description: '10+ authentic Vietnamese dessert recipes — Chè, Bánh, frozen treats and fusion sweets.',
         images: [{
             url: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&h=630&q=85',
             width: 1200, height: 630,

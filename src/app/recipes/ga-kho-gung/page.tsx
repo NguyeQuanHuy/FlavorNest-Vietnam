@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=1600&q=80',
+    heroImage: '/images/recipes/ga-kho-gung.jpg',
     intro:
         'Every Vietnamese mother has a ginger chicken in her repertoire — cheap, fast, and built entirely from ingredients already in the cupboard. In the North the ginger is more assertive; in the South a splash of coconut water rounds it out. Either way, it is the dish that turns a plain bowl of rice into dinner.',
     ingredientSections: [

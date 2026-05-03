@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-mi-thit-nuong.jpg',
     intro: `Banh mi thit nuong is the grilled pork version of Vietnam's most famous sandwich — smoky lemongrass pork against shatteringly crisp baguette, pate, pickled daikon, fresh coriander and sliced chilli. It costs almost nothing to make and tastes extraordinary. The French gave Vietnam the baguette in the 19th century. Vietnam improved it — a thinner, airier crust, a lighter crumb — and then filled it with things no French baker ever imagined.`,
     ingredientSections: [
         {

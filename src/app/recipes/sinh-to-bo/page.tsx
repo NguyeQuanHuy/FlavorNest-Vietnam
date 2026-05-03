@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.8,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/sinh-to-bo.jpg',
     intro: 'In Vietnam, avocado is never put in salads or on toast. It is a fruit — sweet, fatty, and best blended with condensed milk and ice into the thickest, creamiest smoothie you have ever had. Sinh to bo is sold at juice stalls across Saigon from early afternoon, served in a tall glass so thick the straw stands upright. The colour is a deep, matte green. The flavour is pure richness.',
     ingredientSections: [
         {

@@ -11,8 +11,7 @@ const recipe: RecipeData = {
     totalTime: '8 hrs',
     rating: 4.9,
     baseServings: 4,
-    heroImage:
-        '/images/recipes/sua-chua-nep-cam.jpg',
+    heroImage: '/images/recipes/sua-chua-nep-cam.jpg',
     intro:
         'Sữa chua nếp cẩm is Hanoi\'s most elegant street dessert — a small glass of homemade yoghurt topped with warm, wine-dark sticky rice cooked in coconut milk. The contrast between cold tangy yoghurt and warm fragrant rice is one of those combinations that feels inevitable once you taste it. The black glutinous rice (nếp cẩm) turns a deep burgundy-purple when cooked, bleeding beautifully into the white yoghurt beneath. It is slow food — the yoghurt needs hours to set — but almost entirely hands-off.',
     ingredientSections: [

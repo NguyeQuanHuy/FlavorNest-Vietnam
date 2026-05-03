@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '15 min',
     rating: 4.9,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/ca-phe-trung.jpg',
     intro: 'In 1946, fresh milk was rationed in Hanoi. Nguyen Van Giang, a bartender at the Sofitel Metropole, replaced it with whipped egg yolks beaten with condensed milk into a silky, custard-like foam. He spooned it over strong robusta coffee. Eighty years later, his son still runs the same recipe at Giang Cafe on Hang Gai street. The drink is extraordinary — the foam sits warm and weightless on the coffee like a cloud, sweet and rich, while the dark robusta cuts through from beneath. You drink it slowly, with a small spoon.',
     ingredientSections: [
         {

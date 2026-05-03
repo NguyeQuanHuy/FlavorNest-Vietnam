@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/xoi-xeo.jpg',
     intro: 'Xoi xeo is sold from early morning by vendors carrying wooden crates through Hanoi alleys, each portion wrapped in a banana leaf square. The sticky rice is dyed golden with turmeric, steamed until glossy, and topped with a thick layer of steamed split mung bean paste and a generous shower of crispy fried shallots. A drizzle of shallot-infused oil brings everything together. It is simultaneously a breakfast, a snack, a comfort food, and a cultural artefact.',
     ingredientSections: [
         {

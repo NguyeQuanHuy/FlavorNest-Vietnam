@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/grilled-lemongrass-pork.jpg',
     intro: `Suon nuong xa is the pork chop of Saigon's com tam stalls — marinated overnight in lemongrass, fish sauce, garlic, and five-spice, then grilled over charcoal until the exterior is deeply caramelised and the edges char. The lemongrass perfumes the meat throughout rather than just coating the surface. Served over broken rice with a fried egg and nuoc cham, it is one of the definitive tastes of the city.`,
     ingredientSections: [
         {

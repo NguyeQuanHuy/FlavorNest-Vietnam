@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs 15 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/vietnamese-chicken-pho.jpg',
     intro: `Pho ga became widely popular in Hanoi during periods of meat scarcity in the twentieth century, when beef was expensive and chicken was what the home cook had. What began as a pragmatic substitution became a dish beloved on its own terms. The broth is golden, the spice profile softer than beef pho, and the whole thing comes together in a fraction of the time.`,
     ingredientSections: [
         {

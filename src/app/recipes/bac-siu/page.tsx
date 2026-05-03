@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.8,
     baseServings: 1,
-    heroImage: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bac-siu.jpg',
     intro: 'Bac siu literally means "a little white" in Cantonese — and that is exactly what it is. A small shot of strong robusta over a generous lake of sweetened condensed milk and fresh milk, served over ice. The Saigonese drink it when they want coffee but mostly want milk; the elderly drink it because it is gentle; office workers drink it at 3pm when a full ca phe sua da would keep them awake until midnight. The proportions are inverted from the morning coffee — milk first, coffee second.',
     ingredientSections: [
         {

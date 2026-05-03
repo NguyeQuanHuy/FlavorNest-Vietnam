@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '40 min + 4h marinade',
     rating: 4.9,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80',
+    heroImage: '/images/recipes/cha-ca-la-vong.jpg',
     intro:
         'Chả cá is the one dish that Hanoi has never let go of. Invented on Chả Cá Street during the French colonial period and jealously guarded by the same family for over 150 years, it is cooked twice: first grilled over charcoal, then finished tableside in a pan of dill and spring onion so abundant it looks like a floral arrangement. Eaten with vermicelli, roasted peanuts and a small dish of mắm tôm.',
     ingredientSections: [

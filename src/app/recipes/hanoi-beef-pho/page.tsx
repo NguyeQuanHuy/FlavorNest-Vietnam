@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '3 hrs 20 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hanoi-beef-pho.jpg',
     intro: 'Pho bo Ha Noi is the dish Vietnam is known for everywhere in the world, and for good reason. The broth is a study in restraint — bones charred over open flame, ginger and onion blackened until sweet, a muslin bag of star anise, cinnamon, cloves, cardamom, and coriander seed simmered for three hours until the stock runs crystal clear and deeply savoury. The noodles are flat and silky. The beef is sliced paper-thin and added raw to the bowl, cooked only by the heat of the broth poured over at service. Every family has a version. This one leans Hanoi — clean, unfussy, and correct.',
     ingredientSections: [
         {

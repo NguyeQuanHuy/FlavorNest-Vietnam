@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-beo.jpg',
     intro: 'Banh beo is the quintessential Hue snack — a city obsessed with small, refined, intensely flavoured bites eaten over long afternoon conversations. Each rice cake is steamed in its own tiny clay saucer until set into a thin, silky disc. The topping is minimal by design: dried shrimp powder, crispy pork cracklings, a drizzle of scallion oil, and a spoonful of sweet fish sauce. You eat a dozen without thinking. That is the point.',
     ingredientSections: [
         {

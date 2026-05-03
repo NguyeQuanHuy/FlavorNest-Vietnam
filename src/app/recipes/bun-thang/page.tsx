@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-thang.jpg',
     intro: 'Bun thang is the aristocrat of Hanoi noodle soups. Born from the tradition of cooking lavish post-Tet meals with leftover chicken and cha lua, it evolved into one of the most technically demanding dishes in the Northern canon. The broth must be completely clear and deeply complex — built on chicken, dried shrimp, and dried squid. The toppings are sliced with the precision of a surgeon: egg ribbons cut to the width of the noodles, shredded chicken teased into individual strands, paper-thin cha lua. To eat bun thang properly requires the same patience it takes to make it.',
     ingredientSections: [
         {

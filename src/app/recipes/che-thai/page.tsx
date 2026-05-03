@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        '/images/recipes/che-thai.jpg',
+    heroImage: '/images/recipes/che-thai.jpg',
     intro:
         'Despite the name, chè Thái is entirely Vietnamese in spirit — a Southern invention that borrowed Thai ingredients (jackfruit, palm seeds) and made them its own. It is the most maximalist dessert in the Vietnamese repertoire: seven or eight components piled into a bowl, united only by sweetened coconut milk and crushed ice. Every stall has its own version. Every family argues about which components are essential. This recipe settles nothing and includes everything.',
     ingredientSections: [

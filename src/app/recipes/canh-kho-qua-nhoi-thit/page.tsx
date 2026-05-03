@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.6,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1547592180-85f173990554?w=1600&q=80',
+    heroImage: '/images/recipes/canh-kho-qua-nhoi-thit.jpg',
     intro:
         'The name khổ qua literally means "bitterness passes." This is why it lands on the Southern Tết table every year — an edible prayer that the hardships of the previous twelve months leave with the old year. The bitterness is real, but it softens in the broth, and the pork filling brings sweetness that balances the whole bowl. A dish that tastes like symbolism and comfort in equal parts.',
     ingredientSections: [

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/com-chien-hai-san.jpg',
     intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and more shattering, the crumb lighter, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon, fresh coriander, sliced chilli, and Maggi seasoning sauce. The result is one of the greatest street foods on earth.`,
     ingredientSections: [
         {

@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.5,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1600&q=80',
+    heroImage: '/images/recipes/canh-thit-bam.jpg',
     intro:
         'Canh thịt băm is the soup Vietnamese mothers make when they want something easy, comforting, and respectful of a small budget. It rarely makes it into cookbooks, and yet it probably appears on more Vietnamese dinner tables than any celebrated pho or bún. Unshowy, deeply home-cooking, and proof that the quietest dishes are often the ones that define a cuisine.',
     ingredientSections: [

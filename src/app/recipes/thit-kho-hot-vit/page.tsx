@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '90 min',
     rating: 4.9,
     baseServings: 6,
-    heroImage:
-        'https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=1600&q=80',
+    heroImage: '/images/recipes/thit-kho-hot-vit.jpg',
     intro:
         'Thịt Kho Hột Vịt is the undisputed soul of Southern Vietnamese home cooking. More than just a stew, it is a symbol of family reunion and prosperity, traditionally prepared in large pots during the Lunar New Year (Tet). The magic lies in the slow braise with fresh coconut water, which transforms the pork fat into a buttery, translucent texture and gives the sauce a natural, delicate sweetness that no sugar can replicate.',
     ingredientSections: [

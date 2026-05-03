@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/mi-quang.jpg',
     intro: 'Mi Quang defies easy categorisation. It is not a soup — there is barely enough broth to wet the noodles. It is not a dry noodle dish — the broth is essential, rich with pork and shrimp fat. The wide turmeric-yellow noodles sit in a shallow pool of intensely savoury broth, topped with shrimp, pork belly, quail eggs, toasted peanuts, and sesame rice crackers that shatter when you mix everything together. It is loud, textural, and deeply satisfying.',
     ingredientSections: [
         {

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-duc.jpg',
     intro: 'Banh duc lives two lives in Hanoi. Banh duc nong arrives in a small bowl, warm and almost custardy, draped with a savoury topping of minced pork, wood ear mushrooms and fried shallots, eaten with a spoon while it is still trembling. Banh duc lac is its older, country cousin — a firm chilled rice cake studded with peanuts, cut into chunks and dipped in tuong, the ancient Northern fermented soybean sauce. Both are humble, both are beloved, and both taste unmistakably of 1950s Hanoi.',
     ingredientSections: [
         {

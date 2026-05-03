@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/sam-bo-luong.jpg',
     intro: 'Sam bo luong is the drink Vietnamese families turn to when the body "runs hot" — too much sun, too much spicy food, too many fried things at a wedding. A medicinal Cantonese-Vietnamese tonic, it combines lotus seeds, dried longan, white wood ear fungus, dried jujube, pearl barley, sea coconut and seaweed in a faintly sweet rock-sugar broth, served chilled with shaved ice. Each ingredient has a traditional cooling property; together they make a drink that is genuinely refreshing, surprisingly herbal, and unlike anything in Western beverage culture.',
     ingredientSections: [
         {

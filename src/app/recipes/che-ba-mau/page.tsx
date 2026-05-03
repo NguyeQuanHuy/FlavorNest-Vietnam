@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '50 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        '/images/recipes/che-ba-mau.jpg',
+    heroImage: '/images/recipes/che-ba-mau.jpg',
     intro:
         'Chè ba màu is Saigon\'s most photogenic street dessert — three distinct layers built in a glass like a sunset seen through sweetened condensed milk. The green comes from pandan jelly, the red from kidney bean or agar jelly, and the yellow from steamed split mung bean. Everything sits on a mound of crushed ice and is finished with a generous pour of coconut cream. It is not a complicated dessert. It is an honest one.',
     ingredientSections: [

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/sua-dau-nanh.jpg',
     intro: 'In Hanoi, the bicycle vendor with the glass bottles of soy milk arrives at your alley before dawn. The bottles are warm to the touch, the pandan leaves visible inside, and the lid is sealed with a twist of newspaper. By 9am she is sold out. Vietnamese soy milk is creamier than the supermarket version, faintly grassy from pandan, sweetened just enough to make it a drink rather than an ingredient. Drunk hot in winter and iced in summer, paired with a still-warm patongo (Vietnamese fried dough stick) for the full breakfast experience.',
     ingredientSections: [
         {

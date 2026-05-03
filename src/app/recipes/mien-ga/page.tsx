@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/mien-ga.jpg',
     intro: 'Mien ga is what Hanoi quietly considers its best breakfast — light enough that you can keep working, deep enough that you remember it at lunch. The broth is built on a whole chicken simmered with charred ginger, then strained until crystal clear. The miến (glass noodles, made from mung bean starch) turn translucent in seconds. Topped with poached shredded chicken, wood ear mushrooms, fried shallots and a violent crack of black pepper. The Lunar New Year favourite when the whole family is tired of feast food.',
     ingredientSections: [
         {

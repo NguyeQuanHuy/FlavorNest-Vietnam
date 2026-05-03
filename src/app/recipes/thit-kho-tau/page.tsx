@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/thit-kho-tau.jpg',
     intro: `Thit kho tau is the dish every Vietnamese family makes for Tet and every other time the house needs to feel like home. Pork belly and hard-boiled eggs slow-braised in coconut water with fish sauce and caramel until the sauce reduces to a dark, glossy coating and the pork fat turns translucent and trembling. The eggs absorb the colour of the broth and take on a faint sweetness. It is eaten over steamed rice with a side of pickled mustard greens to cut the richness. No other dish in the Southern repertoire says family quite as loudly.`,
     ingredientSections: [
         {

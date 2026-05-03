@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 6,
-    heroImage: 'https://images.unsplash.com/photo-1621955964441-c173e01c135b?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/che-thap-cam.jpg',
     intro: 'Che buoi is the most labour-intensive dessert in this collection and the most rewarding. The white pith of a pomelo is soaked, squeezed, and coated in tapioca starch until each piece becomes a translucent, chewy pearl with a faintly bitter edge that cuts through the sweetness of pandan-scented coconut milk. It takes patience. The result is unlike any other Vietnamese dessert: subtle, textural, and quietly extraordinary.',
     ingredientSections: [
         {

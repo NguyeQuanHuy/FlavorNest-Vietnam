@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/xoi-xoai.jpg',
     intro: `Xoi xoai is the dessert that needs no introduction — sweet glutinous rice steamed with coconut milk, served alongside ripe mango slices, finished with a drizzle of salted coconut cream. Simple, seasonal, and universally loved across Southeast Asia. The key is perfectly ripe mango and the balance of sweet rice against the salty coconut topping.`,
     ingredientSections: [
         {

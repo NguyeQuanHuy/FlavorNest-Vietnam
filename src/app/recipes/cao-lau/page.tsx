@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/cao-lau.jpg',
     intro: 'Cao lau exists only in Hoi An. The legend holds that the noodles require water drawn from a specific ancient Cham well in the old town and ash from a particular wood to treat the dough. Whether or not you believe the legend, the dish is undeniably unique: thick, chewy noodles the colour of wheat, topped with slices of char siu-style roasted pork, crispy rice crackers, fresh herbs, and just enough broth to moisten everything. It is not a soup. It is barely sauced. It is its own category.',
     ingredientSections: [
         {

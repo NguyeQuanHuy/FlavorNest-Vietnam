@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '35 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/com-tam-saigon.jpg',
     intro: `Com tam means broken rice — the fractured grains left over after milling that were sold cheaply to those who could not afford whole rice. Saigon took this humble ingredient and built its most iconic dish around it. The broken grains have a slightly different texture to whole rice, absorbing sauces more readily and providing a softer, starchier base. The plate arrives loaded: a char-grilled pork chop, a fried egg, steamed pork cake (bi), scallion oil, and a pool of nuoc cham. The taste of Saigon at 7am.`,
     ingredientSections: [
         {

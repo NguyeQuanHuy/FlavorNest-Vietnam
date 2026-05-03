@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.6,
     baseServings: 4,
-    heroImage: '/images/recipes/che-dau-xanh.jpg',
+    heroImage: '/images/recipes/che-dau.jpg',
     intro: 'Che dau xanh is the dessert Vietnamese grandmothers make when someone is unwell, tired, or simply needs feeding. It is not showy. A pot of split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with a pour of salted coconut cream. The whole thing comes together in under an hour. Its power is entirely in its simplicity — clean, warm, and deeply satisfying in the way only honest food can be.',
     ingredientSections: [
         {

@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '15 min',
     rating: 4.6,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=1600&q=80',
+    heroImage: '/images/recipes/com-rang-trung.jpg',
     intro: 'Egg fried rice is the ultimate test of a home cook’s patience with a wok. In Vietnam, it’s often made with leftover rice from the night before, which has dried out just enough to achieve that perfect, bouncy texture. The secret lies in high heat and seasoned fish sauce that caramelizes against the grains.',
     ingredientSections: [
         {

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-dau-mam-tom.jpg',
     intro: 'Bun dau mam tom is the dish that separates the curious from the converted. The components are humble — vermicelli, fried tofu, boiled pork — but the heart of the dish is the small saucer of mam tom, a purple fermented shrimp paste whipped with lime, sugar, kumquat and a splash of hot oil until it foams pink and pale. The smell is uncompromising. The taste, after the third dip, is genuinely addictive. Hanoi at its most unapologetic, traditionally eaten on small plastic stools at noon with a glass of bia hoi.',
     ingredientSections: [
         {

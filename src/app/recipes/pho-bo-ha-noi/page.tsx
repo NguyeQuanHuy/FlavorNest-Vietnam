@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '3 hrs 20 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/pho-bo-ha-noi.jpg',
     intro: `There is a particular kind of silence in Hanoi at five in the morning. The Old Quarter has not woken yet, the motorbikes have not started, and the only sound drifting through the alleyways is the low, steady bubble of a pho pot that has been simmering since midnight. This is where pho begins — not with the recipe, but with the ritual. A crystal-clear bone broth perfumed with charred ginger, star anise and cinnamon. Silky flat noodles. Paper-thin beef added raw and cooked only by the boiling broth poured over at the table. Nothing more. Nothing less.`,
     ingredientSections: [
         {

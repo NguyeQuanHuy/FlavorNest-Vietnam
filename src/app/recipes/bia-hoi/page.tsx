@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '5 min',
     rating: 4.8,
     baseServings: 1,
-    heroImage: 'https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bia-hoi.jpg',
     intro: 'Bia hoi is not really a recipe — it is a ritual. A light fresh-brewed draft beer (around 3% ABV) is delivered daily by motorbike to corner kegs across Hanoi, served on plastic stools on the sidewalk and poured into thick handled glass mugs. It costs around 8,000 to 12,000 VND (about 30 cents) and must be drunk the same day or it goes flat. This page is less a recipe than a guide to ordering and pairing it properly — bia hoi is rarely brewed at home and almost never tastes the same in a bottle. The real recipe is knowing where to sit and what to order alongside.',
     ingredientSections: [
         {

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-xeo-mien-trung.jpg',
     intro: 'The name means sizzling cake — named after the violent hiss the batter makes when it hits the hot pan. Central Vietnamese banh xeo is different from the giant Southern version: smaller, thinner, crispier, and more intensely flavoured. Less batter, more heat, a shorter cook time. The filling is simple — shrimp, pork belly, and bean sprouts — but the technique is everything. You eat it broken into pieces, wrapped in mustard leaf with fresh herbs, then dipped in a nuoc cham that cuts through the richness.',
     ingredientSections: [
         {

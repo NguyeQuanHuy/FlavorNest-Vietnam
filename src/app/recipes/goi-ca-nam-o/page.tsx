@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/goi-ca-nam-o.jpg',
     intro: 'Nam O is a small fishing village on the outskirts of Da Nang, and goi ca Nam O is its single most famous export. Fresh herring or anchovy is filleted within hours of being landed, sliced paper-thin, and tossed with toasted rice powder until each piece is coated in a fragrant pale dust. The fish is not technically cooked — but the rice powder dries the surface and the lime juice in the sauce does the rest. Wrapped in rice paper with green banana, star fruit, fresh herbs and the village mam nem (fermented anchovy sauce thickened with peanut and pineapple), it is one of those dishes that exists nowhere else in the world.',
     ingredientSections: [
         {

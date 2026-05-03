@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hu-tieu-nam-vang.jpg',
     intro: `Hu tieu Nam Vang arrived in Saigon with the Teochew Chinese community from Phnom Penh in the mid-20th century and never left. The broth is lighter and sweeter than pho — built on pork bones and dried squid, seasoned with fish sauce and rock sugar into something clean and slightly marine. The noodles can be flat rice noodles or thin egg noodles. The toppings are generous: minced pork, sliced pork, whole prawns, and a poached egg. The dish can be served as a soup or "kho" — dry, with the broth on the side for dipping.`,
     ingredientSections: [
         {

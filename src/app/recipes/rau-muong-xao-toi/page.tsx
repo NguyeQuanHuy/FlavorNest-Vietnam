@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1600&q=80',
+    heroImage: '/images/recipes/rau-muong-xao-toi.jpg',
     intro:
         'If Vietnam had a national vegetable, it would be rau muống. The trick with this stir-fry is not the ingredient list — it is the heat. A cold wok gives you soggy, grey-green stems; a screaming wok gives you what you want: stems that still snap, leaves that are just wilted, and the unmistakable smell of garlic meeting fish sauce over fire.',
     ingredientSections: [

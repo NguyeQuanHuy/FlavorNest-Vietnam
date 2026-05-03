@@ -11,7 +11,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -294,7 +294,9 @@ export default function TravelGuidePage() {
     const [foodType, setFoodType] = useState<FoodType>('All')
 
     const heroRef = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => { setMounted(true) }, [])
+    const { scrollYProgress } = useScroll({ target: mounted ? heroRef : undefined, offset: ['start start', 'end start'] })
     const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
     const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
 

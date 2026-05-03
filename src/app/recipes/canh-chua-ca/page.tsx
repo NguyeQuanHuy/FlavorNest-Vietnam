@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?w=1600&q=80',
+    heroImage: '/images/recipes/canh-chua-ca.jpg',
     intro:
         'Canh chua is the Mekong Delta\'s signature — a soup built on paradox. Sour and sweet at once, hot and cooling, humble ingredients made fragrant by a single herb no one outside Vietnam seems to know: rau om, rice paddy herb. It is the soup that turns an ordinary weekday dinner into a proper meal.',
     ingredientSections: [

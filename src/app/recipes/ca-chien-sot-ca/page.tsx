@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '30 min',
     rating: 4.6,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=1600&q=80',
+    heroImage: '/images/recipes/ca-chien-sot-ca.jpg',
     intro:
         'Cá sốt cà is the quiet hero of the Northern home kitchen — the kind of dish you never see in restaurants because every grandmother already makes it on a Tuesday. The contrast is everything: shattering-crisp skin against the bright, almost Italian-feeling tomato sauce, both cooled by a final shower of fresh dill.',
     ingredientSections: [

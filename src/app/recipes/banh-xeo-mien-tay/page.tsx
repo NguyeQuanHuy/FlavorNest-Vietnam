@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-xeo-mien-tay.jpg',
     intro: `Banh xeo mien Tay — the Mekong Delta version of the sizzling crepe — is a different beast from its Central Vietnamese cousin. Where the Central version is small and refined, this one is enormous, filling an entire 30cm pan, the batter thick enough with coconut milk to puff and blister into a crispy, golden shell. The filling is generous: fat prawns, sliced pork belly, bean sprouts, and spring onions. You eat it by tearing off pieces with your hands, wrapping them in mustard leaf with fresh herbs, and dipping in nuoc cham.`,
     ingredientSections: [
         {

@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '30 min',
     rating: 4.6,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/nuoc-sam.jpg',
     intro: 'Nuoc sam is Vietnamese traditional medicine you actually want to drink. A blend of cooling herbs and roots — cogon grass root, chrysanthemum, dried longan, pandan, and water chestnuts — simmered together and sweetened lightly with rock sugar. Vietnamese families make this throughout summer to "giai nhiet" — cool the internal body heat. Whether or not you believe in the medicine, the drink itself is extraordinary: complex, faintly floral, earthy, and deeply refreshing cold.',
     ingredientSections: [
         {

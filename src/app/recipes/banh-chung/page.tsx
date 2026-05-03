@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '12 hrs',
     rating: 4.9,
     baseServings: 8,
-    heroImage: 'https://images.unsplash.com/photo-1612392062798-2e8b9b6e2cfb?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-chung.jpg',
     intro: 'Banh chung is more than food. The legend tells of Prince Lang Lieu, the eighteenth son of the Hung King, who in the 4th century BCE created this square cake to symbolise the earth and was crowned for it. Four thousand years later, every Vietnamese family north of Hue still makes banh chung at Tet — sometimes wrapping them on Lunar New Year Eve, then sitting around a wood fire all night to boil them. The square shape is the earth; the green colour, the trees; the rice, the harvest; the pork, prosperity. It is the dish that anchors a national identity to a single block of glutinous rice.',
     ingredientSections: [
         {

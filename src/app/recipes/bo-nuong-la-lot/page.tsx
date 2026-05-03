@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=80',
+    heroImage: '/images/recipes/bo-nuong-la-lot.jpg',
     intro:
         'Lá lốt is not the same plant as betel leaf (though everyone calls it that in English) — it is a wild piper relative with a distinct, peppery-woody perfume that only wakes up over direct flame. This is a party dish: made in batches, eaten with your hands, wrapped in rice paper with so many herbs and pickles you forget about the plate altogether.',
     ingredientSections: [

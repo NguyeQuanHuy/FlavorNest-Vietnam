@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.8,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/ca-phe-muoi.jpg',
     intro: 'Ca phe muoi comes from Hue, Vietnam\'s former imperial capital — a city known for its refined, complex food culture. The concept is simple: strong coffee topped with a lightly salted whipped cream foam. The salt does something remarkable to the sweetness of the cream and the bitterness of the coffee, creating a harmony that is greater than the sum of its parts. It has become one of Vietnam\'s most-photographed drinks and for good reason.',
     ingredientSections: [
         {

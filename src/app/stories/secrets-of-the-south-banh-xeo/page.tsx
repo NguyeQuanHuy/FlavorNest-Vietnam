@@ -2,12 +2,14 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 export default function SecretsOfTheSouthBanhXeoPage() {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => { setMounted(true); }, []);
     const { scrollYProgress } = useScroll({
-        target: scrollRef,
+        target: mounted ? scrollRef : undefined,
         offset: ['start start', 'end end'],
     });
 

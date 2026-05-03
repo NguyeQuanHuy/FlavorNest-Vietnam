@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '35 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1625398407937-2993c7d2b33b?w=1600&q=80',
+    heroImage: '/images/recipes/thit-rang-chay-canh.jpg',
     intro:
         'Cháy cạnh means "burnt edges," and the burnt edges are the whole reason this dish exists. Pork belly is simmered briefly, then slow-fried in its own rendered fat until the cubes shrink, crack, and develop a mahogany-black crust that shatters under a chopstick. Served with white rice and a bowl of hot clear soup — no vegetable needed, no apology offered.',
     ingredientSections: [

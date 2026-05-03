@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/lau-thai.jpg',
     intro: `Lau Thai is Vietnam's adopted version of Thai hot pot — a communal pot of intensely aromatic broth set in the centre of the table, kept at a rolling simmer, into which everyone dunks raw seafood, vegetables, mushrooms, and noodles at their own pace. The broth is built on lemongrass, galangal, kaffir lime leaves, tomato, and pineapple — sour, spicy, and deeply fragrant. It is not a weeknight dish. It is a reason to call friends over.`,
     ingredientSections: [
         {

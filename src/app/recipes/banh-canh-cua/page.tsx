@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.7,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=1600&q=80',
+    heroImage: '/images/recipes/banh-canh-cua.jpg',
     intro:
         'Bánh canh cua is the noodle dish Saigon reaches for when the rain comes down sideways. The broth is thickened to a near-gravy with tapioca slurry and stained orange with crab fat; the noodles themselves are slippery, chewy logs that refuse to stay on chopsticks. Every mouthful is rich, briny and unapologetically filling.',
     ingredientSections: [

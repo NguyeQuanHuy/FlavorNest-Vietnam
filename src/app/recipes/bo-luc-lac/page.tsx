@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '25 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bo-luc-lac.jpg',
     intro: `Bo luc lac — shaking beef — gets its name from the tossing motion used to cook it: the wok is shaken vigorously over high heat to tumble the beef cubes, building a crust on all sides without overcooking the centre. The technique is Chinese; the flavours are Vietnamese with a French accent. Butter, oyster sauce, and garlic. The beef is served on a bed of watercress dressed with lime juice and thinly sliced onion, with a small dish of lime and black pepper salt for dipping. It is one of the fastest impressive meals in Vietnamese cooking.`,
     ingredientSections: [
         {

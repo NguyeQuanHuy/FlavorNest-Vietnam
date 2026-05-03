@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { BookOpen, Sparkles } from 'lucide-react'
 import { useRef } from 'react'
 import { recipes } from '@/data/recipes'
@@ -21,9 +21,6 @@ const item = {
 
 export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
     const ref = useRef<HTMLElement>(null)
-    const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-    const imgY = useTransform(scrollYProgress, [0, 1], ['0%', '28%'])
-    const textY = useTransform(scrollYProgress, [0, 1], ['0%', '14%'])
 
     const count = recipeCount ?? recipes.length
 
@@ -39,7 +36,7 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
             className="relative flex items-center min-h-screen overflow-hidden"
             aria-label="Hero – FlavorNest Vietnam"
         >
-            <motion.div style={{ y: imgY }} className="absolute inset-0 scale-110 will-change-transform">
+            <motion.div className="absolute inset-0 scale-110 will-change-transform">
                 <Image
                     src="/hero-bg.jpg"
                     alt="A stunning spread of authentic Vietnamese dishes — pho, banh mi, spring rolls and more"
@@ -84,7 +81,6 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
             </motion.div>
 
             <motion.div
-                style={{ y: textY }}
                 className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20"
             >
                 <div className="max-w-3xl">

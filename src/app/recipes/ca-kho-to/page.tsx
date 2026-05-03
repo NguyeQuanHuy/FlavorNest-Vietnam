@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/ca-kho-to.jpg',
     intro: `Ca kho to is the everyday fish dish of the Mekong Delta, where catfish swim in every canal and every household keeps a clay pot for braising. The technique is the same as thit kho — caramel, fish sauce, coconut water — but applied to fish, which cooks faster and absorbs the dark, intense sauce differently. The clay pot retains heat and arrives at the table still bubbling. You eat it with plain steamed rice and let the sauce do all the work.`,
     ingredientSections: [
         {

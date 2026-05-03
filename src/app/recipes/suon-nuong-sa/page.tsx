@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '30 min + overnight marinade',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1558030137-a56c1b004fa3?w=1600&q=80',
+    heroImage: '/images/recipes/suon-nuong-sa.jpg',
     intro:
         'Walk past any cơm tấm stall in Saigon at 6pm and this is the smell that stops you — lemongrass hitting charcoal, sugar caramelising, pork fat rendering into smoke. The overnight marinade is non-negotiable; it is what carries the aromatics deep into the meat and what turns the edges that unmistakable mahogany black.',
     ingredientSections: [

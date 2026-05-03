@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '55 min',
     rating: 4.9,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/com-tam-suon-nuong.jpg',
     intro: `Com tam suon nuong is the rib version of Saigon's iconic broken rice plate — pork ribs marinated in lemongrass and fish sauce, grilled until lacquered and charred, served over broken jasmine rice with scallion oil, pickled vegetables, and a generous pour of nuoc cham. The ribs are the star.`,
     ingredientSections: [
         {

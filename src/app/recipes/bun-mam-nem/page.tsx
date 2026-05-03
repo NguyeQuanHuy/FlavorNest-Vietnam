@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-mam-nem.jpg',
     intro: 'Bun mam nem is the lunchtime answer in Da Nang. The components are simple — vermicelli, boiled pork belly, fried tofu, a pile of fresh herbs — but the entire dish hinges on the sauce. Mam nem is fermented anchovy at its most uncompromising, smoothed and brightened with grated pineapple, lime, garlic, sugar and chilli into something pungent and sweet and sour and spicy at the same time. Once you understand mam nem, every other dipping sauce in the world feels polite by comparison. Da Nang locals eat this 3 times a week without complaint.',
     ingredientSections: [
         {

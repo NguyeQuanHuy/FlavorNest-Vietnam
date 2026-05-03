@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1529692236671-f1f6e9481bfa?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/nem-lui.jpg',
     intro: 'Nem lui is a Hue royal court dish that escaped the palace and became the city street food everyone wraps with their hands. The lemongrass stalk is not a flavour — it is the skewer itself, perfuming the seasoned pork from the inside as it grills. What makes nem lui Hue different from every other Vietnamese pork skewer is the dipping sauce: a thick, glossy, golden-orange sauce built on roasted peanut butter, sesame, fermented bean paste and a small amount of pork liver. Each guest wraps the hot skewer in rice paper with green banana, star fruit, herbs and pickles, then dunks. The first wrap is awkward. The fifth is muscle memory.',
     ingredientSections: [
         {

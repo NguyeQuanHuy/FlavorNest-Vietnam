@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 20 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-rieu-cua.jpg',
     intro: `If pho is the meditative monk of Vietnamese soups — patient, restrained — then bun rieu cua is its loud, joyful, market-day cousin. Vivid scarlet from fresh tomatoes and annatto oil, built on a pork and crab broth, with fluffy crab-and-pork dumplings that bloom in the simmering liquid. A mountain of herbs, tofu, and shrimp paste on the side. It announces itself before you see it.`,
     ingredientSections: [
         {

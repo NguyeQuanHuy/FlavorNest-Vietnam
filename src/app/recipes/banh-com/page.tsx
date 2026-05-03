@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 12,
-    heroImage: 'https://images.unsplash.com/photo-1565299543923-37dd37887442?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-com.jpg',
     intro: 'Banh com is a Hanoi autumn ritual. When the new harvest of com — young glutinous rice grains, beaten flat in mortars, dyed pale green from a wild jungle leaf — arrives from Vong village in the suburbs, the city celebrates with banh com. Each one is the size of a matchbox: a delicate green wrapper of fresh com pressed around a sweet mung bean filling perfumed with pomelo flower water, then bound in banana leaves the colour of a deeper green. Traditionally given as wedding gifts and offered at engagement ceremonies, banh com is more memory than dessert.',
     ingredientSections: [
         {

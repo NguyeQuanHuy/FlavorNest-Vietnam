@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.9,
     baseServings: 1,
-    heroImage: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/ca-phe-sua-da.jpg',
     intro: 'Ca phe sua da is Vietnam distilled into a glass. Strong robusta coffee drips slowly through a phin filter onto a thick layer of sweetened condensed milk, then poured over ice. The ritual is part of the experience — the slow drip, the anticipation, then the stir and the first sip of something bitter, sweet, and cold all at once. It is the most ordered drink in the country and has been for decades.',
     ingredientSections: [
         {

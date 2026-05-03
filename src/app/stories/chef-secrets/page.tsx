@@ -48,7 +48,7 @@ const TIPS: Tip[] = [
         id: 'nuoc-cham',
         title: 'Nước Chấm: The Dipping Sauce That Does Everything',
         subtitle: 'The ratio that makes every Vietnamese sauce work',
-        image: 'https://images.unsplash.com/photo-1562802378-063ec186a863?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/nuoc-cham.jpg',
         category: 'Sauces & Condiments',
         categoryColor: '#059669',
         level: 'Beginner',
@@ -66,7 +66,7 @@ const TIPS: Tip[] = [
         id: 'caramel-technique',
         title: 'Vietnamese Caramel: The Dark Art of Kho',
         subtitle: 'How to build the sauce that powers half of Vietnamese cooking',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/kho.jpg',
         category: 'Technique',
         categoryColor: '#7C3AED',
         level: 'Intermediate',
@@ -84,7 +84,7 @@ const TIPS: Tip[] = [
         id: 'herb-selection',
         title: 'Reading a Vietnamese Herb Plate',
         subtitle: 'What each herb does and when to use it',
-        image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/thao-duoc.jpg',
         category: 'Ingredients',
         categoryColor: '#166534',
         level: 'Beginner',
@@ -102,7 +102,7 @@ const TIPS: Tip[] = [
         id: 'wok-technique',
         title: 'Wok Hei: Chasing the Breath of the Wok',
         subtitle: "The technique behind Vietnam's greatest stir-fries",
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/wok-hei.jpg',
         category: 'Technique',
         categoryColor: '#EA580C',
         level: 'Advanced',
@@ -120,7 +120,7 @@ const TIPS: Tip[] = [
         id: 'rice-cooking',
         title: 'Perfect Vietnamese Steamed Rice, Every Time',
         subtitle: 'The method that needs no measurements',
-        image: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80',
+        image: '/images/recipes/nau-com.jpg',
         category: 'Basics',
         categoryColor: '#D97706',
         level: 'Beginner',
@@ -174,7 +174,7 @@ export default function ChefSecretsPage() {
                 {/* Background image */}
                 <div style={{ position: 'absolute', inset: 0 }}>
                     <Image
-                        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1800&q=85"
+                        src="/images/recipes/cung-dinh-hue.jpg"
                         alt="Vietnamese chef preparing food in a kitchen"
                         fill
                         priority

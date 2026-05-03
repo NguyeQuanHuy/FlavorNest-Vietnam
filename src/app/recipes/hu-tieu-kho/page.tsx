@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/hu-tieu-kho.jpg',
     intro: 'Hu tieu kho is the format Saigon mornings prefer — same toppings as the soup version, but the noodles arrive tossed with sweet soy and fried garlic oil, with the broth in a small bowl on the side. The sauce-coated noodles are slurped first while still hot and glossy; the broth is sipped between bites like tea. Choose this over hu tieu nuoc and locals will quietly nod at you. Order it with the broth poured over and they will not.',
     ingredientSections: [
         {

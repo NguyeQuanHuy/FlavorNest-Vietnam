@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/lau-mam.jpg',
     intro: `Lau mam is the Mekong Delta's most fearless dish. The broth is built on mam ca loc — fermented snakehead fish paste — a ingredient so pungent it clears the room before it clears the palate. But cooked low and slow with lemongrass, coconut milk, and pineapple, the fermented paste transforms into something extraordinary: deeply savoury, funky in the best possible way, with a richness no other broth can match. The Mekong Delta eats this for celebrations. Once you taste it, you will understand why.`,
     ingredientSections: [
         {

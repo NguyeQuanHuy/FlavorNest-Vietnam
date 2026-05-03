@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-cuon.jpg',
     intro: 'Banh cuon Ha Noi is one of the most technically demanding Vietnamese breakfast dishes and one of the most rewarding. A thin batter of rice flour and tapioca starch is poured onto a stretched muslin cloth over simmering water, covered for 30 seconds until just set, then lifted with a wooden dowel and rolled around a filling of seasoned ground pork and wood ear mushrooms. The result is translucent, silky, impossibly delicate. Served with crispy fried shallots, sliced cha lua, and a bowl of sweetened fish sauce.',
     ingredientSections: [
         {

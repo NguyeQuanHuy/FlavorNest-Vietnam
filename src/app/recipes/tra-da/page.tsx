@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '5 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/tra-da.jpg',
     intro: 'Tra da is the hospitality of Vietnam in a glass. Walk into any pho shop, bun bo place, or com binh dan restaurant and a large glass of pale iced green tea appears before you say a word. It costs nothing. It is unsweetened, lightly bitter, and exactly right. The tea is usually a cheap loose-leaf green tea brewed strong then diluted and poured over ice — humble ingredients, perfect result.',
     ingredientSections: [
         {

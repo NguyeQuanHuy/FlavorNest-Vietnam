@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.7,
     baseServings: 2,
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/tra-thai.jpg',
     intro: 'Tra sua Thai arrived in Vietnamese milk tea shops in the 2010s and never left. The signature orange colour comes from Ceylon or Assam tea blended with spices like star anise and tamarind seed, brewed strong and sweetened with condensed milk over ice. It is richer and more perfumed than standard milk tea — floral, slightly spiced, and deeply satisfying. Add tapioca pearls for the full boba experience.',
     ingredientSections: [
         {

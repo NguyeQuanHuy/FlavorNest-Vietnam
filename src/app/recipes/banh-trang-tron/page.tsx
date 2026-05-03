@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-trang-tron.jpg',
     intro: `Banh trang tron is Saigon's most beloved after-school snack — a bag of shredded rice paper, green mango, quail eggs, dried beef or shrimp, fresh herbs, and a dressing so addictive it borders on dangerous. Sold from plastic bags by vendors outside every school gate in the city, it is the taste of Vietnamese childhood. The texture is unlike anything else: chewy rice paper strips, crunchy fried shallots, creamy egg yolk, sour mango, all bound together by a spicy-sour-sweet sauce.`,
     ingredientSections: [
         {

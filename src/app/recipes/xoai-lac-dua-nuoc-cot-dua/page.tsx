@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '3 hrs',
     rating: 4.7,
     baseServings: 6,
-    heroImage:
-        'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/xoai-lac-dua-nuoc-cot-dua.jpg',
     intro:
         'Bánh flan arrived in Vietnam with the French in the 19th century and never left. What Vietnam did with it is quietly brilliant — the custard became silkier, the caramel deeper, and somewhere along the way someone decided to serve it over crushed ice with a splash of cà phê đen. That last addition is not official. It is, however, correct. This recipe produces six trembling, dark-topped flans with a bittersweet caramel that pools at the bottom of each ramekin when you invert them.',
     ingredientSections: [

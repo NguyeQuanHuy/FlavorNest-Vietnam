@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c7?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/ga-la-e-phu-yen.jpg',
     intro: 'Ga la e is the dish that tells you where you are. La e — Vietnamese litsea leaves, harvested from wild trees in the mountains of Phu Yen and Binh Dinh — have a fragrance unlike anything else in the Vietnamese herb repertoire: citrusy, resinous, faintly floral, with a warmth that sits at the back of the throat. Stir-fried with free-range chicken and fish sauce until the leaves wilt and release their oils into the pan, the result is intensely aromatic and deeply regional. If you cannot find fresh la e, dried litsea berries (hat mac khen, used in Northern Vietnamese and Nung cuisine) are the closest available substitute.',
     ingredientSections: [
         {

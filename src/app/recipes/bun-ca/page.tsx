@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-ca.jpg',
     intro: 'Bun ca is the coastal Northern answer to pho — lighter, brighter, with the sharp clean flavour of the sea. Hai Phong, the port city east of Hanoi, makes the most celebrated version: a clear fish-bone broth perfumed with dill and tomato, topped with chunks of fish that have been pan-fried until shattering-crisp. The contrast of the crackling skin against the gentle broth is the whole point. A favourite breakfast for people who want fish, not beef, before noon.',
     ingredientSections: [
         {

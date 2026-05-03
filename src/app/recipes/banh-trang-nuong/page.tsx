@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-trang-nuong.jpg',
     intro: `Banh trang nuong was invented by Da Lat street food vendors who discovered that a dry rice paper sheet placed over hot charcoal becomes a crispy, blistered base that holds toppings beautifully. An egg cracked on top, spring onions, dried shrimp, and a drizzle of chilli sauce — the whole thing cooked in under 3 minutes. Da Lat's night market has sold this since the 1990s. It is now found on street carts throughout Vietnam and beloved especially by students and anyone who needs dinner for 15,000 dong.`,
     ingredientSections: [
         {

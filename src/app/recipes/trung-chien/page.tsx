@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '10 min',
     rating: 4.6,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=1600&q=80',
+    heroImage: '/images/recipes/trung-chien.jpg',
     intro:
         'Every Vietnamese student learns to make trứng chiên the week they leave home. It is the dish you fall back on when the rice is cooked and the fridge is almost empty — eggs, fish sauce, spring onion, sometimes a tablespoon of minced pork if you feel fancy. The secret, if there is one, is more oil than you think is right.',
     ingredientSections: [

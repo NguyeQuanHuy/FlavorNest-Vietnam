@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr 30 min',
     rating: 4.6,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/banh-nam.jpg',
     intro: 'Banh nam is a Hue heritage dish that rewards patience and precision. The dough is made from two types of rice flour cooked into a smooth, translucent paste. Each portion is spread paper-thin on a banana leaf, topped with a small amount of seasoned pork and shrimp, folded and steamed. The banana leaf infuses a subtle green fragrance that no other wrapping can replicate. These are eaten by the dozen at Hue snack restaurants as part of a spread of small dishes.',
     ingredientSections: [
         {

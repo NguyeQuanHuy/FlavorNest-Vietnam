@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1623682785702-f0c9fcfe2fc0?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/bun-cha-hanoi.jpg',
     intro: `In May 2016, Barack Obama and Anthony Bourdain sat down at a plastic-stool eatery on Le Van Huu street in Hanoi and ordered bun cha. The photograph went viral within hours. But for Hanoians, bun cha had been their quiet lunchtime secret long before any president discovered it. Charcoal-grilled pork patties and sliced belly in a warm, tangy broth — cold vermicelli on the side, a mountain of fresh herbs, and a pot of warm dipping broth in which you submerge everything at once.`,
     ingredientSections: [
         {

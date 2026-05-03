@@ -75,7 +75,7 @@ export default function AboutPage() {
                 {/* Hero background image */}
                 <div style={{ position: 'absolute', inset: 0 }}>
                     <Image
-                        src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1920&q=85"
+                        src="/images/recipes/banh-canh-he-1.jpg"
                         alt="Steaming bowl of Vietnamese food"
                         fill
                         priority
@@ -303,7 +303,7 @@ export default function AboutPage() {
                         }}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=900&q=85"
+                            src="/images/recipes/banh-canh-he-phu-yen.jpg"
                             alt="Vietnamese countryside kitchen"
                             fill
                             quality={85}
@@ -545,85 +545,8 @@ export default function AboutPage() {
                         boxShadow: '0 4px 28px rgba(75,46,26,0.06)',
                     }}
                 >
-                    
-                    {/* Bio */}
-                    <div>
-                        <div
-                            style={{
-                                fontSize: 11,
-                                fontWeight: 700,
-                                letterSpacing: '0.2em',
-                                color: '#D97706',
-                                textTransform: 'uppercase',
-                                marginBottom: 10,
-                            }}
-                        >
-                            Founder & Writer
-                        </div>
-                       <h3
-                            style={{
-                                fontFamily: "'Playfair Display', serif",
-                                fontSize: 'clamp(26px, 3.5vw, 36px)',
-                                fontWeight: 700,
-                                color: '#2D1A0E',
-                                margin: '0 0 20px',
-                                lineHeight: 1.15,
-                            }}
-                        >
-                            Nguyen Quan Huy
-                        </h3>
-                        <p
-                            style={{
-                                fontSize: 16,
-                                color: 'rgba(75,46,26,0.72)',
-                                lineHeight: 1.85,
-                                margin: '0 0 16px',
-                            }}
-                        >
-                            Born and raised in Phú Yên, in central Vietnam. I came to Germany in 2019 — carrying with me memories of my mother’s home-cooked meals, early-morning bowls of *bánh canh hẹ*, and pots of *thịt kho tàu* during Tết. FlavorNest is my way of preserving those things — writing them down before they fade from memory.
-                        </p>
-                        <p
-                            style={{
-                                fontSize: 16,
-                                color: 'rgba(75,46,26,0.72)',
-                                lineHeight: 1.85,
-                                margin: '0 0 20px',
-                            }}
-                        >
-                            Each recipe here has been tested in a real kitchen — my own kitchen in Waltershausen, Thuringia — with four burners and ingredients sourced from the nearest Asian supermarket. No shortcuts, no Westernization. If the original takes 10 hours, I write the 10-hour version.
-                        </p>
-                        <blockquote
-                            style={{
-                                borderLeft: '3px solid #D97706',
-                                margin: '0 0 20px',
-                                padding: '4px 0 4px 20px',
-                            }}
-                        >
-                            <p
-                                style={{
-                                    fontFamily: "'Playfair Display', serif",
-                                    fontSize: 19,
-                                    fontStyle: 'italic',
-                                    color: '#4B2E1A',
-                                    lineHeight: 1.6,
-                                    margin: 0,
-                                }}
-                            >
-                               "There are dishes that exist only in a grandmother’s memory. FlavorNest is a small attempt to write them down — before it’s too late."
-                            </p>
-                        </blockquote>
-                        <p
-                            style={{
-                                fontSize: 14,
-                                color: 'rgba(75,46,26,0.5)',
-                                fontStyle: 'italic',
-                                margin: 0,
-                                lineHeight: 1.7,
-                            }}
-                        >
-                          Currently writing from Waltershausen, Thuringia. Still learning. Still calling my mother when a recipe doesn’t turn out right.
-                        </p>
-                    </div>
+
+
                 </motion.div>
             </section>
 

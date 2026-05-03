@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs',
     rating: 4.9,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/mien-luon.jpg',
     intro: 'Mien luon is one of those Hanoi dishes that takes patience to do properly and effort to find. The eel must be live or fresh — never frozen — boned by hand, then cut into strips and twice-fried until each piece is shatter-crisp on the outside, tender within. The broth is built on the eel bones with charred ginger and dried shrimp; the noodles are translucent mung bean glass noodles. Served as soup or dry, what defines mien luon is the contrast: the silk of the noodles, the crackle of the eel, and a violent shower of fresh dill at the end.',
     ingredientSections: [
         {

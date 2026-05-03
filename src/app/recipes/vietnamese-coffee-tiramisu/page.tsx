@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '45 min + 6h chill',
     rating: 4.9,
     baseServings: 8,
-    heroImage:
-        'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=1600&q=80',
+    heroImage: '/images/recipes/vietnamese-coffee-tiramisu.jpg',
     intro:
         'The Italian classic reimagined through a Vietnamese lens. Dark Robusta coffee pulled through a phin filter, sweetened with condensed milk, soaks the ladyfingers — while silky mascarpone cream carries the rest of the tiramisu DNA. The result feels familiar yet distinctly Saigon.',
     ingredientSections: [

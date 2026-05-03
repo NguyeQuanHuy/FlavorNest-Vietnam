@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1536304993881-ff86e0c9e6a0?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/com-hen.jpg',
     intro: 'Com hen is eaten for breakfast in Hue, which tells you everything about the city. This is not simple morning food — it is a carefully composed dish of cold rice topped with stir-fried baby clams, shredded banana blossom, roasted peanuts, sesame seeds, crispy pork cracklings, fresh herbs, and a ladle of hot clam broth poured over at the table to warm everything through. The fermented shrimp paste (mam tom) stirred in at the end is optional but transformative. Nothing else in Vietnamese cuisine tastes quite like it.',
     ingredientSections: [
         {

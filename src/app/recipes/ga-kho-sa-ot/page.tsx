@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=1600&q=80',
+    heroImage: '/images/recipes/ga-kho-sa-ot.jpg',
     intro:
         'Central Vietnamese cooking has its own devoted following, and this is one of the dishes that explains why. Where the Northern gà kho gừng leans on ginger and restraint, the Central version turns up every dial: more lemongrass, more chilli, more fish sauce, cooked down until the sauce is almost a paste. The kitchen ends up smelling like a Hue market at sunrise.',
     ingredientSections: [

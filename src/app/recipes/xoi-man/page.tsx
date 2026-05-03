@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '50 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1579856896394-07dfa10d7c5b?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/xoi-man.jpg',
     intro: 'In Saigon, xoi man is the breakfast you grab from a bicycle vendor on the way to work — sticky rice mounded into a cone of banana leaf, weighed down with a small mountain of toppings, and eaten with a plastic spoon while waiting for the traffic light. The rice is steamed long enough to be glossy and chewy but not gummy. The toppings vary by stall but always include lap xuong (Chinese sausage), and always more than you think one person could eat. They are wrong. You will finish it.',
     ingredientSections: [
         {

@@ -12,8 +12,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.7,
     baseServings: 4,
-    heroImage:
-        'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600&q=80',
+    heroImage: '/images/recipes/dau-hu-sot-ca.jpg',
     intro:
         'Đậu sốt cà is the dish that converts tofu sceptics. The secret is treating it like meat — fried hard first so the outside turns custardy-crisp, then simmered just long enough to drink in the tomato sauce without going soggy. In Northern families it is on the table at least once a week, often without anyone planning it.',
     ingredientSections: [
