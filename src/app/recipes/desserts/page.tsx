@@ -92,7 +92,7 @@ const DESSERTS: Dessert[] = [
         slug: 'banh-chuoi-nuong',
         name: 'Baked Banana Cake',
         viet: 'Bánh Chuối Nướng',
-        type: 'bánh',
+        type: 'Bánh',
         image: '/images/recipes/banh-chuoi-nuong.jpg',
         description: 'Ripe bananas baked into a dense, aromatic coconut-milk custard until the top caramelises to a deep amber — the smell alone is worth making it.',
         story: 'Every Vietnamese grandmother has a version. None of them ever wrote it down. This is our best attempt to preserve it.',
@@ -412,7 +412,7 @@ const DESSERTS: Dessert[] = [
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 
-const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'bánh', 'Frozen', 'Fusion']
+const TYPES: DessertType[] = ['All', 'Traditional', 'Chè', 'Bánh', 'Frozen', 'Fusion']
 
 const DIFF_COLOR: Record<string, string> = {
     Easy: '#059669',
