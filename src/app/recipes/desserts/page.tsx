@@ -158,7 +158,7 @@ const DESSERTS: Dessert[] = [
         slug: 'banh-cam',
         name: 'Sesame Fried Dough Balls',
         viet: 'bánh Cam',
-        type: 'bánh',
+        type: 'Bánh',
         image: '/images/recipes/banh-cam.jpg',
         description: 'Crispy golden spheres of glutinous rice, hollow inside with a heart of sweetened mung bean paste, rolled in sesame seeds and fried to order.',
         story: 'Bite through the sesame crust, through the crisp shell, and the mung bean filling releases like a warm secret.',
