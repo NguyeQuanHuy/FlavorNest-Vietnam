@@ -397,9 +397,8 @@ export default function SymphonyOfHanoisDawnPage() {
                                 lineHeight: 1.6,
                             }}
                         >
-                            Founder of FlavorNest Vietnam. Writes about Vietnamese food culture
-                            from his kitchen in Waltershausen, Thüringen, Germany.
-                        </p>
+                            Founder of FlavorNest Vietnam. Writes about Vietnamese food culture.
+                       </p>
                     </div>
                 </div>
 
