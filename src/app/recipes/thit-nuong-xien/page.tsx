@@ -2,66 +2,81 @@
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
-    slug: 'trung-chien-thit',
-    title: 'Vietnamese Pork Omelet (Trung Chien Thit)',
-    subtitle: 'Fluffy eggs mixed with savory minced pork — simple, hearty, and perfect with steamed rice.',
+    slug: 'thit-nuong-xien',
+    title: 'Vietnamese Grilled Meat Skewers (Thit Nuong Xien)',
+    subtitle: 'Smoky, juicy skewers glazed with garlic, lemongrass, and a touch of sweetness.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.8,
-    baseServings: 2,
-    heroImage: '/images/recipes/trung-chien-thit.jpg',
+    totalTime: '40 min',
+    rating: 4.9,
+    baseServings: 4,
+    heroImage: '/images/recipes/thit-nuong-xien.jpg',
 
-    intro: `Trứng chiên thịt is a classic Vietnamese home-style dish made from beaten eggs mixed with seasoned minced pork, then pan-fried until golden and fluffy.
+    intro: `Thịt nướng xiên is a popular Vietnamese street food made from marinated pork or beef skewered and grilled over charcoal.
 
-It is one of the simplest yet most comforting dishes in Vietnamese cuisine. The eggs are soft and airy, while the pork adds a savory, umami-rich depth. Often served with steamed rice and soy or fish sauce, it is a staple in everyday family meals.`,
+The meat is infused with garlic, lemongrass, fish sauce, and a touch of sugar, then grilled until slightly caramelized and smoky. The result is juicy, aromatic skewers with a perfect balance of savory, sweet, and smoky flavors.
+
+Often served with rice paper, fresh herbs, and dipping sauce, it is a staple at street stalls and backyard BBQs across Vietnam.`,
 
     ingredientSections: [
         {
             title: 'Main ingredients',
             items: [
-                { amount: 3, name: 'eggs' },
-                { amount: 150, unit: 'g', name: 'minced pork' },
-                { amount: 2, name: 'spring onions', note: 'finely chopped' },
-                { amount: 1, name: 'garlic clove', note: 'minced' },
+                { amount: 500, unit: 'g', name: 'pork shoulder', note: 'thinly sliced' },
+                { amount: 3, name: 'lemongrass stalks', note: 'finely chopped' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'shallots', note: 'finely chopped' },
             ],
         },
         {
-            title: 'Seasoning',
+            title: 'Marinade',
             items: [
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'salt' },
-                { amount: 0.5, unit: 'tsp', name: 'black pepper' },
-                { amount: 1, unit: 'tsp', name: 'sugar' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1.5, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 1, unit: 'tbsp', name: 'oil' },
+                { amount: 1, unit: 'tsp', name: 'black pepper' },
+            ],
+        },
+        {
+            title: 'To serve',
+            items: [
+                { amount: 12, name: 'bamboo skewers', note: 'soaked in water' },
+                { amount: 1, name: 'rice paper sheets' },
+                { amount: 1, name: 'bunch fresh herbs', note: 'mint, basil, perilla' },
+                { amount: 1, name: 'cucumber', note: 'sliced' },
+                { amount: 120, unit: 'ml', name: 'dipping sauce' },
             ],
         },
     ],
 
     steps: [
         {
-            title: 'Prepare the pork',
-            description: 'Mix minced pork with garlic, fish sauce, sugar, salt, and pepper. Let it rest for 10 minutes.',
+            title: 'Prepare the meat',
+            description: 'Slice pork shoulder thinly so it cooks quickly and absorbs marinade better.',
         },
         {
-            title: 'Beat the eggs',
-            description: 'Crack eggs into a bowl and beat until smooth. Add chopped spring onions.',
-            tip: 'Beating well helps create a fluffier texture when cooked.',
+            title: 'Make marinade',
+            description: 'Mix lemongrass, garlic, shallots, fish sauce, sugar, soy sauce, oyster sauce, oil, and black pepper.',
+            tip: 'Crushed lemongrass releases essential oils that define the aroma.',
         },
         {
-            title: 'Combine mixture',
-            description: 'Mix seasoned pork into the egg mixture evenly.',
+            title: 'Marinate',
+            description: 'Coat meat thoroughly and let rest for at least 30 minutes (or longer for deeper flavor).',
         },
         {
-            title: 'Pan-fry',
-            description: 'Heat oil in a pan over medium heat. Pour in the mixture and spread evenly. Cook until the bottom is golden.',
+            title: 'Skewer',
+            description: 'Thread marinated meat onto bamboo skewers, pressing firmly but not too tight.',
         },
         {
-            title: 'Flip and finish',
-            description: 'Flip carefully and cook the other side until fully set and lightly golden.',
+            title: 'Grill',
+            description: 'Grill over medium-hot charcoal, turning frequently until meat is cooked and slightly caramelized.',
+            tip: 'Charcoal grilling creates the signature smoky street food flavor.',
         },
         {
             title: 'Serve',
-            description: 'Slice and serve hot with steamed rice and dipping fish sauce or soy sauce.',
+            description: 'Serve hot with rice paper, fresh herbs, vegetables, and dipping sauce. Wrap and enjoy immediately.',
         },
     ],
 };
