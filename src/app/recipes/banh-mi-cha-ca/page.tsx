@@ -4,69 +4,70 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-mi-cha-ca',
-    title: 'Sweet Leaf Soup with Minced Pork',
+    title: 'Fried Fish Cake Baguette (Bánh Mì Chả Cá)',
     subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+        'Bánh Mì Chả Cá — a crispy Vietnamese baguette filled with savory fried fish cakes, aromatic cilantro, spicy chilies, and a signature garlic-soy glaze.',
     category: 'MAIN COURSE',
-    difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.7,
+    difficulty: 'Medium',
+    totalTime: '40 min',
+    rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/banh-mi-cha-ca.jpg',
     intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+        'While the world knows the classic cold-cut Bánh Mì, the Chả Cá version is a beloved specialty often found at morning street carts. The soul of this sandwich is the fish cake—traditionally made from bronze featherback fish, seasoned with an abundance of black pepper and dill, then fried until golden. What sets it apart is the heat; unlike other Bánh Mì, this one is served with a generous amount of Vietnamese coriander (rau răm) and a warm, savory sauce that seeps into the airy crumb of the bread.',
     ingredientSections: [
         {
-            title: 'Broth and pork',
+            title: 'Fish Cakes (Chả Cá)',
             items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
+                { amount: 500, unit: 'g', name: 'fish paste', note: 'featherback or white fish, well-kneaded' },
+                { amount: 1, unit: 'tbsp', name: 'minced purple shallots' },
+                { amount: 1, unit: 'tsp', name: 'cracked black pepper', note: 'essential for aroma' },
                 { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
+                { amount: 0.5, unit: 'cup', name: 'neutral oil', note: 'for frying' },
             ],
         },
         {
-            title: 'Sweet leaves',
+            title: 'The Bread and Fillings',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
+                { amount: 4, unit: 'individual', name: 'Vietnamese baguettes', note: 'short, airy, and crispy' },
+                { amount: 1, unit: 'bunch', name: 'Vietnamese coriander (rau răm)', note: 'the signature herb for fish' },
+                { amount: 1, unit: 'large', name: 'cucumber', note: 'sliced into long strips' },
+                { amount: 2, unit: 'large', name: 'fresh chilies', note: 'sliced' },
+                { amount: 1, unit: 'cup', name: 'pickled daikon and carrots' },
             ],
         },
         {
-            title: 'Finish',
+            title: 'Garlic Soy Sauce',
             items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
+                { amount: 3, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'chili sauce', note: 'Vietnamese style' },
+                { amount: 1, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'minced garlic' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Season and fry the fish cakes',
+            description: 'Mix the fish paste with shallots, fish sauce, and plenty of black pepper. Shape into small patties or long strips. Deep-fry until golden brown and bouncy.',
+            tip: 'Knead the fish paste firmly with a spoon for 5-10 minutes before frying to achieve the signature springy "chew" (độ dai).',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Simmer the sauce',
+            description: 'In a small pan, sauté minced garlic until fragrant. Add soy sauce, chili sauce, and sugar. Simmer over low heat until the sauce thickens slightly.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Prepare the baguette',
+            description: 'Toast the baguettes in the oven for 2-3 minutes at 180°C until the crust is shatteringly crisp. Slice open lengthwise.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Assemble the sandwich',
+            description: 'Spread a little sauce inside the bread. Layer in the hot fried fish cakes, followed by cucumber strips, pickled vegetables, and a generous handful of Vietnamese coriander.',
+            tip: 'Do not swap the Vietnamese coriander (rau răm) for regular cilantro; its peppery, citrusy bite is what neutralizes the "fishy" scent and defines this specific Bánh Mì.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
-        },
-        {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Final touch',
+            description: 'Drizzle more garlic soy sauce over the fillings, add fresh chilies if you like it spicy, and serve immediately while the fish cakes are still hot.',
         },
     ],
 };
