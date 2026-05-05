@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/chuoi-chien.jpg',
 
-    intro: `:contentReference[oaicite:1]{index=1} is a beloved Vietnamese street snack made by coating ripe bananas in batter and deep-frying until golden and crispy.
+    intro: `Chuối chiên is a beloved Vietnamese street snack made by coating ripe bananas in batter and deep-frying until golden and crispy.
 
 The contrast between the crunchy outer layer and soft, sweet banana inside makes it an irresistible treat often sold at street stalls.`,
 
