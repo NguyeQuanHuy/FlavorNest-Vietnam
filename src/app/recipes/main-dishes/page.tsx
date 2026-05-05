@@ -682,6 +682,26 @@ const RECIPES: Recipe[] = [
         description:"A signature Southern Vietnamese soup made with tender snakehead fish simmered in tamarind broth. Pineapple, tomatoes, okra, bean sprouts, and herbs create a lively balance of sour, sweet, and savory notes — like a full Mekong river in one bowl.",
         tags:['Fish','Soup','Tamarind','Herbs'],
     },
+    {
+        slug:'canh-bi-do-thit-bam',
+        title:'Pumpkin Soup with Minced Pork',
+        subtitle:'Canh Bí Đỏ Nấu Thịt Bằm',
+        image:'/images/recipes/canh-bi-do-thit-bam.jpg',
+        region:'Southern',difficulty:'Easy',time:'30 mins',
+        rating:'4.6',reviews:78,cal:240,tag:'Soft Comfort',tagColor:'#F97316',
+        description:"A naturally sweet pumpkin soup simmered with minced pork, creating a silky, slightly creamy broth. The pumpkin melts gently into the soup while the pork adds savory depth — a soft, nourishing bowl perfect for everyday meals.",
+        tags:['Pumpkin','Pork','Soup','Comfort'],
+    },
+    {
+        slug:'canh-muop-tom-kho',
+        title:'Loofah Soup with Dried Shrimp',
+        subtitle:'Canh Mướp Tôm Khô',
+        image:'/images/recipes/canh-muop-tom-kho.jpg',
+        region:'Southern',difficulty:'Easy',time:'25 mins',
+        rating:'4.5',reviews:64,cal:190,tag:'Light Umami',tagColor:'#22C55E',
+        description:"Fresh loofah slices cooked in a clear broth with dried shrimp, releasing a subtle ocean sweetness. The soup is light, refreshing, and naturally aromatic — a simple dish that highlights pure ingredient flavors.",
+        tags:['Loofah','Shrimp','Soup','Light'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
