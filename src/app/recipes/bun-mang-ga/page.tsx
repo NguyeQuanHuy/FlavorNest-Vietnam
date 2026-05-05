@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'bun-mang-ga',
     title: 'Chicken Bamboo Shoot Noodle Soup (Bun Mang Ga)',
     subtitle: 'Light, aromatic chicken broth with tender bamboo shoots and rice noodles — a comforting Vietnamese soup.',
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '90 min',
     rating: 4.9,
