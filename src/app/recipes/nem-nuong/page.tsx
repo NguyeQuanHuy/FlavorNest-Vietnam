@@ -3,7 +3,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-nuong',
-    title: 'Vietnamese Grilled Pork Skewers (Nem Nuong)',
+    title: 'Vietnamese Grilled Pork Skewers (Nem nướng)',
     subtitle: 'Smoky, juicy, and lightly caramelized — grilled pork skewers wrapped in herbs and dipped in rich sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/nem-nuong.jpg',
 
-    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnam’s most addictive street foods — smoky, juicy pork grilled over charcoal until lightly charred and caramelized at the edges.
+    intro: `Nem nướng is one of Vietnam’s most addictive street foods — smoky, juicy pork grilled over charcoal until lightly charred and caramelized at the edges.
 
 The meat is finely ground and seasoned with garlic, fish sauce, sugar, and a touch of starch for bounce, then shaped onto skewers and grilled until fragrant. But the real magic happens at the table: the pork is wrapped in rice paper with fresh herbs, pickled vegetables, and crisp lettuce, then dipped into a thick, savory peanut sauce.
 
