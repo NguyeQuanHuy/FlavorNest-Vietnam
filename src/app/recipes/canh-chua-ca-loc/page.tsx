@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'canh-chua-ca-loc',
     title: 'Sour Snakehead Fish Soup (Canh Chua Ca Loc)',
     subtitle: 'Authentic Mekong Delta sour soup with snakehead fish, tamarind, pineapple, and fresh herbs.',
-    category: 'SOUP',
+    category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,
