@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'nuoc-rau-ma',
     title: 'Vietnamese Pennywort Juice (Nuoc Rau Ma)',
     subtitle: 'Earthy, refreshing, and naturally cooling — a green herbal drink from Vietnamese street culture.',
-    category: 'DRINK',
+    category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '15 min',
     rating: 4.8,
