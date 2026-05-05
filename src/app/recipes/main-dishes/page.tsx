@@ -561,7 +561,27 @@ const RECIPES: Recipe[] = [
         rating:'4.7',reviews:91,cal:280,tag:'Fresh & Tangy',tagColor:'#10B981',
         description:"Thinly sliced beef lightly ‘cooked’ by lime juice, mixed with onions, herbs, peanuts, and a hint of chili. Fresh, tangy, and slightly raw in spirit — a refreshing dish that wakes up the palate.",
         tags:['Beef','Lime','Fresh','Salad'],
-    }
+    },
+    {
+        slug:'bun-bo-xao',
+        title:'Stir-Fried Beef Vermicelli',
+        subtitle:'Bún Bò Xào',
+        image:'/images/recipes/bun-bo-xao.jpg',
+        region:'Southern',difficulty:'Medium',time:'30 mins',
+        rating:'4.6',reviews:85,cal:480,tag:'Wok Fresh',tagColor:'#F59E0B',
+        description:"Rice vermicelli topped with sizzling stir-fried beef, fresh herbs, pickled vegetables, and crushed peanuts. A light yet flavorful bowl where warm savory beef meets cool, crisp greens in perfect contrast.",
+        tags:['Beef','Vermicelli','Stir-fry','Fresh'],
+        },
+    {
+        slug:'pho-duoi-bo',
+        title:'Beef Oxtail Pho',
+        subtitle:'Phở Đuôi Bò',
+        image:'/images/recipes/pho-duoi-bo.jpg',
+        region:'Northern',difficulty:'Hard',time:'4 hrs',
+        rating:'4.9',reviews:189,cal:650,tag:'Slow Simmer Soul',tagColor:'#F97316',
+        description:"A deep, gelatin-rich broth simmered for hours with beef bones and oxtail until it turns silky and aromatic. Wide rice noodles carry tender oxtail pieces, herbs, and onion, creating a bowl full of slow-cooked depth and warmth.",
+        tags:['Beef','Noodles','Soup','Slow Cook'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
