@@ -1,72 +1,82 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'thit-nuong-xien',
-    title: 'Sweet Leaf Soup with Minced Pork',
-    subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+    title: 'Vietnamese Grilled Meat Skewers (Thit Nuong Xien)',
+    subtitle: 'Smoky, juicy skewers glazed with garlic, lemongrass, and a touch of sweetness.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.7,
+    totalTime: '40 min',
+    rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/thit-nuong-xien.jpg',
-    intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+
+    intro: `Thịt nướng xiên is a popular Vietnamese street food made from marinated pork or beef skewered and grilled over charcoal.
+
+The meat is infused with garlic, lemongrass, fish sauce, and a touch of sugar, then grilled until slightly caramelized and smoky. The result is juicy, aromatic skewers with a perfect balance of savory, sweet, and smoky flavors.
+
+Often served with rice paper, fresh herbs, and dipping sauce, it is a staple at street stalls and backyard BBQs across Vietnam.`,
+
     ingredientSections: [
         {
-            title: 'Broth and pork',
+            title: 'Main ingredients',
             items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
+                { amount: 500, unit: 'g', name: 'pork shoulder', note: 'thinly sliced' },
+                { amount: 3, name: 'lemongrass stalks', note: 'finely chopped' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'shallots', note: 'finely chopped' },
             ],
         },
         {
-            title: 'Sweet leaves',
+            title: 'Marinade',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1.5, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 1, unit: 'tbsp', name: 'oil' },
+                { amount: 1, unit: 'tsp', name: 'black pepper' },
             ],
         },
         {
-            title: 'Finish',
+            title: 'To serve',
             items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
+                { amount: 12, name: 'bamboo skewers', note: 'soaked in water' },
+                { amount: 1, name: 'rice paper sheets' },
+                { amount: 1, name: 'bunch fresh herbs', note: 'mint, basil, perilla' },
+                { amount: 1, name: 'cucumber', note: 'sliced' },
+                { amount: 120, unit: 'ml', name: 'dipping sauce' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Prepare the meat',
+            description: 'Slice pork shoulder thinly so it cooks quickly and absorbs marinade better.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Make marinade',
+            description: 'Mix lemongrass, garlic, shallots, fish sauce, sugar, soy sauce, oyster sauce, oil, and black pepper.',
+            tip: 'Crushed lemongrass releases essential oils that define the aroma.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Marinate',
+            description: 'Coat meat thoroughly and let rest for at least 30 minutes (or longer for deeper flavor).',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Skewer',
+            description: 'Thread marinated meat onto bamboo skewers, pressing firmly but not too tight.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            title: 'Grill',
+            description: 'Grill over medium-hot charcoal, turning frequently until meat is cooked and slightly caramelized.',
+            tip: 'Charcoal grilling creates the signature smoky street food flavor.',
         },
         {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Serve',
+            description: 'Serve hot with rice paper, fresh herbs, vegetables, and dipping sauce. Wrap and enjoy immediately.',
         },
     ],
 };
