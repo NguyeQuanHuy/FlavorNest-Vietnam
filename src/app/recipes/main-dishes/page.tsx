@@ -471,8 +471,8 @@ const RECIPES: Recipe[] = [
     rating:'4.7',    reviews:88,    cal:410,    tag:'Comfort Bowl',    tagColor:'#10B981',
     description:"A clear, golden broth simmered from chicken bones and dried bamboo shoots, carrying a gentle sweetness and earthy aroma. Tender shredded chicken floats alongside crunchy bamboo strips and silky rice vermicelli, finished with scallions, herbs, and a squeeze of lime. A bowl that feels like a quiet morning after rain.",
     tags:['Chicken','Soup','Vermicelli','Bamboo Shoot'],
-},
-{
+    },
+    {
     slug:'com-ga-hai-nam',
     title:'Hainanese Chicken Rice',
     subtitle:'Cơm Gà Hải Nam',
@@ -481,7 +481,17 @@ const RECIPES: Recipe[] = [
     rating:'4.9',    reviews:156,    cal:590,    tag:'Iconic Classic',    tagColor:'#EF4444',
     description:"Poached chicken with silky skin served over fragrant rice cooked in chicken fat, garlic, and ginger. Accompanied by chili sauce, ginger paste, and soy-based dipping sauce. Every grain of rice is infused with savory chicken essence, turning simplicity into quiet luxury.",
     tags:['Chicken','Rice','Boiled','Classic'],
-},
+    },
+    {
+    slug: 'mo-hanh',
+    title: 'Scallion Oil Drizzle',
+    subtitle: 'Mỡ Hành',
+    image: '/images/recipes/mo-hanh.jpg',
+    region: 'Southern', difficulty: 'Easy', time: '10 mins',
+    rating: '4.6', reviews: 74, cal: 120, tag: 'Simple Magic', tagColor: '#22C55E',
+    description: "A shimmering green-gold oil infused with sizzling scallions and a pinch of salt, poured over grilled meats, rice, or noodles. The hot oil wakes up the aroma instantly — fragrant, savory, and almost hypnotic — turning even the simplest dish into something alive.",
+    tags: ['Scallion', 'Oil', 'Condiment', 'Essential'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
