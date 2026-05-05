@@ -1,72 +1,68 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-chua',
-    title: 'Sweet Leaf Soup with Minced Pork',
-    subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
-    category: 'MAIN COURSE',
-    difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.7,
-    baseServings: 4,
+    title: 'Nem Chua (Vietnamese Fermented Pork)',
+    subtitle: 'Tangy, garlicky, and lightly sweet — cured pork bites wrapped and naturally fermented.',
+    category: 'APPETIZER',
+    difficulty: 'Medium',
+    totalTime: '48 hours',
+    rating: 4.9,
+    baseServings: 6,
     heroImage: '/images/recipes/nem-chua.jpg',
-    intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+
+    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnam’s most distinctive delicacies — a naturally fermented pork snack with a signature balance of sour, savory, and slightly sweet flavors.
+
+Fresh pork is finely ground, seasoned with garlic, fish sauce, and sugar, then mixed with toasted rice powder and wrapped tightly in banana leaves. Over 1–2 days, natural fermentation transforms the meat, developing a gentle tang and a firm, slightly springy texture.
+
+Often enjoyed as a snack or with drinks, nem chua delivers a bold combination of aroma and taste: garlicky, tangy, and deeply satisfying.`,
+
     ingredientSections: [
         {
-            title: 'Broth and pork',
+            title: 'Pork mixture',
             items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
+                { amount: 500, unit: 'g', name: 'fresh lean pork', note: 'very finely ground' },
+                { amount: 100, unit: 'g', name: 'pork skin', note: 'boiled, thinly sliced' },
+                { amount: 3, name: 'garlic cloves', note: 'sliced' },
+                { amount: 2, name: 'red chilies', note: 'sliced' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1.5, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tsp', name: 'salt' },
+                { amount: 2, unit: 'tbsp', name: 'roasted rice powder' },
             ],
         },
         {
-            title: 'Sweet leaves',
+            title: 'Wrapping',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
-            ],
-        },
-        {
-            title: 'Finish',
-            items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
+                { amount: 10, name: 'banana leaves', note: 'cleaned and cut into squares' },
+                { amount: 10, name: 'plastic wrap', note: 'to seal tightly' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Prepare the mixture',
+            description: 'In a large bowl, combine ground pork, pork skin, fish sauce, sugar, salt, and roasted rice powder. Mix thoroughly until the texture becomes sticky and cohesive.',
+            tip: 'The mixture must be well mixed to activate proteins and create a firm texture after fermentation.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Add aromatics',
+            description: 'Fold in sliced garlic and chilies, distributing them evenly throughout the mixture.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Shape and wrap',
+            description: 'Divide the mixture into small portions. Wrap tightly in plastic wrap first, forming compact logs or squares, then wrap again with banana leaves.',
+            tip: 'Tight wrapping is crucial — it creates the anaerobic environment needed for fermentation.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Ferment',
+            description: 'Leave the wrapped nem at room temperature for 24–48 hours until slightly firm and tangy. Warmer temperatures speed up fermentation.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
-        },
-        {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Serve',
+            description: 'Unwrap and serve as is. Best enjoyed slightly chilled, with fresh herbs or as a snack with drinks.',
         },
     ],
 };
