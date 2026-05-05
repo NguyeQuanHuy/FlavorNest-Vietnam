@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/nuoc-rau-ma.jpg',
 
-    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnam’s most iconic herbal drinks. Made from fresh pennywort leaves, it has a naturally earthy, slightly grassy flavor with a clean, cooling finish.
+    intro: `Nước rau má is one of Vietnam’s most iconic herbal drinks. Made from fresh pennywort leaves, it has a naturally earthy, slightly grassy flavor with a clean, cooling finish.
 
 Often sold on street corners and markets, this bright green drink is believed to help cool the body and support hydration in hot weather. Blended fresh and lightly sweetened, it is both a traditional remedy and a daily refreshment.`,
 
