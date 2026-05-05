@@ -1,41 +1,55 @@
 'use client';
+
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nuoc-ep-cam',
-    title: 'Fresh Sugarcane Juice',
-    subtitle: 'Pressed in front of you, drunk in seconds. The happiest drink in Vietnam.',
-    category: 'DESSERT',
+    title: 'Freshly Squeezed Orange Juice (Nước Cam Ép)',
+    subtitle:
+        'Freshly Squeezed Orange Juice — a refreshing, vitamin-packed glass of pure sunshine, balanced with a hint of sweetness and a pinch of salt.',
+    category: 'BEVERAGE',
     difficulty: 'Easy',
     totalTime: '5 min',
     rating: 4.8,
     baseServings: 2,
     heroImage: '/images/recipes/nuoc-ep-cam.jpg',
-    intro: 'Nuoc mia exists at the intersection of simple and perfect. Sugarcane stalks fed through steel rollers, the pale green juice collected in a cup over ice, finished with a squeeze of kumquat or calamansi. It costs almost nothing and tastes like a Vietnamese summer afternoon. Without a commercial sugarcane press, you can extract juice at home using a knife and patience — the result is the same.',
+    intro:
+        'In Vietnam, "Orange Juice" is more than just a breakfast drink; it is the ultimate pick-me-up served at every street-side cafe. Traditionally made with the local "Cam Sành" (King Orange)—known for its dark, bumpy green skin and deep orange interior—this juice is prized for its bold acidity and intense aroma. Whether you enjoy it pure or over a tall glass of ice, it is the perfect antidote to a humid afternoon.',
     ingredientSections: [
         {
-            title: 'Ingredients',
+            title: 'Main Ingredients',
             items: [
-                { amount: 500, unit: 'g', name: 'fresh sugarcane stalks', note: 'peeled, available at Asian supermarkets' },
-                { amount: 1, unit: 'cup', name: 'ice cubes' },
-                { amount: 2, name: 'calamansi or kumquats', note: 'halved, for squeezing' },
-                { amount: 1, name: 'pinch of salt', note: 'optional, brightens flavour' },
+                { amount: 4, unit: 'large', name: 'fresh oranges', note: 'preferably King Oranges (Cam Sành) or Valencia' },
+                { amount: 1, unit: 'tbsp', name: 'granulated sugar', note: 'or honey, adjust to taste' },
+                { amount: 1, unit: 'pinch', name: 'sea salt', note: 'to enhance the natural citrus flavor' },
+            ],
+        },
+        {
+            title: 'Serving',
+            items: [
+                { amount: 1, unit: 'cup', name: 'crushed ice' },
+                { amount: 2, unit: 'slices', name: 'fresh orange', note: 'for garnish' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Prepare the sugarcane',
-            description: 'If not already peeled, use a heavy knife to remove the hard outer skin. Cut the pale inner cane into small sections roughly 5cm long.',
+            title: 'Prepare the oranges',
+            description: 'Roll the oranges firmly against the counter with your palm to loosen the juice sacs. Cut them in half horizontally.',
+            tip: 'Rolling the fruit makes it much easier to extract every last drop of juice.',
         },
         {
             title: 'Extract the juice',
-            description: 'For a juicer: feed pieces through a masticating juicer. Without a juicer: place pieces in a blender with 100ml water and blend on high, then strain through a fine mesh cloth, squeezing out all liquid. Discard the fibrous pulp.',
-            tip: 'Fresh sugarcane juice oxidises and loses sweetness within 30 minutes. Make just before serving.',
+            description: 'Using a manual citrus press or an electric juicer, squeeze the halves to collect the juice in a pitcher. Strain if you prefer a smooth juice, or keep the pulp for texture.',
         },
         {
-            title: 'Serve',
-            description: 'Fill glasses with ice. Pour sugarcane juice over. Squeeze half a calamansi or kumquat into each glass and add a pinch of salt if desired. Stir once and serve immediately.',
+            title: 'Season the juice',
+            description: 'Stir in the sugar (or honey) and a tiny pinch of salt until completely dissolved.',
+            tip: 'A tiny pinch of salt is the secret "local" trick to neutralizing excessive bitterness and making the sweetness pop.',
+        },
+        {
+            title: 'Chill and serve',
+            description: 'Fill two tall glasses with ice. Pour the fresh juice over the top, garnish with an orange slice, and enjoy immediately while the vitamin C is at its peak.',
         },
     ],
 };
