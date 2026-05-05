@@ -3,39 +3,60 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tra-chanh-sa',
-    title: 'Fresh Sugarcane Juice',
-    subtitle: 'Pressed in front of you, drunk in seconds. The happiest drink in Vietnam.',
-    category: 'DESSERT',
+    title: 'Lemongrass Lime Tea (Tra Chanh Sa)',
+    subtitle: 'Refreshing, citrusy, and herbal — a street-style Vietnamese iced drink with lemongrass and lime.',
+    category: 'DRINK',
     difficulty: 'Easy',
-    totalTime: '5 min',
+    totalTime: '20 min',
     rating: 4.8,
-    baseServings: 2,
+    baseServings: 4,
     heroImage: '/images/recipes/tra-chanh-sa.jpg',
-    intro: 'Nuoc mia exists at the intersection of simple and perfect. Sugarcane stalks fed through steel rollers, the pale green juice collected in a cup over ice, finished with a squeeze of kumquat or calamansi. It costs almost nothing and tastes like a Vietnamese summer afternoon. Without a commercial sugarcane press, you can extract juice at home using a knife and patience — the result is the same.',
+
+    intro: `:contentReference[oaicite:1]{index=1} is a popular Vietnamese street drink known for its refreshing balance of citrus, herbal aroma, and light sweetness.
+
+Fresh lemongrass is gently boiled to release its fragrance, then combined with black tea, lime juice, and sugar. The result is a bright, aromatic iced drink that cools the body and wakes up the senses — perfect for hot days or casual gatherings.`,
+
     ingredientSections: [
         {
-            title: 'Ingredients',
+            title: 'Tea base',
             items: [
-                { amount: 500, unit: 'g', name: 'fresh sugarcane stalks', note: 'peeled, available at Asian supermarkets' },
-                { amount: 1, unit: 'cup', name: 'ice cubes' },
-                { amount: 2, name: 'calamansi or kumquats', note: 'halved, for squeezing' },
-                { amount: 1, name: 'pinch of salt', note: 'optional, brightens flavour' },
+                { amount: 1, unit: 'L', name: 'water' },
+                { amount: 3, name: 'lemongrass stalks', note: 'crushed and cut into pieces' },
+                { amount: 3, name: 'black tea bags' },
+            ],
+        },
+        {
+            title: 'Flavoring',
+            items: [
+                { amount: 3, unit: 'tbsp', name: 'sugar' },
+                { amount: 3, name: 'limes', note: 'juiced' },
+                { amount: 1, name: 'lime', note: 'sliced for garnish' },
+                { amount: 1, name: 'ice cubes' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Prepare the sugarcane',
-            description: 'If not already peeled, use a heavy knife to remove the hard outer skin. Cut the pale inner cane into small sections roughly 5cm long.',
+            title: 'Boil lemongrass',
+            description: 'Bring water to a boil and add crushed lemongrass. Simmer for 10 minutes to release aroma and essential oils.',
+            tip: 'Crushing lemongrass before boiling helps extract maximum fragrance.',
         },
         {
-            title: 'Extract the juice',
-            description: 'For a juicer: feed pieces through a masticating juicer. Without a juicer: place pieces in a blender with 100ml water and blend on high, then strain through a fine mesh cloth, squeezing out all liquid. Discard the fibrous pulp.',
-            tip: 'Fresh sugarcane juice oxidises and loses sweetness within 30 minutes. Make just before serving.',
+            title: 'Steep tea',
+            description: 'Turn off heat, add black tea bags, and steep for 5 minutes. Remove tea bags afterward.',
         },
         {
-            title: 'Serve',
-            description: 'Fill glasses with ice. Pour sugarcane juice over. Squeeze half a calamansi or kumquat into each glass and add a pinch of salt if desired. Stir once and serve immediately.',
+            title: 'Sweeten and cool',
+            description: 'Add sugar while tea is still warm. Stir until fully dissolved, then let it cool to room temperature.',
+        },
+        {
+            title: 'Add citrus',
+            description: 'Stir in fresh lime juice once the tea has cooled to preserve brightness and acidity.',
+        },
+        {
+            title: 'Serve iced',
+            description: 'Fill glasses with ice, pour the tea over, and garnish with lime slices and lemongrass.',
         },
     ],
 };
