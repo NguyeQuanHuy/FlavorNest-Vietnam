@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/tra-chanh-sa.jpg',
 
-    intro: `:contentReference[oaicite:1]{index=1} is a popular Vietnamese street drink known for its refreshing balance of citrus, herbal aroma, and light sweetness.
+    intro: `Trà chanh sả is a popular Vietnamese street drink known for its refreshing balance of citrus, herbal aroma, and light sweetness.
 
 Fresh lemongrass is gently boiled to release its fragrance, then combined with black tea, lime juice, and sugar. The result is a bright, aromatic iced drink that cools the body and wakes up the senses — perfect for hot days or casual gatherings.`,
 
