@@ -173,7 +173,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau',
         name: 'Sweet Mung Bean Soup',
-        viet: 'Ch? ??u Xanh',
+        viet: 'Chè Đậu Xanh',
         type: 'Traditional',
         image: '/images/recipes/che-dau-xanh.jpg',
         description: 'Split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with salted coconut cream.',
