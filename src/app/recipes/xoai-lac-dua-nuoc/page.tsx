@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'xoai-lac-dua-nuoc',
     title: 'Shaken Mango with Toddy Palm (Xoai Lac Dua Nuoc)',
     subtitle: 'Sweet, sour, spicy mango shaken with chili salt and chewy toddy palm — a refreshing Vietnamese street snack.',
-    category: 'SNACK',
+    category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '10 min',
     rating: 4.9,
