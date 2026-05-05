@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'com-chien-duong-chau',
     title: 'Yangzhou Fried Rice',
     subtitle:
-        'Cơm Chiên Dương Châu — a vibrant, colorful medley of fluffy golden rice, savory lap cheong, and tender shrimp, flash-fried for that perfect smoky wok-hei.',
+        'Yangzhou Fried Rice (Cơm Chiên Dương Châu) — a vibrant, colorful medley of fluffy golden rice, savory lap cheong, and tender shrimp, flash-fried for that perfect smoky wok-hei.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
