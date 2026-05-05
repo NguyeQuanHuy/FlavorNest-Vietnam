@@ -3,59 +3,72 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'com-chien-hai-san',
-    title: 'Lemongrass Pork Banh Mi',
-    subtitle: 'A shatteringly crisp baguette — the greatest sandwich in the world.',
+    title: 'Vietnamese Seafood Fried Rice (Com Chien Hai San)',
+    subtitle: 'Wok-tossed fried rice with seafood, egg, and aromatic garlic — smoky, fluffy, and full of umami.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '40 min',
+    totalTime: '25 min',
     rating: 4.9,
-    baseServings: 4,
+    baseServings: 3,
     heroImage: '/images/recipes/com-chien-hai-san.jpg',
-    intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and more shattering, the crumb lighter, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon, fresh coriander, sliced chilli, and Maggi seasoning sauce. The result is one of the greatest street foods on earth.`,
+
+    intro: `Cơm chiên hải sản is a classic Vietnamese wok dish combining fluffy fried rice with fresh seafood, eggs, and aromatic garlic.
+The secret lies in high heat and fast tossing — each grain of rice is coated in oil, slightly toasted, and infused with seafood umami. Shrimp, squid, and scallions bring freshness, while soy sauce and fish sauce add depth.
+It’s quick, simple, but when done right — it tastes like a street-side wok exploding with flavor.`,
+
     ingredientSections: [
         {
-            title: 'Lemongrass pork',
+            title: 'Main ingredients',
             items: [
-                { amount: 400, unit: 'g', name: 'pork shoulder', note: 'thinly sliced' },
-                { amount: 2, name: 'lemongrass stalks', note: 'white part, minced' },
-                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 2, unit: 'tbsp', name: 'sugar' },
-                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 2, unit: 'cups', name: 'cooked rice', note: 'preferably cold overnight rice' },
+                { amount: 150, unit: 'g', name: 'shrimp', note: 'peeled and deveined' },
+                { amount: 150, unit: 'g', name: 'squid', note: 'cleaned and sliced' },
+                { amount: 2, name: 'eggs' },
                 { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'spring onions', note: 'chopped' },
             ],
         },
         {
-            title: 'Assembly',
+            title: 'Seasoning',
             items: [
-                { amount: 4, name: 'Vietnamese baguettes' },
-                { amount: 4, unit: 'tbsp', name: 'pork liver pate' },
-                { amount: 4, unit: 'tbsp', name: 'mayonnaise', note: 'Kewpie preferred' },
-                { amount: 80, unit: 'g', name: 'pickled daikon and carrot' },
-                { amount: 1, name: 'cucumber', note: 'cut into spears' },
-                { amount: 1, name: 'bunch fresh coriander' },
-                { amount: 2, name: 'red chillies', note: 'sliced' },
-                { amount: 1, unit: 'tsp', name: 'Maggi seasoning sauce' },
+                { amount: 1.5, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1, unit: 'tsp', name: 'sugar' },
+                { amount: 1, unit: 'pinch', name: 'black pepper' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Marinate the pork',
-            description: 'Combine lemongrass, fish sauce, sugar, oyster sauce, and garlic. Toss sliced pork to coat. Marinate at least 30 minutes.',
+            title: 'Prepare ingredients',
+            description: 'Ensure rice is cold and separated. Season shrimp and squid lightly with a pinch of salt.',
+            tip: 'Cold rice prevents clumping and creates that signature wok-fried texture.',
         },
         {
-            title: 'Grill the pork',
-            description: 'Grill over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred.',
-            tip: 'The caramel char on the pork is everything. Do not crowd the pan — cook in batches.',
+            title: 'Cook seafood',
+            description: 'Heat oil in a wok over high heat. Stir-fry shrimp and squid quickly until just cooked, then remove and set aside.',
         },
         {
-            title: 'Toast the bread',
-            description: 'Split baguettes lengthwise. Toast cut-side down in a dry pan for 1 to 2 minutes until golden and crisp.',
+            title: 'Scramble eggs',
+            description: 'In the same wok, add a bit more oil and scramble the eggs until just set. Break into pieces.',
         },
         {
-            title: 'Assemble',
-            description: 'Spread pate on one side, mayonnaise on the other. Drizzle Maggi inside. Layer grilled pork, pickled vegetables, cucumber, coriander, and chilli. Eat within 5 minutes.',
+            title: 'Fry the rice',
+            description: 'Add garlic and sauté until fragrant. Add rice and stir-fry over high heat until grains are separated and slightly toasted.',
+            tip: 'High heat is essential — it creates the smoky “wok hei” flavor.',
+        },
+        {
+            title: 'Season and combine',
+            description: 'Add soy sauce, fish sauce, sugar, and pepper. Return seafood and eggs to the wok. Toss everything together quickly.',
+        },
+        {
+            title: 'Finish',
+            description: 'Add spring onions, toss once more, and serve immediately while hot.',
         },
     ],
 };
-export default function Page() { return <RecipeLayout recipe={recipe} />; } 
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
