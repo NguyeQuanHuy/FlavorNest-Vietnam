@@ -462,6 +462,26 @@ const RECIPES: Recipe[] = [
     description: "Golden chicken pieces fried until their skin crackles like autumn leaves, then tossed in a bubbling glaze of fish sauce, garlic, sugar, and chili. The sauce clings like lacquer — salty, sweet, and slightly smoky — turning every bite into a street-side symphony. Best eaten hot, with steamed rice or sticky fingers as the only utensils required.",
     tags: ['Chicken', 'Street Food', 'Fried', 'Savory Sweet'],
     },
+    {
+    slug:'bun-mang-ga',
+    title:'Chicken Bamboo Shoot Vermicelli Soup',
+    subtitle:'Bún Măng Gà',
+    image:'/images/recipes/bun-mang-ga.jpg',
+    region:'North',    difficulty:'Medium',    time:'1.5 hrs',
+    rating:'4.7',    reviews:88,    cal:410,    tag:'Comfort Bowl',    tagColor:'#10B981',
+    description:"A clear, golden broth simmered from chicken bones and dried bamboo shoots, carrying a gentle sweetness and earthy aroma. Tender shredded chicken floats alongside crunchy bamboo strips and silky rice vermicelli, finished with scallions, herbs, and a squeeze of lime. A bowl that feels like a quiet morning after rain.",
+    tags:['Chicken','Soup','Vermicelli','Bamboo Shoot'],
+},
+{
+    slug:'com-ga-hai-nam',
+    title:'Hainanese Chicken Rice',
+    subtitle:'Cơm Gà Hải Nam',
+    image:'/images/recipes/com-ga-hai-nam.jpg',
+    region:'Southeast Asia',    difficulty:'Medium',    time:'1.5 hrs',
+    rating:'4.9',    reviews:156,    cal:590,    tag:'Iconic Classic',    tagColor:'#EF4444',
+    description:"Poached chicken with silky skin served over fragrant rice cooked in chicken fat, garlic, and ginger. Accompanied by chili sauce, ginger paste, and soy-based dipping sauce. Every grain of rice is infused with savory chicken essence, turning simplicity into quiet luxury.",
+    tags:['Chicken','Rice','Boiled','Classic'],
+},
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
