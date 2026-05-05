@@ -672,6 +672,16 @@ const RECIPES: Recipe[] = [
         description:"Minced shrimp paste wrapped around sugarcane sticks, grilled until smoky and fragrant. Sweet shrimp and juicy sugarcane create a signature Central Vietnamese delicacy often served in festive meals.",
         tags:['Shrimp','Grilled','Hue','Traditional'],
     },
+    {
+    slug:'canh-chua-ca',
+    title:'Vietnamese Sweet & Sour Fish Soup',
+    subtitle:'Canh Chua Cá',
+    image:'/images/recipes/canh-chua-ca.jpg',
+    region:'Southern',difficulty:'Medium',time:'40 mins',
+    rating:'4.8',reviews:120,cal:290,tag:'Mekong Classic',tagColor:'#06B6D4',
+    description:"A vibrant soup balancing tamarind sourness, pineapple sweetness, and the gentle richness of fresh fish. Packed with tomatoes, okra, bean sprouts, and herbs, each spoonful feels bright, tangy, and refreshing like a river breeze.",
+    tags:['Fish','Soup','Sour','Herbs'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
