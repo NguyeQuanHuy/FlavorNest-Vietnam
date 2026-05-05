@@ -3,23 +3,30 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-xeo-mien-tay',
-    title: 'Mekong Sizzling Crepe',
-    subtitle: 'The Southern version is enormous — a giant turmeric crepe that shatters when you fold it.',
+    title: 'Crispy Mekong Delta Banh Xeo',
+    subtitle: 'A giant, crackling turmeric crepe — lacy, golden, and meant to be torn, wrapped, and devoured.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-xeo-mien-tay.jpg',
-    intro: `Banh xeo mien Tay — the Mekong Delta version of the sizzling crepe — is a different beast from its Central Vietnamese cousin. Where the Central version is small and refined, this one is enormous, filling an entire 30cm pan, the batter thick enough with coconut milk to puff and blister into a crispy, golden shell. The filling is generous: fat prawns, sliced pork belly, bean sprouts, and spring onions. You eat it by tearing off pieces with your hands, wrapping them in mustard leaf with fresh herbs, and dipping in nuoc cham.`,
+
+    intro: `:contentReference[oaicite:0]{index=0} is the bold, oversized version of Vietnam’s famous sizzling crepe. Unlike the smaller Central style, this southern classic stretches across a wide pan, forming a thin, lacy crust infused with turmeric and coconut milk.
+
+The batter hits the hot oil with a sharp “xèo” — a sound that gives the dish its name — before setting into a golden, crispy shell. Inside, it’s generously filled with shrimp, pork belly, bean sprouts, and soft mung beans.
+
+It’s not eaten politely. You tear it apart with your hands, wrap it in mustard greens and a wild mix of herbs, then dip it into tangy nuoc cham. Crunch, freshness, richness — all colliding in a single bite.`,
+
     ingredientSections: [
         {
             title: 'Crepe batter',
             items: [
                 { amount: 250, unit: 'g', name: 'rice flour' },
                 { amount: 30, unit: 'g', name: 'tapioca starch' },
-                { amount: 400, unit: 'ml', name: 'coconut milk', note: 'full-fat' },
-                { amount: 150, unit: 'ml', name: 'cold water' },
+                { amount: 250, unit: 'ml', name: 'coconut milk', note: 'full-fat' },
+                { amount: 300, unit: 'ml', name: 'cold water' },
+                { amount: 50, unit: 'ml', name: 'beer', note: 'for extra crispiness' },
                 { amount: 1, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
@@ -31,6 +38,7 @@ const recipe: RecipeData = {
                 { amount: 300, unit: 'g', name: 'large prawns', note: 'peeled, deveined' },
                 { amount: 200, unit: 'g', name: 'pork belly', note: 'thinly sliced' },
                 { amount: 150, unit: 'g', name: 'bean sprouts' },
+                { amount: 50, unit: 'g', name: 'mung beans', note: 'cooked until soft' },
                 { amount: 3, name: 'shallots', note: 'thinly sliced' },
                 { amount: 1, unit: 'tbsp', name: 'fish sauce' },
             ],
@@ -38,38 +46,39 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'head mustard leaf', note: 'or large lettuce leaves' },
-                { amount: 1, name: 'bunch Vietnamese mint, perilla, and bean sprouts' },
+                { amount: 1, name: 'head mustard greens', note: 'or large lettuce leaves' },
+                { amount: 1, name: 'bunch Vietnamese herbs', note: 'mint, perilla, fish mint' },
                 { amount: 120, unit: 'ml', name: 'nuoc cham' },
             ],
         },
     ],
+
     steps: [
         {
             title: 'Make the batter',
-            description: 'Whisk rice flour, tapioca starch, coconut milk, water, turmeric, and salt until completely smooth. Rest 30 minutes. Stir in spring onions just before cooking.',
-            tip: 'Resting allows the starch to hydrate fully, producing a more even, crisper crepe.',
+            description: 'Whisk rice flour, tapioca starch, coconut milk, water, beer, turmeric, and salt until completely smooth. Let it rest for 30 minutes. Stir in spring onions just before cooking.',
+            tip: 'Resting hydrates the starch and helps create a thinner, crispier crepe with an even texture.',
         },
         {
-            title: 'Season the filling',
-            description: 'Toss prawns and pork with fish sauce. Have bean sprouts and shallots ready in separate bowls for quick assembly.',
+            title: 'Prepare the filling',
+            description: 'Toss prawns and pork with fish sauce. Keep bean sprouts, mung beans, and shallots ready in separate bowls for quick cooking.',
         },
         {
             title: 'Cook the crepe',
-            description: 'Heat a 30cm non-stick pan over high heat. Add 2 tablespoons of oil. Add 3 to 4 pork slices and 4 to 5 prawns. Cook 1 minute. Add a handful of shallots and bean sprouts. Pour in enough batter to thinly coat the pan — swirl immediately. Cover with a lid for 3 minutes.',
-            tip: 'The pan must be very hot and well-oiled. Insufficient heat produces a soft, pale crepe. You want immediate sizzle the moment the batter hits the pan.',
+            description: 'Heat a 30cm pan over high heat. Add 2 tablespoons of oil. Add pork and prawns, cook briefly. Add shallots, bean sprouts, and mung beans. Pour in a thin layer of batter and immediately swirl to coat the pan.',
+            tip: 'The pan must be very hot — you should hear a sharp sizzle the moment the batter hits. That sound defines the dish.',
         },
         {
             title: 'Crisp uncovered',
-            description: 'Remove lid. Cook uncovered for 3 to 4 more minutes until the edges are deep golden and curl away from the pan. The underside should be uniformly crispy and release cleanly.',
+            description: 'Cover briefly for 1–2 minutes, then remove the lid. Continue cooking uncovered for 3–4 minutes until the edges turn deep golden and lift from the pan. The bottom should be evenly crisp.',
         },
         {
             title: 'Fold and serve',
-            description: 'Fold the crepe in half and slide onto a large plate. Serve immediately with mustard leaves, fresh herbs, and nuoc cham. Tear pieces off the crepe at the table, wrap in a leaf with herbs, and dip. Eat fast — the crunch does not last.',
+            description: 'Fold the crepe in half and slide onto a plate. Serve immediately. Tear pieces by hand, wrap in mustard greens with herbs, and dip into nuoc cham. Eat fast — the crunch fades quickly.',
         },
     ],
 };
 
 export default function Page() {
     return <RecipeLayout recipe={recipe} />;
-} 
+}
