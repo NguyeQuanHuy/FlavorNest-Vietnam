@@ -492,6 +492,26 @@ const RECIPES: Recipe[] = [
     description: "A shimmering green-gold oil infused with sizzling scallions and a pinch of salt, poured over grilled meats, rice, or noodles. The hot oil wakes up the aroma instantly — fragrant, savory, and almost hypnotic — turning even the simplest dish into something alive.",
     tags: ['Scallion', 'Oil', 'Condiment', 'Essential'],
     },
+    {
+    slug:'suon-rim-trung-cut',
+    title:'Caramel Braised Pork Ribs with Quail Eggs',
+    subtitle:'Sườn Rim Trứng Cút',
+    image:'/images/recipes/suon-rim-trung-cut.jpg',
+    region:'Southern',difficulty:'Medium',time:'1 hr',
+    rating:'4.8',reviews:132,cal:610,tag:'Home Comfort',tagColor:'#F97316',
+    description:"Tender pork ribs slowly simmered in a glossy caramel fish sauce glaze until deep amber and melt-in-mouth soft. Quail eggs soak up the rich sauce, turning into savory sweet bites that pair perfectly with hot rice.",
+    tags:['Pork','Eggs','Braised','Comfort Food'],
+    },
+    {
+    slug:'sup-mang-cua',
+    title:'Crab Bamboo Shoot Soup',
+    subtitle:'Súp Măng Cua',
+    image:'/images/recipes/sup-mang-cua.jpg',
+    region:'Central',difficulty:'Medium',time:'1.5 hrs',
+    rating:'4.7',reviews:96,cal:320,tag:'Light Elegance',tagColor:'#06B6D4',
+    description:"Clear broth with sweet crab meat and bamboo shoots, layered with egg ribbons and gentle pepper warmth. A refined, light soup often served in family gatherings and special meals.",
+    tags:['Crab','Soup','Bamboo Shoot','Light'],
+    }
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
