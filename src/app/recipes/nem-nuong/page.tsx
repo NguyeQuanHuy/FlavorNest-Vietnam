@@ -1,77 +1,83 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
-    slug: 'banh-beo-phu-yen',
-    title: 'Phu Yen Steamed Rice Cakes (Bánh Bèo Phú Yên)',
-    subtitle:
-        'Bánh Bèo Phú Yên — dainty, warm steamed rice cakes served in individual ceramic saucers, topped with savory shrimp flakes, crispy bread, and fragrant chive oil.',
+    slug: 'nem-nuong',
+    title: 'Vietnamese Grilled Pork Skewers (Nem Nuong)',
+    subtitle: 'Smoky, juicy, and lightly caramelized — grilled pork skewers wrapped in herbs and dipped in rich sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
-    heroImage: '/images/recipes/banh-beo-phu-yen.jpg',
-    intro:
-        'While Bánh Bèo is famous across Vietnam, the version from the coastal province of Phú Yên has a soulful, rustic charm. Unlike the cold, firm versions elsewhere, Bánh Bèo Phú Yên is best enjoyed steaming hot. Each tiny saucer holds a silky, melt-in-your-mouth rice cake topped with "chà bông" (pork floss) or toasted shrimp flakes, but the defining feature is the generous drizzle of hẹ (chive) oil instead of the usual scallion oil. It’s a delicate balance of earthy rice, savory toppings, and a light, spicy-sweet dipping sauce.',
+    heroImage: '/images/recipes/nem-nuong.jpg',
+
+    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnam’s most addictive street foods — smoky, juicy pork grilled over charcoal until lightly charred and caramelized at the edges.
+
+The meat is finely ground and seasoned with garlic, fish sauce, sugar, and a touch of starch for bounce, then shaped onto skewers and grilled until fragrant. But the real magic happens at the table: the pork is wrapped in rice paper with fresh herbs, pickled vegetables, and crisp lettuce, then dipped into a thick, savory peanut sauce.
+
+It’s not just a dish — it’s a hands-on experience. Sweet, smoky, fresh, and rich all in one bite.`,
+
     ingredientSections: [
         {
-            title: 'Rice Cake Batter',
+            title: 'Pork mixture',
             items: [
-                { amount: 200, unit: 'g', name: 'rice flour' },
-                { amount: 20, unit: 'g', name: 'tapioca starch', note: 'for a slight chewiness' },
-                { amount: 300, unit: 'ml', name: 'room temperature water' },
-                { amount: 300, unit: 'ml', name: 'boiling water' },
-                { amount: 0.5, unit: 'tsp', name: 'salt' },
-            ],
-        },
-        {
-            title: 'Toppings',
-            items: [
-                { amount: 100, unit: 'g', name: 'dried shrimp', note: 'soaked and finely pulsed' },
-                { amount: 50, unit: 'g', name: 'pork floss (chà bông)' },
-                { amount: 1, unit: 'cup', name: 'fresh chives', note: 'finely chopped' },
-                { amount: 4, unit: 'tbsp', name: 'neutral oil' },
-                { amount: 1, unit: 'slice', name: 'bread', note: 'diced and fried into croutons' },
-            ],
-        },
-        {
-            title: 'Sweet Fish Sauce',
-            items: [
+                { amount: 500, unit: 'g', name: 'ground pork', note: 'slightly fatty for juiciness' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
                 { amount: 2, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 2, unit: 'tbsp', name: 'sugar' },
-                { amount: 10, unit: 'tbsp', name: 'warm water' },
-                { amount: 1, unit: 'tsp', name: 'minced chili and garlic' },
+                { amount: 1.5, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+                { amount: 1, unit: 'tbsp', name: 'tapioca starch' },
+                { amount: 1, unit: 'tbsp', name: 'neutral oil' },
+                { amount: 1, unit: 'tsp', name: 'black pepper' },
+            ],
+        },
+        {
+            title: 'To serve',
+            items: [
+                { amount: 12, name: 'rice paper sheets' },
+                { amount: 1, name: 'head lettuce' },
+                { amount: 1, name: 'bunch Vietnamese herbs', note: 'mint, perilla, cilantro' },
+                { amount: 1, name: 'cucumber', note: 'julienned' },
+                { amount: 1, name: 'carrot', note: 'pickled or fresh' },
+            ],
+        },
+        {
+            title: 'Peanut dipping sauce',
+            items: [
+                { amount: 2, unit: 'tbsp', name: 'oil' },
+                { amount: 2, name: 'garlic cloves', note: 'minced' },
+                { amount: 200, unit: 'ml', name: 'water' },
+                { amount: 2, unit: 'tbsp', name: 'peanut butter' },
+                { amount: 1, unit: 'tbsp', name: 'hoisin sauce' },
+                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1, unit: 'tsp', name: 'sugar' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Mix the batter',
-            description: 'Combine rice flour, tapioca starch, and salt with room temperature water. Stir well, then slowly whisk in the boiling water. Let the batter rest for at least 30 minutes.',
-            tip: 'Letting the batter rest allows the flour to fully hydrate, resulting in a smoother, silkier cake texture.',
+            title: 'Prepare the pork',
+            description: 'In a bowl, combine ground pork, garlic, fish sauce, sugar, oyster sauce, tapioca starch, oil, and black pepper. Mix thoroughly until the texture becomes slightly sticky and cohesive. Chill for 20 minutes.',
+            tip: 'Mixing well develops a springy texture. Slight chilling helps the meat hold its shape when grilling.',
         },
         {
-            title: 'Prepare the toppings',
-            description: 'Sauté the pulsed dried shrimp in a pan until dry and fluffy. For the chive oil, heat oil until shimmering and pour it over the freshly chopped chives.',
+            title: 'Shape onto skewers',
+            description: 'Take a handful of pork mixture and press it firmly around skewers into elongated sausage shapes. Keep the thickness even for consistent cooking.',
         },
         {
-            title: 'Steam the cakes',
-            description: 'Place empty ceramic saucers in a steamer for 2 minutes to get them hot. Stir the batter and pour a thin layer into each saucer. Steam on high heat for 6–8 minutes.',
-            tip: 'A hot saucer ensures the cake doesn’t stick and creates a slight "dimple" in the center to hold the sauce.',
+            title: 'Grill the skewers',
+            description: 'Grill over medium-hot charcoal for 8–10 minutes, turning occasionally, until fully cooked with light charring on the edges.',
+            tip: 'Charcoal grilling gives the signature smoky aroma. A grill pan works, but you’ll miss that deep street-food flavor.',
         },
         {
-            title: 'Make the dipping sauce',
-            description: 'Dissolve sugar in warm water, add fish sauce and lime juice. The sauce for Bánh Bèo Phú Yên should be light and dilute, not overly salty.',
+            title: 'Make the peanut sauce',
+            description: 'Heat oil in a small pan. Add garlic and sauté until fragrant. Add water, peanut butter, hoisin sauce, fish sauce, and sugar. Stir until smooth and slightly thickened.',
         },
         {
-            title: 'Assemble',
-            description: 'While the cakes are still hot in their saucers, add a drizzle of chive oil, a sprinkle of shrimp flakes, pork floss, and a few crispy bread croutons.',
-        },
-        {
-            title: 'Serve',
-            description: 'Serve the saucers on a large tray. Use a small bamboo paddle or spoon to loosen the cake, drizzle a little fish sauce over the top, and eat in one bite.',
+            title: 'Assemble and serve',
+            description: 'Serve the grilled pork with rice paper, lettuce, herbs, and vegetables. To eat, place pork and fillings onto rice paper, roll tightly, and dip into the peanut sauce.',
         },
     ],
 };
