@@ -452,6 +452,16 @@ const RECIPES: Recipe[] = [
         description: "The dawn breakfast of Phú Yên — feather-light woven mats of rice vermicelli served alongside a bowl of silky pork congee studded with offal, fresh herbs and a crack of black pepper. The vermicelli arrives painted with scallion oil; the congee carries the depth of bones simmered since 4am. Eaten together, never apart.",
         tags: ['Pork', 'Rice', 'Congee', 'Hometown'],
     },
+    {
+    slug: 'ga-chien-nuoc-mam',
+    title: 'Crispy Chicken Glazed in Fish Sauce Caramel',
+    subtitle: 'Gà Chiên Nước Mắm',
+    image: '/images/recipes/ga-chien-nuoc-mam.jpg',
+    region: 'South', difficulty: 'Medium', time: '45 mins',
+    rating: '4.8',    reviews: 121,    cal: 520,    tag: 'Street Food Legend',    tagColor: '#F59E0B',
+    description: "Golden chicken pieces fried until their skin crackles like autumn leaves, then tossed in a bubbling glaze of fish sauce, garlic, sugar, and chili. The sauce clings like lacquer — salty, sweet, and slightly smoky — turning every bite into a street-side symphony. Best eaten hot, with steamed rice or sticky fingers as the only utensils required.",
+    tags: ['Chicken', 'Street Food', 'Fried', 'Savory Sweet'],
+    },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
