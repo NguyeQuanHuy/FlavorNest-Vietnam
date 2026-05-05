@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'com-tam-suon-bi-cha',
     title: 'Sweet Leaf Soup with Minced Pork',
     subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+        'Vietnamese broken rice topped with grilled pork, shredded skin, and egg meatloaf.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -14,33 +14,65 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/com-tam-suon-bi-cha.jpg',
     intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
-    ingredientSections: [
-        {
-            title: 'Broth and pork',
-            items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
-            ],
-        },
-        {
-            title: 'Sweet leaves',
-            items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
-            ],
-        },
-        {
-            title: 'Finish',
-            items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
-            ],
-        },
-    ],
+        'Cơm Tấm Sườn Bì Chả is a iconic Saigon dish featuring fragrant broken rice served with a smoky grilled pork chop, shredded pork skin, and a savory steamed egg meatloaf.',
+ingredientSections: [
+    {
+        title: 'Broken Rice',
+        items: [
+            { amount: 500, unit: 'g', name: 'broken rice (gạo tấm)' },
+            { amount: 600, unit: 'ml', name: 'water' },
+            { amount: 0.5, unit: 'tsp', name: 'salt' },
+            { amount: 1, unit: 'tsp', name: 'cooking oil' },
+        ],
+    },
+    {
+        title: 'Grilled Pork Chops (Sườn Nướng)',
+        items: [
+            { amount: 4, unit: 'pieces', name: 'pork chops', note: 'about 600-700g, slightly pounded' },
+            { amount: 2, unit: 'tbsp', name: 'minced lemongrass' },
+            { amount: 1, unit: 'tbsp', name: 'minced garlic' },
+            { amount: 1, unit: 'tbsp', name: 'minced shallots' },
+            { amount: 2, unit: 'tbsp', name: 'honey or condensed milk' },
+            { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+            { amount: 1, unit: 'tbsp', name: 'oyster sauce' },
+            { amount: 1, unit: 'tbsp', name: 'oil' },
+            { amount: 0.5, unit: 'tsp', name: 'dark soy sauce', note: 'for color' },
+        ],
+    },
+    {
+        title: 'Steamed Egg Meatloaf (Chả Trứng)',
+        items: [
+            { amount: 200, unit: 'g', name: 'minced pork' },
+            { amount: 4, unit: 'large', name: 'eggs', note: 'keep 2 yolks aside for topping' },
+            { amount: 20, unit: 'g', name: 'dried glass noodles', note: 'soaked and chopped' },
+            { amount: 15, unit: 'g', name: 'dried wood ear mushrooms', note: 'soaked and minced' },
+            { amount: 1, unit: 'tbsp', name: 'minced shallots' },
+            { amount: 1, unit: 'tsp', name: 'fish sauce' },
+            { amount: 0.5, unit: 'tsp', name: 'sugar' },
+            { amount: 0.5, unit: 'tsp', name: 'pepper' },
+        ],
+    },
+    {
+        title: 'Shredded Pork Skin (Bì)',
+        items: [
+            { amount: 150, unit: 'g', name: 'pork skin', note: 'boiled and thinly sliced' },
+            { amount: 100, unit: 'g', name: 'pork loin', note: 'boiled and shredded' },
+            { amount: 30, unit: 'g', name: 'roasted rice powder (thính)' },
+            { amount: 1, unit: 'tsp', name: 'minced garlic' },
+            { amount: 0.25, unit: 'tsp', name: 'salt and sugar' },
+        ],
+    },
+    {
+        title: 'Garnish and Sauce',
+        items: [
+            { amount: 100, unit: 'g', name: 'scallions', note: 'chopped for scallion oil' },
+            { amount: 3, unit: 'tbsp', name: 'neutral oil' },
+            { amount: 1, unit: 'cup', name: 'pickled daikon and carrots' },
+            { amount: 1, unit: 'large', name: 'cucumber', note: 'sliced' },
+            { amount: 0.5, unit: 'cup', name: 'prepared sweet fish sauce', note: 'fish sauce, sugar, lime, chili, garlic' },
+        ],
+    },
+],
     steps: [
         {
             title: 'Prepare the Broken Rice (Cơm Tấm)',
