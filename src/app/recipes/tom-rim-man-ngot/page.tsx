@@ -1,72 +1,65 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tom-rim-man-ngot',
-    title: 'Sweet Leaf Soup with Minced Pork',
-    subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+    title: 'Sweet & Savory Caramelized Shrimp (Tom Rim Man Ngot)',
+    subtitle: 'Glossy, sticky, and deeply flavorful shrimp coated in a sweet-savory caramel sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.7,
-    baseServings: 4,
+    totalTime: '25 min',
+    rating: 4.9,
+    baseServings: 3,
     heroImage: '/images/recipes/tom-rim-man-ngot.jpg',
-    intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+
+    intro: `Tôm rim mặn ngọt is a classic Vietnamese home-cooked dish where shrimp are simmered in a glossy caramel sauce made from fish sauce, sugar, and aromatics.
+
+The result is a perfect balance of salty, sweet, and umami flavors. The shrimp become shiny, slightly chewy, and deeply coated in a rich glaze that clings beautifully to steamed rice.
+
+Simple ingredients, fast cooking, but maximum comfort food energy.`,
+
     ingredientSections: [
         {
-            title: 'Broth and pork',
+            title: 'Main ingredients',
             items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
-            ],
-        },
-        {
-            title: 'Sweet leaves',
-            items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
-            ],
-        },
-        {
-            title: 'Finish',
-            items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
+                { amount: 400, unit: 'g', name: 'shrimp', note: 'peeled and deveined' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'shallots', note: 'finely chopped' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 2.5, unit: 'tbsp', name: 'sugar' },
+                { amount: 3, unit: 'tbsp', name: 'water' },
+                { amount: 1, unit: 'tbsp', name: 'oil' },
+                { amount: 1, unit: 'pinch', name: 'black pepper' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Make caramel base',
+            description: 'Heat oil in a pan over medium heat. Add sugar and cook until it melts and turns light amber.',
+            tip: 'Do not burn the caramel — it should be golden, not dark brown.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Aromatics',
+            description: 'Add garlic and shallots, stir quickly until fragrant.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Cook shrimp',
+            description: 'Add shrimp and stir-fry until they start to turn pink.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Add seasoning',
+            description: 'Pour in fish sauce and water. Stir well so shrimp are coated evenly in the caramel sauce.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            title: 'Reduce sauce',
+            description: 'Simmer until sauce thickens and becomes glossy, coating the shrimp.',
+            tip: 'The sauce should cling to the shrimp like a glaze, not remain watery.',
         },
         {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Finish',
+            description: 'Add black pepper, toss once more, and serve hot with steamed rice.',
         },
     ],
 };
