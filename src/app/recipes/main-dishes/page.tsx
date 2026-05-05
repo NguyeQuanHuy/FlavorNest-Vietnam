@@ -532,6 +532,36 @@ const RECIPES: Recipe[] = [
         description:"Thin slices of bitter melon stir-fried with fluffy eggs, balancing earthy bitterness with soft savory richness. A dish that feels bold at first bite, then strangely addictive as the flavors settle together.",
         tags:['Egg','Bitter Melon','Stir-fry','Vegetable'],
     },
+    {
+        slug:'thit-bo-xao-bap-cai-ca-rot',
+        title:'Stir-Fried Beef with Cabbage & Carrot',
+        subtitle:'Thịt Bò Xào Bắp Cải Cà Rốt',
+        image:'/images/recipes/thit-bo-xao-bap-cai-ca-rot.jpg',
+        region:'Northern',difficulty:'Easy',time:'25 mins',
+        rating:'4.6',reviews:72,cal:340,tag:'Quick Stir-Fry',tagColor:'#F59E0B',
+        description:"Tender beef slices flash-fried over high heat with crunchy cabbage and sweet carrots, locking in a smoky wok aroma. A simple but vibrant dish where every bite carries crisp vegetables wrapped in savory beef juices.",
+        tags:['Beef','Vegetables','Stir-fry','Quick'],
+    },
+    {
+        slug:'pho-xao-bo',
+        title:'Stir-Fried Beef Pho Noodles',
+        subtitle:'Phở Xào Bò',
+        image:'/images/recipes/pho-xao-bo.jpg',
+        region:'Northern',difficulty:'Medium',time:'30 mins',
+        rating:'4.7',reviews:118,cal:520,tag:'Wok Noodles',tagColor:'#3B82F6',
+        description:"Wide pho noodles stir-fried in a hot wok with marinated beef, garlic, and soy sauce until slightly charred at the edges. A chewy, smoky twist on traditional pho that feels both familiar and new.",
+        tags:['Beef','Noodles','Stir-fry','Wok'],
+    },
+    {
+        slug:'bo-tai-chanh',
+        title:'Vietnamese Lime Cured Beef',
+        subtitle:'Bò Tái Chanh',
+        image:'/images/recipes/bo-tai-chanh.jpg',
+        region:'Northern',difficulty:'Medium',time:'40 mins',
+        rating:'4.7',reviews:91,cal:280,tag:'Fresh & Tangy',tagColor:'#10B981',
+        description:"Thinly sliced beef lightly ‘cooked’ by lime juice, mixed with onions, herbs, peanuts, and a hint of chili. Fresh, tangy, and slightly raw in spirit — a refreshing dish that wakes up the palate.",
+        tags:['Beef','Lime','Fresh','Salad'],
+    }
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
