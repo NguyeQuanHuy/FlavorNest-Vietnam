@@ -393,7 +393,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-troi-nuoc-nhan-dau-xanh',
         name: 'Sticky Rice Balls in Ginger',
-        viet: 'Bánh Trôi Nước Nh?n ??u Xanh',
+        viet: 'Bánh Trôi Nước Nhân Đậu Xanh',
         type: 'Traditional',
         image: '/images/recipes/banh-troi-nuoc-nhan-dau-xanh.jpg',
         description: 'Glutinous rice balls filled with mung bean floating in a warm, spicy ginger and rock sugar syrup.',
@@ -406,6 +406,23 @@ const DESSERTS: Dessert[] = [
         cal: 340,
         tags: ['Ginger', 'Warm', 'Traditional'],
         isSignature: false,
+    },
+    {
+        slug:'banh-khoai-mi-nuong',
+        name:'Baked Cassava Cake',
+        viet:'Bánh Khoai Mì Nướng',
+        type:'Traditional',
+        image:'/images/recipes/banh-khoai-mi-nuong.jpg',
+        description:'A chewy baked cassava cake infused with coconut milk, creating a golden crust outside and a soft, slightly elastic center inside.',
+        story:'A rustic Vietnamese dessert often shared in family gatherings, bringing the nostalgic taste of coconut and cassava from simple countryside kitchens.',
+        prepTime:'15 min',
+        cookTime:'45 min',
+        totalTime:'1 hr',
+        servings:6,
+        difficulty:'Easy',
+        cal:380,
+        tags:['Cassava','Coconut','Baked','Dessert'],
+        isSignature:false,
     },
 ]
 
