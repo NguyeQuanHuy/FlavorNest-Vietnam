@@ -31,17 +31,6 @@ const STORIES = [
         readTime: '7 min',
         accent: '#166534',
     },
-    {
-        slug: 'a-taste-of-hue-imperial-cuisine',
-        category: 'Heritage',
-        title: 'A Taste of Hue Imperial Cuisine',
-        excerpt: "The Nguyen emperors demanded every meal be a ceremony. Hue's royal kitchens prepared fifty dishes per sitting — each a meditation on colour, balance and meaning.",
-        image: '/recipes/bunbohue.jpg',
-        imageAlt: 'Beautiful Hue imperial Vietnamese dishes',
-        tag: 'Imperial Heritage',
-        readTime: '8 min',
-        accent: '#D97706',
-    },
 ]
 
 export default function KitchenStories() {
