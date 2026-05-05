@@ -673,14 +673,14 @@ const RECIPES: Recipe[] = [
         tags:['Shrimp','Grilled','Hue','Traditional'],
     },
     {
-    slug:'canh-chua-ca',
-    title:'Vietnamese Sweet & Sour Fish Soup',
-    subtitle:'Canh Chua Cá',
-    image:'/images/recipes/canh-chua-ca.jpg',
-    region:'Southern',difficulty:'Medium',time:'40 mins',
-    rating:'4.8',reviews:120,cal:290,tag:'Mekong Classic',tagColor:'#06B6D4',
-    description:"A vibrant soup balancing tamarind sourness, pineapple sweetness, and the gentle richness of fresh fish. Packed with tomatoes, okra, bean sprouts, and herbs, each spoonful feels bright, tangy, and refreshing like a river breeze.",
-    tags:['Fish','Soup','Sour','Herbs'],
+        slug:'canh-chua-ca-loc',
+        title:'Snakehead Fish Sweet & Sour Soup',
+        subtitle:'Canh Chua Cá Lóc',
+        image:'/images/recipes/canh-chua-ca-loc.jpg',
+        region:'Southern',difficulty:'Medium',time:'45 mins',
+        rating:'4.8',reviews:128,cal:310,tag:'River Classic',tagColor:'#06B6D4',
+        description:"A signature Southern Vietnamese soup made with tender snakehead fish simmered in tamarind broth. Pineapple, tomatoes, okra, bean sprouts, and herbs create a lively balance of sour, sweet, and savory notes — like a full Mekong river in one bowl.",
+        tags:['Fish','Soup','Tamarind','Herbs'],
     },
 ]
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
