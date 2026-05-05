@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'bun-bo-hue',
     title: 'Bun Bo Hue (Vietnamese Spicy Beef Noodle Soup)',
     subtitle: 'Rich, spicy, and deeply aromatic beef noodle soup from Hue — bold lemongrass broth with tender meat and pork hock.',
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '120 min',
     rating: 5.0,
