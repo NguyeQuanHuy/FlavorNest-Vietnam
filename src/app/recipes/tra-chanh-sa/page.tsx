@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'tra-chanh-sa',
     title: 'Lemongrass Lime Tea (Tra Chanh Sa)',
     subtitle: 'Refreshing, citrusy, and herbal — a street-style Vietnamese iced drink with lemongrass and lime.',
-    category: 'DRINK',
+    category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '20 min',
     rating: 4.8,
