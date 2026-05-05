@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'mo-hanh',
     title: 'Scallion Oil (Mo Hanh)',
     subtitle: 'Fragrant green scallion oil used as a Vietnamese topping to elevate grilled, steamed, and noodle dishes.',
-    category: 'CONDIMENT',
+    category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '10 min',
     rating: 4.9,
