@@ -1,72 +1,71 @@
 'use client';
-
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-nuong-giay-bac',
-    title: 'Sweet Leaf Soup with Minced Pork',
-    subtitle:
-        'Canh Rau Ngót Thịt Băm — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+    title: 'Foil-Baked Fish (Ca Nuong Giay Bac)',
+    subtitle: 'Juicy, aromatic fish baked in foil with herbs, garlic, and a savory marinade.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
-    totalTime: '20 min',
-    rating: 4.7,
-    baseServings: 4,
+    totalTime: '45 min',
+    rating: 4.9,
+    baseServings: 3,
     heroImage: '/images/recipes/ca-nuong-giay-bac.jpg',
-    intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+
+    intro: `Cá nướng giấy bạc is a popular Vietnamese home-style and restaurant dish where whole fish is wrapped in foil with herbs, garlic, and seasoning, then baked or grilled until tender and juicy.
+
+The foil locks in moisture and aroma, allowing the fish to steam in its own juices while absorbing the flavors of lemongrass, onion, and fish sauce. The result is soft, fragrant fish that flakes easily and is full of savory depth.`,
+
     ingredientSections: [
         {
-            title: 'Broth and pork',
+            title: 'Main ingredients',
             items: [
-                { amount: 1.2, unit: 'L', name: 'water or light pork stock' },
-                { amount: 200, unit: 'g', name: 'minced pork', note: '20% fat' },
-                { amount: 2, name: 'shallots', note: 'minced' },
-                { amount: 1, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 0.5, unit: 'tsp', name: 'sea salt' },
-                { amount: 0.25, unit: 'tsp', name: 'white pepper' },
+                { amount: 1, name: 'whole fish', note: 'tilapia, seabass, or carp' },
+                { amount: 3, name: 'lemongrass stalks', note: 'crushed and cut' },
+                { amount: 3, name: 'garlic cloves', note: 'minced' },
+                { amount: 2, name: 'shallots', note: 'sliced' },
+                { amount: 1, name: 'tomato', note: 'sliced' },
+                { amount: 1, name: 'onion', note: 'sliced' },
             ],
         },
         {
-            title: 'Sweet leaves',
+            title: 'Marinade',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
-            ],
-        },
-        {
-            title: 'Finish',
-            items: [
-                { amount: 1, unit: 'tsp', name: 'neutral oil' },
-                { amount: 0.25, unit: 'tsp', name: 'freshly cracked black pepper' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'sugar' },
+                { amount: 1, unit: 'tbsp', name: 'oil' },
+                { amount: 1, unit: 'tsp', name: 'black pepper' },
+                { amount: 1, name: 'lime', note: 'juice' },
             ],
         },
     ],
+
     steps: [
         {
-            title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            title: 'Prepare the fish',
+            description: 'Clean the fish thoroughly and make a few diagonal cuts on both sides to help absorb marinade.',
         },
         {
-            title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            title: 'Make marinade',
+            description: 'Mix fish sauce, soy sauce, sugar, oil, black pepper, and lime juice.',
         },
         {
-            title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            title: 'Marinate',
+            description: 'Coat the fish evenly with marinade. Stuff lemongrass, garlic, shallots, tomato, and onion inside the fish and let rest for 20–30 minutes.',
         },
         {
-            title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            title: 'Wrap in foil',
+            description: 'Wrap the fish tightly in aluminum foil to lock in moisture and flavor.',
+            tip: 'Seal the foil well to keep steam inside — this is what makes the fish juicy.',
         },
         {
-            title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            title: 'Bake or grill',
+            description: 'Bake at 200°C for 25–30 minutes or grill over medium heat until fully cooked.',
         },
         {
-            title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            title: 'Serve',
+            description: 'Carefully open the foil and serve hot with rice, herbs, or dipping sauce.',
         },
     ],
 };
