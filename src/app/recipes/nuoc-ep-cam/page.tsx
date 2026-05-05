@@ -7,7 +7,7 @@ const recipe: RecipeData = {
     title: 'Freshly Squeezed Orange Juice (Nước Cam Ép)',
     subtitle:
         'Freshly Squeezed Orange Juice — a refreshing, vitamin-packed glass of pure sunshine, balanced with a hint of sweetness and a pinch of salt.',
-    category: 'BEVERAGE',
+    category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '5 min',
     rating: 4.8,
