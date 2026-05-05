@@ -31,7 +31,7 @@ Crispy fried chicken pieces are tossed in a caramelized fish sauce glaze made fr
                 { amount: 50, unit: 'g', name: 'cornstarch' },
                 { amount: 50, unit: 'g', name: 'all-purpose flour' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
-                { amount: 1, unit: 'egg' },
+                { amount: 1, name: 'egg' },
                 { amount: 100, unit: 'ml', name: 'cold water' },
             ],
         },
