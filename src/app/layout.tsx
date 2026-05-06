@@ -108,6 +108,14 @@ export default function RootLayout({
         <AuthProvider>
           <FavoritesProvider>
             <Navbar />
+            <noscript>
+              <nav aria-label="Main navigation" style={{ padding: '12px 24px', background: '#2D1A0E', display: 'flex', gap: 24 }}>
+                <a href="/" style={{ color: '#F5EDE3', fontWeight: 700 }}>FlavorNest Vietnam</a>
+                <a href="/recipes" style={{ color: '#F5EDE3' }}>Recipes</a>
+                <a href="/stories" style={{ color: '#F5EDE3' }}>Stories</a>
+                <a href="/about" style={{ color: '#F5EDE3' }}>About</a>
+              </nav>
+            </noscript>
             <ReadingProgress />
             <main className="flex-1">{children}</main>
             <Footer />
