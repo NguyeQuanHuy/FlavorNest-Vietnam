@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Utensils, Clock, Globe, Star } from 'lucide-react'
+import { Utensils, Clock, Globe, Star, Flame, Snowflake } from 'lucide-react'
 import { useFavorites } from '@/hooks/useFavorites'
 
 interface Recipe {
@@ -304,7 +304,7 @@ const RECIPES: Recipe[] = [
 ]
 
 const TYPE_FILTERS = ['All', 'Coffee', 'Tea', 'Smoothie', 'Traditional']
-const TEMP_FILTERS = ['All Drinks', 'Hot ☕', 'Cold 🧊']
+const TEMP_FILTERS = ['All Drinks', 'Hot', 'Cold']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
 
 function HeartBtn({ recipe }: { recipe: Recipe }) {
@@ -350,7 +350,7 @@ export default function DrinksPage() {
 
     const filtered = useMemo(() => RECIPES.filter(r => {
         const tMatch = type === 'All' || r.type === type
-        const tempMatch = temp === 'All Drinks' || (temp === 'Hot ☕' && !r.cold) || (temp === 'Cold 🧊' && r.cold)
+        const tempMatch = temp === 'All Drinks' || (temp === 'Hot' && !r.cold) || (temp === 'Cold' && r.cold)
         return tMatch && tempMatch
     }), [type, temp])
 
@@ -425,7 +425,14 @@ export default function DrinksPage() {
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Type</span>
                     {TYPE_FILTERS.map(f => <button key={f} onClick={() => setType(f)} className={`pill ${type === f ? 'on' : ''}`}>{f}</button>)}
                     <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 6px', flexShrink: 0 }} />
-                    {TEMP_FILTERS.map(f => <button key={f} onClick={() => setTemp(f)} className={`pill ${temp === f ? 'on' : ''}`}>{f}</button>)}
+                    {TEMP_FILTERS.map(f => (
+                    <button key={f} onClick={() => setTemp(f)} className={`pill ${temp === f ? 'on' : ''}`}
+                        style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                        {f === 'Hot' && <Flame size={13} strokeWidth={2} />}
+                        {f === 'Cold' && <Snowflake size={13} strokeWidth={2} />}
+                        {f}
+                    </button>
+                ))}
                     <span style={{ marginLeft: 'auto', fontSize: 13, color: 'rgba(75,46,26,0.38)', flexShrink: 0, fontWeight: 500 }}>{filtered.length} drinks</span>
                 </div>
             </div>
@@ -444,7 +451,12 @@ export default function DrinksPage() {
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 14, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.07em', textTransform: 'uppercase', padding: '5px 13px', borderRadius: 100 }}>{recipe.tag}</div>
                                         <div style={{ position: 'absolute', top: 14, right: 14, background: recipe.cold ? 'rgba(2,132,199,0.85)' : 'rgba(180,83,9,0.85)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 11px', borderRadius: 100 }}>
-                                            {recipe.cold ? '🧊 Cold' : '☕ Hot'}
+                                            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                                                {recipe.cold
+                                                    ? <><Snowflake size={11} strokeWidth={2.5} />Cold</>
+                                                    : <><Flame size={11} strokeWidth={2.5} />Hot</>
+                                                }
+                                            </span>
                                         </div>
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
