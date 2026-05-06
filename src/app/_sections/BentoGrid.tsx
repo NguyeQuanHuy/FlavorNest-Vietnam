@@ -103,7 +103,7 @@ const STORIES: StoryItem[] = [
     categoryColor: '#166534',
     title: 'Secrets of the South: Bánh Xèo',
     excerpt: `"Xèo" — that violent, joyful sizzle as rice batter meets a white-hot pan. The South's crispiest secret.`,
-    image: '/images/recipes/banh-xeo.jpg',
+    image: '/images/recipes/banh-xeo-mien-nam.jpg',
     readTime: '5 min read',
   },
   {
