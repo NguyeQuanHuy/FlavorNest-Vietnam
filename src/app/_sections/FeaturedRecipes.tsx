@@ -48,7 +48,7 @@ export default function FeaturedRecipes({ recipes }: { recipes: any[] }) {
     const scroll = (dir: 'left' | 'right') => {
         const el = scrollRef.current
         if (!el) return
-        el.scrollBy({ left: dir === 'left' ? -380 : 380, behavior: 'smooth' })
+        el.scrollBy({ left: dir === 'left' ? -500 : 500, behavior: 'smooth' })
         setTimeout(() => {
             setCanLeft(el.scrollLeft > 10)
             setCanRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10)
@@ -134,14 +134,14 @@ export default function FeaturedRecipes({ recipes }: { recipes: any[] }) {
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, margin: '-50px' }}
-                                style={{ minWidth: 300, maxWidth: 360, flex: '0 0 auto', scrollSnapAlign: 'start' }}
+                                style={{ minWidth: 220, maxWidth: 260, flex: '0 0 auto', scrollSnapAlign: 'start' }}
                             >
                                 <Link
                                     href={`/recipes/${recipe.slug}`}
                                     className="group block bg-white dark:bg-[#2a150a] rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(75,46,26,.10)] border border-[#D97706]/8 hover:shadow-[0_20px_60px_rgba(75,46,26,.18)] hover:-translate-y-2.5 transition-all duration-400 ease-out"
                                     aria-label={`${recipe.title} – ${recipe.subtitle}`}
                                 >
-                                    <div className="relative h-52 overflow-hidden">
+                                    <div className="relative h- overflow-hidden">
                                         <Image
                                             src={recipe.image}
                                             alt={`${recipe.title} – authentic Vietnamese recipe`}
