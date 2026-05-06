@@ -22,7 +22,7 @@ const dropdownVariants: Variants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.22, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.13, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
@@ -30,7 +30,7 @@ const columnVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.04, delayChildren: 0.08 },
+    transition: { staggerChildren: 0.02, delayChildren: 0.02 },
   },
 };
 
