@@ -22,7 +22,7 @@ const dropdownVariants: Variants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.13, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.05, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
