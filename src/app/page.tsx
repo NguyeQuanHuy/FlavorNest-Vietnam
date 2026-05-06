@@ -41,8 +41,8 @@ import HeroSection from './_sections/HeroSection'
 import dynamic from 'next/dynamic'
 
 const FeaturedRecipes = dynamic(() => import('./_sections/FeaturedRecipes'))
+const BentoGrid = dynamic(() => import('./_sections/BentoGrid'))
 const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
-const KitchenStories = dynamic(() => import('./_sections/KitchenStories'))
 const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
 const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
@@ -121,9 +121,8 @@ export default function HomePage() {
 
  <main className="overflow-x-hidden">
         <HeroSection recipeCount={recipeCount} />
-        <FeaturedRecipes recipes={recipes.slice(0, 15)} />
+        <BentoGrid />
         <CategoriesSection />
-        <KitchenStories />
         <WhyFlavorNest />
         <NewsletterSection />
       </main>
