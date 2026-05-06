@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getRecipeDetailed } from "@/data/recipes-detailed";
 import { RecipeSchema } from "@/components/RecipeSchema";
 import { IngredientsPanel } from "@/components/recipe/IngredientsPanel";
+import type { Metadata } from 'next'
 
 // ─────────────────────────────────────────────────────────────
 //  Legacy fallback data — 6 placeholder recipes from v1
@@ -95,6 +96,45 @@ const LEGACY_RECIPES: Record<string, {
     },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const detailed = getRecipeDetailed(slug)
+
+  if (detailed) {
+    return {
+      title: `${detailed.title} (${detailed.subtitle}) — FlavorNest Vietnam`,
+      description: detailed.shortDescription,
+      openGraph: {
+        title: detailed.title,
+        description: detailed.shortDescription,
+        images: [{ url: detailed.image, width: 1200, height: 630, alt: detailed.title }],
+      },
+      alternates: {
+        canonical: `https://flavor-nest-vietnam.vercel.app/recipes/${slug}`,
+      },
+    }
+  }
+
+  const legacy = LEGACY_RECIPES[slug as keyof typeof LEGACY_RECIPES]
+  if (!legacy) return { title: 'Recipe Not Found | FlavorNest Vietnam' }
+
+  return {
+    title: `${legacy.title} — Authentic Vietnamese Recipe | FlavorNest Vietnam`,
+    description: legacy.description,
+    openGraph: {
+      title: legacy.title,
+      description: legacy.description,
+      images: [{ url: legacy.image, width: 1200, height: 630, alt: legacy.title }],
+    },
+    alternates: {
+      canonical: `https://flavor-nest-vietnam.vercel.app/recipes/${slug}`,
+    },
+  }
+}
 // ─────────────────────────────────────────────────────────────
 //  Page component — tries detailed first, falls back to legacy
 // ─────────────────────────────────────────────────────────────
