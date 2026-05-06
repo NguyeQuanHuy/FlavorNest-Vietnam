@@ -121,7 +121,7 @@ export default function HomePage() {
 
  <main className="overflow-x-hidden">
         <HeroSection recipeCount={recipeCount} />
-        <FeaturedRecipes recipes={recipes.slice(0, 6)} />
+        <FeaturedRecipes recipes={recipes.slice(0, 15)} />
         <CategoriesSection />
         <KitchenStories />
         <WhyFlavorNest />
