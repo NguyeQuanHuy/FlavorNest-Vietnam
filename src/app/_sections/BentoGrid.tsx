@@ -93,7 +93,7 @@ const STORIES: StoryItem[] = [
     category: 'Heritage',
     categoryColor: '#D97706',
     title: "The Symphony of Hanoi's Dawn",
-    excerpt: 'A broth ten hours in the making, poured in thirty seconds. The story behind Vietnam's most iconic bowl.',
+    excerpt: "A broth ten hours in the making, poured in thirty seconds. The story behind Vietnam's most iconic bowl.",
     image: '/images/recipes/pho-bo-ha-noi.jpg',
     readTime: '6 min read',
   },
