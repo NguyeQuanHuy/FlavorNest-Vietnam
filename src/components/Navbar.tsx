@@ -54,6 +54,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
+        aria-label="Main navigation"
         initial={false}
         animate={{
           background: "rgba(45, 26, 14, 0.85)",
@@ -73,8 +74,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 lg:px-8">
           {/* ── Logo ── */}
-          <Link
-            href="/"
+          <Link href="/" aria-label="FlavorNest Vietnam – Home"
             className="flex items-center gap-1 group"
             style={{ textDecoration: "none" }}
           >
@@ -213,7 +213,8 @@ export default function Navbar() {
           <div className="flex items-center gap-2.5">
             {/* Search */}
             <button
-              aria-label="Search"
+              aria-label="Search recipes"
+              aria-expanded={searchOpen}
               onClick={() => setSearchOpen(true)}
               className="hidden sm:flex items-center justify-center transition-all duration-200"
               style={{
