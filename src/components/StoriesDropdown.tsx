@@ -14,15 +14,15 @@ type Props = {
 const dropdownVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: -8,
-    scale: 0.98,
-    transition: { duration: 0.15, ease: [0.4, 0, 0.2, 1] },
+    y: -4,
+    scale: 0.99,
+    transition: { duration: 0.1, ease: [0.4, 0, 0.2, 1] },
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.22, ease: [0.4, 0, 0.2, 1] },
+    transition: { duration: 0.13, ease: [0.4, 0, 0.2, 1] },
   },
 };
 
@@ -30,7 +30,7 @@ const columnVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.04, delayChildren: 0.08 },
+    transition: { staggerChildren: 0.02, delayChildren: 0.02 },
   },
 };
 
