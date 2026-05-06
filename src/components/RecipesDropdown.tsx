@@ -160,11 +160,13 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
                   Categories
                 </span>
               </div>
-              <div className="flex flex-col gap-1">
-                {RECIPE_CATEGORIES.map((item) => (
-                  <NavItemCard key={item.href} item={item} />
-                ))}
-              </div>
+              <ul role="list" className="flex flex-col gap-1">
+              {RECIPE_CATEGORIES.map((item) => (
+                <li key={item.href}>
+                  <NavItemCard item={item} />
+                </li>
+              ))}
+            </ul>
             </motion.div>
 
             <motion.div variants={columnVariants} className="relative">
@@ -194,11 +196,13 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
                   Regions
                 </span>
               </div>
-              <div className="flex flex-col gap-1">
-                {RECIPE_REGIONS.map((item) => (
-                  <NavItemCard key={item.href} item={item} />
-                ))}
-              </div>
+              <ul role="list" className="flex flex-col gap-1">
+              {RECIPE_REGIONS.map((item) => (
+                <li key={item.href}>
+                  <NavItemCard item={item} />
+                </li>
+              ))}
+            </ul>
             </motion.div>
           </div>
 
