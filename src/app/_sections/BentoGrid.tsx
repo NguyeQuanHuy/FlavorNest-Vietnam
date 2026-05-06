@@ -26,8 +26,8 @@ const DIFF_COLOR = { Easy: '#10b981', Medium: '#D97706', Hard: '#ef4444' }
 const RECIPES: RecipeItem[] = [
   {
     slug: 'pho-bo-ha-noi',
-    title: 'Phở Bò Hà Nội',
-    subtitle: 'Hanoi Beef Pho',
+    title: 'Hanoi Beef Pho',
+    subtitle: 'Phở bò Hà Nội',
     image: '/images/recipes/pho-bo-ha-noi.jpg',
     tag: 'Hanoi Icon',
     tagColor: '#D97706',
@@ -36,8 +36,8 @@ const RECIPES: RecipeItem[] = [
   },
   {
     slug: 'banh-mi',
-    title: 'Bánh Mì',
-    subtitle: 'Vietnamese Baguette',
+    title: 'Vietnamese Baguette',
+    subtitle: 'Bánh mì',
     image: '/images/recipes/banh-mi.png',
     tag: 'Street Food',
     tagColor: '#166534',
@@ -46,8 +46,8 @@ const RECIPES: RecipeItem[] = [
   },
   {
     slug: 'bun-bo-hue',
-    title: 'Bún Bò Huế',
-    subtitle: 'Hue Spicy Noodle Soup',
+    title: 'Hue Spicy Noodle Soup',
+    subtitle: 'Bún bò Huế',
     image: '/images/recipes/bun-bo-hue.webp',
     tag: 'Hue Classic',
     tagColor: '#7C3AED',
@@ -56,8 +56,8 @@ const RECIPES: RecipeItem[] = [
   },
   {
     slug: 'ca-phe-trung',
-    title: 'Cà Phê Trứng',
-    subtitle: 'Vietnamese Egg Coffee',
+    title: 'Vietnamese Egg Coffee',
+    subtitle: 'Cà phê trứng',
     image: '/images/recipes/ca-phe-trung.jpg',
     tag: 'New',
     tagColor: '#D97706',
@@ -66,8 +66,8 @@ const RECIPES: RecipeItem[] = [
   },
   {
     slug: 'bun-thit-nuong',
-    title: 'Bún Thịt Nướng',
-    subtitle: 'Grilled Pork Vermicelli',
+    title: 'Grilled Pork Vermicelli',
+    subtitle: 'Bún thịt nướng',
     image: '/images/recipes/bun-thit-nuong.jpg',
     tag: 'Popular',
     tagColor: '#059669',
