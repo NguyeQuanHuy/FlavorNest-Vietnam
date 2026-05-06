@@ -858,7 +858,8 @@ export default function MainDishesPage() {
                     </div>
                 </div>
             </section>
-
+            <div style={{ height: 20 }} />
+            
             {/* ── FILTER BAR ── */}
             <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px', marginTop: 16 }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
