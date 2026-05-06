@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'rau-ma-dau-xanh-nuoc-dua',
     title: 'Pennywort Mung Bean Coconut Drink',
     subtitle: 'Refreshing Vietnamese herbal drink made with pennywort, mung beans, and coconut milk.',
-    category: 'DRINK',
+    category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
