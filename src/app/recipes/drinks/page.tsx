@@ -420,7 +420,7 @@ export default function DrinksPage() {
                 </div>
             </section>
             {/* FILTER BAR */}
-            <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
+            <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Type</span>
                     {TYPE_FILTERS.map(f => <button key={f} onClick={() => setType(f)} className={`pill ${type === f ? 'on' : ''}`}>{f}</button>)}
