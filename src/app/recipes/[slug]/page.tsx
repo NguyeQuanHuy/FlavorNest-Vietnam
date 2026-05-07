@@ -171,7 +171,7 @@ function DetailedRecipeView({
     recipe: NonNullable<ReturnType<typeof getRecipeDetailed>>;
 }) {
     return (
-        <main className="min-h-screen bg-fn-beige font-body pt-[88px]">
+        <main className="min-h-screen bg-fn-beige font-body pt-[120px]">
             {/* Google Schema.org Recipe + Breadcrumb */}
             <RecipeSchema recipe={recipe} />
 
