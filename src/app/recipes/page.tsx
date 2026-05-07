@@ -145,7 +145,7 @@ function RecipesInner() {
                         <span style={{ color: "#D97706", fontSize: 10, fontWeight: 600 , letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
                     </div>
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.05, margin: "0 0 16px" }}>
-                        {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (>Discover <span style={{ color: "#D97706", fontStyle: "italic" }}> Our flavorful Recipes</span></>)}
+                        {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (<>Discover <span style={{ color: "#D97706", fontStyle: "italic" }}> Our flavorful Recipes</span></>)}
                     </h1>
                     <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 17, maxWidth: 480, lineHeight: 1.65, margin: "0 0 28px" }}>
                         Authentic Vietnamese recipes — from Hanoi&apos;s misty mornings to Saigon&apos;s vibrant street corners.
