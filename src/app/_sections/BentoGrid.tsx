@@ -7,7 +7,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // ── Recipe data ───────────────────────────────────────────────────────────────
 interface RecipeItem {
@@ -200,6 +201,14 @@ function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: R
 
 // ── Main export ────────────────────────────────────────────────────────────────
 export default function BentoGrid() {
+  const [activeTab, setActiveTab] = useState<'recipes' | 'stories' | 'trending'>('recipes')
+
+  const TABS = [
+    { id: 'recipes' as const, label: 'Recipes', count: 8 },
+    { id: 'stories' as const, label: 'Stories', count: 3 },
+    { id: 'trending' as const, label: 'Trending', count: 6 },
+  ]
+
   return (
     <section style={{ background: '#FAFAF7', padding: '80px 24px 96px', fontFamily: "'DM Sans', system-ui, sans-serif" }}
       aria-label="Featured recipes and stories">
@@ -236,6 +245,50 @@ export default function BentoGrid() {
             <Link href="/stories" style={{ fontSize: 13, fontWeight: 600, color: 'white', background: '#D97706', border: '1.5px solid #D97706', borderRadius: 100, padding: '9px 20px', textDecoration: 'none', transition: 'all 0.2s' }}>All Stories →</Link>
           </div>
         </motion.div>
+
+        {/* ── Tab bar ── */}
+        <div role="tablist" style={{ display: 'flex', gap: 8, marginBottom: 32, overflowX: 'auto', scrollbarWidth: 'none' }}>
+          {TABS.map(tab => {
+            const isActive = tab.id === activeTab
+            return (
+              <button
+                key={tab.id}
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActiveTab(tab.id)}
+                style={{
+                  position: 'relative',
+                  padding: '10px 20px',
+                  fontSize: 13,
+                  fontWeight: 700,
+                  borderRadius: 100,
+                  border: 'none',
+                  background: isActive ? 'transparent' : 'white',
+                  color: isActive ? 'white' : '#4B2E1A',
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                  fontFamily: 'inherit',
+                  boxShadow: isActive ? 'none' : '0 1px 3px rgba(75,46,26,0.08)',
+                  transition: 'color 0.25s',
+                }}
+              >
+                {isActive && (
+                  <motion.span
+                    layoutId="bento-tab-pill"
+                    style={{ position: 'absolute', inset: 0, borderRadius: 100, background: 'linear-gradient(135deg, #D97706, #B45309)', boxShadow: '0 4px 16px rgba(217,119,6,0.35)', zIndex: 0 }}
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span style={{ position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                  {tab.label}
+                  <span style={{ fontSize: 10, fontWeight: 800, padding: '2px 7px', borderRadius: 100, background: isActive ? 'rgba(255,255,255,0.25)' : 'rgba(217,119,6,0.1)', color: isActive ? 'white' : '#D97706' }}>
+                    {tab.count}
+                  </span>
+                </span>
+              </button>
+            )
+          })}
+        </div>
 
         {/* ── Bento grid ── */}
         <div className="bento-grid" style={{
