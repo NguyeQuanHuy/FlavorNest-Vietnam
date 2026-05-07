@@ -270,9 +270,29 @@ export default function CentralCuisinePage() {
                         </h1>
 
                         {/* Subtitle */}
-                        <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                            Imperial courts in Huế, lantern-lit alleys in Hội An, fishing villages along the South China Sea — Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
-                        </p>
+                        <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
+                            <span aria-hidden style={{
+                                position: 'absolute',
+                                left: 0,
+                                top: 8,
+                                width: 3,
+                                height: 'calc(100% - 12px)',
+                                background: '#D97706',
+                                borderRadius: 2,
+                            }} />
+                            <p style={{
+                                fontFamily: "'Playfair Display', serif",
+                                color: '#4B2E1A',
+                                fontSize: 19,
+                                fontStyle: 'italic',
+                                fontWeight: 400,
+                                lineHeight: 1.55,
+                                margin: 0,
+                                paddingLeft: 18,
+                            }}>
+                                <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Imperial courts in Huế</span>, <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>lantern-lit alleys in Hội An</span>, fishing villages along the South China Sea — Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
+                            </p>
+                        </div>
 
                         {/* Stats */}
                         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
