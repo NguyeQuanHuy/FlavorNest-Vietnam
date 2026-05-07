@@ -339,10 +339,9 @@ export default function BentoGrid() {
               <RecipeSmall r={RECIPES[2]} delay={0.09} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
               <RecipeSmall r={RECIPES[3]} delay={0.12} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
               <RecipeSmall r={RECIPES[4]} delay={0.15} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-
               <RecipeSmall r={RECIPES[5]} delay={0.18} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
               <RecipeSmall r={RECIPES[6]} delay={0.21} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-<RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
             </motion.div>
           )}
 
@@ -376,6 +375,45 @@ export default function BentoGrid() {
               {/* 2 stories side-by-side, stacked vertically */}
               <StoryWide s={STORIES[1]} delay={0.1} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
               <StoryWide s={STORIES[2]} delay={0.15} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+            </motion.div>
+          )}
+
+          {activeTab === 'trending' && (
+            <motion.div
+              key="trending"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="bento-grid"
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: 14 }}
+            >
+              {RECIPES.slice(0, 6).map((r, i) => (
+                <div key={r.slug} className="bento-small" style={{ gridColumn: 'span 4', gridRow: 'span 1' }}>
+                  <motion.div {...fadeUp(i * 0.06)} style={{ position: 'relative', height: '100%' }}>
+                    <Link href={`/recipes/${r.slug}`}
+                      style={{ display: 'block', position: 'relative', height: '100%', minHeight: 220, borderRadius: 18, overflow: 'hidden', textDecoration: 'none' }}
+                      className="bento-card">
+                      <Image src={r.image} alt={r.title} fill sizes="(max-width:768px) 50vw, 30vw"
+                        style={{ objectFit: 'cover' }} quality={82} className="bento-img" />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.85) 0%, transparent 55%)' }} />
+
+                      {/* Trending rank badge */}
+                      <div style={{ position: 'absolute', top: 12, left: 12, background: 'rgba(255,255,255,0.95)', color: '#D97706', fontSize: 11, fontWeight: 800, padding: '5px 11px', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 5 }}>
+                        <span style={{ fontSize: 13 }}>🔥</span> #{i + 1}
+                      </div>
+
+                      <div style={{ position: 'absolute', top: 12, right: 12, background: r.tagColor, color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 100 }}>{r.tag}</div>
+
+                      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 16px 16px' }}>
+                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'DM Sans', sans-serif" }}>{r.subtitle}</p>
+                        <h3 style={{ color: 'white', fontSize: 17, fontWeight: 700, margin: '0 0 4px', lineHeight: 1.2, fontFamily: "'Playfair Display', serif" }}>{r.title}</h3>
+                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                </div>
+              ))}
             </motion.div>
           )}
         </AnimatePresence>
