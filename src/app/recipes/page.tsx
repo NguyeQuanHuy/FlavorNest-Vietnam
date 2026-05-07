@@ -150,14 +150,6 @@ function RecipesInner() {
                     <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 17, maxWidth: 480, lineHeight: 1.65, margin: "0 0 28px" }}>
                         Authentic Vietnamese recipes — from Hanoi&apos;s misty mornings to Saigon&apos;s vibrant street corners.
                     </p>
-                    <div style={{ display: "flex", gap: 28 }}>
-                        {[[`${RECIPES.length}+`, "Recipes"], ["3", "Regions"], ["4.8★", "Avg Rating"]].map(([num, label]) => (
-                            <div key={label}>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: "#2D1A0E" }}>{num}</div>
-                                <div style={{ fontSize: 12, color: "rgba(75,46,26,0.5)", fontWeight: 500, letterSpacing: "0.05em" }}>{label}</div>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </section>
 
