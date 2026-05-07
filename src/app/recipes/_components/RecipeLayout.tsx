@@ -106,8 +106,8 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                             style={{
                                 fontFamily: 'Playfair Display, serif',
                                 color: '#2D1A0E',
-                                fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
-                                fontWeight: 700,
+                                fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
+                                fontWeight: 400,
                                 margin: 0,
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
@@ -116,49 +116,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                         >
                             {recipe.title}
                         </h1>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexShrink: 0 }}>
-                        <span
-                            style={{
-                                fontFamily: 'DM Sans, sans-serif',
-                                color: '#4B2E1A',
-                                fontSize: '14px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '4px',
-                            }}
-                        >
-                            <span style={{ color: '#D97706' }}>★</span>
-                            <strong>{recipe.rating}</strong>
-                        </span>
-                        <span
-                            style={{
-                                fontFamily: 'DM Sans, sans-serif',
-                                color: '#6B5544',
-                                fontSize: '14px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '4px',
-                            }}
-                        >
-                            <span style={{ opacity: 0.6 }}>⏱</span>
-                            {recipe.totalTime}
-                        </span>
-                        <span
-                            style={{
-                                backgroundColor: difficultyColor,
-                                color: '#FFF',
-                                padding: '4px 14px',
-                                borderRadius: '999px',
-                                fontSize: '12px',
-                                fontWeight: 700,
-                                fontFamily: 'DM Sans, sans-serif',
-                            }}
-                        >
-                            {recipe.difficulty}
-                        </span>
-                    </div>
+                    </div>                   
                 </div>
             </div>
 
@@ -207,7 +165,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                 </div>
             
                 {/* Ảnh bên phải */}
-                <div style={{ position: 'relative', height: 'clamp(300px, 40vw, 500px)', borderRadius: '0 16px 0 16px', overflow: 'hidden' }}>
+                <div style={{ position: 'relative', height: 'clamp(240px, 30vw, 380px)', borderRadius: '0 16px 0 16px', overflow: 'hidden' }}>
                     <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> 
                 </div>
             </motion.div>
