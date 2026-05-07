@@ -321,10 +321,10 @@ export default function BreakfastPage() {
             {/* ── GRID ── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
-                    <motion.div key={`${diff}-${region}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
+                    <motion.div key={`${diff}-${region}`} 
                         style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px,1fr))', gap: 24 }}>
                         {filtered.map((recipe, i) => (
-                            <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
+                            <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     <div style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
                                         <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
