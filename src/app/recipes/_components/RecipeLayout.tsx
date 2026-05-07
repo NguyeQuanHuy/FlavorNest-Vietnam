@@ -207,8 +207,8 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                 </div>
             
                 {/* Ảnh bên phải */}
-                <div style={{ position: 'relative', height: 'clamp(300px, 40vw, 500px)', borderRadius: '16px', overflow: 'hidden' }}>
-                    <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> 
+                <div style={{ position: 'relative', height: 'clamp(300px, 40vw, 500px)', borderRadius: '0 16px 0 16px', overflow: 'hidden' }}>
+                    <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> 
                 </div>
             </motion.div>
 
