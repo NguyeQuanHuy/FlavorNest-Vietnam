@@ -230,7 +230,16 @@ function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: R
 }
 
 // ── Main export ────────────────────────────────────────────────────────────────
-export default function BentoGrid() {
+export default function BentoGrid({
+  recipes: recipesProp,
+  stories: storiesProp,
+}: {
+  recipes?: RecipeItem[]
+  stories?: StoryItem[]
+}) {
+  const RECIPES = recipesProp && recipesProp.length >= 8 ? recipesProp.slice(0, 8) : FALLBACK_RECIPES
+  const STORIES = storiesProp && storiesProp.length >= 3 ? storiesProp.slice(0, 3) : FALLBACK_STORIES
+
   const [activeTab, setActiveTab] = useState<'recipes' | 'stories' | 'trending'>('recipes')
 
   const TABS = [
