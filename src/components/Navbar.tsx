@@ -72,7 +72,7 @@ export default function Navbar() {
           borderBottom: "1px solid",
         }}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 lg:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 lg:px-8">
           {/* ── Logo ── */}
           <Link href="/" aria-label="FlavorNest Vietnam – Home"
             className="flex items-center gap-1 group"
@@ -99,7 +99,8 @@ export default function Navbar() {
                   color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
                   fontSize: 22,
                   fontWeight: 700,
-                  letterSpacing: "-0.3px",
+                  letterSpacing: "0.5px",
+                  textTransform: "uppercase",
                   transition: "color 0.3s",
                 }}
               >
