@@ -98,7 +98,6 @@ export default function RootLayout({
         className="min-h-full flex flex-col font-body"
         style={{
           overflowX: "hidden",
-          scrollBehavior: "smooth",
           WebkitFontSmoothing: "antialiased",
           MozOsxFontSmoothing: "grayscale",
           WebkitTapHighlightColor: "transparent",
