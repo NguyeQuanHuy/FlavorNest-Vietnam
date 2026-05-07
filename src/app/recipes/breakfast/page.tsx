@@ -253,10 +253,10 @@ export default function BreakfastPage() {
         , [diff, region])
 
     return (
-        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+        <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'Titillium Web', system-ui, sans-serif" }}>
             <style>{`
                 * { box-sizing: border-box; }
-                .r-card { background: white; border-radius: 24px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: transform 0.33s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s, border-color 0.2s; }
+                .r-card { background: white; border-radius: 8px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: transform 0.33s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s, border-color 0.2s; }
                 .r-card:hover { transform: translateY(-7px); box-shadow: 0 28px 60px rgba(75,46,26,0.13); border-color: rgba(217,119,6,0.22); }
                 .r-card:hover .r-img { transform: scale(1.07); }
                 .r-img { transition: transform 0.55s ease; }
@@ -322,7 +322,7 @@ export default function BreakfastPage() {
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))', gap: 24 }}>
+                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px,1fr))', gap: 24 }}>
                         {filtered.map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
