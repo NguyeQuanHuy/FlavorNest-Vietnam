@@ -24,7 +24,7 @@ interface RecipeItem {
 
 const DIFF_COLOR = { Easy: '#10b981', Medium: '#D97706', Hard: '#ef4444' }
 
-const RECIPES: RecipeItem[] = [
+const FALLBACK_RECIPES: RecipeItem[] = [
   {
     slug: 'pho-bo-ha-noi',
     title: 'Hanoi Beef Pho',
@@ -118,7 +118,7 @@ interface StoryItem {
   readTime: string
 }
 
-const STORIES: StoryItem[] = [
+const FALLBACK_STORIES: StoryItem[] = [
   {
     slug: 'symphony-of-hanois-dawn',
     category: 'Heritage',
