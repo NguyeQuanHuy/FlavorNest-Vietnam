@@ -46,7 +46,33 @@ const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
 const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
 const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
+import { STORIES as ALL_STORIES } from "@/app/stories/page";
 import Image from "next/image";
+
+// ── Map recipes → BentoGrid format ──
+const TAG_COLORS = ['#D97706', '#166534', '#7C3AED', '#059669', '#EA580C', '#BE185D', '#DC2626', '#0284C7']
+const featuredRecipes = recipes.slice(0, 8).map((r: any, i: number) => ({
+  slug: r.slug,
+  title: r.title,
+  subtitle: r.subtitle ?? '',
+  image: r.image,
+  tag: r.tags?.[0] ?? r.category ?? 'Featured',
+  tagColor: TAG_COLORS[i % TAG_COLORS.length],
+  time: r.totalTime ?? r.time ?? '30 min',
+  difficulty: (r.difficulty ?? 'Medium') as 'Easy' | 'Medium' | 'Hard',
+}))
+
+// ── Map stories → BentoGrid format ──
+const COLOR_MAP: Record<string, string> = { amber: '#D97706', forest: '#166534', brown: '#4B2E1A' }
+const featuredStories = ALL_STORIES.slice(0, 3).map(s => ({
+  slug: s.slug,
+  category: s.category,
+  categoryColor: COLOR_MAP[s.categoryColor] ?? '#D97706',
+  title: s.title,
+  excerpt: s.excerpt,
+  image: s.image,
+  readTime: s.readTime,
+}))
 
 
 // ── SEO Metadata ─────────────────────────────────────────────────────────────
