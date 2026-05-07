@@ -277,9 +277,12 @@ export default function FavoritesPage() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: 16 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                style={{
-                  position: "fixed", top: "50%", left: "50%",
-                  transform: "translate(-50%, -50%)",
+              style={{
+                  position: "fixed", 
+                  top: "50%", 
+                  left: "50%",
+                  translateX: "-50%",
+                  translateY: "-50%",
                   zIndex: 51,
                   background: "linear-gradient(145deg, #FFF8F0, #FFF)",
                   borderRadius: 24,
