@@ -142,7 +142,7 @@ function RecipesInner() {
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                         <div style={{ width: 32, height: 1.5, background: "#D97706" }} />
-                        <span style={{ color: "#D97706", fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
+                        <span style={{ color: "#D97706", fontSize: 10, fontWeight: 600 , letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
                     </div>
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.05, margin: "0 0 16px" }}>
                         {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (<>Explore All <span style={{ color: "#D97706", fontStyle: "italic" }}>Recipes</span></>)}
