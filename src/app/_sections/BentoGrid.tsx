@@ -75,6 +75,36 @@ const RECIPES: RecipeItem[] = [
     time: '35 min',
     difficulty: 'Easy',
   },
+  {
+    slug: 'banh-xeo',
+    title: 'Sizzling Crepe',
+    subtitle: 'Bánh xèo',
+    image: '/images/recipes/banh-xeo-mien-nam.jpg',
+    tag: 'Saigon',
+    tagColor: '#EA580C',
+    time: '40 min',
+    difficulty: 'Medium',
+  },
+  {
+    slug: 'goi-cuon',
+    title: 'Fresh Spring Rolls',
+    subtitle: 'Gỏi cuốn',
+    image: '/images/recipes/goi-cuon.jpg',
+    tag: 'Healthy',
+    tagColor: '#059669',
+    time: '20 min',
+    difficulty: 'Easy',
+  },
+  {
+    slug: 'che-buoi',
+    title: 'Pomelo Sweet Soup',
+    subtitle: 'Chè bưởi',
+    image: '/images/recipes/che-buoi-mien-nam.jpg',
+    tag: 'Dessert',
+    tagColor: '#BE185D',
+    time: '50 min',
+    difficulty: 'Medium',
+  },
 ]
 
 // ── Story data ─────────────────────────────────────────────────────────────────
