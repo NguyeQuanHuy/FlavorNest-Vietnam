@@ -171,64 +171,41 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                     maxWidth: '1280px',
                     margin: '32px auto 0',
                     padding: '0 24px',
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gap: '48px',
+                    alignItems: 'center',
                 }}
             >
-                <div
-                    style={{
-                        position: 'relative',
-                        height: 'clamp(280px, 45vw, 480px)',
-                        borderRadius: '20px',
-                        overflow: 'hidden',
-                        backgroundImage: `url(${recipe.heroImage})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                >
-                    <div
-                        style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background:
-                                'linear-gradient(180deg, transparent 40%, rgba(45,26,14,0.8) 100%)',
-                        }}
-                    />
-                    <div
-                        style={{
-                            position: 'absolute',
-                            bottom: '32px',
-                            left: '32px',
-                            right: '32px',
-                            color: '#FFF',
-                        }}
-                    >
-                        <span
-                            style={{
-                                display: 'inline-block',
-                                backgroundColor: 'rgba(217,119,6,0.95)',
-                                color: '#FFF',
-                                padding: '6px 14px',
-                                borderRadius: '999px',
-                                fontSize: '11px',
-                                fontWeight: 700,
-                                letterSpacing: '1.5px',
-                                marginBottom: '12px',
-                            }}
-                        >
-                            {recipe.category}
-                        </span>
-                        <p
-                            style={{
-                                fontFamily: 'Playfair Display, serif',
-                                fontStyle: 'italic',
-                                color: '#F5EDE3',
-                                fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
-                                maxWidth: '720px',
-                                lineHeight: 1.5,
-                            }}
-                        >
-                            {recipe.subtitle}
-                        </p>
+                {/* Text bên trái */}
+                <div>
+                    <span style={{ display: 'inline-block', backgroundColor: 'rgba(217,119,6,0.95)', color: '#FFF', padding: '6px 14px', borderRadius: '999px', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', marginBottom: '20px' }}>
+                        {recipe.category}
+                    </span>
+                    <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.15, marginBottom: '16px' }}>
+                        {recipe.title}
+                    </h2>
+                    <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', color: '#D97706', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)', lineHeight: 1.6, marginBottom: '28px' }}>
+                        {recipe.subtitle}
+                    </p>
+                    <div style={{ display: 'flex', gap: '32px' }}>
+                        {[
+                            { icon: '⏱', val: recipe.totalTime, lbl: 'Total Time' },
+                            { icon: '📊', val: recipe.difficulty, lbl: 'Difficulty' },
+                            { icon: '⭐', val: recipe.rating.toFixed(1), lbl: 'Rating' },
+                        ].map(s => (
+                            <div key={s.lbl}>
+                                <div style={{ fontSize: '20px', marginBottom: '4px' }}>{s.icon}</div>
+                                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.2rem', fontWeight: 700, color: '#2D1A0E' }}>{s.val}</div>
+                                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: 'rgba(75,46,26,0.5)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.lbl}</div>
+                            </div>
+                        ))}
                     </div>
+                </div>
+            
+                {/* Ảnh bên phải */}
+                <div style={{ position: 'relative', height: 'clamp(300px, 40vw, 500px)', borderRadius: '16px', overflow: 'hidden' }}>
+                    <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${recipe.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 </div>
             </motion.div>
 
