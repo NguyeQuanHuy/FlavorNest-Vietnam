@@ -240,9 +240,29 @@ export default function SouthernCuisinePage() {
                         </h1>
 
                         {/* Subtitle */}
-                        <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                            From Saigon's neon-lit street stalls to the floating markets of the Mekong Delta — Southern Vietnamese cuisine is sweet, vibrant, and gloriously generous.
-                        </p>
+                        <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
+                            <span aria-hidden style={{
+                                position: 'absolute',
+                                left: 0,
+                                top: 8,
+                                width: 3,
+                                height: 'calc(100% - 12px)',
+                                background: '#D97706',
+                                borderRadius: 2,
+                            }} />
+                            <p style={{
+                                fontFamily: "'Playfair Display', serif",
+                                color: '#4B2E1A',
+                                fontSize: 19,
+                                fontStyle: 'italic',
+                                fontWeight: 400,
+                                lineHeight: 1.55,
+                                margin: 0,
+                                paddingLeft: 18,
+                            }}>
+                                From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Saigon&apos;s neon-lit street stalls</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>floating markets of the Mekong Delta</span> — Southern Vietnamese cuisine is sweet, vibrant, and gloriously generous.
+                            </p>
+                        </div>
 
                         {/* Stats */}
                         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
