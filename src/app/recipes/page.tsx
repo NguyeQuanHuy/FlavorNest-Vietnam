@@ -121,7 +121,7 @@ function RecipesInner() {
         <main style={{ minHeight: "100vh", background: "#FAFAF7", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
         * { box-sizing: border-box; }
-        .recipe-card { background:white; border-radius:8px; overflow:hidden; border:1px solid rgba(75,46,26,0.07); transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1); cursor:pointer; text-decoration:none; display:block; }
+        .recipe-card { background:white; border-radius:2px; overflow:hidden; border:1px solid rgba(75,46,26,0.07); transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1); cursor:pointer; text-decoration:none; display:block; }
         .recipe-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(75,46,26,0.13); border-color:rgba(217,119,6,0.2); }
         .recipe-card:hover .r-img { transform:scale(1.07); }
         .r-img { transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
