@@ -876,9 +876,29 @@ export default function DessertsPage() {
                     </h1>
 
                     {/* Subtitle */}
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        From silky chè to caramel-kissed bánh flan — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
-                    </p>
+                    <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
+                        <span aria-hidden style={{
+                            position: 'absolute',
+                            left: 0,
+                            top: 8,
+                            width: 3,
+                            height: 'calc(100% - 12px)',
+                            background: '#D97706',
+                            borderRadius: 2,
+                        }} />
+                        <p style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: '#4B2E1A',
+                            fontSize: 19,
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            lineHeight: 1.55,
+                            margin: 0,
+                            paddingLeft: 18,
+                        }}>
+                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky chè</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>caramel-kissed bánh flan</span> — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
+                        </p>
+                    </div>
 
                     {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
