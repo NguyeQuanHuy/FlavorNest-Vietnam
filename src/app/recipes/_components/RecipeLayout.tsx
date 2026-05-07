@@ -243,7 +243,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                         position: 'sticky',
                         top: '90px',
                         backgroundColor: '#FFF',
-                        borderRadius: '20px',
+                        borderRadius: '8px 8px 0 0',
                         padding: '28px',
                         boxShadow: '0 4px 24px rgba(45,26,14,0.06)',
                         maxHeight: 'calc(100vh - 110px)',
