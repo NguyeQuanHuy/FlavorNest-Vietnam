@@ -286,9 +286,29 @@ export default function BreakfastPage() {
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
                         Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
                     </h1>
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        Start your day the Vietnamese way — from steaming bowls of phở to crispy bánh mì, these are the morning meals that fuel a nation.
-                    </p>
+                            <div style={{ position: 'relative', maxWidth: 540, margin: '20px 0 36px' }}>
+                                <span aria-hidden style={{
+                                    position: 'absolute',
+                                    left: 0,
+                                    top: 8,
+                                    width: 3,
+                                    height: 'calc(100% - 12px)',
+                                    background: '#D97706',
+                                    borderRadius: 2,
+                                }} />
+                                <p style={{
+                                    fontFamily: "'Playfair Display', serif",
+                                    color: '#4B2E1A',
+                                    fontSize: 19,
+                                    fontStyle: 'italic',
+                                    fontWeight: 400,
+                                    lineHeight: 1.55,
+                                    margin: 0,
+                                    paddingLeft: 18,
+                                }}>
+                                    Start your day the Vietnamese way — from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of phở</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy bánh mì</span>, these are the morning meals that fuel a nation.
+                                </p>
+                            </div>
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                         {[
                             { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
