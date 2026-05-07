@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '4 hrs',
     rating: 4.9,
     baseServings: 4,
-    heroImage: '/images/recipes/pho-bo.jpg',
+    heroImage: '/images/recipes/pho-bo-ha-.jpg',
     intro: 'There is no single pho. The Hanoi version is restrained and clear; the Saigon version is sweeter, fuller, served with a small mountain of bean sprouts and Thai basil; the Nam Dinh original — where many believe pho was born in the early 1900s — is somewhere between the two. This recipe is the universal one. The bones simmer slowly, the spice bag is bundled tight, and the beef is added raw to the bowl, cooked only by the heat of the broth poured over at the table. Adjust to your region and your taste. Pho rewards patience and punishes shortcuts.',
     ingredientSections: [
         {
