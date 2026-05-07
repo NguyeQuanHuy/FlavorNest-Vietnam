@@ -65,7 +65,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
     };
 
     return (
-        <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh' }}>
+        <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
             {/* Sticky Top Bar */}
             <div
                 style={{
