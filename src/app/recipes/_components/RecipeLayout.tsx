@@ -190,9 +190,9 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                     </p>
                     <div style={{ display: 'flex', gap: '32px' }}>
                         {[
-                            { icon: '⏱', val: recipe.totalTime, lbl: 'Total Time' },
-                            { icon: '📊', val: recipe.difficulty, lbl: 'Difficulty' },
-                            { icon: '⭐', val: recipe.rating.toFixed(1), lbl: 'Rating' },
+                            { icon: '◷', val: recipe.totalTime, lbl: 'Total Time' },
+                            { icon: '◈', val: recipe.difficulty, lbl: 'Difficulty' },
+                            { icon: '◎', val: `${recipe.baseServings} bowls`, lbl: 'Serves' },
                         ].map(s => (
                             <div key={s.lbl}>
                                 <div style={{ fontSize: '20px', marginBottom: '4px' }}>{s.icon}</div>
@@ -205,7 +205,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
             
                 {/* Ảnh bên phải */}
                 <div style={{ position: 'relative', height: 'clamp(300px, 40vw, 500px)', borderRadius: '16px', overflow: 'hidden' }}>
-                    <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${recipe.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                    <div style={{ position: 'absolute', inset: 0, <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />, backgroundSize: 'cover', backgroundPosition: 'center' }} />
                 </div>
             </motion.div>
 
