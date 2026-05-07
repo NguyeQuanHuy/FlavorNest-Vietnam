@@ -342,7 +342,40 @@ export default function BentoGrid() {
 
               <RecipeSmall r={RECIPES[5]} delay={0.18} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
               <RecipeSmall r={RECIPES[6]} delay={0.21} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+<RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+            </motion.div>
+          )}
+
+          {activeTab === 'stories' && (
+            <motion.div
+              key="stories"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="bento-grid"
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gridTemplateRows: 'auto', gap: 14 }}
+            >
+              {/* Hero story (8 cols × 2 rows) */}
+              <motion.div {...fadeUp(0)} className="bento-hero" style={{ gridColumn: 'span 8', gridRow: 'span 2' }}>
+                <Link href={`/stories/${STORIES[0].slug}`}
+                  style={{ display: 'block', position: 'relative', height: '100%', minHeight: 420, borderRadius: 20, overflow: 'hidden', textDecoration: 'none' }}
+                  className="bento-card">
+                  <Image src={STORIES[0].image} alt={STORIES[0].title} fill sizes="(max-width:768px) 100vw, 65vw"
+                    style={{ objectFit: 'cover' }} quality={88} className="bento-img" />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.92) 0%, rgba(0,0,0,0.2) 55%)' }} />
+                  <div style={{ position: 'absolute', top: 20, left: 20, background: STORIES[0].categoryColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '6px 14px', borderRadius: 100 }}>{STORIES[0].category}</div>
+                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 28px 28px' }}>
+                    <h3 style={{ color: 'white', fontSize: 32, fontWeight: 700, margin: '0 0 12px', lineHeight: 1.1, fontFamily: "'Playfair Display', serif", maxWidth: 600 }}>{STORIES[0].title}</h3>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, margin: '0 0 14px', lineHeight: 1.55, maxWidth: 560, fontFamily: "'DM Sans', sans-serif" }}>{STORIES[0].excerpt}</p>
+                    <p style={{ color: STORIES[0].categoryColor, fontSize: 12, fontWeight: 700, margin: 0, fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.05em' }}>{STORIES[0].readTime} →</p>
+                  </div>
+                </Link>
+              </motion.div>
+
+              {/* 2 stories side-by-side, stacked vertically */}
+              <StoryWide s={STORIES[1]} delay={0.1} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+              <StoryWide s={STORIES[2]} delay={0.15} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
             </motion.div>
           )}
         </AnimatePresence>
