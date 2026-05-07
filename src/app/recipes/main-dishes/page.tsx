@@ -803,8 +803,8 @@ export default function MainDishesPage() {
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap');
                 * { box-sizing: border-box; }
-                .r-card { background: white; border-radius: 24px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: transform 0.33s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s, border-color 0.2s; }
-                .r-card:hover { transform: translateY(-7px); box-shadow: 0 28px 60px rgba(75,46,26,0.13); border-color: rgba(217,119,6,0.22); }
+                .r-card { background: white; border-radius: 4px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: box-shadow 0.2s, border-color 0.2s; }
+                .r-card:hover { box-shadow: 0 8px 24px rgba(75,46,26,0.10); border-color: rgba(217,119,6,0.2); }
                 .r-card:hover .r-img { transform: scale(1.07); }
                 .r-img { transition: transform 0.55s ease; }
                 .pill { border: 1.5px solid rgba(75,46,26,0.12); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; color: rgba(75,46,26,0.55); background: transparent; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
@@ -880,12 +880,12 @@ export default function MainDishesPage() {
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     {/* Image */}
-                                    <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#f0ebe4' }}>
+                                    <div style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
                                         <Image src={recipe.image} alt={`${recipe.title} — ${recipe.subtitle} Vietnamese recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
 
                                         {/* Tag */}
-                                        <div style={{ position: 'absolute', top: 14, left: 14, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.07em', textTransform: 'uppercase', padding: '5px 13px', borderRadius: 100 }}>{recipe.tag}</div>
+                                        <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
 
                                         {/* Time */}
                                         <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
@@ -905,18 +905,12 @@ export default function MainDishesPage() {
                                     {/* Body */}
                                     <div style={{ padding: '18px 20px 22px' }}>
                                         <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
-                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.2 }}>{recipe.title}</h2>
-                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
-                                        <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.62)', lineHeight: 1.68, margin: '0 0 14px' }}>{recipe.description}</p>
-                                        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 14 }}>
-                                            {recipe.tags.map(t => <span key={t} className="tag">{t}</span>)}
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 13, borderTop: '1px solid rgba(75,46,26,0.07)' }}>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                                                <span style={{ color: '#D97706', fontSize: 13, fontWeight: 700 }}>★ {recipe.rating}</span>
-                                                <span style={{ color: 'rgba(75,46,26,0.32)', fontSize: 12 }}>({recipe.reviews})</span>
-                                            </div>
-                                            <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706' }}>View Recipe →</span>
+                                        <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{recipe.title}</h2>
+                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>                                      
+                                        <div style={{ paddingTop: 12, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                                            {recipe.tags.slice(0, 3).map(t => (
+                                                <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>{t}</span>
+                                            ))}
                                         </div>
                                     </div>
                                 </Link>
