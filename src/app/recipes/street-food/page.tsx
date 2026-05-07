@@ -222,9 +222,29 @@ export default function StreetFoodPage() {
                     </h1>
 
                     {/* Subtitle */}
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        The best food in Vietnam has never been served in restaurants. It lives on plastic stools, steaming carts, and narrow laneways where the recipes are older than the buildings around them.
-                    </p>
+                    <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
+                        <span aria-hidden style={{
+                            position: 'absolute',
+                            left: 0,
+                            top: 8,
+                            width: 3,
+                            height: 'calc(100% - 12px)',
+                            background: '#D97706',
+                            borderRadius: 2,
+                        }} />
+                        <p style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: '#4B2E1A',
+                            fontSize: 19,
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            lineHeight: 1.55,
+                            margin: 0,
+                            paddingLeft: 18,
+                        }}>
+                            The best food in Vietnam has never been served in restaurants. It lives on <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>plastic stools</span>, <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming carts</span>, and narrow laneways where the recipes are older than the buildings around them.
+                        </p>
+                    </div>
 
                     {/* Stats */}
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
