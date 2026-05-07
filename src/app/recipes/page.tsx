@@ -121,10 +121,9 @@ function RecipesInner() {
         <main style={{ minHeight: "100vh", background: "#FAFAF7", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
         * { box-sizing: border-box; }
-        .recipe-card { background:white; border-radius:2px; overflow:hidden; border:1px solid rgba(75,46,26,0.07); transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1); cursor:pointer; text-decoration:none; display:block; }
-        .recipe-card:hover { transform:translateY(-6px); box-shadow:0 24px 60px rgba(75,46,26,0.13); border-color:rgba(217,119,6,0.2); }
-        .recipe-card:hover .r-img { transform:scale(1.07); }
-        .r-img { transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .recipe-card { background:white; border-radius:0; overflow:hidden; border:none; cursor:pointer; text-decoration:none; display:block; }
+        .recipe-card:hover .r-img { transform:scale(1.04); }
+        .r-img { transition:transform 0.5s ease; }
         .filter-pill { border:1.5px solid rgba(75,46,26,0.12); border-radius:100px; padding:7px 18px; font-size:13px; font-weight:500; color:rgba(75,46,26,0.55); background:transparent; cursor:pointer; transition:all 0.18s; white-space:nowrap; font-family:inherit; }
         .filter-pill:hover { color:#D97706; border-color:rgba(217,119,6,0.4); }
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
@@ -224,12 +223,12 @@ function RecipesInner() {
                     <motion.div
                         key={`${activeCategory}-${activeRegion}-${localQuery}`}
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
-                        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", gap: 24 }}
+                        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: 24 }}
                     >
                         {filtered.map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
-                                    <div style={{ position: "relative", height: 160, overflow: "hidden", background: "#f0ebe4" }}>
+                                    <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4"}}>
                                         <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" className="r-img" style={{ objectFit: "cover" }} quality={80} />
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
                                         <span style={{ position: "absolute", top: 14, left: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", color: "#4B2E1A", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 100 }}>{recipe.category}</span>
@@ -240,23 +239,17 @@ function RecipesInner() {
                                         </div>
                                         <HeartButton slug={recipe.slug} recipe={recipe} />
                                     </div>
-                                    <div style={{ padding: "18px 20px 20px" }}>
-                                        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", color: "#D97706", textTransform: "uppercase", marginBottom: 6 }}>{recipe.region} Vietnam</div>
-                                        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: "#2D1A0E", margin: "0 0 2px", lineHeight: 1.2 }}>
-                                            <Highlight text={recipe.title} query={localQuery} />
-                                        </h2>
-                                        <p style={{ fontSize: 12, color: "rgba(75,46,26,0.4)", fontStyle: "italic", margin: "0 0 10px" }}>
-                                            <Highlight text={recipe.subtitle} query={localQuery} />
-                                        </p>
-                                                                                
-                                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: 13, borderTop: "1px solid rgba(75,46,26,0.07)" }}>
-                                            <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-                                                <span style={{ color: "#D97706", fontSize: 13, fontWeight: 700 }}>★ {recipe.rating}</span>
-                                                <span style={{ color: "rgba(75,46,26,0.35)", fontSize: 12 }}>({recipe.reviews})</span>
-                                            </div>
-                                            <span style={{ fontSize: 12, fontWeight: 600, color: "#D97706" }}>View Recipe →</span>
-                                        </div>
+                                    <div style={{ padding: "14px 4px 20px" }}>
+                                    <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", color: "rgba(75,46,26,0.45)", textTransform: "uppercase", marginBottom: 8, paddingBottom: 6, borderBottom: "1.5px solid rgba(75,46,26,0.15)", display: "inline-block" }}>
+                                        {recipe.category} · {recipe.region}
                                     </div>
+                                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
+                                        <Highlight text={recipe.title} query={localQuery} />
+                                    </h2>
+                                    <p style={{ fontSize: 13, color: "rgba(75,46,26,0.45)", fontStyle: "italic", margin: 0 }}>
+                                        <Highlight text={recipe.subtitle} query={localQuery} />
+                                    </p>
+                                </div>
                                 </Link>
                             </motion.div>
                         ))}
