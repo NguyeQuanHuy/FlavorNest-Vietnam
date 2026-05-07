@@ -175,9 +175,9 @@ function RecipeHero({ r }: { r: RecipeItem }) {
         <div style={{ position: 'absolute', top: 16, right: 16, background: DIFF_COLOR[r.difficulty], color: 'white', fontSize: 10, fontWeight: 700, padding: '5px 11px', borderRadius: 100 }}>{r.difficulty}</div>
         {/* bottom info */}
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px 20px 22px' }}>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, fontWeight: 500, margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'DM Sans', sans-serif" }}>{r.subtitle}</p>
-          <h3 style={{ color: 'white', fontSize: 26, fontWeight: 700, margin: '0 0 8px', lineHeight: 1.15, fontFamily: "'Playfair Display', serif" }}>{r.title}</h3>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{r.time}</p>
+          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, fontWeight: 500, margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.subtitle}</p>
+          <h3 style={{ color: 'white', fontSize: 26, fontWeight: 700, margin: '0 0 8px', lineHeight: 1.15, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time}</p>
         </div>
       </Link>
     </motion.div>
@@ -196,8 +196,8 @@ function RecipeSmall({ r, delay, style }: { r: RecipeItem; delay: number; style?
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.82) 0%, transparent 60%)' }} />
         <div style={{ position: 'absolute', top: 10, left: 10, background: r.tagColor, color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '3px 9px', borderRadius: 100 }}>{r.tag}</div>
         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 14px 14px' }}>
-          <h3 style={{ color: 'white', fontSize: 14, fontWeight: 700, margin: '0 0 3px', lineHeight: 1.2, fontFamily: "'Playfair Display', serif" }}>{r.title}</h3>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 11, margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
+          <h3 style={{ color: 'white', fontSize: 14, fontWeight: 700, margin: '0 0 3px', lineHeight: 1.2, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 11, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
         </div>
       </Link>
     </motion.div>
@@ -219,10 +219,10 @@ function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: R
         </div>
         {/* text */}
         <div style={{ flex: 1, padding: '18px 20px 18px 16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 6 }}>
-          <span style={{ fontSize: 10, fontWeight: 800, color: s.categoryColor, textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: "'DM Sans', sans-serif" }}>{s.category}</span>
-          <h3 style={{ color: '#F5EDE3', fontSize: 15, fontWeight: 700, margin: 0, lineHeight: 1.3, fontFamily: "'Playfair Display', serif" }}>{s.title}</h3>
-          <p style={{ color: 'rgba(245,237,227,0.45)', fontSize: 12, margin: 0, lineHeight: 1.5, fontFamily: "'DM Sans', sans-serif", display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{s.excerpt}</p>
-          <p style={{ color: s.categoryColor, fontSize: 11, fontWeight: 700, margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{s.readTime} →</p>
+          <span style={{ fontSize: 10, fontWeight: 800, color: s.categoryColor, textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{s.category}</span>
+          <h3 style={{ color: '#F5EDE3', fontSize: 15, fontWeight: 700, margin: 0, lineHeight: 1.3, fontFamily: "'Manrope', sans-serif" }}>{s.title}</h3>
+          <p style={{ color: 'rgba(245,237,227,0.45)', fontSize: 12, margin: 0, lineHeight: 1.5, fontFamily: "'Manrope', 'DM Sans', sans-serif", display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{s.excerpt}</p>
+          <p style={{ color: s.categoryColor, fontSize: 11, fontWeight: 700, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{s.readTime} →</p>
         </div>
       </Link>
     </motion.div>
@@ -250,10 +250,21 @@ export default function BentoGrid() {
         .bento-img { transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94) !important; }
         .story-card:hover { box-shadow: 0 12px 40px rgba(45,26,14,0.3) !important; }
         @media (max-width: 768px) {
-          .bento-grid { grid-template-columns: 1fr 1fr !important; }
-          .bento-hero { grid-column: span 2 !important; grid-row: span 1 !important; min-height: 260px !important; }
-          .bento-small { grid-column: span 1 !important; }
-          .bento-story { grid-column: span 2 !important; }
+          .bento-grid > div,
+          .bento-grid > [class*="motion"] {
+            grid-column: span 12 !important;
+            grid-row: span 1 !important;
+          }
+          .bento-grid .bento-hero {
+            grid-column: span 12 !important;
+            grid-row: span 1 !important;
+            min-height: 280px !important;
+          }
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
+          .bento-grid > div:not(.bento-hero) {
+            grid-column: span 6 !important;
+          }
         }
       `}</style>
 
@@ -266,7 +277,7 @@ export default function BentoGrid() {
               <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
               <span style={{ color: '#D97706', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Editor's Picks</span>
             </div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05 }}>
+            <h2 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05 }}>
               Featured <em style={{ color: '#D97706', fontStyle: 'italic' }}>Recipes</em> &amp; Stories
             </h2>
           </div>
@@ -365,9 +376,9 @@ export default function BentoGrid() {
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.92) 0%, rgba(0,0,0,0.2) 55%)' }} />
                   <div style={{ position: 'absolute', top: 20, left: 20, background: STORIES[0].categoryColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '6px 14px', borderRadius: 100 }}>{STORIES[0].category}</div>
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 28px 28px' }}>
-                    <h3 style={{ color: 'white', fontSize: 32, fontWeight: 700, margin: '0 0 12px', lineHeight: 1.1, fontFamily: "'Playfair Display', serif", maxWidth: 600 }}>{STORIES[0].title}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, margin: '0 0 14px', lineHeight: 1.55, maxWidth: 560, fontFamily: "'DM Sans', sans-serif" }}>{STORIES[0].excerpt}</p>
-                    <p style={{ color: STORIES[0].categoryColor, fontSize: 12, fontWeight: 700, margin: 0, fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.05em' }}>{STORIES[0].readTime} →</p>
+                    <h3 style={{ color: 'white', fontSize: 32, fontWeight: 700, margin: '0 0 12px', lineHeight: 1.1, fontFamily: "'Manrope', sans-serif", maxWidth: 600 }}>{STORIES[0].title}</h3>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, margin: '0 0 14px', lineHeight: 1.55, maxWidth: 560, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{STORIES[0].excerpt}</p>
+                    <p style={{ color: STORIES[0].categoryColor, fontSize: 12, fontWeight: 700, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif", letterSpacing: '0.05em' }}>{STORIES[0].readTime} →</p>
                   </div>
                 </Link>
               </motion.div>
@@ -406,9 +417,9 @@ export default function BentoGrid() {
                       <div style={{ position: 'absolute', top: 12, right: 12, background: r.tagColor, color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 100 }}>{r.tag}</div>
 
                       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 16px 16px' }}>
-                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'DM Sans', sans-serif" }}>{r.subtitle}</p>
-                        <h3 style={{ color: 'white', fontSize: 17, fontWeight: 700, margin: '0 0 4px', lineHeight: 1.2, fontFamily: "'Playfair Display', serif" }}>{r.title}</h3>
-                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, margin: 0, fontFamily: "'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
+                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.subtitle}</p>
+                        <h3 style={{ color: 'white', fontSize: 17, fontWeight: 700, margin: '0 0 4px', lineHeight: 1.2, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
+                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
                       </div>
                     </Link>
                   </motion.div>
