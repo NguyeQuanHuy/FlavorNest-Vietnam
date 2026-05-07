@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReadingProgress from '@/components/ReadingProgress'
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { Playfair_Display, DM_Sans, Manrope } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
 import { FavoritesProvider } from "@/context/FavoritesContext";
@@ -15,6 +15,13 @@ const playfair = Playfair_Display({
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 // ── Body font — clean geometric sans for readability ──
@@ -89,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} ${manrope.variable} h-full antialiased`}
     >
       <head>
         <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" />
