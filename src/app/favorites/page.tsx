@@ -273,17 +273,6 @@ export default function FavoritesPage() {
           {showConfirm && (
             <>
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setShowConfirm(false)}
-                style={{
-                  position: "fixed", inset: 0, zIndex: 50,
-                  background: "rgba(45,26,14,0.5)",
-                  backdropFilter: "blur(4px)",
-                }}
-              />
-              <motion.div
                 initial={{ opacity: 0, scale: 0.92, y: 16 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: 16 }}
@@ -292,32 +281,47 @@ export default function FavoritesPage() {
                   position: "fixed", top: "50%", left: "50%",
                   transform: "translate(-50%, -50%)",
                   zIndex: 51,
-                  background: "#FFF",
-                  borderRadius: 20,
-                  padding: "32px 28px",
-                  width: "min(90vw, 360px)",
-                  boxShadow: "0 24px 60px rgba(45,26,14,0.2)",
+                  background: "linear-gradient(145deg, #FFF8F0, #FFF)",
+                  borderRadius: 24,
+                  padding: "40px 32px 32px",
+                  width: "min(90vw, 380px)",
+                  boxShadow: "0 32px 80px rgba(45,26,14,0.18), 0 0 0 1px rgba(217,119,6,0.1)",
                   textAlign: "center",
                 }}
               >
-                <div style={{ fontSize: 40, marginBottom: 12 }}>🗑️</div>
+                {/* Icon */}
+                <div style={{
+                  width: 64, height: 64, borderRadius: "50%",
+                  background: "linear-gradient(135deg, #FEF3E2, #FDEAC8)",
+                  border: "2px solid rgba(217,119,6,0.2)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  margin: "0 auto 20px",
+                }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10 11v4M14 11v4" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                </div>
+              
                 <h3 style={{
                   fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: 20, fontWeight: 700, color: "#2D1A0E", marginBottom: 8,
+                  fontSize: 22, fontWeight: 700, color: "#2D1A0E", marginBottom: 10,
                 }}>
                   Remove all favorites?
                 </h3>
-                <p style={{ fontSize: 14, color: "rgba(75,46,26,0.6)", marginBottom: 24, lineHeight: 1.6 }}>
-                  This will permanently remove all {favorites.length} saved recipes.
+                <p style={{ fontSize: 14, color: "rgba(75,46,26,0.55)", marginBottom: 28, lineHeight: 1.65 }}>
+                  This will permanently remove all <strong style={{ color: "#D97706" }}>{favorites.length}</strong> saved recipes from your collection.
                 </p>
+              
                 <div style={{ display: "flex", gap: 10 }}>
                   <button
                     onClick={() => setShowConfirm(false)}
                     style={{
-                      flex: 1, padding: "12px", borderRadius: 999,
+                      flex: 1, padding: "13px", borderRadius: 999,
                       border: "1.5px solid rgba(75,46,26,0.15)",
                       background: "transparent", color: "#4B2E1A",
                       fontSize: 14, fontWeight: 600, cursor: "pointer",
+                      transition: "all 0.2s",
                     }}
                   >
                     Cancel
@@ -325,12 +329,12 @@ export default function FavoritesPage() {
                   <button
                     onClick={() => { clearFavorites(); setShowConfirm(false); }}
                     style={{
-                      flex: 1, padding: "12px", borderRadius: 999,
+                      flex: 1, padding: "13px", borderRadius: 999,
                       border: "none",
-                      background: "linear-gradient(135deg, #DC2626, #B91C1C)",
+                      background: "linear-gradient(135deg, #B45309, #92400E)",
                       color: "#fff",
                       fontSize: 14, fontWeight: 600, cursor: "pointer",
-                      boxShadow: "0 4px 14px rgba(220,38,38,0.35)",
+                      boxShadow: "0 4px 16px rgba(180,83,9,0.35)",
                     }}
                   >
                     Remove all
