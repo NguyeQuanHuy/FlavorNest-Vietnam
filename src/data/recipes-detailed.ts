@@ -869,8 +869,14 @@ export const RECIPES_DETAILED: RecipeDetailed[] = [
 // ─────────────────────────────────────────────────────────────
 //  Helper — get recipe by slug
 // ─────────────────────────────────────────────────────────────
+const SLUG_ALIASES: Record<string, string> = {
+    'pho-bo': 'pho-bo-ha-noi',
+    'bun-cha-hanoi': 'bun-cha-ha-noi',
+}
+
 export function getRecipeDetailed(slug: string): RecipeDetailed | undefined {
-    return RECIPES_DETAILED.find((recipe) => recipe.slug === slug);
+    const resolved = SLUG_ALIASES[slug] ?? slug;
+    return RECIPES_DETAILED.find((recipe) => recipe.slug === resolved);
 }
 
 // ─────────────────────────────────────────────────────────────
