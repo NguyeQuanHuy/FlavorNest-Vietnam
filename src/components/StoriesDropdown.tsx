@@ -113,7 +113,7 @@ export default function StoriesDropdown({ isOpen, onClose }: Props) {
           className="flex items-center justify-center gap-1.5 transition-colors duration-150"
           style={{
             padding: "14px",
-            background: "#4B2E1A",
+            background: "#D97706",
             color: "#F5EDE3",
             fontSize: 11,
             fontWeight: 700,
@@ -121,11 +121,11 @@ export default function StoriesDropdown({ isOpen, onClose }: Props) {
             textDecoration: "none",
             textTransform: "uppercase",
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#2D1A0E";
+            onMouseEnter={(e) => {
+            e.currentTarget.style.background = "#B45309";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#4B2E1A";
+            e.currentTarget.style.background = "#D97706";
           }}
         >
           Read all stories →
