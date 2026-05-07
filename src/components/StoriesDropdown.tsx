@@ -47,20 +47,6 @@ function NavItemRow({ item }: { item: NavItem }) {
         }}
       >
         {item.name}
-        <span
-          className="underline-bar"
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: -2,
-            height: 2,
-            width: "100%",
-            background: "#D97706",
-            transform: "scaleX(0)",
-            transformOrigin: "left",
-            transition: "transform 0.22s ease",
-          }}
-        />
       </span>
     </Link>
   );
@@ -71,10 +57,6 @@ export default function StoriesDropdown({ isOpen, onClose }: Props) {
 
   return (
     <>
-      <style>{`
-        .nav-row:hover .underline-bar { transform: scaleX(1); }
-        .nav-row:hover .nav-label { color: #D97706; }
-      `}</style>
       <div
         className="absolute left-1/2 -translate-x-1/2 z-50"
         style={{
