@@ -20,20 +20,6 @@ function NavItemRow({ item }: { item: NavItem }) {
       }}
     >
       <span
-        className="accent-stripe"
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: 3,
-          background: "#D97706",
-          transform: "scaleY(0)",
-          transformOrigin: "center",
-          transition: "transform 0.18s ease",
-        }}
-      />
-      <span
         className="nav-label"
         style={{
           fontFamily: "var(--font-dm-sans), sans-serif",
@@ -42,7 +28,6 @@ function NavItemRow({ item }: { item: NavItem }) {
           letterSpacing: "1.4px",
           color: "#2D1A0E",
           textTransform: "uppercase",
-          position: "relative",
           display: "inline-block",
         }}
       >
@@ -57,6 +42,17 @@ export default function StoriesDropdown({ isOpen, onClose }: Props) {
 
   return (
     <>
+      <style>{`
+        .nav-label {
+          border-bottom: 2px solid transparent;
+          padding-bottom: 2px;
+          transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .nav-row:hover .nav-label {
+          color: #D97706;
+          border-bottom-color: #D97706;
+        }
+      `}</style>
       <div
         className="absolute left-1/2 -translate-x-1/2 z-50"
         style={{
