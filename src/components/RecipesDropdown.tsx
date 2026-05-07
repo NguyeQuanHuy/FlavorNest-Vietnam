@@ -52,8 +52,8 @@ function NavItemRow({ item }: { item: NavItem }) {
           style={{
             position: "absolute",
             left: 0,
-            bottom: -3,
-            height: 1.5,
+            bottom: -2,
+            height: 2,
             width: "100%",
             background: "#D97706",
             transform: "scaleX(0)",
