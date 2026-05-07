@@ -72,8 +72,6 @@ export default function StoriesDropdown({ isOpen, onClose }: Props) {
   return (
     <>
       <style>{`
-        .nav-row:hover { background: rgba(217,119,6,0.05); }
-        .nav-row:hover .accent-stripe { transform: scaleY(1); }
         .nav-row:hover .underline-bar { transform: scaleX(1); }
         .nav-row:hover .nav-label { color: #D97706; }
       `}</style>
