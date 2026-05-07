@@ -179,10 +179,13 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
             >
                 {/* Text bên trái */}
                 <div>
-                    <span style={{ display: 'inline-block', backgroundColor: 'rgba(217,119,6,0.95)', color: '#FFF', padding: '6px 14px', borderRadius: '999px', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', marginBottom: '20px' }}>
-                        {recipe.category}
-                    </span>
-                    <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.15, marginBottom: '16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+                        <div style={{ width: '32px', height: '2px', background: '#D97706' }} />
+                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>
+                            {recipe.category}
+                        </span>
+                    </div>
+                    <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.1, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                         {recipe.title}
                     </h2>
                     <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', color: '#D97706', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)', lineHeight: 1.6, marginBottom: '28px' }}>
