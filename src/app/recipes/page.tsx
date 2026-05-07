@@ -243,7 +243,7 @@ function RecipesInner() {
                                     <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", color: "rgba(75,46,26,0.45)", textTransform: "uppercase", marginBottom: 8, paddingBottom: 6, borderBottom: "1.5px solid rgba(75,46,26,0.15)", display: "inline-block" }}>
                                         {recipe.category} · {recipe.region}
                                     </div>
-                                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
+                                    <h2 style={{ fontFamily: "'Nunito Sans', serif", fontSize: 20, fontWeight: 600, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
                                         <Highlight text={recipe.title} query={localQuery} />
                                     </h2>
                                     <p style={{ fontSize: 13, color: "rgba(75,46,26,0.45)", fontStyle: "italic", margin: 0 }}>
