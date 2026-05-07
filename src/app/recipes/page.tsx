@@ -147,9 +147,29 @@ function RecipesInner() {
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.05, margin: "0 0 16px" }}>
                         {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (<>Discover <span style={{ color: "#D97706", fontStyle: "italic" }}> Our flavorful Recipes</span></>)}
                     </h1>
-                    <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 17, maxWidth: 480, lineHeight: 1.65, margin: "0 0 28px" }}>
-                        Authentic Vietnamese recipes — from Hanoi&apos;s misty mornings to Saigon&apos;s vibrant street corners.
-                    </p>
+                        <div style={{ position: "relative", maxWidth: 560, margin: "0 0 28px" }}>
+                        <span aria-hidden style={{
+                            position: "absolute",
+                            left: 0,
+                            top: 8,
+                            width: 3,
+                            height: "calc(100% - 12px)",
+                            background: "#D97706",
+                            borderRadius: 2,
+                        }} />
+                        <p style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: "#4B2E1A",
+                            fontSize: 19,
+                            fontStyle: "italic",
+                            fontWeight: 400,
+                            lineHeight: 1.55,
+                            margin: 0,
+                            paddingLeft: 18,
+                        }}>
+                            Authentic Vietnamese recipes — from <span style={{ color: "#D97706", fontWeight: 600 }}>Hanoi&apos;s misty mornings</span> to <span style={{ color: "#D97706", fontWeight: 600 }}>Saigon&apos;s vibrant street corners</span>.
+                        </p>
+                    </div>
                 </div>
             </section>
 
