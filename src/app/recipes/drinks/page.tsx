@@ -397,9 +397,29 @@ export default function DrinksPage() {
                     </h1>
 
                     {/* Subtitle */}
-                    <p style={{ color: 'rgba(75,46,26,0.62)', fontSize: 17, maxWidth: 500, lineHeight: 1.75, margin: '0 0 36px' }}>
-                        From the dark, sweet ceremony of cà phê sữa đá to the silky elegance of egg coffee — Vietnamese drinks are an art of patience, balance, and bold contrasts.
-                    </p>
+                    <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
+                        <span aria-hidden style={{
+                            position: 'absolute',
+                            left: 0,
+                            top: 8,
+                            width: 3,
+                            height: 'calc(100% - 12px)',
+                            background: '#D97706',
+                            borderRadius: 2,
+                        }} />
+                        <p style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: '#4B2E1A',
+                            fontSize: 19,
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            lineHeight: 1.55,
+                            margin: 0,
+                            paddingLeft: 18,
+                        }}>
+                            From the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>dark, sweet ceremony of cà phê sữa đá</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky elegance of egg coffee</span> — Vietnamese drinks are an art of patience, balance, and bold contrasts.
+                        </p>
+                    </div>
 
                     {/* Stats */}
                     {/* Stats */}
