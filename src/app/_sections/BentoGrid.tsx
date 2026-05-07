@@ -320,37 +320,32 @@ export default function BentoGrid() {
           })}
         </div>
 
-        {/* ── Bento grid ── */}
-        <div className="bento-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(12, 1fr)',
-          gridTemplateRows: 'auto',
-          gap: 14,
-        }}>
+        {/* ── Bento grid (animated by tab) ── */}
+        <AnimatePresence mode="wait">
+          {activeTab === 'recipes' && (
+            <motion.div
+              key="recipes"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="bento-grid"
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gridTemplateRows: 'auto', gap: 14 }}
+            >
+              <div className="bento-hero" style={{ gridColumn: 'span 6', gridRow: 'span 2' }}>
+                <RecipeHero r={RECIPES[0]} />
+              </div>
+              <RecipeSmall r={RECIPES[1]} delay={0.06} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[2]} delay={0.09} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[3]} delay={0.12} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[4]} delay={0.15} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
 
-          {/* Row 1–2: Hero recipe (5 cols × 2 rows) + 2 small recipes + 1 story */}
-          <div className="bento-hero" style={{ gridColumn: 'span 5', gridRow: 'span 2' }}>
-            <RecipeHero r={RECIPES[0]} />
-          </div>
-
-          {/* small recipe 1 */}
-          <RecipeSmall r={RECIPES[1]} delay={0.08} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-
-          {/* Story wide top */}
-          <StoryWide s={STORIES[0]} delay={0.12} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-
-          {/* small recipe 2 */}
-          <RecipeSmall r={RECIPES[2]} delay={0.1} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-
-          {/* Story wide 2 */}
-          <StoryWide s={STORIES[1]} delay={0.15} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-
-          {/* Row 3: 2 small recipes + 1 story wide */}
-          <RecipeSmall r={RECIPES[3]} delay={0.14} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-          <RecipeSmall r={RECIPES[4]} delay={0.16} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-          <StoryWide s={STORIES[2]} delay={0.18} style={{ gridColumn: 'span 6', gridRow: 'span 1' }} />
-
-        </div>
+              <RecipeSmall r={RECIPES[5]} delay={0.18} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[6]} delay={0.21} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+              <RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   )
