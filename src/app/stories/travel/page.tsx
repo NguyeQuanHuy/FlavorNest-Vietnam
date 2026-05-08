@@ -389,41 +389,6 @@ export default function TravelGuidePage() {
                 </div>
             </section>
 
-            {/* ── NEWSLETTER / CTA ── */}
-            <section style={{ background: '#2D1A0E', padding: '80px 40px' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 20 }}>
-                        <div style={{ width: 36, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', color: '#D97706', textTransform: 'uppercase' }}>Never Miss a Guide</span>
-                        <div style={{ width: 36, height: 1.5, background: '#D97706' }} />
-                    </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 700, color: 'white', margin: '0 0 16px', lineHeight: 1.1 }}>
-                        New eating guides,<br />every month.
-                    </h2>
-                    <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 16, lineHeight: 1.7, margin: '0 0 36px' }}>
-                        We eat so you plan better. Get our latest Vietnam food travel guides delivered before they go live on the site.
-                    </p>
-                    <div style={{ display: 'flex', gap: 10, maxWidth: 480, margin: '0 auto', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        <input
-                            type="email"
-                            placeholder="your@email.com"
-                            style={{ flex: '1 1 220px', padding: '14px 20px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: 'white', fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
-                        />
-                        <button style={{ padding: '14px 28px', borderRadius: 100, background: '#D97706', color: 'white', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap', transition: 'background 0.2s' }}
-                            onMouseEnter={e => (e.currentTarget.style.background = '#B45309')}
-                            onMouseLeave={e => (e.currentTarget.style.background = '#D97706')}
-                        >
-                            Subscribe →
-                        </button>
-                    </div>
-                    <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)', marginTop: 16 }}>No spam. Unsubscribe anytime.</p>
-                </motion.div>
-            </section>
-
             {/* ── FOOTER LINKS ── */}
             <section style={{ background: '#1A0E07', padding: '48px 40px 60px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20 }}>
