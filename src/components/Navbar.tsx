@@ -175,9 +175,7 @@ export default function Navbar() {
                         position: "relative",
                         display: "inline-block",
                         paddingBottom: 2,
-                        borderBottom: `2px solid ${
-                          isActive ? "#D97706" : "transparent"
-                        }`,
+                        borderBottom: "2px solid transparent",
                         transition: "border-color 0.2s ease",
                       }}
                     >
