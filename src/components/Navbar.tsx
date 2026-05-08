@@ -153,7 +153,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1.5 transition-all duration-200"
+                    className="navbar-link flex items-center gap-1.5 transition-all duration-200"
                     style={{
                       padding: link.hasDropdown
                         ? "8px 14px 8px 16px"
@@ -170,9 +170,23 @@ export default function Navbar() {
                       fontWeight: isActive ? 600 : 500,
                       borderRadius: 8,
                       textDecoration: "none",
+                      position: "relative",
                     }}
                   >
-                    {link.label}
+                    <span
+                      className="navbar-link-label"
+                      style={{
+                        position: "relative",
+                        display: "inline-block",
+                        paddingBottom: 2,
+                        borderBottom: `2px solid ${
+                          isActive ? "#D97706" : "transparent"
+                        }`,
+                        transition: "border-color 0.2s ease",
+                      }}
+                    >
+                      {link.label}
+                    </span>
                     {link.hasDropdown && (
                       <motion.svg
                         width="12"
@@ -398,6 +412,7 @@ export default function Navbar() {
               className="lg:hidden flex items-center justify-center"
               style={{
                 width: 40,
+                
                 height: 40,
                 borderRadius: 10,
                 background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
@@ -419,6 +434,11 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+        <style>{`
+          .navbar-link:hover .navbar-link-label {
+            border-bottom-color: #D97706 !important;
+          }
+        `}</style>
       </motion.nav>
 
       {/* ── Mobile drawer ── */}
