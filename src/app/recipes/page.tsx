@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useMemo, Suspense, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { getAllRecipes } from "@/data/index";
@@ -83,7 +83,9 @@ function RecipesInner() {
     const [localQuery, setLocalQuery] = useState(urlSearch);
     const [hovered, setHovered] = useState<string | null>(null);
     const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
-
+    const [page, setPage] = useState(1);
+    const PER_PAGE = 12;
+    
     useEffect(() => { setLocalQuery(urlSearch); }, [urlSearch]);
 
    const filtered = useMemo(() => {
@@ -114,7 +116,8 @@ function RecipesInner() {
       return b.reviews - a.reviews;
     });
   }, [activeCategory, activeRegion, localQuery, sortBy]);
-
+    useEffect(() => { setPage(1); }, [activeCategory, activeRegion, localQuery, sortBy]);
+    
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };
 
     return (
@@ -237,7 +240,7 @@ function RecipesInner() {
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
                         style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: 24 }}
                     >
-                        {filtered.map((recipe, i) => (
+                        {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
                                     <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4"}}>
@@ -267,6 +270,36 @@ function RecipesInner() {
                         ))}
                     </motion.div>
                 </AnimatePresence>
+                {/* Pagination */}
+                {filtered.length > PER_PAGE && (
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48 }}>
+                        <button
+                            onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0 }); }}
+                            disabled={page === 1}
+                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                        >
+                            ← Prev
+                        </button>
+                
+                        {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
+                            <button
+                                key={n}
+                                onClick={() => { setPage(n); window.scrollTo({ top: 0 }); }}
+                                style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                            >
+                                {n}
+                            </button>
+                        ))}
+                
+                        <button
+                            onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); window.scrollTo({ top: 0 }); }}
+                            disabled={page === Math.ceil(filtered.length / PER_PAGE)}
+                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                        >
+                            Next →
+                        </button>
+                    </div>
+                )}
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
                         <motion.div
