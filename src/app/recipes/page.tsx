@@ -99,22 +99,41 @@ function RecipesInner() {
     const words = q.split(/\s+/).filter(Boolean);
 
     return RECIPES.filter((r) => {
-    const catKeywords: Record<string, string[]> = {
-        "Soup": ["soup", "canh", "pho", "bun", "bún", "phở", "broth"],
-        "Noodles": ["noodle", "pho", "bun", "mi", "mì", "phở", "bún", "vermicelli", "tapioca"],
-        "Rice": ["rice", "com", "cơm", "xoi", "xôi", "congee", "chao", "cháo"],
-        "Street Food": ["street", "banh mi", "bánh mì", "skewer", "grilled"],
-        "Rolls": ["roll", "cuon", "cuốn", "nem", "spring roll"],
+    const titleLower = (r.title + " " + r.subtitle).toLowerCase();
+      const tagsLower = r.tags.map((t) => t.toLowerCase());
+
+      const matchCat = (cat: string) => {
+        if (cat === "All") return true;
+
+        if (cat === "Rice") {
+          if (/\b(noodle|pho|bun|bún|phở|mi quang|vermicelli|tapioca)\b/.test(titleLower)) return false;
+          if (/\b(congee|chao|cháo)\b/.test(titleLower)) return false;
+          return /\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) || tagsLower.includes("rice");
+        }
+
+        if (cat === "Noodles") {
+          if (/\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) && !/\b(noodle|pho|bun|bún|phở|mì)\b/.test(titleLower)) return false;
+          return /\b(noodle|pho|bun|bún|phở|mì|mi quang|vermicelli|tapioca)\b/.test(titleLower) || tagsLower.includes("noodles");
+        }
+
+        if (cat === "Soup") {
+          return /\b(soup|canh|broth|pho|phở|bun bo|bún bò|bun rieu|bún riêu|congee|chao|cháo)\b/.test(titleLower);
+        }
+
+        if (cat === "Street Food") {
+          return tagsLower.some((t) => t.includes("street")) ||
+                 /\b(banh mi|bánh mì|skewer|street)\b/.test(titleLower);
+        }
+
+        if (cat === "Rolls") {
+          return /\b(roll|cuon|cuốn|nem)\b/.test(titleLower) ||
+                 tagsLower.some((t) => t.includes("roll") || t.includes("wrap"));
+        }
+
+        return false;
       };
-      const haystack = (
-        r.title + " " + r.subtitle + " " + r.description + " " +
-        r.tags.join(" ") + " " + r.category
-      ).toLowerCase();
-      const catMatch =
-        activeCategory === "All" ||
-        (catKeywords[activeCategory] || [activeCategory.toLowerCase()]).some((kw) =>
-          haystack.includes(kw)
-        );
+
+      const catMatch = matchCat(activeCategory);
       const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
 
       const searchable = normalize([
