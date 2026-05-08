@@ -412,38 +412,6 @@ export default function TravelGuidePage() {
                 </div>
             </section>
 
-            {/* ── REGION QUICK NAV ─────────────────────────────────────────────────── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 40px 0' }}>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}
-                >
-                    {([
-                        { region: 'North' as Region, label: 'Northern Vietnam', sub: 'Hanoi & beyond', img: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=600&q=80', count: GUIDES.filter(g => g.region === 'North').length },
-                        { region: 'Central' as Region, label: 'Central Vietnam', sub: 'Huế, Hội An & Đà Nẵng', img: 'https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=600&q=80', count: GUIDES.filter(g => g.region === 'Central').length },
-                        { region: 'South' as Region, label: 'Southern Vietnam', sub: 'Saigon, Mekong & coast', img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80', count: GUIDES.filter(g => g.region === 'South').length },
-                    ]).map((r, i) => (
-                        <motion.button
-                            key={r.region}
-                            custom={i} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-                            onClick={() => { setRegion(r.region); setFoodType('All') }}
-                            style={{ position: 'relative', height: 160, borderRadius: 22, overflow: 'hidden', border: region === r.region ? '2px solid #D97706' : '2px solid transparent', cursor: 'pointer', background: 'none', padding: 0, textAlign: 'left' }}
-                        >
-                            <Image src={r.img} alt={r.label} fill style={{ objectFit: 'cover' }} sizes="400px" />
-                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,8,4,0.82) 0%, rgba(13,8,4,0.2) 100%)' }} />
-                            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px 22px' }}>
-                                <p style={{ fontSize: 17, fontFamily: "'Playfair Display', serif", fontWeight: 700, color: 'white', margin: 0, lineHeight: 1.2 }}>{r.label}</p>
-                                <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', margin: '4px 0 0', fontWeight: 500 }}>{r.count} guides · {r.sub}</p>
-                            </div>
-                            {region === r.region && (
-                                <div style={{ position: 'absolute', top: 14, right: 14, background: '#D97706', color: 'white', fontSize: 10, fontWeight: 800, padding: '4px 12px', borderRadius: 100, letterSpacing: '0.06em' }}>ACTIVE</div>
-                            )}
-                        </motion.button>
-                    ))}
-                </motion.div>
-            </section>
-
             {/* ── FILTER BAR ───────────────────────────────────────────────────────── */}
             <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.95)', backdropFilter: 'blur(18px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '14px 40px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center', flexWrap: 'nowrap' }}>
