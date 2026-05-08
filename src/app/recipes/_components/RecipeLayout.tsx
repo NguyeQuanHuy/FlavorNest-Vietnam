@@ -171,18 +171,37 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
             </motion.div>
 
             {/* Intro paragraph */}
-            <div className="max-w-3xl mx-auto px-6 py-10">
-                <p
-                    style={{
-                        fontFamily: 'DM Sans, sans-serif',
+            <div style={{ maxWidth: '720px', margin: '40px auto', padding: '0 24px' }}>
+                <div style={{
+                    position: 'relative',
+                    padding: '36px 44px',
+                    background: '#fff',
+                    border: '2px solid #D97706',
+                    borderRadius: '4px 20px 4px 20px',
+                }}>
+                    {/* Góc trang trí */}
+                    <div style={{ position: 'absolute', top: -10, left: -10, width: 20, height: 20, background: '#D97706', borderRadius: '50%' }} />
+                    <div style={{ position: 'absolute', bottom: -10, right: -10, width: 20, height: 20, background: '#D97706', borderRadius: '50%' }} />
+                    <div style={{ position: 'absolute', top: -6, left: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
+                    <div style={{ position: 'absolute', bottom: -6, right: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
+            
+                    {/* Quote mark */}
+                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginBottom: 20, opacity: 0.3 }}>"</div>
+            
+                    <p style={{
+                        fontFamily: 'Playfair Display, serif',
+                        fontStyle: 'italic',
                         color: '#4B2E1A',
-                        fontSize: '1.1rem',
-                        lineHeight: 1.8,
+                        fontSize: '1.15rem',
+                        lineHeight: 1.85,
                         textAlign: 'center',
-                    }}
-                >
-                    {recipe.intro}
-                </p>
+                        margin: 0,
+                    }}>
+                        {recipe.intro}
+                    </p>
+            
+                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginTop: 16, textAlign: 'right', opacity: 0.3 }}>"</div>
+                </div>
             </div>
 
             {/* Main 2-column grid */}
