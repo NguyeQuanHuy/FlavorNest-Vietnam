@@ -968,6 +968,7 @@ export default function MainDishesPage() {
                             Next →
                         </button>
                     </div>
+                    </div>
                 )}
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
