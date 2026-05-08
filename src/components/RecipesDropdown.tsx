@@ -71,7 +71,8 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
       <div
         className="absolute left-1/2 -translate-x-1/2 z-50"
         style={{
-          top: "100%",
+          top: "calc(100% + 0px)",
+          marginTop: 0,
           width: 560,
           borderRadius: 0,
           overflow: "hidden",
