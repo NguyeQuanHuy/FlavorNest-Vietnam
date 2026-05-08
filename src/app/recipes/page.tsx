@@ -99,13 +99,22 @@ function RecipesInner() {
     const words = q.split(/\s+/).filter(Boolean);
 
     return RECIPES.filter((r) => {
+    const catKeywords: Record<string, string[]> = {
+        "Soup": ["soup", "canh", "pho", "bun", "bún", "phở", "broth"],
+        "Noodles": ["noodle", "pho", "bun", "mi", "mì", "phở", "bún", "vermicelli", "tapioca"],
+        "Rice": ["rice", "com", "cơm", "xoi", "xôi", "congee", "chao", "cháo"],
+        "Street Food": ["street", "banh mi", "bánh mì", "skewer", "grilled"],
+        "Rolls": ["roll", "cuon", "cuốn", "nem", "spring roll"],
+      };
+      const haystack = (
+        r.title + " " + r.subtitle + " " + r.description + " " +
+        r.tags.join(" ") + " " + r.category
+      ).toLowerCase();
       const catMatch =
         activeCategory === "All" ||
-        r.tags.some((t) => t.toLowerCase().includes(activeCategory.toLowerCase())) ||
-        r.category.toLowerCase().includes(activeCategory.toLowerCase()) ||
-        (r.title + " " + r.subtitle + " " + r.description)
-          .toLowerCase()
-          .includes(activeCategory.toLowerCase());
+        (catKeywords[activeCategory] || [activeCategory.toLowerCase()]).some((kw) =>
+          haystack.includes(kw)
+        );
       const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
 
       const searchable = normalize([
