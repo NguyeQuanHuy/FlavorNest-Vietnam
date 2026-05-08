@@ -65,8 +65,8 @@ export default function Footer() {
             <style>{`
         .footer-main-grid {
             display: grid;
-            grid-template-columns: minmax(0,1.8fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
-            gap: 48px;
+            grid-template-columns: minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+            gap: 40px;
         }
         .footer-brand-col { grid-column: auto; }
         .footer-newsletter-row {
@@ -82,6 +82,15 @@ export default function Footer() {
         }
         .footer-newsletter-inputs input {
             min-width: 220px;
+        }
+        @media (max-width: 1024px) {
+            .footer-main-grid {
+                grid-template-columns: 1fr 1fr 1fr !important;
+                gap: 32px !important;
+            }
+            .footer-brand-col {
+                grid-column: 1 / -1 !important;
+            }
         }
         @media (max-width: 768px) {
             .footer-main-grid {
@@ -116,7 +125,7 @@ export default function Footer() {
     `}</style>
 
             {/* ── Top newsletter band ── */}
-            <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', padding: '52px 24px' }}>
+            <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', padding: '44px 24px' }}>
                 <div className="footer-newsletter-row" style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div style={{ maxWidth: 460 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
@@ -144,11 +153,11 @@ export default function Footer() {
             </div>
 
             {/* ── Main footer grid ── */}
-            <div style={{ maxWidth: 1200, margin: '0 auto', padding: '56px 24px 48px' }}>
+            <div style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 40px' }}>
                 <div className="footer-main-grid">
 
                     {/* Brand column */}
-                    <div style={{ gridColumn: '1 / -1' }} className="footer-brand-col">
+                    <div className="footer-brand-col">
                         <div style={{ marginBottom: 20 }}>
                             <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: 'white', display: 'block', lineHeight: 1 }}>FlavorNest</span>
                             <span style={{ fontSize: 10, color: '#D97706', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: 3, display: 'block' }}>Vietnam Gourmet</span>
@@ -203,8 +212,11 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
+                    </div>
 
-                        <h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase', margin: '28px 0 18px' }}>Stories</h4>
+                    {/* Stories column */}
+                    <div>
+                        <h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase', margin: '0 0 18px' }}>Stories</h4>
                         <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
                             {STORY_LINKS.map(l => (
                                 <li key={l.href}>
@@ -240,12 +252,6 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-
-                        {/* Trust badge */}
-                        <div style={{ marginTop: 32, padding: '14px 16px', background: 'rgba(217,119,6,0.08)', border: '1px solid rgba(217,119,6,0.18)', borderRadius: 14 }}>
-                            <p style={{ fontSize: 12, color: '#D97706', fontWeight: 700, margin: '0 0 4px' }}>🏆 Trusted by 50K+ cooks</p>
-                            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', margin: 0, lineHeight: 1.5 }}>100+ recipes tested in real home kitchens across Vietnam.</p>
-                        </div>
                     </div>
                 </div>
             </div>
