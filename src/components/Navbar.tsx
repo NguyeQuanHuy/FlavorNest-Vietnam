@@ -141,7 +141,7 @@ export default function Navbar() {
                 closeTimer.current = setTimeout(() => {
                   if (isRecipes) setRecipesOpen(false);
                   if (isStories) setStoriesOpen(false);
-                }, 120);
+                }, 60);
               };
 
               return (
