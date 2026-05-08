@@ -275,7 +275,7 @@ function RecipesInner() {
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48, position: 'sticky', bottom: 24, zIndex: 30 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>            
                         <button
-                            onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                            onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
                             disabled={page === 1}
                             style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
                         >
@@ -285,7 +285,7 @@ function RecipesInner() {
                         {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
                             <button
                                 key={n}
-                                onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                                onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
                                 style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                             >
                                 {n}
@@ -293,7 +293,7 @@ function RecipesInner() {
                         ))}
                 
                         <button
-                            onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                            onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
                             disabled={page === Math.ceil(filtered.length / PER_PAGE)}
                             style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
                         >
