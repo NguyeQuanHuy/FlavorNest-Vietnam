@@ -99,7 +99,13 @@ function RecipesInner() {
     const words = q.split(/\s+/).filter(Boolean);
 
     return RECIPES.filter((r) => {
-      const catMatch = activeCategory === "All" || r.category === activeCategory;
+      const catMatch =
+        activeCategory === "All" ||
+        r.tags.some((t) => t.toLowerCase().includes(activeCategory.toLowerCase())) ||
+        r.category.toLowerCase().includes(activeCategory.toLowerCase()) ||
+        (r.title + " " + r.subtitle + " " + r.description)
+          .toLowerCase()
+          .includes(activeCategory.toLowerCase());
       const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
 
       const searchable = normalize([
