@@ -158,11 +158,7 @@ export default function Navbar() {
                       padding: link.hasDropdown
                         ? "8px 14px 8px 16px"
                         : "8px 16px",
-                      background: isActive
-                        ? forceScrolled
-                          ? "rgba(75,46,26,0.08)"
-                          : "rgba(245,237,227,0.15)"
-                        : "transparent",
+                     background: "transparent",
                       color: forceScrolled
                         ? "rgba(45,26,14,0.85)"
                         : "rgba(245,237,227,0.85)",
