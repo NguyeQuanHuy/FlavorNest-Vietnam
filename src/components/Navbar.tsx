@@ -141,7 +141,7 @@ export default function Navbar() {
                 closeTimer.current = setTimeout(() => {
                   if (isRecipes) setRecipesOpen(false);
                   if (isStories) setStoriesOpen(false);
-                }, 60);
+                }, 30);
               };
 
               return (
@@ -204,13 +204,13 @@ export default function Navbar() {
                   {isRecipes && (
                     <RecipesDropdown
                       isOpen={recipesOpen}
-                      onClose={() => setRecipesOpen(false)}
+                      onClose={handleLeave}
                     />
                   )}
                   {isStories && (
                     <StoriesDropdown
                       isOpen={storiesOpen}
-                      onClose={() => setStoriesOpen(false)}
+                      onClose={handleLeave}
                     />
                   )}
                 </div>
