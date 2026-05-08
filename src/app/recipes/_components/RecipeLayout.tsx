@@ -114,33 +114,6 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                             {recipe.title}
                         </span>
                     </div>
-            
-                    {/* Right: meta */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
-                        <span style={{
-                            fontFamily: 'DM Sans, sans-serif',
-                            fontSize: 12,
-                            color: 'rgba(75,46,26,0.6)',
-                            background: 'rgba(75,46,26,0.06)',
-                            padding: '4px 12px',
-                            borderRadius: 100,
-                        }}>
-                            ⏱ {recipe.totalTime}
-                        </span>
-                        <span style={{
-                            backgroundColor: difficultyColor,
-                            color: '#FFF',
-                            padding: '4px 14px',
-                            borderRadius: 100,
-                            fontSize: 11,
-                            fontWeight: 700,
-                            fontFamily: 'DM Sans, sans-serif',
-                            letterSpacing: '0.05em',
-                            textTransform: 'uppercase',
-                        }}>
-                            {recipe.difficulty}
-                        </span>
-                    </div>
                 </div>
             </div>
 
