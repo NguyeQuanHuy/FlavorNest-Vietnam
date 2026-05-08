@@ -792,12 +792,15 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function MainDishesPage() {
     const [diff, setDiff] = useState('All')
+    const [page, setPage] = useState(1);
+    const PER_PAGE = 12;
     const [region, setRegion] = useState('All Regions')
 
     const filtered = useMemo(() =>
         RECIPES.filter(r => (diff === 'All' || r.difficulty === diff) && (region === 'All Regions' || r.region === region))
         , [diff, region])
-
+    
+    useEffect(() => { setPage(1); }, [diff, region]);
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
@@ -896,7 +899,7 @@ export default function MainDishesPage() {
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`} 
                         style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))', gap: 24 }}>
-                        {filtered.map((recipe, i) => (
+                        {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     {/* Image */}
@@ -939,6 +942,33 @@ export default function MainDishesPage() {
                     </motion.div>
                 </AnimatePresence>
 
+                {filtered.length > PER_PAGE && (
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48 }}>
+                        <button
+                            onClick={() => { setPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0 }); }}
+                            disabled={page === 1}
+                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                        >
+                            ← Prev
+                        </button>
+                        {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
+                            <button
+                                key={n}
+                                onClick={() => { setPage(n); window.scrollTo({ top: 0 }); }}
+                                style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                            >
+                                {n}
+                            </button>
+                        ))}
+                        <button
+                            onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); window.scrollTo({ top: 0 }); }}
+                            disabled={page === Math.ceil(filtered.length / PER_PAGE)}
+                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                        >
+                            Next →
+                        </button>
+                    </div>
+                )}
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
                         <div style={{ fontSize: 44, marginBottom: 12 }}>🍖</div>
