@@ -2,17 +2,13 @@
 
 /**
  * FlavorNest Vietnam — Travel Guide Page
- * app/stories/travel/page.tsx  (or app/travel-guide/page.tsx)
- *
- * Design: Warm editorial / luxury food-travel magazine
- * Motion: Framer Motion — staggered reveals, parallax hero, hover lifts
- * SEO: Full metadata + OpenGraph exported separately (see bottom of file)
+ * src/app/stories/travel/page.tsx
  */
 
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Region = 'All' | 'North' | 'Central' | 'South'
@@ -28,8 +24,8 @@ interface Guide {
     tag: string
     tagColor: string
     image: string
-    intro: string        // Short teaser — emotional hook
-    story: string        // Longer pull-quote / story line
+    intro: string
+    story: string
     mustTry: string[]
     bestTime: string
     href: string
@@ -167,9 +163,6 @@ const GUIDES: Guide[] = [
     },
 ]
 
-const REGIONS: Region[] = ['All', 'North', 'Central', 'South']
-const FOOD_TYPES: FoodType[] = ['All', 'Street Food', 'Fine Dining', 'Hidden Gem', 'Local Market', 'Café Culture']
-
 const REGION_LABEL: Record<Region, string> = {
     All: 'All Vietnam',
     North: '🏯 Northern Vietnam',
@@ -184,11 +177,6 @@ const fadeUp = {
         opacity: 1, y: 0,
         transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: i * 0.08 },
     }),
-}
-
-const heroText = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 }
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -221,20 +209,16 @@ function GuideCard({ guide, index }: { guide: Guide; index: number }) {
                         style={{ objectFit: 'cover', transform: hovered ? 'scale(1.07)' : 'scale(1)', transition: 'transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)' }}
                         quality={80}
                     />
-                    {/* Gradient overlay */}
                     <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(75,46,26,0.7) 0%, transparent 55%)', opacity: hovered ? 1 : 0.6, transition: 'opacity 0.3s' }} />
 
-                    {/* Tag */}
                     <div className="absolute top-4 left-4" style={{ background: guide.tagColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100 }}>
                         {guide.tag}
                     </div>
 
-                    {/* City pill */}
                     <div className="absolute top-4 right-4" style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 13px', borderRadius: 100 }}>
                         📍 {guide.city}
                     </div>
 
-                    {/* Bottom — dish name */}
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                         <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: 'white', margin: 0, lineHeight: 1.15, textShadow: '0 2px 12px rgba(0,0,0,0.4)' }}>
                             {guide.dish}
@@ -244,7 +228,6 @@ function GuideCard({ guide, index }: { guide: Guide; index: number }) {
 
                 {/* Body */}
                 <div className="p-6">
-                    {/* Type badge */}
                     <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#D97706' }}>{guide.type}</span>
 
                     <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, fontStyle: 'italic', color: '#4B2E1A', lineHeight: 1.5, margin: '6px 0 12px', fontWeight: 600 }}>
@@ -255,7 +238,6 @@ function GuideCard({ guide, index }: { guide: Guide; index: number }) {
                         {guide.intro}
                     </p>
 
-                    {/* Must Try */}
                     <div style={{ background: '#F5EDE3', borderRadius: 14, padding: '12px 14px', marginBottom: 18 }}>
                         <p style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#D97706', margin: '0 0 8px' }}>Must Try</p>
                         <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -268,13 +250,11 @@ function GuideCard({ guide, index }: { guide: Guide; index: number }) {
                         </ul>
                     </div>
 
-                    {/* Best time */}
                     <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.45)', display: 'flex', alignItems: 'flex-start', gap: 6, margin: '0 0 18px' }}>
                         <span style={{ flexShrink: 0 }}>🕐</span>
                         <span><strong style={{ color: 'rgba(75,46,26,0.65)', fontWeight: 600 }}>Best time:</strong> {guide.bestTime}</span>
                     </p>
 
-                    {/* CTA */}
                     <div style={{ paddingTop: 16, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                         <span style={{ fontSize: 13, fontWeight: 700, color: '#D97706', display: 'flex', alignItems: 'center', gap: 6, transition: 'gap 0.2s' }}>
                             Explore this guide
@@ -290,44 +270,21 @@ function GuideCard({ guide, index }: { guide: Guide; index: number }) {
 
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function TravelGuidePage() {
-    const [region, setRegion] = useState<Region>('All')
-    const [foodType, setFoodType] = useState<FoodType>('All')
-
     const heroRef = useRef<HTMLDivElement>(null)
     const [mounted, setMounted] = useState(false)
     useEffect(() => { setMounted(true) }, [])
     const { scrollYProgress } = useScroll({ target: mounted ? heroRef : undefined, offset: ['start start', 'end start'] })
-    const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
-    const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
-
-    const filtered = GUIDES.filter(g => {
-        const rMatch = region === 'All' || g.region === region
-        const tMatch = foodType === 'All' || g.type === foodType
-        return rMatch && tMatch
-    })
 
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
-        * { box-sizing: border-box; }
-        .filter-pill {
-          border: 1.5px solid rgba(75,46,26,0.12);
-          border-radius: 100px; padding: 8px 20px;
-          font-size: 13px; font-weight: 500;
-          color: rgba(75,46,26,0.55); background: transparent;
-          cursor: pointer; transition: all 0.18s; white-space: nowrap;
-          font-family: inherit;
-        }
-        .filter-pill:hover { color: #D97706; border-color: rgba(217,119,6,0.4); background: rgba(217,119,6,0.04); }
-        .filter-pill.on { background: #4B2E1A; color: white; border-color: #4B2E1A; }
-        .filter-pill.amber.on { background: #D97706; border-color: #D97706; }
-        a { color: inherit; }
-      `}</style>
+                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
+                * { box-sizing: border-box; }
+                a { color: inherit; }
+            `}</style>
 
-  {/* ── HERO ── */}
-            <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-                {/* Background image */}
+            {/* ── HERO ── */}
+            <section ref={heroRef} style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', inset: 0 }}>
                     <Image
                         src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1800&q=85"
@@ -339,11 +296,9 @@ export default function TravelGuidePage() {
                         style={{ objectFit: 'cover' }}
                     />
                 </div>
-                {/* Dark overlay */}
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(13,8,4,0.85) 0%, rgba(26,18,8,0.75) 60%, rgba(35,22,8,0.7) 100%)' }} />
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 65% 50%, rgba(217,119,6,0.18) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
-                {/* Content with animation */}
                 <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 24px 80px', position: 'relative', width: '100%' }}>
                     <motion.nav
                         initial={{ opacity: 0, y: 12 }}
@@ -390,7 +345,7 @@ export default function TravelGuidePage() {
                 </div>
             </section>
 
-            {/* ── EDITOR'S NOTE ───────────────────────────────────────────────────── */}
+            {/* ── EDITOR'S NOTE ── */}
             <section style={{ background: '#F5EDE3', padding: '72px 40px' }}>
                 <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
                     <motion.div
@@ -412,26 +367,8 @@ export default function TravelGuidePage() {
                 </div>
             </section>
 
-            {/* ── FILTER BAR ───────────────────────────────────────────────────────── */}
-            <div style={{ position: 'sticky', top: 72, zIndex: 40, background: 'rgba(250,250,247,0.95)', backdropFilter: 'blur(18px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '14px 40px' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center', flexWrap: 'nowrap' }}>
-                    {/* Region pills */}
-                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.32)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0, marginRight: 4 }}>Region</span>
-                    {REGIONS.map(r => (
-                        <button key={r} onClick={() => setRegion(r)} className={`filter-pill ${region === r ? 'on' : ''}`}>
-                            {r === 'All' ? 'All Vietnam' : r === 'North' ? '🏯 North' : r === 'Central' ? '🌶️ Central' : '🌴 South'}
-                        </button>
-                    ))}
-                    <div style={{ width: 1, height: 24, background: 'rgba(75,46,26,0.1)', margin: '0 8px', flexShrink: 0 }} />
-                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.32)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0, marginRight: 4 }}>Type</span>
-                    {FOOD_TYPES.map(t => (
-                        <button key={t} onClick={() => setFoodType(t)} className={`filter-pill amber ${foodType === t ? 'on' : ''}`}>{t}</button>
-                    ))}
-                </div>
-            </div>
-
-            {/* ── GUIDES GRID ──────────────────────────────────────────────────────── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '52px 40px 96px' }} aria-label="Destination guides">
+            {/* ── GUIDES GRID ── */}
+            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '72px 40px 96px' }} aria-label="Destination guides">
                 <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 36, flexWrap: 'wrap', gap: 12 }}>
                     <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
@@ -439,35 +376,20 @@ export default function TravelGuidePage() {
                             <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Guides</span>
                         </div>
                         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(26px, 4vw, 38px)', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>
-                            {region === 'All' ? 'All Destination Guides' : REGION_LABEL[region]}
-                            {foodType !== 'All' && <span style={{ color: '#D97706' }}> · {foodType}</span>}
+                            All Destination Guides
                         </h2>
                     </div>
-                    <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.38)', fontWeight: 500 }}>{filtered.length} guides</p>
+                    <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.38)', fontWeight: 500 }}>{GUIDES.length} guides</p>
                 </div>
 
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={`${region}-${foodType}`}
-                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 24 }}
-                    >
-                        {filtered.map((guide, i) => (
-                            <GuideCard key={guide.id} guide={guide} index={i} />
-                        ))}
-                    </motion.div>
-                </AnimatePresence>
-
-                {filtered.length === 0 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
-                        <div style={{ fontSize: 48, marginBottom: 12 }}>🗺️</div>
-                        <p style={{ fontSize: 16 }}>No guides match this filter — try a different combination.</p>
-                    </motion.div>
-                )}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: 24 }}>
+                    {GUIDES.map((guide, i) => (
+                        <GuideCard key={guide.id} guide={guide} index={i} />
+                    ))}
+                </div>
             </section>
 
-            {/* ── NEWSLETTER / CTA ─────────────────────────────────────────────────── */}
+            {/* ── NEWSLETTER / CTA ── */}
             <section style={{ background: '#2D1A0E', padding: '80px 40px' }}>
                 <motion.div
                     initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -502,7 +424,7 @@ export default function TravelGuidePage() {
                 </motion.div>
             </section>
 
-            {/* ── FOOTER LINKS ─────────────────────────────────────────────────────── */}
+            {/* ── FOOTER LINKS ── */}
             <section style={{ background: '#1A0E07', padding: '48px 40px 60px', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20 }}>
                     <div>
