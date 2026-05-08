@@ -297,8 +297,9 @@ function RecipesInner() {
                             disabled={page === Math.ceil(filtered.length / PER_PAGE)}
                             style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
                         >
-                            Next →
+                        Next →
                         </button>
+                    </div>        
                     </div>
                 )}
                 {filtered.length === 0 && (
