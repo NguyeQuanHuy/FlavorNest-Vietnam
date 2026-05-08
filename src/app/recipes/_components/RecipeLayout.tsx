@@ -67,57 +67,82 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
     return (
         <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
             {/* Sticky Top Bar */}
-            <div
-                style={{
-                    position: 'sticky',
-                    top: 0,
-                    zIndex: 50,
-                    backgroundColor: 'rgba(255,255,255,0.92)',
-                    backdropFilter: 'blur(12px)',
-                    borderBottom: '1px solid #EDE0D0',
-                }}
-            >
-                <div
-                    className="max-w-7xl mx-auto px-6 py-4"
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: '16px',
-                        flexWrap: 'wrap',
-                    }}
-                >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0 }}>
-                        <Link
-                            href="/recipes"
-                            style={{
-                                fontFamily: 'DM Sans, sans-serif',
-                                color: '#8B6F5A',
-                                fontSize: '14px',
-                                textDecoration: 'none',
-                                fontWeight: 500,
-                                flexShrink: 0,
-                            }}
-                        >
+            <div style={{
+                position: 'sticky',
+                top: 0,
+                zIndex: 50,
+                background: 'rgba(245,237,227,0.97)',
+                backdropFilter: 'blur(16px)',
+                borderBottom: '2px solid #D97706',
+            }}>
+                <div style={{
+                    maxWidth: '1280px',
+                    margin: '0 auto',
+                    padding: '12px 24px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 16,
+                }}>
+                    {/* Left: breadcrumb */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
+                        <Link href="/recipes" style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 6,
+                            fontFamily: 'DM Sans, sans-serif',
+                            fontSize: 13,
+                            fontWeight: 500,
+                            color: '#D97706',
+                            textDecoration: 'none',
+                            flexShrink: 0,
+                        }}>
                             ← Recipes
                         </Link>
-                        <span style={{ color: '#D4C3B0' }}>›</span>
-                        <h1
-                            style={{
-                                fontFamily: 'Playfair Display, serif',
-                                color: '#2D1A0E',
-                                fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
-                                fontWeight: 400,
-                                margin: 0,
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                                whiteSpace: 'nowrap',
-                            }}
-                        >
+                        <span style={{ color: '#D97706', opacity: 0.4 }}>›</span>
+                        <span style={{
+                            fontFamily: 'DM Sans, sans-serif',
+                            fontSize: 13,
+                            fontWeight: 600,
+                            color: '#2D1A0E',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                        }}>
                             {recipe.title}
-                        </h1>
-                    </div>                   
+                        </span>
+                    </div>
+            
+                    {/* Right: meta */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
+                        <span style={{
+                            fontFamily: 'DM Sans, sans-serif',
+                            fontSize: 12,
+                            color: 'rgba(75,46,26,0.6)',
+                            background: 'rgba(75,46,26,0.06)',
+                            padding: '4px 12px',
+                            borderRadius: 100,
+                        }}>
+                            ⏱ {recipe.totalTime}
+                        </span>
+                        <span style={{
+                            backgroundColor: difficultyColor,
+                            color: '#FFF',
+                            padding: '4px 14px',
+                            borderRadius: 100,
+                            fontSize: 11,
+                            fontWeight: 700,
+                            fontFamily: 'DM Sans, sans-serif',
+                            letterSpacing: '0.05em',
+                            textTransform: 'uppercase',
+                        }}>
+                            {recipe.difficulty}
+                        </span>
+                    </div>
                 </div>
+            </div>
             </div>
 
             {/* Hero Image */}
