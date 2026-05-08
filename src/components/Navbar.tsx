@@ -133,8 +133,16 @@ export default function Navbar() {
 
               const handleEnter = () => {
                 if (closeTimer.current) clearTimeout(closeTimer.current);
-                if (isRecipes) { setRecipesOpen(true); setStoriesOpen(false); }
-                if (isStories) { setStoriesOpen(true); setRecipesOpen(false); }
+                if (isRecipes) {
+                  setRecipesOpen(true);
+                  setStoriesOpen(false);
+                } else if (isStories) {
+                  setStoriesOpen(true);
+                  setRecipesOpen(false);
+                } else {
+                  setRecipesOpen(false);
+                  setStoriesOpen(false);
+                }
               };
 
               const handleLeave = () => {
