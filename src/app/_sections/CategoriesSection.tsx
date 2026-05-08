@@ -1,6 +1,5 @@
 'use client'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 interface Category {
     href: string
@@ -140,13 +139,7 @@ export default function CategoriesSection() {
             <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-[#166534]/8 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.55 }}
-                    className="text-center mb-14"
-                >
+                    <div className="text-center mb-14">            
                     <div className="flex items-center justify-center gap-2 mb-2">
                         <div className="w-7 h-px bg-[#D97706]" />
                         <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.18em]">Browse By Type</span>
@@ -155,20 +148,14 @@ export default function CategoriesSection() {
                     <h2 id="categories-heading" className="font-display text-4xl sm:text-5xl text-white font-bold">
                         Popular <em className="text-[#D97706]">Categories</em>
                     </h2>
-                </motion.div>
+                    </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-                    {CATEGORIES.map((cat, i) => (
-                        <motion.div
-                            key={cat.href}
-                            initial={{ opacity: 0, y: 18 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.45, delay: i * 0.06 }}
-                        >
+                    {CATEGORIES.map((cat) => (
+                        <div key={cat.href}>
                             <Link
                                 href={cat.href}
-                                className="group flex flex-col items-center text-center rounded-2xl p-5 transition-all duration-300 hover:-translate-y-2"
+                                className="group flex flex-col items-center text-center rounded-2xl p-5 transition-all duration-200 hover:-translate-y-0.5"
                                 style={{
                                     background: 'rgba(255,255,255,0.04)',
                                     border: '1px solid rgba(255,255,255,0.08)',
@@ -184,7 +171,7 @@ export default function CategoriesSection() {
                                     ;(e.currentTarget as HTMLElement).style.boxShadow = 'none'
                                 }}
                             >
-                                <div className="mb-3 group-hover:scale-110 transition-transform duration-300">
+                                <div className="mb-3">
                                     {cat.icon}
                                 </div>
                                 <div className="text-white font-bold text-sm leading-tight mb-1">{cat.label}</div>
@@ -194,7 +181,7 @@ export default function CategoriesSection() {
                                     style={{ backgroundColor: cat.accent, opacity: 0.7 }}
                                 />
                             </Link>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
