@@ -143,7 +143,6 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
                     </div>
                 </div>
             </div>
-            </div>
 
             {/* Hero Image */}
             <motion.div
