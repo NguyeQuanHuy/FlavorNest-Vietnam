@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { recipes } from "@/data/recipes";
 
 const PILLARS = [
@@ -52,11 +51,7 @@ export default function WhyFlavorNest() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
 
                     {/* Left: image stack */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.65 }}
+                    <div
                         className="relative"
                     >
                         <div className="relative rounded-3xl overflow-hidden h-80 md:h-[460px] shadow-[0_20px_60px_rgba(75,46,26,.18)]">
@@ -94,15 +89,10 @@ export default function WhyFlavorNest() {
                                 className="w-24 h-24 rounded-2xl object-cover shadow-[0_8px_32px_rgba(75,46,26,.14)] border-4 border-[#F5EDE3] dark:border-[#1C1009]"
                             />
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Right: content */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.65 }}
-                    >
+                    <div>
                         <div className="flex items-center gap-2 mb-3">
                             <div className="w-7 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.18em]">Why FlavorNest?</span>
@@ -117,22 +107,18 @@ export default function WhyFlavorNest() {
                         {/* Pillars */}
                         <div className="space-y-4 mb-8">
                             {PILLARS.map((p, i) => (
-                                <motion.div
+                                <div
                                     key={p.title}
-                                    initial={{ opacity: 0, x: 16 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.45, delay: i * 0.08 }}
                                     className="flex gap-4 items-start group"
                                 >
-                                    <div className={`w-11 h-11 ${p.bg} group-hover:scale-110 transition-transform duration-300 rounded-2xl flex items-center justify-center text-xl flex-shrink-0 mt-0.5`}>
+                                    <div className={`w-11 h-11 ${p.bg} rounded-2xl flex items-center justify-center text-xl flex-shrink-0 mt-0.5`}>
                                         {p.icon}
                                     </div>
                                     <div>
                                         <div className="font-bold text-sm text-[#4B2E1A] dark:text-[#F5EDE3] mb-0.5">{p.title}</div>
                                         <p className="text-xs text-[#4B2E1A]/58 dark:text-[#F5EDE3]/50 leading-relaxed">{p.body}</p>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
@@ -142,16 +128,11 @@ export default function WhyFlavorNest() {
                         >
                             Our full story →
                         </Link>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Trust stats bar */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.55, delay: 0.2 }}
-                    className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4"
+                <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4"
                 >
                     {TRUST_STATS.map(stat => (
                         <div
@@ -162,7 +143,7 @@ export default function WhyFlavorNest() {
                             <div className="text-xs text-[#4B2E1A]/55 dark:text-[#F5EDE3]/45">{stat.label}</div>
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     )
