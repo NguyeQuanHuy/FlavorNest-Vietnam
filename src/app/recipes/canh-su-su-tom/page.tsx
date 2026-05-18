@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.8,
     baseServings: 2,
-    heroImage: '/images/recipes/canh-su-su-nau-tom.jpg',
+    heroImage: '/images/recipes/canh-su-su-tom.jpg',
 
     intro: `Canh su su nấu tôm is a light Vietnamese home-style soup made with chayote (su su) and fresh shrimp.
 

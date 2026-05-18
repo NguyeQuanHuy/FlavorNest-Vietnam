@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '25 min',
     rating: 4.8,
     baseServings: 3,
-    heroImage: '/images/recipes/bo-xao-bap-cai.jpg',
+    heroImage: '/images/recipes/thit-bo-xao-bap-cai-ca-rot.jpg',
 
     intro: `Thịt bò xào bắp cải cà rốt is a simple and nutritious Vietnamese home dish.
 
