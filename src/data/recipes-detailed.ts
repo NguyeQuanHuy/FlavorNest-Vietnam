@@ -197,7 +197,7 @@ const bunBoHue: RecipeDetailed = {
     description:
         "If phở is the quiet poetry of Hanoi, bún bò Huế is the defiant opera of central Vietnam. Born in the imperial city that once served the Nguyễn dynasty, this soup refuses to be polite. The broth is deep red-orange from annatto oil, perfumed with lemongrass, and funked with mắm ruốc — a fermented shrimp paste that divides first-time tasters and converts them for life.\n\nAnthony Bourdain called it 'the greatest soup in the world.' He wasn't wrong. Unlike phở, which relies on subtlety, bún bò Huế wants to be tasted — bold, spicy, aromatic, complex. The noodles are round and thick (bún bò — nothing like the flat phở noodles). The toppings are generous: slices of beef shank cooked until spoon-tender, chunks of pork knuckle that fall apart at the touch, silky cubes of pig blood, and Huế-style pork sausage wrapped in banana leaves.\n\nThis recipe takes about 3 hours — most of it passive simmering. The result serves six and tastes better on day two. Spice level is adjustable; I've written it at 'medium Huế', which is still spicier than most American 'spicy' dishes.",
 
-    image: "https://images.unsplash.com/photo-1583224944844-5b268c057b72?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/recipes/bun-bo-hue.jpg",
     imageAlt: "Bowl of Bún Bò Huế with red-orange broth, thick round noodles, beef shank, and fresh herbs",
 
     prepTime: "30 min",
@@ -562,35 +562,35 @@ const bunChaHaNoi: RecipeDetailed = {
     slug: "bun-cha-ha-noi",
     title: "Hanoi Grilled Pork Vermicelli",
     subtitle: "Bún Chả Hà Nội",
- 
+
     shortDescription:
         "Smoky chargrilled pork patties and belly slices in a tangy warm dipping broth, served with cool rice vermicelli, fresh herbs, and pickled vegetables — Hanoi's defining lunch.",
- 
+
     description:
         "Bún chả is the soul of Hanoi at noon. Walk down any narrow alley in the Old Quarter between 11am and 2pm and you'll smell it before you see it — pork fat dripping onto charcoal, smoke curling up through bamboo screens, the unmistakable aroma of caramelizing fish sauce and garlic.\n\nUnlike most Vietnamese soups where everything arrives in one bowl, bún chả is deconstructed: a small bowl of warm, golden dipping broth (nước chấm) with grilled pork patties and slices of pork belly bobbing in it, alongside a separate platter of cold rice vermicelli, a heaped basket of herbs and lettuce, and pickled green papaya for crunch. You assemble each bite yourself.\n\nThe dish became internationally famous in May 2016 when Anthony Bourdain brought President Barack Obama to a humble bún chả shop on Lê Văn Hưu street. The plastic stools, the cold Hanoi beer, the hands-on eating — it was Vietnam at its most honest. This recipe takes about 90 minutes total, with most of that being marination time.",
- 
+
     storySnippet:
         "In Hanoi, bún chả is strictly a lunch dish. Locals will look at you sideways if you order it for dinner. The reason is purely practical: the charcoal grills are fired up at dawn, the patties are made by hand throughout the morning, and by 2pm the shops simply close. To eat bún chả properly, you have to be there when the smoke is rising.",
- 
+
     image: "/images/recipes/bunchahanoi.jpg",
     imageAlt: "Hanoi-style grilled pork bún chả with vermicelli noodles, fresh herbs, and warm dipping broth",
- 
+
     prepTime: "30 min",
     cookTime: "25 min",
     totalTime: "55 min",
- 
+
     servings: 4,
     yield: "4 generous portions",
     difficulty: "Medium",
     category: "Grilled",
     cuisine: "Vietnamese",
- 
+
     rating: 4.9,
     ratingCount: 156,
     tags: ["Hanoi Heritage", "Bourdain Approved", "Lunch Classic"],
     isFeatured: true,
     isNew: true,
- 
+
     ingredients: [
         {
             section: "For the pork patties (chả viên)",
@@ -650,7 +650,7 @@ const bunChaHaNoi: RecipeDetailed = {
             ],
         },
     ],
- 
+
     instructions: [
         {
             step: 1,
@@ -707,7 +707,7 @@ const bunChaHaNoi: RecipeDetailed = {
             tip: "The dipping broth should be WARM, not hot — too much heat kills the herbs and makes the dish heavy.",
         },
     ],
- 
+
     tips: [
         "Mix ground pork in ONE direction only — this aligns proteins and gives the patties their authentic bouncy texture.",
         "Use a charcoal grill if possible. The smoke flavor is what separates real bún chả from imitations.",
@@ -715,13 +715,13 @@ const bunChaHaNoi: RecipeDetailed = {
         "Don't over-thicken the dipping broth — it should be light and drinkable, not syrupy.",
         "Eat it for LUNCH like the Hanoians do. The flavors and digestion both work better in daylight hours.",
     ],
- 
+
     variations: [
         "Bún chả Saigon: darker broth with more sugar and caramel, often served with peanuts on top.",
         "Bún chả cá: substitute mackerel patties for pork — popular in coastal Hải Phòng.",
         "Vegetarian (chay): use lemongrass tofu and seitan patties, replace fish sauce with light soy + nutritional yeast.",
     ],
- 
+
     nutrition: {
         calories: 580,
         protein: "38 g",
@@ -730,7 +730,7 @@ const bunChaHaNoi: RecipeDetailed = {
         sodium: "1850 mg",
         fiber: "3 g",
     },
- 
+
     keywords: [
         "bun cha recipe",
         "bun cha ha noi",
@@ -741,7 +741,7 @@ const bunChaHaNoi: RecipeDetailed = {
         "authentic bun cha recipe",
         "hanoi street food recipe",
     ],
- 
+
     datePublished: "2026-04-27",
     author: "FlavorNest Vietnam",
 };
@@ -863,7 +863,7 @@ export const RECIPES_DETAILED: RecipeDetailed[] = [
         datePublished: "2026-04-20",
         author: "FlavorNest Vietnam"
     },
-    
+
 ];
 
 // ─────────────────────────────────────────────────────────────
