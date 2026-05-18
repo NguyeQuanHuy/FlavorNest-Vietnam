@@ -187,10 +187,10 @@ export default function CategoriesSection() {
 
         <div className="text-center mt-10">
           <Link
-            href="/categories"
+            href="/recipes"
             className="inline-flex items-center gap-2 border border-white/20 hover:border-[#D97706] text-white/65 hover:text-[#D97706] text-sm font-semibold px-7 py-3 rounded-2xl transition-all duration-300"
           >
-            Browse All Categories →
+            Browse All Recipes →
           </Link>
         </div>
       </div>
