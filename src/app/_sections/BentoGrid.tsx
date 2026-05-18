@@ -215,7 +215,7 @@ function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: R
         <div style={{ position: 'relative', width: 120, flexShrink: 0 }}>
           <Image src={s.image} alt={s.title} fill sizes="120px"
             style={{ objectFit: 'cover' }} quality={75} className="bento-img" />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, #2D1A0E 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, transparent 30%, rgba(45,26,14,0.5) 70%, #2D1A0E 100%)' }} />
         </div>
         {/* text */}
         <div style={{ flex: 1, padding: '18px 20px 18px 16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 6 }}>
