@@ -227,6 +227,21 @@ export const STORIES: Story[] = [
         publishedAt: 'May 19, 2026',
         featured: true,
     },
+    {
+        slug: 'what-to-eat-in-vietnam',
+        category: 'Nutrition',
+        categoryColor: 'amber',
+        title: 'What to Eat in Vietnam: A Guide to the Best Dishes',
+        subtitle: 'Health · Nutrition · Vietnamese Cuisine',
+        excerpt: 'Vietnam has one of the lowest obesity rates in the world. The food is the reason. Here\'s the science behind why.',
+        image: '/images/recipes/what-to-eat.jpg',
+        imageAlt: 'eating in Vietnam',
+        tag: 'Nutrition',
+        tagColor: 'amber',
+        readTime: '6 min read',
+        publishedAt: 'May 19, 2026',
+        featured: true,
+    },
 ]
 
 export default function StoriesPage() {

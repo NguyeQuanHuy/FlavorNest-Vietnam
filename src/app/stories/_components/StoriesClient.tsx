@@ -162,7 +162,7 @@ export default function StoriesClient({ stories }: Props) {
                                 className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20"
                             >
                                 <div className="relative">
-                                    <div className="relative rounded-[28px] overflow-hidden aspect-[4/3] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
+                                    <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
                                         <Image
                                             src={featured.image}
                                             alt={featured.imageAlt}
@@ -188,7 +188,7 @@ export default function StoriesClient({ stories }: Props) {
                                             {featured.subtitle}
                                         </span>
                                     </div>
-                                    <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-5 group-hover:text-[#D97706] transition-colors duration-300">
+                                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-5 group-hover:text-[#D97706] transition-colors duration-300">
                                         {featured.title}
                                     </h2>
                                     <blockquote className="border-l-[3px] border-[#D97706] pl-4 mb-7">
@@ -270,11 +270,11 @@ function StoryCard({
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
             className={`
-        group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center
+        group grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center
         ${flip ? 'lg:[&>:first-child]:order-2 lg:[&>:last-child]:order-1' : ''}
       `}
         >
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
+            <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
                 <Image
                     src={story.image}
                     alt={story.imageAlt}
@@ -298,7 +298,7 @@ function StoryCard({
                         {story.subtitle}
                     </span>
                 </div>
-                <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-4 group-hover:text-[#D97706] transition-colors duration-300">
+                <h2 className="font-display text-xl sm:text-2xl font-bold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-4 group-hover:text-[#D97706] transition-colors duration-300">
                     {story.title}
                 </h2>
                 <blockquote className="border-l-[3px] border-[#D97706]/40 pl-4 mb-5">
