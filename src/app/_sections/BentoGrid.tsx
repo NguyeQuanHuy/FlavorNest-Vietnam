@@ -211,11 +211,10 @@ function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: R
       <Link href={`/stories/${s.slug}`}
         style={{ display: 'flex', gap: 0, height: '100%', borderRadius: 16, overflow: 'hidden', textDecoration: 'none', background: '#2D1A0E' }}
         className="bento-card story-card">
-        {/* image strip — extends 20px into text area for seamless blend */}
-        <div style={{ position: 'relative', width: 140, flexShrink: 0, marginRight: -20 }}>
+        {/* image strip — clipped clean, no gradient overlay */}
+        <div style={{ position: 'relative', width: 140, flexShrink: 0 }}>
           <Image src={s.image} alt={s.title} fill sizes="140px"
             style={{ objectFit: 'cover' }} quality={75} className="bento-img" />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, transparent 20%, rgba(45,26,14,0.4) 55%, rgba(45,26,14,0.85) 80%, #2D1A0E 100%)' }} />
         </div>
         {/* text */}
         <div style={{ flex: 1, padding: '18px 20px 18px 16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 6 }}>
