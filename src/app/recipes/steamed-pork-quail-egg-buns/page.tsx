@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'steamed-pork-quail-egg-buns',
     title: 'Vietnamese Steamed Pork and Quail Egg Buns',
     subtitle: 'Pillowy milk-dough buns filled with seasoned pork, wood ear mushrooms, and a whole quail egg at the center — the Vietnamese breakfast standard, reimagined at home.',
-    category: 'STREET FOOD',
+    category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,
