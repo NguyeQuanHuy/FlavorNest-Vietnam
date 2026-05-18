@@ -10,7 +10,7 @@ const recipe: RecipeData = {
     totalTime: '2 hrs 30 min',
     rating: 4.8,
     baseServings: 6,
-    heroImage: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=85',
+    heroImage: '/images/recipes/steamed-pork-quail-egg-buns.jpg',
     intro: 'Bánh bao is Vietnam\'s answer to the Chinese baozi — softened and sweetened to match the Vietnamese palate. You\'ll find it at every bus station, school gate, and morning market, steamed in tall bamboo towers. Each region has its preference: Hanoi versions are meatier, Saigon versions sweeter, homemade versions always better than either.',
     ingredientSections: [
         {
