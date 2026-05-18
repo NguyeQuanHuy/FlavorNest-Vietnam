@@ -258,19 +258,16 @@ export default function BentoGrid({
         .bento-card:hover .bento-img { transform: scale(1.05) !important; }
         .bento-img { transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94) !important; }
 
-        /* Story card — float lift + deeper shadow */
+        /* Story card — minimal hover (lift + subtle image zoom) */
         .story-card {
-          transition: transform 0.4s cubic-bezier(0.22,1,0.36,1),
-                      box-shadow 0.4s ease,
-                      background 0.3s ease !important;
+          transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+                      box-shadow 0.3s ease !important;
         }
         .story-card:hover {
-          transform: translateY(-6px) scale(1.015) !important;
-          box-shadow: 0 24px 60px rgba(13,6,2,0.45),
-                      0 0 0 1px rgba(217,119,6,0.15) !important;
-          background: #34200F !important;
+          transform: translateY(-3px) !important;
+          box-shadow: 0 16px 40px rgba(13,6,2,0.32) !important;
         }
-        .story-card:hover .bento-img { transform: scale(1.08) !important; }
+        .story-card:hover .bento-img { transform: scale(1.04) !important; }
         @media (max-width: 768px) {
           .bento-grid > div,
           .bento-grid > [class*="motion"] {
