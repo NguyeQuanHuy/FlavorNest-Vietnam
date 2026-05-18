@@ -37,18 +37,14 @@ const TAG_COLOR: Record<CategoryColor, { bg: string; text: string; dot: string }
 
 // ── Animation variants ─────────────────────────────────────────────────────
 const fadeUp: any = {
-    hidden: { opacity: 0, y: 28 },
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.55, ease: 'easeOut', delay: i * 0.08 },
-    }),
+    hidden: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0 } },
 }
 
 const filterVariant: any = {
-    hidden: { opacity: 0, scale: 0.96 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
-    exit: { opacity: 0, scale: 0.96, transition: { duration: 0.2, ease: 'easeOut' } },
+    hidden: { opacity: 1, scale: 1 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0 } },
+    exit: { opacity: 1, scale: 1, transition: { duration: 0 } },
 }
 
 // ── Props ──────────────────────────────────────────────────────────────────
