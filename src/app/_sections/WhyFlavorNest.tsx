@@ -97,8 +97,12 @@ export default function WhyFlavorNest() {
                             <div className="w-7 h-px bg-[#D97706]" />
                             <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.18em]">Why FlavorNest?</span>
                         </div>
-                        <h2 id="why-heading" className="font-display text-4xl sm:text-5xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-5">
-                            Your Home.<br /><em className="text-[#D97706]">Our Nest.</em>
+                        <h2 id="why-heading" className="font-display font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] mb-6" style={{ fontSize: 'clamp(40px, 5.5vw, 72px)', lineHeight: 0.95, letterSpacing: '-0.02em' }}>
+                            Your Home.<br />
+                            <em className="text-[#D97706] inline-block" style={{ fontStyle: 'italic', position: 'relative' }}>
+                                Our Nest.
+                                <span aria-hidden style={{ position: 'absolute', left: 0, right: 0, bottom: '-6px', height: 3, background: 'linear-gradient(90deg, #D97706 0%, transparent 100%)', borderRadius: 2 }} />
+                            </em>
                         </h2>
                         <p className="text-[#4B2E1A]/60 dark:text-[#F5EDE3]/55 text-sm leading-relaxed mb-8 max-w-sm">
                             We spent two years eating across Vietnam — from Hanoi's dawn pho stalls to Hue's royal kitchens and Saigon's electric street corners — so you can cook the real thing tonight.
@@ -132,19 +136,26 @@ export default function WhyFlavorNest() {
                 </div>
 
                 {/* Trust stats bar */}
-                <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4"
-                >
-                    {TRUST_STATS.map(stat => (
-                        <div
-                            key={stat.label}
-                            className="text-center bg-white dark:bg-[#2a150a] rounded-2xl py-5 px-4 shadow-[0_4px_24px_rgba(75,46,26,.08)] border border-[#D97706]/8"
-                        >
-                            <div className="font-display text-3xl font-extrabold text-[#D97706] mb-1">{stat.value}</div>
-                            <div className="text-xs text-[#4B2E1A]/55 dark:text-[#F5EDE3]/45">{stat.label}</div>
-                        </div>
-                    ))}
+                <div className="mt-20 rounded-3xl overflow-hidden" style={{ background: 'linear-gradient(135deg, #4B2E1A 0%, #2D1A0E 100%)', boxShadow: '0 20px 50px rgba(75,46,26,0.2)' }}>
+                    <div className="grid grid-cols-2 sm:grid-cols-4">
+                        {TRUST_STATS.map((stat, i) => (
+                            <div
+                                key={stat.label}
+                                className="text-center py-10 px-4 relative"
+                                style={{
+                                    borderRight: i < TRUST_STATS.length - 1 ? '1px solid rgba(217,119,6,0.15)' : 'none',
+                                    borderBottom: i < 2 ? '1px solid rgba(217,119,6,0.15)' : 'none',
+                                }}
+                            >
+                                <div className="font-display text-4xl sm:text-5xl font-extrabold text-[#D97706] mb-2 leading-none">{stat.value}</div>
+                                <div className="text-[11px] uppercase tracking-[0.15em] font-bold text-white/55">{stat.label}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                    ))}
             </div>
-        </section>
+        </div>
+        </section >
     )
 }
