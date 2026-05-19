@@ -50,7 +50,7 @@ export const STORIES: Story[] = [
     {
     slug: 'vietnamese-herb-plate-guide',
     category: 'Field Guide',
-    categoryColor: 'green',
+    categoryColor: 'amber',
     title: 'The Vietnamese Herb Plate',
     subtitle: 'A Complete Field Guide',
     excerpt: 'A complete field guide to the herbs Vietnam eats — perilla, fish mint, rau răm, Thai basil. What they taste like, how to use them, and what to substitute.',
