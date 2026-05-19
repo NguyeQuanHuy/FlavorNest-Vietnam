@@ -263,7 +263,7 @@ export default function FavoritesPage() {
                         </div>
                       </motion.div>
                     ))}
-</AnimatePresence>
+                </AnimatePresence>
               </div>
             </motion.div>
           )}
