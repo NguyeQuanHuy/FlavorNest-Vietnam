@@ -10,12 +10,10 @@ import { FNIcon } from "@/components/Icons";
 export default function FavoritesPage() {
   const { favorites, hydrated, removeFavorite, clearFavorites } = useFavorites();
   const [showConfirm, setShowConfirm] = useState(false);
+
   if (!hydrated) {
     return (
-      <div
-        className="min-h-screen flex items-center justify-center"
-        style={{ background: "#F5EDE3" }}
-      >
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#F5EDE3" }}>
         <motion.div
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 1.5, repeat: Infinity }}
@@ -28,42 +26,25 @@ export default function FavoritesPage() {
   }
 
   return (
-    <div
-      className="min-h-screen pt-24 pb-20 px-4"
-      style={{ background: "#F5EDE3" }}
-    >
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen pt-24 pb-20 px-4" style={{ background: "#F5EDE3" }}>
+      <div className="max-w-6xl mx-auto">
+
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-10"
-        >
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-10">
           <div className="flex items-center gap-3 mb-2">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="#D97706">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
-            <h1
-              style={{
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                fontSize: "clamp(28px, 5vw, 42px)",
-                fontWeight: 700,
-                color: "#2D1A0E",
-                lineHeight: 1.1,
-              }}
-            >
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(28px, 5vw, 42px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.1 }}>
               My Favorites
             </h1>
           </div>
           <p style={{ color: "rgba(75,46,26,0.6)", fontSize: 15 }}>
-            {favorites.length > 0
-              ? `${favorites.length} Saved Recipes`
-              : "No recipes saved yet."}
+            {favorites.length > 0 ? `${favorites.length} Saved Recipes` : "No recipes saved yet."}
           </p>
         </motion.div>
 
-        {/* Empty state */}
+        {/* Content */}
         <AnimatePresence mode="wait">
           {favorites.length === 0 ? (
             <motion.div
@@ -74,70 +55,33 @@ export default function FavoritesPage() {
               transition={{ duration: 0.35 }}
               className="flex flex-col items-center justify-center py-24 text-center"
             >
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                style={{ marginBottom: 20, color: "#D97706" }}
-              >
+              <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} style={{ marginBottom: 20 }}>
                 <FNIcon name="favorite" size={64} color="#D97706" />
               </motion.div>
-              <h2
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: 24,
-                  fontWeight: 600,
-                  color: "#2D1A0E",
-                  marginBottom: 10,
-                }}
-              >
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 24, fontWeight: 600, color: "#2D1A0E", marginBottom: 10 }}>
                 You need to save something for your kitchen . . .
               </h2>
-              <p style={{
-                color: "rgba(75,46,26,0.55)", fontSize: 15,
-                maxWidth: 340, marginBottom: 28, lineHeight: 1.6,
-                display: "inline-flex", alignItems: "center", gap: 6, justifyContent: "center"
-              }}>
-                Tap <FNIcon name="favorite" size={14} color="#D97706" filled /> to save your favorites.
+              <p style={{ color: "rgba(75,46,26,0.55)", fontSize: 15, maxWidth: 340, marginBottom: 28, lineHeight: 1.6 }}>
+                Tap the heart icon on any recipe to save it here.
               </p>
-              <Link
-                href="/recipes"
-                style={{
-                  padding: "12px 28px",
-                  borderRadius: 999,
-                  background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)",
-                  color: "#F5EDE3",
-                  fontSize: 14,
-                  fontWeight: 600,
-                  textDecoration: "none",
-                  boxShadow: "0 6px 18px rgba(217,119,6,0.35)",
-                }}
-              >
+              <Link href="/recipes" style={{ padding: "12px 28px", borderRadius: 999, background: "linear-gradient(135deg, #D97706 0%, #B45309 100%)", color: "#F5EDE3", fontSize: 14, fontWeight: 600, textDecoration: "none", boxShadow: "0 6px 18px rgba(217,119,6,0.35)" }}>
                 Explore recipes
               </Link>
             </motion.div>
           ) : (
             <motion.div key="list" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-              {/* Clear all */}
+              {/* Remove all button */}
               <div className="flex justify-end mb-6">
                 <button
                   onClick={() => setShowConfirm(true)}
-                  style={{
-                    fontSize: 13,
-                    color: "rgba(75,46,26,0.5)",
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    textDecoration: "underline",
-                    textUnderlineOffset: 3,
-                  }}
->
+                  style={{ fontSize: 13, color: "rgba(75,46,26,0.5)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}
+                >
                   Remove all
                 </button>
               </div>
 
               {/* Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols- gap-6">
                 <AnimatePresence>
                   {favorites
                     .slice()
@@ -150,110 +94,45 @@ export default function FavoritesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9 }}
                         transition={{ duration: 0.3, delay: i * 0.05 }}
-                        style={{
-                          background: "#FFFFFF",
-                          borderRadius: 12,
-                          overflow: "hidden",
-                          border: "1px solid rgba(75,46,26,0.08)",
-                          boxShadow: "0 2px 8px rgba(45,26,14,0.06)",
-                        }}
-                                              >
-                        {/* Image */}
+                        style={{ background: "#FFFFFF", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(75,46,26,0.08)", boxShadow: "0 2px 8px rgba(45,26,14,0.06)" }}
+                      >
                         <Link href={`/recipes/${recipe.slug}`} style={{ display: "block" }}>
-                          <div
-                            style={{
-                              position: "relative",
-                              aspectRatio: "16/",
-                              overflow: "hidden",
-                            }}
-                          >
+                          <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
                             <Image
                               src={recipe.image}
                               alt={recipe.title}
                               fill
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                               style={{ objectFit: "cover", transition: "transform 0.4s ease" }}
-                              onMouseEnter={(e) =>
-                              ((e.currentTarget as HTMLImageElement).style.transform =
-                                "scale(1.05)")
-                              }
-                              onMouseLeave={(e) =>
-                              ((e.currentTarget as HTMLImageElement).style.transform =
-                                "scale(1)")
-                              }
+                              onMouseEnter={e => ((e.currentTarget as HTMLImageElement).style.transform = "scale(1.05)")}
+                              onMouseLeave={e => ((e.currentTarget as HTMLImageElement).style.transform = "scale(1)")}
                             />
-                            {/* Remove button */}
                             <button
-                              onClick={(e) => {
-                                e.preventDefault();
-                                removeFavorite(recipe.id);
-                              }}
-                              aria-label="Bỏ yêu thích"
-                              style={{
-                                position: "absolute",
-                                top: 10,
-                                right: 10,
-                                width: 34,
-                                height: 34,
-                                borderRadius: "50%",
-                                background: "rgba(217,119,6,0.9)",
-                                backdropFilter: "blur(8px)",
-                                border: "none",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                cursor: "pointer",
-                                boxShadow: "0 2px 8px rgba(217,119,6,0.4)",
-                              }}
+                              onClick={e => { e.preventDefault(); removeFavorite(recipe.id); }}
+                              aria-label="Remove from favorites"
+                              style={{ position: "absolute", top: 8, right: 8, width: 30, height: 30, borderRadius: "50%", background: "rgba(217,119,6,0.9)", border: "none", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}
                             >
-                              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5EDE3">
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F5EDE3">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                               </svg>
                             </button>
                           </div>
                         </Link>
 
-                        {/* Content */}
-                        <div className="p-4">
+                        <div style={{ padding: "12px 14px 14px" }}>
                           {recipe.category && (
-                            <span
-                              style={{
-                                fontSize: 11,
-                                fontWeight: 600,
-                                letterSpacing: "1px",
-                                textTransform: "uppercase",
-                                color: "#D97706",
-                              }}
-                            >
+                            <span style={{ fontSize: 10, fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", color: "#D97706" }}>
                               {recipe.category}
                             </span>
                           )}
                           <Link href={`/recipes/${recipe.slug}`} style={{ textDecoration: "none" }}>
-                            <h3
-                              style={{
-                                fontFamily: "var(--font-playfair), Georgia, serif",
-                                fontSize: 17,
-                                fontWeight: 600,
-                                color: "#2D1A0E",
-                                marginTop: 4,
-                                lineHeight: 1.35,
-                              }}
-                            >
+                            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 600, color: "#2D1A0E", marginTop: 4, lineHeight: 1.35 }}>
                               {recipe.title}
                             </h3>
                           </Link>
                           {recipe.cookTime && (
-                            <div
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 5,
-                                marginTop: 8,
-                                color: "rgba(75,46,26,0.55)",
-                                fontSize: 13,
-                              }}
-                            >
-                              <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                            <div style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 6, color: "rgba(75,46,26,0.55)", fontSize: 12 }}>
+                              <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
                                 <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                               </svg>
@@ -269,78 +148,41 @@ export default function FavoritesPage() {
           )}
         </AnimatePresence>
 
-        {/* ── Confirm remove all modal ── */}
+        {/* Confirm modal */}
         <AnimatePresence>
           {showConfirm && (
             <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setShowConfirm(false)}
+                style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(45,26,14,0.5)", backdropFilter: "blur(4px)" }}
+              />
               <motion.div
                 initial={{ opacity: 0, scale: 0.92, y: 16 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: 16 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              style={{
-                  position: "fixed", 
-                  top: "50%", 
-                  left: "50%",
-                  translateX: "-50%",
-                  translateY: "-50%",
-                  zIndex: 51,
-                  background: "linear-gradient(145deg, #FFF8F0, #FFF)",
-                  borderRadius: 24,
-                  padding: "40px 32px 32px",
-                  width: "min(90vw, 380px)",
-                  boxShadow: "0 32px 80px rgba(45,26,14,0.18), 0 0 0 1px rgba(217,119,6,0.1)",
-                  textAlign: "center",
-                }}
+                style={{ position: "fixed", top: "50%", left: "50%", zIndex: 51, background: "linear-gradient(145deg, #FFF8F0, #FFF)", borderRadius: 24, padding: "40px 32px 32px", width: "min(90vw, 380px)", boxShadow: "0 32px 80px rgba(45,26,14,0.18)", textAlign: "center", marginLeft: "-min(45vw, 190px)", marginTop: "-140px" }}
               >
-                {/* Icon */}
-                <div style={{
-                  width: 64, height: 64, borderRadius: "50%",
-                  background: "linear-gradient(135deg, #FEF3E2, #FDEAC8)",
-                  border: "2px solid rgba(217,119,6,0.2)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  margin: "0 auto 20px",
-                }}>
+                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "linear-gradient(135deg, #FEF3E2, #FDEAC8)", border: "2px solid rgba(217,119,6,0.2)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M10 11v4M14 11v4" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round"/>
+                    <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M10 11v4M14 11v4" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round" />
                   </svg>
                 </div>
-              
-                <h3 style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: 22, fontWeight: 700, color: "#2D1A0E", marginBottom: 10,
-                }}>
+                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 700, color: "#2D1A0E", marginBottom: 10 }}>
                   Remove all favorites?
                 </h3>
                 <p style={{ fontSize: 14, color: "rgba(75,46,26,0.55)", marginBottom: 28, lineHeight: 1.65 }}>
-                  This will permanently remove all <strong style={{ color: "#D97706" }}>{favorites.length}</strong> saved recipes from your collection.
+                  This will permanently remove all <strong style={{ color: "#D97706" }}>{favorites.length}</strong> saved recipes.
                 </p>
-              
                 <div style={{ display: "flex", gap: 10 }}>
-                  <button
-                    onClick={() => setShowConfirm(false)}
-                    style={{
-                      flex: 1, padding: "13px", borderRadius: 999,
-                      border: "1.5px solid rgba(75,46,26,0.15)",
-                      background: "transparent", color: "#4B2E1A",
-                      fontSize: 14, fontWeight: 600, cursor: "pointer",
-                      transition: "all 0.2s",
-                    }}
-                  >
+                  <button onClick={() => setShowConfirm(false)} style={{ flex: 1, padding: "13px", borderRadius: 999, border: "1.5px solid rgba(75,46,26,0.15)", background: "transparent", color: "#4B2E1A", fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
                     Cancel
                   </button>
-                  <button
-                    onClick={() => { clearFavorites(); setShowConfirm(false); }}
-                    style={{
-                      flex: 1, padding: "13px", borderRadius: 999,
-                      border: "none",
-                      background: "linear-gradient(135deg, #B45309, #92400E)",
-                      color: "#fff",
-                      fontSize: 14, fontWeight: 600, cursor: "pointer",
-                      boxShadow: "0 4px 16px rgba(180,83,9,0.35)",
-                    }}
-                  >
+                  <button onClick={() => { clearFavorites(); setShowConfirm(false); }} style={{ flex: 1, padding: "13px", borderRadius: 999, border: "none", background: "linear-gradient(135deg, #B45309, #92400E)", color: "#fff", fontSize: 14, fontWeight: 600, cursor: "pointer" }}>
                     Remove all
                   </button>
                 </div>
