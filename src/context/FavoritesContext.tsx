@@ -49,53 +49,31 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
 
   // Load từ DB hoặc localStorage
-  useEffect(() => {
+useEffect(() => {
     let cancelled = false;
 
     async function load() {
-      if (status === "loading") return;
+      // Set hydrated ngay với localStorage trước
+      try {
+        const raw = localStorage.getItem(KEY);
+        if (raw && !cancelled) setFavorites(JSON.parse(raw));
+      } catch {}
+      if (!cancelled) setHydrated(true);
 
+      // Sau đó nếu đã login, sync với DB
       if (isLoggedIn) {
         const dbFavs = await getMyFavoritesAction();
-        try {
-          const raw = localStorage.getItem(KEY);
-          if (raw) {
-            const localFavs = JSON.parse(raw) as FavoriteRecipe[];
-            const dbSlugs = new Set(dbFavs.map((f: FavoriteRecipe) => f.slug));
-            const toMigrate = localFavs.filter(f => !dbSlugs.has(f.slug));
-            for (const f of toMigrate) {
-              await toggleFavoriteAction({
-                slug: f.slug, title: f.title, image: f.image,
-                category: f.category, cookTime: f.cookTime,
-                subtitle: f.subtitle, difficulty: f.difficulty,
-              });
-            }
-            if (toMigrate.length > 0) {
-              const merged = await getMyFavoritesAction();
-              if (!cancelled) {
-                setFavorites(merged as FavoriteRecipe[]);
-                localStorage.removeItem(KEY);
-                setHydrated(true);
-                return;
-              }
-            }
-            localStorage.removeItem(KEY);
-          }
-        } catch {}
         if (!cancelled) {
           setFavorites(dbFavs as FavoriteRecipe[]);
-          setHydrated(true);
+          localStorage.removeItem(KEY);
         }
-      } else {
-        try {
-          const raw = localStorage.getItem(KEY);
-          if (raw && !cancelled) setFavorites(JSON.parse(raw));
-        } catch {}
-        if (!cancelled) setHydrated(true);
       }
     }
 
-    load();
+    if (status !== "loading") {
+      load();
+    }
+
     return () => { cancelled = true; };
   }, [status, isLoggedIn, session?.user?.id]);
 
