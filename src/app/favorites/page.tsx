@@ -134,9 +134,9 @@ export default function FavoritesPage() {
                   Remove all
                 </button>
               </div>
-
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
               {/* Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols- gap-6">
                 <AnimatePresence>
                   {favorites
                     .slice()
@@ -151,18 +151,18 @@ export default function FavoritesPage() {
                         transition={{ duration: 0.3, delay: i * 0.05 }}
                         style={{
                           background: "#FFFFFF",
-                          borderRadius: 20,
+                          borderRadius: 12,
                           overflow: "hidden",
                           border: "1px solid rgba(75,46,26,0.08)",
-                          boxShadow: "0 2px 12px rgba(45,26,14,0.06)",
+                          boxShadow: "0 2px 8px rgba(45,26,14,0.06)",
                         }}
-                      >
+                                              >
                         {/* Image */}
                         <Link href={`/recipes/${recipe.slug}`} style={{ display: "block" }}>
                           <div
                             style={{
                               position: "relative",
-                              aspectRatio: "4/3",
+                              aspectRatio: "16/",
                               overflow: "hidden",
                             }}
                           >
