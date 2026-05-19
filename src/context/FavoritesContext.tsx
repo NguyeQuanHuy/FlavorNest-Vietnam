@@ -103,22 +103,32 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     try { localStorage.setItem(KEY, JSON.stringify(items)); } catch {}
   }, []);
 
-  const toggle = useCallback(async (recipe: Omit<FavoriteRecipe, "savedAt">) => {
-    const exists = favorites.some(f => f.slug === recipe.slug);
-    const next = exists
-      ? favorites.filter(f => f.slug !== recipe.slug)
-      : [...favorites, { ...recipe, id: recipe.slug, savedAt: Date.now() }];
-
-    // Cập nhật state ngay lập tức — realtime
-    setFavorites(next);
+const toggle = useCallback(async (recipe: Omit<FavoriteRecipe, "savedAt">) => {
+    // Dùng functional update để tránh stale closure
+    let next: FavoriteRecipe[] = [];
+    setFavorites(prev => {
+      const exists = prev.some(f => f.slug === recipe.slug);
+      next = exists
+        ? prev.filter(f => f.slug !== recipe.slug)
+        : [...prev, { ...recipe, id: recipe.slug, savedAt: Date.now() }];
+      return next;
+    });
 
     if (isLoggedIn) {
       const res = await toggleFavoriteAction(recipe as FavoriteRecipeData);
-      if (!res.ok) setFavorites(favorites); // rollback
+      if (!res.ok) {
+        // rollback về state trước
+        setFavorites(prev => {
+          const exists = prev.some(f => f.slug === recipe.slug);
+          return exists
+            ? prev.filter(f => f.slug !== recipe.slug)
+            : [...prev, { ...recipe, id: recipe.slug, savedAt: Date.now() }];
+        });
+      }
     } else {
       persistLocal(next);
     }
-  }, [favorites, isLoggedIn, persistLocal]);
+  }, [isLoggedIn, persistLocal]);
 
   const removeFavorite = useCallback(async (idOrSlug: string) => {
     const target = favorites.find(f => f.id === idOrSlug || f.slug === idOrSlug);
