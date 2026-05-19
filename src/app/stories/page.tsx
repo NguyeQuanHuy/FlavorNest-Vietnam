@@ -50,13 +50,17 @@ export const STORIES: Story[] = [
     {
     slug: 'vietnamese-herb-plate-guide',
     category: 'Field Guide',
+    categoryColor: 'green',
     title: 'The Vietnamese Herb Plate',
+    subtitle: 'A Complete Field Guide',
     excerpt: 'A complete field guide to the herbs Vietnam eats — perilla, fish mint, rau răm, Thai basil. What they taste like, how to use them, and what to substitute.',
-    date: 'May 19, 2026',
-    readTime: '8 min read',
     image: '/images/stories/vietnamese-herbs-hero.jpg',
-    tagColor: '#166534', // xanh lá để phân biệt với storytelling
-    region: 'Vietnam',
+    imageAlt: 'Vietnamese herb plate with perilla, basil, fish mint',
+    tag: 'Field Guide',
+    tagColor: 'green',
+    readTime: '8 min read',
+    publishedAt: 'May 19, 2026',
+    featured: false,
     },
     {
         slug: 'secrets-of-the-south-banh-xeo',
