@@ -117,7 +117,7 @@ export const STORIES: Story[] = [
         image: '/images/stories/bun-bo-hue-hero.jpg',
         imageAlt: 'A steaming bowl of bún bò Huế',
         tag: 'Imperial Cuisine',
-        tagColor: 'red',
+        tagColor: 'forest',
         readTime: '10 min read',
         publishedAt: 'May 19, 2026',
         featured: true,
