@@ -57,7 +57,7 @@ export const STORIES: Story[] = [
     image: '/images/stories/vietnamese-herbs-hero.jpg',
     imageAlt: 'Vietnamese herb plate with perilla, basil, fish mint',
     tag: 'Field Guide',
-    tagColor: 'green',
+    tagColor: 'amber',
     readTime: '8 min read',
     publishedAt: 'May 19, 2026',
     featured: false,
