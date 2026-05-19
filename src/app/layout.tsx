@@ -46,47 +46,42 @@ export const viewport: Viewport = {
 
 // ── SEO Metadata ──
 export const metadata: Metadata = {
+  metadataBase: new URL('https://flavor-nest-vietnam.vercel.app'), // ⬅️ ĐỔI thành URL THẬT
   title: {
-    default: "FlavorNest Vietnam – Authentic Vietnamese Recipes Made Simple at Home",
-    template: "%s | FlavorNest Vietnam",
+    default: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
+    template: '%s | FlavorNest Vietnam', // ⬅️ Quan trọng! Cho phép từng page set title riêng
   },
-  description:
-    "Your nest of authentic Vietnamese flavors. 100+ tested recipes from Hanoi, Hue and Saigon — made simple for every home kitchen.",
-  keywords: ["Vietnamese recipes", "Pho", "Banh Mi", "Vietnamese food blog", "authentic Vietnamese cooking"],
-  authors: [{ name: "FlavorNest Vietnam" }],
-  creator: "FlavorNest Vietnam",
-  verification: {
-    google: 'uWW4XXIzgki21f1o-KFkiDqE1z_DU7Io--zpuPBBV5g',
+  description: 'Your nest of authentic Vietnamese flavors. 180+ tested recipes from Hanoi, Hue and Saigon — made simple for every home kitchen.',
+  alternates: {
+    canonical: '/', // ⬅️ Trỏ về chính nó, không phải domain khác
   },
-  metadataBase: new URL("https://flavor-nest-vietnam.vercel.app"),
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://flavor-nest-vietnam.vercel.app",
-    siteName: "FlavorNest Vietnam",
-    title: "FlavorNest Vietnam – Authentic Vietnamese Recipes",
-    description: "100+ authentic Vietnamese recipes made simple at home.",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://flavor-nest-vietnam.vercel.app',
+    siteName: 'FlavorNest Vietnam',
+    title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
+    description: 'Your nest of authentic Vietnamese flavors. 180+ tested recipes made simple at home.',
     images: [
       {
-        url: "/og-image.png",
+        url: '/og-image.png', // Host trên domain của bạn, không Unsplash
         width: 1200,
         height: 630,
-        alt: "FlavorNest Vietnam – Authentic Vietnamese Recipes",
+        alt: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "FlavorNest Vietnam",
-    description: "Authentic Vietnamese recipes made simple at home.",
-    images: ["/og-image.png"],
+    card: 'summary_large_image',
+    title: 'FlavorNest Vietnam',
+    description: 'Authentic Vietnamese recipes made simple at home.',
+    images: ['/og-image.png'],
   },
-  manifest: "/site.webmanifest",
-  themeColor: "#D97706",
-  other: {
-    "apple-mobile-web-app-title": "FlavorNest VN",
+  verification: {
+    google: 'uWW4XXIzgki21f1o-KFkiDqE1z_DU7Io--zpuPBBV5g',
   },
-}
+  themeColor: '#1C1009',
+};
 
 export default function RootLayout({
   children,
