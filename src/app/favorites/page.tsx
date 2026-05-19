@@ -263,11 +263,13 @@ export default function FavoritesPage() {
                         </div>
                       </motion.div>
                     ))}
-                </AnimatePresence>
+</AnimatePresence>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
+    </div>
 
         {/* ── Confirm remove all modal ── */}
         <AnimatePresence>
