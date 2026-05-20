@@ -193,7 +193,7 @@ export default function VietnameseHerbPlateGuidePage() {
                     </PullQuote>
 
                     <InlineImage
-                        src="/images/stories/vietnamese-herbs-platter.jpg"
+                        src="/images/stories/rau-thom-min.jpg"
                         alt="A traditional Vietnamese herb platter with various leaves"
                         caption="The traditional rau thơm platter that accompanies almost every Vietnamese meal — Thai basil, perilla, mint, sawtooth coriander, fish mint, often more."
                     />
@@ -323,7 +323,7 @@ export default function VietnameseHerbPlateGuidePage() {
                     </PullQuote>
 
                     <InlineImage
-                        src="/images/stories/vietnamese-herbs-market.jpg"
+                        src="/images/stories/cho-rau-ha-noi.jpg"
                         alt="A Vietnamese market vendor selling fresh herbs"
                         caption="A morning herb market in Hanoi: rau răm in one basket, tía tô in another, ngò gai bundled with rubber bands. The vendors expect customers to buy by the handful, not the sprig."
                     />
