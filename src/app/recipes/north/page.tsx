@@ -343,7 +343,7 @@ export default function NorthernCuisinePage() {
                         ))}
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 48 }}>
-                        <VietnamMap region="north" size={} />
+                        <VietnamMap region="north" size={200} />
                     </div>
                 </div>
             </section>
