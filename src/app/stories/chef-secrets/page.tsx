@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BookOpen, Map, Soup, Utensils, ChefHat } from 'lucide-react'
 
 interface Tip {
     id: string
@@ -345,25 +346,24 @@ export default function ChefSecretsPage() {
                         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Keep Exploring</span>
                     </div>
                     <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: 'white', margin: '0 0 32px' }}>More from FlavorNest</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12 }}>
                         {[
-                            { label: 'Culinary Culture', emoji: '📖', href: '/stories/culture' },
-                            { label: 'Travel Guide', emoji: '🗺️', href: '/stories/travel' },
-                            { label: 'All Recipes', emoji: '🍜', href: '/recipes' },
-                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
-                            { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes' },
-                        ].map(item => (
-                            <Link key={item.href} href={item.href}
-                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '18px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.2s' }}
-                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.38)'; el.style.background = 'rgba(217,119,6,0.07)'; el.style.transform = 'translateY(-4px)'; }}
-                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.08)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
+                            { label: 'Culinary Culture', Icon: BookOpen, href: '/stories/culture' },
+                            { label: 'Travel Guide', Icon: Map, href: '/stories/travel' },
+                            { label: 'All Recipes', Icon: ChefHat, href: '/recipes' },
+                            { label: 'Street Food', Icon: Soup, href: '/recipes/street-food' },
+                            { label: 'Main Dishes', Icon: Utensils, href: '/recipes/main-dishes' },
+                        ].map(({ label, Icon, href }) => (
+                            <Link key={href} href={href}
+                                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, padding: '22px 16px', borderRadius: 18, border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.03)', textDecoration: 'none', transition: 'all 0.25s' }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.45)'; el.style.background = 'rgba(217,119,6,0.08)'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 28px rgba(217,119,6,0.15)'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.08)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
                             >
-                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
-                                <span style={{ fontSize: 13, fontWeight: 600, color: 'white', textAlign: 'center' }}>{item.label}</span>
+                                <Icon size={28} strokeWidth={1.5} color="#D97706" />
+                                <span style={{ fontSize: 13, fontWeight: 600, color: 'white', textAlign: 'center', letterSpacing: '0.02em' }}>{label}</span>
                             </Link>
                         ))}
-                    </div>
-                </div>
+                    </div>                </div>
             </section>
         </main>
     )
