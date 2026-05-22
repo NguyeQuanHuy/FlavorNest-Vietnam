@@ -13,6 +13,7 @@ import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map, Bo
 import { useFavorites } from '@/hooks/useFavorites'
 import VietnamMap from '@/components/VietnamMap'
 
+
 interface Recipe {
     slug: string
     title: string
@@ -243,8 +244,7 @@ export default function CentralCuisinePage() {
 
             {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 24px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1000, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
+                <div style={{ maxWidth: , margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
                     <div>
                         {/* Breadcrumb */}
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
@@ -310,8 +310,8 @@ export default function CentralCuisinePage() {
                             ))}
                         </div>
                     </div>
-                    <div style={{ position: 'relative', width: 240, alignSelf: 'stretch', minHeight: 320, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <VietnamMap region="central" size={280} />
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="central" size={200} />
                     </div>
                 </div>
             </section>
