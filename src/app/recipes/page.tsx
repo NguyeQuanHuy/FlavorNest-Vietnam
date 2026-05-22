@@ -316,15 +316,7 @@ function RecipesInner() {
                             ← Prev
                         </button>
                 
-                        {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
-                            <button
-                                key={n}
-                                onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                                style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
-                            >
-                                {n}
-                            </button>
-                        ))}
+                    style={{ width: 30, height: 30, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                 
                         <button
                             onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
