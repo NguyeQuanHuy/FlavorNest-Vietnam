@@ -213,7 +213,6 @@ export default function SouthernCuisinePage() {
 
             {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 24px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'center' }}>
                     <div>
                         {/* Breadcrumb */}
@@ -280,8 +279,8 @@ export default function SouthernCuisinePage() {
                             ))}
                         </div>
                     </div>
-                    <div style={{ position: 'relative', width: 240, alignSelf: 'stretch', minHeight: 320, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <VietnamMap region="south" size={280} />
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="south" size={200} />
                     </div>
                 </div>
             </section>
@@ -351,9 +350,6 @@ export default function SouthernCuisinePage() {
                             </Link>
                         ))}
                     </div>
-                </div>
-                <div style={{ position: 'relative', width: 240, alignSelf: 'stretch', minHeight: 320, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <VietnamMap region="south" size={280} />
                 </div>
             </section>
         </main >
