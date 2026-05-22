@@ -122,7 +122,7 @@ export default function CulinaryculturePage() {
                 .pill { border: 1.5px solid rgba(75,46,26,0.12); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; color: rgba(75,46,26,0.55); background: transparent; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
                 .pill:hover { color: #D97706; border-color: rgba(217,119,6,0.38); }
                 .pill.on { background: #4B2E1A; color: white; border-color: #4B2E1A; }
-                .featured-card { border-radius: 28px; overflow: hidden; text-decoration: none; display: block; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+                .featured-card { border-radius: 16px; overflow: hidden; text-decoration: none; display: block; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid rgba(217,119,6,0.4); box-shadow: 0 8px 32px rgba(217,119,6,0.12); }
                 .featured-card:hover { transform: translateY(-4px); box-shadow: 0 32px 80px rgba(0,0,0,0.25); }
                 .featured-card:hover .f-img { transform: scale(1.04); }
                 .f-img { transition: transform 0.7s ease; }
@@ -194,14 +194,14 @@ export default function CulinaryculturePage() {
             </section>
 
             {/* FEATURED ARTICLE */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '56px 24px 0' }}>
+            <section style={{ maxWidth: 1080, margin: '0 auto', padding: '56px 24px 0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
                     <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Featured Story</span>
                 </div>
 
                 <Link href={`/stories/culture/${featured.slug}`} className="featured-card">
-                    <div style={{ position: 'relative', height: 'clamp(320px, 45vw, 520px)', background: '#1a1410' }}>
+                    <div style={{ position: 'relative', height: 'clamp(260px, 36vw, 420px)', background: '#1a1410' }}>
                         <Image src={featured.image} alt={featured.title} fill className="f-img" style={{ objectFit: 'cover', opacity: 0.75 }} quality={90} priority sizes="100vw" />
                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,8,4,0.95) 0%, rgba(13,8,4,0.3) 60%, transparent 100%)' }} />
                         <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 'clamp(24px,4vw,48px)' }}>
