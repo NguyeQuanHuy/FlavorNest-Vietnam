@@ -211,7 +211,7 @@ function RecipesInner() {
             </section>
 
             {/* FILTER BAR */}
-            <div style={{ position: "sticky", top: 64, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 24px", marginTop: 0, borderRadius: 0, boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
+            <div style={{ position: "sticky", top: 0, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 24px", marginTop: 0, borderRadius: 0, boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 8, overflowX: "auto", alignItems: "center", flexWrap: "nowrap", padding: "4px 0" }}>
                     <div style={{ position: "relative", flexShrink: 0 }}>
                         <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", display: "flex", alignItems: "center" }}>
