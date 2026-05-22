@@ -239,21 +239,21 @@ export default function ChefSecretsPage() {
             </section>
 
             {/* FEATURED TIP */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '56px 24px 0' }}>
+            <section style={{ maxWidth: 1080, margin: '0 auto', padding: '56px 24px 0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
                     <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Essential Technique</span>
                 </div>
 
-                <div style={{ background: 'white', borderRadius: 28, overflow: 'hidden', border: '1px solid rgba(75,46,26,0.07)', boxShadow: '0 4px 32px rgba(75,46,26,0.08)' }}>
+                <div style={{ background: 'white', borderRadius: 24, overflow: 'hidden', border: '2px solid rgba(217,119,6,0.35)', boxShadow: '0 8px 32px rgba(217,119,6,0.12)' }}>
                     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: 0 }}>
                         {/* Image */}
-                        <div style={{ position: 'relative', minHeight: 360, overflow: 'hidden', background: '#1a1410' }}>
+                        <div style={{ position: 'relative', minHeight: 320, overflow: 'hidden', background: '#1a1410' }}>
                             <Image src={featured.image} alt={featured.title} fill style={{ objectFit: 'cover', opacity: 0.85 }} quality={90} sizes="50vw" />
                             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, white 100%)' }} />
                         </div>
                         {/* Content */}
-                        <div style={{ padding: '40px 40px 40px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <div style={{ padding: '32px 32px 32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
                                 <span style={{ background: featured.categoryColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.07em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: 100 }}>{featured.category}</span>
                                 <span style={{ fontSize: 11, color: LEVEL_COLOR[featured.level], fontWeight: 600, background: `${LEVEL_COLOR[featured.level]}15`, padding: '4px 10px', borderRadius: 100 }}>{featured.level}</span>
