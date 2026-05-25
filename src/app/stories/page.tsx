@@ -317,6 +317,21 @@ export const STORIES: Story[] = [
         publishedAt: 'May 19, 2026',
         featured: true,
     },
+    {
+        slug: 'vietnamese-ingredients-guide',
+        category: 'Traditional',
+        categoryColor: 'amber',
+        title: 'The Essential Vietnamese Pantry: 15 Ingredients That Unlock Every Recipe',
+        subtitle: 'Beginner\'s Guide · Vietnamese Ingredients',
+        excerpt: 'You do not need 50 ingredients to cook Vietnamese food. You need these 15 — find them once, and every recipe opens up.',
+        image: '/images/recipes/nuoc-cham.jpg',
+        imageAlt: 'Vietnamese pantry ingredients — fish sauce, herbs, spices',
+        tag: 'Beginner Guide',
+        tagColor: 'amber',
+        readTime: '8 min read',
+        publishedAt: 'May 26, 2026',
+        featured: false,
+    },
 ]
 
 export default function StoriesPage() {

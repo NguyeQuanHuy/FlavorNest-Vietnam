@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GDP - World's Biggest Cities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: #010a14;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 70% at 5% 50%, rgba(0, 40, 100, 0.95) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 70% at 95% 50%, rgba(0, 80, 60, 0.85) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 40% at 50% 0%, rgba(0, 120, 200, 0.2) 0%, transparent 60%),
+        linear-gradient(180deg, #010d1f 0%, #010810 100%);
+    }
+
+    .bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      z-index: 1;
+      padding-top: 28px;
+    }
+
+    .track-wrap {
+      overflow: hidden;
+      width: 1920px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .track-wrap::before,
+    .track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 130px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .track-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, #010a14, transparent);
+    }
+
+    .track-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, #010a14, transparent);
+    }
+
+    .track {
+      display: flex;
+      gap: 20px;
+      padding: 10px 40px;
+      will-change: transform;
+    }
+
+    /* CARD */
+    .card {
+      flex-shrink: 0;
+      width: 330px;
+      background: rgba(255, 255, 255, 0.055);
+      border-radius: 22px;
+      border: 1.5px solid rgba(255, 255, 255, 0.11);
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* City name */
+    .city-label {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border-radius: 30px;
+      padding: 8px 0;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 3px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 3px 18px rgba(0, 150, 255, 0.5);
+    }
+
+    /* City photo */
+    .photo-box {
+      width: 100%;
+      height: 190px;
+      border-radius: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-box .placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .photo-box .placeholder span {
+      font-size: 40px;
+    }
+
+    .photo-box .placeholder p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* Country label */
+    .country-label {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 30px;
+      padding: 6px 0;
+      color: #003580;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    /* GDP ANIMATION BOX */
+    .gdp-box {
+      width: 100%;
+      height: 195px;
+      border-radius: 14px;
+      border: 2px solid rgba(0, 150, 255, 0.2);
+      overflow: hidden;
+      position: relative;
+      background: #020f20;
+    }
+
+    .gdp-box canvas {
+      position: absolute;
+      inset: 0;
+    }
+
+    .gdp-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    .gdp-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      color: #00e5ff;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(0, 229, 255, 0.9), 0 0 40px rgba(0, 150, 255, 0.5);
+    }
+
+    .gdp-unit {
+      font-family: 'Nunito', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 2px;
+    }
+
+    .gdp-rank {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: rgba(255, 200, 0, 0.7);
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="wrapper">
+    <div class="track-wrap">
+      <div class="track" id="track"></div>
+    </div>
+  </div>
+
+  <script>
+    const cities = [
+      { name: "NEW YORK", country: "USA 🇺🇸", photo: "", gdp: 2085, rank: "#1" },
+      { name: "TOKYO", country: "Japan 🇯🇵", photo: "", gdp: 1900, rank: "#2" },
+      { name: "LOS ANGELES", country: "USA 🇺🇸", photo: "", gdp: 1100, rank: "#3" },
+      { name: "LONDON", country: "UK 🇬🇧", photo: "", gdp: 1050, rank: "#4" },
+      { name: "SHANGHAI", country: "China 🇨🇳", photo: "", gdp: 960, rank: "#5" },
+      { name: "PARIS", country: "France 🇫🇷", photo: "", gdp: 860, rank: "#6" },
+      { name: "BEIJING", country: "China 🇨🇳", photo: "", gdp: 820, rank: "#7" },
+      { name: "CHICAGO", country: "USA 🇺🇸", photo: "", gdp: 770, rank: "#8" },
+      { name: "SHENZHEN", country: "China 🇨🇳", photo: "", gdp: 700, rank: "#9" },
+      { name: "HOUSTON", country: "USA 🇺🇸", photo: "", gdp: 640, rank: "#10" },
+      { name: "GUANGZHOU", country: "China 🇨🇳", photo: "", gdp: 620, rank: "#11" },
+      { name: "SINGAPORE", country: "Singapore 🇸🇬", photo: "", gdp: 600, rank: "#12" },
+      { name: "DALLAS", country: "USA 🇺🇸", photo: "", gdp: 580, rank: "#13" },
+      { name: "SEOUL", country: "S.Korea 🇰🇷", photo: "", gdp: 560, rank: "#14" },
+      { name: "TORONTO", country: "Canada 🇨🇦", photo: "", gdp: 530, rank: "#15" },
+      { name: "FRANKFURT", country: "Germany 🇩🇪", photo: "", gdp: 510, rank: "#16" },
+      { name: "SAN FRANCISCO", country: "USA 🇺🇸", photo: "", gdp: 500, rank: "#17" },
+      { name: "ZURICH", country: "Switzerland 🇨🇭", photo: "", gdp: 490, rank: "#18" },
+      { name: "AMSTERDAM", country: "Netherlands 🇳🇱", photo: "", gdp: 480, rank: "#19" },
+      { name: "DUBAI", country: "UAE 🇦🇪", photo: "", gdp: 470, rank: "#20" },
+      { name: "MOSCOW", country: "Russia 🇷🇺", photo: "", gdp: 460, rank: "#21" },
+      { name: "OSAKA", country: "Japan 🇯🇵", photo: "", gdp: 450, rank: "#22" },
+      { name: "SYDNEY", country: "Australia 🇦🇺", photo: "", gdp: 430, rank: "#23" },
+      { name: "HONG KONG", country: "China 🇨🇳", photo: "", gdp: 420, rank: "#24" },
+      { name: "MUMBAI", country: "India 🇮🇳", photo: "", gdp: 400, rank: "#25" },
+      { name: "MADRID", country: "Spain 🇪🇸", photo: "", gdp: 390, rank: "#26" },
+      { name: "BRUSSELS", country: "Belgium 🇧🇪", photo: "", gdp: 380, rank: "#27" },
+      { name: "STOCKHOLM", country: "Sweden 🇸🇪", photo: "", gdp: 370, rank: "#28" },
+      { name: "MILAN", country: "Italy 🇮🇹", photo: "", gdp: 360, rank: "#29" },
+      { name: "CHICAGO", country: "USA 🇺🇸", photo: "", gdp: 350, rank: "#30" },
+      { name: "SAO PAULO", country: "Brazil 🇧🇷", photo: "", gdp: 340, rank: "#31" },
+      { name: "MEXICO CITY", country: "Mexico 🇲🇽", photo: "", gdp: 330, rank: "#32" },
+      { name: "ISTANBUL", country: "Turkey 🇹🇷", photo: "", gdp: 320, rank: "#33" },
+      { name: "JAKARTA", country: "Indonesia 🇮🇩", photo: "", gdp: 310, rank: "#34" },
+      { name: "KUALA LUMPUR", country: "Malaysia 🇲🇾", photo: "", gdp: 300, rank: "#35" },
+      { name: "BANGKOK", country: "Thailand 🇹🇭", photo: "", gdp: 290, rank: "#36" },
+      { name: "TAIPEI", country: "Taiwan 🇹🇼", photo: "", gdp: 280, rank: "#37" },
+      { name: "CAIRO", country: "Egypt 🇪🇬", photo: "", gdp: 270, rank: "#38" },
+      { name: "JOHANNESBURG", country: "S.Africa 🇿🇦", photo: "", gdp: 260, rank: "#39" },
+      { name: "RIYADH", country: "Saudi Arabia 🇸🇦", photo: "", gdp: 250, rank: "#40" },
+      { name: "VIENNA", country: "Austria 🇦🇹", photo: "", gdp: 245, rank: "#41" },
+      { name: "OSLO", country: "Norway 🇳🇴", photo: "", gdp: 240, rank: "#42" },
+      { name: "COPENHAGEN", country: "Denmark 🇩🇰", photo: "", gdp: 235, rank: "#43" },
+      { name: "HELSINKI", country: "Finland 🇫🇮", photo: "", gdp: 220, rank: "#44" },
+      { name: "WARSAW", country: "Poland 🇵🇱", photo: "", gdp: 210, rank: "#45" },
+      { name: "PRAGUE", country: "Czech Rep. 🇨🇿", photo: "", gdp: 200, rank: "#46" },
+      { name: "BUDAPEST", country: "Hungary 🇭🇺", photo: "", gdp: 190, rank: "#47" },
+      { name: "BUCHAREST", country: "Romania 🇷🇴", photo: "", gdp: 180, rank: "#48" },
+      { name: "HO CHI MINH", country: "Vietnam 🇻🇳", photo: "", gdp: 170, rank: "#49" },
+      { name: "HANOI", country: "Vietnam 🇻🇳", photo: "", gdp: 120, rank: "#50" },
+    ];
+
+    const MAX_GDP = 2085;
+
+    function imgOrPlaceholder(src, icon, label) {
+      if (src && src.trim() !== '')
+        return `<img src="${src}" alt="${label}" onerror="this.style.display='none'">`;
+      return `<div class="placeholder"><span>${icon}</span><p>${label}</p></div>`;
+    }
+
+    function makeCard(c, idx) {
+      return `<div class="card">
+    <div class="city-label">${c.name}</div>
+    <div class="photo-box">${imgOrPlaceholder(c.photo, '🏙️', 'CITY PHOTO')}</div>
+    <div class="country-label">${c.country}</div>
+    <div class="gdp-box">
+      <canvas width="306" height="195"></canvas>
+      <div class="gdp-overlay">
+        <div class="gdp-value">0</div>
+        <div class="gdp-unit">BILLION USD · GDP 2024</div>
+      </div>
+      <div class="gdp-rank">${c.rank}</div>
+    </div>
+  </div>`;
+    }
+
+    const track = document.getElementById('track');
+    const html = cities.map((c, i) => makeCard(c, i)).join('');
+    track.innerHTML = html + html + html;
+
+    // Init canvas — trigger animation only when card enters the visible area
+    const trackWrap = document.querySelector('.track-wrap');
+
+    document.querySelectorAll('.gdp-box').forEach((box, i) => {
+      const idx = i % cities.length;
+      const city = cities[idx];
+      const canvas = box.querySelector('canvas');
+      const valEl = box.querySelector('.gdp-value');
+      const ctx = canvas.getContext('2d');
+      const W = 306, H = 195;
+      canvas.width = W; canvas.height = H;
+
+      const target = city.gdp;
+      const barRatio = target / MAX_GDP;
+      let startTs = null;
+      let progress = 0;
+      let visible = false;
+      let rafId = null;
+
+      const dots = Array.from({ length: 18 }, () => ({
+        x: Math.random() * W, y: H + Math.random() * H,
+        r: 1.5 + Math.random() * 2.5,
+        speed: 0.3 + Math.random() * 0.6,
+        op: 0.15 + Math.random() * 0.4,
+        col: Math.random() > 0.6 ? '#00e5ff' : Math.random() > 0.5 ? '#00ff88' : 'rgba(255,255,255,0.5)',
+      }));
+
+      // draw idle bg when not yet visible
+      function drawIdle() {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#020f20';
+        ctx.fillRect(0, 0, W, H);
+        ctx.strokeStyle = 'rgba(0,150,255,0.08)';
+        ctx.lineWidth = 1;
+        for (let k = 1; k <= 4; k++) {
+          ctx.beginPath(); ctx.moveTo(0, H * k / 5); ctx.lineTo(W, H * k / 5); ctx.stroke();
+        }
+      }
+      drawIdle();
+
+      function draw(ts) {
+        if (!startTs) startTs = ts;
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = '#020f20';
+        ctx.fillRect(0, 0, W, H);
+
+        // grid lines ngang
+        ctx.strokeStyle = 'rgba(0,150,255,0.08)';
+        ctx.lineWidth = 1;
+        for (let k = 1; k <= 4; k++) {
+          ctx.beginPath(); ctx.moveTo(0, H * k / 5); ctx.lineTo(W, H * k / 5); ctx.stroke();
+        }
+
+        const elapsed = ts - startTs;
+        progress = Math.min(1, elapsed / 1600);
+        progress = 1 - Math.pow(1 - progress, 3);
+
+        // BAR mọc từ DƯỚI LÊN
+        const maxBarH = H - 24;
+        const barH = maxBarH * barRatio * progress;
+        const bx = 20, bw = W - 40;
+        const barY = H - barH;
+
+        // bar fill bottom→top
+        if (barH > 2) {
+          const grd = ctx.createLinearGradient(0, barY, 0, H);
+          grd.addColorStop(0, 'rgba(0,229,255,0.85)');
+          grd.addColorStop(0.5, 'rgba(0,120,255,0.65)');
+          grd.addColorStop(1, 'rgba(0,50,160,0.35)');
+          ctx.fillStyle = grd;
+          ctx.beginPath();
+          ctx.roundRect(bx, barY, bw, barH, [6, 6, 0, 0]);
+          ctx.fill();
+
+          // glow top edge
+          ctx.fillStyle = 'rgba(0,229,255,1)';
+          ctx.fillRect(bx, barY, bw, 3);
+
+          // shine
+          ctx.fillStyle = 'rgba(255,255,255,0.1)';
+          ctx.fillRect(bx + 4, barY + 4, bw - 8, 8);
+        }
+
+        // floating dots bay lên
+        dots.forEach(d => {
+          d.y -= d.speed;
+          if (d.y < -8) { d.y = H + 4; d.x = Math.random() * W; }
+          ctx.globalAlpha = d.op * progress;
+          ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+          ctx.fillStyle = d.col; ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+
+        if (valEl) valEl.textContent = Math.round(target * progress).toLocaleString();
+        rafId = requestAnimationFrame(draw);
+      }
+
+      // Use IntersectionObserver on the track-wrap as root
+      // Poll position each frame — IntersectionObserver unreliable inside CSS transform
+      let checkRaf;
+      function checkVisibility() {
+        const boxRect = box.getBoundingClientRect();
+        const wrapRect = trackWrap.getBoundingClientRect();
+        // card is "in view" when its LEFT edge has entered and RIGHT edge hasn't fully passed
+        const entering = boxRect.left < wrapRect.right - 40 && boxRect.right > wrapRect.left + 40;
+
+        if (entering && !visible) {
+          visible = true;
+          startTs = null;
+          progress = 0;
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(draw);
+        } else if (!entering && visible) {
+          visible = false;
+          startTs = null;
+          progress = 0;
+          if (rafId) cancelAnimationFrame(rafId);
+          drawIdle();
+          if (valEl) valEl.textContent = '0';
+        }
+        checkRaf = requestAnimationFrame(checkVisibility);
+      }
+      requestAnimationFrame(checkVisibility);
+    });
+
+    // Scroll
+    const PX_PER_SEC = 70;
+    const TOTAL_W = cities.length * (330 + 20);
+    let pos = 0, lastTs = null;
+    function animate(ts) {
+      if (!lastTs) lastTs = ts;
+      const dt = Math.min(ts - lastTs, 50);
+      lastTs = ts;
+      pos += PX_PER_SEC * dt / 1000;
+      if (pos >= TOTAL_W * 2) pos -= TOTAL_W * 2;
+      track.style.transform = `translateX(-${pos}px)`;
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+  </script>
+</body>
+
+</html>

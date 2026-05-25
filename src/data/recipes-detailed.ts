@@ -31,7 +31,7 @@ const banhCanhHe: RecipeDetailed = {
     storySnippet:
         "Every Sunday morning in Phú Yên, my mother would start the broth before sunrise — pork bones, a handful of dried anchovies, and patience. By the time my siblings and I woke up, the kitchen smelled of the sea. She always said: 'The chives go in last. Never cook them. They should still be alive when you taste them.' I've tried bánh canh in Saigon, in Hanoi, in Germany — none of them taste like hers.",
 
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/recipes/banh-canh-he-phu-yen.jpg",
     imageAlt: "Bowl of Phu Yen bánh canh hẹ topped with fresh green garlic chives and crispy shallots",
 
     prepTime: "30 min",
@@ -390,7 +390,7 @@ const banhBao: RecipeDetailed = {
     description:
         "Bánh bao is Vietnam's answer to the Chinese baozi, softened and sweetened to match the Vietnamese palate. The dough is enriched with milk and a touch of sugar, yielding an impossibly soft, white, slightly sweet wrapper that almost melts on the tongue. Inside: a savory pork mixture studded with glass noodles and wood ear mushrooms, hiding a perfectly soft-cooked quail egg at the center — a surprise with every bite.\n\nYou'll find bánh bao at every Vietnamese bus station, school gate, and morning market, steamed in tall bamboo towers and wrapped in square parchment. Each region has its preference: Hanoi versions are meatier, Saigon versions sweeter, and homemade versions are always better than either.\n\nThis recipe makes 12 buns and takes about 2.5 hours, most of which is passive proofing time. The actual hands-on work is under 45 minutes. Once you learn the fold, you'll be making bánh bao for breakfast every weekend.",
 
-    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/recipes/banh-bao-nhan-thit-trung-cut.jpg",
     imageAlt: "Vietnamese steamed pork buns (bánh bao) split open to show pork filling and quail egg center",
 
     prepTime: "1 hr",
