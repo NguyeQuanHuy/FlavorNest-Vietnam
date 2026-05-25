@@ -306,7 +306,7 @@ function RecipesInner() {
                 </AnimatePresence>
                 {/* Pagination */}
                 {filtered.length > PER_PAGE && (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48, position: 'sticky', bottom: 24, zIndex: 30 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 4, position: 'sticky', bottom: 24, zIndex: 30 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>
                             <button
                                 onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
