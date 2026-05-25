@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'banh-uot-dau-he',
     title: 'Bánh Ướt Dầu Hẹ (Vietnamese Steamed Rice Sheets with Scallion Oil)',
     subtitle: `Silky steamed rice sheets, paper-thin and slightly translucent, draped with fragrant scallion oil and topped with crispy fried shallots, chả lụa, and a bright fish sauce dipping sauce. The Saigon breakfast that takes 20 minutes and tastes like nothing else.`,
-    category: 'STREET FOOD',
+    category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.8,

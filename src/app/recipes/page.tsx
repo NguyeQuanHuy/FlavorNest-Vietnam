@@ -85,73 +85,73 @@ function RecipesInner() {
     const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
     const [page, setPage] = useState(1);
     const PER_PAGE = 12;
-    
+
     useEffect(() => { setLocalQuery(urlSearch); }, [urlSearch]);
 
-   const filtered = useMemo(() => {
-    const normalize = (str: string) =>
-      str.toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/đ/g, "d").replace(/Đ/g, "d");
+    const filtered = useMemo(() => {
+        const normalize = (str: string) =>
+            str.toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/đ/g, "d").replace(/Đ/g, "d");
 
-    const q = normalize(localQuery.trim());
-    const words = q.split(/\s+/).filter(Boolean);
+        const q = normalize(localQuery.trim());
+        const words = q.split(/\s+/).filter(Boolean);
 
-    return RECIPES.filter((r) => {
-    const titleLower = (r.title + " " + r.subtitle).toLowerCase();
-      const tagsLower = r.tags.map((t) => t.toLowerCase());
+        return RECIPES.filter((r) => {
+            const titleLower = (r.title + " " + r.subtitle).toLowerCase();
+            const tagsLower = r.tags.map((t) => t.toLowerCase());
 
-      const matchCat = (cat: string) => {
-        if (cat === "All") return true;
+            const matchCat = (cat: string) => {
+                if (cat === "All") return true;
 
-        if (cat === "Rice") {
-          if (/\b(noodle|pho|bun|bún|phở|mi quang|vermicelli|tapioca)\b/.test(titleLower)) return false;
-          if (/\b(congee|chao|cháo)\b/.test(titleLower)) return false;
-          return /\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) || tagsLower.includes("rice");
-        }
+                if (cat === "Rice") {
+                    if (/\b(noodle|pho|bun|bún|phở|mi quang|vermicelli|tapioca)\b/.test(titleLower)) return false;
+                    if (/\b(congee|chao|cháo)\b/.test(titleLower)) return false;
+                    return /\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) || tagsLower.includes("rice");
+                }
 
-        if (cat === "Noodles") {
-          if (/\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) && !/\b(noodle|pho|bun|bún|phở|mì)\b/.test(titleLower)) return false;
-          return /\b(noodle|pho|bun|bún|phở|mì|mi quang|vermicelli|tapioca)\b/.test(titleLower) || tagsLower.includes("noodles");
-        }
+                if (cat === "Noodles") {
+                    if (/\b(rice|com|cơm|xoi|xôi)\b/.test(titleLower) && !/\b(noodle|pho|bun|bún|phở|mì)\b/.test(titleLower)) return false;
+                    return /\b(noodle|pho|bun|bún|phở|mì|mi quang|vermicelli|tapioca)\b/.test(titleLower) || tagsLower.includes("noodles");
+                }
 
-        if (cat === "Soup") {
-          return /\b(soup|canh|broth|pho|phở|bun bo|bún bò|bun rieu|bún riêu|congee|chao|cháo)\b/.test(titleLower);
-        }
+                if (cat === "Soup") {
+                    return /\b(soup|canh|broth|pho|phở|bun bo|bún bò|bun rieu|bún riêu|congee|chao|cháo)\b/.test(titleLower);
+                }
 
-        if (cat === "Street Food") {
-          return tagsLower.some((t) => t.includes("street")) ||
-                 /\b(banh mi|bánh mì|skewer|street)\b/.test(titleLower);
-        }
+                if (cat === "Street Food") {
+                    return tagsLower.some((t) => t.includes("street")) ||
+                        /\b(banh mi|bánh mì|skewer|street)\b/.test(titleLower);
+                }
 
-        if (cat === "Rolls") {
-          return /\b(roll|cuon|cuốn|nem)\b/.test(titleLower) ||
-                 tagsLower.some((t) => t.includes("roll") || t.includes("wrap"));
-        }
+                if (cat === "Rolls") {
+                    return /\b(roll|cuon|cuốn|nem)\b/.test(titleLower) ||
+                        tagsLower.some((t) => t.includes("roll") || t.includes("wrap"));
+                }
 
-        return false;
-      };
+                return false;
+            };
 
-      const catMatch = matchCat(activeCategory);
-      const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
+            const catMatch = matchCat(activeCategory);
+            const regionMatch = activeRegion === "All Regions" || r.region === activeRegion;
 
-      const searchable = normalize([
-        r.title, r.subtitle, r.description,
-        ...r.tags, r.category, r.region,
-      ].join(" "));
+            const searchable = normalize([
+                r.title, r.subtitle, r.description,
+                ...r.tags, r.category, r.region,
+            ].join(" "));
 
-      const searchMatch = words.length === 0 || words.every(w => searchable.includes(w));
+            const searchMatch = words.length === 0 || words.every(w => searchable.includes(w));
 
-      return catMatch && regionMatch && searchMatch;
-    }).sort((a, b) => {
-      if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
-      if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
-      return b.reviews - a.reviews;
-    });
-  }, [activeCategory, activeRegion, localQuery, sortBy]);
+            return catMatch && regionMatch && searchMatch;
+        }).sort((a, b) => {
+            if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
+            if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
+            return b.reviews - a.reviews;
+        });
+    }, [activeCategory, activeRegion, localQuery, sortBy]);
     useEffect(() => { setPage(1); }, [activeCategory, activeRegion, localQuery, sortBy]);
-    
+
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };
 
     return (
@@ -179,12 +179,12 @@ function RecipesInner() {
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                         <div style={{ width: 32, height: 1.5, background: "#D97706" }} />
-                        <span style={{ color: "#D97706", fontSize: 10, fontWeight: 600 , letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
+                        <span style={{ color: "#D97706", fontSize: 10, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
                     </div>
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.05, margin: "0 0 16px" }}>
                         {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (<>Discover <span style={{ color: "#D97706", fontStyle: "italic" }}> Our flavorful Recipes</span></>)}
                     </h1>
-                        <div style={{ position: "relative", maxWidth: 560, margin: "0 0 28px" }}>
+                    <div style={{ position: "relative", maxWidth: 560, margin: "0 0 28px" }}>
                         <span aria-hidden style={{
                             position: "absolute",
                             left: 0,
@@ -211,7 +211,7 @@ function RecipesInner() {
             </section>
 
             {/* FILTER BAR */}
-            <div style={{ position: "sticky", top: 0, zIndex: 40, background: "linear-gradient(135deg, rgba(254,243,226,0.97) 0%, rgba(245,237,227,0.97) 100%)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.12)", padding: "8px 24px", marginTop: 0, borderRadius: 0, boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
+            <div style={{ position: "sticky", top: 76, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 24px", marginTop: 8, borderRadius: "0 0 16px 16px", boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 8, overflowX: "auto", alignItems: "center", flexWrap: "nowrap", padding: "4px 0" }}>
                     <div style={{ position: "relative", flexShrink: 0 }}>
                         <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", display: "flex", alignItems: "center" }}>
@@ -272,12 +272,12 @@ function RecipesInner() {
                     <motion.div
                         key={`${activeCategory}-${activeRegion}-${localQuery}`}
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}
-                        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(180px,1fr))", gap: 20 }}
+                        style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))", gap: 24 }}
                     >
                         {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
-                                    <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4"}}>
+                                    <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4" }}>
                                         <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" className="r-img" style={{ objectFit: "cover" }} quality={80} />
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
                                         <span style={{ position: "absolute", top: 14, left: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", color: "#4B2E1A", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 100 }}>{recipe.category}</span>
@@ -289,16 +289,16 @@ function RecipesInner() {
                                         <HeartButton slug={recipe.slug} recipe={recipe} />
                                     </div>
                                     <div style={{ padding: "14px 4px 20px" }}>
-                                    <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", color: "rgba(75,46,26,0.45)", textTransform: "uppercase", marginBottom: 8, paddingBottom: 6, borderBottom: "1.5px solid rgba(75,46,26,0.15)", display: "inline-block" }}>
-                                        {recipe.category} · {recipe.region}
+                                        <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", color: "rgba(75,46,26,0.45)", textTransform: "uppercase", marginBottom: 8, paddingBottom: 6, borderBottom: "1.5px solid rgba(75,46,26,0.15)", display: "inline-block" }}>
+                                            {recipe.category} · {recipe.region}
+                                        </div>
+                                        <h2 style={{ fontFamily: "'Nunito Sans', serif", fontSize: 20, fontWeight: 600, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
+                                            <Highlight text={recipe.title} query={localQuery} />
+                                        </h2>
+                                        <p style={{ fontSize: 13, color: "rgba(75,46,26,0.45)", fontStyle: "italic", margin: 0 }}>
+                                            <Highlight text={recipe.subtitle} query={localQuery} />
+                                        </p>
                                     </div>
-                                    <h2 style={{ fontFamily: "'Nunito Sans', serif", fontSize: 20, fontWeight: 600, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
-                                        <Highlight text={recipe.title} query={localQuery} />
-                                    </h2>
-                                    <p style={{ fontSize: 13, color: "rgba(75,46,26,0.45)", fontStyle: "italic", margin: 0 }}>
-                                        <Highlight text={recipe.subtitle} query={localQuery} />
-                                    </p>
-                                </div>
                                 </Link>
                             </motion.div>
                         ))}
@@ -307,49 +307,57 @@ function RecipesInner() {
                 {/* Pagination */}
                 {filtered.length > PER_PAGE && (
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48, position: 'sticky', bottom: 24, zIndex: 30 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>            
-                        <button
-                            onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                            disabled={page === 1}
-                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
-                        >
-                            ← Prev
-                        </button>
-                
-                    style={{ width: 30, height: 30, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 12, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
-                
-                        <button
-                            onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                            disabled={page === Math.ceil(filtered.length / PER_PAGE)}
-                            style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
-                        >
-                        Next →
-                        </button>
-                    </div>        
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>
+                            <button
+                                onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
+                                disabled={page === 1}
+                                style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                            >
+                                ← Prev
+                            </button>
+
+                            {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
+                                <button
+                                    key={n}
+                                    onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
+                                    style={{ width: 36, height: 36, borderRadius: '50%', border: `1.5px solid ${page === n ? '#D97706' : 'rgba(75,46,26,0.15)'}`, background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                                >
+                                    {n}
+                                </button>
+                            ))}
+
+                            <button
+                                onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
+                                disabled={page === Math.ceil(filtered.length / PER_PAGE)}
+                                style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
+                            >
+                                Next →
+                            </button>
+                        </div>
                     </div>
                 )}
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
                         <motion.div
-  animate={{ y: [0, -8, 0] }}
-  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-  style={{ marginBottom: 20 }}
->
-  <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-    <circle cx="11" cy="11" r="7" stroke="#D97706" strokeWidth="1.5" />
-    <path d="M20 20L16.5 16.5" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M8 11h6M11 8v6" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-</motion.div>
-<p style={{
-  fontFamily: "var(--font-playfair), Georgia, serif",
-  fontSize: 22, fontWeight: 600, color: "#2D1A0E", marginBottom: 10,
-}}>
-  No recipes found
-</p>
-<p style={{ fontSize: 14, color: "rgba(75,46,26,0.5)", marginBottom: 20 }}>
-  Try searching in English or Vietnamese without accents
-</p>
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            style={{ marginBottom: 20 }}
+                        >
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+                                <circle cx="11" cy="11" r="7" stroke="#D97706" strokeWidth="1.5" />
+                                <path d="M20 20L16.5 16.5" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
+                                <path d="M8 11h6M11 8v6" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
+                            </svg>
+                        </motion.div>
+                        <p style={{
+                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontSize: 22, fontWeight: 600, color: "#2D1A0E", marginBottom: 10,
+                        }}>
+                            No recipes found
+                        </p>
+                        <p style={{ fontSize: 14, color: "rgba(75,46,26,0.5)", marginBottom: 20 }}>
+                            Try searching in English or Vietnamese without accents
+                        </p>
                         <button onClick={clearSearch} style={{ marginTop: 16, padding: "10px 24px", borderRadius: 100, border: "1.5px solid rgba(75,46,26,0.15)", background: "transparent", color: "#D97706", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
                             Clear search
                         </button>

@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'tra-chanh-gia-tay',
     title: 'Trà Chanh Giã Tay (Vietnamese Hand-Pounded Lime Tea)',
     subtitle: `The viral drink taking Vietnam by storm — fragrant Guangdong lime pounded by mortar and pestle, brewed black tea, honey, and crushed ice. Queues around the block for a reason. Here is how to make it at home in 10 minutes.`,
-    category: 'DRINKS',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '15 min',
     rating: 4.8,
