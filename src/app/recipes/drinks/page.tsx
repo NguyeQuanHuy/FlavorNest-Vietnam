@@ -301,6 +301,16 @@ const RECIPES: Recipe[] = [
         description: "A Cantonese-Vietnamese cooling tonic served chilled in tall glasses — lotus seeds, white fungus, longan, dried jujubes, pearl barley, sea coconut and seaweed simmered in a faintly sweet broth, crowned with shaved ice. Considered medicinal in the summer heat, when the body 'runs hot'. Sweet, herbal, and unlike anything else.",
         tags: ['Cooling', 'Herbal', 'Vegan', 'Cantonese'],
     },
+    {
+        slug: 'dong-suong-rau-cau',
+        title: 'Vietnamese Agar Jelly',
+        subtitle: 'Đông Sương / Thạch Rau Câu',
+        image: '/images/recipes/thach-rau-cau.jpg',
+        type: 'Traditional', difficulty: 'Easy', time: '30 min',
+        rating: '4.8', reviews: 156, cal: 95, tag: 'Trending', tagColor: '#BE185D', cold: true,
+        description: "The wobbly, nostalgic jelly dessert that appears at every Vietnamese family gathering — layered pandan green and coconut white, or dark with Vietnamese coffee. Made from agar agar, sets firm at room temperature, holds its shape in summer heat. Vegan, gluten-free, and ready in 30 minutes.",
+        tags: ['Dessert', 'Vegan', 'Pandan', 'Coconut'],
+    },
 ]
 
 const TYPE_FILTERS = ['All', 'Coffee', 'Tea', 'Smoothie', 'Traditional']
@@ -446,13 +456,13 @@ export default function DrinksPage() {
                     {TYPE_FILTERS.map(f => <button key={f} onClick={() => setType(f)} className={`pill ${type === f ? 'on' : ''}`}>{f}</button>)}
                     <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 6px', flexShrink: 0 }} />
                     {TEMP_FILTERS.map(f => (
-                    <button key={f} onClick={() => setTemp(f)} className={`pill ${temp === f ? 'on' : ''}`}
-                        style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                        {f === 'Hot' && <Flame size={13} strokeWidth={2} />}
-                        {f === 'Cold' && <Snowflake size={13} strokeWidth={2} />}
-                        {f}
-                    </button>
-                ))}
+                        <button key={f} onClick={() => setTemp(f)} className={`pill ${temp === f ? 'on' : ''}`}
+                            style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                            {f === 'Hot' && <Flame size={13} strokeWidth={2} />}
+                            {f === 'Cold' && <Snowflake size={13} strokeWidth={2} />}
+                            {f}
+                        </button>
+                    ))}
                     <span style={{ marginLeft: 'auto', fontSize: 13, color: 'rgba(75,46,26,0.38)', flexShrink: 0, fontWeight: 500 }}>{filtered.length} drinks</span>
                 </div>
             </div>
@@ -488,12 +498,12 @@ export default function DrinksPage() {
                                     <div style={{ padding: '18px 20px 22px' }}>
                                         <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.type}</div>
                                         <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{recipe.title}</h2>
-                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>                                        
+                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
                                         <div style={{ paddingTop: 12, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                                        {recipe.tags.slice(0, 3).map(t => (
-                                            <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>{t}</span>
-                                        ))}
-                                    </div>
+                                            {recipe.tags.slice(0, 3).map(t => (
+                                                <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>{t}</span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </Link>
                             </motion.div>
