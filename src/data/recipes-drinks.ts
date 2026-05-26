@@ -37,4 +37,16 @@ export const DRINKS_RECIPES: DrinkRecipe[] = [
   { slug: 'nuoc-mat-ong-chanh', title: 'Honey Lime Water', subtitle: 'Nước Mật Ong Chanh', image: '/images/recipes/nuoc-mat-ong-chanh.jpg', region: 'Northern', difficulty: 'Easy', time: '5 min', rating: '4.8', reviews: 156, cal: 120, tag: 'Immunity Boost', tagColor: '#D97706', description: "Raw honey and fresh lime juice — soothes the throat, aids digestion, natural energy lift.", tags: ['Honey', 'Lime', 'Detox', 'Healthy'], category: 'Drinks', type: 'Traditional', cold: true },
   { slug: 'nuoc-rau-ma', title: 'Pennywort Juice', subtitle: 'Nước Rau Má', image: '/images/recipes/nuoc-rau-ma.jpg', region: 'Southern', difficulty: 'Medium', time: '15 min', rating: '4.7', reviews: 289, cal: 60, tag: 'Body Cooling', tagColor: '#166534', description: "Emerald-green herbal juice from fresh pennywort leaves — prized for cooling properties.", tags: ['Herbal', 'Cooling', 'Traditional', 'Green'], category: 'Drinks', type: 'Traditional', cold: true },
   { slug: 'nuoc-la-dua', title: 'Pandan Leaf Tea', subtitle: 'Nước Lá Dứa', image: '/images/recipes/nuoc-la-dua.jpg', region: 'Southern', difficulty: 'Easy', time: '20 min', rating: '4.5', reviews: 98, cal: 10, tag: 'Aromatic Relax', tagColor: '#15803d', description: "Fragrant pandan leaf infusion with subtle vanilla-like aroma — served to calm the palate.", tags: ['Pandan', 'Aromatic', 'Tea', 'Light'], category: 'Drinks', type: 'Traditional', cold: true },
+  {
+    slug: 'dong-suong-rau-cau',
+    title: 'Vietnamese Agar Jelly',
+    subtitle: 'Đông Sương / Thạch Rau Câu',
+    image: '/images/recipes/thach-rau-cau.jpg',
+    type: 'Traditional', difficulty: 'Easy', time: '30 min',
+    rating: '4.8', reviews: 156, cal: 95, tag: 'Trending', tagColor: '#BE185D', cold: true,
+    description: "The wobbly, nostalgic jelly dessert that appears at every Vietnamese family gathering — layered pandan green and coconut white, or dark with Vietnamese coffee. Made from agar agar, sets firm at room temperature, holds its shape in summer heat. Vegan, gluten-free, and ready in 30 minutes.",
+    tags: ['Dessert', 'Vegan', 'Pandan', 'Coconut'],
+    category: 'Drinks',
+    region: 'Southern',
+  },
 ]
