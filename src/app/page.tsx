@@ -145,7 +145,7 @@ export default function HomePage() {
         }}
       />
 
- <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden">
         <HeroSection recipeCount={recipeCount} />
         <BentoGrid recipes={featuredRecipes} stories={featuredStories} />
         <CategoriesSection />
