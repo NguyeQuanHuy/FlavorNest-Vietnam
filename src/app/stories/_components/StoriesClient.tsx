@@ -274,7 +274,7 @@ function StoryCard({
         ${flip ? 'lg:[&>:first-child]:order-2 lg:[&>:last-child]:order-1' : ''}
       `}
         >
-            <div className="relative rounded-lg overflow-hidden aspect-[3/2] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
+            <div className="relative rounded-lg overflow-hidden aspect-[5/1] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
                 <Image
                     src={story.image}
                     alt={story.imageAlt}

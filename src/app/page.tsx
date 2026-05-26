@@ -46,7 +46,7 @@ const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
 const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
 const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
-import { STORIES as ALL_STORIES } from "@/app/stories/page";
+import { STORIES as ALL_STORIES } from "@/data/stories-data";
 import Image from "next/image";
 
 // ── Map recipes → BentoGrid format ──
