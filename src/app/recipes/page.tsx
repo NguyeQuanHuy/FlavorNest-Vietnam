@@ -6,9 +6,9 @@ import { useState, useMemo, useCallback, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { getAllRecipes } from "@/data/index";
-import { STORIES } from "@/app/stories/page";
 import { FNIcon } from "@/components/Icons";
 import { useFavorites } from "@/hooks/useFavorites";
+import { STORIES } from '@/data/stories-data'
 
 const RECIPES = getAllRecipes();
 
@@ -294,7 +294,7 @@ function RecipesInner() {
                     >
                         {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
-                                <Link href={`/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
+                                <Link href={recipe.slug.startsWith('stories/') ? `/${recipe.slug}` : `/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
                                     <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4" }}>
                                         <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" className="r-img" style={{ objectFit: "cover" }} quality={80} />
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
