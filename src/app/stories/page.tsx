@@ -437,6 +437,21 @@ export const STORIES: Story[] = [
         publishedAt: 'May 26, 2026',
         featured: true,
     },
+    {
+    slug: 'vietnamese-family-meal-traditions',
+    category: 'Heritage',
+    categoryColor: 'amber',
+    title: 'The Vietnamese Family Dinner Table: What Changed, What Was Lost, and What Quietly Survived',
+    subtitle: 'Bữa Cơm Gia Đình · Vietnamese Family Meal · Then & Now',
+    excerpt: 'The round wooden tray on the floor. The grandmother who cooked since 4pm. The rule that you eat together or you do not eat. These things are still happening — just in fewer households than before.',
+    image: '/images/recipes/nau-com.jpg',
+    imageAlt: 'Vietnamese family cooking — bữa cơm gia đình',
+    tag: 'Family & Heritage',
+    tagColor: 'amber',
+    readTime: '8 min read',
+    publishedAt: 'May 26, 2026',
+    featured: true,
+    },
 ]
 
 export default function StoriesPage() {
