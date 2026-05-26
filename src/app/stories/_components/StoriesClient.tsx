@@ -162,7 +162,7 @@ export default function StoriesClient({ stories }: Props) {
                                 className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20"
                             >
                                 <div className="relative">
-                                    <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
+                                    <div className="relative rounded-lg overflow-hidden aspect-[16/9] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
                                         <Image
                                             src={featured.image}
                                             alt={featured.imageAlt}
@@ -274,7 +274,7 @@ function StoryCard({
         ${flip ? 'lg:[&>:first-child]:order-2 lg:[&>:last-child]:order-1' : ''}
       `}
         >
-            <div className="relative rounded-lg overflow-hidden aspect-[4/3] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
+            <div className="relative rounded-lg overflow-hidden aspect-[3/2] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
                 <Image
                     src={story.image}
                     alt={story.imageAlt}
