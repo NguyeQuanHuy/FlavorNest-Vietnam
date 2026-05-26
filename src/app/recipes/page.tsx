@@ -6,10 +6,28 @@ import { useState, useMemo, useCallback, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { getAllRecipes } from "@/data/index";
+import { STORIES } from "@/app/stories/page";
 import { FNIcon } from "@/components/Icons";
 import { useFavorites } from "@/hooks/useFavorites";
 
 const RECIPES = getAllRecipes();
+
+const STORY_CARDS = STORIES.map(s => ({
+    slug: `stories/${s.slug}`,
+    title: s.title,
+    subtitle: s.subtitle,
+    image: s.image,
+    region: 'All',
+    difficulty: 'Easy' as const,
+    time: s.readTime,
+    rating: '5.0',
+    reviews: 0,
+    description: s.excerpt,
+    tags: [s.tag, s.category],
+    category: 'Stories',
+}));
+
+const ALL_CONTENT = [...RECIPES, ...STORY_CARDS];
 
 const CATEGORIES = ["All", "Soup", "Noodles", "Rice", "Street Food", "Rolls"];
 const REGIONS = ["All Regions", "Northern", "Central", "Southern"];
