@@ -23,7 +23,7 @@ const STORY_CARDS = STORIES.map(s => ({
     rating: '5.0',
     reviews: 0,
     description: s.excerpt,
-    tags: [s.tag, s.category],
+    tags: [s.tag, s.category, s.title, s.subtitle],
     category: 'Stories',
 }));
 
@@ -116,7 +116,7 @@ function RecipesInner() {
         const q = normalize(localQuery.trim());
         const words = q.split(/\s+/).filter(Boolean);
 
-        return RECIPES.filter((r) => {
+        return ALL_CONTENT.filter((r) => {
             const titleLower = (r.title + " " + r.subtitle).toLowerCase();
             const tagsLower = r.tags.map((t) => t.toLowerCase());
 
