@@ -182,6 +182,13 @@ function RecipesInner() {
         .filter-pill { border:1.5px solid rgba(75,46,26,0.12); border-radius:100px; padding:7px 18px; font-size:13px; font-weight:500; color:rgba(75,46,26,0.55); background:transparent; cursor:pointer; transition:all 0.18s; white-space:nowrap; font-family:inherit; }
         .filter-pill:hover { color:#D97706; border-color:rgba(217,119,6,0.4); }
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
+        @media (max-width: 640px) {
+          .recipes-hero { padding-top: 80px !important; padding-bottom: 24px !important; }
+          .recipes-hero h1 { margin-bottom: 10px !important; }
+          .recipes-hero-desc { font-size: 14px !important; padding-left: 12px !important; line-height: 1.5 !important; }
+          .filter-pill { font-size: 11px !important; padding: 6px 12px !important; }
+          .search-bar { font-size: 13px !important; padding: 8px 16px 8px 38px !important; max-width: 200px !important; }
+        }
         .search-bar { background:white; border:1.5px solid rgba(75,46,26,0.1); border-radius:100px; padding:10px 18px 10px 44px; font-size:14px; font-family:inherit; color:#4B2E1A; outline:none; transition:border-color 0.2s,box-shadow 0.2s; width:100%; max-width:320px; }
         .search-bar:focus { border-color:#D97706; box-shadow:0 0 0 3px rgba(217,119,6,0.1); }
         .search-bar::placeholder { color:rgba(75,46,26,0.35); }
@@ -193,13 +200,13 @@ function RecipesInner() {
       `}</style>
 
             {/* HERO */}
-            <section style={{ background: "linear-gradient(135deg,#FEF3E2 0%,#FDE8C5 60%,#FBD99A 100%)", paddingTop: 120, paddingBottom: 64, paddingLeft: 20, paddingRight: 20 }}>
+            <section className="recipes-hero" style={{ background: "linear-gradient(135deg,#FEF3E2 0%,#FDE8C5 60%,#FBD99A 100%)", paddingTop: 96, paddingBottom: 32, paddingLeft: 20, paddingRight: 20 }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                         <div style={{ width: 32, height: 1.5, background: "#D97706" }} />
                         <span style={{ color: "#D97706", fontSize: 10, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase" }}>FlavorNest Vietnam</span>
                     </div>
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.05, margin: "0 0 16px" }}>
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px,6vw,72px)", fontWeight: 700, color: "#2D1A0E", lineHeight: 1.1, margin: "0 0 12px" }}>
                         {localQuery ? (<>Search: <span style={{ color: "#D97706", fontStyle: "italic" }}>&quot;{localQuery}&quot;</span></>) : (<>Discover <span style={{ color: "#D97706", fontStyle: "italic" }}> Our flavorful Recipes</span></>)}
                     </h1>
                     <div style={{ position: "relative", maxWidth: 560, margin: "0 0 28px" }}>
@@ -212,7 +219,7 @@ function RecipesInner() {
                             background: "#D97706",
                             borderRadius: 2,
                         }} />
-                        <p style={{
+                        <p className="recipes-hero-desc" style={{
                             fontFamily: "'Playfair Display', serif",
                             color: "#4B2E1A",
                             fontSize: 19,
@@ -229,7 +236,7 @@ function RecipesInner() {
             </section>
 
             {/* FILTER BAR */}
-            <div style={{ position: "sticky", top: 76, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 24px", marginTop: 8, borderRadius: "0 0 16px 16px", boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
+            <div className="recipes-filter-bar" style={{ position: "sticky", top: 76, zIndex: 40, background: "rgba(250,250,247,0.96)", backdropFilter: "blur(16px)", borderBottom: "1px solid rgba(75,46,26,0.07)", padding: "8px 16px", marginTop: 8, borderRadius: "0 0 16px 16px", boxShadow: "0 8px 24px rgba(75,46,26,0.08)" }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", gap: 8, overflowX: "auto", alignItems: "center", flexWrap: "nowrap", padding: "4px 0" }}>
                     <div style={{ position: "relative", flexShrink: 0 }}>
                         <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", display: "flex", alignItems: "center" }}>
