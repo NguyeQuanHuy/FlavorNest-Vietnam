@@ -575,7 +575,6 @@ export default function Navbar() {
                             />
                           </motion.svg>
                         </button>
-
                         <AnimatePresence>
                           {expanded && (
                             <motion.div
@@ -658,6 +657,8 @@ export default function Navbar() {
                                     </Link>
                                   ))}
                                 </div>
+                              </div>
+                            </motion.div>
                           )}
                         </AnimatePresence>
                         <div
