@@ -375,7 +375,6 @@ function RecipesInner() {
                         </div>
                     );
                 })()}
-                )}
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
                         <motion.div
