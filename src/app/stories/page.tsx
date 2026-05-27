@@ -6,7 +6,6 @@ import type { Metadata } from 'next'
 import StoriesClient from './_components/StoriesClient'
 import { STORIES } from '@/data/stories-data'
 
-export type { Story } from '@/data/stories-data'
 export const metadata: Metadata = {
     title: 'Kitchen Stories | FlavorNest Vietnam',
     description: 'Discover the history, culture and people behind authentic Vietnamese cuisine.',
