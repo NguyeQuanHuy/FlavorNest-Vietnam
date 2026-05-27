@@ -118,8 +118,21 @@ export default function Footer() {
         }
         @media (max-width: 480px) {
             .footer-main-grid {
-                grid-template-columns: 1fr !important;
-                gap: 28px !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 24px 20px !important;
+            }
+            .footer-brand-col {
+                grid-column: 1 / -1 !important;
+            }
+            .footer-main-grid h4 {
+                font-size: 10px !important;
+                margin-bottom: 12px !important;
+            }
+            .footer-main-grid ul {
+                gap: 8px !important;
+            }
+            .footer-main-grid a {
+                font-size: 13px !important;
             }
         }
     `}</style>

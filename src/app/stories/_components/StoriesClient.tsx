@@ -264,7 +264,8 @@ function StoryCard({
 
     return (
         <motion.article
-            custom={index}
+            custom=
+            {index}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
