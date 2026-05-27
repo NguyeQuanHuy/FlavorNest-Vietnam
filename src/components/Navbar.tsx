@@ -599,58 +599,26 @@ export default function Navbar() {
                                 >
                                   Categories
                                 </div>
-                                <div className="grid grid-cols-2 gap-2 mb-5">
+                                <div className="flex flex-col mb-5">
                                   {RECIPE_CATEGORIES.map((item) => (
                                     <Link
                                       key={item.href}
                                       href={item.href}
                                       onClick={() => setMobileOpen(false)}
-                                      className="flex flex-col gap-2 p-3"
+                                      className="flex items-center justify-between py-3 px-3 rounded-lg transition-colors hover:bg-[rgba(217,119,6,0.06)]"
                                       style={{
-                                        borderRadius: 14,
-                                        background: "#FFFFFF",
-                                        border:
-                                          "1px solid rgba(75,46,26,0.08)",
+                                        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                                        fontSize: 12,
+                                        fontWeight: 700,
+                                        letterSpacing: "0.16em",
+                                        textTransform: "uppercase",
+                                        color: pathname?.startsWith(item.href) ? "#D97706" : "#4B2E1A",
                                         textDecoration: "none",
+                                        borderBottom: "1px solid rgba(75,46,26,0.06)",
                                       }}
                                     >
-                                      <div
-                                        className="relative w-full overflow-hidden"
-                                        style={{
-                                          aspectRatio: "4/3",
-                                          borderRadius: 10,
-                                        }}
-                                      >
-                                        <Image
-                                          src={item.image}
-                                          alt={item.name}
-                                          fill
-                                          sizes="(max-width: 768px) 45vw, 200px"
-                                          className="object-cover"
-                                        />
-                                      </div>
-                                      <div>
-                                        <div
-                                          style={{
-                                            fontFamily:
-                                              "var(--font-playfair), Georgia, serif",
-                                            fontSize: 14,
-                                            fontWeight: 600,
-                                            color: "#2D1A0E",
-                                          }}
-                                        >
-                                          {item.name}
-                                        </div>
-                                        <div
-                                          style={{
-                                            fontSize: 11,
-                                            color: "rgba(75,46,26,0.6)",
-                                            marginTop: 2,
-                                          }}
-                                        >
-                                          {item.description}
-                                        </div>
-                                      </div>
+                                      <span>{item.name}</span>
+                                      <span style={{ color: "#D97706", fontSize: 14, fontWeight: 400 }}>→</span>
                                     </Link>
                                   ))}
                                 </div>
@@ -662,68 +630,34 @@ export default function Navbar() {
                                     letterSpacing: "1.5px",
                                     color: "#D97706",
                                     textTransform: "uppercase",
-                                    marginBottom: 10,
+                                    marginBottom: 6,
                                   }}
                                 >
                                   Regions
                                 </div>
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="flex flex-col">
                                   {RECIPE_REGIONS.map((item) => (
                                     <Link
                                       key={item.href}
                                       href={item.href}
                                       onClick={() => setMobileOpen(false)}
-                                      className="flex flex-col gap-2 p-3"
+                                      className="flex items-center justify-between py-3 px-3 rounded-lg transition-colors hover:bg-[rgba(217,119,6,0.06)]"
                                       style={{
-                                        borderRadius: 14,
-                                        background: "#FFFFFF",
-                                        border:
-                                          "1px solid rgba(75,46,26,0.08)",
+                                        fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                                        fontSize: 12,
+                                        fontWeight: 700,
+                                        letterSpacing: "0.16em",
+                                        textTransform: "uppercase",
+                                        color: pathname?.startsWith(item.href) ? "#D97706" : "#4B2E1A",
                                         textDecoration: "none",
+                                        borderBottom: "1px solid rgba(75,46,26,0.06)",
                                       }}
                                     >
-                                      <div
-                                        className="relative w-full overflow-hidden"
-                                        style={{
-                                          aspectRatio: "4/3",
-                                          borderRadius: 10,
-                                        }}
-                                      >
-                                        <Image
-                                          src={item.image}
-                                          alt={item.name}
-                                          fill
-                                          sizes="(max-width: 768px) 45vw, 200px"
-                                          className="object-cover"
-                                        />
-                                      </div>
-                                      <div>
-                                        <div
-                                          style={{
-                                            fontFamily:
-                                              "var(--font-playfair), Georgia, serif",
-                                            fontSize: 14,
-                                            fontWeight: 600,
-                                            color: "#2D1A0E",
-                                          }}
-                                        >
-                                          {item.name}
-                                        </div>
-                                        <div
-                                          style={{
-                                            fontSize: 11,
-                                            color: "rgba(75,46,26,0.6)",
-                                            marginTop: 2,
-                                          }}
-                                        >
-                                          {item.description}
-                                        </div>
-                                      </div>
+                                      <span>{item.name}</span>
+                                      <span style={{ color: "#D97706", fontSize: 14, fontWeight: 400 }}>→</span>
                                     </Link>
                                   ))}
                                 </div>
-                              </div>
-                            </motion.div>
                           )}
                         </AnimatePresence>
                         <div
