@@ -323,36 +323,58 @@ function RecipesInner() {
                     </motion.div>
                 </AnimatePresence>
                 {/* Pagination */}
-                {filtered.length > PER_PAGE && (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 4, position: 'sticky', bottom: 24, zIndex: 30 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>
-                            <button
-                                onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                                disabled={page === 1}
-                                style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
-                            >
-                                ← Prev
-                            </button>
-
-                            {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
+                {filtered.length > PER_PAGE && (() => {
+                    const totalPages = Math.ceil(filtered.length / PER_PAGE);
+                    const goTo = (n: number) => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+                    const pages: (number | 'dots')[] = [];
+                    if (totalPages <= 5) {
+                        for (let i = 1; i <= totalPages; i++) pages.push(i);
+                    } else {
+                        pages.push(1);
+                        if (page > 3) pages.push('dots');
+                        const start = Math.max(2, page - 1);
+                        const end = Math.min(totalPages - 1, page + 1);
+                        for (let i = start; i <= end; i++) pages.push(i);
+                        if (page < totalPages - 2) pages.push('dots');
+                        pages.push(totalPages);
+                    }
+                    return (
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 4, position: 'sticky', bottom: 24, zIndex: 30 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '8px 10px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>
                                 <button
-                                    key={n}
-                                    onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                                    style={{ width: 36, height: 36, borderRadius: '50%', border: `1.5px solid ${page === n ? '#D97706' : 'rgba(75,46,26,0.15)'}`, background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                                    aria-label="Previous page"
+                                    onClick={() => goTo(Math.max(1, page - 1))}
+                                    disabled={page === 1}
+                                    style={{ width: 34, height: 34, border: 'none', borderRadius: '50%', background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 18, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
-                                    {n}
+                                    ‹
                                 </button>
-                            ))}
 
-                            <button
-                                onClick={() => { setPage(p => Math.min(Math.ceil(filtered.length / PER_PAGE), p + 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                                disabled={page === Math.ceil(filtered.length / PER_PAGE)}
-                                style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
-                            >
-                                Next →
-                            </button>
+                                {pages.map((p, idx) => p === 'dots' ? (
+                                    <span key={`dots-${idx}`} style={{ width: 20, textAlign: 'center', color: 'rgba(75,46,26,0.35)', fontSize: 13, letterSpacing: 1 }}>…</span>
+                                ) : (
+                                    <button
+                                        key={p}
+                                        onClick={() => goTo(p)}
+                                        aria-current={page === p ? 'page' : undefined}
+                                        style={{ minWidth: 32, height: 32, padding: '0 8px', borderRadius: 16, border: 'none', background: page === p ? '#D97706' : 'transparent', color: page === p ? 'white' : 'rgba(75,46,26,0.65)', fontSize: 13, fontWeight: page === p ? 700 : 500, cursor: 'pointer', fontFamily: 'inherit', transition: 'background 0.15s' }}
+                                    >
+                                        {p}
+                                    </button>
+                                ))}
+
+                                <button
+                                    aria-label="Next page"
+                                    onClick={() => goTo(Math.min(totalPages, page + 1))}
+                                    disabled={page === totalPages}
+                                    style={{ width: 34, height: 34, border: 'none', borderRadius: '50%', background: 'transparent', color: page === totalPages ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 18, fontWeight: 500, cursor: page === totalPages ? 'default' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                >
+                                    ›
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    );
+                })()}
                 )}
                 {filtered.length === 0 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ textAlign: "center", padding: "80px 20px" }}>
