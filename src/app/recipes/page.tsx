@@ -182,12 +182,18 @@ function RecipesInner() {
         .filter-pill { border:1.5px solid rgba(75,46,26,0.12); border-radius:100px; padding:7px 18px; font-size:13px; font-weight:500; color:rgba(75,46,26,0.55); background:transparent; cursor:pointer; transition:all 0.18s; white-space:nowrap; font-family:inherit; }
         .filter-pill:hover { color:#D97706; border-color:rgba(217,119,6,0.4); }
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
+        .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         @media (max-width: 640px) {
           .recipes-hero { padding-top: 80px !important; padding-bottom: 24px !important; }
           .recipes-hero h1 { margin-bottom: 10px !important; }
           .recipes-hero-desc { font-size: 14px !important; padding-left: 12px !important; line-height: 1.5 !important; }
           .filter-pill { font-size: 11px !important; padding: 6px 12px !important; }
           .search-bar { font-size: 13px !important; padding: 8px 16px 8px 38px !important; max-width: 200px !important; }
+          .recipes-grid-inner { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+          .recipe-card h2 { font-size: 15px !important; margin: 8px 0 2px !important; }
+          .recipe-card p { font-size: 11px !important; }
+          .recipe-card > div:last-child { padding: 10px 2px 14px !important; }
+          .recipe-card > div:last-child > div:first-child { font-size: 9px !important; margin-bottom: 4px !important; padding-bottom: 4px !important; }
         }
         .search-bar { background:white; border:1.5px solid rgba(75,46,26,0.1); border-radius:100px; padding:10px 18px 10px 44px; font-size:14px; font-family:inherit; color:#4B2E1A; outline:none; transition:border-color 0.2s,box-shadow 0.2s; width:100%; max-width:320px; }
         .search-bar:focus { border-color:#D97706; box-shadow:0 0 0 3px rgba(217,119,6,0.1); }
