@@ -51,6 +51,14 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  // ── Mobile menu — icon map theo label ──
+  const MOBILE_ICONS: Record<string, string> = {
+    Home: "home",
+    Recipes: "book",
+    Stories: "feather",
+    About: "info",
+  };
+
   return (
     <>
       <motion.nav
@@ -529,19 +537,26 @@ export default function Navbar() {
                           onClick={() =>
                             setMobileExpanded(expanded ? null : link.label)
                           }
-                          className="w-full flex items-center justify-between py-4"
+                          className="w-full flex items-center justify-between py-4 px-3 rounded-xl transition-colors hover:bg-[rgba(217,119,6,0.06)]"
                           style={{
-                            fontFamily: "var(--font-playfair), Georgia, serif",
-                            fontSize: 20,
-                            fontWeight: 600,
-                            color: "#2D1A0E",
+                            fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                            fontSize: 13,
+                            fontWeight: 700,
+                            letterSpacing: "0.18em",
+                            textTransform: "uppercase",
+                            color: pathname?.startsWith(link.href) ? "#D97706" : "#2D1A0E",
                             background: "transparent",
                             border: "none",
                             cursor: "pointer",
                             textAlign: "left",
                           }}
                         >
-                          {link.label}
+                          <span className="flex items-center gap-3">
+                            {MOBILE_ICONS[link.label] && (
+                              <FNIcon name={MOBILE_ICONS[link.label]} size={18} color={pathname?.startsWith(link.href) ? "#D97706" : "#4B2E1A"} />
+                            )}
+                            {link.label}
+                          </span>
                           <motion.svg
                             width="16"
                             height="16"
@@ -721,20 +736,26 @@ export default function Navbar() {
                     );
                   }
 
+                  const isActive = link.href === "/" ? pathname === "/" : pathname?.startsWith(link.href);
                   return (
                     <div key={link.label}>
                       <Link
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block py-4"
+                        className="flex items-center gap-3 py-4 px-3 rounded-xl transition-colors hover:bg-[rgba(217,119,6,0.06)]"
                         style={{
-                          fontFamily: "var(--font-playfair), Georgia, serif",
-                          fontSize: 20,
-                          fontWeight: 600,
-                          color: "#2D1A0E",
+                          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                          fontSize: 13,
+                          fontWeight: 700,
+                          letterSpacing: "0.18em",
+                          textTransform: "uppercase",
+                          color: isActive ? "#D97706" : "#2D1A0E",
                           textDecoration: "none",
                         }}
                       >
+                        {MOBILE_ICONS[link.label] && (
+                          <FNIcon name={MOBILE_ICONS[link.label]} size={18} color={isActive ? "#D97706" : "#4B2E1A"} />
+                        )}
                         {link.label}
                       </Link>
                       <div
@@ -752,12 +773,14 @@ export default function Navbar() {
                   <Link
                     href="/favorites"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 py-4"
+                    className="flex items-center gap-3 py-4 px-3 rounded-xl transition-colors hover:bg-[rgba(217,119,6,0.06)]"
                     style={{
-                      fontFamily: "var(--font-playfair), Georgia, serif",
-                      fontSize: 20,
-                      fontWeight: 600,
-                      color: "#2D1A0E",
+                      fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
+                      fontSize: 13,
+                      fontWeight: 700,
+                      letterSpacing: "0.18em",
+                      textTransform: "uppercase",
+                      color: pathname === "/favorites" ? "#D97706" : "#2D1A0E",
                       textDecoration: "none",
                     }}
                   >
