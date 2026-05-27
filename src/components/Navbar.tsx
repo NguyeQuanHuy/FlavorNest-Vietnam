@@ -241,21 +241,18 @@ export default function Navbar() {
               aria-label="Search recipes"
               aria-expanded={searchOpen}
               onClick={() => setSearchOpen(true)}
-              className="hidden sm:flex items-center justify-center transition-all duration-200"
+              className="flex items-center justify-center transition-all duration-200"
               style={{
-                width: 36,
-                height: 36,
-                borderRadius: "50%",
-                border: `1px solid ${forceScrolled ? "rgba(75,46,26,0.15)" : "rgba(245,237,227,0.2)"
-                  }`,
-                background: forceScrolled
-                  ? "rgba(75,46,26,0.04)"
-                  : "rgba(245,237,227,0.08)",
-                color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
+                width: 40,
+                height: 40,
+                borderRadius: 10,
+                border: "1px solid rgba(245,237,227,0.25)",
+                background: "rgba(245,237,227,0.1)",
+                color: "#F5EDE3",
                 cursor: "pointer",
               }}
             >
-              <FNIcon name="search" size={15} />
+              <FNIcon name="search" size={16} />
             </button>
 
             {/* ── Favorites heart icon ── */}
