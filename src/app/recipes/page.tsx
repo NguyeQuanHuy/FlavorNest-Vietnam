@@ -184,9 +184,14 @@ function RecipesInner() {
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
         .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         @media (max-width: 640px) {
-          .recipes-hero { padding-top: 80px !important; padding-bottom: 24px !important; }
-          .recipes-hero h1 { margin-bottom: 10px !important; }
-          .recipes-hero-desc { font-size: 14px !important; padding-left: 12px !important; line-height: 1.5 !important; }
+          .recipes-hero { padding-top: 70px !important; padding-bottom: 14px !important; }
+          .recipes-hero h1 { font-size: 24px !important; margin-bottom: 6px !important; line-height: 1.15 !important; }
+          .recipes-hero-desc { font-size: 13px !important; padding-left: 10px !important; line-height: 1.45 !important; }
+          .recipes-hero > div > div:first-child { margin-bottom: 8px !important; }
+          .recipes-hero > div > div:nth-child(3) { margin-bottom: 0 !important; }
+          .recipes-filter-bar { padding: 6px 12px !important; margin-top: 0 !important; }
+          #recipes-grid { padding: 20px 14px 60px !important; }
+          #recipes-grid > p { margin-bottom: 14px !important; font-size: 12px !important; }
           .filter-pill { font-size: 11px !important; padding: 6px 12px !important; }
           .search-bar { font-size: 13px !important; padding: 8px 16px 8px 38px !important; max-width: 200px !important; }
           .recipes-grid-inner { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
