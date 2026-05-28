@@ -56,6 +56,9 @@ const GUIDES = [
             { title: 'How to Char Vietnamese Aromatics (Onion & Ginger)', slug: 'pho-bo-ha-noi', desc: 'Direct flame or broiler, the correct level of blackening, why char adds sweetness not bitterness.', time: '10 min', level: 'Easy' },
             { title: 'How to Make Crispy Fried Shallots', slug: 'dong-suong-rau-cau', desc: 'Cold oil start, low heat, pulling them before they look done. The single most reusable Vietnamese technique.', time: '20 min', level: 'Easy' },
             { title: 'How to Use the Vietnamese Herb Plate', slug: 'vietnamese-herb-plate-guide', desc: 'Which herbs go with which dishes, in what order, in what quantity. The herb plate is half the dish.', time: '5 min', level: 'Essential', isStory: true },
+            { title: 'How to Make a Crystal-Clear Vietnamese Broth', slug: 'vietnamese-broth', desc: 'Blanch bones first, never boil during long simmer, strain through fine mesh. The 3 rules that separate great phở from mediocre.', time: '7 min read', level: 'Advanced', isHowTo: true },
+            { title: 'How to Marinate Meat Vietnamese Style', slug: 'marinate-meat', desc: 'The 4-element formula: fish sauce, sugar, aromatics, fat. How long to marinate each protein. 3 classic Vietnamese marinades.', time: '6 min read', level: 'Intermediate', isHowTo: true },
+            { title: 'How to Balance Vietnamese Flavors', slug: 'balance-flavors', desc: 'Sweet, sour, salty, bitter, spicy — the 5-element framework. How to fix any dish that tastes wrong. The nước chấm practice exercise.', time: '7 min read', level: 'Essential', isHowTo: true },
         ],
     },
     {
