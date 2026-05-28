@@ -64,6 +64,7 @@ const GUIDES = [
         items: [
             { title: 'How to Set Up a Vietnamese Kitchen', slug: 'vietnamese-kitchen-setup', desc: 'Carbon steel wok vs non-stick, how to clean dishes safely, what you actually need vs what you don\'t.', time: '8 min read', level: 'Essential', isHowTo: true },
             { title: 'How to Season and Care for a Carbon Steel Wok', slug: 'season-wok', desc: 'Strip the factory coating, build seasoning in 4 layers, daily 60-second care routine. Troubleshooting sticky, patchy, or rusty seasoning.', time: '7 min read', level: 'Essential', isHowTo: true },
+            { title: 'Vietnamese Knife Skills: How to Cut Every Ingredient Correctly', slug: 'knife-skills', desc: 'How to bruise lemongrass, slice paper-thin beef for phở, julienne daikon for đồ chua, chiffonade herbs without bruising. The claw grip explained.', time: '8 min read', level: 'Essential', isHowTo: true },
         ],
     },
 ];
