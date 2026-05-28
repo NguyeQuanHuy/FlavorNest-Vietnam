@@ -108,7 +108,7 @@ export default function HowToPage() {
                             {group.items.map((item) => (
                                 <Link
                                     key={item.title}
-                                    href={item.isStory ? `/stories/${item.slug}` : `/recipes/${item.slug}`}
+                                    href={item.isHowTo ? `/how-to/${item.slug}` : item.isStory ? `/stories/${item.slug}` : `/recipes/${item.slug}`}
                                     style={{ textDecoration: 'none', display: 'block' }}
                                 >
                                     <div style={{
