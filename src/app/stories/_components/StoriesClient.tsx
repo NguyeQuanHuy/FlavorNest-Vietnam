@@ -162,7 +162,7 @@ export default function StoriesClient({ stories }: Props) {
                                 className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20"
                             >
                                 <div className="relative">
-                                    <div className="relative rounded-lg overflow-hidden aspect-[3/1] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
+                                    <div className="relative rounded-lg overflow-hidden aspect-[5/2] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
                                         <Image
                                             src={featured.image}
                                             alt={featured.imageAlt}
