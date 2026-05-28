@@ -58,6 +58,13 @@ const GUIDES = [
             { title: 'How to Use the Vietnamese Herb Plate', slug: 'vietnamese-herb-plate-guide', desc: 'Which herbs go with which dishes, in what order, in what quantity. The herb plate is half the dish.', time: '5 min', level: 'Essential', isStory: true },
         ],
     },
+    {
+        category: 'Kitchen & Equipment',
+        color: '#92400E',
+        items: [
+            { title: 'How to Set Up a Vietnamese Kitchen', slug: 'vietnamese-kitchen-setup', desc: 'Carbon steel wok vs non-stick, how to clean dishes safely, what you actually need vs what you don\'t.', time: '8 min read', level: 'Essential', isHowTo: true },
+        ],
+    },
 ];
 
 const LEVEL_COLOR: Record<string, string> = {
