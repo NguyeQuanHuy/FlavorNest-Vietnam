@@ -1,10 +1,7 @@
-import Link from 'next/link';
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-    title: 'How To Cook Vietnamese Food — Techniques & Guides',
-    description: 'Step-by-step guides for Vietnamese cooking techniques — how to make pho broth, roll spring rolls, use a phin filter, make nuoc cham, and more.',
-};
+import Link from 'next/link';
+
 
 const GUIDES = [
     {
