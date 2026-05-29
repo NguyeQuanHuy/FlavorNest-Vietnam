@@ -134,13 +134,14 @@ function saveFav(recipe: Recipe, add: boolean) {
         let arr: object[] = raw ? JSON.parse(raw) : []
         if (add) {
             if (!arr.some((x: object) => (x as { slug: string }).slug === recipe.slug)) {
-                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, time: recipe.time, difficulty: recipe.difficulty, category: 'Street Food', savedAt: new Date().toISOString().split('T')[0] })
-            }
-        } else {
-            arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
+                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, cookTime: recipe.time, difficulty: recipe.difficulty, category: 'Street Food', savedAt: new Date().toISOString().split('T')[0] }) difficulty: recipe.difficulty, category: 'Street Food', savedAt: new Date().toISOString().split('T')[0]
+            })
         }
-        localStorage.setItem(LS_KEY, JSON.stringify(arr))
-    } catch { }
+    } else {
+        arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
+    }
+    localStorage.setItem(LS_KEY, JSON.stringify(arr))
+} catch { }
 }
 
 
