@@ -70,6 +70,7 @@ const GUIDES = [
             { title: 'Vietnamese Knife Skills: How to Cut Every Ingredient Correctly', slug: 'knife-skills', desc: 'How to bruise lemongrass, slice paper-thin beef for phở, julienne daikon for đồ chua, chiffonade herbs without bruising. The claw grip explained.', time: '8 min read', level: 'Essential', isHowTo: true },
         ],
     },
+    { title: 'Nêm Nếm: How to Season Vietnamese Food So It Actually Tastes Right', slug: 'season-vietnamese-food', desc: '6 seasoning agents and what each one does. The 4-stage tasting sequence. How to fix any dish that tastes bland, harsh, flat, or sour.', time: '8 min read', level: 'Essential', isHowTo: true },
 ];
 
 const LEVEL_COLOR: Record<string, string> = {
