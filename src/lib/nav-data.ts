@@ -42,5 +42,6 @@ export const NAV_LINKS = [
   { label: "Stories", href: "/stories", hasDropdown: true },
   { label: "How To", href: "/how-to", hasDropdown: false },
   { label: "Ingredients", href: "/ingredients", hasDropdown: false },
+  { label: "Travel", href: "/travel", hasDropdown: false },
   { label: "About", href: "/about", hasDropdown: false },
 ];
