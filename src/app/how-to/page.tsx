@@ -59,6 +59,7 @@ const GUIDES = [
             { title: 'How to Make a Crystal-Clear Vietnamese Broth', slug: 'vietnamese-broth', desc: 'Blanch bones first, never boil during long simmer, strain through fine mesh. The 3 rules that separate great phở from mediocre.', time: '7 min read', level: 'Advanced', isHowTo: true },
             { title: 'How to Marinate Meat Vietnamese Style', slug: 'marinate-meat', desc: 'The 4-element formula: fish sauce, sugar, aromatics, fat. How long to marinate each protein. 3 classic Vietnamese marinades.', time: '6 min read', level: 'Intermediate', isHowTo: true },
             { title: 'How to Balance Vietnamese Flavors', slug: 'balance-flavors', desc: 'Sweet, sour, salty, bitter, spicy — the 5-element framework. How to fix any dish that tastes wrong. The nước chấm practice exercise.', time: '7 min read', level: 'Essential', isHowTo: true },
+            { title: 'Nêm Nếm: How to Season Vietnamese Food So It Actually Tastes Right', slug: 'season-vietnamese-food', desc: 'Fish sauce, sugar, lime, MSG — what each one does and when to add it. The 4-stage tasting sequence. How to fix any dish that tastes bland, harsh, or flat.', time: '8 min read', level: 'Essential', isHowTo: true },
         ],
     },
     {

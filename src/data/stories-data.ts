@@ -474,7 +474,7 @@ export const STORIES: Story[] = [
         title: 'The $6 Dinner That Put Vietnamese Food on the World Stage',
         subtitle: 'Bun Cha Huong Lien · Hanoi · May 23, 2016',
         excerpt: 'On May 23, 2016, Barack Obama sat down on a blue plastic stool in a narrow Hanoi restaurant and ate bun cha with Anthony Bourdain. The bill was six dollars. Bourdain paid.',
-        image: '/images/recipes/bun-cha-ha-noi.jpg',
+        image: '/images/recipes/obama-bun-cha-hanoi.jpg',
         imageAlt: 'Bun cha Ha Noi — the dish Obama ate',
         tag: 'Hanoi Heritage',
         tagColor: 'amber' as CategoryColor,
