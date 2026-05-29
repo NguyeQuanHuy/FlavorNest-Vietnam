@@ -26,6 +26,7 @@ interface Recipe {
     tagColor: string
     description: string
     tags: string[]
+    isNew?: boolean
 }
 
 const RECIPES: Recipe[] = [
@@ -103,6 +104,7 @@ const RECIPES: Recipe[] = [
         slug: 'bun-dau-mam-tom',
         title: 'Rice Vermicelli with Shrimp Paste',
         subtitle: 'Bun dau mam tom',
+        isNew: true,
         image: '/images/recipes/bun-dau-mam-tom.jpg',
         region: 'Northern', difficulty: 'Easy', time: '25 min',
         rating: '4.6', reviews: 143, cal: 410, tag: 'Adventurous Eat', tagColor: '#166534',
@@ -289,7 +291,11 @@ export default function StreetFoodPage() {
                                         <Image src={recipe.image} alt={`${recipe.title} — ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.92 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>{recipe.isNew && (
+                                            <div style={{ position: 'absolute', top: 46, right: 14, background: 'linear-gradient(135deg, #166534, #15803d)', color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.12em', padding: '4px 10px', borderRadius: '100px', textTransform: 'uppercase', boxShadow: '0 2px 8px rgba(22,101,52,0.4)', zIndex: 10 }}>
+                                                ✦ NEW
+                                            </div>
+                                        )}
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
