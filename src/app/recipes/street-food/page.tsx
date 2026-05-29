@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import FavoriteButton from '@/components/FavoriteButton'
 import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map, BookOpen } from 'lucide-react'
 
 interface Recipe {
@@ -142,39 +143,6 @@ function saveFav(recipe: Recipe, add: boolean) {
     } catch { }
 }
 
-function HeartBtn({ recipe }: { recipe: Recipe }) {
-    const [liked, setLiked] = useState(false)
-    const [burst, setBurst] = useState(false)
-    const [toast, setToast] = useState<'added' | 'removed' | null>(null)
-    useEffect(() => { setLiked(loadFavSlugs().has(recipe.slug)) }, [recipe.slug])
-    const toggle = useCallback((e: React.MouseEvent) => {
-        e.preventDefault(); e.stopPropagation()
-        const next = !liked; setLiked(next); saveFav(recipe, next)
-        if (next) setBurst(true)
-        setToast(next ? 'added' : 'removed')
-        setTimeout(() => setBurst(false), 600)
-        setTimeout(() => setToast(null), 2000)
-    }, [liked, recipe])
-    return (
-        <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
-            <AnimatePresence>
-                {toast && (
-                    <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-                        style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '♥ Saved' : '✕ Removed'}
-                    </motion.div>
-                )}
-            </AnimatePresence>
-            <motion.button onClick={toggle} whileTap={{ scale: 0.82 }} aria-label={liked ? 'Remove from favorites' : 'Save recipe'}
-                style={{ width: 36, height: 36, borderRadius: '50%', background: liked ? 'rgba(217,119,6,0.92)' : 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(217,119,6,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s', position: 'relative', overflow: 'hidden' }}>
-                {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(220,38,38,0.3)', pointerEvents: 'none' }} />}
-                <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35 }}>
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill={liked ? 'white' : 'none'} stroke={liked ? 'none' : 'rgba(75,46,26,0.5)'} strokeWidth="1.8" strokeLinecap="round" />
-                </motion.svg>
-            </motion.button>
-        </div>
-    )
-}
 
 export default function StreetFoodPage() {
     const [diff, setDiff] = useState('All')
@@ -301,7 +269,18 @@ export default function StreetFoodPage() {
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
                                         </div>
                                         <div style={{ position: 'absolute', bottom: 14, right: 54, color: 'rgba(255,255,255,0.55)', fontSize: 10, fontWeight: 600 }}>{recipe.cal} kcal</div>
-                                        <HeartBtn recipe={recipe} />
+                                        <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
+                                            <FavoriteButton recipe={{
+                                                id: recipe.slug,
+                                                slug: recipe.slug,
+                                                title: recipe.title,
+                                                subtitle: recipe.subtitle,
+                                                image: recipe.image,
+                                                time: recipe.time,
+                                                difficulty: recipe.difficulty,
+                                                category: 'Street Food',
+                                            }} />
+                                        </div>
                                     </div>
                                     <div style={{ padding: '18px 20px 22px' }}>
                                         <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
