@@ -54,9 +54,7 @@ export default function VietnameseKnifeSkillsPage() {
 
                 <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
                     style={{ fontSize: '1.35rem', lineHeight: 1.65, fontStyle: 'italic', color: '#4B2E1A', marginBottom: '48px', paddingLeft: '24px', borderLeft: '3px solid #D97706' }}>
-                    <Section>
-                        Vietnamese cooking has specific prep requirements that generic knife skills guides never address. How do you bruise lemongrass without destroying it? How thin is "paper thin" for phở beef? How do you julienne daikon for đồ chua without it turning mushy? These are the techniques that determine whether a dish works.
-                    </Section> How do you bruise lemongrass without destroying it? How thin is "paper thin" for phở beef? How do you julienne daikon for đồ chua without it turning mushy? These are the techniques that determine whether a dish works.
+                    Vietnamese cooking has specific prep requirements that generic knife skills guides never address. How do you bruise lemongrass without destroying it? How thin is "paper thin" for phở beef? How do you julienne daikon for đồ chua without it turning mushy? These are the techniques that determine whether a dish works.
                 </motion.p>
 
                 <Section>
