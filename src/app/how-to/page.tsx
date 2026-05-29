@@ -61,6 +61,8 @@ const GUIDES = [
             { title: 'How to Balance Vietnamese Flavors', slug: 'balance-flavors', desc: 'Sweet, sour, salty, bitter, spicy — the 5-element framework. How to fix any dish that tastes wrong. The nước chấm practice exercise.', time: '7 min read', level: 'Essential', isHowTo: true },
             { title: 'Nêm Nếm: How to Season Vietnamese Food So It Actually Tastes Right', slug: 'season-vietnamese-food', desc: 'Fish sauce, sugar, lime, MSG — what each one does and when to add it. The 4-stage tasting sequence. How to fix any dish that tastes bland, harsh, or flat.', time: '8 min read', level: 'Essential', isHowTo: true },
             { title: 'How to Make Vietnamese Rice Paper (Bánh Tráng) from Scratch', slug: 'rice-paper', desc: 'Rice flour + tapioca batter, cloth-steaming technique, cold-start method. Why Tây Ninh rice paper is different. 6 troubleshooting fixes.', time: '45 min', level: 'Intermediate', isHowTo: true },
+            { title: 'How to Make Crispy Fried Shallots (Hành Phi)', slug: 'fried-shallots', desc: 'Cold-start in oil, pull when pale gold not golden-brown, spread immediately. The technique that tops phở, cơm tấm, bánh cuốn, and everything else.', time: '15 min', level: 'Easy', isHowTo: true },
+            { title: 'How to Steam Food Vietnamese Style (Hấp)', slug: 'steam-food', desc: '3 rules of Vietnamese steaming, complete time reference for 12 ingredients, aromatics in the water, cá hấp and gà hấp technique notes.', time: '7 min read', level: 'Intermediate', isHowTo: true },
         ],
     },
     {
