@@ -194,7 +194,11 @@ function RecipesInner() {
           #recipes-grid > p { margin-bottom: 14px !important; font-size: 12px !important; }
           .filter-pill { font-size: 11px !important; padding: 6px 12px !important; }
           .search-bar { font-size: 13px !important; padding: 8px 16px 8px 38px !important; max-width: 200px !important; }
-          .recipes-grid-inner { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+          .recipes-grid-inner { grid-template-columns: 1fr 1fr !important; gap: 4px !important; }
+          .recipe-card h2 { font-size: 13px !important; font-weight: 700 !important; margin: 6px 0 0 !important; line-height: 1.25 !important; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+          .recipe-card p { display: none !important; }
+          .recipe-card > div:last-child { padding: 8px 4px 12px !important; }
+          .recipe-card > div:last-child > div:first-child { font-size: 9px !important; letter-spacing: 0.1em !important; margin-bottom: 0 !important; padding-bottom: 0 !important; border: none !important; color: rgba(75,46,26,0.55) !important; }
           .recipe-card h2 { font-size: 15px !important; margin: 8px 0 2px !important; }
           .recipe-card p { font-size: 11px !important; }
           .recipe-card > div:last-child { padding: 10px 2px 14px !important; }
