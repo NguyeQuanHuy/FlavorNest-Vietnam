@@ -184,7 +184,7 @@ function RecipesInner() {
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
         .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         @media (max-width: 768px) {
-          .recipes-hero { padding-top: 70px !important; padding-bottom: 14px !important; }
+          .recipes-hero { padding-top: 90px !important; padding-bottom: 14px !important; }
           .recipes-hero h1 { font-size: 24px !important; margin-bottom: 6px !important; line-height: 1.15 !important; }
           .recipes-hero-desc { font-size: 13px !important; padding-left: 10px !important; line-height: 1.45 !important; }
           .recipes-hero > div > div:first-child { margin-bottom: 8px !important; }
