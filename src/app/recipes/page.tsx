@@ -183,7 +183,7 @@ function RecipesInner() {
         .filter-pill:hover { color:#D97706; border-color:rgba(217,119,6,0.4); }
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
         .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .recipes-hero { padding-top: 70px !important; padding-bottom: 14px !important; }
           .recipes-hero h1 { font-size: 24px !important; margin-bottom: 6px !important; line-height: 1.15 !important; }
           .recipes-hero-desc { font-size: 13px !important; padding-left: 10px !important; line-height: 1.45 !important; }
@@ -195,6 +195,7 @@ function RecipesInner() {
           .filter-pill { font-size: 11px !important; padding: 6px 12px !important; }
           .search-bar { font-size: 13px !important; padding: 8px 16px 8px 38px !important; max-width: 200px !important; }
           .recipes-grid-inner { grid-template-columns: 1fr 1fr !important; gap: 4px !important; }
+          .recipe-card-img { aspect-ratio: 4/5 !important; }
           .recipe-card h2 { font-size: 13px !important; font-weight: 700 !important; margin: 6px 0 0 !important; line-height: 1.25 !important; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
           .recipe-card p { display: none !important; }
           .recipe-card > div:last-child { padding: 8px 4px 12px !important; }
@@ -317,7 +318,7 @@ function RecipesInner() {
                         {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
                                 <Link href={recipe.slug.startsWith('stories/') ? `/${recipe.slug}` : `/recipes/${recipe.slug}`} className="recipe-card" onMouseEnter={() => setHovered(recipe.slug)} onMouseLeave={() => setHovered(null)}>
-                                    <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4" }}>
+                                    <div className="recipe-card-img" style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", background: "#f0ebe4" }}>
                                         <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" className="r-img" style={{ objectFit: "cover" }} quality={80} />
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
                                         <span style={{ position: "absolute", top: 14, left: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", color: "#4B2E1A", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 100 }}>{recipe.category}</span>
