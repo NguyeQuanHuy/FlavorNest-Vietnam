@@ -1,0 +1,86 @@
+'use client';
+import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
+
+const recipe: RecipeData = {
+    slug: 'canh-bi-xanh-ham-xuong',
+    title: 'Canh Bí Xanh Hầm Xương (Winter Melon and Pork Bone Soup)',
+    subtitle: 'Winter melon cubes braised in a clear pork bone broth until they become almost translucent and absorb the flavor of the broth completely — the simplest and most elegant soup in Vietnamese home cooking.',
+    category: 'MAIN COURSE',
+    difficulty: 'Easy',
+    totalTime: '1 hr 30 min',
+    rating: 4.8,
+    baseServings: 6,
+    heroImage: '/images/recipes/canh-bi-xanh-ham-xuong.jpg',
+    intro: `Canh bí xanh hầm xương is the soup that defines Vietnamese home cooking most accurately — not the complex restaurant soups or the elaborate festival dishes, but the clear, gentle broth with vegetables and pork bones that appears on the family table every few days throughout the year. Bí xanh (winter melon, also called ash gourd) is a large, mild vegetable with white flesh that absorbs the flavor of whatever it is cooked in without contributing strong flavor of its own — it is a blank canvas for a good broth. Cooked in pork bone broth for long enough, the winter melon becomes almost translucent, tender without disintegrating, and carrying the clean savory depth of the bones. The soup is seasoned with only fish sauce, salt, and white pepper. The garnish is spring onion and cilantro. Nothing more is needed — the quality of the soup depends entirely on the quality of the broth and the patience of the simmer. This is the soup that Vietnamese mothers make when a family member is unwell, when the weather turns cold, or simply when dinner requires something restorative rather than exciting.`,
+    ingredientSections: [
+        {
+            title: 'Broth',
+            items: [
+                { amount: 800, unit: 'g', name: 'pork neck bones or spare ribs (xương sườn)', note: 'chopped into 5-6cm pieces by the butcher' },
+                { amount: 2, unit: 'L', name: 'water' },
+                { amount: 3, name: 'shallots', note: 'halved — lightly charred over flame for depth' },
+                { amount: 30, unit: 'g', name: 'fresh ginger', note: '3 slices, smashed' },
+                { amount: 1, unit: 'tsp', name: 'salt' },
+            ],
+        },
+        {
+            title: 'Winter melon',
+            items: [
+                { amount: 700, unit: 'g', name: 'winter melon / ash gourd (bí xanh)', note: 'peeled, seeds removed, cut into 4x5cm chunks about 3cm thick. Available at Asian grocers — buy a section if sold by weight.' },
+            ],
+        },
+        {
+            title: 'Seasoning',
+            items: [
+                { amount: 2.5, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 0.5, unit: 'tsp', name: 'sugar' },
+                { amount: 0.5, unit: 'tsp', name: 'salt', note: 'adjust to taste' },
+                { amount: 0.5, unit: 'tsp', name: 'white pepper', note: 'freshly ground — the essential finishing seasoning' },
+            ],
+        },
+        {
+            title: 'Garnish',
+            items: [
+                { amount: 4, name: 'spring onions', note: 'thinly sliced — added raw at the end' },
+                { amount: 1, name: 'small bunch cilantro', note: 'roughly torn' },
+                { amount: 0.5, unit: 'tsp', name: 'white pepper', note: 'extra — ground fresh over each bowl at the table' },
+            ],
+        },
+    ],
+    steps: [
+        {
+            title: 'Blanch the bones',
+            description: 'Place pork bones in a pot. Cover with cold water. Bring to a vigorous boil and blanch hard for 10 minutes — the water turns grey with foam and impurities. Drain completely. Rinse every bone under cold running water until clean. This step is mandatory for a clear, clean-tasting broth. Bones that are not blanched produce a cloudy, slightly bitter soup.',
+            tip: 'Use the coldest water available for rinsing — cold water contracts the meat and bone surface, closing pores and keeping subsequent cooking cleaner.',
+        },
+        {
+            title: 'Char the shallots',
+            description: 'Hold halved shallots cut-side directly over a gas flame with tongs until deeply blackened — 3-4 minutes. Alternatively, place cut-side up under the broiler at maximum heat for 5-6 minutes until charred. The charred shallots add a sweet smokiness to the broth that is characteristic of Vietnamese clear soups.',
+            tip: 'The shallots should be genuinely blackened on the cut surface — not just caramelized brown. The char produces sweetness, not bitterness, when simmered long enough in liquid.',
+        },
+        {
+            title: 'Build the broth',
+            description: 'Return cleaned bones to the pot. Add 2L cold water, charred shallots, ginger, and salt. Bring to a boil over medium-high heat. Reduce immediately to the lowest possible simmer — 2-3 bubbles per second, barely moving. Skim any foam that rises in the first 20 minutes. Simmer uncovered for 45 minutes to build a clear, flavorful base broth.',
+            tip: 'Never boil the broth aggressively. Even 5 minutes of vigorous boiling clouds the soup permanently and emulsifies fat into the broth. The lazy simmer is what produces the clear, golden result.',
+        },
+        {
+            title: 'Add winter melon and continue simmering',
+            description: 'Add the winter melon chunks to the simmering broth. The melon will initially be opaque white. Continue simmering at the same gentle pace for 35-45 minutes until the winter melon is fully cooked: the flesh should be just translucent at the center, soft but holding its cube shape when gently pressed, and have completely absorbed the flavor of the broth.',
+            tip: 'Do not cut the winter melon too small — pieces under 3cm thick will disintegrate in the long simmer. Larger pieces hold their shape and produce a more satisfying texture.',
+        },
+        {
+            title: 'Season the broth',
+            description: 'Taste the broth — it should already be savory and slightly sweet from the pork bones and charred shallots. Season with fish sauce, sugar, and salt. The winter melon will have absorbed some of the salt, so season the broth slightly more assertively than you would for a plain soup. Add white pepper. Taste again — the broth should be clean and balanced without any single element dominating.',
+            tip: 'Season in layers: add half the fish sauce, taste, add more if needed. The winter melon will have reduced some of the broth volume through absorption — the final broth will be slightly more concentrated than when you started.',
+        },
+        {
+            title: 'Finish and serve',
+            description: 'Turn off heat. Add sliced spring onion and cilantro directly to the pot — the residual heat will barely cook them, preserving their freshness. Ladle into deep bowls ensuring each bowl gets both broth and winter melon pieces. Grind fresh white pepper over each bowl at the table. Serve alongside steamed rice. The white pepper is the final essential seasoning — canh bí xanh without white pepper at the table is incomplete.',
+            tip: 'The soup can be made ahead and reheated — it improves slightly on the second day as the winter melon continues to absorb the broth flavor. Add fresh spring onion and cilantro only when reheating and serving, never during storage.',
+        },
+    ],
+};
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
