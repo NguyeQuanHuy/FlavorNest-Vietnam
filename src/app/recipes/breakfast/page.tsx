@@ -257,15 +257,17 @@ export default function BreakfastPage() {
             <style>{`
 * { box-sizing: border-box; }
                 .bf-grid { grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); }
-                @media (max-width: 768px) {
-                  .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+                    @media (max-width: 768px) {
+                  main > section { padding-left: 12px !important; padding-right: 12px !important; }
+                  main > div[style*="sticky"] { padding-left: 12px !important; padding-right: 12px !important; }
+                    .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
                   .bf-card-img { height: 140px !important; }
                   .r-card > div:last-child { padding: 10px 12px 14px !important; }
                   .r-card h2 { font-size: 11px !important; letter-spacing: 0.04em !important; }
                   .r-card p { font-size: 10px !important; margin-bottom: 0 !important; display: none !important; }
                   .r-card > div:last-child > div:first-child { font-size: 9px !important; margin-bottom: 3px !important; }
                   .r-card > div:last-child > div:last-child { display: none !important; }
-                  .bf-hero { padding: 70px 16px 24px !important; }
+                  .bf-hero { padding: 70px 12px 24px !important; }
                   .bf-hero nav { font-size: 12px !important; margin-bottom: 14px !important; }
                   .bf-hero h1 { font-size: 32px !important; margin-bottom: 10px !important; line-height: 1.05 !important; }
                   .bf-hero h1 + div { margin: 10px 0 18px !important; }
