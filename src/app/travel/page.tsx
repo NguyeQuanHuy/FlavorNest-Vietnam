@@ -289,7 +289,7 @@ export default function TravelPage() {
                             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '16px', textAlign: 'center' }}>VIETNAM</p>
                             <div style={{ position: 'relative' }}>
                                 <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vietnam_location_map.svg/500px-Vietnam_location_map.svg.png"
+                                    src="/images/vietnam-map.png"
                                     alt="Vietnam map"
                                     style={{ width: '100%', opacity: 0.85 }}
                                 />
