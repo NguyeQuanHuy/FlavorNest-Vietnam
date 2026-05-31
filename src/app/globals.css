@@ -62,46 +62,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* ── Mobile recipe grid: ultra-compact 2 columns (3 cards visible) ── */
-@media (max-width: 640px) {
-    section > div[style*="repeat(auto-fill, minmax(320px"],
-    section > div[style*="repeat(auto-fill, minmax(330px"] {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
-    }
-    .r-card {
-        border-radius: 10px !important;
-    }
-    .r-card > div:last-child,
-    a.r-card > div:last-child {
-        padding: 8px 10px 10px !important;
-    }
-    /* Image: ép thấp ~80px */
-    .r-card > div:first-child {
-        height: 80px !important;
-    }
-    /* Title: nhỏ + 1 dòng */
-    .r-card h2 {
-        font-size: 12px !important;
-        line-height: 1.15 !important;
-        margin-bottom: 0 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-    /* Hide region label, subtitle, footer meta */
-    .r-card div[style*="letter-spacing: 0.12em"],
-    .r-card div[style*="letterSpacing: '0.12em'"],
-    .r-card p[style*="italic"],
-    .r-card > div:last-child > div:last-child {
-        display: none !important;
-    }
-    /* Badges nhỏ trên ảnh */
-    .r-card div[style*="position: absolute"] {
-        font-size: 8px !important;
-        padding: 2px 6px !important;
-    }
-}
+
 
 /* ── Homepage Featured Recipes: compact mobile cards ── */
 @media (max-width: 640px) {
@@ -182,4 +143,35 @@ body {
     background: #4B2E1A;
     color: white;
     border-color: #4B2E1A;
+}
+
+/* ── Mobile recipe grid ── */
+@media (max-width: 640px) {
+    section > div[style*="repeat(auto-fill, minmax(320px"],
+    section > div[style*="repeat(auto-fill, minmax(330px"],
+    section > div[style*="repeat(auto-fill, minmax(300px"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .r-card {
+        border-radius: 16px !important;
+    }
+    .r-card > div:first-child {
+        height: 140px !important;
+    }
+    .r-card > div:last-child {
+        padding: 10px 12px 12px !important;
+    }
+    .r-card h2 {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 4px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+    .r-card p {
+        font-size: 11px !important;
+    }
 }
