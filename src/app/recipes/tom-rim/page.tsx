@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     totalTime: '20 min',
     rating: 4.8,
     baseServings: 4,
-    heroImage: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=1600&q=85',
+    heroImage: '/images/recipes/tom-rim.jpg',
     intro: 'Tom rim man ngot is the dish that disappears fastest at a Vietnamese family dinner. Shrimp are cooked whole, heads and shells on, because that is where the flavour lives. A short caramel of palm sugar and fish sauce clings to every curve; garlic and a whisper of chilli round it out. Serve over plain white rice and it becomes impossible to stop eating.',
     ingredientSections: [
         {

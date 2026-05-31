@@ -76,24 +76,13 @@ export default function IngredientFinderHero() {
     }));
 
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/ingredient-finder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          system: `You are a Vietnamese cooking expert. Given a list of ingredients the user has, suggest the 3 best matching Vietnamese recipes from the provided list. Return ONLY valid JSON, no markdown, no explanation. Format: {"suggestions":[{"slug":"...","title":"...","subtitle":"...","image":"...","reason":"1 sentence why this matches","matchScore":85}]}`,
-          messages: [{
-            role: 'user',
-            content: `Ingredients I have: ${selected.join(', ')}\n\nRecipes to choose from:\n${JSON.stringify(recipeList)}`
-          }]
-        }),
+        body: JSON.stringify({ ingredients: selected }),
       });
 
-      const data = await res.json();
-      const text = data.content?.[0]?.text ?? '';
-      const clean = text.replace(/```json|```/g, '').trim();
-      const parsed = JSON.parse(clean);
+      const parsed = await res.json();
       setResults(parsed.suggestions ?? []);
       setShowResults(true);
       setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
