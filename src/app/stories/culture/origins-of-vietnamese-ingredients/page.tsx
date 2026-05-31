@@ -66,7 +66,7 @@ The adoption of chilli into Vietnamese cooking was so thorough and so rapid that
 The chilli used in Vietnamese cooking is typically the finger chilli — ớt sừng — or the smaller, much hotter bird's eye chilli — ớt hiểm. Neither is native to Vietnam. Both are now, to Vietnamese cooks, utterly indispensable.`,
         },
         {
-            heading: 'The Herb Plate: Vietnam's Most Distinctive Invention',
+            heading: "The Herb Plate: Vietnam's Most Distinctive Invention",
             body: `No other cuisine in the world uses fresh herbs the way Vietnamese cooking does. A Vietnamese meal is not garnished with herbs. It is architecturally dependent on them. The herb plate — đĩa rau sống — that arrives alongside bún bò Huế, bánh xèo, bún cuốn, and dozens of other dishes is not optional. It is half the dish.
 
 The herbs themselves are extraordinary in their variety. Rau thơm — Vietnamese coriander — has a sharper, more peppery flavour than the Chinese coriander used in other Asian cuisines. Tía tô — perilla — is simultaneously minty, anise-like, and faintly cumin-scented, a flavour combination that does not exist in European herb traditions. Húng lũi — spearmint — adds freshness. Kinh giới — Vietnamese balm — has a lemon note. Ngò gai — sawtooth coriander — delivers coriander flavour at much higher intensity than the standard herb.
