@@ -686,7 +686,12 @@ export default function IngredientsPage() {
                         onChange={e => setSearch(e.target.value)}
                         style={{ width: '100%', padding: '12px 20px 12px 44px', borderRadius: '100px', border: '1px solid rgba(245,237,227,0.2)', background: 'rgba(245,237,227,0.1)', color: '#F5EDE3', fontSize: '14px', outline: 'none', fontFamily: 'DM Sans, sans-serif', boxSizing: 'border-box' }}
                     />
-                    <span style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'rgba(245,237,227,0.5)', fontSize: '16px' }}>🔍</span>
+                    <span style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center' }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="7" />
+                            <line x1="16.5" y1="16.5" x2="22" y2="22" />
+                        </svg>
+                    </span>
                 </div>
             </div>
 
