@@ -287,64 +287,56 @@ export default function TravelPage() {
                     <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
                         <div style={{ background: '#fff', borderRadius: '12px', padding: '24px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
                             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '16px', textAlign: 'center' }}>VIETNAM</p>
-                            <svg viewBox="0 0 200 480" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
-                                <defs>
-                                    <filter id="glow2">
-                                        <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-                                        <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
-                                    </filter>
-                                </defs>
-
-                                {/* Vietnam outline - geographic path */}
-                                <path d="M138,8 L142,10 L148,10 L154,13 L158,18 L162,20 L166,19 L168,22 L165,26 L162,28 L160,32 L162,36 L166,38 L168,42 L166,46 L162,48 L158,50 L156,54 L158,58 L162,60 L164,64 L162,68 L158,70 L154,72 L152,76 L154,80 L158,82 L160,86 L158,90 L154,92 L150,94 L148,98 L150,102 L154,104 L156,108 L154,112 L150,114 L146,116 L144,120 L146,124 L150,126 L152,130 L150,134 L146,136 L142,138 L140,142 L142,146 L146,148 L148,152 L146,156 L142,158 L138,160 L136,164 L134,168 L132,172 L130,176 L128,180 L126,184 L122,186 L118,188 L114,190 L110,192 L106,196 L102,200 L98,204 L94,208 L90,212 L86,218 L82,224 L78,230 L74,236 L70,242 L66,248 L62,254 L60,260 L58,266 L56,272 L54,278 L52,284 L50,290 L48,296 L46,302 L44,308 L42,314 L40,320 L38,326 L36,332 L34,338 L32,344 L30,350 L28,356 L26,362 L24,368 L22,374 L22,380 L24,386 L28,390 L32,394 L36,396 L40,398 L42,402 L40,408 L36,412 L32,414 L28,412 L24,408 L22,402 L22,396 L24,390 L26,384 L24,378 L22,372 L24,366 L28,360 L32,354 L36,348 L38,342 L40,336 L42,330 L44,324 L46,318 L48,312 L50,306 L52,300 L54,294 L56,288 L58,282 L60,276 L62,270 L64,264 L68,258 L72,252 L76,246 L80,240 L84,234 L88,228 L92,222 L96,216 L100,210 L104,204 L108,198 L112,194 L116,192 L120,190 L124,188 L128,186 L130,182 L132,178 L134,174 L136,170 L138,166 L140,162 L142,158 L144,154 L146,150 L148,146 L148,142 L146,138 L142,136 L138,134 L136,130 L138,126 L142,124 L146,122 L148,118 L146,114 L142,112 L138,110 L136,106 L138,102 L142,100 L146,98 L148,94 L146,90 L142,88 L138,86 L136,82 L138,78 L142,76 L146,74 L148,70 L146,66 L142,64 L138,62 L136,58 L138,54 L142,52 L146,50 L150,48 L154,46 L156,42 L154,38 L150,36 L146,34 L144,30 L146,26 L150,24 L154,22 L156,18 L154,14 L150,12 L146,10 L142,8 Z"
-                                    fill={activeRegion ? 'rgba(75,46,26,0.06)' : '#F5EDE3'}
-                                    stroke="rgba(75,46,26,0.3)" strokeWidth="1" />
-
-                                {/* North highlight */}
-                                <path d="M138,8 L142,10 L148,10 L154,13 L158,18 L162,20 L166,19 L168,22 L165,26 L162,28 L160,32 L162,36 L166,38 L168,42 L166,46 L162,48 L158,50 L156,54 L158,58 L162,60 L164,64 L162,68 L158,70 L154,72 L152,76 L150,80 L148,84 L144,86 L140,86 L136,84 L132,80 L130,76 L132,72 L136,70 L138,66 L136,62 L132,60 L130,56 L132,52 L136,50 L138,46 L136,42 L132,40 L130,36 L132,32 L136,30 L138,26 L136,22 L132,20 L130,16 L132,12 L136,10 Z"
-                                    fill={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.15)'}
-                                    stroke={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.4)'}
-                                    strokeWidth="0.8" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
-                                    onClick={() => { setActiveRegion(activeRegion === 'north' ? null : 'north'); setActiveCity(null); }}
-                                    filter={activeRegion === 'north' ? 'url(#glow2)' : ''} />
-
-                                {/* Central highlight */}
-                                <path d="M150,94 L154,92 L158,90 L160,94 L158,98 L154,100 L152,104 L154,108 L158,110 L160,114 L158,118 L154,120 L150,122 L148,126 L150,130 L154,132 L156,136 L154,140 L150,142 L146,144 L142,146 L140,150 L138,154 L136,158 L134,162 L132,166 L130,170 L128,174 L124,176 L120,174 L116,172 L112,170 L108,168 L106,164 L108,160 L112,158 L116,156 L118,152 L116,148 L112,146 L110,142 L112,138 L116,136 L120,134 L122,130 L120,126 L116,124 L114,120 L116,116 L120,114 L124,112 L126,108 L124,104 L120,102 L118,98 L120,94 L124,92 L128,90 L132,90 L136,92 L140,94 L144,94 L148,94 Z"
-                                    fill={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.15)'}
-                                    stroke={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.4)'}
-                                    strokeWidth="0.8" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
-                                    onClick={() => { setActiveRegion(activeRegion === 'central' ? null : 'central'); setActiveCity(null); }}
-                                    filter={activeRegion === 'central' ? 'url(#glow2)' : ''} />
-
-                                {/* South highlight */}
-                                <path d="M106,196 L110,192 L114,194 L118,196 L122,198 L126,200 L128,204 L126,208 L122,212 L118,216 L114,220 L110,224 L106,228 L102,232 L98,238 L94,244 L90,250 L86,256 L82,262 L78,268 L74,274 L70,280 L66,286 L62,292 L58,298 L54,304 L50,310 L46,316 L42,322 L40,328 L38,334 L36,340 L34,346 L32,352 L30,356 L28,354 L30,348 L32,342 L34,336 L36,330 L38,324 L40,318 L42,312 L44,306 L46,300 L48,294 L50,288 L52,282 L54,276 L56,270 L58,264 L60,258 L62,252 L66,246 L70,240 L74,234 L78,228 L82,222 L86,216 L90,210 L94,206 L98,202 L102,198 Z"
-                                    fill={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.15)'}
-                                    stroke={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.4)'}
-                                    strokeWidth="0.8" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
-                                    onClick={() => { setActiveRegion(activeRegion === 'south' ? null : 'south'); setActiveCity(null); }}
-                                    filter={activeRegion === 'south' ? 'url(#glow2)' : ''} />
-
-                                {/* City dots */}
+                            <div style={{ position: 'relative' }}>
+                                <img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Vietnam_location_map.svg/500px-Vietnam_location_map.svg.png"
+                                    alt="Vietnam map"
+                                    style={{ width: '100%', opacity: 0.85 }}
+                                />
+                                {/* City dots overlay */}
                                 {REGIONS.map(region =>
                                     region.cities.map((city) => {
-                                        const positions: Record<string, [number, number]> = {
-                                            'Hanoi': [140, 60], 'Sapa': [125, 35], 'Hạ Long Bay': [158, 52], 'Ninh Bình': [136, 78],
-                                            'Huế': [132, 118], 'Đà Nẵng': [136, 128], 'Hội An': [134, 134], 'Quy Nhơn': [126, 152], 'Phú Yên': [122, 162],
-                                            'Ho Chi Minh City': [88, 260], 'Mekong Delta': [72, 300], 'Phú Quốc': [42, 340], 'Đà Lạt': [100, 236], 'Vũng Tàu': [96, 272],
+                                        const positions: Record<string, { top: string; left: string }> = {
+                                            'Hanoi': { top: '22%', left: '52%' },
+                                            'Sapa': { top: '14%', left: '38%' },
+                                            'Hạ Long Bay': { top: '19%', left: '62%' },
+                                            'Ninh Bình': { top: '26%', left: '50%' },
+                                            'Huế': { top: '42%', left: '58%' },
+                                            'Đà Nẵng': { top: '45%', left: '60%' },
+                                            'Hội An': { top: '47%', left: '59%' },
+                                            'Quy Nhơn': { top: '54%', left: '60%' },
+                                            'Phú Yên': { top: '57%', left: '61%' },
+                                            'Ho Chi Minh City': { top: '76%', left: '50%' },
+                                            'Mekong Delta': { top: '83%', left: '44%' },
+                                            'Phú Quốc': { top: '88%', left: '30%' },
+                                            'Đà Lạt': { top: '69%', left: '54%' },
+                                            'Vũng Tàu': { top: '78%', left: '55%' },
                                         };
                                         const pos = positions[city.name];
                                         if (!pos) return null;
                                         const isActive = activeCity === city.name;
                                         return (
-                                            <g key={city.name} style={{ cursor: 'pointer' }} onClick={() => { setActiveRegion(region.id); setActiveCity(city.name === activeCity ? null : city.name); }}>
-                                                <circle cx={pos[0]} cy={pos[1]} r={isActive ? 6 : 3.5} fill={isActive ? region.color : '#fff'} stroke={region.color} strokeWidth="1.5" />
-                                                {isActive && <circle cx={pos[0]} cy={pos[1]} r={10} fill="none" stroke={region.color} strokeWidth="1" opacity="0.4" />}
-                                                <text x={pos[0] + 7} y={pos[1] + 3} fontSize="7" fill={isActive ? region.color : 'rgba(75,46,26,0.6)'} fontWeight={isActive ? '700' : '500'}>{city.name}</text>
-                                            </g>
+                                            <div key={city.name}
+                                                onClick={() => { setActiveRegion(region.id); setActiveCity(city.name === activeCity ? null : city.name); }}
+                                                style={{ position: 'absolute', top: pos.top, left: pos.left, transform: 'translate(-50%,-50%)', cursor: 'pointer', zIndex: 10 }}>
+                                                <div style={{
+                                                    width: isActive ? 14 : 9, height: isActive ? 14 : 9,
+                                                    borderRadius: '50%',
+                                                    background: isActive ? region.color : '#fff',
+                                                    border: `2px solid ${region.color}`,
+                                                    boxShadow: isActive ? `0 0 0 4px ${region.color}33` : '0 1px 4px rgba(0,0,0,0.3)',
+                                                    transition: 'all 0.2s'
+                                                }} />
+                                                {isActive && (
+                                                    <div style={{ position: 'absolute', left: 16, top: -4, background: region.color, color: '#fff', fontSize: 9, fontWeight: 700, padding: '2px 7px', borderRadius: 100, whiteSpace: 'nowrap' }}>
+                                                        {city.name}
+                                                    </div>
+                                                )}
+                                            </div>
                                         );
                                     })
                                 )}
-                            </svg>
+                            </div>
 
                             {/* Legend */}
                             <div style={{ marginTop: '16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '12px' }}>
