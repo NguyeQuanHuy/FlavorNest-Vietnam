@@ -527,26 +527,22 @@ export default function DrinksPage() {
                         <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Keep Exploring</span>
                         <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
                     </div>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: '#2D1A0E', margin: '0 0 36px' }}>More to Discover</h2>
-                    <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: '#2D1A0E', margin: '0 0 16px' }}>More to Discover</h2>
+                    <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Breakfast', sub: 'The morning ritual', Icon: Clock, href: '/recipes/breakfast' },
-                            { label: 'Main Dishes', sub: 'Heart of the table', Icon: Utensils, href: '/recipes/main-dishes' },
-                            { label: 'Desserts', sub: 'Sweet endings', Icon: Star, href: '/recipes/desserts' },
-                            { label: 'Street Food', sub: 'On streets everywhere', Icon: Globe, href: '/recipes/street-food' },
-                        ].map(({ label, sub, Icon, href }) => (
-                            <Link key={href} href={href} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: '24px 32px', borderRadius: 20, border: '1px solid rgba(75,46,26,0.1)', background: 'white', textDecoration: 'none', transition: 'all 0.22s', minWidth: 170 }}
-                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.4)'; el.style.background = '#FEF3E2'; el.style.transform = 'translateY(-4px)'; el.style.boxShadow = '0 12px 32px rgba(217,119,6,0.12)'; }}
-                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.1)'; el.style.background = 'white'; el.style.transform = 'none'; el.style.boxShadow = 'none'; }}
+                            { label: 'Breakfast', emoji: '🌅', href: '/recipes/breakfast' },
+                            { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes' },
+                            { label: 'Desserts', emoji: '🍮', href: '/recipes/desserts' },
+                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
+                        ].map(({ label, emoji, href }) => (
+                            <Link key={href} href={href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 18px', borderRadius: 100, border: '1.5px solid rgba(75,46,26,0.12)', background: 'white', textDecoration: 'none', fontSize: 13, fontWeight: 600, color: '#2D1A0E', transition: 'all 0.18s' }}
+                                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = '#D97706'; el.style.color = '#D97706'; el.style.background = '#FEF3E2'; }}
+                                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.12)'; el.style.color = '#2D1A0E'; el.style.background = 'white'; }}
                             >
-                                <Icon size={26} strokeWidth={1.6} color="#D97706" />
-                                <span style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{label}</span>
-                                <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', fontStyle: 'italic' }}>{sub}</span>
+                                <span style={{ fontSize: 15 }}>{emoji}</span> {label}
                             </Link>
                         ))}
                     </div>
-                </div>
-            </section>
         </main>
     )
 }
