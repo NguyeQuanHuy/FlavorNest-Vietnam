@@ -306,7 +306,7 @@ export default function TravelPage() {
                                     stroke={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.35)'}
                                     strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'north' ? null : 'north'); setActiveCity(null); }}
-                                    filter={activeRegion === 'north' ? 'url(#glow)' : undefined} />
+                                    filter={activeRegion === 'north' ? 'url(#glow)' : ''} />
 
                                 {/* Central */}
                                 <path d="M210,148 L218,144 L215,158 L218,170 L224,182 L228,196 L226,210 L220,222 L212,232 L205,242 L198,255 L192,268 L186,278 L178,272 L172,262 L166,250 L160,238 L156,226 L152,214 L150,202 L150,190 L152,178 L156,166 L160,156 L166,148 L172,142 L180,138 L190,140 L200,145 Z"
@@ -322,7 +322,7 @@ export default function TravelPage() {
                                     stroke={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.35)'}
                                     strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'south' ? null : 'south'); setActiveCity(null); }}
-                                    filter={activeRegion === 'south' ? 'url(#glow)' : undefined} />
+                                    filter={activeRegion === 'south' ? 'url(#glow)' : ''} />
 
                                 {/* City dots */}
                                 {REGIONS.map(region =>
@@ -376,7 +376,7 @@ export default function TravelPage() {
                                 strokeWidth="1"
                                 style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                 onClick={() => { setActiveRegion(activeRegion === 'central' ? null : 'central'); setActiveCity(null); }}
-                                filter={activeRegion === 'central' ? 'url(#glow)' : undefined}
+                                filter={activeRegion === 'central' ? 'url(#glow)' : ''}
                             />
 
                             {/* South region */}
