@@ -76,7 +76,7 @@ Most of these herbs are native to Southeast Asia and have been used in Vietnames
         imageCaption: 'The Vietnamese herb plate — not a garnish but an architectural element of the meal',
         },
     {
-        heading: 'Coconut: The South\'s Most Important Tree',
+        heading: "Coconut: The South\'s Most Important Tree',
         body: `Southern Vietnamese cooking is inseparable from coconut. Coconut milk enriches braised meats, sweetens desserts, and forms the base of cà ri — Vietnamese curry. Coconut water braises pork belly until it caramelises. Coconut cream tops dozens of chè — sweet soups — eaten across the Mekong Delta.
 
 The coconut palm — dừa — is believed to have originated in the Pacific Islands and spread across coastal Southeast Asia through ocean currents carrying floating coconuts. It has been cultivated in Vietnam for at least two thousand years, concentrated in the coastal provinces of the south and center. Bến Tre province in the Mekong Delta is known as "the land of coconuts" — a place where coconut is not merely an ingredient but an entire economic and cultural identity.
@@ -84,7 +84,7 @@ The coconut palm — dừa — is believed to have originated in the Pacific Isl
 The distinction between Northern and Southern Vietnamese cooking can partly be explained by coconut. Northern cuisine uses very little of it — the climate is too cool for coconut palms. Southern cuisine uses it constantly. The result is that Southern dishes tend toward a rounded sweetness and richness that Northern dishes deliberately avoid. Neither approach is better. They are simply different responses to what grows in the ground.`,
         },
 {
-    heading: 'Black Pepper: Phú Quốc's Other Gift',
+    heading: "Black Pepper: Phú Quốc`s Other Gift",
     body: `Phú Quốc island is famous for fish sauce. It is less famous, but equally worthy of recognition, for black pepper. Tiêu Phú Quốc — Phú Quốc pepper — is considered among the finest black pepper in the world, comparable to Kampot pepper from neighbouring Cambodia, and protected by a geographic indication since 2012.
 
 Black pepper arrived in Vietnam from India along the ancient spice trade routes, probably during the first millennium AD. It found ideal growing conditions in the volcanic soils of Phú Quốc, producing a pepper with exceptional fragrance and a heat that is sharp but not coarse. Vietnamese cooks use freshly cracked black pepper — tiêu xanh — on finished dishes with a generosity that other cuisines reserve for salt. The pepper on a plate of bò lúc lắc — shaking beef — is not background flavour. It is foreground. It is the point.
