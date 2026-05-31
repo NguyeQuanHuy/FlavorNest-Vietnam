@@ -1,62 +1,83 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllRecipes } from '@/data/index';
 
-// Map ingredient names sang keywords de match voi recipe tags/description
 const INGREDIENT_MAP: Record<string, string[]> = {
-  'Pork': ['pork', 'pork belly', 'nem', 'bun cha', 'thit'],
-  'Chicken': ['chicken', 'ga', 'pho ga'],
-  'Beef': ['beef', 'bo', 'pho bo', 'bun bo'],
-  'Shrimp': ['shrimp', 'prawn', 'tom', 'seafood'],
-  'Fish': ['fish', 'ca', 'seafood', 'cha ca'],
-  'Tofu': ['tofu', 'dau hu', 'bun dau'],
-  'Eggs': ['egg', 'trung', 'omelette'],
-  'Crab': ['crab', 'cua', 'seafood'],
-  'Rice': ['rice', 'com', 'fried rice', 'com tam'],
-  'Rice Noodles': ['noodle', 'pho', 'bun', 'vermicelli', 'rice noodle'],
-  'Egg Noodles': ['noodle', 'mi', 'egg noodle'],
-  'Vermicelli': ['vermicelli', 'bun', 'noodle'],
-  'Glass Noodles': ['glass noodle', 'mien', 'noodle'],
-  'Bread': ['bread', 'banh mi', 'baguette'],
-  'Bean Sprouts': ['bean sprout', 'gia', 'fresh'],
-  'Cabbage': ['cabbage', 'bap cai', 'vegetable'],
-  'Morning Glory': ['morning glory', 'rau muong', 'vegetable'],
-  'Eggplant': ['eggplant', 'ca tim', 'vegetable'],
-  'Tomato': ['tomato', 'ca chua', 'soup'],
-  'Green Onion': ['green onion', 'scallion', 'hanh la'],
-  'Mushroom': ['mushroom', 'nam', 'vegetable'],
-  'Garlic': ['garlic', 'toi', 'savory'],
-  'Shallots': ['shallot', 'hanh', 'savory'],
-  'Lemongrass': ['lemongrass', 'sa', 'bun bo', 'aromatic'],
-  'Ginger': ['ginger', 'gung', 'pho', 'aromatic'],
-  'Chilli': ['chilli', 'spicy', 'ot', 'hot'],
-  'Galangal': ['galangal', 'rieng', 'aromatic'],
-  'Fish Sauce': ['fish sauce', 'nuoc mam', 'savory', 'caramel'],
-  'Soy Sauce': ['soy', 'savory'],
-  'Oyster Sauce': ['oyster sauce', 'savory', 'stir fry'],
-  'Coconut Milk': ['coconut', 'creamy', 'southern', 'dessert'],
-  'Palm Sugar': ['caramel', 'sweet', 'palm sugar', 'rim'],
-  'Shrimp Paste': ['shrimp paste', 'mam tom', 'fermented'],
+  'Pork': ['pork', 'nem', 'bun cha', 'thit heo', 'char siu', 'pork belly', 'pork bone', 'suon', 'cha lua'],
+  'Chicken': ['chicken', 'pho ga', 'com ga', 'ga'],
+  'Beef': ['beef', 'pho bo', 'bun bo', 'bo luc lac', 'steak'],
+  'Shrimp': ['shrimp', 'prawn', 'tom rim', 'tom', 'caramelised savory shrimp', 'seafood'],
+  'Fish': ['fish', 'cha ca', 'fish cake', 'banh mi cha ca', 'ca kho', 'fish sauce caramel', 'grilled fish', 'fish fillet', 'seafood', 'tuna', 'salmon', 'cod', 'tilapia'],
+  'Tofu': ['tofu', 'dau hu', 'bun dau', 'fried tofu'],
+  'Eggs': ['egg', 'trung', 'omelette', 'caramelised pork', 'thit kho'],
+  'Crab': ['crab', 'cua', 'seafood', 'bun rieu'],
+  'Rice': ['fried rice', 'com tam', 'com chien', 'steamed rice', 'rice bowl', 'yangzhou'],
+  'Rice Noodles': ['pho', 'bun bo', 'bun cha', 'banh canh', 'rice noodle', 'noodle soup'],
+  'Egg Noodles': ['mi quang', 'egg noodle', 'wonton noodle'],
+  'Vermicelli': ['bun dau', 'bun thit nuong', 'vermicelli', 'bun'],
+  'Glass Noodles': ['mien ga', 'glass noodle', 'mien'],
+  'Bread': ['banh mi', 'baguette', 'sandwich'],
+  'Bean Sprouts': ['pho', 'bun bo', 'fresh herb', 'bean sprout'],
+  'Cabbage': ['cabbage', 'bap cai', 'stir fry', 'salad'],
+  'Morning Glory': ['morning glory', 'rau muong', 'stir fry'],
+  'Eggplant': ['eggplant', 'ca tim'],
+  'Tomato': ['tomato', 'canh chua', 'sour soup', 'ribs'],
+  'Green Onion': ['green onion', 'scallion', 'pho', 'garnish'],
+  'Mushroom': ['mushroom', 'nam', 'stir fry', 'vegetarian'],
+  'Garlic': ['garlic', 'stir fry', 'caramel', 'savory'],
+  'Shallots': ['shallot', 'pho', 'caramel', 'dipping'],
+  'Lemongrass': ['lemongrass', 'bun bo hue', 'grilled', 'nem nuong', 'la vong'],
+  'Ginger': ['ginger', 'pho', 'pho bo', 'pho ga', 'braised'],
+  'Chilli': ['spicy', 'bun bo hue', 'dipping', 'chilli'],
+  'Galangal': ['galangal', 'la vong', 'grilled fish'],
+  'Fish Sauce': ['caramel', 'dipping sauce', 'nuoc cham', 'braised', 'rim'],
+  'Soy Sauce': ['stir fry', 'soy', 'braised'],
+  'Oyster Sauce': ['stir fry', 'oyster', 'morning glory'],
+  'Coconut Milk': ['coconut', 'banh flan', 'dessert', 'southern curry', 'che'],
+  'Palm Sugar': ['caramel', 'tom rim', 'thit kho', 'sweet', 'dessert'],
+  'Shrimp Paste': ['bun dau', 'mam tom', 'bun bo hue', 'shrimp paste'],
 };
 
-function scoreRecipe(recipe: { title: string; description: string; tags: string[]; subtitle: string }, ingredients: string[]): number {
-  const haystack = [
-    recipe.title,
-    recipe.subtitle,
-    recipe.description,
-    ...recipe.tags,
-  ].join(' ').toLowerCase();
+function scoreRecipe(
+  recipe: { title: string; description: string; tags: string[]; subtitle: string },
+  ingredients: string[]
+): number {
+  const haystack = [recipe.title, recipe.subtitle, recipe.description, ...recipe.tags]
+    .join(' ')
+    .toLowerCase();
 
   let score = 0;
   for (const ing of ingredients) {
     const keywords = INGREDIENT_MAP[ing] ?? [ing.toLowerCase()];
+    // Exact title/subtitle match = cao diem nhat
+    const titleHaystack = (recipe.title + ' ' + recipe.subtitle).toLowerCase();
+    let matched = false;
     for (const kw of keywords) {
-      if (haystack.includes(kw.toLowerCase())) {
-        score += 20;
+      if (titleHaystack.includes(kw.toLowerCase())) {
+        score += 40;
+        matched = true;
         break;
+      }
+    }
+    if (!matched) {
+      for (const kw of keywords) {
+        if (haystack.includes(kw.toLowerCase())) {
+          score += 20;
+          break;
+        }
       }
     }
   }
   return Math.min(score, 99);
+}
+
+function getReason(recipe: { title: string; subtitle: string }, ingredients: string[]): string {
+  const matched = ingredients.filter(ing => {
+    const keywords = INGREDIENT_MAP[ing] ?? [ing.toLowerCase()];
+    const haystack = (recipe.title + ' ' + recipe.subtitle).toLowerCase();
+    return keywords.some(kw => haystack.includes(kw.toLowerCase()));
+  });
+  if (matched.length > 0) return `This dish uses ${matched.join(', ')} as a key ingredient.`;
+  return `Contains ${ingredients.slice(0, 2).join(' and ')} among its ingredients.`;
 }
 
 export async function POST(req: NextRequest) {
@@ -72,17 +93,11 @@ export async function POST(req: NextRequest) {
       subtitle: r.subtitle,
       image: r.image,
       matchScore: scoreRecipe(r, ingredients),
-      reason: '',
+      reason: getReason(r, ingredients),
     }))
     .filter(r => r.matchScore > 0)
     .sort((a, b) => b.matchScore - a.matchScore)
     .slice(0, 3);
 
-  // Gan reason don gian
-  const withReason = scored.map(r => ({
-    ...r,
-    reason: `Matches ${Math.round(r.matchScore / 20)} of your selected ingredients.`,
-  }));
-
-  return NextResponse.json({ suggestions: withReason });
+  return NextResponse.json({ suggestions: scored });
 }
