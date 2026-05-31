@@ -37,7 +37,7 @@ function countRecipePages(): number {
 
 
 // Section components (each in its own file for maintainability)
-import HeroSection from './_sections/HeroSection'
+import IngredientFinderHero from './_sections/IngredientFinderHero'
 import dynamic from 'next/dynamic'
 
 const FeaturedRecipes = dynamic(() => import('./_sections/FeaturedRecipes'))
@@ -146,7 +146,7 @@ export default function HomePage() {
       />
 
       <main className="overflow-x-hidden">
-        <HeroSection recipeCount={recipeCount} />
+        <IngredientFinderHero />
         <BentoGrid recipes={featuredRecipes} stories={featuredStories} />
         <CategoriesSection />
         <WhyFlavorNest />
