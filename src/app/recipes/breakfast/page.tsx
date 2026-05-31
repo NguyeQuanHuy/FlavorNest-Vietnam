@@ -255,7 +255,18 @@ export default function BreakfastPage() {
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'Titillium Web', system-ui, sans-serif" }}>
             <style>{`
-                * { box-sizing: border-box; }
+* { box-sizing: border-box; }
+                @media (max-width: 768px) {
+                  .bf-hero { padding: 70px 16px 24px !important; }
+                  .bf-hero nav { font-size: 12px !important; margin-bottom: 14px !important; }
+                  .bf-hero h1 { font-size: 32px !important; margin-bottom: 10px !important; line-height: 1.05 !important; }
+                  .bf-hero h1 + div { margin: 10px 0 18px !important; }
+                  .bf-hero p { font-size: 13px !important; line-height: 1.5 !important; padding-left: 12px !important; }
+                  .bf-hero p span { font-size: 13px !important; }
+                  .bf-hero > div > div:nth-child(2) { margin-bottom: 10px !important; }
+                  .bf-hero > div > div:last-child { gap: 14px !important; }
+                  .bf-hero > div > div:last-child > div { min-width: 0 !important; }
+                }
                 .r-card { background: white; border-radius: 4px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: box-shadow 0.2s, border-color 0.2s;}
                 .r-card:hover { box-shadow: 0 8px 24px rgba(75,46,26,0.10); border-color: rgba(217,119,6,0.2); }
                 .r-card:hover .r-img { transform: scale(1.07); }
@@ -267,7 +278,7 @@ export default function BreakfastPage() {
             `}</style>
 
             {/* ── HERO ── */}
-            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
+            <section className="bf-hero" style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
@@ -286,29 +297,29 @@ export default function BreakfastPage() {
                     <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
                         Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
                     </h1>
-                            <div style={{ position: 'relative', maxWidth: 540, margin: '20px 0 36px' }}>
-                                <span aria-hidden style={{
-                                    position: 'absolute',
-                                    left: 0,
-                                    top: 8,
-                                    width: 3,
-                                    height: 'calc(100% - 12px)',
-                                    background: '#D97706',
-                                    borderRadius: 2,
-                                }} />
-                                <p style={{
-                                    fontFamily: "'Playfair Display', serif",
-                                    color: '#4B2E1A',
-                                    fontSize: 19,
-                                    fontStyle: 'italic',
-                                    fontWeight: 400,
-                                    lineHeight: 1.55,
-                                    margin: 0,
-                                    paddingLeft: 18,
-                                }}>
-                                    Start your day the Vietnamese way — from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of phở</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy bánh mì</span>, these are the morning meals that fuel a nation.
-                                </p>
-                            </div>
+                    <div style={{ position: 'relative', maxWidth: 540, margin: '20px 0 36px' }}>
+                        <span aria-hidden style={{
+                            position: 'absolute',
+                            left: 0,
+                            top: 8,
+                            width: 3,
+                            height: 'calc(100% - 12px)',
+                            background: '#D97706',
+                            borderRadius: 2,
+                        }} />
+                        <p style={{
+                            fontFamily: "'Playfair Display', serif",
+                            color: '#4B2E1A',
+                            fontSize: 19,
+                            fontStyle: 'italic',
+                            fontWeight: 400,
+                            lineHeight: 1.55,
+                            margin: 0,
+                            paddingLeft: 18,
+                        }}>
+                            Start your day the Vietnamese way — from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of phở</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy bánh mì</span>, these are the morning meals that fuel a nation.
+                        </p>
+                    </div>
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                         {[
                             { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
@@ -341,7 +352,7 @@ export default function BreakfastPage() {
             {/* ── GRID ── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
-                    <motion.div key={`${diff}-${region}`} 
+                    <motion.div key={`${diff}-${region}`}
                         style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px,1fr))', gap: 24 }}>
                         {filtered.map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
@@ -361,14 +372,14 @@ export default function BreakfastPage() {
                                     <div style={{ padding: '18px 20px 22px' }}>
                                         <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
                                         <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{recipe.title}</h2>
-                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>                                    
+                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
                                         <div style={{ paddingTop: 12, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                                        {recipe.tags.slice(0, 3).map(t => (
-                                            <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>
-                                                {t}
-                                            </span>
-                                        ))}
-                                    </div>
+                                            {recipe.tags.slice(0, 3).map(t => (
+                                                <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>
+                                                    {t}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </Link>
                             </motion.div>
