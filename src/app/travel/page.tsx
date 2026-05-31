@@ -314,7 +314,7 @@ export default function TravelPage() {
                                     stroke={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.35)'}
                                     strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'central' ? null : 'central'); setActiveCity(null); }}
-                                    filter={activeRegion === 'central' ? 'url(#glow)' : undefined} />
+                                    filter={activeRegion === 'central' ? 'url(#glow)' : ''} />
 
                                 {/* South */}
                                 <path d="M186,278 L192,268 L198,282 L196,296 L192,310 L186,324 L180,338 L174,350 L168,362 L162,373 L156,383 L150,392 L144,400 L138,408 L130,415 L122,420 L114,424 L106,426 L98,424 L92,420 L88,412 L88,402 L92,394 L96,386 L98,378 L96,370 L92,362 L88,354 L86,345 L88,336 L92,326 L96,316 L100,306 L104,295 L108,284 L112,272 L116,260 L120,250 L124,240 L130,232 L138,226 L148,222 L158,220 L168,224 L176,234 L180,248 L182,262 Z"
@@ -365,7 +365,8 @@ export default function TravelPage() {
                                 strokeWidth="1"
                                 style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                 onClick={() => { setActiveRegion(activeRegion === 'north' ? null : 'north'); setActiveCity(null); }}
-                                filter={activeRegion === 'north' ? 'url(#glow)' : undefined}
+                                filter={activeRegion === 'north' ? 'url(#glow)' : ''
+                                }
                             />
 
                             {/* Central region */}
@@ -385,7 +386,7 @@ export default function TravelPage() {
                                 strokeWidth="1"
                                 style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                 onClick={() => { setActiveRegion(activeRegion === 'south' ? null : 'south'); setActiveCity(null); }}
-                                filter={activeRegion === 'south' ? 'url(#glow)' : undefined}
+                                filter={activeRegion === 'south' ? 'url(#glow)' : ''}
                             />
 
                             {/* City dots */}
