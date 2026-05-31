@@ -70,7 +70,7 @@ export default function StoriesClient({ stories }: Props) {
     return (
         <>
             {/* ═══ HERO / PAGE HEADER ═══════════════════════════════════════ */}
-            <section className="relative pt-32 pb-16 px-5 overflow-hidden">
+            <section className="relative pt-24 pb-8 px-5 overflow-hidden">
                 <div className="absolute -top-32 -right-32 w-[520px] h-[520px] bg-[#D97706]/8 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute top-0 -left-24 w-80 h-80 bg-[#166534]/6 rounded-full blur-3xl pointer-events-none" />
 
@@ -91,7 +91,7 @@ export default function StoriesClient({ stories }: Props) {
                         initial={{ opacity: 0, y: 18 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="font-display text-6xl sm:text-7xl lg:text-8xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-[1.02] mb-5"
+                        className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-[1.02] mb-5"
                     >
                         Kitchen{' '}
                         <em className="text-[#D97706] not-italic">Stories</em>
@@ -101,7 +101,7 @@ export default function StoriesClient({ stories }: Props) {
                         initial={{ opacity: 0, y: 14 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-[#4B2E1A]/60 dark:text-[#F5EDE3]/55 text-lg sm:text-xl max-w-xl leading-relaxed"
+                        className="text-[#4B2E1A]/60 dark:text-[#F5EDE3]/55 text-base max-w-xl leading-relaxed"
                     >
                         Every great dish carries a story. Discover the history, culture and
                         people behind authentic Vietnamese cuisine.
@@ -143,7 +143,7 @@ export default function StoriesClient({ stories }: Props) {
             </section>
 
             {/* ═══ MAIN CONTENT ═════════════════════════════════════════════ */}
-            <div className="max-w-5xl mx-auto px-5 py-16 space-y-24">
+            <div className="max-w-5xl mx-auto px-5 py-10 space-y-16">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeCategory}
@@ -159,7 +159,7 @@ export default function StoriesClient({ stories }: Props) {
                                 variants={fadeUp}
                                 initial="hidden"
                                 animate="visible"
-                                className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20"
+                                className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-12"
                             >
                                 <div className="relative">
                                     <div className="relative rounded-lg overflow-hidden aspect-[3/1] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
