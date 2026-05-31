@@ -8,7 +8,7 @@ import { Clock, ChevronRight, Flame, Soup, ScrollText, Coffee, Wheat, Wrench, Ut
 const GUIDES = [
     {
         category: 'Broths & Soups',
-        icon: '🍲',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 48 Q36 58 54 48"/><line x1="18" y1="48" x2="20" y2="36"/><line x1="54" y1="48" x2="52" y2="36"/><path d="M20 36 Q36 32 52 36"/><path d="M28 34 Q26 28 28 22 Q30 16 28 10"/><path d="M36 33 Q34 27 36 21 Q38 15 36 9"/><path d="M44 34 Q42 28 44 22 Q46 16 44 10"/></svg>',
         color: '#D97706',
         bg: '#FEF3C7',
         items: [
@@ -19,7 +19,7 @@ const GUIDES = [
     },
     {
         category: 'Rolling & Wrapping',
-        icon: '🥢',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="36" cy="36" rx="20" ry="10"/><line x1="16" y1="36" x2="56" y2="36"/><path d="M20 30 Q36 24 52 30"/><path d="M20 42 Q36 48 52 42"/></svg>',
         color: '#059669',
         bg: '#D1FAE5',
         items: [
@@ -30,7 +30,7 @@ const GUIDES = [
     },
     {
         category: 'Sauces & Condiments',
-        icon: '🫙',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M24 20 L22 52 Q22 58 36 58 Q50 58 50 52 L48 20 Z"/><rect x="26" y="14" width="20" height="8" rx="3"/><path d="M24 38 Q36 42 48 38" strokeDasharray="3 2"/></svg>',
         color: '#7C3AED',
         bg: '#EDE9FE',
         items: [
@@ -41,7 +41,7 @@ const GUIDES = [
     },
     {
         category: 'Coffee',
-        icon: '☕',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 52 Q22 60 36 60 Q50 60 50 52 L46 38 L26 38 Z"/><rect x="24" y="28" width="24" height="12" rx="2"/><rect x="26" y="22" width="20" height="6" rx="2"/><line x1="33" y1="38" x2="33" y2="44"/><line x1="36" y1="38" x2="36" y2="46"/><line x1="39" y1="38" x2="39" y2="44"/><path d="M50 44 Q56 44 56 50 Q56 56 50 56"/></svg>',
         color: '#92400E',
         bg: '#FEF3C7',
         items: [
@@ -52,7 +52,7 @@ const GUIDES = [
     },
     {
         category: 'Rice & Noodles',
-        icon: '🍜',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="26" y1="10" x2="32" y2="62"/><line x1="46" y1="10" x2="40" y2="62"/><path d="M30 40 Q36 34 42 40 Q36 46 30 40"/><path d="M31 48 Q36 43 41 48"/></svg>',
         color: '#0369A1',
         bg: '#DBEAFE',
         items: [
@@ -63,7 +63,7 @@ const GUIDES = [
     },
     {
         category: 'Essential Techniques',
-        icon: '🔥',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 54 Q36 64 54 54"/><line x1="18" y1="54" x2="22" y2="46"/><line x1="54" y1="54" x2="50" y2="46"/><path d="M22 46 Q36 42 50 46"/><path d="M30 42 Q28 34 32 28 Q34 24 36 28 Q36 20 40 16 Q42 24 40 28 Q44 24 46 28 Q44 36 42 42"/></svg>',
         color: '#DC2626',
         bg: '#FEE2E2',
         items: [
@@ -75,7 +75,7 @@ const GUIDES = [
     },
     {
         category: 'Kitchen & Equipment',
-        icon: '🔪',
+        icon: '<svg viewBox="0 0 72 72" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M24 18 L50 44 Q52 48 48 50 L22 24 Z"/><line x1="16" y1="58" x2="56" y2="58"/></svg>',
         color: '#4B2E1A',
         bg: '#F5EDE3',
         items: [
@@ -141,7 +141,7 @@ export default function HowToPage() {
                                     fontFamily: "'DM Sans', sans-serif",
                                 }}
                             >
-                                {guide?.icon && <span style={{ fontSize: 14 }}>{guide.icon}</span>}
+                                {guide?.icon && <span style={{ display: 'flex', color: guide.color ?? '#D97706' }} dangerouslySetInnerHTML={{ __html: guide.icon }} />}
                                 {cat}
                             </button>
                         );
@@ -164,7 +164,7 @@ export default function HowToPage() {
                             {/* Category header */}
                             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
                                 <div style={{ width: 44, height: 44, borderRadius: 14, background: group.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22 }}>
-                                    {group.icon}
+                                    <span style={{ display: 'flex', color: group.color }} dangerouslySetInnerHTML={{ __html: group.icon }} />
                                 </div>
                                 <div>
                                     <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{group.category}</h2>
