@@ -246,7 +246,25 @@ function RecipesInner() {
                             margin: 0,
                             paddingLeft: 18,
                         }}>
-                            Authentic Vietnamese recipes — from <span style={{ color: "#D97706", fontWeight: 600 }}>Hanoi&apos;s misty mornings</span> to <span style={{ color: "#D97706", fontWeight: 600 }}>Saigon&apos;s vibrant street corners</span>.
+                            {localQuery ? (
+                                <>
+                                    <span style={{ color: "#D97706", fontWeight: 600 }}>{localQuery}</span>
+                                    {` `}is a Vietnamese dish made with
+                                    {` `}<span style={{ color: "#D97706", fontWeight: 600 }}>
+                                        {filtered.length > 0
+                                            ? filtered.slice(0, 3).map(r => r.subtitle).join(", ")
+                                            : "fresh ingredients"}
+                                    </span>
+                                    {` `}— explore all {filtered.length} matching recipes below.
+                                </>
+                            ) : (
+                                <>
+                                    Authentic Vietnamese recipes — from{` `}
+                                    <span style={{ color: "#D97706", fontWeight: 600 }}>Hanoi&apos;s misty mornings</span>
+                                    {` `}to{` `}
+                                    <span style={{ color: "#D97706", fontWeight: 600 }}>Saigon&apos;s vibrant street corners</span>.
+                                </>
+                            )}
                         </p>
                     </div>
                 </div>
