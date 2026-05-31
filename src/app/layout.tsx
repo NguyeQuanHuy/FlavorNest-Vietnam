@@ -94,7 +94,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} ${manrope.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" /><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body
         className="min-h-full flex flex-col font-body"

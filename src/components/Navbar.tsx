@@ -89,8 +89,8 @@ export default function Navbar() {
             <img
               src="/logo.svg"
               alt="FlavorNest"
-              width="56"
-              height="56"
+              width="64"
+              height="64"
               style={{ flexShrink: 0 }}
               className="transition-transform duration-300 group-hover:scale-110"
             />
