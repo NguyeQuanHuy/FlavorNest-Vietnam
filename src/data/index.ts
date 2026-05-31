@@ -11,7 +11,7 @@ import { NORTHERN_RECIPES } from './recipes-northern'
 import { SOUTHERN_RECIPES } from './recipes-southern'
 import { CENTRAL_RECIPES } from './recipes-central'
 import { DRINKS_RECIPES } from './recipes-drinks'
-import { getDetailedAsLegacy } from './recipes-detailed'
+import { getDetailedAsLegacy, RECIPES_DETAILED } from './recipes-detailed'
 
 export interface UnifiedRecipe {
   slug: string
@@ -70,4 +70,17 @@ export function getAllRecipes(): UnifiedRecipe[] {
   })
 
   return [...detailed, ...uniqueCategory]
+}
+
+// ── Ingredients preview map (slug → top 4 tên nguyên liệu chính) ──
+// Dùng cho tag chips trên /recipes page
+export function getIngredientPreviewMap(): Record<string, string[]> {
+  const map: Record<string, string[]> = {}
+  for (const r of RECIPES_DETAILED) {
+    const firstGroup = r.ingredients?.[0]
+    if (firstGroup) {
+      map[r.slug] = firstGroup.items.slice(0, 4).map(i => i.name)
+    }
+  }
+  return map
 }
