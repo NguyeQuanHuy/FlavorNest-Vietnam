@@ -76,7 +76,7 @@ Most of these herbs are native to Southeast Asia and have been used in Vietnames
         imageCaption: 'The Vietnamese herb plate — not a garnish but an architectural element of the meal',
         },
     {
-        heading: "Coconut: The South\'s Most Important Tree',
+        heading: "Coconut: The South's Most Important Tree",
         body: `Southern Vietnamese cooking is inseparable from coconut. Coconut milk enriches braised meats, sweetens desserts, and forms the base of cà ri — Vietnamese curry. Coconut water braises pork belly until it caramelises. Coconut cream tops dozens of chè — sweet soups — eaten across the Mekong Delta.
 
 The coconut palm — dừa — is believed to have originated in the Pacific Islands and spread across coastal Southeast Asia through ocean currents carrying floating coconuts. It has been cultivated in Vietnam for at least two thousand years, concentrated in the coastal provinces of the south and center. Bến Tre province in the Mekong Delta is known as "the land of coconuts" — a place where coconut is not merely an ingredient but an entire economic and cultural identity.
