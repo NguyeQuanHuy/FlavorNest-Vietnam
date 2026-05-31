@@ -543,6 +543,8 @@ export default function DrinksPage() {
                             </Link>
                         ))}
                     </div>
+                </div>
+            </section>
         </main>
     )
 }
