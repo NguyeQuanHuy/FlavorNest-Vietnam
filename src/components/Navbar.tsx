@@ -86,19 +86,13 @@ export default function Navbar() {
             className="flex items-center gap-1 group"
             style={{ textDecoration: "none" }}
           >
-            <Image
-              src="/logo.png"
+            <img
+              src="/logo.svg"
               alt="FlavorNest"
-              width={56}
-              height={56}
-              priority
+              width="48"
+              height="48"
+              style={{ borderRadius: "12px", flexShrink: 0 }}
               className="transition-transform duration-300 group-hover:scale-110"
-              style={{
-                filter: forceScrolled
-                  ? "drop-shadow(0 2px 6px rgba(217, 119, 6, 0.3))"
-                  : "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4))",
-                transition: "filter 0.3s",
-              }}
             />
             <div className="flex flex-col leading-none">
               <span
