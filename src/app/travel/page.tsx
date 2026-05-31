@@ -287,8 +287,7 @@ export default function TravelPage() {
                     <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
                         <div style={{ background: '#fff', borderRadius: '12px', padding: '24px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
                             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '16px', textAlign: 'center' }}>VIETNAM</p>
-                            <svg viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
-                                {/* Vietnam outline - simplified but recognizable shape */}
+                            <svg viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
                                 <defs>
                                     <filter id="glow">
                                         <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -296,242 +295,300 @@ export default function TravelPage() {
                                     </filter>
                                 </defs>
 
-                                {/* Country shape */}
-                                <path d="M95,10 L115,12 L130,18 L140,28 L138,40 L130,48 L125,58 L128,68 L135,75 L138,85 L132,95 L125,100 L120,110 L118,125 L122,138 L128,148 L132,158 L130,168 L125,175 L115,180 L105,185 L98,195 L92,205 L88,220 L85,235 L82,248 L80,260 L78,275 L75,290 L72,305 L70,318 L68,330 L65,342 L60,355 L55,368 L52,378 L50,388 L52,398 L58,408 L65,415 L72,420 L78,425 L82,435 L80,445 L75,450 L68,452 L60,450 L52,445 L46,438 L42,428 L44,418 L48,410 L50,400 L48,390 L44,382 L42,372 L44,362 L48,350 L50,340 L52,330 L54,318 L56,305 L58,292 L60,278 L62,265 L64,252 L66,238 L70,225 L74,212 L78,200 L84,188 L88,178 L90,168 L88,158 L84,148 L80,138 L78,128 L76,118 L75,108 L72,98 L68,90 L64,80 L62,70 L64,60 L68,50 L72,40 L78,30 L85,20 L92,12 Z"
-                                    fill={activeRegion ? 'rgba(75,46,26,0.08)' : '#F5EDE3'}
-                                    stroke="rgba(75,46,26,0.2)" strokeWidth="1.5" />
+                                {/* Full Vietnam outline */}
+                                <path d="M180,10 L195,14 L210,22 L222,34 L225,48 L220,62 L212,72 L208,84 L212,96 L220,106 L226,118 L224,132 L218,144 L215,158 L218,170 L224,182 L228,196 L226,210 L220,222 L212,232 L205,242 L198,255 L192,268 L186,282 L180,296 L174,310 L168,324 L162,338 L156,350 L150,362 L144,374 L138,385 L132,395 L126,404 L120,412 L114,420 L108,428 L102,435 L96,440 L90,445 L84,450 L78,455 L72,458 L66,460 L60,458 L54,454 L50,448 L48,440 L50,432 L54,424 L58,416 L60,408 L58,400 L54,393 L50,386 L48,378 L50,370 L54,362 L58,354 L62,345 L66,336 L70,326 L74,316 L78,306 L82,295 L86,284 L90,272 L94,260 L98,248 L102,236 L106,224 L108,212 L106,200 L102,190 L98,180 L96,170 L98,160 L102,150 L106,140 L108,130 L106,120 L102,110 L98,100 L96,90 L98,80 L102,70 L108,60 L114,50 L120,40 L128,30 L138,20 L150,14 L162,10 L172,8 Z"
+                                    fill={activeRegion ? 'rgba(75,46,26,0.06)' : '#F5EDE3'}
+                                    stroke="rgba(75,46,26,0.25)" strokeWidth="1.5" />
 
-                                {/* North region */}
-                                <path d="M95,10 L115,12 L130,18 L140,28 L138,40 L130,48 L125,58 L128,68 L135,75 L138,85 L132,95 L125,100 L120,110 L118,125 L112,130 L105,128 L98,125 L90,120 L85,112 L80,105 L75,98 L70,90 L66,82 L64,72 L64,60 L68,50 L72,40 L78,30 L85,20 L92,12 Z"
-                                    fill={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.1)'}
-                                    stroke={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.3)'}
-                                    strokeWidth="1"
-                                    style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                {/* North */}
+                                <path d="M180,10 L195,14 L210,22 L222,34 L225,48 L220,62 L212,72 L208,84 L212,96 L220,106 L226,118 L224,132 L218,144 L210,148 L200,145 L190,140 L180,135 L170,128 L160,120 L152,110 L148,100 L148,88 L152,76 L158,66 L164,56 L170,46 L176,36 L180,24 Z"
+                                    fill={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.12)'}
+                                    stroke={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.35)'}
+                                    strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'north' ? null : 'north'); setActiveCity(null); }}
-                                    filter={activeRegion === 'north' ? 'url(#glow)' : undefined}
-                                />
+                                    filter={activeRegion === 'north' ? 'url(#glow)' : undefined} />
 
-                                {/* Central region */}
-                                <path d="M112,130 L118,125 L122,138 L128,148 L132,158 L130,168 L125,175 L115,180 L105,185 L98,195 L92,205 L88,220 L85,235 L82,248 L80,260 L78,268 L72,265 L68,258 L65,248 L62,238 L60,225 L58,212 L56,198 L55,185 L54,172 L56,160 L60,150 L64,142 L68,135 L74,130 L80,128 L86,127 L92,127 L98,128 Z"
-                                    fill={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.1)'}
-                                    stroke={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.3)'}
-                                    strokeWidth="1"
-                                    style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                {/* Central */}
+                                <path d="M210,148 L218,144 L215,158 L218,170 L224,182 L228,196 L226,210 L220,222 L212,232 L205,242 L198,255 L192,268 L186,278 L178,272 L172,262 L166,250 L160,238 L156,226 L152,214 L150,202 L150,190 L152,178 L156,166 L160,156 L166,148 L172,142 L180,138 L190,140 L200,145 Z"
+                                    fill={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.12)'}
+                                    stroke={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.35)'}
+                                    strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'central' ? null : 'central'); setActiveCity(null); }}
-                                    filter={activeRegion === 'central' ? 'url(#glow)' : undefined}
-                                />
+                                    filter={activeRegion === 'central' ? 'url(#glow)' : undefined} />
 
-                                {/* South region */}
-                                <path d="M78,268 L80,260 L82,278 L80,292 L78,305 L75,318 L72,330 L70,342 L68,355 L65,368 L60,380 L55,390 L52,400 L50,410 L46,420 L42,428 L44,438 L50,445 L58,450 L65,452 L72,450 L78,445 L80,435 L78,425 L72,420 L65,415 L58,408 L52,398 L50,388 L52,378 L56,368 L60,355 L65,342 L68,330 L70,318 L72,305 L75,290 L76,278 Z"
-                                    fill={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.1)'}
-                                    stroke={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.3)'}
-                                    strokeWidth="1"
-                                    style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                {/* South */}
+                                <path d="M186,278 L192,268 L198,282 L196,296 L192,310 L186,324 L180,338 L174,350 L168,362 L162,373 L156,383 L150,392 L144,400 L138,408 L130,415 L122,420 L114,424 L106,426 L98,424 L92,420 L88,412 L88,402 L92,394 L96,386 L98,378 L96,370 L92,362 L88,354 L86,345 L88,336 L92,326 L96,316 L100,306 L104,295 L108,284 L112,272 L116,260 L120,250 L124,240 L130,232 L138,226 L148,222 L158,220 L168,224 L176,234 L180,248 L182,262 Z"
+                                    fill={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.12)'}
+                                    stroke={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.35)'}
+                                    strokeWidth="1" style={{ cursor: 'pointer', transition: 'all 0.3s' }}
                                     onClick={() => { setActiveRegion(activeRegion === 'south' ? null : 'south'); setActiveCity(null); }}
-                                    filter={activeRegion === 'south' ? 'url(#glow)' : undefined}
-                                />
+                                    filter={activeRegion === 'south' ? 'url(#glow)' : undefined} />
 
                                 {/* City dots */}
                                 {REGIONS.map(region =>
-                                    region.cities.map((city, ci) => {
+                                    region.cities.map((city) => {
                                         const positions: Record<string, [number, number]> = {
-                                            'Hanoi': [88, 72], 'Sapa': [68, 45], 'Hạ Long Bay': [115, 65], 'Ninh Bình': [82, 100],
-                                            'Huế': [82, 148], 'Hội An': [78, 170], 'Đà Nẵng': [80, 160], 'Phú Yên': [72, 210], 'Quy Nhơn': [68, 195],
-                                            'Ho Chi Minh City': [64, 330], 'Mekong Delta': [58, 370], 'Phú Quốc': [42, 400], 'Đà Lạt': [72, 290], 'Vũng Tàu': [72, 345],
+                                            'Hanoi': [168, 108], 'Sapa': [148, 72], 'Hạ Long Bay': [200, 90], 'Ninh Bình': [160, 132],
+                                            'Huế': [176, 172], 'Đà Nẵng': [182, 188], 'Hội An': [180, 198], 'Quy Nhơn': [174, 228], 'Phú Yên': [170, 244],
+                                            'Ho Chi Minh City': [130, 340], 'Mekong Delta': [110, 380], 'Phú Quốc': [88, 420], 'Đà Lạt': [148, 300], 'Vũng Tàu': [144, 356],
                                         };
                                         const pos = positions[city.name];
                                         if (!pos) return null;
                                         const isActive = activeCity === city.name;
                                         return (
                                             <g key={city.name} style={{ cursor: 'pointer' }} onClick={() => { setActiveRegion(region.id); setActiveCity(city.name === activeCity ? null : city.name); }}>
-                                                <circle cx={pos[0]} cy={pos[1]} r={isActive ? 6 : 4} fill={isActive ? region.color : '#fff'} stroke={region.color} strokeWidth="2" />
-                                                {isActive && <circle cx={pos[0]} cy={pos[1]} r={10} fill="none" stroke={region.color} strokeWidth="1" opacity="0.4" />}
-                                                <text x={pos[0] + 8} y={pos[1] + 4} fontSize="7" fill={isActive ? region.color : 'rgba(75,46,26,0.6)'} fontWeight={isActive ? '700' : '400'} fontFamily="DM Sans, sans-serif">{city.name}</text>
+                                                <circle cx={pos[0]} cy={pos[1]} r={isActive ? 7 : 4} fill={isActive ? region.color : '#fff'} stroke={region.color} strokeWidth="2" />
+                                                {isActive && <circle cx={pos[0]} cy={pos[1]} r={12} fill="none" stroke={region.color} strokeWidth="1" opacity="0.4" />}
+                                                <text x={pos[0] + 9} y={pos[1] + 4} fontSize="8" fill={isActive ? region.color : 'rgba(75,46,26,0.6)'} fontWeight={isActive ? '700' : '500'}>{city.name}</text>
                                             </g>
                                         );
                                     })
                                 )}
-
-                                {/* Compass */}
-                                <g transform="translate(168, 20)">
-                                    <circle cx="0" cy="0" r="12" fill="none" stroke="rgba(75,46,26,0.15)" strokeWidth="1" />
-                                    <text x="0" y="-5" textAnchor="middle" fontSize="8" fill="rgba(75,46,26,0.4)" fontFamily="DM Sans">N</text>
-                                    <line x1="0" y1="-3" x2="0" y2="-10" stroke="#D97706" strokeWidth="1.5" />
-                                    <line x1="0" y1="3" x2="0" y2="10" stroke="rgba(75,46,26,0.3)" strokeWidth="1" />
-                                </g>
                             </svg>
+                            {/* Vietnam outline - simplified but recognizable shape */}
+                            <defs>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                                    <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                                </filter>
+                            </defs>
 
-                            {/* Legend */}
-                            <div style={{ marginTop: '16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '12px' }}>
+                            {/* Country shape */}
+                            <path d="M95,10 L115,12 L130,18 L140,28 L138,40 L130,48 L125,58 L128,68 L135,75 L138,85 L132,95 L125,100 L120,110 L118,125 L122,138 L128,148 L132,158 L130,168 L125,175 L115,180 L105,185 L98,195 L92,205 L88,220 L85,235 L82,248 L80,260 L78,275 L75,290 L72,305 L70,318 L68,330 L65,342 L60,355 L55,368 L52,378 L50,388 L52,398 L58,408 L65,415 L72,420 L78,425 L82,435 L80,445 L75,450 L68,452 L60,450 L52,445 L46,438 L42,428 L44,418 L48,410 L50,400 L48,390 L44,382 L42,372 L44,362 L48,350 L50,340 L52,330 L54,318 L56,305 L58,292 L60,278 L62,265 L64,252 L66,238 L70,225 L74,212 L78,200 L84,188 L88,178 L90,168 L88,158 L84,148 L80,138 L78,128 L76,118 L75,108 L72,98 L68,90 L64,80 L62,70 L64,60 L68,50 L72,40 L78,30 L85,20 L92,12 Z"
+                                fill={activeRegion ? 'rgba(75,46,26,0.08)' : '#F5EDE3'}
+                                stroke="rgba(75,46,26,0.2)" strokeWidth="1.5" />
+
+                            {/* North region */}
+                            <path d="M95,10 L115,12 L130,18 L140,28 L138,40 L130,48 L125,58 L128,68 L135,75 L138,85 L132,95 L125,100 L120,110 L118,125 L112,130 L105,128 L98,125 L90,120 L85,112 L80,105 L75,98 L70,90 L66,82 L64,72 L64,60 L68,50 L72,40 L78,30 L85,20 L92,12 Z"
+                                fill={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.1)'}
+                                stroke={activeRegion === 'north' ? '#1E40AF' : 'rgba(30,64,175,0.3)'}
+                                strokeWidth="1"
+                                style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                onClick={() => { setActiveRegion(activeRegion === 'north' ? null : 'north'); setActiveCity(null); }}
+                                filter={activeRegion === 'north' ? 'url(#glow)' : undefined}
+                            />
+
+                            {/* Central region */}
+                            <path d="M112,130 L118,125 L122,138 L128,148 L132,158 L130,168 L125,175 L115,180 L105,185 L98,195 L92,205 L88,220 L85,235 L82,248 L80,260 L78,268 L72,265 L68,258 L65,248 L62,238 L60,225 L58,212 L56,198 L55,185 L54,172 L56,160 L60,150 L64,142 L68,135 L74,130 L80,128 L86,127 L92,127 L98,128 Z"
+                                fill={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.1)'}
+                                stroke={activeRegion === 'central' ? '#B45309' : 'rgba(180,83,9,0.3)'}
+                                strokeWidth="1"
+                                style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                onClick={() => { setActiveRegion(activeRegion === 'central' ? null : 'central'); setActiveCity(null); }}
+                                filter={activeRegion === 'central' ? 'url(#glow)' : undefined}
+                            />
+
+                            {/* South region */}
+                            <path d="M78,268 L80,260 L82,278 L80,292 L78,305 L75,318 L72,330 L70,342 L68,355 L65,368 L60,380 L55,390 L52,400 L50,410 L46,420 L42,428 L44,438 L50,445 L58,450 L65,452 L72,450 L78,445 L80,435 L78,425 L72,420 L65,415 L58,408 L52,398 L50,388 L52,378 L56,368 L60,355 L65,342 L68,330 L70,318 L72,305 L75,290 L76,278 Z"
+                                fill={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.1)'}
+                                stroke={activeRegion === 'south' ? '#166534' : 'rgba(22,101,52,0.3)'}
+                                strokeWidth="1"
+                                style={{ cursor: 'pointer', transition: 'all 0.3s' }}
+                                onClick={() => { setActiveRegion(activeRegion === 'south' ? null : 'south'); setActiveCity(null); }}
+                                filter={activeRegion === 'south' ? 'url(#glow)' : undefined}
+                            />
+
+                            {/* City dots */}
+                            {REGIONS.map(region =>
+                                region.cities.map((city, ci) => {
+                                    const positions: Record<string, [number, number]> = {
+                                        'Hanoi': [88, 72], 'Sapa': [68, 45], 'Hạ Long Bay': [115, 65], 'Ninh Bình': [82, 100],
+                                        'Huế': [82, 148], 'Hội An': [78, 170], 'Đà Nẵng': [80, 160], 'Phú Yên': [72, 210], 'Quy Nhơn': [68, 195],
+                                        'Ho Chi Minh City': [64, 330], 'Mekong Delta': [58, 370], 'Phú Quốc': [42, 400], 'Đà Lạt': [72, 290], 'Vũng Tàu': [72, 345],
+                                    };
+                                    const pos = positions[city.name];
+                                    if (!pos) return null;
+                                    const isActive = activeCity === city.name;
+                                    return (
+                                        <g key={city.name} style={{ cursor: 'pointer' }} onClick={() => { setActiveRegion(region.id); setActiveCity(city.name === activeCity ? null : city.name); }}>
+                                            <circle cx={pos[0]} cy={pos[1]} r={isActive ? 6 : 4} fill={isActive ? region.color : '#fff'} stroke={region.color} strokeWidth="2" />
+                                            {isActive && <circle cx={pos[0]} cy={pos[1]} r={10} fill="none" stroke={region.color} strokeWidth="1" opacity="0.4" />}
+                                            <text x={pos[0] + 8} y={pos[1] + 4} fontSize="7" fill={isActive ? region.color : 'rgba(75,46,26,0.6)'} fontWeight={isActive ? '700' : '400'} fontFamily="DM Sans, sans-serif">{city.name}</text>
+                                        </g>
+                                    );
+                                })
+                            )}
+
+                            {/* Compass */}
+                            <g transform="translate(168, 20)">
+                                <circle cx="0" cy="0" r="12" fill="none" stroke="rgba(75,46,26,0.15)" strokeWidth="1" />
+                                <text x="0" y="-5" textAnchor="middle" fontSize="8" fill="rgba(75,46,26,0.4)" fontFamily="DM Sans">N</text>
+                                <line x1="0" y1="-3" x2="0" y2="-10" stroke="#D97706" strokeWidth="1.5" />
+                                <line x1="0" y1="3" x2="0" y2="10" stroke="rgba(75,46,26,0.3)" strokeWidth="1" />
+                            </g>
+                        </svg>
+
+                        {/* Legend */}
+                        <div style={{ marginTop: '16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '12px' }}>
+                            {REGIONS.map(r => (
+                                <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', cursor: 'pointer' }}
+                                    onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
+                                    <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
+                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
+                                    <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Region + City Content */}
+                <div>
+                    {!activeRegion && (
+                        <div>
+                            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '8px' }}>
+                                Select a Region to Explore
+                            </h2>
+                            <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '48px', lineHeight: 1.6 }}>
+                                Click a region on the map or use the buttons above. Each region has a completely distinct food culture, climate, and travel character.
+                            </p>
+
+                            {/* All regions overview */}
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
                                 {REGIONS.map(r => (
-                                    <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', cursor: 'pointer' }}
-                                        onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
-                                        <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
-                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
-                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
-                                    </div>
+                                    <motion.div key={r.id} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}
+                                        onClick={() => setActiveRegion(r.id)}
+                                        style={{ background: '#fff', border: `1px solid rgba(75,46,26,0.08)`, borderRadius: '8px', padding: '24px', cursor: 'pointer', borderTop: `4px solid ${r.color}` }}>
+                                        <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{r.icon}</div>
+                                        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '4px' }}>{r.name}</h3>
+                                        <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: r.color, marginBottom: '10px', letterSpacing: '0.5px' }}>{r.nameVi} · Best: {r.season}</p>
+                                        <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, marginBottom: '14px' }}>{r.tagline}</p>
+                                        <div style={{ padding: '8px 12px', background: `${r.color}10`, borderRadius: '4px' }}>
+                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 700, color: r.color, letterSpacing: '1px' }}>MUST EAT: </span>
+                                            <span style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#4B2E1A' }}>{r.mustEat}</span>
+                                        </div>
+                                        <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: r.color, fontWeight: 600, marginTop: '14px' }}>{r.cities.length} destinations →</p>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    )}
 
-                    {/* Region + City Content */}
-                    <div>
-                        {!activeRegion && (
-                            <div>
-                                <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '8px' }}>
-                                    Select a Region to Explore
-                                </h2>
-                                <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '48px', lineHeight: 1.6 }}>
-                                    Click a region on the map or use the buttons above. Each region has a completely distinct food culture, climate, and travel character.
-                                </p>
+                    {activeRegion && currentRegion && (
+                        <AnimatePresence mode="wait">
+                            <motion.div key={activeRegion} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
 
-                                {/* All regions overview */}
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
-                                    {REGIONS.map(r => (
-                                        <motion.div key={r.id} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}
-                                            onClick={() => setActiveRegion(r.id)}
-                                            style={{ background: '#fff', border: `1px solid rgba(75,46,26,0.08)`, borderRadius: '8px', padding: '24px', cursor: 'pointer', borderTop: `4px solid ${r.color}` }}>
-                                            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{r.icon}</div>
-                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '4px' }}>{r.name}</h3>
-                                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: r.color, marginBottom: '10px', letterSpacing: '0.5px' }}>{r.nameVi} · Best: {r.season}</p>
-                                            <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, marginBottom: '14px' }}>{r.tagline}</p>
-                                            <div style={{ padding: '8px 12px', background: `${r.color}10`, borderRadius: '4px' }}>
-                                                <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 700, color: r.color, letterSpacing: '1px' }}>MUST EAT: </span>
-                                                <span style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#4B2E1A' }}>{r.mustEat}</span>
+                                {/* Region header */}
+                                <div style={{ marginBottom: '32px', paddingBottom: '24px', borderBottom: `2px solid ${currentRegion.color}20` }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
+                                        <span style={{ fontSize: '2rem' }}>{currentRegion.icon}</span>
+                                        <div>
+                                            <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.2rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{currentRegion.name}</h2>
+                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: currentRegion.color, fontWeight: 600 }}>{currentRegion.nameVi} · Best season: {currentRegion.season}</span>
+                                        </div>
+                                    </div>
+                                    <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.1rem', color: 'rgba(75,46,26,0.6)', marginBottom: '16px', lineHeight: 1.6 }}>{currentRegion.tagline}</p>
+                                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: `${currentRegion.color}15`, borderRadius: '100px' }}>
+                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: currentRegion.color, letterSpacing: '1px' }}>MUST EAT:</span>
+                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: '#4B2E1A' }}>{currentRegion.mustEat}</span>
+                                    </div>
+                                </div>
+
+                                {/* City list */}
+                                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                                    {currentRegion.cities.map(city => (
+                                        <button key={city.name}
+                                            onClick={() => setActiveCity(activeCity === city.name ? null : city.name)}
+                                            style={{ padding: '7px 16px', borderRadius: '100px', border: `1.5px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.15)'}`, background: activeCity === city.name ? currentRegion.color : 'transparent', color: activeCity === city.name ? 'white' : 'rgba(75,46,26,0.6)', fontSize: '12px', fontWeight: 600, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.2s' }}>
+                                            {city.name}
+                                            <span style={{ fontSize: '10px', opacity: 0.7, marginLeft: '4px' }}>({city.type})</span>
+                                        </button>
+                                    ))}
+                                </div>
+
+                                {/* City cards */}
+                                <div style={{ display: 'grid', gap: '20px' }}>
+                                    {currentRegion.cities.filter(c => !activeCity || c.name === activeCity).map(city => (
+                                        <motion.div key={city.name} layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
+                                            style={{ background: '#fff', border: `1px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.08)'}`, borderRadius: '8px', overflow: 'hidden', borderLeft: `5px solid ${currentRegion.color}` }}>
+                                            <div style={{ padding: '20px 24px', background: activeCity === city.name ? `${currentRegion.color}08` : '#FDFAF7', borderBottom: '1px solid rgba(75,46,26,0.07)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
+                                                <div>
+                                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                                                        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{city.name}</h3>
+                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 600, color: '#fff', background: currentRegion.color, padding: '2px 8px', borderRadius: '100px' }}>{city.type}</span>
+                                                    </div>
+                                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: 'rgba(75,46,26,0.45)', fontStyle: 'italic' }}>{city.nameVi}</span>
+                                                </div>
+                                                <div style={{ display: 'flex', gap: '8px' }}>
+                                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#166534', background: 'rgba(22,101,52,0.08)', padding: '3px 10px', borderRadius: '100px' }}>✓ {city.bestTime}</span>
+                                                </div>
                                             </div>
-                                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: r.color, fontWeight: 600, marginTop: '14px' }}>{r.cities.length} destinations →</p>
+                                            <div style={{ padding: '20px 24px' }}>
+                                                <p style={{ fontFamily: 'Georgia, serif', fontSize: '14px', lineHeight: 1.75, color: '#4B2E1A', marginBottom: '20px' }}>{city.desc}</p>
+
+                                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '10px', marginBottom: '16px' }}>
+                                                    {[
+                                                        { label: 'HIGHLIGHT', value: city.highlight, color: currentRegion.color },
+                                                        { label: 'WHERE TO STAY', value: city.stay, color: '#0369A1' },
+                                                        { label: 'FOOD STREETS', value: city.foodStreet, color: '#166534' },
+                                                        { label: 'AVOID', value: city.avoid, color: '#DC2626' },
+                                                    ].map(item => (
+                                                        <div key={item.label} style={{ background: '#FDFAF7', padding: '10px 14px', borderRadius: '4px', borderLeft: `3px solid ${item.color}` }}>
+                                                            <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: item.color, letterSpacing: '1px', marginBottom: '5px' }}>{item.label}</div>
+                                                            <p style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#6B5544', margin: 0, lineHeight: 1.5 }}>{item.value}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+
+                                                <Link href={`/recipes/${city.bestDishSlug}`}
+                                                    style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', background: currentRegion.color, color: 'white', borderRadius: '4px', textDecoration: 'none', fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 600 }}>
+                                                    Recipe: {city.bestDish} →
+                                                </Link>
+                                            </div>
                                         </motion.div>
                                     ))}
                                 </div>
-                            </div>
-                        )}
-
-                        {activeRegion && currentRegion && (
-                            <AnimatePresence mode="wait">
-                                <motion.div key={activeRegion} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-
-                                    {/* Region header */}
-                                    <div style={{ marginBottom: '32px', paddingBottom: '24px', borderBottom: `2px solid ${currentRegion.color}20` }}>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
-                                            <span style={{ fontSize: '2rem' }}>{currentRegion.icon}</span>
-                                            <div>
-                                                <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.2rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{currentRegion.name}</h2>
-                                                <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: currentRegion.color, fontWeight: 600 }}>{currentRegion.nameVi} · Best season: {currentRegion.season}</span>
-                                            </div>
-                                        </div>
-                                        <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.1rem', color: 'rgba(75,46,26,0.6)', marginBottom: '16px', lineHeight: 1.6 }}>{currentRegion.tagline}</p>
-                                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: `${currentRegion.color}15`, borderRadius: '100px' }}>
-                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: currentRegion.color, letterSpacing: '1px' }}>MUST EAT:</span>
-                                            <span style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: '#4B2E1A' }}>{currentRegion.mustEat}</span>
-                                        </div>
-                                    </div>
-
-                                    {/* City list */}
-                                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                                        {currentRegion.cities.map(city => (
-                                            <button key={city.name}
-                                                onClick={() => setActiveCity(activeCity === city.name ? null : city.name)}
-                                                style={{ padding: '7px 16px', borderRadius: '100px', border: `1.5px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.15)'}`, background: activeCity === city.name ? currentRegion.color : 'transparent', color: activeCity === city.name ? 'white' : 'rgba(75,46,26,0.6)', fontSize: '12px', fontWeight: 600, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.2s' }}>
-                                                {city.name}
-                                                <span style={{ fontSize: '10px', opacity: 0.7, marginLeft: '4px' }}>({city.type})</span>
-                                            </button>
-                                        ))}
-                                    </div>
-
-                                    {/* City cards */}
-                                    <div style={{ display: 'grid', gap: '20px' }}>
-                                        {currentRegion.cities.filter(c => !activeCity || c.name === activeCity).map(city => (
-                                            <motion.div key={city.name} layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
-                                                style={{ background: '#fff', border: `1px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.08)'}`, borderRadius: '8px', overflow: 'hidden', borderLeft: `5px solid ${currentRegion.color}` }}>
-                                                <div style={{ padding: '20px 24px', background: activeCity === city.name ? `${currentRegion.color}08` : '#FDFAF7', borderBottom: '1px solid rgba(75,46,26,0.07)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
-                                                    <div>
-                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{city.name}</h3>
-                                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 600, color: '#fff', background: currentRegion.color, padding: '2px 8px', borderRadius: '100px' }}>{city.type}</span>
-                                                        </div>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: 'rgba(75,46,26,0.45)', fontStyle: 'italic' }}>{city.nameVi}</span>
-                                                    </div>
-                                                    <div style={{ display: 'flex', gap: '8px' }}>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#166534', background: 'rgba(22,101,52,0.08)', padding: '3px 10px', borderRadius: '100px' }}>✓ {city.bestTime}</span>
-                                                    </div>
-                                                </div>
-                                                <div style={{ padding: '20px 24px' }}>
-                                                    <p style={{ fontFamily: 'Georgia, serif', fontSize: '14px', lineHeight: 1.75, color: '#4B2E1A', marginBottom: '20px' }}>{city.desc}</p>
-
-                                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '10px', marginBottom: '16px' }}>
-                                                        {[
-                                                            { label: 'HIGHLIGHT', value: city.highlight, color: currentRegion.color },
-                                                            { label: 'WHERE TO STAY', value: city.stay, color: '#0369A1' },
-                                                            { label: 'FOOD STREETS', value: city.foodStreet, color: '#166534' },
-                                                            { label: 'AVOID', value: city.avoid, color: '#DC2626' },
-                                                        ].map(item => (
-                                                            <div key={item.label} style={{ background: '#FDFAF7', padding: '10px 14px', borderRadius: '4px', borderLeft: `3px solid ${item.color}` }}>
-                                                                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: item.color, letterSpacing: '1px', marginBottom: '5px' }}>{item.label}</div>
-                                                                <p style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#6B5544', margin: 0, lineHeight: 1.5 }}>{item.value}</p>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-
-                                                    <Link href={`/recipes/${city.bestDishSlug}`}
-                                                        style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', background: currentRegion.color, color: 'white', borderRadius: '4px', textDecoration: 'none', fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 600 }}>
-                                                        Recipe: {city.bestDish} →
-                                                    </Link>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        )}
-                    </div>
-                </div>
-
-                {/* Food Routes */}
-                <div style={{ margin: '0 0 80px', padding: '48px 0', borderTop: '1px solid rgba(75,46,26,0.08)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
-                        <div style={{ width: '28px', height: '2px', background: '#D97706' }} />
-                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Suggested Food Routes</h2>
-                    </div>
-                    <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '32px' }}>Itineraries built around eating, not sightseeing.</p>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
-                        {FOOD_ROUTES.map((route, i) => (
-                            <motion.div key={route.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
-                                style={{ background: '#fff', border: '1px solid rgba(75,46,26,0.08)', borderRadius: '8px', padding: '20px', borderTop: '4px solid #D97706' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
-                                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{route.name}</h3>
-                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: '#D97706', background: 'rgba(217,119,6,0.1)', padding: '3px 8px', borderRadius: '100px', flexShrink: 0, marginLeft: '8px' }}>{route.days} days</span>
-                                </div>
-                                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#8B6F5A', marginBottom: '10px', letterSpacing: '0.5px' }}>{route.cities}</p>
-                                <p style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, margin: 0 }}>{route.desc}</p>
                             </motion.div>
-                        ))}
-                    </div>
+                        </AnimatePresence>
+                    )}
                 </div>
+            </div>
 
-                {/* Quick tips */}
-                <div style={{ margin: '0 0 80px', background: '#2D1A0E', borderRadius: '12px', padding: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '24px' }}>
-                    <div style={{ gridColumn: '1 / -1', marginBottom: '8px' }}>
-                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#F5EDE3', margin: '0 0 4px' }}>Eating in Vietnam: The Rules</h2>
-                        <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(245,237,227,0.5)', fontSize: '14px' }}>What every first-time food traveler needs to know.</p>
-                    </div>
-                    {[
-                        { icon: '🕐', rule: 'Eat early', detail: 'The best street food disappears by 9am. Phở, bánh cuốn, xôi — these are morning dishes. Miss the morning and you miss the point.' },
-                        { icon: '🪑', rule: 'Sit down', detail: 'The best food in Vietnam is served at plastic stools on the sidewalk. A proper building and tablecloth means higher prices and usually worse food.' },
-                        { icon: '👆', rule: 'Follow the queue', detail: 'If there is a queue at a stall and nothing at the one next to it, join the queue. Every time.' },
-                        { icon: '💵', rule: 'Cash only', detail: 'Street food is cash. Carry small denominations of VND. Prices are usually written; if not, asking is expected.' },
-                        { icon: '🌿', rule: 'Use the herb plate', detail: 'The plate of green that arrives with your bowl is not garnish. It is half the dish. Add generously.' },
-                        { icon: '🧊', rule: 'Ice is fine', detail: 'In urban Vietnam, ice in drinks is safe. The cylindrical machine-made ice found everywhere is filtered water.' },
-                    ].map(item => (
-                        <div key={item.rule} style={{ padding: '16px', background: 'rgba(245,237,227,0.05)', borderRadius: '8px', border: '1px solid rgba(245,237,227,0.08)' }}>
-                            <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{item.icon}</div>
-                            <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 700, color: '#D97706', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.rule}</h4>
-                            <p style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: 'rgba(245,237,227,0.6)', lineHeight: 1.6, margin: 0 }}>{item.detail}</p>
-                        </div>
+            {/* Food Routes */}
+            <div style={{ margin: '0 0 80px', padding: '48px 0', borderTop: '1px solid rgba(75,46,26,0.08)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
+                    <div style={{ width: '28px', height: '2px', background: '#D97706' }} />
+                    <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Suggested Food Routes</h2>
+                </div>
+                <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '32px' }}>Itineraries built around eating, not sightseeing.</p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
+                    {FOOD_ROUTES.map((route, i) => (
+                        <motion.div key={route.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
+                            style={{ background: '#fff', border: '1px solid rgba(75,46,26,0.08)', borderRadius: '8px', padding: '20px', borderTop: '4px solid #D97706' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
+                                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{route.name}</h3>
+                                <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: '#D97706', background: 'rgba(217,119,6,0.1)', padding: '3px 8px', borderRadius: '100px', flexShrink: 0, marginLeft: '8px' }}>{route.days} days</span>
+                            </div>
+                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#8B6F5A', marginBottom: '10px', letterSpacing: '0.5px' }}>{route.cities}</p>
+                            <p style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, margin: 0 }}>{route.desc}</p>
+                        </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Quick tips */}
+            <div style={{ margin: '0 0 80px', background: '#2D1A0E', borderRadius: '12px', padding: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '24px' }}>
+                <div style={{ gridColumn: '1 / -1', marginBottom: '8px' }}>
+                    <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#F5EDE3', margin: '0 0 4px' }}>Eating in Vietnam: The Rules</h2>
+                    <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(245,237,227,0.5)', fontSize: '14px' }}>What every first-time food traveler needs to know.</p>
+                </div>
+                {[
+                    { icon: '🕐', rule: 'Eat early', detail: 'The best street food disappears by 9am. Phở, bánh cuốn, xôi — these are morning dishes. Miss the morning and you miss the point.' },
+                    { icon: '🪑', rule: 'Sit down', detail: 'The best food in Vietnam is served at plastic stools on the sidewalk. A proper building and tablecloth means higher prices and usually worse food.' },
+                    { icon: '👆', rule: 'Follow the queue', detail: 'If there is a queue at a stall and nothing at the one next to it, join the queue. Every time.' },
+                    { icon: '💵', rule: 'Cash only', detail: 'Street food is cash. Carry small denominations of VND. Prices are usually written; if not, asking is expected.' },
+                    { icon: '🌿', rule: 'Use the herb plate', detail: 'The plate of green that arrives with your bowl is not garnish. It is half the dish. Add generously.' },
+                    { icon: '🧊', rule: 'Ice is fine', detail: 'In urban Vietnam, ice in drinks is safe. The cylindrical machine-made ice found everywhere is filtered water.' },
+                ].map(item => (
+                    <div key={item.rule} style={{ padding: '16px', background: 'rgba(245,237,227,0.05)', borderRadius: '8px', border: '1px solid rgba(245,237,227,0.08)' }}>
+                        <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{item.icon}</div>
+                        <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 700, color: '#D97706', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.rule}</h4>
+                        <p style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: 'rgba(245,237,227,0.6)', lineHeight: 1.6, margin: 0 }}>{item.detail}</p>
+                    </div>
+                ))}
+            </div>
         </div>
+        </div >
     );
 }
