@@ -648,6 +648,18 @@ export default function IngredientsPage() {
 
     const essentialCount = filtered.filter(i => i.essential).length;
 
+    const CATEGORY_ICONS: Record<string, string> = {
+        'Sauces & Condiments': '🫙',
+        'Herbs & Aromatics': '🌿',
+        'Noodles & Rice': '🍜',
+        'Spices': '🌶️',
+        'Proteins': '🥩',
+        'Vegetables': '🥬',
+        'Fruits & Souring Agents': '🍋',
+        'Dairy & Fats': '🥛',
+        'Pantry Staples': '🧂',
+    }
+
     const CATEGORY_COLORS: Record<string, string> = {
         'Sauces & Condiments': '#D97706',
         'Herbs & Aromatics': '#166534',
@@ -729,7 +741,12 @@ export default function IngredientsPage() {
                                 <div style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
                                     <div style={{ flex: 1, minWidth: 0 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '4px' }}>
-                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{ing.name}</h3>
+                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1rem', fontWeight: 700, color: '#2D1A0E', margin: 0, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                <span style={{ fontSize: '14px' }}>
+                                                    {CATEGORY_ICONS[ing.category] || '🌿'}
+                                                </span>
+                                                {ing.name}
+                                            </h3>
                                             {ing.essential && (
                                                 <span style={{ fontSize: '9px', fontWeight: 700, color: '#166534', background: 'rgba(22,101,52,0.1)', padding: '2px 7px', borderRadius: '100px', letterSpacing: '0.5px', textTransform: 'uppercase', flexShrink: 0 }}>Essential</span>
                                             )}
