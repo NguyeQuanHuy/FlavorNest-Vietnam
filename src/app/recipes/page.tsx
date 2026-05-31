@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useState, useMemo, useCallback, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { getAllRecipes } from "@/data/index";
 import { FNIcon } from "@/components/Icons";
 import { useFavorites } from "@/hooks/useFavorites";
 import { STORIES } from '@/data/stories-data'
+import { getAllRecipes, getIngredientPreviewMap } from '@/data/index'
 
 const RECIPES = getAllRecipes();
 
@@ -100,6 +100,7 @@ function RecipesInner() {
     const [activeRegion, setActiveRegion] = useState("All Regions");
     const [localQuery, setLocalQuery] = useState(urlSearch);
     const [hovered, setHovered] = useState<string | null>(null);
+    const ingredientMap = useMemo(() => getIngredientPreviewMap(), [])
     const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
     const [page, setPage] = useState(1);
     const PER_PAGE = 12;
@@ -339,6 +340,18 @@ function RecipesInner() {
                                         <p style={{ fontSize: 13, color: "rgba(75,46,26,0.45)", fontStyle: "italic", margin: 0 }}>
                                             <Highlight text={recipe.subtitle} query={localQuery} />
                                         </p>
+                                        {recipe.tags && recipe.tags.length > 0 && (
+                                            <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 8 }}>
+                                                {recipe.tags.slice(0, 3).map(tag => (
+                                                    <span key={recipe.slug + tag} style={{
+                                                        fontSize: 10, color: "#92580A",
+                                                        background: "rgba(217,119,6,0.1)",
+                                                        borderRadius: 100, padding: "2px 8px",
+                                                        border: "1px solid rgba(217,119,6,0.2)"
+                                                    }}>{tag}</span>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </Link>
                             </motion.div>
