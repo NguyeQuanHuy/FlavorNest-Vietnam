@@ -256,7 +256,15 @@ export default function BreakfastPage() {
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'Titillium Web', system-ui, sans-serif" }}>
             <style>{`
 * { box-sizing: border-box; }
+                .bf-grid { grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); }
                 @media (max-width: 768px) {
+                  .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+                  .bf-card-img { height: 140px !important; }
+                  .r-card > div:last-child { padding: 10px 12px 14px !important; }
+                  .r-card h2 { font-size: 11px !important; letter-spacing: 0.04em !important; }
+                  .r-card p { font-size: 10px !important; margin-bottom: 0 !important; display: none !important; }
+                  .r-card > div:last-child > div:first-child { font-size: 9px !important; margin-bottom: 3px !important; }
+                  .r-card > div:last-child > div:last-child { display: none !important; }
                   .bf-hero { padding: 70px 16px 24px !important; }
                   .bf-hero nav { font-size: 12px !important; margin-bottom: 14px !important; }
                   .bf-hero h1 { font-size: 32px !important; margin-bottom: 10px !important; line-height: 1.05 !important; }
@@ -353,11 +361,12 @@ export default function BreakfastPage() {
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px,1fr))', gap: 24 }}>
+                        className="bf-grid"
+                        style={{ display: 'grid', gap: 18 }}>
                         {filtered.map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
-                                    <div style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
+                                    <div className="bf-card-img" style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
                                         <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px 5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)', textShadow: '0 1px 3px rgba(0,0,0,0.2)' }}>{recipe.tag}</div>
