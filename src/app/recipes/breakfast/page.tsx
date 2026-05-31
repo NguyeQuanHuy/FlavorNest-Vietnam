@@ -259,7 +259,7 @@ export default function BreakfastPage() {
                 .bf-grid { grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); }
                     @media (max-width: 768px) {
                   main > section { padding-left: 12px !important; padding-right: 12px !important; }
-                  main > div[style*="sticky"] { padding-left: 12px !important; padding-right: 12px !important; }
+                  main > div[style*="sticky"] { padding-left: 12px !important; padding-right: 12px !important; } html, body, main { overflow-x: hidden !important; max-width: 100vw !important; } main > section { max-width: 100vw !important; box-sizing: border-box !important; }
                     .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; width: 100% !important; max-width: 100% !important; } .r-card { min-width: 0 !important; width: 100% !important; } body { overflow-x: hidden !important; }
                   .bf-card-img { height: 140px !important; }
                   .r-card > div:last-child { padding: 10px 12px 14px !important; }
