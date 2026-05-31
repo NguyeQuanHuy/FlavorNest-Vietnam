@@ -175,3 +175,49 @@ body {
         font-size: 11px !important;
     }
 }
+/* ── RecipeLayout mobile fix ── */
+@media (max-width: 768px) {
+    /* Hero: stack title + image vertically */
+    div[style*="grid-template-columns: 1fr 1fr"][style*="gap: 32px"],
+    div[style*="gridTemplateColumns: '1fr 1fr'"] {
+        grid-template-columns: 1fr !important;
+    }
+    /* 2-col ingredient+steps grid */
+    div[style*="minmax(280px, 380px)"] {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    /* Sticky aside → static */
+    div[style*="minmax(280px, 380px)"] > aside {
+        position: static !important;
+        max-height: none !important;
+    }
+    /* Hero title font */
+    div[style*="minmax(280px, 380px)"] ~ * h1,
+    h1[style*="clamp"] {
+        font-size: clamp(24px, 7vw, 40px) !important;
+    }
+}
+
+/* ── RecipeLayout hero section mobile ── */
+@media (max-width: 640px) {
+    /* Breadcrumb compact */
+    nav[style*="breadcrumb"],
+    div[style*="Home"] > a { font-size: 11px !important; }
+
+    /* Hero 2-col → 1-col */
+    section[style*="grid"][style*="gap: 48px"],
+    section[style*="grid"][style*="gap: 32px"] {
+        display: block !important;
+    }
+
+    /* Image height on mobile */
+    div[style*="height: 480px"] {
+        height: 240px !important;
+        border-radius: 16px !important;
+    }
+
+    div[style*="height: 440px"] {
+        height: 220px !important;
+    }
+}
