@@ -260,7 +260,7 @@ export default function BreakfastPage() {
                     @media (max-width: 768px) {
                   main > section { padding-left: 12px !important; padding-right: 12px !important; }
                   main > div[style*="sticky"] { padding-left: 12px !important; padding-right: 12px !important; }
-                    .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+                    .bf-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; width: 100% !important; max-width: 100% !important; } .r-card { min-width: 0 !important; width: 100% !important; } body { overflow-x: hidden !important; }
                   .bf-card-img { height: 140px !important; }
                   .r-card > div:last-child { padding: 10px 12px 14px !important; }
                   .r-card h2 { font-size: 11px !important; letter-spacing: 0.04em !important; }
