@@ -1,0 +1,81 @@
+'use client';
+import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
+
+const recipe: RecipeData = {
+    slug: 'ca-chep-om-dua',
+    title: 'Cá Chép Om Dưa (Braised Carp with Pickled Mustard Greens)',
+    subtitle: 'Whole carp braised in a clay pot with pickled mustard greens, tomato, dill, and pineapple until the fish is fall-tender and the sour-savory broth is complex enough to eat as a soup. The northern Vietnamese winter dish.',
+    category: 'MAIN COURSE',
+    difficulty: 'Medium',
+    totalTime: '1 hr',
+    rating: 4.8,
+    baseServings: 4,
+    heroImage: '/images/recipes/ca-chep-om-dua.jpg',
+    intro: `Cá chép om dưa is the winter dish of northern Vietnam — specifically of Hanoi and the Red River Delta, where freshwater carp (cá chép) is farmed in the rice paddies and pickled mustard greens (dưa cải) are made in every household from October onwards. The dish is a braise: the carp is fried briefly to firm the flesh, then braised in a clay pot with pickled mustard greens that contribute their sour, funky depth to the cooking liquid, tomatoes for sweetness and acid, pineapple for tropical sourness, and fresh dill — the northern Vietnamese herb that appears in carp dishes specifically, as it does nowhere else in the cuisine. The broth produced is extraordinary: simultaneously sour, savory, slightly sweet, perfumed with dill, and rich with the gelatin from the carp. It is eaten as soup alongside rice, with the fish served from the clay pot at the center of the table. Cá chép om dưa is the dish that tastes most of northern Vietnam in winter — of cold weather, of pickled things, of the particular combination of freshwater fish and preserved vegetables that no other region makes in quite the same way.`,
+    ingredientSections: [
+        {
+            title: 'Fish',
+            items: [
+                { amount: 1, name: 'whole carp (cá chép), 800g-1kg', note: 'cleaned and scaled by the fishmonger. Score the flesh 3 times on each side. Freshwater carp preferred; seabream or snapper are acceptable substitutes.' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce', note: 'for marinating the fish' },
+                { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
+                { amount: 3, unit: 'tbsp', name: 'neutral oil', note: 'for frying' },
+            ],
+        },
+        {
+            title: 'Braising liquid and vegetables',
+            items: [
+                { amount: 300, unit: 'g', name: 'Vietnamese pickled mustard greens (dưa cải)', note: 'rinsed and cut into 5cm pieces. Available at Vietnamese grocers. Substitute: kimchi (different flavor but similar sour-fermented character).' },
+                { amount: 3, name: 'medium tomatoes', note: 'cut into wedges — or 1 can whole tomatoes, drained' },
+                { amount: 150, unit: 'g', name: 'fresh pineapple', note: 'cut into chunks — adds tropical sourness. Canned pineapple in juice is acceptable.' },
+                { amount: 3, name: 'shallots', note: 'thinly sliced' },
+                { amount: 4, name: 'garlic cloves', note: 'thinly sliced' },
+                { amount: 400, unit: 'ml', name: 'water or light fish stock' },
+                { amount: 2, unit: 'tbsp', name: 'fish sauce' },
+                { amount: 1, unit: 'tsp', name: 'sugar' },
+                { amount: 0.5, unit: 'tsp', name: 'black pepper' },
+                { amount: 2, unit: 'tbsp', name: 'neutral oil' },
+            ],
+        },
+        {
+            title: 'Herbs and garnish',
+            items: [
+                { amount: 1, name: 'large bunch fresh dill (thì là)', note: 'the essential herb for this dish — do not substitute' },
+                { amount: 3, name: 'spring onions', note: 'cut into 3cm pieces' },
+                { amount: 1, name: 'fresh red chili, sliced' },
+                { amount: 2, name: 'limes, cut in wedges' },
+            ],
+        },
+    ],
+    steps: [
+        {
+            title: 'Marinate and fry the fish',
+            description: 'Rub the scored carp with fish sauce and turmeric inside and out. Leave for 15 minutes. Heat oil in a large wide pan over medium-high heat until shimmering. Fry the whole carp for 3-4 minutes per side until the skin is golden and crisp. The fish does not need to be cooked through — the braising will finish it. The frying firms the skin so it does not fall apart during the long braise.',
+            tip: 'Dry the fish completely with paper towels before frying — wet fish sticks to the pan and the skin tears. The skin should be dry to the touch before it goes into the oil.',
+        },
+        {
+            title: 'Build the braise base',
+            description: 'In a clay pot or heavy casserole, heat oil over medium heat. Fry sliced shallots and garlic until softened and fragrant — about 3 minutes. Add tomato wedges and cook for 2-3 minutes until beginning to soften. Add the rinsed pickled mustard greens and pineapple chunks. Stir to combine. The mustard greens should be rinsed but not squeezed dry — their residual liquid contributes to the broth.',
+            tip: 'Rinse the pickled mustard greens once under cold water — this removes excess salt and some of the sharpness while preserving the sour fermented flavor. Over-rinsing removes the sourness that makes the dish.',
+        },
+        {
+            title: 'Braise the fish',
+            description: 'Add the fried carp to the clay pot on top of the vegetables. Pour water or stock around the fish — it should come about halfway up the fish. Add fish sauce, sugar, and black pepper. Bring to a boil, then reduce to a steady simmer. Cover and braise for 25-30 minutes, basting the exposed fish with the braising liquid every 10 minutes. The fish is done when the flesh falls easily from the bones when tested with a chopstick.',
+            tip: 'Clay pot braising produces the most even result — the clay distributes heat gently and the porous walls allow slight evaporation that concentrates the broth. A heavy Dutch oven is the best substitute.',
+        },
+        {
+            title: 'Taste and balance the broth',
+            description: 'After 25 minutes, taste the braising liquid. It should be sour from the pickled greens and pineapple, savory from the fish sauce, slightly sweet from the tomato and sugar, and rich from the fish gelatin. Adjust: more fish sauce for salt, more pineapple for sourness, a pinch of sugar if too sharp. The balance should be the Vietnamese sweet-sour-salty combination with the fermented sourness of the mustard greens prominent.',
+            tip: 'The broth is as important as the fish. Many Vietnamese cooks consider the soup the best part of cá chép om dưa — eaten with rice after the fish has been taken.',
+        },
+        {
+            title: 'Add dill and serve from the clay pot',
+            description: 'In the last 2 minutes of braising, add the spring onion pieces and two-thirds of the fresh dill directly to the pot. Cover for 1 minute — the dill wilts and releases its aroma into the broth. Bring the clay pot to the table. Scatter remaining fresh dill, sliced chili, and spring onion over the top. Serve directly from the pot with steamed rice. The dill must be fresh and added at the last moment — dill added too early loses all its fragrance.',
+            tip: 'Reserve some fresh dill to add raw at the table — the combination of cooked dill (which has given its flavor to the broth) and raw dill (sharp and fresh) in the same bowl produces the full range of the herb\'s character.',
+        },
+    ],
+};
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
