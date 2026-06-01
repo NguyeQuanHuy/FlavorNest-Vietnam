@@ -687,11 +687,11 @@ export default function IngredientsPage() {
     const essentialCount = filtered.filter(i => i.essential).length;
 
     const CATEGORY_ICONS: Record<string, string> = {
-        'Sauces & Condiments': '🫙',
+        'Sauces & Condiments': '🍶',
         'Herbs & Aromatics': '🌿',
         'Noodles & Rice': '🍜',
         'Spices': '🌶️',
-        'Proteins': '🥩',
+        'Proteins': '🦐',
         'Vegetables': '🥬',
         'Fruits & Souring Agents': '🍋',
         'Dairy & Fats': '🥛',
