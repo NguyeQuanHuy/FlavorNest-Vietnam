@@ -110,7 +110,7 @@ export default function IngredientFinderHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1C1009]/90 via-[#2D1A0E]/85 to-[#1C1009]/95" />
 
       {/* Content */}
-      <div className="relative flex-1 flex flex-col justify-center px-4 pt-28 pb-12 max-w-5xl mx-auto w-full">
+      <div className="relative flex-1 flex flex-col justify-center px-4 pt-20 pb-6 max-w-5xl mx-auto w-full">
 
         {/* Header */}
         <motion.div
@@ -125,11 +125,11 @@ export default function IngredientFinderHero() {
               What is in your kitchen?
             </span>
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 6vw, 64px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, margin: '0 0 16px' }}>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, margin: '0 0 8px' }}>
             Pick your ingredients,<br />
             <span style={{ color: '#D97706', fontStyle: 'italic' }}>we find your dish.</span>
           </h1>
-          <p style={{ fontSize: 17, color: 'rgba(245,237,227,0.65)', maxWidth: 480, margin: '0 auto' }}>
+          <p style={{ fontSize: 14, color: 'rgba(245,237,227,0.65)', maxWidth: 480, margin: '0 auto' }}>
             Select what you have at home and our AI will suggest the perfect Vietnamese recipe to cook tonight.
           </p>
         </motion.div>
@@ -139,11 +139,11 @@ export default function IngredientFinderHero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: 'clamp(20px, 4vw, 36px)' }}
+          style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: 'clamp(14px, 2vw, 24px)' }}
         >
           {INGREDIENT_GROUPS.map((group, gi) => (
-            <div key={group.label} style={{ marginBottom: gi < INGREDIENT_GROUPS.length - 1 ? 20 : 0 }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 10 }}>
+            <div key={group.label} style={{ marginBottom: gi < INGREDIENT_GROUPS.length - 1 ? 12 : 0 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>
                 {group.emoji} {group.label}
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
