@@ -297,20 +297,20 @@ export default function TravelPage() {
                                 {REGIONS.map(region =>
                                     region.cities.map((city) => {
                                         const positions: Record<string, { top: string; left: string }> = {
-                                            'Hanoi': { top: '26%', left: '48%' },
-                                            'Sapa': { top: '18%', left: '35%' },
-                                            'Hạ Long Bay': { top: '22%', left: '56%' },
-                                            'Ninh Bình': { top: '31%', left: '46%' },
-                                            'Huế': { top: '46%', left: '50%' },
-                                            'Đà Nẵng': { top: '49%', left: '52%' },
-                                            'Hội An': { top: '51%', left: '51%' },
-                                            'Quy Nhơn': { top: '57%', left: '53%' },
-                                            'Phú Yên': { top: '60%', left: '54%' },
-                                            'Ho Chi Minh City': { top: '76%', left: '46%' },
-                                            'Mekong Delta': { top: '82%', left: '40%' },
-                                            'Phú Quốc': { top: '88%', left: '28%' },
-                                            'Đà Lạt': { top: '70%', left: '48%' },
-                                            'Vũng Tàu': { top: '78%', left: '50%' },
+                                            'Hanoi': { top: '24%', left: '46%' },
+                                             'Sapa': { top: '17%', left: '32%' },
+                                             'Hạ Long Bay': { top: '20%', left: '52%' },
+                                             'Ninh Bình': { top: '29%', left: '44%' },
+                                             'Huế': { top: '44%', left: '48%' },
+                                             'Đà Nẵng': { top: '47%', left: '50%' },
+                                             'Hội An': { top: '49%', left: '50%' },
+                                             'Quy Nhơn': { top: '55%', left: '52%' },
+                                             'Phú Yên': { top: '58%', left: '52%' },
+                                             'Ho Chi Minh City': { top: '74%', left: '44%' },
+                                             'Mekong Delta': { top: '80%', left: '38%' },
+                                             'Mekong Delta': { top: '80%', left: '38%' },
+                                             'Phú Quốc': { top: '86%', left: '26%' },
+                                             'Đà Lạt': { top: '68%', left: '46%' },
                                         };
                                         const pos = positions[city.name];
                                         if (!pos) return null;
