@@ -234,3 +234,20 @@ body {
         height: 260px !important;
     }
 }
+/* ── How-to cards mobile ── */
+@media (max-width: 640px) {
+    div[style*="repeat(auto-fill, minmax(300px"] {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    div[style*="repeat(auto-fill, minmax(300px"] > div > a > div {
+        border-radius: 12px !important;
+        padding: 14px !important;
+    }
+    div[style*="repeat(auto-fill, minmax(300px"] h3 {
+        font-size: 14px !important;
+    }
+    div[style*="repeat(auto-fill, minmax(300px"] p {
+        display: none !important;
+    }
+}
