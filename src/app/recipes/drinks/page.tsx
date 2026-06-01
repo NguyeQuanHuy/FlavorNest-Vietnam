@@ -530,16 +530,16 @@ export default function DrinksPage() {
                     <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, fontWeight: 700, color: '#2D1A0E', margin: '0 0 16px' }}>More to Discover</h2>
                     <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Breakfast', emoji: '🌅', href: '/recipes/breakfast' },
-                            { label: 'Main Dishes', emoji: '🍖', href: '/recipes/main-dishes' },
-                            { label: 'Desserts', emoji: '🍮', href: '/recipes/desserts' },
-                            { label: 'Street Food', emoji: '🥢', href: '/recipes/street-food' },
+                            { label: 'Breakfast', emoji: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>', href: '/recipes/breakfast' },
+                            { label: 'Main Dishes', emoji: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M3 11h18M3 11a9 9 0 0 0 18 0M12 2v4M8 3l1 3M16 3l-1 3"/></svg>', href: '/recipes/main-dishes' },
+                            { label: 'Desserts', emoji: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 2C8 2 5 5 5 9c0 3 2 5 4 6v2h6v-2c2-1 4-3 4-6 0-4-3-7-7-7z"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="10" y1="22" x2="14" y2="22"/></svg>', href: '/recipes/desserts' },
+                            { label: 'Street Food', emoji: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><line x1="8" y1="3" x2="10" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/><path d="M10 9Q12 7 14 9"/><path d="M10 14Q12 12 14 14"/></svg>', href: '/recipes/street-food' },
                         ].map(({ label, emoji, href }) => (
                             <Link key={href} href={href} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 18px', borderRadius: 100, border: '1.5px solid rgba(75,46,26,0.12)', background: 'white', textDecoration: 'none', fontSize: 13, fontWeight: 600, color: '#2D1A0E', transition: 'all 0.18s' }}
                                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = '#D97706'; el.style.color = '#D97706'; el.style.background = '#FEF3E2'; }}
                                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(75,46,26,0.12)'; el.style.color = '#2D1A0E'; el.style.background = 'white'; }}
                             >
-                                <span style={{ fontSize: 15 }}>{emoji}</span> {label}
+                                <span style={{ display: "flex", alignItems: "center", color: "#D97706" }} dangerouslySetInnerHTML={{ __html: emoji }} />{label}
                             </Link>
                         ))}
                     </div>
