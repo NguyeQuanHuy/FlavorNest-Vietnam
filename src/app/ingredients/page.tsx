@@ -689,7 +689,7 @@ export default function IngredientsPage() {
     const CATEGORY_ICONS: Record<string, string> = {
         'Sauces & Condiments': '🍶',
         'Herbs & Aromatics': '🌿',
-        'Noodles & Rice': '🍜',
+        'Noodles & Rice': '🌾',
         'Spices': '🌶️',
         'Proteins': '🦐',
         'Vegetables': '🥬',
