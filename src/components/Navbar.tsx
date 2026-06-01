@@ -91,7 +91,7 @@ export default function Navbar() {
               alt="FlavorNest"
               width="72"
               height="72"
-              style={{ flexShrink: 0, marginTop: '-4px' }}
+              style={{ flexShrink: 0, marginTop: '-4px', marginRight: '4px' }}
               className="transition-transform duration-300 group-hover:scale-110"
             />
             <div className="flex flex-col leading-none">
