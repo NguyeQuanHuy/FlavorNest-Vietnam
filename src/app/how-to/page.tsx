@@ -229,7 +229,7 @@ export default function HowToPage() {
                                                     </span>
                                                 </div>
 
-                                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.4, flex: 1 }}>
+                                                <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.35, flex: 1, letterSpacing: '-0.01em' }}>
                                                     {item.title}
                                                 </h3>
                                                 <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.55)', lineHeight: 1.6, margin: '0 0 14px' }}>
