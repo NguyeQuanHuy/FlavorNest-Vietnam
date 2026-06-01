@@ -7,7 +7,7 @@ import { getAllRecipes } from '@/data/index';
 
 const recipes = getAllRecipes();
 const recipeCount = recipes.length;
-const avgRating = (recipes.reduce((sum, r) => sum + (r.rating ?? 4.8), 0) / recipes.length).toFixed(1);
+const avgRating = (recipes.reduce((sum, r) => sum + (Number(r.rating) || 4.8), 0) / recipes.length).toFixed(1);
 
 const PILLARS = [
     { icon: '🏡', title: 'Truly Authentic', body: 'Every recipe sourced from Vietnamese home cooks and street vendors — not fusion restaurant menus.' },
