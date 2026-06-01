@@ -308,7 +308,6 @@ export default function TravelPage() {
                                              'Phú Yên': { top: '58%', left: '52%' },
                                              'Ho Chi Minh City': { top: '74%', left: '44%' },
                                              'Mekong Delta': { top: '80%', left: '38%' },
-                                             'Mekong Delta': { top: '80%', left: '38%' },
                                              'Phú Quốc': { top: '86%', left: '26%' },
                                              'Đà Lạt': { top: '68%', left: '46%' },
                                         };
