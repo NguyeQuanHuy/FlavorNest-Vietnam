@@ -695,7 +695,7 @@ export default function IngredientsPage() {
         'Vegetables': '🥬',
         'Fruits & Souring Agents': '🍋',
         'Dairy & Fats': '🥛',
-        'Pantry Staples': '🧂',
+        'Pantry Staples': '🍃',
     }
 
     const CATEGORY_COLORS: Record<string, string> = {
