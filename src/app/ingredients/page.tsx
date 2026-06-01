@@ -699,7 +699,7 @@ export default function IngredientsPage() {
     }
 
     const CATEGORY_COLORS: Record<string, string> = {
-        'Sauces & Condiments': '#D97706',
+        'Sauces & Condiments': '#5C3317',
         'Herbs & Aromatics': '#166534',
         'Noodles & Rice': '#0369A1',
         'Spices': '#7C3AED',
