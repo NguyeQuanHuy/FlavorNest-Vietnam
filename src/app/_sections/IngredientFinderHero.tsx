@@ -110,7 +110,7 @@ export default function IngredientFinderHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#1C1009]/90 via-[#2D1A0E]/85 to-[#1C1009]/95" />
 
       {/* Content */}
-      <div className="relative flex-1 flex flex-col justify-center px-4 pt-16 pb-4 max-w-5xl mx-auto w-full">
+      <div className="relative flex-1 flex flex-col justify-center px-4 pt-24 pb-4 max-w-5xl mx-auto w-full">
 
         {/* Header */}
         <motion.div
