@@ -251,7 +251,7 @@ export default function HowToPage() {
 
             {/* Bottom CTA */}
             <div style={{ background: '#2D1A0E', padding: '56px 24px', textAlign: 'center' }}>
-                <div style={{ fontSize: 22, marginBottom: 12 }}>🍜</div>
+                <div style={{ marginBottom: 16 }}><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="26" cy="26" r="26" fill="#D97706" opacity="0.15"/><path d="M14 30 Q26 38 38 30" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round"/><line x1="14" y1="30" x2="15" y2="22" stroke="#F5EDE3" strokeWidth="2" strokeLinecap="round"/><line x1="38" y1="30" x2="37" y2="22" stroke="#F5EDE3" strokeWidth="2" strokeLinecap="round"/><path d="M15 22 Q26 18 37 22" stroke="#F5EDE3" strokeWidth="2" strokeLinecap="round"/><path d="M20 22 Q23 16 26 19 Q29 16 32 22" stroke="#D97706" strokeWidth="2" strokeLinecap="round" fill="none"/><path d="M22 19 Q22 14 24 12" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" opacity="0.7"/><path d="M26 18 Q26 13 28 11" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" opacity="0.7"/><path d="M30 19 Q30 14 32 12" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" opacity="0.7"/></svg></div>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#fff', margin: '0 0 8px' }}>Ready to cook?</h3>
                 <p style={{ fontSize: 15, color: 'rgba(245,237,227,0.5)', marginBottom: 24 }}>Browse the full recipe collection.</p>
                 <Link href="/recipes" style={{ display: 'inline-block', background: '#D97706', color: 'white', fontWeight: 600, fontSize: 14, padding: '14px 32px', borderRadius: 100, textDecoration: 'none' }}>
