@@ -221,3 +221,16 @@ body {
         height: 220px !important;
     }
 }
+/* ── WhyFlavorNest mobile ── */
+@media (max-width: 768px) {
+    div[style*="gridTemplateColumns: '1fr 1fr'"][style*="gap: 64"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+    div[style*="gridTemplateColumns: 'repeat(4, 1fr)'"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    div[style*="height: 440px"] {
+        height: 260px !important;
+    }
+}
