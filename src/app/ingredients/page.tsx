@@ -691,7 +691,7 @@ export default function IngredientsPage() {
         'Herbs & Aromatics': '🌿',
         'Noodles & Rice': '🌾',
         'Spices': '🌶️',
-        'Proteins': '🦐',
+        'Proteins': '🥚',
         'Vegetables': '🥬',
         'Fruits & Souring Agents': '🍋',
         'Dairy & Fats': '🥛',
