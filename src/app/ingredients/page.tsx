@@ -692,7 +692,7 @@ export default function IngredientsPage() {
         'Noodles & Rice': '🌾',
         'Spices': '🌶️',
         'Proteins': '🦐',
-        'Vegetables': '🥬',
+        'Vegetables': '🥭',
         'Fruits & Souring Agents': '🍋',
         'Dairy & Fats': '🥛',
         'Pantry Staples': '🍃',
