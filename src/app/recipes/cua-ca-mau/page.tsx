@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'cua-ca-mau',
     title: 'Ca Mau Mud Crab Stir-Fry',
     subtitle: 'Cua Ca Mau Rang Me — the famous Ca Mau mud crab stir-fried in tamarind, fish sauce caramel and fragrant aromatics.',
-    category: 'SEAFOOD',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,

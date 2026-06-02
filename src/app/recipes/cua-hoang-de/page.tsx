@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'cua-hoang-de',
     title: 'Steamed King Crab',
     subtitle: 'Cua Hoang De — whole king crab steamed over lemongrass and ginger, served with salted egg butter dipping sauce.',
-    category: 'SEAFOOD',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '35 min',
     rating: 4.9,
