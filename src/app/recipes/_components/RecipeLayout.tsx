@@ -70,6 +70,7 @@ const schema = {
         name: recipe.title,
         alternateName: recipe.subtitle,
         description: recipe.intro,
+        image: [recipe.heroImage],
         recipeCuisine: 'Vietnamese',
         recipeCategory: recipe.category,
         recipeYield: `${recipe.baseServings} servings`,
