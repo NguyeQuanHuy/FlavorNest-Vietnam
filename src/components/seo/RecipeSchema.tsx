@@ -1,4 +1,6 @@
 // src/components/seo/RecipeSchema.tsx
+import type { UnifiedRecipe } from '@/data/index'
+
 export function RecipeSchema({ recipe }: { recipe: UnifiedRecipe }) {
   const schema = {
     '@context': 'https://schema.org',
