@@ -420,6 +420,23 @@ function LegacyRecipeView({
     slug: string;
     recipe: typeof LEGACY_RECIPES[keyof typeof LEGACY_RECIPES];
 }) {
+    const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Recipe',
+        name: recipe.title,
+        alternateName: recipe.subtitle,
+        description: recipe.description,
+        image: [recipe.image],
+        author: { '@type': 'Organization', name: 'FlavorNest Vietnam' },
+        recipeCuisine: 'Vietnamese',
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: recipe.rating,
+            ratingCount: recipe.reviews,
+            bestRating: '5',
+        },
+    }
+
     return (
         <main
             style={{
@@ -496,5 +513,9 @@ function LegacyRecipeView({
                 </div>
             </section>
         </main>
+        <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
     );
 }
