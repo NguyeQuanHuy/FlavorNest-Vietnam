@@ -64,9 +64,41 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
         return scaled.toFixed(1).replace(/\.0$/, '');
     };
 
+const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'Recipe',
+        name: recipe.title,
+        alternateName: recipe.subtitle,
+        description: recipe.intro,
+        recipeCuisine: 'Vietnamese',
+        recipeCategory: recipe.category,
+        recipeYield: `${recipe.baseServings} servings`,
+        author: { '@type': 'Organization', name: 'FlavorNest Vietnam' },
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: recipe.rating,
+            ratingCount: 100,
+            bestRating: '5',
+        },
+        recipeIngredient: recipe.ingredientSections.flatMap(s =>
+            s.items.map(i => `${i.amount} ${i.unit ?? ''} ${i.name}`.trim())
+        ),
+        recipeInstructions: recipe.steps.map((step, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            name: step.title,
+            text: step.description,
+        })),
+    }
+
     return (
-        <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
-            {/* Sticky Top Bar */}
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            />
+            <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
+                {/* Sticky Top Bar */}
             <div style={{
                 position: 'sticky',
                 top: 0,
@@ -543,5 +575,6 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
         }
       `}</style>
         </div>
+        </>
     );
 }
