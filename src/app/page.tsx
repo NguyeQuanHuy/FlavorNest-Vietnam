@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: 'https://flavornest-vietnam.com',
+    url: 'https://flavor-nest-vietnam.vercel.app',
     title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
     description: "Your nest of authentic Vietnamese flavors. 100+ tested recipes made simple at home.",
     siteName: 'FlavorNest Vietnam',
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     description: "Authentic Vietnamese recipes made simple at home.",
     images: ['https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80'],
   },
-  alternates: { canonical: 'https://flavornest-vietnam.com' },
+  alternates: { canonical: 'https://flavor-nest-vietnam.vercel.app' },
 }
 
 // ── JSON-LD Structured Data ───────────────────────────────────────────────────
@@ -111,8 +111,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'FlavorNest Vietnam',
-  url: 'https://flavornest-vietnam.com',
-  logo: 'https://flavornest-vietnam.com/logo.png',
+  url: 'https://flavor-nest-vietnam.vercel.app',
+  logo: 'https://flavor-nest-vietnam.vercel.app/logo.png',
   description: "Authentic Vietnamese recipes made simple for every home kitchen.",
   sameAs: [
     'https://instagram.com/flavornest_vietnam',
@@ -124,10 +124,10 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'FlavorNest Vietnam',
-  url: 'https://flavornest-vietnam.com',
+  url: 'https://flavor-nest-vietnam.vercel.app',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://flavornest-vietnam.com/recipes?q={search_term_string}',
+    target: 'https://flavor-nest-vietnam.vercel.app/recipes?q={search_term_string}',
     'query-input': 'required name=search_term_string',
   },
 }
