@@ -104,17 +104,29 @@ export async function generateMetadata({
   const { slug } = await params
   const detailed = getRecipeDetailed(slug)
 
-  if (detailed) {
+if (detailed) {
     return {
       title: `${detailed.title} (${detailed.subtitle}) — FlavorNest Vietnam`,
       description: detailed.shortDescription,
+      keywords: `${detailed.title}, ${detailed.subtitle}, Vietnamese recipe, cách nấu ${detailed.subtitle}, authentic Vietnamese food`,
       openGraph: {
         title: detailed.title,
         description: detailed.shortDescription,
         images: [{ url: detailed.image, width: 1200, height: 630, alt: detailed.title }],
       },
+      twitter: {
+        card: 'summary_large_image',
+        title: detailed.title,
+        description: detailed.shortDescription.slice(0, 155),
+        images: [detailed.image],
+      },
       alternates: {
         canonical: `https://flavor-nest-vietnam.vercel.app/recipes/${slug}`,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
       },
     }
   }
@@ -125,7 +137,14 @@ export async function generateMetadata({
   return {
     title: `${legacy.title} — Authentic Vietnamese Recipe | FlavorNest Vietnam`,
     description: legacy.description,
-    openGraph: {
+      keywords: `${legacy.title}, ${legacy.subtitle}, Vietnamese recipe, cách nấu ${legacy.subtitle}`,
+      twitter: {
+        card: 'summary_large_image',
+        title: legacy.title,
+        description: legacy.description,
+        images: [legacy.image],
+      },
+      openGraph: {
       title: legacy.title,
       description: legacy.description,
       images: [{ url: legacy.image, width: 1200, height: 630, alt: legacy.title }],
