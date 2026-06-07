@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import VietnamMap from './VietnamMap';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ── Data ────────────────────────────────────────────────────────────────────
@@ -283,73 +284,30 @@ export default function TravelPage() {
                 {/* Map + Region Overview */}
                 <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', margin: '64px 0' }}>
 
-                    {/* SVG Vietnam Map */}
-                    <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
-                        <div style={{ background: '#fff', borderRadius: '12px', padding: '24px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
-                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '16px', textAlign: 'center' }}>VIETNAM</p>
-                            <div style={{ position: 'relative' }}>
-                                <img
-                                    src="/images/vietnam-map.png"
-                                    alt="Vietnam map"
-                                    style={{ width: '100%', opacity: 0.85 }}
+                        {/* SVG Vietnam Map */}
+                        <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
+                            <div style={{ background: '#fff', borderRadius: '16px', padding: '20px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
+                                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '12px', textAlign: 'center' }}>VIETNAM</p>
+                                <VietnamMap
+                                    cities={REGIONS.flatMap(r => r.cities.map(c => ({ ...c, region: r.id })))}
+                                    activeCity={activeCity}
+                                    activeRegion={activeRegion}
+                                    onCityClick={(cityName, regionId) => { setActiveRegion(regionId); setActiveCity(activeCity === cityName ? null : cityName); }}
+                                    onRegionClick={(regionId) => { setActiveRegion(activeRegion === regionId ? null : regionId); setActiveCity(null); }}
                                 />
-                                {/* City dots overlay */}
-                                {REGIONS.map(region =>
-                                    region.cities.map((city) => {
-                                        const positions: Record<string, { top: string; left: string }> = {
-                                            'Hanoi': { top: '30%', left: '52%' },
-                                             'Sapa': { top: '22%', left: '36%' },
-                                             'Hạ Long Bay': { top: '26%', left: '60%' },
-                                             'Ninh Bình': { top: '34%', left: '50%' },
-                                             'Huế': { top: '46%', left: '54%' },
-                                             'Đà Nẵng': { top: '49%', left: '56%' },
-                                             'Hội An': { top: '51%', left: '55%' },
-                                             'Quy Nhơn': { top: '57%', left: '57%' },
-                                             'Phú Yên': { top: '60%', left: '57%' },
-                                             'Ho Chi Minh City': { top: '75%', left: '48%' },
-                                             'Mekong Delta': { top: '80%', left: '42%' },
-                                             'Phú Quốc': { top: '85%', left: '28%' },
-                                             'Đà Lạt': { top: '69%', left: '50%' },
-                                        };
-                                        const pos = positions[city.name];
-                                        if (!pos) return null;
-                                        const isActive = activeCity === city.name;
-                                        return (
-                                            <div key={city.name}
-                                                onClick={() => { setActiveRegion(region.id); setActiveCity(city.name === activeCity ? null : city.name); }}
-                                                style={{ position: 'absolute', top: pos.top, left: pos.left, transform: 'translate(-50%,-50%)', cursor: 'pointer', zIndex: 10 }}>
-                                                <div style={{
-                                                    width: isActive ? 14 : 9, height: isActive ? 14 : 9,
-                                                    borderRadius: '50%',
-                                                    background: isActive ? region.color : '#fff',
-                                                    border: `2px solid ${region.color}`,
-                                                    boxShadow: isActive ? `0 0 0 4px ${region.color}33` : '0 1px 4px rgba(0,0,0,0.3)',
-                                                    transition: 'all 0.2s'
-                                                }} />
-                                                {isActive && (
-                                                    <div style={{ position: 'absolute', left: 16, top: -4, background: region.color, color: '#fff', fontSize: 9, fontWeight: 700, padding: '2px 7px', borderRadius: 100, whiteSpace: 'nowrap' }}>
-                                                        {city.name}
-                                                    </div>
-                                                )}
-                                            </div>
-                                        );
-                                    })
-                                )}
-                            </div>
-
-                            {/* Legend */}
-                            <div style={{ marginTop: '16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '12px' }}>
-                                {REGIONS.map(r => (
-                                    <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', cursor: 'pointer' }}
-                                        onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
-                                        <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
-                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
-                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
-                                    </div>
-                                ))}
+                                {/* Legend */}
+                                <div style={{ marginTop: '12px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '10px' }}>
+                                    {REGIONS.map(r => (
+                                        <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px', cursor: 'pointer' }}
+                                            onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
+                                            <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
+                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
+                                            <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                     {/* Region + City Content */}
                     <div>
