@@ -12,24 +12,9 @@ interface Category {
 
 const PhoIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <ellipse cx="24" cy="32" rx="16" ry="8" fill="#D97706" opacity="0.18" />
-    <path d="M8 26c0 8 32 8 32 0" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M10 26c1-8 6-14 14-14s13 6 14 14" fill="#4B2E1A" opacity="0.6" />
-    <path d="M10 26c1-8 6-14 14-14s13 6 14 14" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M16 20c2-2 4-3 8-3s6 1 8 3" stroke="#F5EDE3" strokeWidth="1" opacity="0.5" fill="none" />
-    <circle cx="18" cy="24" r="2" fill="#D97706" opacity="0.8" />
-    <circle cx="24" cy="26" r="1.5" fill="#F5EDE3" opacity="0.6" />
-    <circle cx="30" cy="24" r="2" fill="#D97706" opacity="0.8" />
-    <path d="M20 14c0-4 2-6 2-6s-1 3 0 6" stroke="#4B2E1A" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M24 12c0-4 2-5 2-5s-1 2 0 5" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M28 14c0-4 2-6 2-6s-1 3 0 6" stroke="#4B2E1A" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
+const PhoIcon = () => (
+  <img src="/images/pho-icon.png" alt="Pho" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
-
-const RiceNoodleIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M16 8 Q20 20 16 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
-    <path d="M24 6 Q28 20 24 38" stroke="#D97706" strokeWidth="2.5" strokeLinecap="round" fill="none" />
     <path d="M32 8 Q28 20 32 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
     <path d="M13 22 Q24 18 35 22" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
     <path d="M12 28 Q24 24 36 28" stroke="#F5EDE3" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.4" />
