@@ -38,7 +38,7 @@ const RiceNoodleIcon = () => (
 )
 
 const BanhMiIcon = () => (
-  <img src="/images/banh-mi-icon.png" alt="Banh Mi" style={{ width: 56, height: 56, objectFit: "contain" }} />
+  <img src="/images/banh-mi-icon.png" alt="Banh Mi" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
 const FreshRollIcon = () => (
