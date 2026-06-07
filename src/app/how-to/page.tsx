@@ -72,6 +72,7 @@ const GUIDES = [
             { title: 'How to Balance Vietnamese Flavors', slug: 'balance-flavors', desc: 'Sweet, sour, salty, bitter, spicy — the 5-element framework. How to fix any dish that tastes wrong.', time: '7 min read', level: 'Essential', isHowTo: true },
             { title: 'Nem Nem: How to Season Vietnamese Food', slug: 'season-vietnamese-food', desc: 'Fish sauce, sugar, lime, MSG — what each one does and when to add it. The 4-stage tasting sequence.', time: '8 min read', level: 'Essential', isHowTo: true },
             { title: 'How to Julienne Vietnamese Vegetables', slug: 'julienne-vietnamese-vegetables', desc: 'Daikon, carrot, green mango — the correct knife angle, strip thickness, and why a mandoline is not always better.', time: '8 min read', level: 'Essential', isHowTo: true },
+            { title: 'How to Properly Wash & Store Fresh Herbs', slug: 'wash-store-fresh-herbs', desc: 'Rau răm, húng quế, ngò gai — how to clean without bruising, dry without wilting, and keep herbs fresh for a week.', time: '6 min read', level: 'Essential', isHowTo: true },
         ],
     },
     {
