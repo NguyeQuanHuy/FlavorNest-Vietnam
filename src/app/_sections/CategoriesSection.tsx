@@ -38,14 +38,7 @@ const RiceNoodleIcon = () => (
 )
 
 const BanhMiIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M8 24c0-6 7-12 16-12s16 6 16 12" fill="#D97706" opacity="0.9" />
-    <path d="M8 24c0-6 7-12 16-12s16 6 16 12" stroke="#4B2E1A" strokeWidth="1" fill="none" />
-    <path d="M8 24 Q24 30 40 24 Q40 30 24 32 Q8 30 8 24Z" fill="#F5EDE3" opacity="0.85" />
-    <path d="M12 22 Q24 26 36 22" stroke="#166534" strokeWidth="2" strokeLinecap="round" fill="none" />
-    <path d="M14 25 Q24 27 34 25" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.7" />
-    <path d="M10 12 Q16 8 22 10 Q18 6 24 7" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
-  </svg>
+  <img src="/images/banh-mi-icon.png" alt="Banh Mi" style={{ width: 56, height: 56, objectFit: "contain" }} />
 )
 
 const FreshRollIcon = () => (
