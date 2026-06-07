@@ -248,9 +248,14 @@ export default function BentoGrid({
   ]
 
   return (
-    <section style={{ background: '#FAFAF7', padding: '80px 24px 96px', fontFamily: "'DM Sans', system-ui, sans-serif" }}
+    <section style={{ background: '#F5EDE3', padding: '80px 24px 96px', fontFamily: "'DM Sans', system-ui, sans-serif", position: 'relative' }}
       aria-label="Featured recipes and stories">
-
+      {/* Grid pattern overlay */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%234B2E1A' stroke-width='0.4' stroke-opacity='0.12'/%3E%3C/svg%3E")`,
+        backgroundSize: '40px 40px',
+      }} />
       <style>{`
         .bento-card { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
         .bento-card:hover { transform: translateY(-4px); box-shadow: 0 20px 56px rgba(45,26,14,0.22); }
@@ -286,7 +291,7 @@ export default function BentoGrid({
         }
       `}</style>
 
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
         {/* ── Section header ── */}
         <motion.div {...fadeUp(0)} style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>
