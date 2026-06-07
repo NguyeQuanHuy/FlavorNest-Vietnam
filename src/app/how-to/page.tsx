@@ -74,6 +74,7 @@ const GUIDES = [
             { title: 'How to Julienne Vietnamese Vegetables', slug: 'julienne-vietnamese-vegetables', desc: 'Daikon, carrot, green mango — the correct knife angle, strip thickness, and why a mandoline is not always better.', time: '8 min read', level: 'Essential', isHowTo: true },
             { title: 'How to Properly Wash & Store Fresh Herbs', slug: 'wash-store-fresh-herbs', desc: 'Rau răm, húng quế, ngò gai — how to clean without bruising, dry without wilting, and keep herbs fresh for a week.', time: '6 min read', level: 'Essential', isHowTo: true },
             { title: 'How to Toast & Grind Vietnamese Spices', slug: 'toast-grind-vietnamese-spices', desc: 'Star anise, cinnamon, cardamom, clove — dry-toasting to wake the oils, grinding to the right coarseness for pho, bun bo, and five-spice.', time: '10 min read', level: 'Essential', isHowTo: true },
+            { title: 'How to Render Pork Fat & Make Tóp Mỡ', slug: 'render-pork-fat', desc: 'One piece of fat, thirty minutes of low heat — liquid mo heo for cooking and crispy top mo for garnishing. The technique behind com tam.', time: '9 min read', level: 'Essential', isHowTo: true },
         ],
     },
     {
