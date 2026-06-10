@@ -14,6 +14,17 @@ const PhoIcon = () => (
   <img src="/images/pho-icon.png" alt="Pho" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
+const RiceNoodleIcon = () => (
+  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+    <path d="M16 8 Q20 20 16 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
+    <path d="M24 6 Q28 20 24 38" stroke="#D97706" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+    <path d="M32 8 Q28 20 32 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
+    <path d="M13 22 Q24 18 35 22" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
+    <path d="M12 28 Q24 24 36 28" stroke="#F5EDE3" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.4" />
+    <ellipse cx="24" cy="38" rx="10" ry="3" fill="#D97706" opacity="0.2" />
+  </svg>
+)
+
 const BanhMiIcon = () => (
   <img src="/images/banh-mi-icon.png" alt="Banh Mi" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
