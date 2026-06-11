@@ -258,8 +258,8 @@ export default function BentoGrid({
       }} />
       <style>{`
         .bento-card { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
-        .bento-card:hover { transform: translateY(-4px); box-shadow: 0 20px 56px rgba(45,26,14,0.22); }
-        .bento-card:hover .bento-img { transform: scale(1.05) !important; }
+        .bento-card:hover { box-shadow: 0 20px 56px rgba(45,26,14,0.22); }
+        .bento-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 3px solid transparent; pointer-events: none; z-index: 5; transition: border-color 0.25s ease; } .bento-card:hover::after { border-color: #D97706; }
         .bento-img { transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94) !important; }
 
         /* Story card — minimal hover (lift + subtle image zoom) */
@@ -268,10 +268,10 @@ export default function BentoGrid({
                       box-shadow 0.3s ease !important;
         }
         .story-card:hover {
-          transform: translateY(-3px) !important;
+          
           box-shadow: 0 16px 40px rgba(13,6,2,0.32) !important;
         }
-        .story-card:hover .bento-img { transform: scale(1.04) !important; }
+        .story-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 3px solid transparent; pointer-events: none; z-index: 5; transition: border-color 0.25s ease; } .story-card:hover::after { border-color: #D97706; }
         @media (max-width: 768px) {
           .bento-grid > div,
           .bento-grid > [class*="motion"] {

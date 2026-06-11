@@ -15,14 +15,7 @@ const PhoIcon = () => (
 )
 
 const RiceNoodleIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M16 8 Q20 20 16 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
-    <path d="M24 6 Q28 20 24 38" stroke="#D97706" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-    <path d="M32 8 Q28 20 32 36" stroke="#F5EDE3" strokeWidth="2.5" strokeLinecap="round" fill="none" opacity="0.9" />
-    <path d="M13 22 Q24 18 35 22" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-    <path d="M12 28 Q24 24 36 28" stroke="#F5EDE3" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.4" />
-    <ellipse cx="24" cy="38" rx="10" ry="3" fill="#D97706" opacity="0.2" />
-  </svg>
+  <img src="/images/bun-icon.png" alt="Rice Noodles" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
 const BanhMiIcon = () => (
@@ -42,18 +35,7 @@ const FreshRollIcon = () => (
 )
 
 const BrokenRiceIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M8 30 Q10 22 24 22 Q38 22 40 30 L38 36 Q24 40 10 36Z" fill="#D97706" opacity="0.2" />
-    <path d="M8 30 Q10 22 24 22 Q38 22 40 30" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M10 30 Q24 34 38 30" stroke="#F5EDE3" strokeWidth="1" fill="none" opacity="0.4" />
-    <ellipse cx="18" cy="26" rx="2" ry="1" fill="#F5EDE3" opacity="0.7" transform="rotate(-20 18 26)" />
-    <ellipse cx="24" cy="25" rx="2" ry="1" fill="#F5EDE3" opacity="0.7" transform="rotate(10 24 25)" />
-    <ellipse cx="30" cy="26" rx="2" ry="1" fill="#F5EDE3" opacity="0.7" transform="rotate(-15 30 26)" />
-    <ellipse cx="21" cy="28" rx="1.5" ry="1" fill="#F5EDE3" opacity="0.5" transform="rotate(5 21 28)" />
-    <ellipse cx="27" cy="28" rx="1.5" ry="1" fill="#F5EDE3" opacity="0.5" transform="rotate(-10 27 28)" />
-    <path d="M20 18 Q22 12 24 10 Q26 12 28 18" stroke="#166534" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-    <path d="M24 10 Q24 14 23 18" stroke="#166534" strokeWidth="1" fill="none" opacity="0.6" />
-  </svg>
+  <img src="/images/com-tam-icon.png" alt="Broken Rice" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
 const StreetFoodIcon = () => (
@@ -71,18 +53,7 @@ const StreetFoodIcon = () => (
 )
 
 const SweetSoupIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M12 20 Q10 34 24 36 Q38 34 36 20Z" fill="#D97706" opacity="0.2" />
-    <path d="M12 20 Q10 34 24 36 Q38 34 36 20" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M10 20 L38 20" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M16 20 L14 14 L18 14" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-    <path d="M24 20 L24 12" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M32 20 L34 14 L30 14" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-    <circle cx="20" cy="28" r="2.5" fill="#F5EDE3" opacity="0.5" />
-    <circle cx="28" cy="30" r="2" fill="#D97706" opacity="0.6" />
-    <circle cx="24" cy="26" r="1.5" fill="#F5EDE3" opacity="0.4" />
-    <path d="M14 36 Q24 40 34 36" stroke="#D97706" strokeWidth="1" fill="none" opacity="0.4" />
-  </svg>
+  <img src="/images/che-icon.png" alt="Sweet Soup" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
 const GrilledIcon = () => (
