@@ -150,7 +150,7 @@ const FALLBACK_STORIES: StoryItem[] = [
 
 // ── Animation variants ─────────────────────────────────────────────────────────
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 24 },
+  initial: false,
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
   transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
@@ -359,7 +359,7 @@ export default function BentoGrid({
           {activeTab === 'recipes' && (
             <motion.div
               key="recipes"
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -382,7 +382,7 @@ export default function BentoGrid({
           {activeTab === 'stories' && (
             <motion.div
               key="stories"
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -415,7 +415,7 @@ export default function BentoGrid({
           {activeTab === 'trending' && (
             <motion.div
               key="trending"
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
