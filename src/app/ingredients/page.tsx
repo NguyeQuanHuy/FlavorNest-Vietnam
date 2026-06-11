@@ -811,6 +811,11 @@ export default function IngredientsPage() {
                                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }}
                                             style={{ overflow: 'hidden' }}>
                                             <div style={{ padding: '0 16px 16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '14px' }}>
+                                                    {INGREDIENT_IMAGES[ing.name] && (
+                                                        <div style={{ marginBottom: '14px', borderRadius: '8px', overflow: 'hidden', height: '140px', background: '#FDFAF7' }}>
+                                                            <img src={INGREDIENT_IMAGES[ing.name]} alt={ing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                                                        </div>
+                                                    )}
                                                 <div style={{ marginBottom: '10px' }}>
                                                     <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 700, color: color, letterSpacing: '1px', textTransform: 'uppercase' }}>USED IN: </span>
                                                     <span style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: '#4B2E1A' }}>{ing.usedIn}</span>
