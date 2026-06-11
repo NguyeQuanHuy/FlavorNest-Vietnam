@@ -23,15 +23,7 @@ const BanhMiIcon = () => (
 )
 
 const FreshRollIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <rect x="10" y="16" width="28" height="16" rx="8" fill="#F5EDE3" opacity="0.15" stroke="#F5EDE3" strokeWidth="1.5" />
-    <path d="M18 20 Q24 18 30 20" stroke="#166534" strokeWidth="2" strokeLinecap="round" fill="none" />
-    <path d="M16 24 Q24 22 32 24" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-    <path d="M18 28 Q24 26 30 28" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-    <ellipse cx="10" cy="24" rx="4" ry="8" fill="#F5EDE3" opacity="0.12" stroke="#F5EDE3" strokeWidth="1.5" />
-    <ellipse cx="38" cy="24" rx="4" ry="8" fill="#F5EDE3" opacity="0.12" stroke="#F5EDE3" strokeWidth="1.5" />
-    <circle cx="24" cy="24" r="2" fill="#D97706" opacity="0.6" />
-  </svg>
+  <img src="/images/goi-cuon-icon.png" alt="Fresh Rolls" style={{ width: 56, height: 56, objectFit: "contain", mixBlendMode: "multiply" }} />
 )
 
 const BrokenRiceIcon = () => (
