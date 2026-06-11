@@ -7,15 +7,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 // ── Data ────────────────────────────────────────────────────────────────────
 
 const INGREDIENT_IMAGES: Record<string, string> = {
-    'Fish Sauce': 'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=120&q=70',
+    'Fish Sauce': '/images/ingredients/fish-sauce.jpg',
     'Soy Sauce': 'https://images.unsplash.com/photo-1506802913710-1d5e9ff7e822?w=120&q=70',
     'Oyster Sauce': 'https://images.unsplash.com/photo-1611171711912-e3f37b47bb70?w=120&q=70',
     'Hoisin Sauce': 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=120&q=70',
     'Shrimp Paste': 'https://images.unsplash.com/photo-1559847844-5315695dadae?w=120&q=70',
-    'Maggi Seasoning Sauce': 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=120&q=70',
+    'Maggi Seasoning Sauce': '/images/ingredients/maggi-seasoning-sauce.jpg',
     'Rice Vinegar': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=70',
-    'Coconut Milk': 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=120&q=70',
-    'Lemongrass': 'https://images.unsplash.com/photo-1587334274328-64186a80aeee?w=120&q=70',
+    'Coconut Milk': '/images/ingredients/coconut-milk.jpg',
+    'Lemongrass': '/images/ingredients/lemongrass.jpg',
     'Galangal': 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=120&q=70',
     'Shallots': 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=120&q=70',
     'Garlic': 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=120&q=70',
