@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
@@ -34,6 +34,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
     const [servings, setServings] = useState(recipe.baseServings);
     const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(new Set());
     const [doneSteps, setDoneSteps] = useState<Set<number>>(new Set());
+    const [introOpen, setIntroOpen] = useState(false);
 
     const scaleFactor = servings / recipe.baseServings;
 
@@ -137,7 +138,7 @@ const schema = {
                             fontFamily: 'DM Sans, sans-serif',
                             fontSize: 13,
                             fontWeight: 600,
-                            color: '#2D1A0E',
+                            color: '#D97706',
                             textTransform: 'uppercase',
                             letterSpacing: '0.06em',
                             overflow: 'hidden',
@@ -152,7 +153,7 @@ const schema = {
 
             {/* Hero Image */}
             <motion.div
-                initial={{ opacity: 0 }}
+                initial={false}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 style={{
@@ -167,41 +168,34 @@ const schema = {
             >
                 {/* Text bên trái */}
                 <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                        <div style={{ width: '32px', height: '2px', background: '#D97706' }} />
-                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>
-                            {recipe.category}
-                        </span>
-                    </div>
-                    <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 3rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.1, marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                        {recipe.title}
-                    </h2>
-                    <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', color: '#D97706', fontSize: 'clamp(1rem, 1.5vw, 1.25rem)', lineHeight: 1.6, marginBottom: '28px' }}>
-                        {recipe.subtitle}
-                    </p>
-                    <div style={{ display: 'flex', gap: '32px' }}>
+                <div style={{ paddingRight: 24 }}>
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.08, marginBottom: 16, letterSpacing: '-0.01em' }}>{recipe.title}</h1>
+                    <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', color: '#D97706', fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', lineHeight: 1.65, marginBottom: 32, opacity: 0.9 }}>{recipe.subtitle}</p>
+                    <div style={{ display: 'flex', gap: 0, borderTop: '1px solid rgba(75,46,26,0.1)', borderBottom: '1px solid rgba(75,46,26,0.1)', padding: '20px 0' }}>
                         {[
-                            { icon: '◷', val: recipe.totalTime, lbl: 'Total Time' },
-                            { icon: '◈', val: recipe.difficulty, lbl: 'Difficulty' },
-                            { icon: '◎', val: `${recipe.baseServings} bowls`, lbl: 'Serves' },
-                        ].map(s => (
-                            <div key={s.lbl}>
-                                <div style={{ fontSize: '20px', marginBottom: '4px' }}>{s.icon}</div>
-                                <div style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.2rem', fontWeight: 700, color: '#2D1A0E' }}>{s.val}</div>
-                                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: 'rgba(75,46,26,0.5)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{s.lbl}</div>
+                            { icon: '⏱', val: recipe.totalTime, lbl: 'Total Time' },
+                            { icon: '◎', val: recipe.baseServings + ' servings', lbl: 'Serves' },
+                        ].map((s,i) => (
+                            <div key={s.lbl} style={{ flex: 1, textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(75,46,26,0.1)' : 'none', padding: '0 16px' }}>
+                                <div style={{ fontSize: 22, marginBottom: 6, color: '#D97706' }}>{s.icon}</div>
+                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontWeight: 700, color: '#2D1A0E', marginBottom: 2 }}>{s.val}</div>
+                                <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: 'rgba(75,46,26,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{s.lbl}</div>
                             </div>
                         ))}
                     </div>
                 </div>
+            </div>
+
+
             
                 {/* Ảnh bên phải */}
-                <div style={{ position: 'relative', height: 'clamp(240px, 30vw, 380px)', borderRadius: '0 16px 0 16px', overflow: 'hidden' }}>
+                <div style={{ position: 'relative', height: 'clamp(280px, 35vw, 460px)', borderRadius: '2px 24px 2px 24px', overflow: 'hidden', boxShadow: '0 24px 64px rgba(45,26,14,0.18)' }}>
                     <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> 
                 </div>
             </motion.div>
 
             {/* Intro paragraph */}
-            <div style={{ maxWidth: '720px', margin: '40px auto', padding: '0 24px' }}>
+            <div style={{ maxWidth: '1000px', margin: '40px auto', padding: '0 24px' }}>
                 <div style={{
                     position: 'relative',
                     padding: '36px 44px',
@@ -215,21 +209,12 @@ const schema = {
                     <div style={{ position: 'absolute', top: -6, left: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
                     <div style={{ position: 'absolute', bottom: -6, right: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
             
-                    {/* Quote mark */}
-                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginBottom: 20, opacity: 0.3 }}>"</div>
-            
-                    <p style={{
-                        fontFamily: 'Playfair Display, serif',
-                        fontStyle: 'italic',
-                        color: '#4B2E1A',
-                        fontSize: '1.15rem',
-                        lineHeight: 1.85,
-                        textAlign: 'center',
-                        margin: 0,
-                    }}>
+                    <div style={{ overflow: 'hidden', maxHeight: introOpen ? 2000 : 80, transition: 'max-height 0.4s ease' }}>
+                    <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', color: '#4B2E1A', fontSize: '1.15rem', lineHeight: 1.85, textAlign: 'center', margin: 0 }}>
                         {recipe.intro}
                     </p>
-            
+                    </div>
+                    <button onClick={() => setIntroOpen(o => !o)} style={{ display: 'block', margin: '8px auto 0', fontSize: 12, color: '#D97706', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '0.08em' }}>{introOpen ? '▲ Show less' : '▼ Read more'}</button>
                     <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginTop: 16, textAlign: 'right', opacity: 0.3 }}>"</div>
                 </div>
             </div>
@@ -266,7 +251,7 @@ const schema = {
                             marginBottom: '20px',
                         }}
                     >
-                        Ingredients
+                        🥘 Ingredients
                     </h2>
 
                     {/* Servings scaler */}
@@ -480,9 +465,9 @@ const schema = {
                             return (
                                 <motion.li
                                     key={i}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    initial={false}
+
+
                                     transition={{ delay: i * 0.05 }}
                                     style={{
                                         display: 'flex',
@@ -575,6 +560,15 @@ const schema = {
           }
         }
       `}</style>
+            {/* Comments Section */}
+            <div style={{ maxWidth: 900, margin: '0 auto 60px', padding: '0 24px' }}>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 700, color: '#2D1A0E', marginBottom: 24, paddingBottom: 12, borderBottom: '2px solid #D97706' }}>Comments</h3>
+                <div style={{ marginBottom: 24 }}>
+                    <textarea placeholder='Share your thoughts or tips about this recipe...' rows={4} style={{ width: '100%', padding: '14px 16px', fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: '#2D1A0E', background: '#fff', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 12, resize: 'vertical', outline: 'none', boxSizing: 'border-box' }} />
+                    <button style={{ marginTop: 10, padding: '10px 28px', background: '#D97706', color: 'white', border: 'none', borderRadius: 100, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: 'pointer', letterSpacing: '0.04em' }}>Post Comment</button>
+                </div>
+                <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', marginTop: 8 }}>No comments yet. Be the first to share your experience!</p>
+            </div>
         </div>
         </>
     );

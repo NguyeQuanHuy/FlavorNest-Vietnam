@@ -174,16 +174,16 @@ function RecipesInner() {
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };
 
     return (
-        <main style={{ minHeight: "100vh", background: "#FAFAF7", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+        <main style={{ minHeight: "100vh", background: "transparent", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
         * { box-sizing: border-box; }
-        .recipe-card { background:white; border-radius:0; overflow:hidden; border:none; cursor:pointer; text-decoration:none; display:block; }
+        .recipe-card { background:white; border-radius:0; overflow:hidden; border:none; cursor:pointer; text-decoration:none; display:block; position:relative; } .recipe-card::before, .recipe-card::after { content:''; position:absolute; width:20px; height:20px; opacity:0; transition:opacity 0.25s ease; z-index:10; pointer-events:none; } .recipe-card::before { top:0; left:0; border-top:3px solid #D97706; border-left:3px solid #D97706; } .recipe-card::after { bottom:0; right:0; border-bottom:3px solid #D97706; border-right:3px solid #D97706; } .recipe-card:hover::before, .recipe-card:hover::after { opacity:1; }
         .recipe-card:hover .r-img { transform:scale(1.04); }
         .r-img { transition:transform 0.5s ease; }
         .filter-pill { border:1.5px solid rgba(75,46,26,0.12); border-radius:100px; padding:7px 18px; font-size:13px; font-weight:500; color:rgba(75,46,26,0.55); background:transparent; cursor:pointer; transition:all 0.18s; white-space:nowrap; font-family:inherit; }
         .filter-pill:hover { color:#D97706; border-color:rgba(217,119,6,0.4); }
         .filter-pill.active { background:#4B2E1A; color:white; border-color:#4B2E1A; }
-        .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+        .recipes-grid-inner { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
         @media (max-width: 768px) {
           .recipes-hero { padding-top: 90px !important; padding-bottom: 14px !important; }
           .recipes-hero h1 { font-size: 24px !important; margin-bottom: 6px !important; line-height: 1.15 !important; }
@@ -217,7 +217,7 @@ function RecipesInner() {
       `}</style>
 
             {/* HERO */}
-            <section className="recipes-hero" style={{ background: "linear-gradient(135deg,#FEF3E2 0%,#FDE8C5 60%,#FBD99A 100%)", paddingTop: 96, paddingBottom: 32, paddingLeft: 20, paddingRight: 20 }}>
+            <section className="recipes-hero" style={{ position: "relative", background: "linear-gradient(135deg,#FEF3E2 0%,#FDE8C5 60%,#FBD99A 100%)", paddingTop: 96, paddingBottom: 32, paddingLeft: 20, paddingRight: 20 }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                         <div style={{ width: 32, height: 1.5, background: "#D97706" }} />
@@ -267,6 +267,11 @@ function RecipesInner() {
                             )}
                         </p>
                     </div>
+                <div style={{ position: 'absolute', right: 48, top: '55%', transform: 'translateY(-50%)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6, pointerEvents: 'none' }} className="hidden lg:grid">
+                    {['/images/pho-icon.png','/images/banh-mi-icon.png','/images/goi-cuon-icon.png','/images/com-tam-icon.png'].map((src,i) => (
+                        <img key={i} src={src} alt="" style={{ width: 80, height: 80, objectFit: 'contain', filter: 'drop-shadow(0 4px 16px rgba(217,119,6,0.35))' }} />
+                    ))}
+                </div>
                 </div>
             </section>
 

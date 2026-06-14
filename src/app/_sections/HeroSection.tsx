@@ -79,6 +79,13 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
                     </motion.div>
                 ))}
             </motion.div>
+            <div className="absolute bottom-24 left-8 lg:left-20 hidden lg:flex flex-col gap-4 pointer-events-none">
+                {['/images/pho-icon.png','/images/banh-mi-icon.png','/images/goi-cuon-icon.png'].map((src,i) => (
+                    <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.2 + i * 0.15 }}>
+                        <img src={src} alt="" style={{ width: 52, height: 52, objectFit: 'contain', filter: 'drop-shadow(0 4px 12px rgba(217,119,6,0.4))' }} />
+                    </motion.div>
+                ))}
+            </div>
 
             <motion.div
                 className="relative z-10 w-full max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-20"

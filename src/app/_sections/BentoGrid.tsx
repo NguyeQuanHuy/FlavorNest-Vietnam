@@ -296,12 +296,13 @@ export default function BentoGrid({
         {/* ── Section header ── */}
         <motion.div {...fadeUp(0)} style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-              <div style={{ width: 28, height: 1.5, background: '#D97706' }} />
-              <span style={{ color: '#D97706', fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase' }}>Editor's Picks</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+              <div style={{ width: 40, height: 1, background: '#D97706' }} />
+              <span style={{ color: '#D97706', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: "'DM Sans', sans-serif" }}>Editor's Picks</span>
+              <div style={{ width: 40, height: 1, background: '#D97706' }} />
             </div>
-            <h2 style={{ fontFamily: "'Manrope', sans-serif", fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05 }}>
-              Featured <em style={{ color: '#D97706', fontStyle: 'italic' }}>Recipes</em> &amp; Stories
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(36px, 4vw, 52px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05, letterSpacing: '-0.01em' }}>
+              Featured <em style={{ color: '#D97706', fontStyle: 'italic', position: 'relative' }}>Recipes</em> <span style={{ color: '#4B2E1A' }}>&amp; Stories</span>
             </h2>
           </div>
           <div style={{ display: 'flex', gap: 12 }}>
@@ -310,7 +311,6 @@ export default function BentoGrid({
           </div>
         </motion.div>
 
-        {/* ── Tab bar ── */}
         <div role="tablist" style={{ display: 'flex', gap: 8, marginBottom: 32, overflowX: 'auto', scrollbarWidth: 'none' }}>
           {TABS.map(tab => {
             const isActive = tab.id === activeTab

@@ -31,17 +31,7 @@ const BrokenRiceIcon = () => (
 )
 
 const StreetFoodIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M22 8 L24 6 L26 8" stroke="#D97706" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-    <rect x="16" y="8" width="16" height="6" rx="2" fill="#D97706" opacity="0.8" />
-    <path d="M14 14 L10 38 L38 38 L34 14Z" fill="#4B2E1A" opacity="0.7" />
-    <path d="M14 14 L10 38 L38 38 L34 14Z" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M12 22 L36 22" stroke="#D97706" strokeWidth="1" opacity="0.5" />
-    <path d="M11 30 L37 30" stroke="#D97706" strokeWidth="1" opacity="0.5" />
-    <circle cx="20" cy="26" r="2" fill="#F5EDE3" opacity="0.6" />
-    <circle cx="28" cy="26" r="2" fill="#F5EDE3" opacity="0.6" />
-    <circle cx="24" cy="34" r="1.5" fill="#D97706" opacity="0.8" />
-  </svg>
+  <img src="/images/street-food.png" alt="Street Food" style={{ width: 56, height: 56, objectFit: 'contain', mixBlendMode: 'multiply' }} />
 )
 
 const SweetSoupIcon = () => (
@@ -49,27 +39,17 @@ const SweetSoupIcon = () => (
 )
 
 const GrilledIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-    <path d="M14 28 Q16 20 24 18 Q32 20 34 28 L32 34 L16 34Z" fill="#D97706" opacity="0.2" />
-    <path d="M10 28 L38 28" stroke="#4B2E1A" strokeWidth="3" strokeLinecap="round" />
-    <path d="M14 28 L16 34 L32 34 L34 28" stroke="#D97706" strokeWidth="1.5" fill="none" />
-    <path d="M16 22 Q18 24 20 22 Q22 20 24 22 Q26 24 28 22 Q30 20 32 22" stroke="#F5EDE3" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-    <path d="M18 26 Q20 28 22 26 Q24 24 26 26 Q28 28 30 26" stroke="#F5EDE3" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.6" />
-    <path d="M20 10 Q18 14 20 16 Q22 14 21 10Z" fill="#D97706" opacity="0.9" />
-    <path d="M26 8 Q24 13 26 16 Q28 13 27 8Z" fill="#ef4444" opacity="0.8" />
-    <path d="M32 10 Q30 14 32 16 Q34 14 33 10Z" fill="#D97706" opacity="0.9" />
-  </svg>
+  <img src="/images/grilled-icon.png" alt="Grilled" style={{ width: 56, height: 56, objectFit: 'contain', mixBlendMode: 'multiply' }} />
 )
-
 const CATEGORIES: Category[] = [
   { href: '/categories/pho', label: 'Pho', count: '12 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <PhoIcon /> },
-  { href: '/categories/bun', label: 'Rice Noodles', count: '9 recipes', accent: '#F5EDE3', glowColor: 'rgba(245,237,227,0.2)', icon: <RiceNoodleIcon /> },
+  { href: '/categories/bun', label: 'Rice Noodles', count: '9 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <RiceNoodleIcon /> },
   { href: '/categories/banhmi', label: 'Banh Mi', count: '7 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <BanhMiIcon /> },
-  { href: '/categories/rolls', label: 'Fresh Rolls', count: '6 recipes', accent: '#166534', glowColor: 'rgba(22,101,52,0.35)', icon: <FreshRollIcon /> },
+  { href: '/categories/rolls', label: 'Fresh Rolls', count: '6 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <FreshRollIcon /> },
   { href: '/categories/com', label: 'Broken Rice', count: '8 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <BrokenRiceIcon /> },
-  { href: '/categories/street', label: 'Street Food', count: '14 recipes', accent: '#F5EDE3', glowColor: 'rgba(245,237,227,0.2)', icon: <StreetFoodIcon /> },
+  { href: '/categories/street', label: 'Street Food', count: '14 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <StreetFoodIcon /> },
   { href: '/categories/dessert', label: 'Sweet Soup', count: '10 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <SweetSoupIcon /> },
-  { href: '/categories/grilled', label: 'Grilled', count: '5 recipes', accent: '#ef4444', glowColor: 'rgba(239,68,68,0.35)', icon: <GrilledIcon /> },
+  { href: '/categories/grilled', label: 'Grilled', count: '5 recipes', accent: '#D97706', glowColor: 'rgba(217,119,6,0.35)', icon: <GrilledIcon /> },
 ]
 
 export default function CategoriesSection() {
