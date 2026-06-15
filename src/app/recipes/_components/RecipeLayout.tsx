@@ -35,6 +35,7 @@ export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
     const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(new Set());
     const [doneSteps, setDoneSteps] = useState<Set<number>>(new Set());
     const [introOpen, setIntroOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState<'ingredients'|'instructions'>('ingredients');
 
     const scaleFactor = servings / recipe.baseServings;
 
@@ -218,6 +219,11 @@ const schema = {
                     <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginTop: 16, textAlign: 'right', opacity: 0.3 }}>"</div>
                 </div>
             </div>
+            {/* Mobile Tab Switcher */}
+            <div className='lg:hidden' style={{ display: 'flex', borderBottom: '2px solid rgba(217,119,6,0.2)', margin: '0 16px 0', position: 'sticky', top: 56, zIndex: 30, background: '#F5EDE3' }}>
+                <button onClick={() => setActiveTab('ingredients')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'ingredients' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'ingredients' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>🥘 Ingredients</button>
+                <button onClick={() => setActiveTab('instructions')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'instructions' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'instructions' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>📋 Instructions</button>
+            </div>
 
             {/* Main 2-column grid */}
             <div
@@ -230,16 +236,16 @@ const schema = {
                 }}
             >
                 {/* LEFT: Ingredients */}
-                <aside
+                <aside className={activeTab === 'ingredients' ? '' : 'hide-on-mobile'}
                     style={{
                         position: 'sticky',
                         top: '90px',
-                        backgroundColor: '#FFF',
-                        borderRadius: '8px 8px 0 0',
+                        backgroundColor: '#FFFBF5',
+                        borderRadius: '12px',
                         padding: '28px',
+                        backgroundImage: 'linear-gradient(rgba(217,119,6,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(217,119,6,0.04) 1px, transparent 1px)',
+                        backgroundSize: '32px 32px',
                         boxShadow: '0 4px 24px rgba(45,26,14,0.06)',
-                        maxHeight: 'calc(100vh - 110px)',
-                        overflowY: 'auto',
                     }}
                 >
                     <h2
@@ -286,7 +292,7 @@ const schema = {
                                     border: '1px solid #E5D6C5',
                                     backgroundColor: '#FFF',
                                     color: '#4B2E1A',
-                                    fontSize: '18px',
+                                    fontSize: '14px',
                                     cursor: 'pointer',
                                     fontWeight: 600,
                                 }}
@@ -315,7 +321,7 @@ const schema = {
                                     border: '1px solid #E5D6C5',
                                     backgroundColor: '#FFF',
                                     color: '#4B2E1A',
-                                    fontSize: '18px',
+                                    fontSize: '14px',
                                     cursor: 'pointer',
                                     fontWeight: 600,
                                 }}
@@ -406,7 +412,7 @@ const schema = {
                 </aside>
 
                 {/* RIGHT: Instructions */}
-                <main>
+                <main className={activeTab === 'instructions' ? '' : 'hide-on-mobile'}>
                     <div
                         style={{
                             display: 'flex',
@@ -489,7 +495,7 @@ const schema = {
                                             backgroundColor: isDone ? '#D97706' : 'transparent',
                                             color: isDone ? '#FFF' : '#D97706',
                                             fontFamily: 'Playfair Display, serif',
-                                            fontSize: '1.1rem',
+                                            fontSize: '0.9rem',
                                             fontWeight: 700,
                                             cursor: 'pointer',
                                             transition: 'all 0.2s',
@@ -551,6 +557,7 @@ const schema = {
             {/* Mobile responsive override */}
             <style jsx>{`
         @media (max-width: 768px) {
+          .hide-on-mobile { display: none !important; }
           div[style*='grid-template-columns: minmax(280px, 380px) 1fr'] {
             grid-template-columns: 1fr !important;
           }
