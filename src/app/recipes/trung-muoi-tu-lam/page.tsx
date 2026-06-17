@@ -5,7 +5,7 @@ const recipe: RecipeData = {
     slug: 'trung-muoi-tu-lam',
     title: 'Trứng Muối Tự Làm (Home-Cured Salted Duck Eggs)',
     subtitle: 'Duck eggs submerged in a saturated salt brine for 30 days until the whites become firm and intensely salty and the yolks transform into dense, oily, deep-orange spheres that run slightly when cut — used as the golden filling in bánh nướng Trung Thu, stirred into congee, or eaten halved alongside plain rice.',
-    category: 'CONDIMENT',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '30 days',
     rating: 4.9,
