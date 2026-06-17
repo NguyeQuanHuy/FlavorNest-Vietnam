@@ -81,7 +81,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cure for exactly 8 minutes',
-            description: 'Pour the curing liquid over the sliced frog legs. Toss very gently to coat every piece. Set a timer for exactly 8 minutes. At 6 minutes, check one piece: the exterior should be turning from translucent to opaque white. At 8 minutes, the cure should be complete — the flesh completely white throughout, slightly firmed, and smelling of lime, mắm nhĩ, and the galangal's specific warm character. Drain immediately, reserving 2 tablespoons of the curing liquid.',
+            description: 'Pour the curing liquid over the sliced frog legs. Toss very gently to coat every piece. Set a timer for exactly 8 minutes. At 6 minutes, check one piece: the exterior should be turning from translucent to opaque white. At 8 minutes, the cure should be complete — the flesh completely white throughout, slightly firmed, and smelling of lime, mắm nhĩ, and the galangal\'s specific warm character. Drain immediately, reserving 2 tablespoons of the curing liquid.',
             tip: 'The 8-minute cure for ếch is slightly longer than for larger shrimp (5-7 minutes) and shorter than for goat (10-12 minutes) — reflecting the specific density and composition of frog flesh. Frog is leaner than shrimp but less dense than mammal meat, and the lime acid works through it at a specific rate that 8 minutes has been calibrated for.',
         },
         {
