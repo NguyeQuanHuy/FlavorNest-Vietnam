@@ -1,0 +1,85 @@
+'use client';
+import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
+
+const recipe: RecipeData = {
+    slug: 'com-cuon-rong-bien',
+    title: 'Cơm Cuộn Rong Biển (Vietnamese Seaweed Rice Rolls)',
+    subtitle: 'Seasoned sticky rice rolled in toasted nori with Vietnamese fillings — pork floss, salted egg yolk, dried shrimp, or pickled vegetables — the Vietnamese adaptation of the Japanese onigiri and Korean gimbap that arrived through the overseas Vietnamese community and became a street food staple from Hà Nội to Sài Gòn.',
+    category: 'APPETIZER',
+    difficulty: 'Easy',
+    totalTime: '40 min',
+    rating: 4.8,
+    baseServings: 4,
+    heroImage: '/images/recipes/com-cuon-rong-bien.jpg',
+    intro: `Cơm cuộn rong biển is the Vietnamese seaweed rice roll — a preparation that sits at the intersection of Japanese onigiri, Korean gimbap, and Vietnamese street food culture, and that has become one of the most popular quick-meal and snack preparations among Vietnamese urban youth in the past decade. The preparation arrived in Vietnam through multiple channels simultaneously: through the Korean cultural wave (hallyu) that brought gimbap to Vietnamese attention through K-dramas and K-pop; through the Japanese culinary influence that has made sushi and onigiri familiar to Vietnamese urban consumers; and through the Vietnamese overseas communities in Japan, Korea, and Taiwan who brought adapted versions back when visiting or returning. The specifically Vietnamese version that has emerged from this cultural convergence is different from both its Japanese and Korean antecedents in its filling philosophy: where Japanese onigiri uses restrained, clean-flavored fillings (pickled plum, grilled salmon, seasoned kelp) and Korean gimbap uses a structured combination of specific vegetables and proteins, Vietnamese cơm cuộn rong biển embraces the boldly flavored Vietnamese pantry — ruốc (pork or shrimp floss), trứng muối (salted egg yolk), tôm khô (dried shrimp), chả lụa (Vietnamese pork sausage), and various pickled vegetables — producing a roll that is more intensely flavored, more specifically Vietnamese, and more varied in its filling combinations than either the Japanese or Korean versions. The rice for cơm cuộn rong biển is seasoned differently from sushi rice: where sushi rice uses rice vinegar, sugar, and salt, the Vietnamese version typically uses a small amount of sesame oil and fish sauce alongside or instead of vinegar, producing a rice that is more savory and less acidic than sushi rice and that complements the bold Vietnamese fillings more naturally.',
+    ingredientSections: [
+        {
+            title: 'Seasoned rice',
+            items: [
+                { amount: 400, unit: 'g', name: 'Japanese short-grain rice or glutinous rice', note: 'cooked and still warm. Short-grain rice holds together better than jasmine rice for rolling.' },
+                { amount: 1, unit: 'tbsp', name: 'rice vinegar' },
+                { amount: 1, unit: 'tsp', name: 'sesame oil' },
+                { amount: 1, unit: 'tsp', name: 'fish sauce', note: 'the Vietnamese seasoning addition' },
+                { amount: 1, unit: 'tsp', name: 'sugar' },
+                { amount: 0.5, unit: 'tsp', name: 'salt' },
+                { amount: 2, unit: 'tbsp', name: 'toasted sesame seeds' },
+            ],
+        },
+        {
+            title: 'Nori sheets',
+            items: [
+                { amount: 8, name: 'full-size nori sheets (rong biển cuộn)', note: 'toasted nori — the shiny side faces down when rolling. Store in airtight packaging until the moment of use.' },
+            ],
+        },
+        {
+            title: 'Vietnamese fillings — choose or combine',
+            items: [
+                { amount: 60, unit: 'g', name: 'ruốc thịt hoặc ruốc tôm (pork or shrimp floss)', note: 'the most popular Vietnamese filling — scattered in a thin layer over the rice' },
+                { amount: 4, name: 'trứng muối (salted egg yolks)', note: 'steamed until just set, halved — placed in a line across the center of the roll' },
+                { amount: 30, unit: 'g', name: 'tôm khô (dried shrimp)', note: 'soaked briefly in warm water, drained — provides intense shrimp flavor' },
+                { amount: 100, unit: 'g', name: 'chả lụa (Vietnamese steamed pork sausage)', note: 'sliced into thin batons' },
+                { amount: 1, name: 'cucumber', note: 'julienned into batons — the essential fresh crunch element' },
+                { amount: 50, unit: 'g', name: 'đồ chua (Vietnamese pickled daikon and carrot)', note: 'drained — the acidic counterpoint to the rich fillings' },
+                { amount: 2, name: 'eggs', note: 'made into thin omelette, sliced into batons' },
+            ],
+        },
+        {
+            title: 'Dipping sauces',
+            items: [
+                { amount: 3, unit: 'tbsp', name: 'soy sauce' },
+                { amount: 1, unit: 'tbsp', name: 'rice vinegar' },
+                { amount: 1, unit: 'tsp', name: 'sesame oil' },
+                { amount: 1, unit: 'tsp', name: 'sugar' },
+                { amount: 1, name: 'bird\'s eye chili', note: 'sliced' },
+                { amount: 2, unit: 'tbsp', name: 'mayonnaise', note: 'for the mayo option popular with younger Vietnamese diners' },
+                { amount: 1, unit: 'tbsp', name: 'sriracha', note: 'combined with mayo for sriracha mayo' },
+            ],
+        },
+    ],
+    steps: [
+        {
+            title: 'Season the rice',
+            description: 'Cook the short-grain rice according to package instructions. While still warm, combine rice vinegar, sesame oil, fish sauce, sugar, and salt in a small bowl and stir until dissolved. Pour over the warm rice and fold gently with a rice paddle or large spoon — do not stir vigorously, which breaks the rice grains. Add toasted sesame seeds and fold in. Fan the rice gently while folding to cool it to body temperature — warm enough to remain pliable but not hot enough to steam the nori during rolling.',
+            tip: 'The Vietnamese seasoning ratio for cơm cuộn rong biển — rice vinegar plus fish sauce plus sesame oil — produces a rice that is more savory and more specifically Vietnamese than pure sushi rice seasoning. The fish sauce provides an umami depth that soy sauce cannot, and the sesame oil provides an aromatic richness that makes the rice itself more flavorful before any fillings are added.',
+        },
+        {
+            title: 'Prepare all fillings before rolling',
+            description: 'Have all fillings prepared and arranged within reach before beginning to roll: ruốc in a small bowl, salted egg yolks halved, cucumber cut into batons, đồ chua drained, chả lụa sliced, omelette cut into strips. The rolling process happens quickly and all elements must be available immediately. For the salted egg yolk: steam the whole eggs for 8 minutes, peel, and use only the yolk — the cured yolk provides a rich, intensely savory, slightly granular element that is the most specifically Vietnamese filling in the roll.',
+            tip: 'The salted egg yolk as a cơm cuộn filling is the element that most clearly marks this as Vietnamese rather than Japanese or Korean. Salted egg yolk (trứng muối) is deeply embedded in Vietnamese cooking — appearing in bánh trung thu (mooncakes), in kho preparations, and now in rice rolls — and its specific rich, slightly sandy, intensely savory character is one of the most distinctive Vietnamese flavor notes.',
+        },
+        {
+            title: 'Roll — the bamboo mat technique',
+            description: 'Place a nori sheet shiny-side down on a bamboo rolling mat. With wet hands, spread a thin, even layer of seasoned rice over the nori — leaving a 2cm strip at the far edge uncovered. The rice layer should be approximately 5mm thick — enough to hold the roll together without being so thick the roll cannot close. Arrange the chosen fillings in a line across the center of the rice. Lift the near edge of the mat and roll forward firmly, pressing to keep the roll tight. When the roll reaches the uncovered nori strip, seal with a few drops of water and press firmly.',
+            tip: 'The rice layer thickness for cơm cuộn is the most common source of failure — too thick and the roll cannot close; too thin and the roll falls apart when cut. Press the rice firmly onto the nori and then flatten gently with wet fingertips until the layer is even and approximately 5mm. The rice should cover the nori completely to the edges except for the 2cm sealing strip.',
+        },
+        {
+            title: 'Cut and serve — the moment the nori is crispest',
+            description: 'Using a sharp, wet knife, cut each roll into 8 pieces with firm, decisive cuts — do not saw back and forth, which compresses and deforms the roll. Wipe the knife with a damp cloth between each cut. Arrange cut-side up on a serving plate. Serve immediately with the dipping sauces — soy-vinegar-sesame for a cleaner option, sriracha mayo for the Vietnamese street food favorite. The nori is crispest in the first 10 minutes after rolling; beyond 20 minutes it begins to soften from the rice moisture.',
+            tip: 'The 10-minute eating window for cơm cuộn rong biển — when the nori is crispy, the rice is at body temperature, and the fillings have not yet released moisture into the roll — is the window that the Japanese and Korean versions are also eaten within. Cơm cuộn made more than 20 minutes before eating is still good but the specific contrast between the crispy nori and the soft rice that makes the preparation excellent has diminished.',
+        },
+    ],
+};
+
+export default function Page() {
+    return <RecipeLayout recipe={recipe} />;
+}
