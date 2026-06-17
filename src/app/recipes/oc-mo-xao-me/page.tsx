@@ -70,7 +70,7 @@ const recipe: RecipeData = {
         {
             title: 'Make and balance the tamarind sauce',
             description: 'Dissolve tamarind paste in 150ml warm water, pressing until fully incorporated. Strain through a fine sieve — the strained liquid should be thick, dark, and intensely sour. Combine with palm sugar, fish sauce, and additional sugar. Stir until the palm sugar dissolves. Taste: the sauce before cooking should be very sour, quite sweet, and savory — deliberately more assertive than the finished dish will be, because the reduction in the wok will concentrate and balance all three elements. Adjust sourness or sweetness if needed.',
-            tip: 'Palm sugar for ốc mỡ xào me produces a darker, more caramel-forward tamarind sauce than white sugar. The palm sugar's specific flavor compounds caramelize differently in the wok heat and produce a sauce color — deep mahogany — that white sugar does not achieve. If palm sugar is unavailable, dark brown sugar is the closest substitute.',
+            tip: 'Palm sugar for ốc mỡ xào me produces a darker, more caramel-forward tamarind sauce than white sugar. The palm sugar\'s specific flavor compounds caramelize differently in the wok heat and produce a sauce color — deep mahogany — that white sugar does not achieve. If palm sugar is unavailable, dark brown sugar is the closest substitute.',
         },
         {
             title: 'Stir-fry aromatics until golden',
