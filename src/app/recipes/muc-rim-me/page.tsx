@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'muc-rim-me',
     title: `Tamarind Braised Squid`,
     subtitle: `Mực Rim Me — Southern Vietnamese squid caramelised in tamarind, fish sauce, and palm sugar until the sauce lacquers the flesh.`,
-    category: 'SEAFOOD',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.9,
