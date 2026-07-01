@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'nhum-bien-nuong-mo-hanh',
     title: `Grilled Sea Urchin with Spring Onion Oil`,
     subtitle: `Nhum Biển Nướng Mỡ Hành — Live sea urchin grilled in the shell, finished with sizzling spring onion oil and eaten with rice crackers.`,
-    category: 'SEAFOOD',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
