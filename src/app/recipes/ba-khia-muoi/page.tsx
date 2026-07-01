@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'ba-khia-muoi',
     title: `Salt-Cured Mekong Field Crab`,
     subtitle: `Ba Khía Muối — Cà Mau's three-striped field crab cured raw in salt brine, eaten with lime, garlic, and chili over broken rice.`,
-    category: 'SEAFOOD',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '72 hrs',
     rating: 4.8,
