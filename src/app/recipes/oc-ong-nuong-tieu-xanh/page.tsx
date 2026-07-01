@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'oc-ong-nuong-tieu-xanh',
     title: `Grilled Razor Clams with Green Pepper`,
     subtitle: `Ốc Ống Nướng Tiêu Xanh — Live razor clams grilled in the shell with fresh green peppercorns, butter, and lemongrass.`,
-    category: 'SEAFOOD',
+    category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
