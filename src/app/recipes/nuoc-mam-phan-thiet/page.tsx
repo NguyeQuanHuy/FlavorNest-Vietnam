@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'nuoc-mam-phan-thiet',
     title: `Phan Thiết Fish Sauce`,
     subtitle: `Nước Mắm Phan Thiết — Vietnam's oldest documented fish sauce tradition, fermented 12-18 months in wooden barrels from cá cơm anchovy and sea salt.`,
-    category: 'CONDIMENT',
+    category: 'APPETIZER',
     difficulty: 'Hard',
     totalTime: '365 days',
     rating: 4.9,
