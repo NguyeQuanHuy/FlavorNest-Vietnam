@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'bun-nuoc-leo',
     title: `Khmer Fermented Fish Noodle Soup`,
     subtitle: `Bún Nước Lèo — The soul of Sóc Trăng in a bowl. Prawn paste broth, pork hock, and lemongrass over rice vermicelli.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,
