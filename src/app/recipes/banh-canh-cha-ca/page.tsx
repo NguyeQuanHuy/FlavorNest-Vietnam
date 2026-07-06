@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'banh-canh-cha-ca',
     title: `Thick Noodle Soup with Fish Cake`,
     subtitle: `Bánh Canh Chả Cá — Phú Yên's fat tapioca noodles in a clear fish bone broth, topped with hand-pounded turmeric fish cake.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.9,
