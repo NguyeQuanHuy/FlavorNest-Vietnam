@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'lau-tha-phan-thiet',
     title: `Phan Thiết Drop Hotpot`,
     subtitle: `Lẩu Thả Phan Thiết — A two-vessel communal meal where rice paper rolls are dropped into fish broth and eaten with raw vegetables and muoi ot xanh.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
     rating: 4.9,

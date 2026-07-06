@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '@/app/recipes/_components/RecipeLayout';
 

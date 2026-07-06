@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -115,7 +115,7 @@ const recipeSchema = {
     description:
         'The complete traditional Hanoi-style beef pho recipe — a 10-hour clear bone broth scented with star anise, cinnamon, charred ginger, served over rice noodles with thinly sliced beef. Tested in a real home kitchen.',
     recipeCuisine: 'Vietnamese',
-    recipeCategory: 'Soup',
+    recipecategory: 'MAIN COURSE',
     keywords: 'pho recipe, vietnamese pho, beef pho, hanoi pho, pho bo, authentic pho',
     recipeYield: '4 servings',
     prepTime: 'PT30M',

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'hu-tieu-sa-dec',
     title: `Sa Déc Rice Noodle Soup`,
     subtitle: `Hủ Tiếu Sa Đéc — The clearest pork broth in the Mekong Delta, over hand-dried noodles from Đồng Tháp.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '3 hrs',
     rating: 4.9,

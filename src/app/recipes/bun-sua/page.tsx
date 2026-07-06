@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'bun-sua',
     title: `Jellyfish Noodle Soup`,
     subtitle: `Bún Sứa — Nha Trang's coastal noodle soup with cured jellyfish, clear pork and shrimp broth, and a mandatory plate of raw herbs.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,

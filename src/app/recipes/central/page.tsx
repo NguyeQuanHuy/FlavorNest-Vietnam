@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 /**
  * FlavorNest Vietnam — Central Cuisine Page

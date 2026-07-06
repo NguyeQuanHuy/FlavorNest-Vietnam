@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 /**
  * FlavorNest Vietnam — Main Dishes Page

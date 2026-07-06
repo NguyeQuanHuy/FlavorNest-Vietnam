@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'lau-la-kho-qua-rung',
     title: `Wild Bitter Melon Leaf Hotpot`,
     subtitle: `Lẩu Lá Khổ Qua Rừng — A Mekong Delta medicinal hotpot built on wild bitter melon leaves, pork ribs, and a broth that tastes of the forest floor.`,
-    category: 'SOUP',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.8,
