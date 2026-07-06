@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'com-tam-long-xuyen',
     title: `Long Xuyên Broken Rice`,
     subtitle: `Cơm Tấm Long Xuyên — An Giang's answer to Saigon broken rice, with grilled pork chop, mỡ hành, and a broth that doubles as dipping sauce.`,
-    category: 'RICE',
+    category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.9,

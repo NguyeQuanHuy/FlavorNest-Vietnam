@@ -134,7 +134,7 @@ function saveFav(recipe: Recipe, add: boolean) {
         let arr: object[] = raw ? JSON.parse(raw) : []
         if (add) {
             if (!arr.some((x: object) => (x as { slug: string }).slug === recipe.slug)) {
-                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, cookcookTime: recipe.time, difficulty: recipe.difficulty, category: 'Street Food', savedAt: new Date().toISOString().split('T')[0] })
+                arr.push({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, cookcookTime: recipe.time, difficulty: recipe.difficulty, category: 'MAIN COURSE', savedAt: new Date().toISOString().split('T')[0] })
         }
     } else {
         arr = arr.filter((x: object) => (x as { slug: string }).slug !== recipe.slug)
@@ -278,7 +278,7 @@ export default function StreetFoodPage() {
                                                 image: recipe.image,
                                                 cookTime: recipe.time,
                                                 difficulty: recipe.difficulty,
-                                                category: 'Street Food',
+                                                category: 'MAIN COURSE',
                                             }} />
                                         </div>
                                     </div>
