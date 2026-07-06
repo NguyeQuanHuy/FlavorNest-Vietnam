@@ -5,7 +5,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'tom-rim',
     title: 'Caramelised Savory Shrimp',
-    subtitle: 'Tom Rim Man Ngot — whole shrimp simmered in a sticky, garlic-infused fish sauce caramel until the shells turn lacquered.',
+    subtitle: 'Tom Rim Man Ngot â€” whole shrimp simmered in a sticky, garlic-infused fish sauce caramel until the shells turn lacquered.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',

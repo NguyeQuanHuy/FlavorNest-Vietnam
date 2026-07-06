@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'thit-kho-hot-vit',
     title: 'Caramelised Pork Belly with Braised Eggs',
     subtitle:
-        'Th?t Kho H?t V?t � tender, mahogany-glazed pork belly and golden eggs slow-cooked in fresh coconut water.',
+        'Thịt Kho Hột Vịt — tender, mahogany-glazed pork belly and golden eggs slow-cooked in fresh coconut water.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '90 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/thit-kho-hot-vit.jpg',
     intro:
-        'Th?t Kho H?t V?t is the undisputed soul of Southern Vietnamese home cooking. More than just a stew, it is a symbol of family reunion and prosperity, traditionally prepared in large pots during the Lunar New Year (Tet). The magic lies in the slow braise with fresh coconut water, which transforms the pork fat into a buttery, translucent texture and gives the sauce a natural, delicate sweetness that no sugar can replicate.',
+        'Thịt Kho Hột Vịt is the undisputed soul of Southern Vietnamese home cooking. More than just a stew, it is a symbol of family reunion and prosperity, traditionally prepared in large pots during the Lunar New Year (Tet). The magic lies in the slow braise with fresh coconut water, which transforms the pork fat into a buttery, translucent texture and gives the sauce a natural, delicate sweetness that no sugar can replicate.',
     ingredientSections: [
         {
             title: 'The Meat and Eggs',

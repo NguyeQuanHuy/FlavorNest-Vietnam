@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'mien-ga',
     title: 'Glass Noodle Chicken Soup',
-    subtitle: 'Mien ga — translucent mung bean noodles in a fragrant chicken broth, topped with shredded poached chicken, wood ear mushrooms and black pepper.',
+    subtitle: 'Mien ga â€” translucent mung bean noodles in a fragrant chicken broth, topped with shredded poached chicken, wood ear mushrooms and black pepper.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/mien-ga.jpg',
-    intro: 'Mien ga is what Hanoi quietly considers its best breakfast — light enough that you can keep working, deep enough that you remember it at lunch. The broth is built on a whole chicken simmered with charred ginger, then strained until crystal clear. The mi?n (glass noodles, made from mung bean starch) turn translucent in seconds. Topped with poached shredded chicken, wood ear mushrooms, fried shallots and a violent crack of black pepper. The Lunar New Year favourite when the whole family is tired of feast food.',
+    intro: 'Mien ga is what Hanoi quietly considers its best breakfast â€” light enough that you can keep working, deep enough that you remember it at lunch. The broth is built on a whole chicken simmered with charred ginger, then strained until crystal clear. The miáº¿n (glass noodles, made from mung bean starch) turn translucent in seconds. Topped with poached shredded chicken, wood ear mushrooms, fried shallots and a violent crack of black pepper. The Lunar New Year favourite when the whole family is tired of feast food.',
     ingredientSections: [
         {
             title: 'Chicken broth',
@@ -57,7 +57,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cool and shred',
-            description: 'Lift the chicken out and plunge into a bowl of ice water for 5 minutes — this firms the skin and locks in moisture. Pull the meat from the bones in long shreds. Return the bones to the pot and continue simmering for another 30 minutes for depth.',
+            description: 'Lift the chicken out and plunge into a bowl of ice water for 5 minutes â€” this firms the skin and locks in moisture. Pull the meat from the bones in long shreds. Return the bones to the pot and continue simmering for another 30 minutes for depth.',
         },
         {
             title: 'Prepare the toppings',
@@ -65,7 +65,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Strain and season',
-            description: 'Strain the broth through a fine sieve into a clean pot. Discard solids. Season with rock sugar, fish sauce and salt. Taste — it should be clean, gently sweet from the chicken, savoury from fish sauce. Keep at a low simmer.',
+            description: 'Strain the broth through a fine sieve into a clean pot. Discard solids. Season with rock sugar, fish sauce and salt. Taste â€” it should be clean, gently sweet from the chicken, savoury from fish sauce. Keep at a low simmer.',
         },
         {
             title: 'Cook the noodles separately',

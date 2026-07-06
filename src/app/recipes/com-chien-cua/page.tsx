@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'com-chien-cua',
     title: 'Crab Fried Rice (Com Chien Cua)',
-    subtitle: 'Fragrant fried rice with sweet crab meat, eggs, and aromatics ó simple, rich, and restaurant-style.',
+    subtitle: 'Fragrant fried rice with sweet crab meat, eggs, and aromatics ‚Äî simple, rich, and restaurant-style.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '25 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/com-chien-cua.jpg',
 
-    intro: `Com chiÍn cua is a flavorful Vietnamese fried rice dish made with fresh crab meat, eggs, and aromatic seasoning.
+    intro: `C∆°m chi√™n cua is a flavorful Vietnamese fried rice dish made with fresh crab meat, eggs, and aromatic seasoning.
 
 The dish is light yet rich in umami, with sweet crab meat blending perfectly into fluffy fried rice. It is often served in restaurants but can be easily made at home.`,
 
@@ -49,13 +49,13 @@ The dish is light yet rich in umami, with sweet crab meat blending perfectly int
             description: 'Scramble eggs lightly in hot oil and set aside.',
         },
         {
-            title: 'SautÈ garlic',
-            description: 'Heat oil and sautÈ garlic until fragrant.',
+            title: 'Saut√© garlic',
+            description: 'Heat oil and saut√© garlic until fragrant.',
         },
         {
             title: 'Add rice',
             description: 'Add rice and stir-fry on high heat until grains are separated.',
-            tip: 'High heat is key for ìwok aromaî.',
+            tip: 'High heat is key for ‚Äúwok aroma‚Äù.',
         },
         {
             title: 'Add crab meat',

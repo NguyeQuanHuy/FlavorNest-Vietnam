@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'bun-bo-hue',
     title: 'Bun Bo Hue (Vietnamese Spicy Beef Noodle Soup)',
-    subtitle: 'Rich, spicy, and deeply aromatic beef noodle soup from Hue � bold lemongrass broth with tender meat and pork hock.',
+    subtitle: 'Rich, spicy, and deeply aromatic beef noodle soup from Hue — bold lemongrass broth with tender meat and pork hock.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '120 min',
@@ -12,11 +12,11 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/bun-bo-hue.jpg',
 
-    intro: `B�n b� Hu? is a famous Vietnamese noodle soup originating from Hue, known for its bold, spicy, and aromatic broth.
+    intro: `Bún bò Huế is a famous Vietnamese noodle soup originating from Hue, known for its bold, spicy, and aromatic broth.
 
-The broth is simmered for hours using beef bones, pork hocks, lemongrass, and fermented shrimp paste (m?m ru?c), creating a deep umami flavor with a signature spicy kick.
+The broth is simmered for hours using beef bones, pork hocks, lemongrass, and fermented shrimp paste (mắm ruốc), creating a deep umami flavor with a signature spicy kick.
 
-Served with thick rice noodles, slices of beef, pork, and fresh herbs, it is one of Vietnam�s most iconic and complex noodle dishes.`,
+Served with thick rice noodles, slices of beef, pork, and fresh herbs, it is one of Vietnam’s most iconic and complex noodle dishes.`,
 
     ingredientSections: [
         {
@@ -32,7 +32,7 @@ Served with thick rice noodles, slices of beef, pork, and fresh herbs, it is one
         {
             title: 'Seasoning',
             items: [
-                { amount: 2, unit: 'tbsp', name: 'fermented shrimp paste (m?m ru?c)' },
+                { amount: 2, unit: 'tbsp', name: 'fermented shrimp paste (mắm ruốc)' },
                 { amount: 2, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 1, unit: 'tbsp', name: 'salt' },
                 { amount: 1, unit: 'tbsp', name: 'sugar' },
@@ -42,7 +42,7 @@ Served with thick rice noodles, slices of beef, pork, and fresh herbs, it is one
         {
             title: 'Noodles & toppings',
             items: [
-                { amount: 600, unit: 'g', name: 'thick rice noodles (b�n b�)' },
+                { amount: 600, unit: 'g', name: 'thick rice noodles (bún bò)' },
                 { amount: 200, unit: 'g', name: 'beef slices' },
                 { amount: 200, unit: 'g', name: 'pork slices' },
                 { amount: 1, name: 'Vietnamese herbs', note: 'mint, basil, banana flower' },
@@ -64,8 +64,8 @@ Served with thick rice noodles, slices of beef, pork, and fresh herbs, it is one
         },
         {
             title: 'Season broth',
-            description: 'Add m?m ru?c, fish sauce, sugar, and salt. Adjust seasoning carefully for balance.',
-            tip: 'M?m ru?c is the soul of B�n b� Hu? � use carefully but don�t skip it.',
+            description: 'Add mắm ruốc, fish sauce, sugar, and salt. Adjust seasoning carefully for balance.',
+            tip: 'Mắm ruốc is the soul of Bún bò Huế — use carefully but don’t skip it.',
         },
         {
             title: 'Prepare toppings',

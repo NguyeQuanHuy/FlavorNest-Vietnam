@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'muc-nuong-sa-te',
     title: 'Spicy Satay Grilled Squid (Muc Nuong Sa Te)',
-    subtitle: 'Smoky, spicy, and slightly charred — grilled squid coated in bold satay marinade.',
+    subtitle: 'Smoky, spicy, and slightly charred â€” grilled squid coated in bold satay marinade.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '30 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/muc-nuong-sa-te.jpg',
 
-    intro: `M?c nu?ng sa t? is a popular Vietnamese street barbecue dish known for its smoky aroma and fiery spice.
+    intro: `Má»±c nÆ°á»›ng sa táº¿ is a popular Vietnamese street barbecue dish known for its smoky aroma and fiery spice.
 
 Fresh squid is marinated with satay sauce, garlic, chili, and lemongrass, then grilled over high heat until slightly charred on the edges. The result is tender, juicy squid with a bold spicy kick and a smoky finish.
 
@@ -49,16 +49,16 @@ It is commonly served at night markets and seaside stalls, often paired with lim
         {
             title: 'Make marinade',
             description: 'Mix satay sauce, garlic, lemongrass, chili, fish sauce, soy sauce, sugar, oil, and black pepper.',
-            tip: 'Satay sauce is the key flavor base — it gives depth and spice.',
+            tip: 'Satay sauce is the key flavor base â€” it gives depth and spice.',
         },
         {
             title: 'Marinate',
-            description: 'Coat squid evenly with marinade. Let rest for 15–20 minutes only to avoid over-tenderizing.',
+            description: 'Coat squid evenly with marinade. Let rest for 15â€“20 minutes only to avoid over-tenderizing.',
         },
         {
             title: 'Grill',
-            description: 'Grill over high heat for 2–3 minutes per side until slightly charred and just cooked through.',
-            tip: 'Do not overcook squid — it becomes rubbery quickly.',
+            description: 'Grill over high heat for 2â€“3 minutes per side until slightly charred and just cooked through.',
+            tip: 'Do not overcook squid â€” it becomes rubbery quickly.',
         },
         {
             title: 'Finish and serve',

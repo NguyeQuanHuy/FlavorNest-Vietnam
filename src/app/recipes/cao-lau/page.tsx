@@ -57,7 +57,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prepare the broth',
-            description: 'Simmer broth with soy sauce and sugar for 5 minutes. Taste — it should be savoury and light, just enough to dress the noodles, not enough to make a soup.',
+            description: 'Simmer broth with soy sauce and sugar for 5 minutes. Taste â€” it should be savoury and light, just enough to dress the noodles, not enough to make a soup.',
         },
         {
             title: 'Cook the noodles',
@@ -65,7 +65,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Assemble',
-            description: 'Place noodles in bowls. Ladle 3 to 4 tablespoons of warm broth over the noodles — just enough to coat. Top with sliced char siu pork, crispy crackers, bean sprouts, and fresh herbs. Serve immediately.',
+            description: 'Place noodles in bowls. Ladle 3 to 4 tablespoons of warm broth over the noodles â€” just enough to coat. Top with sliced char siu pork, crispy crackers, bean sprouts, and fresh herbs. Serve immediately.',
         },
     ],
 };

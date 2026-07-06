@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'lau-mam',
     title: 'Fermented Fish Hot Pot',
-    subtitle: 'The boldest hot pot in Vietnam — fermented fish broth with eggplant, pork, and a mountain of fresh herbs.',
+    subtitle: 'The boldest hot pot in Vietnam â€” fermented fish broth with eggplant, pork, and a mountain of fresh herbs.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/lau-mam.jpg',
-    intro: `Lau mam is the Mekong Delta's most fearless dish. The broth is built on mam ca loc — fermented snakehead fish paste — a ingredient so pungent it clears the room before it clears the palate. But cooked low and slow with lemongrass, coconut milk, and pineapple, the fermented paste transforms into something extraordinary: deeply savoury, funky in the best possible way, with a richness no other broth can match. The Mekong Delta eats this for celebrations. Once you taste it, you will understand why.`,
+    intro: `Lau mam is the Mekong Delta's most fearless dish. The broth is built on mam ca loc â€” fermented snakehead fish paste â€” a ingredient so pungent it clears the room before it clears the palate. But cooked low and slow with lemongrass, coconut milk, and pineapple, the fermented paste transforms into something extraordinary: deeply savoury, funky in the best possible way, with a richness no other broth can match. The Mekong Delta eats this for celebrations. Once you taste it, you will understand why.`,
     ingredientSections: [
         {
             title: 'Broth',
@@ -53,12 +53,12 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Build the broth base',
-            description: `Saute shallots and garlic in oil over medium heat until soft. Add fermented fish paste and stir constantly for 3 minutes — the paste will darken and become fragrant. This step is critical: cooking the paste removes the raw fermented edge and develops the deep flavour.`,
+            description: `Saute shallots and garlic in oil over medium heat until soft. Add fermented fish paste and stir constantly for 3 minutes â€” the paste will darken and become fragrant. This step is critical: cooking the paste removes the raw fermented edge and develops the deep flavour.`,
             tip: `Open the windows. Fermented fish paste smells aggressively when raw and when first hitting the pan. After 3 minutes of cooking it mellows dramatically. Do not judge the dish by the smell at this stage.`,
         },
         {
             title: 'Add liquid and aromatics',
-            description: `Pour in water and coconut milk. Add lemongrass, pineapple, sugar, and chilli. Bring to a boil then reduce to a simmer for 20 minutes. Taste and adjust with fish sauce and sugar — the broth should be savoury, slightly sweet, funky, and complex.`,
+            description: `Pour in water and coconut milk. Add lemongrass, pineapple, sugar, and chilli. Bring to a boil then reduce to a simmer for 20 minutes. Taste and adjust with fish sauce and sugar â€” the broth should be savoury, slightly sweet, funky, and complex.`,
         },
         {
             title: 'Set up the table',
@@ -67,7 +67,7 @@ const recipe: RecipeData = {
         {
             title: 'Cook and eat',
             description: `Each person cooks their own ingredients directly in the broth. Eggplant takes 3 to 4 minutes and absorbs the broth beautifully. Pork belly takes 2 minutes. Prawns and squid take 1 to 2 minutes. Wrap cooked ingredients in fresh herbs and eat immediately.`,
-            tip: `The herb plate is not a garnish — it is half the dish. Wrap every bite in a combination of mint, perilla, and banana blossom. The freshness cuts the richness of the fermented broth.`,
+            tip: `The herb plate is not a garnish â€” it is half the dish. Wrap every bite in a combination of mint, perilla, and banana blossom. The freshness cuts the richness of the fermented broth.`,
         },
         {
             title: 'Finish with noodles',

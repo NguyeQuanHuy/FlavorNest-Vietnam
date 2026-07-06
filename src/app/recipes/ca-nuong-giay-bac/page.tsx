@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/ca-nuong-giay-bac.jpg',
 
-    intro: `Cá nu?ng gi?y b?c is a popular Vietnamese home-style and restaurant dish where whole fish is wrapped in foil with herbs, garlic, and seasoning, then baked or grilled until tender and juicy.
+    intro: `CÃ¡ nÆ°á»›ng giáº¥y báº¡c is a popular Vietnamese home-style and restaurant dish where whole fish is wrapped in foil with herbs, garlic, and seasoning, then baked or grilled until tender and juicy.
 
 The foil locks in moisture and aroma, allowing the fish to steam in its own juices while absorbing the flavors of lemongrass, onion, and fish sauce. The result is soft, fragrant fish that flakes easily and is full of savory depth.`,
 
@@ -52,16 +52,16 @@ The foil locks in moisture and aroma, allowing the fish to steam in its own juic
         },
         {
             title: 'Marinate',
-            description: 'Coat the fish evenly with marinade. Stuff lemongrass, garlic, shallots, tomato, and onion inside the fish and let rest for 20–30 minutes.',
+            description: 'Coat the fish evenly with marinade. Stuff lemongrass, garlic, shallots, tomato, and onion inside the fish and let rest for 20â€“30 minutes.',
         },
         {
             title: 'Wrap in foil',
             description: 'Wrap the fish tightly in aluminum foil to lock in moisture and flavor.',
-            tip: 'Seal the foil well to keep steam inside — this is what makes the fish juicy.',
+            tip: 'Seal the foil well to keep steam inside â€” this is what makes the fish juicy.',
         },
         {
             title: 'Bake or grill',
-            description: 'Bake at 200°C for 25–30 minutes or grill over medium heat until fully cooked.',
+            description: 'Bake at 200Â°C for 25â€“30 minutes or grill over medium heat until fully cooked.',
         },
         {
             title: 'Serve',

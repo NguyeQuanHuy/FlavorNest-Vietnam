@@ -5,14 +5,14 @@ import RecipeLayout, { RecipeData } from '@/app/recipes/_components/RecipeLayout
 const recipe: RecipeData = {
     slug: 'com-rang-trung',
     title: 'Vietnamese Egg Fried Rice',
-    subtitle: 'Com Rang Tr?ng — golden, crispy rice grains coated in rich egg yolks, a simple yet soulful home staple.',
+    subtitle: 'CÆ¡m Rang Trá»©ng â€” golden, crispy rice grains coated in rich egg yolks, a simple yet soulful home staple.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '15 min',
     rating: 4.6,
     baseServings: 2,
     heroImage: '/images/recipes/com-rang-trung.jpg',
-    intro: 'Egg fried rice is the ultimate test of a home cook’s patience with a wok. In Vietnam, it’s often made with leftover rice from the night before, which has dried out just enough to achieve that perfect, bouncy texture. The secret lies in high heat and seasoned fish sauce that caramelizes against the grains.',
+    intro: 'Egg fried rice is the ultimate test of a home cookâ€™s patience with a wok. In Vietnam, itâ€™s often made with leftover rice from the night before, which has dried out just enough to achieve that perfect, bouncy texture. The secret lies in high heat and seasoned fish sauce that caramelizes against the grains.',
     ingredientSections: [
         {
             title: 'Rice and Eggs',
@@ -38,7 +38,7 @@ const recipe: RecipeData = {
             description: 'Use your hands or a spoon to break up any large clumps of cold rice. Every grain should be separate before hitting the pan.',
         },
         {
-            title: 'Sauté the aromatics',
+            title: 'SautÃ© the aromatics',
             description: 'Heat oil in a wok until shimmering. Fry the white parts of the scallions until fragrant but not brown.',
         },
         {

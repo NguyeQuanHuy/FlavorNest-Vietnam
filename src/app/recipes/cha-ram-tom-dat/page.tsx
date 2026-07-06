@@ -3,21 +3,21 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'cha-ram-tom-dat',
-    title: 'Ch? Ram TÙm –?t (Central Vietnamese Fried Shrimp Rolls)',
-    subtitle: 'Seasoned shrimp paste wrapped in thin rice paper and deep-fried until the wrapper blisters and crackles ó the BÏnh –?nh and Ph˙ YÍn street food that looks like a spring roll and tastes like nothing else.',
+    title: 'Ch·∫£ Ram T√¥m ƒê·∫•t (Central Vietnamese Fried Shrimp Rolls)',
+    subtitle: 'Seasoned shrimp paste wrapped in thin rice paper and deep-fried until the wrapper blisters and crackles ‚Äî the B√¨nh ƒê·ªãnh and Ph√∫ Y√™n street food that looks like a spring roll and tastes like nothing else.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/cha-ram-tom-dat.jpg',
-    intro: `Ch? ram tÙm d?t is the fried shrimp roll of the south-central coast ó specifically the provinces of BÏnh –?nh, Ph˙ YÍn, and Qu?ng Ng„i ó where tÙm d?t (river or estuary shrimp, small and intensely sweet) are pounded into a paste with pork fat, lemongrass, and aromatics, wrapped in thin rice paper, and deep-fried until the wrapper blisters into hundreds of small golden bubbles. The result is a roll with two distinct textures: a shatteringly crisp, bubbly exterior and a dense, springy shrimp filling that is simultaneously sweet from the shrimp and savory from the fish sauce and garlic. Ch? ram is eaten as a street food snack, as an appetizer at family meals, and as the protein component in b˙n ch? ram ó a noodle bowl unique to the central coast. The name distinguishes it from other fried rolls: ram means the blistered, bubble-covered exterior specific to this frying technique, where the rice paper is moistened slightly before wrapping so that bubbles form during frying rather than a flat crisp surface.`,
+    intro: `Ch·∫£ ram t√¥m ƒë·∫•t is the fried shrimp roll of the south-central coast ‚Äî specifically the provinces of B√¨nh ƒê·ªãnh, Ph√∫ Y√™n, and Qu·∫£ng Ng√£i ‚Äî where t√¥m ƒë·∫•t (river or estuary shrimp, small and intensely sweet) are pounded into a paste with pork fat, lemongrass, and aromatics, wrapped in thin rice paper, and deep-fried until the wrapper blisters into hundreds of small golden bubbles. The result is a roll with two distinct textures: a shatteringly crisp, bubbly exterior and a dense, springy shrimp filling that is simultaneously sweet from the shrimp and savory from the fish sauce and garlic. Ch·∫£ ram is eaten as a street food snack, as an appetizer at family meals, and as the protein component in b√∫n ch·∫£ ram ‚Äî a noodle bowl unique to the central coast. The name distinguishes it from other fried rolls: ram means the blistered, bubble-covered exterior specific to this frying technique, where the rice paper is moistened slightly before wrapping so that bubbles form during frying rather than a flat crisp surface.`,
     ingredientSections: [
         {
             title: 'Shrimp filling',
             items: [
-                { amount: 400, unit: 'g', name: 'fresh shrimp (tÙm d?t / small estuary shrimp)', note: 'peeled and deveined. Small shrimp (50-60 per 500g) preferred ó sweeter and more aromatic than large shrimp. Frozen small shrimp work.' },
-                { amount: 100, unit: 'g', name: 'pork fat or fatty pork belly', note: 'finely minced ó adds richness and prevents the filling from becoming dry. Can substitute with 2 tbsp lard.' },
+                { amount: 400, unit: 'g', name: 'fresh shrimp (t√¥m ƒë·∫•t / small estuary shrimp)', note: 'peeled and deveined. Small shrimp (50-60 per 500g) preferred ‚Äî sweeter and more aromatic than large shrimp. Frozen small shrimp work.' },
+                { amount: 100, unit: 'g', name: 'pork fat or fatty pork belly', note: 'finely minced ‚Äî adds richness and prevents the filling from becoming dry. Can substitute with 2 tbsp lard.' },
                 { amount: 2, name: 'lemongrass stalks', note: 'inner stalk only, very finely minced' },
                 { amount: 3, name: 'garlic cloves', note: 'minced' },
                 { amount: 2, name: 'shallots', note: 'minced' },
@@ -25,19 +25,19 @@ const recipe: RecipeData = {
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder', note: 'gives the golden color to the filling' },
-                { amount: 1, unit: 'tsp', name: 'cornstarch', note: 'binder ó helps the filling hold together' },
+                { amount: 1, unit: 'tsp', name: 'cornstarch', note: 'binder ‚Äî helps the filling hold together' },
             ],
         },
         {
             title: 'Rolling and frying',
             items: [
-                { amount: 12, name: 'sheets dried rice paper (b·nh tr·ng)', note: '22cm diameter, thin variety ó not thick spring roll wrappers. The thin paper is what creates the blistered surface.' },
+                { amount: 12, name: 'sheets dried rice paper (b√°nh tr√°ng)', note: '22cm diameter, thin variety ‚Äî not thick spring roll wrappers. The thin paper is what creates the blistered surface.' },
                 { amount: 500, unit: 'ml', name: 'neutral oil', note: 'for deep frying' },
                 { amount: 3, unit: 'tbsp', name: 'water', note: 'for briefly moistening the rice paper before rolling' },
             ],
         },
         {
-            title: 'Dipping sauce (nu?c ch?m ch? ram)',
+            title: 'Dipping sauce (n∆∞·ªõc ch·∫•m ch·∫£ ram)',
             items: [
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 3, unit: 'tbsp', name: 'fresh lime juice' },
@@ -51,7 +51,7 @@ const recipe: RecipeData = {
             title: 'To serve',
             items: [
                 { amount: 1, name: 'head butter lettuce', note: 'for wrapping' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
                 { amount: 1, name: 'bunch mint' },
                 { amount: 2, name: 'limes, cut in wedges' },
             ],
@@ -60,28 +60,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the shrimp paste filling',
-            description: 'Pat the peeled shrimp completely dry. Place in a food processor and pulse 8-10 times until roughly chopped ó not a smooth paste, leave some texture. Or chop by hand with a cleaver until a coarse paste forms. Combine with minced pork fat, lemongrass, garlic, shallots, fish sauce, sugar, pepper, turmeric, and cornstarch. Mix until completely combined. Fry a small teaspoon of the mixture in a pan to taste and adjust seasoning before rolling.',
+            description: 'Pat the peeled shrimp completely dry. Place in a food processor and pulse 8-10 times until roughly chopped ‚Äî not a smooth paste, leave some texture. Or chop by hand with a cleaver until a coarse paste forms. Combine with minced pork fat, lemongrass, garlic, shallots, fish sauce, sugar, pepper, turmeric, and cornstarch. Mix until completely combined. Fry a small teaspoon of the mixture in a pan to taste and adjust seasoning before rolling.',
             tip: 'A rough paste with some texture produces a more satisfying filling than a smooth one. Overprocessing makes the filling dense and bouncy like a rubber ball. Pulse, do not blend continuously.',
         },
         {
             title: 'The moistening technique for blistered skin',
-            description: 'This is the step that distinguishes ch? ram from plain fried spring rolls. Dip one rice paper sheet very briefly in water ó 1-2 seconds only, just enough to make it pliable without making it wet. The paper should feel flexible but not soggy. Lay on a flat surface. If the paper tears easily, it was too wet. If it cracks when you try to roll, it was too dry. The moisture level determines the blistering.',
-            tip: 'The brief moisture creates steam pockets trapped between the paper layers during frying. These pockets expand into the characteristic bubbles of ch? ram. Over-moistened paper produces a flat crust; correct moisture produces hundreds of small bubbles.',
+            description: 'This is the step that distinguishes ch·∫£ ram from plain fried spring rolls. Dip one rice paper sheet very briefly in water ‚Äî 1-2 seconds only, just enough to make it pliable without making it wet. The paper should feel flexible but not soggy. Lay on a flat surface. If the paper tears easily, it was too wet. If it cracks when you try to roll, it was too dry. The moisture level determines the blistering.',
+            tip: 'The brief moisture creates steam pockets trapped between the paper layers during frying. These pockets expand into the characteristic bubbles of ch·∫£ ram. Over-moistened paper produces a flat crust; correct moisture produces hundreds of small bubbles.',
         },
         {
             title: 'Roll tightly',
-            description: 'Place 2 tablespoons of shrimp filling in a horizontal line across the lower third of the moistened rice paper, leaving 3cm clear on each side. Fold the sides in over the filling. Roll forward tightly from the bottom, keeping even pressure throughout. The roll should be compact and firm ó about 12cm long and 3cm diameter. Place seam-side down. Let the rolls rest for 5 minutes before frying ó the rice paper rehydrates from the filling moisture and seals.',
-            tip: 'Rolling tightly is critical. Loose rolls fall apart in the oil or have air pockets that burst violently. The seam must be sealed firmly ó press the end down and let the moisture from the filling hold it.',
+            description: 'Place 2 tablespoons of shrimp filling in a horizontal line across the lower third of the moistened rice paper, leaving 3cm clear on each side. Fold the sides in over the filling. Roll forward tightly from the bottom, keeping even pressure throughout. The roll should be compact and firm ‚Äî about 12cm long and 3cm diameter. Place seam-side down. Let the rolls rest for 5 minutes before frying ‚Äî the rice paper rehydrates from the filling moisture and seals.',
+            tip: 'Rolling tightly is critical. Loose rolls fall apart in the oil or have air pockets that burst violently. The seam must be sealed firmly ‚Äî press the end down and let the moisture from the filling hold it.',
         },
         {
-            title: 'Deep-fry at 170∞C ó the two-stage method',
-            description: 'Heat oil to 170∞C. Fry the rolls seam-side down first for 3-4 minutes at medium heat until pale golden and the blistering has begun. Do not move them for the first 2 minutes. Increase heat to 185∞C and fry for another 2-3 minutes until deeply golden with well-developed blisters across the entire surface. The two temperatures produce both the blistered texture and the golden color.',
+            title: 'Deep-fry at 170¬∞C ‚Äî the two-stage method',
+            description: 'Heat oil to 170¬∞C. Fry the rolls seam-side down first for 3-4 minutes at medium heat until pale golden and the blistering has begun. Do not move them for the first 2 minutes. Increase heat to 185¬∞C and fry for another 2-3 minutes until deeply golden with well-developed blisters across the entire surface. The two temperatures produce both the blistered texture and the golden color.',
             tip: 'Starting at lower heat and increasing is the technique for maximum blistering. High heat from the start produces a flat golden crust. The initial lower heat allows moisture to expand into bubbles; the final high heat caramelizes and sets them.',
         },
         {
             title: 'Drain and serve immediately',
-            description: 'Remove with a slotted spoon and drain on paper towels in a single layer. The rolls continue cooking from residual heat ó serve within 5 minutes. Make the dipping sauce: combine fish sauce, lime juice, sugar, water, garlic, and chili. Serve ch? ram with the dipping sauce, lettuce leaves, and fresh herbs. The eating method: wrap a hot roll in a lettuce leaf with rau ram, dip completely in nu?c ch?m, eat in one or two bites.',
-            tip: 'Ch? ram must be eaten immediately. The blistered crust loses its shatter within 10 minutes as it absorbs moisture from the filling. This is beach food, street food ó eat it hot or not at all.',
+            description: 'Remove with a slotted spoon and drain on paper towels in a single layer. The rolls continue cooking from residual heat ‚Äî serve within 5 minutes. Make the dipping sauce: combine fish sauce, lime juice, sugar, water, garlic, and chili. Serve ch·∫£ ram with the dipping sauce, lettuce leaves, and fresh herbs. The eating method: wrap a hot roll in a lettuce leaf with rau rƒÉm, dip completely in n∆∞·ªõc ch·∫•m, eat in one or two bites.',
+            tip: 'Ch·∫£ ram must be eaten immediately. The blistered crust loses its shatter within 10 minutes as it absorbs moisture from the filling. This is beach food, street food ‚Äî eat it hot or not at all.',
         },
     ],
 };

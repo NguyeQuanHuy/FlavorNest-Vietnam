@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'xoai-lac-dua-nuoc',
     title: 'Shaken Mango with Toddy Palm (Xoai Lac Dua Nuoc)',
-    subtitle: 'Sweet, sour, spicy mango shaken with chili salt and chewy toddy palm � a refreshing Vietnamese street snack.',
+    subtitle: 'Sweet, sour, spicy mango shaken with chili salt and chewy toddy palm — a refreshing Vietnamese street snack.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '10 min',
@@ -12,16 +12,16 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/xoai-lac-dua-nuoc.jpg',
 
-    intro: `Xo�i l?c d?a nu?c is a modern Vietnamese street snack combining green mango, chili salt seasoning, and sweet toddy palm (d?a nu?c).
+    intro: `Xoài lắc dừa nước is a modern Vietnamese street snack combining green mango, chili salt seasoning, and sweet toddy palm (dừa nước).
 
-The dish is �shaken� in a container so the mango absorbs the spicy-sweet-sour seasoning evenly. The addition of chewy toddy palm jelly creates a unique texture contrast � crunchy mango vs. soft jelly � making it addictive and refreshing.`,
+The dish is “shaken” in a container so the mango absorbs the spicy-sweet-sour seasoning evenly. The addition of chewy toddy palm jelly creates a unique texture contrast — crunchy mango vs. soft jelly — making it addictive and refreshing.`,
 
     ingredientSections: [
         {
             title: 'Main ingredients',
             items: [
                 { amount: 2, name: 'green mango', note: 'julienned or cubed' },
-                { amount: 100, unit: 'g', name: 'toddy palm (d?a nu?c)', note: 'cut into cubes' },
+                { amount: 100, unit: 'g', name: 'toddy palm (dừa nước)', note: 'cut into cubes' },
                 { amount: 1, unit: 'tbsp', name: 'chili salt' },
                 { amount: 1, unit: 'tbsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'chili powder' },

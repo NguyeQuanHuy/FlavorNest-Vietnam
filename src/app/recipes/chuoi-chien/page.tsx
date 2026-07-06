@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'chuoi-chien',
     title: 'Vietnamese Fried Banana (Chuoi Chien)',
-    subtitle: 'Crispy golden banana fritters with a soft, sweet center — a popular street snack in Vietnam.',
+    subtitle: 'Crispy golden banana fritters with a soft, sweet center â€” a popular street snack in Vietnam.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '30 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/chuoi-chien.jpg',
 
-    intro: `Chu?i chiên is a beloved Vietnamese street snack made by coating ripe bananas in batter and deep-frying until golden and crispy.
+    intro: `Chuá»‘i chiÃªn is a beloved Vietnamese street snack made by coating ripe bananas in batter and deep-frying until golden and crispy.
 
 The contrast between the crunchy outer layer and soft, sweet banana inside makes it an irresistible treat often sold at street stalls.`,
 

@@ -3,7 +3,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-xoai',
-    title: 'G?i Xo‡i (Vietnamese Green Mango Salad)',
+    title: 'G·ªèi Xo√†i (Vietnamese Green Mango Salad)',
     subtitle: 'Shredded unripe mango tossed with dried shrimp, roasted peanuts, Vietnamese herbs, and a lime-fish sauce dressing that turns the mango\'s natural sourness into the organizing principle of the entire dish.',
     category: 'APPETIZER',
     difficulty: 'Easy',
@@ -11,23 +11,23 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-xoai.jpg',
-    intro: `G?i xo‡i is the Vietnamese green mango salad ó a dish built around the sourness and crunch of unripe mango in the same way that g?i du d? is built around green papaya. The two salads share the same dressing architecture and the same herb vocabulary, but the mango version has a more pronounced tartness and a slightly different texture: firmer, more fibrous, with a clean acidity that needs no rice vinegar to supplement it. The dried shrimp (tÙm khÙ) are the savory counterpoint ó small, intensely flavored, slightly chewy ó scattered through the salad rather than used as a primary protein. The peanuts add crunch and richness. The herbs ó Vietnamese coriander (rau ram) specifically ó add the peppery-sharp note that balances the mango's sourness. G?i xo‡i is a southern and central Vietnamese dish, eaten as a snack, an appetizer, or a side dish to grilled meats. It is also one of the most popular street food snacks in the country ó sold in small plastic bags with a wooden skewer at markets and bus stations, eaten standing up between other activities. The mango must be genuinely unripe: rock hard, pale green inside, with an assertive sourness that makes your eyes water. Any sweetness means the mango is too ripe and the salad will be flat.`,
+    intro: `G·ªèi xo√†i is the Vietnamese green mango salad ‚Äî a dish built around the sourness and crunch of unripe mango in the same way that g·ªèi ƒëu ƒë·ªß is built around green papaya. The two salads share the same dressing architecture and the same herb vocabulary, but the mango version has a more pronounced tartness and a slightly different texture: firmer, more fibrous, with a clean acidity that needs no rice vinegar to supplement it. The dried shrimp (t√¥m kh√¥) are the savory counterpoint ‚Äî small, intensely flavored, slightly chewy ‚Äî scattered through the salad rather than used as a primary protein. The peanuts add crunch and richness. The herbs ‚Äî Vietnamese coriander (rau rƒÉm) specifically ‚Äî add the peppery-sharp note that balances the mango's sourness. G·ªèi xo√†i is a southern and central Vietnamese dish, eaten as a snack, an appetizer, or a side dish to grilled meats. It is also one of the most popular street food snacks in the country ‚Äî sold in small plastic bags with a wooden skewer at markets and bus stations, eaten standing up between other activities. The mango must be genuinely unripe: rock hard, pale green inside, with an assertive sourness that makes your eyes water. Any sweetness means the mango is too ripe and the salad will be flat.`,
     ingredientSections: [
         {
             title: 'Salad',
             items: [
-                { amount: 500, unit: 'g', name: 'green unripe mango (xo‡i xanh)', note: 'rock hard, pale green-white flesh, no sweetness whatsoever. 2 medium mangoes. Must be unripe ó ripe mango produces a completely different and incorrect result.' },
-                { amount: 30, unit: 'g', name: 'dried shrimp (tÙm khÙ)', note: 'small, orange-pink. Soaked in warm water 10 minutes, drained and squeezed dry.' },
-                { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ó not powder' },
-                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h‡nh phi)' },
-                { amount: 2, name: 'bird\'s eye chilies', note: 'thinly sliced ó the heat is structural in this dish' },
+                { amount: 500, unit: 'g', name: 'green unripe mango (xo√†i xanh)', note: 'rock hard, pale green-white flesh, no sweetness whatsoever. 2 medium mangoes. Must be unripe ‚Äî ripe mango produces a completely different and incorrect result.' },
+                { amount: 30, unit: 'g', name: 'dried shrimp (t√¥m kh√¥)', note: 'small, orange-pink. Soaked in warm water 10 minutes, drained and squeezed dry.' },
+                { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ‚Äî not powder' },
+                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h√†nh phi)' },
+                { amount: 2, name: 'bird\'s eye chilies', note: 'thinly sliced ‚Äî the heat is structural in this dish' },
             ],
         },
         {
             title: 'Herbs',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)', note: 'leaves only ó essential, the defining herb' },
-                { amount: 0.5, name: 'bunch mint (h˙ng l?i)', note: 'leaves only' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî essential, the defining herb' },
+                { amount: 0.5, name: 'bunch mint (h√∫ng l·ªßi)', note: 'leaves only' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
         },
@@ -35,7 +35,7 @@ const recipe: RecipeData = {
             title: 'Dressing',
             items: [
                 { amount: 2.5, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 2, unit: 'tbsp', name: 'fresh lime juice', note: 'about 1.5 limes ó adjust based on mango sourness' },
+                { amount: 2, unit: 'tbsp', name: 'fresh lime juice', note: 'about 1.5 limes ‚Äî adjust based on mango sourness' },
                 { amount: 1.5, unit: 'tbsp', name: 'sugar' },
                 { amount: 2, unit: 'tbsp', name: 'water' },
                 { amount: 2, name: 'garlic cloves, minced' },
@@ -53,33 +53,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Peel and shred the green mango',
-            description: 'Peel the mango and cut the flesh away from the seed in large pieces. Shred into fine julienne strips using a box grater (large holes), mandoline with julienne attachment, or a sharp knife. The strips should be 2-3mm wide and 5-6cm long. Taste a strip ó it should be assertively sour and crunchy with no sweetness. If there is any sweetness, the mango is too ripe for this dish.',
+            description: 'Peel the mango and cut the flesh away from the seed in large pieces. Shred into fine julienne strips using a box grater (large holes), mandoline with julienne attachment, or a sharp knife. The strips should be 2-3mm wide and 5-6cm long. Taste a strip ‚Äî it should be assertively sour and crunchy with no sweetness. If there is any sweetness, the mango is too ripe for this dish.',
             tip: 'A Vietnamese mango shredder (available at Asian kitchen stores) produces the ideal strip thickness and length in seconds. It is the single most useful tool for Vietnamese salad preparation.',
         },
         {
             title: 'Salt the mango briefly',
-            description: 'Toss the shredded mango with a small pinch of salt (less than a quarter teaspoon). Leave for 5 minutes. The salt draws out a small amount of moisture and slightly softens the extreme sharpness of the mango. Rinse with cold water and squeeze gently. This step is optional but produces a more balanced result ó particularly with very sour mangoes.',
+            description: 'Toss the shredded mango with a small pinch of salt (less than a quarter teaspoon). Leave for 5 minutes. The salt draws out a small amount of moisture and slightly softens the extreme sharpness of the mango. Rinse with cold water and squeeze gently. This step is optional but produces a more balanced result ‚Äî particularly with very sour mangoes.',
             tip: 'Do not over-salt or leave too long. The goal is to take the edge off the sharpest acidity, not to make the mango limp. 5 minutes maximum.',
         },
         {
             title: 'Prepare the dried shrimp',
             description: 'Soak the dried shrimp in warm water for 10 minutes until slightly softened. Drain and squeeze out excess water firmly. Pat dry. The rehydrated dried shrimp should be pliable but not wet. If left in water too long they become waterlogged and lose their concentrated flavor.',
-            tip: 'Taste a dried shrimp before adding to the salad ó they vary considerably in saltiness by brand. If very salty, soak longer and squeeze more firmly. The dried shrimp flavor should be present in the salad but not overwhelming.',
+            tip: 'Taste a dried shrimp before adding to the salad ‚Äî they vary considerably in saltiness by brand. If very salty, soak longer and squeeze more firmly. The dried shrimp flavor should be present in the salad but not overwhelming.',
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until sugar dissolves. Add minced garlic and minced chili. Taste: it should be balanced sweet-sour-salty with a clean heat. For green mango salad specifically, the dressing should be slightly less acidic than for papaya salad ó the mango itself provides significant acidity. Adjust with more sugar if the mango is very tart.',
-            tip: 'Taste the dressing alongside a piece of the shredded mango before finalizing. The combined taste should be bright, sharp, and layered ó not one-dimensionally sour.',
+            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until sugar dissolves. Add minced garlic and minced chili. Taste: it should be balanced sweet-sour-salty with a clean heat. For green mango salad specifically, the dressing should be slightly less acidic than for papaya salad ‚Äî the mango itself provides significant acidity. Adjust with more sugar if the mango is very tart.',
+            tip: 'Taste the dressing alongside a piece of the shredded mango before finalizing. The combined taste should be bright, sharp, and layered ‚Äî not one-dimensionally sour.',
         },
         {
             title: 'Assemble immediately before serving',
-            description: 'In a large bowl, combine the shredded mango, dried shrimp, sliced chili, rau ram, mint, and spring onion. Pour the dressing over and toss gently to coat evenly. Transfer to a serving plate. Top with crushed peanuts and fried shallots ó these go on last to preserve their crunch.',
+            description: 'In a large bowl, combine the shredded mango, dried shrimp, sliced chili, rau rƒÉm, mint, and spring onion. Pour the dressing over and toss gently to coat evenly. Transfer to a serving plate. Top with crushed peanuts and fried shallots ‚Äî these go on last to preserve their crunch.',
             tip: 'Dress and eat immediately. Green mango salad softens noticeably within 20 minutes of dressing as the acid continues working on the mango fibers. Assemble just before serving, not in advance.',
         },
         {
             title: 'Serve with crackers',
             description: 'Arrange on a plate with prawn crackers alongside. The traditional eating method: spoon a small amount of salad onto a cracker, eat in one bite. The crunch of the cracker against the chewy dried shrimp and crisp mango is the complete textural experience. Serve with extra lime wedges for those who want more acidity.',
-            tip: 'G?i xo‡i as a street snack is served in a small plastic bag ó the diner shakes the bag to mix everything, then opens it and eats with a small fork or skewer. The bag presentation keeps everything cold and the crackers separate until the moment of eating.',
+            tip: 'G·ªèi xo√†i as a street snack is served in a small plastic bag ‚Äî the diner shakes the bag to mix everything, then opens it and eats with a small fork or skewer. The bag presentation keeps everything cold and the crackers separate until the moment of eating.',
         },
     ],
 };

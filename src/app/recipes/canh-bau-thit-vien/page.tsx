@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'canh-bau-thit-vien',
     title: 'Bottle Gourd Soup with Meatballs (Canh Bau Thit Vien)',
-    subtitle: 'Light Vietnamese soup with soft pork meatballs and tender bottle gourd � refreshing, simple, and homey.',
+    subtitle: 'Light Vietnamese soup with soft pork meatballs and tender bottle gourd — refreshing, simple, and homey.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/canh-bau-thit-vien.jpg',
 
-    intro: `Canh b?u th?t vi�n is a traditional Vietnamese home soup made with bottle gourd (b?u) and pork meatballs.
+    intro: `Canh bầu thịt viên is a traditional Vietnamese home soup made with bottle gourd (bầu) and pork meatballs.
 
 The soup is light, refreshing, and naturally sweet from the vegetable, while the meatballs add savory depth and softness. It is commonly served with steamed rice in daily family meals.`,
 
@@ -20,7 +20,7 @@ The soup is light, refreshing, and naturally sweet from the vegetable, while the
         {
             title: 'Main ingredients',
             items: [
-                { amount: 400, unit: 'g', name: 'bottle gourd (b?u)', note: 'peeled and sliced' },
+                { amount: 400, unit: 'g', name: 'bottle gourd (bầu)', note: 'peeled and sliced' },
                 { amount: 200, unit: 'g', name: 'ground pork' },
                 { amount: 1, name: 'egg white', note: 'optional for softness' },
                 { amount: 2, name: 'spring onion', note: 'chopped' },
@@ -46,8 +46,8 @@ The soup is light, refreshing, and naturally sweet from the vegetable, while the
             tip: 'Egg white makes meatballs softer and smoother.',
         },
         {
-            title: 'Saut� garlic',
-            description: 'Heat a little oil and saut� garlic until fragrant.',
+            title: 'Sauté garlic',
+            description: 'Heat a little oil and sauté garlic until fragrant.',
         },
         {
             title: 'Cook broth',

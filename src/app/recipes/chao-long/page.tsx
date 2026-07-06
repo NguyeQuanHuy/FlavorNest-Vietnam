@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'chao-long',
     title: 'Vietnamese Pork Offal Congee',
-    subtitle: 'Chao long — silky rice porridge enriched with pork offal, fresh herbs and a violent crack of black pepper. The classic working-class breakfast.',
+    subtitle: 'Chao long â€” silky rice porridge enriched with pork offal, fresh herbs and a violent crack of black pepper. The classic working-class breakfast.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/chao-long.jpg',
-    intro: 'Chao long is the breakfast Vietnamese workers reach for at 6am — cheap, filling, deeply restorative. The broth is built on pork bones simmered with toasted rice until the grains break down into something between a porridge and a soup. The toppings are unapologetic: poached pork heart, kidney, liver, intestine and blood, all sliced thin and arranged on top. The first spoonful is a test; by the third, you understand why this dish has been a Vietnamese morning ritual for centuries.',
+    intro: 'Chao long is the breakfast Vietnamese workers reach for at 6am â€” cheap, filling, deeply restorative. The broth is built on pork bones simmered with toasted rice until the grains break down into something between a porridge and a soup. The toppings are unapologetic: poached pork heart, kidney, liver, intestine and blood, all sliced thin and arranged on top. The first spoonful is a test; by the third, you understand why this dish has been a Vietnamese morning ritual for centuries.',
     ingredientSections: [
         {
             title: 'Broth and rice',
@@ -56,7 +56,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Toast the rice',
-            description: 'In a dry heavy pot, toast both rice varieties together over medium heat for 5 minutes, stirring constantly, until pale gold and nutty-smelling. This is the secret to deeply flavoured chao — untoasted rice gives a flat porridge.',
+            description: 'In a dry heavy pot, toast both rice varieties together over medium heat for 5 minutes, stirring constantly, until pale gold and nutty-smelling. This is the secret to deeply flavoured chao â€” untoasted rice gives a flat porridge.',
             tip: 'Aim for the colour of straw, not toast. Burnt rice turns the whole pot bitter.',
         },
         {
@@ -84,11 +84,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Strain and season the chao',
-            description: 'Strain bones from the porridge. The texture should be silky — somewhere between thick soup and loose porridge. If too thick, splash in hot water; if too thin, simmer uncovered a few more minutes. Season with fish sauce, rock sugar and salt. Taste and adjust.',
+            description: 'Strain bones from the porridge. The texture should be silky â€” somewhere between thick soup and loose porridge. If too thick, splash in hot water; if too thin, simmer uncovered a few more minutes. Season with fish sauce, rock sugar and salt. Taste and adjust.',
         },
         {
             title: 'Assemble and serve',
-            description: 'Ladle hot chao into 4 deep bowls. Arrange sliced pork belly, offal, blood and cha lua over the top in neat sections. Scatter fried shallots, spring onion, cilantro and rau ram. Crack black pepper over the top with conviction. Serve immediately with the fish sauce dip, lime and chilli on the side. Eaten the way Vietnamese workers eat it — fast, hot, with extra pepper.',
+            description: 'Ladle hot chao into 4 deep bowls. Arrange sliced pork belly, offal, blood and cha lua over the top in neat sections. Scatter fried shallots, spring onion, cilantro and rau ram. Crack black pepper over the top with conviction. Serve immediately with the fish sauce dip, lime and chilli on the side. Eaten the way Vietnamese workers eat it â€” fast, hot, with extra pepper.',
             tip: 'The pepper is not optional. A heavy hand of fresh-cracked black pepper is what defines a proper bowl of chao long.',
         },
     ],

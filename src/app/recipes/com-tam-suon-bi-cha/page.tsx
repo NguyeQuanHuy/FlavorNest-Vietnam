@@ -14,19 +14,19 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/com-tam-suon-bi-cha.jpg',
     intro:
-        'Com T?m Su?n B� Ch? is a iconic Saigon dish featuring fragrant broken rice served with a smoky grilled pork chop, shredded pork skin, and a savory steamed egg meatloaf.',
+        'Cơm Tấm Sườn Bì Chả is a iconic Saigon dish featuring fragrant broken rice served with a smoky grilled pork chop, shredded pork skin, and a savory steamed egg meatloaf.',
 ingredientSections: [
     {
         title: 'Broken Rice',
         items: [
-            { amount: 500, unit: 'g', name: 'broken rice (g?o t?m)' },
+            { amount: 500, unit: 'g', name: 'broken rice (gạo tấm)' },
             { amount: 600, unit: 'ml', name: 'water' },
             { amount: 0.5, unit: 'tsp', name: 'salt' },
             { amount: 1, unit: 'tsp', name: 'cooking oil' },
         ],
     },
     {
-        title: 'Grilled Pork Chops (Su?n Nu?ng)',
+        title: 'Grilled Pork Chops (Sườn Nướng)',
         items: [
             { amount: 4, unit: 'pieces', name: 'pork chops', note: 'about 600-700g, slightly pounded' },
             { amount: 2, unit: 'tbsp', name: 'minced lemongrass' },
@@ -40,7 +40,7 @@ ingredientSections: [
         ],
     },
     {
-        title: 'Steamed Egg Meatloaf (Ch? Tr?ng)',
+        title: 'Steamed Egg Meatloaf (Chả Trứng)',
         items: [
             { amount: 200, unit: 'g', name: 'minced pork' },
             { amount: 4, unit: 'large', name: 'eggs', note: 'keep 2 yolks aside for topping' },
@@ -53,11 +53,11 @@ ingredientSections: [
         ],
     },
     {
-        title: 'Shredded Pork Skin (B�)',
+        title: 'Shredded Pork Skin (Bì)',
         items: [
             { amount: 150, unit: 'g', name: 'pork skin', note: 'boiled and thinly sliced' },
             { amount: 100, unit: 'g', name: 'pork loin', note: 'boiled and shredded' },
-            { amount: 30, unit: 'g', name: 'roasted rice powder (th�nh)' },
+            { amount: 30, unit: 'g', name: 'roasted rice powder (thính)' },
             { amount: 1, unit: 'tsp', name: 'minced garlic' },
             { amount: 0.25, unit: 'tsp', name: 'salt and sugar' },
         ],
@@ -75,21 +75,21 @@ ingredientSections: [
 ],
     steps: [
         {
-            title: 'Prepare the Broken Rice (Com T?m)',
-            description: 'Rinse the broken rice grains until the water runs clear. Soak for 20�30 minutes to ensure even cooking.',
+            title: 'Prepare the Broken Rice (Cơm Tấm)',
+            description: 'Rinse the broken rice grains until the water runs clear. Soak for 20–30 minutes to ensure even cooking.',
             tip: 'Use a steamer instead of a rice cooker if you want that perfect, fluffy, non-sticky street-food texture.',
         },
         {
-            title: 'Marinate the Pork Chops (Su?n Nu?ng)',
+            title: 'Marinate the Pork Chops (Sườn Nướng)',
             description: 'Let the meat marinate for at least 4 hours (or overnight) so the flavors penetrate deep into the bone.',
         },
         {
-            title: 'Steam the Egg Meatloaf (Ch? Tr?ng)',
+            title: 'Steam the Egg Meatloaf (Chả Trứng)',
             description: 'Towards the end, brush a layer of egg yolk mixed with annatto oil on top to get that iconic vibrant yellow crust.',
         },
         {
-            title: 'Prepare the Shredded Pork Skin (B�)',
-            description: 'Boil pork skin until tender, slice it into thin strips (or buy pre-sliced), and mix with cooked shredded pork. Toss thoroughly with th�nh (toasted rice powder).',
+            title: 'Prepare the Shredded Pork Skin (Bì)',
+            description: 'Boil pork skin until tender, slice it into thin strips (or buy pre-sliced), and mix with cooked shredded pork. Toss thoroughly with thính (toasted rice powder).',
         },
         {
             title: 'Pour hot oil over chopped green onions with a pinch of salt.',
@@ -97,7 +97,7 @@ ingredientSections: [
         },
         {
             title: 'Grill and Assemble',
-            description: 'Grill the pork chops over charcoal (preferred) or in an air fryer until golden brown. Scoop rice onto a plate, add the pork, a slice of egg meatloaf, a heap of b�, and some pickled vegetables.',
+            description: 'Grill the pork chops over charcoal (preferred) or in an air fryer until golden brown. Scoop rice onto a plate, add the pork, a slice of egg meatloaf, a heap of bì, and some pickled vegetables.',
             tip: 'Drizzle a generous amount of scallion oil over the rice and the meatloaf right before serving.',
         },
     ],

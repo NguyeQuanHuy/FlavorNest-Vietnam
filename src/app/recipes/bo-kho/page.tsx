@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'bo-kho',
     title: 'Vietnamese Beef Stew',
-    subtitle: 'Bo kho — tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth, eaten with banh mi or rice noodles.',
+    subtitle: 'Bo kho â€” tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth, eaten with banh mi or rice noodles.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/bo-kho.jpg',
-    intro: 'Bo kho is what every Saigon family makes on a Sunday morning when they have time. The beef goes into the pot at 8am with lemongrass, star anise, ginger and a splash of coconut water; by 10am the kitchen smells of a small festival, and by 11am everyone is at the table tearing crusty banh mi to dip in the rust-red broth. Eaten with bread, with rice noodles, or simply over rice — bo kho is the rare Vietnamese dish that can be all three meals of the day, and most often is.',
+    intro: 'Bo kho is what every Saigon family makes on a Sunday morning when they have time. The beef goes into the pot at 8am with lemongrass, star anise, ginger and a splash of coconut water; by 10am the kitchen smells of a small festival, and by 11am everyone is at the table tearing crusty banh mi to dip in the rust-red broth. Eaten with bread, with rice noodles, or simply over rice â€” bo kho is the rare Vietnamese dish that can be all three meals of the day, and most often is.',
     ingredientSections: [
         {
             title: 'Beef and marinade',
@@ -58,7 +58,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Sear the beef',
-            description: 'Heat 2 tbsp oil in a heavy pot over high heat. Sear beef in batches until each piece has a deep brown crust on at least two sides — 3 minutes per batch. Do not crowd the pot or the beef will steam instead of sear. Remove and set aside.',
+            description: 'Heat 2 tbsp oil in a heavy pot over high heat. Sear beef in batches until each piece has a deep brown crust on at least two sides â€” 3 minutes per batch. Do not crowd the pot or the beef will steam instead of sear. Remove and set aside.',
         },
         {
             title: 'Bloom the spices',
@@ -75,8 +75,8 @@ const recipe: RecipeData = {
         },
         {
             title: 'Rest and serve',
-            description: 'Pull the lemongrass bundle and discard. Taste and adjust seasoning — the broth should be deeply savoury, faintly sweet, with star anise lifting it all. Rest 15 minutes off the heat. Ladle into wide bowls. Top with Thai basil and spring onion. Serve with crusty banh mi for dipping, or over rice noodles for bo kho noodle soup.',
-            tip: 'Bo kho tastes even better on day two. Make it ahead, refrigerate overnight, reheat gently — the flavours marry deeper.',
+            description: 'Pull the lemongrass bundle and discard. Taste and adjust seasoning â€” the broth should be deeply savoury, faintly sweet, with star anise lifting it all. Rest 15 minutes off the heat. Ladle into wide bowls. Top with Thai basil and spring onion. Serve with crusty banh mi for dipping, or over rice noodles for bo kho noodle soup.',
+            tip: 'Bo kho tastes even better on day two. Make it ahead, refrigerate overnight, reheat gently â€” the flavours marry deeper.',
         },
     ],
 };

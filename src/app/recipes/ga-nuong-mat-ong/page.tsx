@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'ga-nuong-mat-ong',
     title: 'Sweet Leaf Soup with Minced Pork',
     subtitle:
-        'Canh Rau Ngót Th?t Bam — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+        'Canh Rau NgÃ³t Thá»‹t BÄƒm â€” a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/ga-nuong-mat-ong.jpg',
     intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+        'Rau ngÃ³t is one of those vegetables that never made it out of Vietnam, which is a shame â€” the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
     ingredientSections: [
         {
             title: 'Broth and pork',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
         {
             title: 'Sweet leaves',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
+                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngÃ³t)', note: 'stripped from stems, bruised by hand' },
             ],
         },
         {
@@ -44,29 +44,29 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Bruise the sweet leaves',
-            description: 'TODO — strip leaves from stems; rub between palms until the leaves darken slightly.',
-            tip: 'TODO — bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
+            description: 'TODO â€” strip leaves from stems; rub between palms until the leaves darken slightly.',
+            tip: 'TODO â€” bruising is what makes the leaves cook evenly and release flavour. Do not skip.',
         },
         {
             title: 'Marinate the pork',
-            description: 'TODO — mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
+            description: 'TODO â€” mix pork with shallots, fish sauce, salt and white pepper; rest 10 minutes.',
         },
         {
             title: 'Render the pork into the broth',
-            description: 'TODO — bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
-            tip: 'TODO — dumping the pork in one clump gives you a meatball, not a flecked broth.',
+            description: 'TODO â€” bring water to a simmer, drop pork in small pinches while stirring so it poaches into tender flecks.',
+            tip: 'TODO â€” dumping the pork in one clump gives you a meatball, not a flecked broth.',
         },
         {
             title: 'Skim and season',
-            description: 'TODO — skim foam for 2 minutes; taste and adjust fish sauce.',
+            description: 'TODO â€” skim foam for 2 minutes; taste and adjust fish sauce.',
         },
         {
             title: 'Add the sweet leaves',
-            description: 'TODO — stir in rau ngót, simmer 3 minutes only until leaves are deep green and just tender.',
+            description: 'TODO â€” stir in rau ngÃ³t, simmer 3 minutes only until leaves are deep green and just tender.',
         },
         {
             title: 'Finish and serve',
-            description: 'TODO — off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
+            description: 'TODO â€” off heat, drizzle oil and crack pepper; serve alongside rice and a salty dish.',
         },
     ],
 };

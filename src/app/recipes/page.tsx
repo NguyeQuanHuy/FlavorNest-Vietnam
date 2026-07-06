@@ -59,7 +59,7 @@ function HeartButton({ slug, recipe }: { slug: string; recipe: typeof RECIPES[0]
                         transition={{ duration: 0.22 }}
                         style={{ position: "absolute", bottom: 44, right: 0, background: liked ? "#4B2E1A" : "rgba(75,46,26,0.75)", color: "white", fontSize: 11, fontWeight: 600, padding: "5px 12px", borderRadius: 100, whiteSpace: "nowrap", pointerEvents: "none", backdropFilter: "blur(8px)" }}
                     >
-                        {toast === "added" ? "? Saved" : "? Removed"}
+                        {toast === "added" ? "‚ô• Saved" : "‚úï Removed"}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -112,7 +112,7 @@ function RecipesInner() {
             str.toLowerCase()
                 .normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
-                .replace(/d/g, "d").replace(/–/g, "d");
+                .replace(/ƒë/g, "d").replace(/ƒê/g, "d");
 
         const q = normalize(localQuery.trim());
         const words = q.split(/\s+/).filter(Boolean);
@@ -125,27 +125,27 @@ function RecipesInner() {
                 if (cat === "All") return true;
 
                 if (cat === "Rice") {
-                    if (/\b(noodle|pho|bun|b˙n|ph?|mi quang|vermicelli|tapioca)\b/.test(titleLower)) return false;
-                    if (/\b(congee|chao|ch·o)\b/.test(titleLower)) return false;
-                    return /\b(rice|com|com|xoi|xÙi)\b/.test(titleLower) || tagsLower.includes("rice");
+                    if (/\b(noodle|pho|bun|b√∫n|ph·ªü|mi quang|vermicelli|tapioca)\b/.test(titleLower)) return false;
+                    if (/\b(congee|chao|ch√°o)\b/.test(titleLower)) return false;
+                    return /\b(rice|com|c∆°m|xoi|x√¥i)\b/.test(titleLower) || tagsLower.includes("rice");
                 }
 
                 if (cat === "Noodles") {
-                    if (/\b(rice|com|com|xoi|xÙi)\b/.test(titleLower) && !/\b(noodle|pho|bun|b˙n|ph?|mÏ)\b/.test(titleLower)) return false;
-                    return /\b(noodle|pho|bun|b˙n|ph?|mÏ|mi quang|vermicelli|tapioca)\b/.test(titleLower) || tagsLower.includes("noodles");
+                    if (/\b(rice|com|c∆°m|xoi|x√¥i)\b/.test(titleLower) && !/\b(noodle|pho|bun|b√∫n|ph·ªü|m√¨)\b/.test(titleLower)) return false;
+                    return /\b(noodle|pho|bun|b√∫n|ph·ªü|m√¨|mi quang|vermicelli|tapioca)\b/.test(titleLower) || tagsLower.includes("noodles");
                 }
 
                 if (cat === "Soup") {
-                    return /\b(soup|canh|broth|pho|ph?|bun bo|b˙n bÚ|bun rieu|b˙n riÍu|congee|chao|ch·o)\b/.test(titleLower);
+                    return /\b(soup|canh|broth|pho|ph·ªü|bun bo|b√∫n b√≤|bun rieu|b√∫n ri√™u|congee|chao|ch√°o)\b/.test(titleLower);
                 }
 
                 if (cat === "Street Food") {
                     return tagsLower.some((t) => t.includes("street")) ||
-                        /\b(banh mi|b·nh mÏ|skewer|street)\b/.test(titleLower);
+                        /\b(banh mi|b√°nh m√¨|skewer|street)\b/.test(titleLower);
                 }
 
                 if (cat === "Rolls") {
-                    return /\b(roll|cuon|cu?n|nem)\b/.test(titleLower) ||
+                    return /\b(roll|cuon|cu·ªën|nem)\b/.test(titleLower) ||
                         tagsLower.some((t) => t.includes("roll") || t.includes("wrap"));
                 }
 
@@ -255,11 +255,11 @@ function RecipesInner() {
                                             ? filtered.slice(0, 3).map(r => r.subtitle).join(", ")
                                             : "fresh ingredients"}
                                     </span>
-                                    {` `}ó explore all {filtered.length} matching recipes below.
+                                    {` `}‚Äî explore all {filtered.length} matching recipes below.
                                 </>
                             ) : (
                                 <>
-                                    Authentic Vietnamese recipes ó from{` `}
+                                    Authentic Vietnamese recipes ‚Äî from{` `}
                                     <span style={{ color: "#D97706", fontWeight: 600 }}>Hanoi&apos;s misty mornings</span>
                                     {` `}to{` `}
                                     <span style={{ color: "#D97706", fontWeight: 600 }}>Saigon&apos;s vibrant street corners</span>.
@@ -319,7 +319,7 @@ function RecipesInner() {
                                 Found <strong>{filtered.length}</strong> recipes for <strong>&quot;{localQuery}&quot;</strong>
                             </p>
                             <button onClick={clearSearch} style={{ fontSize: 12, color: "#D97706", fontWeight: 600, background: "none", border: "1px solid rgba(217,119,6,0.3)", borderRadius: 100, padding: "4px 14px", cursor: "pointer", fontFamily: "inherit" }}>
-                                Clear search ?
+                                Clear search ‚úï
                             </button>
                         </div>
                     </motion.div>
@@ -346,7 +346,7 @@ function RecipesInner() {
                                         <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" className="r-img" style={{ objectFit: "cover" }} quality={80} />
                                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 55%)", opacity: hovered === recipe.slug ? 1 : 0, transition: "opacity 0.3s" }} />
                                         <span style={{ position: "absolute", top: 14, left: 14, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(8px)", color: "#4B2E1A", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 100 }}>{recipe.category}</span>
-                                        <span style={{ position: "absolute", top: 14, right: 14, background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)", color: "white", fontSize: 11, fontWeight: 500, padding: "5px 11px", borderRadius: 100 }}>? {recipe.time}</span>
+                                        <span style={{ position: "absolute", top: 14, right: 14, background: "rgba(0,0,0,0.35)", backdropFilter: "blur(8px)", color: "white", fontSize: 11, fontWeight: 500, padding: "5px 11px", borderRadius: 100 }}>‚è± {recipe.time}</span>
                                         <div style={{ position: "absolute", bottom: 14, left: 14, display: "flex", alignItems: "center", gap: 8 }}>
                                             <div style={{ width: 7, height: 7, borderRadius: "50%", background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: "white", fontSize: 11, fontWeight: 600, textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>{recipe.difficulty}</span>
@@ -355,7 +355,7 @@ function RecipesInner() {
                                     </div>
                                     <div style={{ padding: "14px 4px 20px" }}>
                                         <div style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", color: "rgba(75,46,26,0.45)", textTransform: "uppercase", marginBottom: 8, paddingBottom: 6, borderBottom: "1.5px solid rgba(75,46,26,0.15)", display: "inline-block" }}>
-                                            {recipe.category} ∑ {recipe.region}
+                                            {recipe.category} ¬∑ {recipe.region}
                                         </div>
                                         <h2 style={{ fontFamily: "'Nunito Sans', serif", fontSize: 20, fontWeight: 600, color: "#2D1A0E", margin: "10px 0 4px", lineHeight: 1.2 }}>
                                             <Highlight text={recipe.title} query={localQuery} />
@@ -406,11 +406,11 @@ function RecipesInner() {
                                     disabled={page === 1}
                                     style={{ width: 34, height: 34, border: 'none', borderRadius: '50%', background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 18, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
-                                    ã
+                                    ‚Äπ
                                 </button>
 
                                 {pages.map((p, idx) => p === 'dots' ? (
-                                    <span key={`dots-${idx}`} style={{ width: 20, textAlign: 'center', color: 'rgba(75,46,26,0.35)', fontSize: 13, letterSpacing: 1 }}>Ö</span>
+                                    <span key={`dots-${idx}`} style={{ width: 20, textAlign: 'center', color: 'rgba(75,46,26,0.35)', fontSize: 13, letterSpacing: 1 }}>‚Ä¶</span>
                                 ) : (
                                     <button
                                         key={p}
@@ -428,7 +428,7 @@ function RecipesInner() {
                                     disabled={page === totalPages}
                                     style={{ width: 34, height: 34, border: 'none', borderRadius: '50%', background: 'transparent', color: page === totalPages ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 18, fontWeight: 500, cursor: page === totalPages ? 'default' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
-                                    õ
+                                    ‚Ä∫
                                 </button>
                             </div>
                         </div>
@@ -471,7 +471,7 @@ export default function RecipesPage() {
         <Suspense fallback={
             <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#FAFAF7" }}>
                 <div style={{ textAlign: "center", color: "rgba(75,46,26,0.4)" }}>
-                    <div style={{ fontSize: 36, marginBottom: 12 }}>??</div>
+                    <div style={{ fontSize: 36, marginBottom: 12 }}>üçú</div>
                     <p style={{ fontFamily: "system-ui" }}>Loading recipes...</p>
                 </div>
             </div>

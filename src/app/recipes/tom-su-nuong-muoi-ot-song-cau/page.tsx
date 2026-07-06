@@ -3,28 +3,28 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tom-su-nuong-muoi-ot-song-cau',
-    title: 'TÙm S˙ Nu?ng Mu?i ?t SÙng C?u (SÙng C?u Black Tiger Prawns Grilled with Chili Salt)',
-    subtitle: 'Large black tiger prawns from the SÙng C?u lagoon coated in a chili-salt paste and grilled over hardwood charcoal until the shells char and the paste caramelizes ó served with the mu?i l· È dipping salt that is specific to Ph˙ YÍn and available nowhere else.',
+    title: 'T√¥m S√∫ N∆∞·ªõng Mu·ªëi ·ªöt S√¥ng C·∫ßu (S√¥ng C·∫ßu Black Tiger Prawns Grilled with Chili Salt)',
+    subtitle: 'Large black tiger prawns from the S√¥ng C·∫ßu lagoon coated in a chili-salt paste and grilled over hardwood charcoal until the shells char and the paste caramelizes ‚Äî served with the mu·ªëi l√° √© dipping salt that is specific to Ph√∫ Y√™n and available nowhere else.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/tom-su-nuong-muoi-ot-song-cau.jpg',
-    intro: `TÙm s˙ nu?ng mu?i ?t SÙng C?u is the grilled prawn preparation that defines the seafood eating of SÙng C?u town ó the fishing port at the northern end of Ph˙ YÍn province where the tÙm s˙ (black tiger prawn, Penaeus monodon) are farmed in the protected waters of C˘ MÙng lagoon and the Xu‚n –‡i bay, producing prawns of exceptional size and sweetness. SÙng C?u tÙm s˙ are a specific product: the combination of the lagoon's water conditions ó warm, with specific mineral content from the surrounding hills ó and the traditional farming practices of the SÙng C?u fisher families produces prawns that are notably sweeter and have a firmer texture than tiger prawns from other growing regions. They are sold at the morning market in SÙng C?u from 5am, when the boats come in, and the restaurants along the waterfront cook them in the preparation that shows them most clearly: the charcoal grill with the chili-salt paste that caramelizes onto the shell and, through the shell, perfumes the flesh. The mu?i l· È that accompanies this dish is the distinguishing element that places it specifically in Ph˙ YÍn: the pounded salt of litsea cubeba leaves that appears throughout the province's cooking, from g‡ h?p l· È to g‡ nu?ng m?i to this prawn preparation. Its specific citrus-pepper-wild fragrance against the sweet caramelized prawn and the saltiness of the sea is the combination that SÙng C?u seafood is eaten with, and that no other dipping preparation replicates.`,
+    intro: `T√¥m s√∫ n∆∞·ªõng mu·ªëi ·ªõt S√¥ng C·∫ßu is the grilled prawn preparation that defines the seafood eating of S√¥ng C·∫ßu town ‚Äî the fishing port at the northern end of Ph√∫ Y√™n province where the t√¥m s√∫ (black tiger prawn, Penaeus monodon) are farmed in the protected waters of C√π M√¥ng lagoon and the Xu√¢n ƒê√†i bay, producing prawns of exceptional size and sweetness. S√¥ng C·∫ßu t√¥m s√∫ are a specific product: the combination of the lagoon's water conditions ‚Äî warm, with specific mineral content from the surrounding hills ‚Äî and the traditional farming practices of the S√¥ng C·∫ßu fisher families produces prawns that are notably sweeter and have a firmer texture than tiger prawns from other growing regions. They are sold at the morning market in S√¥ng C·∫ßu from 5am, when the boats come in, and the restaurants along the waterfront cook them in the preparation that shows them most clearly: the charcoal grill with the chili-salt paste that caramelizes onto the shell and, through the shell, perfumes the flesh. The mu·ªëi l√° √© that accompanies this dish is the distinguishing element that places it specifically in Ph√∫ Y√™n: the pounded salt of litsea cubeba leaves that appears throughout the province's cooking, from g√† h·∫•p l√° √© to g√† n∆∞·ªõng m·ªçi to this prawn preparation. Its specific citrus-pepper-wild fragrance against the sweet caramelized prawn and the saltiness of the sea is the combination that S√¥ng C·∫ßu seafood is eaten with, and that no other dipping preparation replicates.`,
     ingredientSections: [
         {
             title: 'Prawns',
             items: [
-                { amount: 800, unit: 'g', name: 'large black tiger prawns (tÙm s˙ c? l?n)', note: 'heads on, shells on. 8-12 count per 500g ó large enough that the flesh inside has substance after the shell chars. SÙng C?u prawns if available; any large fresh tiger prawns otherwise.' },
+                { amount: 800, unit: 'g', name: 'large black tiger prawns (t√¥m s√∫ c·ª° l·ªõn)', note: 'heads on, shells on. 8-12 count per 500g ‚Äî large enough that the flesh inside has substance after the shell chars. S√¥ng C·∫ßu prawns if available; any large fresh tiger prawns otherwise.' },
             ],
         },
         {
-            title: 'Mu?i ?t chili-salt paste',
+            title: 'Mu·ªëi ·ªõt chili-salt paste',
             items: [
                 { amount: 1.5, unit: 'tsp', name: 'coarse sea salt' },
-                { amount: 4, name: 'bird\'s eye chilies', note: 'minced ó SÙng C?u preparation is spicier than most coastal versions' },
-                { amount: 2, name: 'fresh red chilies', note: 'minced ó larger, milder, for volume and color' },
+                { amount: 4, name: 'bird\'s eye chilies', note: 'minced ‚Äî S√¥ng C·∫ßu preparation is spicier than most coastal versions' },
+                { amount: 2, name: 'fresh red chilies', note: 'minced ‚Äî larger, milder, for volume and color' },
                 { amount: 3, name: 'lemongrass stalks', note: 'inner stalk, minced to paste' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
@@ -33,9 +33,9 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Mu?i l· È (Ph˙ YÍn litsea leaf salt)',
+            title: 'Mu·ªëi l√° √© (Ph√∫ Y√™n litsea leaf salt)',
             items: [
-                { amount: 20, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)', note: 'the defining dipping salt of Ph˙ YÍn. Substitute if unavailable: 6 kaffir lime leaves + 6 rau ram leaves pounded with the salt.' },
+                { amount: 20, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)', note: 'the defining dipping salt of Ph√∫ Y√™n. Substitute if unavailable: 6 kaffir lime leaves + 6 rau rƒÉm leaves pounded with the salt.' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'freshly ground black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -46,44 +46,44 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch rau ram', note: 'leaves only ó eaten between prawns' },
-                { amount: 1, name: 'bunch fresh l· È leaves, extra', note: 'served raw alongside for eating with the prawns' },
+                { amount: 1, name: 'bunch rau rƒÉm', note: 'leaves only ‚Äî eaten between prawns' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves, extra', note: 'served raw alongside for eating with the prawns' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 3, name: 'spring onions, sliced' },
-                { amount: 16, name: 'sesame rice crackers (b·nh tr·ng mË Tuy An)', note: 'optional but traditional ó for wrapping and dipping' },
+                { amount: 16, name: 'sesame rice crackers (b√°nh tr√°ng m√® Tuy An)', note: 'optional but traditional ‚Äî for wrapping and dipping' },
             ],
         },
     ],
     steps: [
         {
             title: 'Prepare the prawns',
-            description: 'Rinse the tiger prawns under cold water. Use sharp scissors to cut through the shell along the back of each prawn ó this allows the chili-salt paste to penetrate through the shell and flavors the flesh directly, and makes the prawn easier to eat after grilling. Devein through this cut. Leave the shell and head intact. Pat completely dry. The cut along the back should go through the shell and just into the flesh ó not all the way through.',
-            tip: 'The scissors cut along the back is the preparation technique specific to nu?ng mu?i ?t ó it allows the paste to season the flesh through the opening while the shell remains intact to protect and concentrate heat during grilling. Prawns prepared this way are more evenly seasoned than whole uncut prawns.',
+            description: 'Rinse the tiger prawns under cold water. Use sharp scissors to cut through the shell along the back of each prawn ‚Äî this allows the chili-salt paste to penetrate through the shell and flavors the flesh directly, and makes the prawn easier to eat after grilling. Devein through this cut. Leave the shell and head intact. Pat completely dry. The cut along the back should go through the shell and just into the flesh ‚Äî not all the way through.',
+            tip: 'The scissors cut along the back is the preparation technique specific to n∆∞·ªõng mu·ªëi ·ªõt ‚Äî it allows the paste to season the flesh through the opening while the shell remains intact to protect and concentrate heat during grilling. Prawns prepared this way are more evenly seasoned than whole uncut prawns.',
         },
         {
             title: 'Make and apply the chili-salt paste',
-            description: 'Combine salt, minced bird\'s eye chili, minced red chili, lemongrass paste, garlic, sugar, turmeric, and oil into a thick paste. Work the paste into the cut along the back of each prawn, pressing firmly so it enters the flesh directly. Coat the external shell surface generously. Leave for 15 minutes while the charcoal heats ó the salt begins drawing moisture from the flesh surface and the paste adheres more completely.',
+            description: 'Combine salt, minced bird\'s eye chili, minced red chili, lemongrass paste, garlic, sugar, turmeric, and oil into a thick paste. Work the paste into the cut along the back of each prawn, pressing firmly so it enters the flesh directly. Coat the external shell surface generously. Leave for 15 minutes while the charcoal heats ‚Äî the salt begins drawing moisture from the flesh surface and the paste adheres more completely.',
             tip: 'The paste applied inside the back cut is the key difference from simply coating the exterior. When the prawn is grilled, the paste inside the cut caramelizes directly onto the flesh surface, producing a more intensely seasoned result than surface-only application.',
         },
         {
-            title: 'Make the mu?i l· È',
-            description: 'Pound the l· È leaves and coarse salt together in a mortar until the leaves break down and the salt turns green and intensely fragrant ó the specific citrus-pepper-wild aroma of litsea cubeba should be clearly detectable. Add black pepper, sugar, and the minced chili if using. Transfer to individual small dipping plates. Leave the lime uncut until the moment of eating ó squeeze directly over the salt at the table.',
-            tip: 'The mu?i l· È for tÙm s˙ is pounded slightly coarser than for chicken ó the texture contrast of slightly grainy salt against the smooth prawn flesh is part of the eating experience. Do not pound to a completely uniform paste.',
+            title: 'Make the mu·ªëi l√° √©',
+            description: 'Pound the l√° √© leaves and coarse salt together in a mortar until the leaves break down and the salt turns green and intensely fragrant ‚Äî the specific citrus-pepper-wild aroma of litsea cubeba should be clearly detectable. Add black pepper, sugar, and the minced chili if using. Transfer to individual small dipping plates. Leave the lime uncut until the moment of eating ‚Äî squeeze directly over the salt at the table.',
+            tip: 'The mu·ªëi l√° √© for t√¥m s√∫ is pounded slightly coarser than for chicken ‚Äî the texture contrast of slightly grainy salt against the smooth prawn flesh is part of the eating experience. Do not pound to a completely uniform paste.',
         },
         {
             title: 'Build and heat the charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over ó 25-30 minutes. The fire for tÙm s˙ should be medium-hot: intense enough to char the shell and caramelize the paste in 4-5 minutes per side, not so hot that the paste burns before the flesh cooks. The SÙng C?u method: grill the prawns close to the coals ó 10-12cm ó for fast charring with good heat penetration into the thick flesh.',
-            tip: 'Large tiger prawns have significantly more flesh than regular shrimp and need more time and heat to cook through. The closeness to the coals (10-12cm) compensates for the larger size ó the intense direct radiant heat penetrates the shell faster than a higher position would.',
+            description: 'Light hardwood charcoal and wait until fully ashed over ‚Äî 25-30 minutes. The fire for t√¥m s√∫ should be medium-hot: intense enough to char the shell and caramelize the paste in 4-5 minutes per side, not so hot that the paste burns before the flesh cooks. The S√¥ng C·∫ßu method: grill the prawns close to the coals ‚Äî 10-12cm ‚Äî for fast charring with good heat penetration into the thick flesh.',
+            tip: 'Large tiger prawns have significantly more flesh than regular shrimp and need more time and heat to cook through. The closeness to the coals (10-12cm) compensates for the larger size ‚Äî the intense direct radiant heat penetrates the shell faster than a higher position would.',
         },
         {
             title: 'Grill shell-side down first',
-            description: 'Place the prawns shell-side (back) down over the coals ó the cut with the paste faces down toward the heat. Grill without moving for 4-5 minutes until the shell chars and the paste in the cut begins to caramelize visibly at the edges. The head should turn orange-red. Flip to flesh-side down for 2-3 minutes until the exposed flesh is lightly charred. The prawn is done when the flesh is completely white and pulls away from the shell slightly.',
-            tip: 'The shell-side-down position puts the paste-filled cut directly over the heat ó the paste caramelizes into the flesh from below while the shell above reflects heat back down. This dual heating produces the most evenly cooked and seasoned prawn.',
+            description: 'Place the prawns shell-side (back) down over the coals ‚Äî the cut with the paste faces down toward the heat. Grill without moving for 4-5 minutes until the shell chars and the paste in the cut begins to caramelize visibly at the edges. The head should turn orange-red. Flip to flesh-side down for 2-3 minutes until the exposed flesh is lightly charred. The prawn is done when the flesh is completely white and pulls away from the shell slightly.',
+            tip: 'The shell-side-down position puts the paste-filled cut directly over the heat ‚Äî the paste caramelizes into the flesh from below while the shell above reflects heat back down. This dual heating produces the most evenly cooked and seasoned prawn.',
         },
         {
-            title: 'Serve and eat the SÙng C?u way',
-            description: 'Transfer immediately to a plate. Scatter spring onion and extra l· È leaves. Serve with the mu?i l· È in individual plates, lime wedges for squeezing, rau ram, and sesame crackers. The SÙng C?u eating method: squeeze lime over the mu?i l· È. Pick up a prawn, peel the shell (it comes away easily after grilling), eat the flesh dipped in the mu?i l· È with a leaf of rau ram. The charred paste clinging to the inside of the shell is sucked off before discarding. Eat quickly while hot.',
-            tip: 'The charred paste on the inside of the shell after peeling ó the caramelized chili-lemongrass that was inside the cut ó should be licked or sucked off the shell before discarding. It has concentrated to an intensity that is the most flavored element of the entire preparation. Coastal Ph˙ YÍn diners do this automatically.',
+            title: 'Serve and eat the S√¥ng C·∫ßu way',
+            description: 'Transfer immediately to a plate. Scatter spring onion and extra l√° √© leaves. Serve with the mu·ªëi l√° √© in individual plates, lime wedges for squeezing, rau rƒÉm, and sesame crackers. The S√¥ng C·∫ßu eating method: squeeze lime over the mu·ªëi l√° √©. Pick up a prawn, peel the shell (it comes away easily after grilling), eat the flesh dipped in the mu·ªëi l√° √© with a leaf of rau rƒÉm. The charred paste clinging to the inside of the shell is sucked off before discarding. Eat quickly while hot.',
+            tip: 'The charred paste on the inside of the shell after peeling ‚Äî the caramelized chili-lemongrass that was inside the cut ‚Äî should be licked or sucked off the shell before discarding. It has concentrated to an intensity that is the most flavored element of the entire preparation. Coastal Ph√∫ Y√™n diners do this automatically.',
         },
     ],
 };

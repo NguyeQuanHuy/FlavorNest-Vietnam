@@ -3,29 +3,29 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'cua-da-nuong-muoi-ot',
-    title: 'Cua –· Nu?ng Mu?i ?t (Ph˙ YÍn Rock Crab Grilled with Chili Salt)',
-    subtitle: 'Wild rock crabs harvested from the basalt columns of G‡nh –· –ia and the rocky outcrops along the Ph˙ YÍn coast, coated in chili-salt paste and grilled directly on the coals until the shell chars and the intense, mineral-sweet rock crab flesh inside caramelizes at the edges.',
+    title: 'Cua ƒê√° N∆∞·ªõng Mu·ªëi ·ªöt (Ph√∫ Y√™n Rock Crab Grilled with Chili Salt)',
+    subtitle: 'Wild rock crabs harvested from the basalt columns of G√†nh ƒê√° ƒêƒ©a and the rocky outcrops along the Ph√∫ Y√™n coast, coated in chili-salt paste and grilled directly on the coals until the shell chars and the intense, mineral-sweet rock crab flesh inside caramelizes at the edges.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/cua-da-nuong-muoi-ot.jpg',
-    intro: `Cua d· ó rock crab ó is the crab that Ph˙ YÍn fishermen harvest by hand from the basalt columns of G‡nh –· –ia, the hexagonal rock formation that is the province's most photographed natural landmark, and from the rocky shorelines between Mui –i?n (the easternmost point of Vietnam) and Vung RÙ bay to the south. Rock crabs live in the crevices and tide pools of exposed rocky coastline ó a completely different habitat from the sandy-bottom mud crabs and the open-water flower crabs that constitute most of Vietnamese coastal crab eating. Their habitat produces their flavor: a more mineral, more intensely savory flesh than any farmed or sandy-bottom crab, with a density that comes from the constant physical activity of navigating the surge and the rocks, and a specific sweetness that reflects the clean, oxygenated water of the exposed coast. Cua d· are smaller than mud crabs ó rarely exceeding 200g individually ó and have harder, more compact shells that conduct heat differently on the grill. The correct cooking method is direct coals: the crab placed shell-side down directly on glowing hardwood charcoal so that the heat is applied from the maximum-temperature source rather than mediated by a grill grate. The shell chars and transfers heat directly to the flesh while the chili-salt paste on the exterior caramelizes into the crevices of the shell and through the leg joints into the meat. The result is a rock crab that tastes simultaneously of its own mineral-sweet intensity, the specific char of hardwood coal, and the lemongrass-chili paste ó a combination that is inseparable from the rocky, wind-exposed coastline where these crabs lived.`,
+    intro: `Cua ƒë√° ‚Äî rock crab ‚Äî is the crab that Ph√∫ Y√™n fishermen harvest by hand from the basalt columns of G√†nh ƒê√° ƒêƒ©a, the hexagonal rock formation that is the province's most photographed natural landmark, and from the rocky shorelines between M≈©i ƒêi·ªán (the easternmost point of Vietnam) and V≈©ng R√¥ bay to the south. Rock crabs live in the crevices and tide pools of exposed rocky coastline ‚Äî a completely different habitat from the sandy-bottom mud crabs and the open-water flower crabs that constitute most of Vietnamese coastal crab eating. Their habitat produces their flavor: a more mineral, more intensely savory flesh than any farmed or sandy-bottom crab, with a density that comes from the constant physical activity of navigating the surge and the rocks, and a specific sweetness that reflects the clean, oxygenated water of the exposed coast. Cua ƒë√° are smaller than mud crabs ‚Äî rarely exceeding 200g individually ‚Äî and have harder, more compact shells that conduct heat differently on the grill. The correct cooking method is direct coals: the crab placed shell-side down directly on glowing hardwood charcoal so that the heat is applied from the maximum-temperature source rather than mediated by a grill grate. The shell chars and transfers heat directly to the flesh while the chili-salt paste on the exterior caramelizes into the crevices of the shell and through the leg joints into the meat. The result is a rock crab that tastes simultaneously of its own mineral-sweet intensity, the specific char of hardwood coal, and the lemongrass-chili paste ‚Äî a combination that is inseparable from the rocky, wind-exposed coastline where these crabs lived.`,
     ingredientSections: [
         {
             title: 'Rock crabs',
             items: [
-                { amount: 1.2, unit: 'kg', name: 'fresh rock crabs (cua d·)', note: 'live, 100-200g each ó 6-8 crabs. Available along the central Vietnamese coast. Substitute: small mud crabs or stone crabs ó the flavor differs but the technique is identical.' },
+                { amount: 1.2, unit: 'kg', name: 'fresh rock crabs (cua ƒë√°)', note: 'live, 100-200g each ‚Äî 6-8 crabs. Available along the central Vietnamese coast. Substitute: small mud crabs or stone crabs ‚Äî the flavor differs but the technique is identical.' },
             ],
         },
         {
-            title: 'Mu?i ?t paste',
+            title: 'Mu·ªëi ·ªõt paste',
             items: [
-                { amount: 2, unit: 'tsp', name: 'coarse sea salt', note: 'slightly more than for other crabs ó rock crab\'s dense flesh needs stronger seasoning' },
+                { amount: 2, unit: 'tsp', name: 'coarse sea salt', note: 'slightly more than for other crabs ‚Äî rock crab\'s dense flesh needs stronger seasoning' },
                 { amount: 4, name: 'bird\'s eye chilies', note: 'minced' },
                 { amount: 2, name: 'fresh red chilies', note: 'minced' },
-                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, minced to paste ó four stalks, the Ph˙ YÍn proportion' },
+                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, minced to paste ‚Äî four stalks, the Ph√∫ Y√™n proportion' },
                 { amount: 5, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
@@ -34,11 +34,11 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Mu?i l· È ó the Ph˙ YÍn coastal dipping salt',
+            title: 'Mu·ªëi l√° √© ‚Äî the Ph√∫ Y√™n coastal dipping salt',
             items: [
-                { amount: 20, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)' },
+                { amount: 20, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
-                { amount: 1, unit: 'tsp', name: 'black pepper', note: 'slightly coarser grind than usual ó rock crab needs texture in the salt' },
+                { amount: 1, unit: 'tsp', name: 'black pepper', note: 'slightly coarser grind than usual ‚Äî rock crab needs texture in the salt' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 3, name: 'limes', note: 'squeezed at the table' },
             ],
@@ -46,14 +46,14 @@ const recipe: RecipeData = {
         {
             title: 'Charcoal fire',
             items: [
-                { amount: 1.5, unit: 'kg', name: 'hardwood charcoal', note: 'more charcoal than usual ó direct coal cooking requires a deep, sustained fire' },
+                { amount: 1.5, unit: 'kg', name: 'hardwood charcoal', note: 'more charcoal than usual ‚Äî direct coal cooking requires a deep, sustained fire' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch rau ram' },
-                { amount: 1, name: 'bunch fresh l· È leaves, extra', note: 'for eating raw alongside' },
+                { amount: 1, name: 'bunch rau rƒÉm' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves, extra', note: 'for eating raw alongside' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 3, name: 'spring onions, sliced' },
                 { amount: 1, name: 'bowl warm water with lime', note: 'finger bowl' },
@@ -63,33 +63,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare the rock crabs',
-            description: 'Place live rock crabs in the freezer for 20 minutes ó their smaller size means they sedate faster than large crabs, but they are more aggressive weight-for-weight and need full sedation. Rinse under cold water, scrubbing the shells. Rock crabs can be grilled whole ó the small size means the whole crab cooks through from the direct coal heat. Remove the apron and lift the top shell only if the crabs are on the larger end (over 150g). Leave small crabs completely intact ó the whole shell acts as a cooking vessel for the flesh.',
-            tip: 'Leaving small rock crabs whole for direct coal grilling is the correct technique ó the sealed shell creates a mini pressure environment that steams the flesh from within while the exterior chars. Opening the crab before grilling loses this internal steam and produces drier flesh.',
+            description: 'Place live rock crabs in the freezer for 20 minutes ‚Äî their smaller size means they sedate faster than large crabs, but they are more aggressive weight-for-weight and need full sedation. Rinse under cold water, scrubbing the shells. Rock crabs can be grilled whole ‚Äî the small size means the whole crab cooks through from the direct coal heat. Remove the apron and lift the top shell only if the crabs are on the larger end (over 150g). Leave small crabs completely intact ‚Äî the whole shell acts as a cooking vessel for the flesh.',
+            tip: 'Leaving small rock crabs whole for direct coal grilling is the correct technique ‚Äî the sealed shell creates a mini pressure environment that steams the flesh from within while the exterior chars. Opening the crab before grilling loses this internal steam and produces drier flesh.',
         },
         {
             title: 'Apply the chili-salt paste aggressively',
-            description: 'Make the mu?i ?t paste by combining all paste ingredients. Apply to the rock crabs more aggressively than to larger crabs ó push the paste into every leg joint, into the apron crevice, over every surface of the shell. Rock crab shells have more surface texture than flower crab or mud crab and hold the paste in the natural ridges and indentations. Press firmly. The paste should be visible on every surface. Leave for 15 minutes.',
-            tip: 'Rock crab shells are rougher than other crab shells ó this is an advantage for paste adhesion. Push the paste into the natural ridges and texture of the shell surface so it stays in place during the direct coal grilling rather than falling into the fire.',
+            description: 'Make the mu·ªëi ·ªõt paste by combining all paste ingredients. Apply to the rock crabs more aggressively than to larger crabs ‚Äî push the paste into every leg joint, into the apron crevice, over every surface of the shell. Rock crab shells have more surface texture than flower crab or mud crab and hold the paste in the natural ridges and indentations. Press firmly. The paste should be visible on every surface. Leave for 15 minutes.',
+            tip: 'Rock crab shells are rougher than other crab shells ‚Äî this is an advantage for paste adhesion. Push the paste into the natural ridges and texture of the shell surface so it stays in place during the direct coal grilling rather than falling into the fire.',
         },
         {
             title: 'Build the direct coal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over ó 30 minutes minimum. Rake the coals into an even layer approximately 5cm deep. The surface of the coals should be consistently glowing orange-white with no black patches. For direct coal cooking of rock crab, the depth of the coal bed matters more than for grate cooking ó the crabs sit directly in the coals and the heat surrounds them rather than coming from one direction.',
-            tip: 'The direct coal method ó crabs placed shell-side down directly on the glowing coals rather than on a grate above them ó produces a more intense, more even heat application than any grate cooking. The coal heat reaches the shell from direct contact and transfers into the flesh faster. This is the original Ph˙ YÍn coastal method, used when grilling on the beach.',
+            description: 'Light hardwood charcoal and wait until fully ashed over ‚Äî 30 minutes minimum. Rake the coals into an even layer approximately 5cm deep. The surface of the coals should be consistently glowing orange-white with no black patches. For direct coal cooking of rock crab, the depth of the coal bed matters more than for grate cooking ‚Äî the crabs sit directly in the coals and the heat surrounds them rather than coming from one direction.',
+            tip: 'The direct coal method ‚Äî crabs placed shell-side down directly on the glowing coals rather than on a grate above them ‚Äî produces a more intense, more even heat application than any grate cooking. The coal heat reaches the shell from direct contact and transfers into the flesh faster. This is the original Ph√∫ Y√™n coastal method, used when grilling on the beach.',
         },
         {
             title: 'Grill directly on the coals',
-            description: 'Place the coated rock crabs shell-side down directly on the glowing charcoal surface. They will sizzle immediately and the paste will begin caramelizing on contact. Grill for 5-6 minutes without moving ó the paste chars onto the shell and the shell chars onto the coals in a way that produces the specific black-and-caramel exterior of cua d· nu?ng. Using tongs, flip the crabs for 3-4 more minutes flesh-side down directly on the coals. The crabs are done when the shell is deeply charred throughout and one leg pulled away cleanly from a large crab.',
-            tip: 'The black char from direct coal contact is the desired result ó not accidental burning. The bottom of the rock crab shell will be genuinely blackened from the coal contact, which concentrates the caramelized paste and transfers the hardwood fragrance directly into the flesh. This char is what makes cua d· nu?ng taste unlike any other grilled crab preparation.',
+            description: 'Place the coated rock crabs shell-side down directly on the glowing charcoal surface. They will sizzle immediately and the paste will begin caramelizing on contact. Grill for 5-6 minutes without moving ‚Äî the paste chars onto the shell and the shell chars onto the coals in a way that produces the specific black-and-caramel exterior of cua ƒë√° n∆∞·ªõng. Using tongs, flip the crabs for 3-4 more minutes flesh-side down directly on the coals. The crabs are done when the shell is deeply charred throughout and one leg pulled away cleanly from a large crab.',
+            tip: 'The black char from direct coal contact is the desired result ‚Äî not accidental burning. The bottom of the rock crab shell will be genuinely blackened from the coal contact, which concentrates the caramelized paste and transfers the hardwood fragrance directly into the flesh. This char is what makes cua ƒë√° n∆∞·ªõng taste unlike any other grilled crab preparation.',
         },
         {
-            title: 'Make the mu?i l· È and rest briefly',
-            description: 'While the crabs are in their final minutes on the coals, pound the l· È leaves with salt, pepper, and sugar in a mortar until the salt turns green and intensely fragrant. The lime is squeezed at the table. Rest the crabs on a board for 2 minutes after removing from the coals ó the internal temperature continues rising for the first minute off the heat.',
-            tip: 'The mu?i l· È for cua d· specifically is the connection to the landscape ó the litsea leaf that grows on the rocky hillsides above the coast where the crabs are found, pounded with the sea salt from the same coast. This is the Ph˙ YÍn terroir argument made edible.',
+            title: 'Make the mu·ªëi l√° √© and rest briefly',
+            description: 'While the crabs are in their final minutes on the coals, pound the l√° √© leaves with salt, pepper, and sugar in a mortar until the salt turns green and intensely fragrant. The lime is squeezed at the table. Rest the crabs on a board for 2 minutes after removing from the coals ‚Äî the internal temperature continues rising for the first minute off the heat.',
+            tip: 'The mu·ªëi l√° √© for cua ƒë√° specifically is the connection to the landscape ‚Äî the litsea leaf that grows on the rocky hillsides above the coast where the crabs are found, pounded with the sea salt from the same coast. This is the Ph√∫ Y√™n terroir argument made edible.',
         },
         {
             title: 'Serve from the coal with nothing added',
-            description: 'Transfer the charred rock crabs directly to a wooden board or plate ó do not add garnish that would obscure the visual of the coal-blackened shell. Scatter only rau ram and fresh l· È leaves. Serve the mu?i l· È with lime wedges alongside. To eat: crack the coal-blackened shell with a spoon or fingers ó it comes apart more easily than the raw shell due to the charring. The flesh inside should be completely white, slightly caramelized at the edges where it was in contact with the shell during cooking, and mineral-sweet throughout. Dip in the lime-squeezed mu?i l· È. Eat with a raw l· È leaf.',
-            tip: 'The visual presentation of cua d· nu?ng mu?i ?t is intentionally stark ó blackened shells on a plain wooden board. Do not add color or decoration. The charred crab and the green l· È leaves are the complete visual. Anything more is a distraction from what the dish is.',
+            description: 'Transfer the charred rock crabs directly to a wooden board or plate ‚Äî do not add garnish that would obscure the visual of the coal-blackened shell. Scatter only rau rƒÉm and fresh l√° √© leaves. Serve the mu·ªëi l√° √© with lime wedges alongside. To eat: crack the coal-blackened shell with a spoon or fingers ‚Äî it comes apart more easily than the raw shell due to the charring. The flesh inside should be completely white, slightly caramelized at the edges where it was in contact with the shell during cooking, and mineral-sweet throughout. Dip in the lime-squeezed mu·ªëi l√° √©. Eat with a raw l√° √© leaf.',
+            tip: 'The visual presentation of cua ƒë√° n∆∞·ªõng mu·ªëi ·ªõt is intentionally stark ‚Äî blackened shells on a plain wooden board. Do not add color or decoration. The charred crab and the green l√° √© leaves are the complete visual. Anything more is a distraction from what the dish is.',
         },
     ],
 };

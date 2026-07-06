@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 2,
     heroImage: '/images/recipes/nuoc-ep-dua-hau.jpg',
-    intro: 'Nuoc mia exists at the intersection of simple and perfect. Sugarcane stalks fed through steel rollers, the pale green juice collected in a cup over ice, finished with a squeeze of kumquat or calamansi. It costs almost nothing and tastes like a Vietnamese summer afternoon. Without a commercial sugarcane press, you can extract juice at home using a knife and patience — the result is the same.',
+    intro: 'Nuoc mia exists at the intersection of simple and perfect. Sugarcane stalks fed through steel rollers, the pale green juice collected in a cup over ice, finished with a squeeze of kumquat or calamansi. It costs almost nothing and tastes like a Vietnamese summer afternoon. Without a commercial sugarcane press, you can extract juice at home using a knife and patience â€” the result is the same.',
     ingredientSections: [
         {
             title: 'Ingredients',

@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'thit-rim-tom',
     title: 'Caramelized Pork with Shrimp (Thit Rim Tom)',
-    subtitle: 'Sweet-salty braised pork and shrimp simmered in caramel sauce — rich, glossy, and deeply comforting.',
+    subtitle: 'Sweet-salty braised pork and shrimp simmered in caramel sauce â€” rich, glossy, and deeply comforting.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '35 min',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/thit-rim-tom.jpg',
 
-    intro: `Th?t rim tôm is a classic Vietnamese home-style dish where pork and shrimp are slowly simmered in a caramel fish sauce base.
+    intro: `Thá»‹t rim tÃ´m is a classic Vietnamese home-style dish where pork and shrimp are slowly simmered in a caramel fish sauce base.
 
-The result is a glossy, slightly sticky sauce coating tender pork and juicy shrimp — a perfect dish for eating with steamed rice.`,
+The result is a glossy, slightly sticky sauce coating tender pork and juicy shrimp â€” a perfect dish for eating with steamed rice.`,
 
     ingredientSections: [
         {
@@ -42,7 +42,7 @@ The result is a glossy, slightly sticky sauce coating tender pork and juicy shri
         {
             title: 'Make caramel base',
             description: 'Heat sugar in a pan until it melts and turns golden brown.',
-            tip: 'Do not burn the sugar — stop at deep amber color.',
+            tip: 'Do not burn the sugar â€” stop at deep amber color.',
         },
         {
             title: 'Add aromatics',

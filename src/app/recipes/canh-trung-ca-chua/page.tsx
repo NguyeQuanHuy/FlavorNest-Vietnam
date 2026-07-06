@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'canh-trung-ca-chua',
     title: 'Tomato Egg Soup (Canh Trung Ca Chua)',
-    subtitle: 'Light, comforting Vietnamese tomato soup with silky egg ribbons — simple, fast, and nourishing.',
+    subtitle: 'Light, comforting Vietnamese tomato soup with silky egg ribbons â€” simple, fast, and nourishing.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '15 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/canh-trung-ca-chua.jpg',
 
-    intro: `Canh tr?ng cà chua is a simple Vietnamese home-style soup made with tomatoes and eggs.
+    intro: `Canh trá»©ng cÃ  chua is a simple Vietnamese home-style soup made with tomatoes and eggs.
 
 The dish is known for its light, tangy broth and soft egg ribbons that float gently in the soup. It is quick to cook, budget-friendly, and commonly served with steamed rice in everyday meals.`,
 
@@ -40,12 +40,12 @@ The dish is known for its light, tangy broth and soft egg ribbons that float gen
     steps: [
         {
             title: 'Cook tomatoes',
-            description: 'Heat oil in a pot and sauté tomatoes until they soften and release color.',
+            description: 'Heat oil in a pot and sautÃ© tomatoes until they soften and release color.',
         },
         {
             title: 'Make broth',
             description: 'Add water and bring to a gentle boil. Season with fish sauce, salt, and sugar.',
-            tip: 'Balanced seasoning is key — slightly sour-sweet is ideal.',
+            tip: 'Balanced seasoning is key â€” slightly sour-sweet is ideal.',
         },
         {
             title: 'Create egg ribbons',

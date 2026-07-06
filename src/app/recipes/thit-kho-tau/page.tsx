@@ -48,7 +48,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the caramel',
-            description: 'Heat a heavy pot or clay pot over medium heat. Add 2 tablespoons sugar and cook without stirring until it melts and turns deep amber. Swirl the pot gently if needed. The caramel should be the colour of dark honey — not pale, not burnt.',
+            description: 'Heat a heavy pot or clay pot over medium heat. Add 2 tablespoons sugar and cook without stirring until it melts and turns deep amber. Swirl the pot gently if needed. The caramel should be the colour of dark honey â€” not pale, not burnt.',
             tip: 'The caramel is the foundation of the dish. Pale caramel gives no depth; burnt caramel makes the whole pot bitter. Watch it closely.',
         },
         {

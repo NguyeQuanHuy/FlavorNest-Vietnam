@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'suon-rim-trung-cut',
     title: 'Braised Pork Ribs with Quail Eggs (Suon Rim Trung Cut)',
-    subtitle: 'Tender pork ribs braised in a savory-sweet caramel sauce with soft quail eggs � rich, glossy, and comforting.',
+    subtitle: 'Tender pork ribs braised in a savory-sweet caramel sauce with soft quail eggs — rich, glossy, and comforting.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/suon-rim-trung-cut.jpg',
 
-    intro: `Su?n rim tr?ng c�t is a classic Vietnamese home-style dish featuring pork ribs slowly braised in a caramelized fish sauce base with quail eggs.
+    intro: `Sườn rim trứng cút is a classic Vietnamese home-style dish featuring pork ribs slowly braised in a caramelized fish sauce base with quail eggs.
 
 The ribs become tender and flavorful as they absorb the sweet-salty glaze, while the quail eggs soak up the rich sauce, creating a comforting and deeply satisfying dish often served with steamed rice.`,
 
@@ -46,7 +46,7 @@ The ribs become tender and flavorful as they absorb the sweet-salty glaze, while
         {
             title: 'Caramel base',
             description: 'Heat sugar in a pot until it turns amber brown to create caramel sauce.',
-            tip: 'Do not burn the sugar � it turns bitter quickly.',
+            tip: 'Do not burn the sugar — it turns bitter quickly.',
         },
         {
             title: 'Sear ribs',

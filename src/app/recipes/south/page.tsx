@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * FlavorNest Vietnam ó Southern Cuisine Page
+ * FlavorNest Vietnam ‚Äî Southern Cuisine Page
  * src/app/recipes/south/page.tsx
  */
 
@@ -37,7 +37,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/thit-kho-tau.jpg',
         difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.9', reviews: 387, cal: 480, tag: 'Southern Soul', tagColor: '#D97706',
-        description: "The dish that defines comfort food in Southern Vietnam ó pork belly and eggs slow-braised in coconut water until the sauce turns deep amber and glossy. Every family has their version. This is ours.",
+        description: "The dish that defines comfort food in Southern Vietnam ‚Äî pork belly and eggs slow-braised in coconut water until the sauce turns deep amber and glossy. Every family has their version. This is ours.",
         tags: ['Pork', 'Eggs', 'Coconut', 'Slow Cook'],
     },
     {
@@ -67,7 +67,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/banh-xeo-mien-tay.jpg',
         difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 263, cal: 380, tag: 'Mekong Special', tagColor: '#D97706',
-        description: "The Southern version is enormous ó a giant turmeric crÍpe filled with shrimp, pork belly and bean sprouts. The name means 'sizzling cake' after the sound it makes hitting the hot pan. Broken by hand, wrapped in mustard leaf, dipped in nuoc cham.",
+        description: "The Southern version is enormous ‚Äî a giant turmeric cr√™pe filled with shrimp, pork belly and bean sprouts. The name means 'sizzling cake' after the sound it makes hitting the hot pan. Broken by hand, wrapped in mustard leaf, dipped in nuoc cham.",
         tags: ['Shrimp', 'Pork', 'Crispy', 'Mekong'],
     },
     {
@@ -77,7 +77,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/hu-tieu-nam-vang.jpg',
         difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 187, cal: 420, tag: 'Saigon Favourite', tagColor: '#7C3AED',
-        description: "A Saigon institution with Cambodian roots ó clear, slightly sweet pork broth with rice noodles, minced pork, sliced pork, prawns and a poached egg. Can be served as a soup or dry (with broth on the side). Both versions are perfect.",
+        description: "A Saigon institution with Cambodian roots ‚Äî clear, slightly sweet pork broth with rice noodles, minced pork, sliced pork, prawns and a poached egg. Can be served as a soup or dry (with broth on the side). Both versions are perfect.",
         tags: ['Pork', 'Shrimp', 'Noodles', 'Clear Broth'],
     },
     {
@@ -97,7 +97,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/lau-thai.jpg',
         difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 198, cal: 350, tag: 'Social Feast', tagColor: '#BE185D',
-        description: "The Southern Vietnamese love of Thai flavours expressed in a communal hot pot ó sour, spicy, lemongrass-scented broth filled with seafood, mushrooms and fresh vegetables. A weekend feast dish eaten slowly with friends.",
+        description: "The Southern Vietnamese love of Thai flavours expressed in a communal hot pot ‚Äî sour, spicy, lemongrass-scented broth filled with seafood, mushrooms and fresh vegetables. A weekend feast dish eaten slowly with friends.",
         tags: ['Seafood', 'Spicy', 'Communal', 'Hot Pot'],
     },
     {
@@ -107,7 +107,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bo-luc-lac.jpg',
         difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 312, cal: 420, tag: 'Restaurant Star', tagColor: '#D97706',
-        description: "Tender beef cubes wok-tossed in butter, garlic and oyster sauce ó the 'shaking' technique builds a beautiful crust while keeping the centre pink. Served on watercress with a lime and black pepper dipping salt. Fast, brilliant, unforgettable.",
+        description: "Tender beef cubes wok-tossed in butter, garlic and oyster sauce ‚Äî the 'shaking' technique builds a beautiful crust while keeping the centre pink. Served on watercress with a lime and black pepper dipping salt. Fast, brilliant, unforgettable.",
         tags: ['Beef', 'Wok', 'Quick', 'French-Inspired'],
     },
     {
@@ -117,7 +117,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/lau-mam-mien-tay.jpg',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.8', reviews: 143, cal: 420, tag: 'Mekong Bold', tagColor: '#B45309',
-        description: `The boldest hot pot in Vietnam ó fermented fish broth with eggplant, pork, prawns and a mountain of fresh herbs. The Mekong Delta's dish for celebrations.`,
+        description: `The boldest hot pot in Vietnam ‚Äî fermented fish broth with eggplant, pork, prawns and a mountain of fresh herbs. The Mekong Delta's dish for celebrations.`,
         tags: ['Fermented', 'Seafood', 'Hot Pot', 'Mekong'],
     },
     {
@@ -127,13 +127,13 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/banh-mi-sai-gon.jpg',
         difficulty: 'Easy', time: '30 min',
         rating: '4.9', reviews: 521, cal: 380, tag: 'Saigon Street Icon', tagColor: '#EA580C',
-        description: `The greatest sandwich in the world ó a shatteringly crisp baguette filled with pate, cha lua, pickled daikon, fresh coriander and chilli. Five minutes. Perfect every time.`,
+        description: `The greatest sandwich in the world ‚Äî a shatteringly crisp baguette filled with pate, cha lua, pickled daikon, fresh coriander and chilli. Five minutes. Perfect every time.`,
         tags: ['Pork', 'Bread', 'Street Food', 'Classic'],
     },
     {
         slug: 'goi-tai-heo',
         title: 'Crispy Pig Ear Salad',
-        subtitle: 'G?i tai heo',
+        subtitle: 'G·ªèi tai heo',
         image: '/images/recipes/goi-tai-heo.jpg',
         difficulty: 'Easy', time: '45 min',
         rating: '4.9', reviews: 521, cal: 380, tag: 'Traditional Dish', tagColor: '#EA580C',
@@ -143,11 +143,11 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-ga-nuong',
         title: 'Grilled Chicken Noodles',
-        subtitle: 'B˙n g‡ nu?ng',
+        subtitle: 'B√∫n g√† n∆∞·ªõng',
         image: '/images/recipes/bun-ga-nuong.jpg',
         difficulty: 'Easy', time: '45 min',
         rating: '4.9', reviews: 600, cal: 380, tag: 'Super delicious', tagColor: '#ff8c00',
-        description: `Grilled chicken with rice vermicelli, fresh herbs, and tangy fish sauce dressing ñ a light and refreshing Vietnamese classic.`,
+        description: `Grilled chicken with rice vermicelli, fresh herbs, and tangy fish sauce dressing ‚Äì a light and refreshing Vietnamese classic.`,
         tags: ['Chicken', 'Rice vermicelli', 'Fresh herbs', 'Fish sauce dressing'],
     },
 ]
@@ -177,7 +177,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '? Saved' : '? Removed'}
+                        {toast === 'added' ? '‚ô• Saved' : '‚úï Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -211,7 +211,7 @@ export default function SouthernCuisinePage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-            {/* -- HERO -- */}
+            {/* ‚îÄ‚îÄ HERO ‚îÄ‚îÄ */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 24px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }}>
                     <div>
@@ -219,7 +219,7 @@ export default function SouthernCuisinePage() {
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                             {[['Home', '/'], ['Recipes', '/recipes'], ['Southern', '']].map(([label, href], i) => (
                                 <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>õ</span>}
+                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>‚Ä∫</span>}
                                     {href ?
                                         <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                         : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
@@ -259,7 +259,7 @@ export default function SouthernCuisinePage() {
                                 margin: 0,
                                 paddingLeft: 18,
                             }}>
-                                From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Saigon&apos;s neon-lit street stalls</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>floating markets of the Mekong Delta</span> ó Southern Vietnamese cuisine is sweet, vibrant, and gloriously generous.
+                                From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Saigon&apos;s neon-lit street stalls</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>floating markets of the Mekong Delta</span> ‚Äî Southern Vietnamese cuisine is sweet, vibrant, and gloriously generous.
                             </p>
                         </div>
 
@@ -295,10 +295,10 @@ export default function SouthernCuisinePage() {
                                 transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#0a1a10' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} ó ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.9 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
+                                        <Image src={recipe.image} alt={`${recipe.title} ‚Äî ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.9 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(6,78,59,0.6) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>? {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>‚è± {recipe.time}</div>
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
@@ -322,7 +322,7 @@ export default function SouthernCuisinePage() {
                 </AnimatePresence>
             </section>
 
-            {/* -- EXPLORE MORE -- */}
+            {/* ‚îÄ‚îÄ EXPLORE MORE ‚îÄ‚îÄ */}
             <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>

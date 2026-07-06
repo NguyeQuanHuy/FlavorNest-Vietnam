@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-troi-nuoc-nhan-dau-xanh',
     title: 'Sweet Glutinous Rice Dumplings (Banh Troi Nuoc) with Mung Bean Filling',
-    subtitle: 'Soft glutinous rice balls filled with mung bean, served in warm ginger syrup — a traditional Vietnamese dessert.',
+    subtitle: 'Soft glutinous rice balls filled with mung bean, served in warm ginger syrup â€” a traditional Vietnamese dessert.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-troi-nuoc.jpg',
 
-    intro: `Bánh trôi nu?c nhân d?u xanh is a traditional Vietnamese dessert made from glutinous rice balls filled with sweet mung bean paste, served in a warm ginger syrup.
+    intro: `BÃ¡nh trÃ´i nÆ°á»›c nhÃ¢n Ä‘áº­u xanh is a traditional Vietnamese dessert made from glutinous rice balls filled with sweet mung bean paste, served in a warm ginger syrup.
 
 The dessert is soft, chewy, and slightly sticky, with a fragrant ginger broth that warms the body. It is often associated with Vietnamese cultural traditions and is commonly enjoyed during special occasions.`,
 
@@ -46,7 +46,7 @@ The dessert is soft, chewy, and slightly sticky, with a fragrant ginger broth th
     steps: [
         {
             title: 'Prepare mung bean filling',
-            description: 'Soak mung beans for 2–3 hours, steam until soft, then mash and mix with sugar and coconut milk.',
+            description: 'Soak mung beans for 2â€“3 hours, steam until soft, then mash and mix with sugar and coconut milk.',
             tip: 'Filling should be smooth and moldable into small balls.',
         },
         {
@@ -59,7 +59,7 @@ The dessert is soft, chewy, and slightly sticky, with a fragrant ginger broth th
         },
         {
             title: 'Cook dumplings',
-            description: 'Boil dumplings in water until they float to the surface, then continue cooking for 1–2 more minutes.',
+            description: 'Boil dumplings in water until they float to the surface, then continue cooking for 1â€“2 more minutes.',
         },
         {
             title: 'Prepare ginger syrup',

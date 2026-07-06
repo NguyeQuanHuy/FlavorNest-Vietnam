@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'banh-canh-cua',
     title: 'Thick Tapioca Noodles with Crab',
     subtitle:
-        'B·nh Canh Cua ó fat chewy tapioca noodles suspended in a velvety orange crab broth, topped with mud crab, quail eggs and pork knuckle.',
+        'B√°nh Canh Cua ‚Äî fat chewy tapioca noodles suspended in a velvety orange crab broth, topped with mud crab, quail eggs and pork knuckle.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-canh-cua.jpg',
     intro:
-        'B·nh canh cua is the noodle dish Saigon reaches for when the rain comes down sideways. The broth is thickened to a near-gravy with tapioca slurry and stained orange with crab fat; the noodles themselves are slippery, chewy logs that refuse to stay on chopsticks. Every mouthful is rich, briny and unapologetically filling.',
+        'B√°nh canh cua is the noodle dish Saigon reaches for when the rain comes down sideways. The broth is thickened to a near-gravy with tapioca slurry and stained orange with crab fat; the noodles themselves are slippery, chewy logs that refuse to stay on chopsticks. Every mouthful is rich, briny and unapologetically filling.',
     ingredientSections: [
         {
             title: 'Broth',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
             title: 'Crab and thickener',
             items: [
                 { amount: 2, name: 'whole mud crabs', note: 'cleaned, cut in quarters' },
-                { amount: 3, unit: 'tbsp', name: 'crab fat (g?ch cua)', note: 'or crab paste' },
+                { amount: 3, unit: 'tbsp', name: 'crab fat (g·∫°ch cua)', note: 'or crab paste' },
                 { amount: 2, unit: 'tbsp', name: 'annatto oil' },
                 { amount: 4, unit: 'tbsp', name: 'tapioca starch', note: 'mixed with 100ml water' },
             ],
@@ -38,7 +38,7 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 600, unit: 'g', name: 'b·nh canh noodles', note: 'thick tapioca-rice noodles' },
+                { amount: 600, unit: 'g', name: 'b√°nh canh noodles', note: 'thick tapioca-rice noodles' },
                 { amount: 12, name: 'boiled quail eggs', note: 'peeled' },
                 { amount: 200, unit: 'g', name: 'minced pork and shrimp meatballs' },
                 { amount: 1, name: 'bunch cilantro', note: 'chopped' },
@@ -60,7 +60,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Bloom the crab fat',
-            description: 'Warm a tablespoon of annatto oil in a small pan over low heat, then gently stir in the reserved crab fat. SautÈ for a minute until the oil becomes fragrant and takes on a deep, vibrant orange hue.',
+            description: 'Warm a tablespoon of annatto oil in a small pan over low heat, then gently stir in the reserved crab fat. Saut√© for a minute until the oil becomes fragrant and takes on a deep, vibrant orange hue.',
             tip: 'Low temperature is crucial here; do not fry the crab fat at high heat or the delicate oils will scorch and turn bitter, ruining the richness of the soup.',
         },
         {
@@ -69,7 +69,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cook the noodles and meatballs',
-            description: 'Blanch the thick tapioca noodles (b·nh canh) for 2 minutes until translucent. Meanwhile, drop shrimp or pork meatballs into the bubbling broth, poaching them until they float to the surface, signaling they are cooked through.',
+            description: 'Blanch the thick tapioca noodles (b√°nh canh) for 2 minutes until translucent. Meanwhile, drop shrimp or pork meatballs into the bubbling broth, poaching them until they float to the surface, signaling they are cooked through.',
         },
         {
             title: 'Assemble',

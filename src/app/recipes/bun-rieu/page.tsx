@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'bun-rieu',
     title: 'Crab & Tomato Noodle Soup',
     subtitle:
-        'Bún Riêu — a crimson paddy-crab broth with fluffy crab-and-egg rafts floating over rice vermicelli and a mountain of herbs.',
+        'BÃºn RiÃªu â€” a crimson paddy-crab broth with fluffy crab-and-egg rafts floating over rice vermicelli and a mountain of herbs.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/bun-rieu.jpg',
     intro:
-        'Bún riêu is the Hanoi market lunch that makes a strong argument for freshwater crab. The rieu — those cloud-like rafts on the surface — are pure crab meat bound with egg, lifted by a broth soured with fermented rice vinegar and given its crimson colour by a splash of annatto oil. Every stall claims a different ratio of crab to tomato; the best ones taste of both in equal measure.',
+        'BÃºn riÃªu is the Hanoi market lunch that makes a strong argument for freshwater crab. The rieu â€” those cloud-like rafts on the surface â€” are pure crab meat bound with egg, lifted by a broth soured with fermented rice vinegar and given its crimson colour by a splash of annatto oil. Every stall claims a different ratio of crab to tomato; the best ones taste of both in equal measure.',
     ingredientSections: [
         {
             title: 'Crab broth',
@@ -22,8 +22,8 @@ const recipe: RecipeData = {
                 { amount: 500, unit: 'g', name: 'fresh paddy crabs', note: 'or 200g crab meat + 1L stock' },
                 { amount: 1.5, unit: 'L', name: 'water' },
                 { amount: 1, unit: 'tsp', name: 'sea salt' },
-                { amount: 1, unit: 'tbsp', name: 'm?m tôm (shrimp paste)' },
-                { amount: 2, unit: 'tbsp', name: 'm? (fermented rice vinegar)', note: 'or 1 tbsp rice vinegar' },
+                { amount: 1, unit: 'tbsp', name: 'máº¯m tÃ´m (shrimp paste)' },
+                { amount: 2, unit: 'tbsp', name: 'máº» (fermented rice vinegar)', note: 'or 1 tbsp rice vinegar' },
             ],
         },
         {
@@ -40,7 +40,7 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 400, unit: 'g', name: 'rice vermicelli (bún)', note: 'cooked' },
+                { amount: 400, unit: 'g', name: 'rice vermicelli (bÃºn)', note: 'cooked' },
                 { amount: 200, unit: 'g', name: 'fried tofu', note: 'cubed' },
                 { amount: 1, name: 'bunch water spinach', note: 'shredded' },
                 { amount: 1, name: 'bunch perilla and Vietnamese coriander' },
@@ -57,16 +57,16 @@ const recipe: RecipeData = {
         },
         {
             title: 'Bring to the raft stage',
-            description: 'Pour the crab liquid into a pot and heat it very slowly over medium-low heat, stirring once at the beginning to prevent sticking. As the temperature reaches approximately 80°C, the protein will coagulate and rise to the surface in large, soft clouds; carefully skim these rafts onto a separate plate.',
+            description: 'Pour the crab liquid into a pot and heat it very slowly over medium-low heat, stirring once at the beginning to prevent sticking. As the temperature reaches approximately 80Â°C, the protein will coagulate and rise to the surface in large, soft clouds; carefully skim these rafts onto a separate plate.',
             tip: 'Boiling is the enemy of a good raft. If the liquid boils aggressively, the turbulence will break the delicate protein clouds apart into tiny grains. Keep the heat strictly below a simmer.',
         },
         {
             title: 'Build the tomato base',
-            description: 'In a separate pan, sauté minced shallots and garlic in annatto oil until fragrant and vibrant red. Add the tomato wedges and a sprinkle of sugar, cooking them over medium heat until they soften and collapse into a rich, colorful base.',
+            description: 'In a separate pan, sautÃ© minced shallots and garlic in annatto oil until fragrant and vibrant red. Add the tomato wedges and a sprinkle of sugar, cooking them over medium heat until they soften and collapse into a rich, colorful base.',
         },
         {
             title: 'Combine and season',
-            description: 'Pour the sautéed tomato base into the main pot containing the crab stock. Season the broth with fermented shrimp paste (m?m tôm), fermented rice (m?) for a subtle sourness, and salt. Let the broth simmer gently for 10 minutes to develop depth.',
+            description: 'Pour the sautÃ©ed tomato base into the main pot containing the crab stock. Season the broth with fermented shrimp paste (máº¯m tÃ´m), fermented rice (máº») for a subtle sourness, and salt. Let the broth simmer gently for 10 minutes to develop depth.',
         },
         {
             title: 'Return the rafts',
@@ -74,7 +74,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Assemble the bowls',
-            description: 'Place fresh rice vermicelli in bowls and carefully ladle the hot broth over the noodles, ensuring everyone gets a generous portion of the crab raft and tofu. Serve with a platter of split water spinach, shredded banana blossom, and fresh herbs, with lime wedges and extra m?m tôm on the side.',
+            description: 'Place fresh rice vermicelli in bowls and carefully ladle the hot broth over the noodles, ensuring everyone gets a generous portion of the crab raft and tofu. Serve with a platter of split water spinach, shredded banana blossom, and fresh herbs, with lime wedges and extra máº¯m tÃ´m on the side.',
         },
     ],
 };

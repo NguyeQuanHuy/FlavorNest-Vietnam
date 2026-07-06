@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'che-chuoi',
     title: 'Banana with Sago Pearls',
-    subtitle: 'Che chuoi — sliced bananas simmered in coconut milk with chewy sago pearls and crushed peanuts.',
+    subtitle: 'Che chuoi â€” sliced bananas simmered in coconut milk with chewy sago pearls and crushed peanuts.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '35 min',
     rating: 4.6,
     baseServings: 4,
     heroImage: '/images/recipes/che-chuoi.jpg',
-    intro: 'Che chuoi is one of those rustic desserts that exists in every Vietnamese family but is never quite the same twice. The bananas — preferably the small fragrant chuoi xiem variety — are simmered just long enough in coconut milk to soften and release their perfume. The sago pearls turn translucent, the broth thickens to a velvet, and a final shower of crushed roasted peanuts adds the texture that ties everything together. Served warm in winter, chilled in summer, both versions equally correct.',
+    intro: 'Che chuoi is one of those rustic desserts that exists in every Vietnamese family but is never quite the same twice. The bananas â€” preferably the small fragrant chuoi xiem variety â€” are simmered just long enough in coconut milk to soften and release their perfume. The sago pearls turn translucent, the broth thickens to a velvet, and a final shower of crushed roasted peanuts adds the texture that ties everything together. Served warm in winter, chilled in summer, both versions equally correct.',
     ingredientSections: [
         {
             title: 'Sago pearls',
@@ -48,11 +48,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Slice the bananas',
-            description: 'Peel bananas and slice into 2cm rounds on the diagonal. Use bananas that are fully ripe but still firm — overripe bananas will fall apart in the soup.',
+            description: 'Peel bananas and slice into 2cm rounds on the diagonal. Use bananas that are fully ripe but still firm â€” overripe bananas will fall apart in the soup.',
         },
         {
             title: 'Build the coconut soup',
-            description: 'In a heavy pot, combine coconut milk, coconut cream, palm sugar, pandan leaves and salt. Bring to a gentle simmer over medium-low heat, stirring until the sugar dissolves. Do not boil hard — coconut milk separates and turns oily.',
+            description: 'In a heavy pot, combine coconut milk, coconut cream, palm sugar, pandan leaves and salt. Bring to a gentle simmer over medium-low heat, stirring until the sugar dissolves. Do not boil hard â€” coconut milk separates and turns oily.',
         },
         {
             title: 'Simmer the bananas',

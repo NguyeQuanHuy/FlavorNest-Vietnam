@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'bo-tai-chanh',
     title: 'Lime Rare Beef Salad (Bo Tai Chanh)',
-    subtitle: 'Thinly sliced beef ìcookedî in lime juice, mixed with herbs, onions, and peanuts ó fresh, tangy, and aromatic.',
+    subtitle: 'Thinly sliced beef ‚Äúcooked‚Äù in lime juice, mixed with herbs, onions, and peanuts ‚Äî fresh, tangy, and aromatic.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '30 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/bo-tai-chanh.jpg',
 
-    intro: `BÚ t·i chanh is a traditional Vietnamese dish made from thinly sliced raw beef that is ìcookedî using lime juice.
+    intro: `B√≤ t√°i chanh is a traditional Vietnamese dish made from thinly sliced raw beef that is ‚Äúcooked‚Äù using lime juice.
 
 The acidity of lime changes the texture of the beef, creating a tender, slightly tangy flavor. Combined with herbs, onions, and peanuts, the dish is refreshing, aromatic, and often served as an appetizer or drinking snack.`,
 
@@ -49,7 +49,7 @@ The acidity of lime changes the texture of the beef, creating a tender, slightly
     steps: [
         {
             title: 'Prepare beef',
-            description: 'Slice beef as thinly as possible for quick ìcookingî in lime juice.',
+            description: 'Slice beef as thinly as possible for quick ‚Äúcooking‚Äù in lime juice.',
             tip: 'Chill beef slightly for easier slicing.',
         },
         {

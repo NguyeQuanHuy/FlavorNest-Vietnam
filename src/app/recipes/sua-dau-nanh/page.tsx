@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'sua-dau-nanh',
     title: 'Vietnamese Soy Milk',
-    subtitle: 'Sua dau nanh — fresh soy milk infused with pandan, sold warm before sunrise.',
+    subtitle: 'Sua dau nanh â€” fresh soy milk infused with pandan, sold warm before sunrise.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '40 min',
@@ -44,7 +44,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Peel and rinse',
-            description: 'Drain the soaked beans. Massage them between your hands under running water — the loose skins will float to the surface and rinse away. Discard the skins; this step gives the milk its smooth texture.',
+            description: 'Drain the soaked beans. Massage them between your hands under running water â€” the loose skins will float to the surface and rinse away. Discard the skins; this step gives the milk its smooth texture.',
         },
         {
             title: 'Blend with water',
@@ -53,11 +53,11 @@ const recipe: RecipeData = {
         {
             title: 'Strain through muslin',
             description: 'Pour the blended mixture through a fine muslin or nut milk bag set over a heavy pot. Squeeze hard to extract every drop of milk. Discard the pulp (or save for soybean okara recipes).',
-            tip: 'Squeezing hard is the difference between rich and watery. Wear rubber gloves — the okara is hot when fresh.',
+            tip: 'Squeezing hard is the difference between rich and watery. Wear rubber gloves â€” the okara is hot when fresh.',
         },
         {
             title: 'Cook with pandan',
-            description: 'Add the remaining 500ml water and the pandan leaves to the strained milk. Bring to a gentle simmer over medium heat, stirring constantly to prevent scorching. Simmer 15 minutes — the raw bean smell disappears and the kitchen fills with grassy pandan perfume.',
+            description: 'Add the remaining 500ml water and the pandan leaves to the strained milk. Bring to a gentle simmer over medium heat, stirring constantly to prevent scorching. Simmer 15 minutes â€” the raw bean smell disappears and the kitchen fills with grassy pandan perfume.',
             tip: 'Never let it boil hard. Soy milk foams up dramatically and overflows in seconds.',
         },
         {

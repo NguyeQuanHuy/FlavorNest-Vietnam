@@ -3,36 +3,36 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ech-nuong-moi-phu-yen',
-    title: '?ch Nu?ng M?i Ph˙ YÍn (Ph˙ YÍn Whole-Fire Grilled Frog)',
-    subtitle: 'Whole frogs salted and grilled directly over hardwood charcoal with no marinade ó the same fire-and-salt philosophy as g‡ nu?ng m?i applied to the paddy frogs of Ph˙ YÍn\'s rice fields and mountain streams, served with mu?i l· È.',
+    title: '·∫æch N∆∞·ªõng M·ªçi Ph√∫ Y√™n (Ph√∫ Y√™n Whole-Fire Grilled Frog)',
+    subtitle: 'Whole frogs salted and grilled directly over hardwood charcoal with no marinade ‚Äî the same fire-and-salt philosophy as g√† n∆∞·ªõng m·ªçi applied to the paddy frogs of Ph√∫ Y√™n\'s rice fields and mountain streams, served with mu·ªëi l√° √©.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ech-nuong-moi-phu-yen.jpg',
-    intro: `?ch nu?ng m?i Ph˙ YÍn is the frog preparation that applies the province's most fundamental cooking philosophy ó fire, salt, and the best available local ingredient ó to ?ch, the paddy frogs caught in the rice fields and mountain streams of the inland communities of Son HÚa, –?ng Xu‚n, and the highland valleys. The m?i technique, which appears throughout Ph˙ YÍn cooking as the most direct and most revealing preparation (g‡ nu?ng m?i for chicken, cua d· nu?ng mu?i ?t for rock crab), means the same thing applied to frog: no marinade, no sauce applied during cooking, only the fire and the coarse salt that was rubbed into the surface before the charcoal was lit. The specific challenge of applying the m?i philosophy to frog ó rather than to chicken or goat, which are more forgiving ó is that frog flesh is significantly more delicate and cooks faster. The charcoal fire must be calibrated precisely: hot enough to produce the specific char that marks m?i cooking, gentle enough that the exterior does not char before the interior has cooked through, and consistent enough that every surface receives equal heat. The frogs are threaded on bamboo skewers or placed on a flat grill basket and turned frequently over a medium-hot fire for 15-20 minutes. The result ó frogs with a charred, slightly crackling exterior and juicy, sweet, slightly smoky interior ó is what the m?i philosophy achieves when correctly executed with this protein. The mu?i l· È served alongside is not just the Ph˙ YÍn condiment; it is the specific condiment for m?i cooking throughout the province, appearing here for what may be the most unusual protein it has accompanied in the series but functioning in exactly the same way: providing the aromatic complexity that the fire-only preparation deliberately excludes.`,
+    intro: `·∫æch n∆∞·ªõng m·ªçi Ph√∫ Y√™n is the frog preparation that applies the province's most fundamental cooking philosophy ‚Äî fire, salt, and the best available local ingredient ‚Äî to ·∫øch, the paddy frogs caught in the rice fields and mountain streams of the inland communities of S∆°n H√≤a, ƒê·ªìng Xu√¢n, and the highland valleys. The m·ªçi technique, which appears throughout Ph√∫ Y√™n cooking as the most direct and most revealing preparation (g√† n∆∞·ªõng m·ªçi for chicken, cua ƒë√° n∆∞·ªõng mu·ªëi ·ªõt for rock crab), means the same thing applied to frog: no marinade, no sauce applied during cooking, only the fire and the coarse salt that was rubbed into the surface before the charcoal was lit. The specific challenge of applying the m·ªçi philosophy to frog ‚Äî rather than to chicken or goat, which are more forgiving ‚Äî is that frog flesh is significantly more delicate and cooks faster. The charcoal fire must be calibrated precisely: hot enough to produce the specific char that marks m·ªçi cooking, gentle enough that the exterior does not char before the interior has cooked through, and consistent enough that every surface receives equal heat. The frogs are threaded on bamboo skewers or placed on a flat grill basket and turned frequently over a medium-hot fire for 15-20 minutes. The result ‚Äî frogs with a charred, slightly crackling exterior and juicy, sweet, slightly smoky interior ‚Äî is what the m·ªçi philosophy achieves when correctly executed with this protein. The mu·ªëi l√° √© served alongside is not just the Ph√∫ Y√™n condiment; it is the specific condiment for m·ªçi cooking throughout the province, appearing here for what may be the most unusual protein it has accompanied in the series but functioning in exactly the same way: providing the aromatic complexity that the fire-only preparation deliberately excludes.`,
     ingredientSections: [
         {
             title: 'Frogs',
             items: [
-                { amount: 8, name: 'whole frogs (?ch), cleaned', note: '150-200g each ó cleaned, skin removed, left whole with legs and body intact. The whole frog on the grill is the m?i presentation. Alternatively: thread onto bamboo skewers through the body.' },
-                { amount: 1.5, unit: 'tsp', name: 'coarse sea salt', note: 'rubbed over every surface ó the only seasoning' },
+                { amount: 8, name: 'whole frogs (·∫øch), cleaned', note: '150-200g each ‚Äî cleaned, skin removed, left whole with legs and body intact. The whole frog on the grill is the m·ªçi presentation. Alternatively: thread onto bamboo skewers through the body.' },
+                { amount: 1.5, unit: 'tsp', name: 'coarse sea salt', note: 'rubbed over every surface ‚Äî the only seasoning' },
                 { amount: 0.5, unit: 'tsp', name: 'white pepper', note: 'rubbed inside the body cavity' },
-                { amount: 1, unit: 'tbsp', name: 'neutral oil', note: 'brushed over the salted frogs before grilling ó prevents sticking and helps the salt caramelize' },
+                { amount: 1, unit: 'tbsp', name: 'neutral oil', note: 'brushed over the salted frogs before grilling ‚Äî prevents sticking and helps the salt caramelize' },
             ],
         },
         {
             title: 'Hardwood charcoal fire',
             items: [
-                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium ó less intense than for g‡ nu?ng m?i because frog is more delicate' },
-                { amount: 4, name: 'bamboo skewers or flat grill basket', note: 'for holding the frogs ó prevents them from falling through the grill grate' },
+                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium ‚Äî less intense than for g√† n∆∞·ªõng m·ªçi because frog is more delicate' },
+                { amount: 4, name: 'bamboo skewers or flat grill basket', note: 'for holding the frogs ‚Äî prevents them from falling through the grill grate' },
             ],
         },
         {
-            title: 'Mu?i l· È ó the m?i condiment',
+            title: 'Mu·ªëi l√° √© ‚Äî the m·ªçi condiment',
             items: [
-                { amount: 25, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)', note: 'appearing here with ?ch for the first time in the series' },
+                { amount: 25, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)', note: 'appearing here with ·∫øch for the first time in the series' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -43,10 +43,10 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
-                { amount: 1, name: 'bunch fresh l· È leaves', note: 'for eating raw alongside' },
-                { amount: 1, name: 'bunch rau ram' },
-                { amount: 1, name: 'green mango', note: 'julienned ó optional but traditional alongside m?i preparations' },
+                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'for eating raw alongside' },
+                { amount: 1, name: 'bunch rau rƒÉm' },
+                { amount: 1, name: 'green mango', note: 'julienned ‚Äî optional but traditional alongside m·ªçi preparations' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
             ],
@@ -55,33 +55,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Salt the frogs and rest',
-            description: 'Pat each cleaned whole frog completely dry inside and out. Rub coarse salt firmly over every external surface ó legs, body, inside the leg joints. Rub white pepper inside the body cavity. Brush lightly with oil over the salted surfaces. Leave at room temperature for 30 minutes. The salt draws surface moisture then reabsorbs ó seasoning the frog from within the skin rather than sitting on the exterior. The oil helps the salt caramelize against the charcoal heat.',
-            tip: 'The 30-minute salt rest for ?ch nu?ng m?i is proportionally longer than for g‡ nu?ng m?i (1 hour) because frog flesh is more delicate and the salt works faster through the thin frog skin. 30 minutes produces full salt penetration for frog; 1 hour would be slightly over-seasoned.',
+            description: 'Pat each cleaned whole frog completely dry inside and out. Rub coarse salt firmly over every external surface ‚Äî legs, body, inside the leg joints. Rub white pepper inside the body cavity. Brush lightly with oil over the salted surfaces. Leave at room temperature for 30 minutes. The salt draws surface moisture then reabsorbs ‚Äî seasoning the frog from within the skin rather than sitting on the exterior. The oil helps the salt caramelize against the charcoal heat.',
+            tip: 'The 30-minute salt rest for ·∫øch n∆∞·ªõng m·ªçi is proportionally longer than for g√† n∆∞·ªõng m·ªçi (1 hour) because frog flesh is more delicate and the salt works faster through the thin frog skin. 30 minutes produces full salt penetration for frog; 1 hour would be slightly over-seasoned.',
         },
         {
             title: 'Thread onto skewers or prepare the grill basket',
-            description: 'Thread each salted frog onto a bamboo skewer lengthwise ó through the body from the neck opening to the base of the spine, with the legs spread out on either side. Or place the frogs in a flat grill basket that can be turned as a unit. The skewering or basket is specifically necessary for frog ó unlike chicken which can be placed directly on grill grates, frog falls apart too easily when cooked directly on grates without support.',
-            tip: 'Bamboo skewers for ?ch nu?ng m?i should be soaked in water for 30 minutes before use ó the same reason as for any bamboo skewer preparation: to prevent burning before the protein is cooked. The skewer should pass through the body cavity of the frog cleanly, with the legs spread naturally on either side of the skewer for even heat exposure.',
+            description: 'Thread each salted frog onto a bamboo skewer lengthwise ‚Äî through the body from the neck opening to the base of the spine, with the legs spread out on either side. Or place the frogs in a flat grill basket that can be turned as a unit. The skewering or basket is specifically necessary for frog ‚Äî unlike chicken which can be placed directly on grill grates, frog falls apart too easily when cooked directly on grates without support.',
+            tip: 'Bamboo skewers for ·∫øch n∆∞·ªõng m·ªçi should be soaked in water for 30 minutes before use ‚Äî the same reason as for any bamboo skewer preparation: to prevent burning before the protein is cooked. The skewer should pass through the body cavity of the frog cleanly, with the legs spread naturally on either side of the skewer for even heat exposure.',
         },
         {
             title: 'Build and calibrate the charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over. For ?ch specifically, the fire should be medium rather than the medium-hot used for chicken m?i. Hold your hand 15cm above the grill ó 5-6 seconds comfortable before the heat is too intense. This slightly cooler fire is essential for frog: the thin legs will char before the body is cooked through at medium-hot temperatures. The more moderate heat allows even cooking across all surfaces.',
-            tip: 'The fire calibration difference between g‡ nu?ng m?i (medium-hot) and ?ch nu?ng m?i (medium) reflects the protein difference. Chicken has enough fat to self-baste at higher temperatures; frog is lean and dries at high temperatures before charring correctly. The cooler fire for frog produces more even char and juicier flesh simultaneously.',
+            description: 'Light hardwood charcoal and wait until fully ashed over. For ·∫øch specifically, the fire should be medium rather than the medium-hot used for chicken m·ªçi. Hold your hand 15cm above the grill ‚Äî 5-6 seconds comfortable before the heat is too intense. This slightly cooler fire is essential for frog: the thin legs will char before the body is cooked through at medium-hot temperatures. The more moderate heat allows even cooking across all surfaces.',
+            tip: 'The fire calibration difference between g√† n∆∞·ªõng m·ªçi (medium-hot) and ·∫øch n∆∞·ªõng m·ªçi (medium) reflects the protein difference. Chicken has enough fat to self-baste at higher temperatures; frog is lean and dries at high temperatures before charring correctly. The cooler fire for frog produces more even char and juicier flesh simultaneously.',
         },
         {
-            title: 'Grill with frequent turning ó 15-20 minutes',
-            description: 'Place the skewered frogs over the medium charcoal. Turn every 3-4 minutes ó more frequently than for chicken ó because the thin legs char faster than the body. After 15 minutes, the body should be charred with specific black patches and the legs should be crispy. After 20 minutes, the flesh should be completely white and set when pressed firmly, with no yielding center. The frogs will have reduced in size slightly from the fat and moisture loss during grilling.',
-            tip: 'The specific visual of correctly grilled ?ch nu?ng m?i: the legs should be slightly darker and crispier than the body, with char at the joints and the ends. The body should have specific black patches where the charcoal heat was most direct, with golden-charred areas between. This uneven char is correct ó it is the visual signature of m?i cooking.',
+            title: 'Grill with frequent turning ‚Äî 15-20 minutes',
+            description: 'Place the skewered frogs over the medium charcoal. Turn every 3-4 minutes ‚Äî more frequently than for chicken ‚Äî because the thin legs char faster than the body. After 15 minutes, the body should be charred with specific black patches and the legs should be crispy. After 20 minutes, the flesh should be completely white and set when pressed firmly, with no yielding center. The frogs will have reduced in size slightly from the fat and moisture loss during grilling.',
+            tip: 'The specific visual of correctly grilled ·∫øch n∆∞·ªõng m·ªçi: the legs should be slightly darker and crispier than the body, with char at the joints and the ends. The body should have specific black patches where the charcoal heat was most direct, with golden-charred areas between. This uneven char is correct ‚Äî it is the visual signature of m·ªçi cooking.',
         },
         {
-            title: 'Pound the mu?i l· È',
-            description: 'Pound l· È leaves with salt, pepper, sugar, and chilies until intensely green and fragrant. For ?ch specifically ó the most delicate protein in the Ph˙ YÍn m?i series ó the mu?i l· È should be slightly finer than for the chicken or rock crab versions. The delicate frog flesh needs a salt that coats more completely with each dip. Squeeze lime at the table.',
-            tip: 'The mu?i l· È with ?ch nu?ng m?i is the pairing that demonstrates the condiment\'s universality most clearly ó the same litsea leaf salt that works with the robust flavor of charcoal goat and the intense sweetness of grilled lobster works equally with the delicate sweetness of fire-grilled frog. It works because the l· È character is aromatic and citrus-forward rather than assertive and pungent ó it frames rather than dominates.',
+            title: 'Pound the mu·ªëi l√° √©',
+            description: 'Pound l√° √© leaves with salt, pepper, sugar, and chilies until intensely green and fragrant. For ·∫øch specifically ‚Äî the most delicate protein in the Ph√∫ Y√™n m·ªçi series ‚Äî the mu·ªëi l√° √© should be slightly finer than for the chicken or rock crab versions. The delicate frog flesh needs a salt that coats more completely with each dip. Squeeze lime at the table.',
+            tip: 'The mu·ªëi l√° √© with ·∫øch n∆∞·ªõng m·ªçi is the pairing that demonstrates the condiment\'s universality most clearly ‚Äî the same litsea leaf salt that works with the robust flavor of charcoal goat and the intense sweetness of grilled lobster works equally with the delicate sweetness of fire-grilled frog. It works because the l√° √© character is aromatic and citrus-forward rather than assertive and pungent ‚Äî it frames rather than dominates.',
         },
         {
-            title: 'Serve and eat ó the complete m?i experience',
-            description: 'Bring the grilled frogs directly to the table on their skewers. Remove from skewers onto a plate. Scatter fresh l· È leaves and rau ram. Serve with mu?i l· È, sesame crackers, green mango, and lime. The eating: pull a leg from the body, place on a sesame cracker with a raw l· È leaf, dip edge in lime-squeezed mu?i l· È, eat in one bite. The body section: break apart with fingers, eat the pieces the same way. Nothing from ?ch nu?ng m?i should remain on the plate.',
-            tip: 'The m?i eating ritual ó sesame cracker, protein piece, raw l· È leaf, mu?i l· È dip ó is the same for ?ch as for every other m?i preparation in the Ph˙ YÍn series. From g‡ to cua d· to dÍ to ?ch, the ritual is unchanged. The province applies its one condiment, its one cracker, and its one eating method to every protein it grills over fire. This consistency is not limitation ó it is identity.',
+            title: 'Serve and eat ‚Äî the complete m·ªçi experience',
+            description: 'Bring the grilled frogs directly to the table on their skewers. Remove from skewers onto a plate. Scatter fresh l√° √© leaves and rau rƒÉm. Serve with mu·ªëi l√° √©, sesame crackers, green mango, and lime. The eating: pull a leg from the body, place on a sesame cracker with a raw l√° √© leaf, dip edge in lime-squeezed mu·ªëi l√° √©, eat in one bite. The body section: break apart with fingers, eat the pieces the same way. Nothing from ·∫øch n∆∞·ªõng m·ªçi should remain on the plate.',
+            tip: 'The m·ªçi eating ritual ‚Äî sesame cracker, protein piece, raw l√° √© leaf, mu·ªëi l√° √© dip ‚Äî is the same for ·∫øch as for every other m·ªçi preparation in the Ph√∫ Y√™n series. From g√† to cua ƒë√° to d√™ to ·∫øch, the ritual is unchanged. The province applies its one condiment, its one cracker, and its one eating method to every protein it grills over fire. This consistency is not limitation ‚Äî it is identity.',
         },
     ],
 };

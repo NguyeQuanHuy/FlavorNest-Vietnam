@@ -3,39 +3,39 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'canh-chua-tom-dong',
-    title: 'Canh Chua TÙm –?ng (Mekong Sour Soup with Freshwater Shrimp)',
-    subtitle: 'The Mekong Delta version of canh chua ó a clear tamarind broth with small freshwater field shrimp, water lily stems, bean sprouts, tomato, pineapple, and the fresh herbs of the delta ó lighter than the snakehead fish version and more intensely flavored from the tiny, sweet tÙm d?ng.',
+    title: 'Canh Chua T√¥m ƒê·ªìng (Mekong Sour Soup with Freshwater Shrimp)',
+    subtitle: 'The Mekong Delta version of canh chua ‚Äî a clear tamarind broth with small freshwater field shrimp, water lily stems, bean sprouts, tomato, pineapple, and the fresh herbs of the delta ‚Äî lighter than the snakehead fish version and more intensely flavored from the tiny, sweet t√¥m ƒë·ªìng.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/canh-chua-tom-dong.jpg',
-    intro: `Canh chua tÙm d?ng is the Mekong Delta sour soup made with tÙm d?ng ó the small freshwater shrimp that live in the rice paddies, irrigation canals, and seasonal floodplains of the delta, harvested in enormous quantities during the rice-growing season and eaten fresh or dried throughout the year. TÙm d?ng are tiny compared to marine shrimp ó rarely longer than 4-5cm, translucent when raw, with a sweetness that is more concentrated than their size suggests because freshwater shrimp have a higher ratio of naturally occurring amino acids that produce the sweet taste. When added to a simmering tamarind broth they cook in under 2 minutes and contribute their sweetness and a natural thickening to the soup liquid. The distinctive element of the Mekong Delta version of canh chua ó what distinguishes it from the Ph˙ YÍn c· lÛc version or the Saigon version ó is the presence of bÙng s˙ng, the stems of the water lily that grows wild in every flooded field and waterway of the delta. Water lily stems have a texture that is simultaneously crunchy and slightly spongy, absorbing the sour broth while maintaining their structure, and a delicate green flavor that grounds the soup in the specific landscape of the delta. The rice paddy herb (ngÚ Ùm) added at the end is grown in the same flooded fields as the tÙm d?ng ó the combination of field shrimp and field herb is the delta in a bowl.`,
+    intro: `Canh chua t√¥m ƒë·ªìng is the Mekong Delta sour soup made with t√¥m ƒë·ªìng ‚Äî the small freshwater shrimp that live in the rice paddies, irrigation canals, and seasonal floodplains of the delta, harvested in enormous quantities during the rice-growing season and eaten fresh or dried throughout the year. T√¥m ƒë·ªìng are tiny compared to marine shrimp ‚Äî rarely longer than 4-5cm, translucent when raw, with a sweetness that is more concentrated than their size suggests because freshwater shrimp have a higher ratio of naturally occurring amino acids that produce the sweet taste. When added to a simmering tamarind broth they cook in under 2 minutes and contribute their sweetness and a natural thickening to the soup liquid. The distinctive element of the Mekong Delta version of canh chua ‚Äî what distinguishes it from the Ph√∫ Y√™n c√° l√≥c version or the Saigon version ‚Äî is the presence of b√¥ng s√∫ng, the stems of the water lily that grows wild in every flooded field and waterway of the delta. Water lily stems have a texture that is simultaneously crunchy and slightly spongy, absorbing the sour broth while maintaining their structure, and a delicate green flavor that grounds the soup in the specific landscape of the delta. The rice paddy herb (ng√≤ √¥m) added at the end is grown in the same flooded fields as the t√¥m ƒë·ªìng ‚Äî the combination of field shrimp and field herb is the delta in a bowl.`,
     ingredientSections: [
         {
             title: 'Shrimp and broth',
             items: [
-                { amount: 400, unit: 'g', name: 'fresh tÙm d?ng (freshwater field shrimp)', note: 'small, whole, shell-on. Available at Vietnamese markets during season. Substitute: very small marine shrimp (50-60 count per 500g) or dried field shrimp rehydrated.' },
+                { amount: 400, unit: 'g', name: 'fresh t√¥m ƒë·ªìng (freshwater field shrimp)', note: 'small, whole, shell-on. Available at Vietnamese markets during season. Substitute: very small marine shrimp (50-60 count per 500g) or dried field shrimp rehydrated.' },
                 { amount: 1.5, unit: 'L', name: 'water' },
-                { amount: 2, name: 'shallots', note: 'thinly sliced ó fried in oil before adding water' },
+                { amount: 2, name: 'shallots', note: 'thinly sliced ‚Äî fried in oil before adding water' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil' },
             ],
         },
         {
             title: 'Souring agents',
             items: [
-                { amount: 40, unit: 'g', name: 'tamarind paste (me chua)', note: 'dissolved in 150ml hot water, strained ó the primary sourness' },
-                { amount: 200, unit: 'g', name: 'fresh pineapple', note: 'cut into chunks ó tropical sourness and sweetness' },
+                { amount: 40, unit: 'g', name: 'tamarind paste (me chua)', note: 'dissolved in 150ml hot water, strained ‚Äî the primary sourness' },
+                { amount: 200, unit: 'g', name: 'fresh pineapple', note: 'cut into chunks ‚Äî tropical sourness and sweetness' },
                 { amount: 3, name: 'medium tomatoes', note: 'cut into wedges' },
             ],
         },
         {
             title: 'Mekong Delta vegetables',
             items: [
-                { amount: 200, unit: 'g', name: 'bÙng s˙ng (water lily stems)', note: 'peeled and cut into 5cm pieces. Available at Vietnamese markets specializing in southern produce. Substitute: celery cut diagonally into 3cm pieces ó different texture but similar role.' },
-                { amount: 100, unit: 'g', name: 'bean sprouts (gi·)', note: 'added raw at the very end' },
-                { amount: 6, name: 'okra (d?u b?p)', note: 'trimmed and halved ó adds natural thickening' },
+                { amount: 200, unit: 'g', name: 'b√¥ng s√∫ng (water lily stems)', note: 'peeled and cut into 5cm pieces. Available at Vietnamese markets specializing in southern produce. Substitute: celery cut diagonally into 3cm pieces ‚Äî different texture but similar role.' },
+                { amount: 100, unit: 'g', name: 'bean sprouts (gi√°)', note: 'added raw at the very end' },
+                { amount: 6, name: 'okra (ƒë·∫≠u b·∫Øp)', note: 'trimmed and halved ‚Äî adds natural thickening' },
             ],
         },
         {
@@ -49,7 +49,7 @@ const recipe: RecipeData = {
         {
             title: 'Essential Mekong finishing herbs',
             items: [
-                { amount: 1, name: 'large bunch ngÚ Ùm (rice paddy herb)', note: 'the defining herb of southern canh chua ó sharp, lemony, slightly bitter. Cannot be substituted. Available at Vietnamese grocers.' },
+                { amount: 1, name: 'large bunch ng√≤ √¥m (rice paddy herb)', note: 'the defining herb of southern canh chua ‚Äî sharp, lemony, slightly bitter. Cannot be substituted. Available at Vietnamese grocers.' },
                 { amount: 1, name: 'bunch cilantro', note: 'roughly torn' },
                 { amount: 3, name: 'spring onions', note: 'sliced' },
                 { amount: 2, name: 'fresh red chilies', note: 'sliced' },
@@ -59,28 +59,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare the tamarind broth base',
-            description: 'Break the tamarind paste into pieces and work into 150ml hot water until fully dissolved. Strain through a fine sieve ó discard the fibrous solids. The strained liquid should be dark, thick, and intensely sour. In a large pot, heat oil over medium heat and fry sliced shallots until golden ó 3 minutes. Add 1.5L water and the strained tamarind liquid. Add pineapple chunks and tomato wedges. Bring to a boil.',
+            description: 'Break the tamarind paste into pieces and work into 150ml hot water until fully dissolved. Strain through a fine sieve ‚Äî discard the fibrous solids. The strained liquid should be dark, thick, and intensely sour. In a large pot, heat oil over medium heat and fry sliced shallots until golden ‚Äî 3 minutes. Add 1.5L water and the strained tamarind liquid. Add pineapple chunks and tomato wedges. Bring to a boil.',
             tip: 'Frying the shallots in oil before adding the water is the technique that adds a sweet, roasted depth to the broth that raw shallots cannot provide. This step is often skipped in quick versions and its absence is detectable in the flatness of the finished soup.',
         },
         {
-            title: 'Add bÙng s˙ng and okra',
-            description: 'Add the water lily stem pieces to the simmering broth ó they need 5-7 minutes to cook through while maintaining their characteristic slight crunch. Add the okra halves ó they release their natural mucilage into the broth over 3-4 minutes, giving it a barely perceptible viscosity that is characteristic of Mekong Delta canh chua. Taste the broth and season with fish sauce, sugar, and salt.',
-            tip: 'The bÙng s˙ng needs to be added before the shrimp because it takes longer to cook. It should be tender-crisp when the shrimp goes in ó not raw, not soft. Test a piece: it should bend without snapping but retain clear resistance when bitten.',
+            title: 'Add b√¥ng s√∫ng and okra',
+            description: 'Add the water lily stem pieces to the simmering broth ‚Äî they need 5-7 minutes to cook through while maintaining their characteristic slight crunch. Add the okra halves ‚Äî they release their natural mucilage into the broth over 3-4 minutes, giving it a barely perceptible viscosity that is characteristic of Mekong Delta canh chua. Taste the broth and season with fish sauce, sugar, and salt.',
+            tip: 'The b√¥ng s√∫ng needs to be added before the shrimp because it takes longer to cook. It should be tender-crisp when the shrimp goes in ‚Äî not raw, not soft. Test a piece: it should bend without snapping but retain clear resistance when bitten.',
         },
         {
-            title: 'Add the tÙm d?ng',
-            description: 'Add the fresh field shrimp to the simmering broth. They cook very fast ó 90 seconds to 2 minutes for small tÙm d?ng. The shrimp turn from translucent grey to pink-orange throughout when done. Their small size means they cook almost simultaneously ó watch carefully and remove from heat the moment they are uniformly pink. Over-cooked tÙm d?ng tighten and lose their characteristic sweetness.',
-            tip: 'TÙm d?ng are the fastest-cooking element in the soup. Everything else should be timed so the shrimp go in last, at the final 2 minutes. Adding them too early produces tough, over-cooked shrimp in a soup that still needs more time to develop.',
+            title: 'Add the t√¥m ƒë·ªìng',
+            description: 'Add the fresh field shrimp to the simmering broth. They cook very fast ‚Äî 90 seconds to 2 minutes for small t√¥m ƒë·ªìng. The shrimp turn from translucent grey to pink-orange throughout when done. Their small size means they cook almost simultaneously ‚Äî watch carefully and remove from heat the moment they are uniformly pink. Over-cooked t√¥m ƒë·ªìng tighten and lose their characteristic sweetness.',
+            tip: 'T√¥m ƒë·ªìng are the fastest-cooking element in the soup. Everything else should be timed so the shrimp go in last, at the final 2 minutes. Adding them too early produces tough, over-cooked shrimp in a soup that still needs more time to develop.',
         },
         {
             title: 'Add bean sprouts and adjust seasoning',
-            description: 'Add the bean sprouts in the last 30 seconds of cooking ó they should be barely warmed rather than cooked, maintaining their crunch against the soft vegetables and tender shrimp. Taste the broth one final time: the sour-sweet-savory balance of Mekong canh chua should have the tamarind and pineapple acidity clearly present, the sweetness from the pineapple and sugar balancing it, and the fish sauce providing savory depth without being identifiable.',
-            tip: 'The Mekong Delta canh chua is slightly sweeter than the central Vietnamese version ó the Mekong palette runs sweeter overall, and the delta sugar cane available locally influences the seasoning tradition. If the soup tastes balanced but flat, a pinch more sugar is often the correct adjustment.',
+            description: 'Add the bean sprouts in the last 30 seconds of cooking ‚Äî they should be barely warmed rather than cooked, maintaining their crunch against the soft vegetables and tender shrimp. Taste the broth one final time: the sour-sweet-savory balance of Mekong canh chua should have the tamarind and pineapple acidity clearly present, the sweetness from the pineapple and sugar balancing it, and the fish sauce providing savory depth without being identifiable.',
+            tip: 'The Mekong Delta canh chua is slightly sweeter than the central Vietnamese version ‚Äî the Mekong palette runs sweeter overall, and the delta sugar cane available locally influences the seasoning tradition. If the soup tastes balanced but flat, a pinch more sugar is often the correct adjustment.',
         },
         {
-            title: 'Finish with ngÚ Ùm and serve',
-            description: 'Turn off the heat. Add a large handful of ngÚ Ùm directly to the pot ó the residual heat wilts it slightly while preserving its sharp lemony character. Add cilantro and spring onion. Ladle into deep bowls ensuring each bowl gets shrimp, bÙng s˙ng, tomato, pineapple, and okra. Top with sliced red chili and extra ngÚ Ùm. Serve immediately with steamed jasmine rice.',
-            tip: 'NgÚ Ùm added off-heat is the technique that preserves the herb\'s defining quality ó the volatile compounds that give it its sharp, citrusy character dissipate within 30 seconds of being added to simmering liquid. The difference between cooked ngÚ Ùm (flat, slightly bitter) and off-heat ngÚ Ùm (bright, sharp, lemony) is the difference between a good canh chua and the correct one.',
+            title: 'Finish with ng√≤ √¥m and serve',
+            description: 'Turn off the heat. Add a large handful of ng√≤ √¥m directly to the pot ‚Äî the residual heat wilts it slightly while preserving its sharp lemony character. Add cilantro and spring onion. Ladle into deep bowls ensuring each bowl gets shrimp, b√¥ng s√∫ng, tomato, pineapple, and okra. Top with sliced red chili and extra ng√≤ √¥m. Serve immediately with steamed jasmine rice.',
+            tip: 'Ng√≤ √¥m added off-heat is the technique that preserves the herb\'s defining quality ‚Äî the volatile compounds that give it its sharp, citrusy character dissipate within 30 seconds of being added to simmering liquid. The difference between cooked ng√≤ √¥m (flat, slightly bitter) and off-heat ng√≤ √¥m (bright, sharp, lemony) is the difference between a good canh chua and the correct one.',
         },
     ],
 };

@@ -5,7 +5,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-chuoi-nuong',
     title: 'Baked Banana Coconut Cake',
-    subtitle: 'Crispy at the edges, custardy in the middle — banana and coconut baked until caramelised and deeply fragrant.',
+    subtitle: 'Crispy at the edges, custardy in the middle â€” banana and coconut baked until caramelised and deeply fragrant.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '55 min',
@@ -13,12 +13,12 @@ const recipe: RecipeData = {
     baseServings: 8,
     heroImage: '/images/recipes/banh-chuoi-nuong.jpg',
     intro:
-        'Bánh chu?i nu?ng is the dessert that smells like home. Overripe bananas — the ones too soft and sweet to eat fresh — are folded into a coconut milk batter, poured into a tray, and baked until the top turns golden and the edges caramelise into something between cake and custard. It is simple food made extraordinary by patience and the right bananas. Use the ones with black-spotted skins. The blacker, the better.',
+        'BÃ¡nh chuá»‘i nÆ°á»›ng is the dessert that smells like home. Overripe bananas â€” the ones too soft and sweet to eat fresh â€” are folded into a coconut milk batter, poured into a tray, and baked until the top turns golden and the edges caramelise into something between cake and custard. It is simple food made extraordinary by patience and the right bananas. Use the ones with black-spotted skins. The blacker, the better.',
     ingredientSections: [
         {
             title: 'Batter',
             items: [
-                { amount: 5, name: 'overripe bananas (chu?i s? or chu?i xiêm)', note: 'roughly mashed' },
+                { amount: 5, name: 'overripe bananas (chuá»‘i sá»© or chuá»‘i xiÃªm)', note: 'roughly mashed' },
                 { amount: 200, unit: 'ml', name: 'coconut milk', note: 'full-fat' },
                 { amount: 100, unit: 'ml', name: 'coconut cream' },
                 { amount: 80, unit: 'g', name: 'tapioca starch' },
@@ -42,13 +42,13 @@ const recipe: RecipeData = {
         {
             title: 'Preheat and prep',
             description:
-                'Preheat oven to 180°C (350°F). Grease a 20×25 cm baking tray with a little coconut oil or butter and line with parchment paper.',
+                'Preheat oven to 180Â°C (350Â°F). Grease a 20Ã—25 cm baking tray with a little coconut oil or butter and line with parchment paper.',
         },
         {
             title: 'Make the batter',
             description:
-                'Mash bananas thoroughly in a large bowl — some small lumps are fine and add texture. Add coconut milk, coconut cream, tapioca starch, rice flour, sugar, salt, and vanilla. Mix until smooth and no dry flour remains. The batter will be thick and pourable.',
-            tip: 'Apple bananas (Chu?i s?) are traditional and have a firmer texture. Standard Cavendish bananas work well too — just make sure they are very ripe.',
+                'Mash bananas thoroughly in a large bowl â€” some small lumps are fine and add texture. Add coconut milk, coconut cream, tapioca starch, rice flour, sugar, salt, and vanilla. Mix until smooth and no dry flour remains. The batter will be thick and pourable.',
+            tip: 'Apple bananas (Chuá»‘i sá»©) are traditional and have a firmer texture. Standard Cavendish bananas work well too â€” just make sure they are very ripe.',
         },
         {
             title: 'Bake first layer',
@@ -58,13 +58,13 @@ const recipe: RecipeData = {
         {
             title: 'Add coconut topping',
             description:
-                'Mix coconut cream with sugar and salt. Pour evenly over the partially baked cake. Scatter toasted sesame seeds across the surface. Return to oven for a further 15–20 minutes until the top is deeply golden and the coconut cream has set into a glossy, slightly caramelised layer.',
-            tip: 'For extra caramelisation, switch to grill/broil mode for the final 3 minutes — watch carefully.',
+                'Mix coconut cream with sugar and salt. Pour evenly over the partially baked cake. Scatter toasted sesame seeds across the surface. Return to oven for a further 15â€“20 minutes until the top is deeply golden and the coconut cream has set into a glossy, slightly caramelised layer.',
+            tip: 'For extra caramelisation, switch to grill/broil mode for the final 3 minutes â€” watch carefully.',
         },
         {
             title: 'Cool and slice',
             description:
-                'Allow to cool in the tray for at least 20 minutes before slicing. Bánh chu?i nu?ng is best served warm or at room temperature. It firms up overnight and is equally good eaten cold the next day — if it lasts that long.',
+                'Allow to cool in the tray for at least 20 minutes before slicing. BÃ¡nh chuá»‘i nÆ°á»›ng is best served warm or at room temperature. It firms up overnight and is equally good eaten cold the next day â€” if it lasts that long.',
         },
     ],
 };

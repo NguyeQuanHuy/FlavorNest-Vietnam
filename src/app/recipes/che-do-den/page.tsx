@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'che-do-den',
     title: 'Black Bean Sweet Soup',
-    subtitle: 'Che do den — soft black beans in a dark jasmine-scented syrup, the quintessential summer treat of Northern Vietnam.',
+    subtitle: 'Che do den â€” soft black beans in a dark jasmine-scented syrup, the quintessential summer treat of Northern Vietnam.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '1 hr',
@@ -43,7 +43,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Soak and rinse the beans',
-            description: 'Cover beans with cold water by 5cm and soak overnight. Drain and rinse thoroughly. Discard any beans that float — they are old and will not soften properly.',
+            description: 'Cover beans with cold water by 5cm and soak overnight. Drain and rinse thoroughly. Discard any beans that float â€” they are old and will not soften properly.',
             tip: 'Under-soaked beans will never fully soften. Minimum 8 hours, longer is fine.',
         },
         {
@@ -58,7 +58,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Sweeten the syrup',
-            description: 'Add palm sugar to the pot and stir until fully dissolved. Continue simmering uncovered for 10 minutes — the syrup will reduce slightly and turn a deep glossy brown. Off heat, stir in jasmine essence if using. Remove pandan leaves. Cool to room temperature, then refrigerate at least 2 hours.',
+            description: 'Add palm sugar to the pot and stir until fully dissolved. Continue simmering uncovered for 10 minutes â€” the syrup will reduce slightly and turn a deep glossy brown. Off heat, stir in jasmine essence if using. Remove pandan leaves. Cool to room temperature, then refrigerate at least 2 hours.',
         },
         {
             title: 'Make the coconut cream topping',

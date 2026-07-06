@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'ca-chien-sot-ca',
     title: 'Crispy Fish in Tomato Sauce',
     subtitle:
-        'Cá Chiên S?t Cà — a whole pan-fried fish with shattering-crisp skin, bathed in a bright tomato-scallion-dill sauce.',
+        'CÃ¡ ChiÃªn Sá»‘t CÃ  â€” a whole pan-fried fish with shattering-crisp skin, bathed in a bright tomato-scallion-dill sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/ca-chien-sot-ca.jpg',
     intro:
-        'Cá s?t cà is the quiet hero of the Northern home kitchen — the kind of dish you never see in restaurants because every grandmother already makes it on a Tuesday. The contrast is everything: shattering-crisp skin against the bright, almost Italian-feeling tomato sauce, both cooled by a final shower of fresh dill.',
+        'CÃ¡ sá»‘t cÃ  is the quiet hero of the Northern home kitchen â€” the kind of dish you never see in restaurants because every grandmother already makes it on a Tuesday. The contrast is everything: shattering-crisp skin against the bright, almost Italian-feeling tomato sauce, both cooled by a final shower of fresh dill.',
     ingredientSections: [
         {
             title: 'Fish',
@@ -50,7 +50,7 @@ const recipe: RecipeData = {
             {
                 title: 'Dry and season the fish',
                 description: 'Use paper towels to pat the fish completely dry on both sides and inside the cavity. Score the flesh in a criss-cross pattern and rub a mixture of salt and turmeric powder into the marks to enhance flavor and achieve a vibrant color.',
-                tip: 'Wet fish + hot oil = a steam explosion. Dry the fish twice—once when you bring it home and once more right before it hits the pan to ensure maximum crispiness.',
+                tip: 'Wet fish + hot oil = a steam explosion. Dry the fish twiceâ€”once when you bring it home and once more right before it hits the pan to ensure maximum crispiness.',
             },
             {
                 title: 'Fry to golden',
@@ -59,13 +59,13 @@ const recipe: RecipeData = {
             },
             {
                 title: 'Build the sauce base',
-                description: 'Drain most of the frying oil, leaving about two tablespoons in the pan. Toss in finely minced shallots and garlic, sautéing them over medium heat until they turn a pale golden brown and fill the kitchen with their aroma.',
+                description: 'Drain most of the frying oil, leaving about two tablespoons in the pan. Toss in finely minced shallots and garlic, sautÃ©ing them over medium heat until they turn a pale golden brown and fill the kitchen with their aroma.',
                 tip: 'Using the same oil used for frying the fish adds an extra layer of savory seafood depth to your tomato sauce.',
             },
             {
                 title: 'Break down the tomatoes',
                 description: 'Add chopped tomatoes to the pan along with fish sauce, a pinch of sugar, and a splash of water. Cover and simmer for about 10 minutes, mashing the tomatoes occasionally with your spatula until they collapse into a thick, jammy sauce.',
-                tip: 'If the tomatoes aren’t juicy enough, add a tablespoon of tomato paste to boost the color and provide a richer "umami" base.',
+                tip: 'If the tomatoes arenâ€™t juicy enough, add a tablespoon of tomato paste to boost the color and provide a richer "umami" base.',
             },
             {
                 title: 'Return the fish to the sauce',

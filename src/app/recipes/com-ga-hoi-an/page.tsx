@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'com-ga-hoi-an',
     title: 'Hoi An Chicken Rice',
     subtitle:
-        'Com Gà H?i An (Hoi An Chicken Rice) — fragrant turmeric-stained rice served with hand-shredded chicken, crunchy lime-marinated onions, and fresh Vietnamese coriander.',
+        'CÆ¡m GÃ  Há»™i An (Hoi An Chicken Rice) â€” fragrant turmeric-stained rice served with hand-shredded chicken, crunchy lime-marinated onions, and fresh Vietnamese coriander.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/com-ga-hoi-an.jpg',
     intro:
-        'Hoi An Chicken Rice is a delicate masterpiece from the ancient town of Central Vietnam. Unlike other chicken rice dishes, the magic here lies in the rice itself—grains are sautéed in garlic and chicken fat before being poached in a rich turmeric broth. The result is a vibrant yellow rice that is intensely aromatic, served alongside tender shredded chicken and a refreshing onion salad that cuts through the richness with every bite.',
+        'Hoi An Chicken Rice is a delicate masterpiece from the ancient town of Central Vietnam. Unlike other chicken rice dishes, the magic here lies in the rice itselfâ€”grains are sautÃ©ed in garlic and chicken fat before being poached in a rich turmeric broth. The result is a vibrant yellow rice that is intensely aromatic, served alongside tender shredded chicken and a refreshing onion salad that cuts through the richness with every bite.',
     ingredientSections: [
         {
             title: 'The Chicken and Broth',
@@ -39,11 +39,11 @@ const recipe: RecipeData = {
             title: 'Hoi An Salad and Garnish',
             items: [
                 { amount: 1, unit: 'large', name: 'onion', note: 'paper-thinly sliced' },
-                { amount: 1, unit: 'bunch', name: 'Vietnamese coriander (rau ram)' },
+                { amount: 1, unit: 'bunch', name: 'Vietnamese coriander (rau rÄƒm)' },
                 { amount: 1, unit: 'tbsp', name: 'fresh lime juice' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
-                { amount: 1, unit: 'tbsp', name: 'chili jam (?t chung)', note: 'optional but recommended' },
+                { amount: 1, unit: 'tbsp', name: 'chili jam (á»›t chÆ°ng)', note: 'optional but recommended' },
             ],
         },
     ],
@@ -54,13 +54,13 @@ const recipe: RecipeData = {
             tip: 'Immediately soak the cooked chicken in ice water to keep the skin firm and the meat juicy.',
         },
         {
-            title: 'Sauté the rice',
-            description: 'Heat chicken fat in a pan. Sauté minced garlic until fragrant, then add the raw rice and stir-fry for 3 minutes until the grains turn opaque and are coated in fat.',
+            title: 'SautÃ© the rice',
+            description: 'Heat chicken fat in a pan. SautÃ© minced garlic until fragrant, then add the raw rice and stir-fry for 3 minutes until the grains turn opaque and are coated in fat.',
             tip: 'This "sealing" of the rice prevents it from becoming mushy and ensures each grain is infused with flavor.',
         },
         {
             title: 'Cook the rice',
-            description: 'Transfer the sautéed rice to a rice cooker and use the hot chicken poaching broth as the cooking liquid.',
+            description: 'Transfer the sautÃ©ed rice to a rice cooker and use the hot chicken poaching broth as the cooking liquid.',
         },
         {
             title: 'Shred the chicken',

@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'tra-chanh-sa',
     title: 'Lemongrass Lime Tea (Tra Chanh Sa)',
-    subtitle: 'Refreshing, citrusy, and herbal — a street-style Vietnamese iced drink with lemongrass and lime.',
+    subtitle: 'Refreshing, citrusy, and herbal â€” a street-style Vietnamese iced drink with lemongrass and lime.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/tra-chanh-sa.jpg',
 
-    intro: `Trà chanh s? is a popular Vietnamese street drink known for its refreshing balance of citrus, herbal aroma, and light sweetness.
+    intro: `TrÃ  chanh sáº£ is a popular Vietnamese street drink known for its refreshing balance of citrus, herbal aroma, and light sweetness.
 
-Fresh lemongrass is gently boiled to release its fragrance, then combined with black tea, lime juice, and sugar. The result is a bright, aromatic iced drink that cools the body and wakes up the senses — perfect for hot days or casual gatherings.`,
+Fresh lemongrass is gently boiled to release its fragrance, then combined with black tea, lime juice, and sugar. The result is a bright, aromatic iced drink that cools the body and wakes up the senses â€” perfect for hot days or casual gatherings.`,
 
     ingredientSections: [
         {

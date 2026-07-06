@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/kho-qua-xao-trung.jpg',
 
-    intro: `Kh? qua x‡o tr?ng is a classic Vietnamese home dish made from bitter melon (bitter gourd) and eggs stir-fried together.
+    intro: `Kh·ªï qua x√†o tr·ª©ng is a classic Vietnamese home dish made from bitter melon (bitter gourd) and eggs stir-fried together.
 
-The dish balances the natural bitterness of the melon with the softness and richness of eggs. It is often considered both a simple comfort food and a ìhealthy everyday dishî in Vietnamese meals.`,
+The dish balances the natural bitterness of the melon with the softness and richness of eggs. It is often considered both a simple comfort food and a ‚Äúhealthy everyday dish‚Äù in Vietnamese meals.`,
 
     ingredientSections: [
         {
@@ -40,7 +40,7 @@ The dish balances the natural bitterness of the melon with the softness and rich
     steps: [
         {
             title: 'Prepare bitter melon',
-            description: 'Slice bitter melon thinly and soak in salted water for 10ñ15 minutes to reduce bitterness.',
+            description: 'Slice bitter melon thinly and soak in salted water for 10‚Äì15 minutes to reduce bitterness.',
             tip: 'The thinner the slices, the less bitter the taste.',
         },
         {
@@ -48,12 +48,12 @@ The dish balances the natural bitterness of the melon with the softness and rich
             description: 'Beat eggs lightly with a pinch of salt and pepper.',
         },
         {
-            title: 'SautÈ garlic',
-            description: 'Heat oil in a pan and sautÈ garlic until fragrant.',
+            title: 'Saut√© garlic',
+            description: 'Heat oil in a pan and saut√© garlic until fragrant.',
         },
         {
             title: 'Cook bitter melon',
-            description: 'Add bitter melon and stir-fry for 3ñ5 minutes until slightly softened.',
+            description: 'Add bitter melon and stir-fry for 3‚Äì5 minutes until slightly softened.',
         },
         {
             title: 'Add eggs',

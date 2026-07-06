@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 1,
     heroImage: '/images/recipes/mo-hanh.jpg',
 
-    intro: `M? h‡nh is a simple but essential Vietnamese condiment made from chopped scallions and hot oil.
+    intro: `M·ª° h√†nh is a simple but essential Vietnamese condiment made from chopped scallions and hot oil.
 
 It is widely used as a topping for grilled meats, steamed dishes, rice cakes, and noodles. The hot oil gently cooks the scallions, releasing a fragrant aroma while keeping their vibrant green color.`,
 
@@ -48,7 +48,7 @@ It is widely used as a topping for grilled meats, steamed dishes, rice cakes, an
         },
         {
             title: 'Use immediately',
-            description: 'Drizzle over grilled meats, rice, noodles, or b·nh mÏ.',
+            description: 'Drizzle over grilled meats, rice, noodles, or b√°nh m√¨.',
         },
     ],
 };

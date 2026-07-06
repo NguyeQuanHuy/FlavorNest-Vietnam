@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-tieu',
     title: 'Vietnamese Hollow Sesame Doughnut (Banh Tieu)',
-    subtitle: 'Crispy golden hollow fried bread coated with sesame seeds — light, airy, and slightly sweet.',
+    subtitle: 'Crispy golden hollow fried bread coated with sesame seeds â€” light, airy, and slightly sweet.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '90 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/banh-tieu.jpg',
 
-    intro: `Bánh tiêu is a popular Vietnamese street snack made from leavened dough that puffs up into a hollow golden shell when fried.
+    intro: `BÃ¡nh tiÃªu is a popular Vietnamese street snack made from leavened dough that puffs up into a hollow golden shell when fried.
 
 It is crispy on the outside, airy inside, and lightly sweet with sesame seeds adding a nutty aroma.`,
 

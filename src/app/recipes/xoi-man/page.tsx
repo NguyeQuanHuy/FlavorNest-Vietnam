@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'xoi-man',
     title: 'Savoury Sticky Rice',
-    subtitle: 'Xoi man — steamed glutinous rice piled high with Chinese sausage, shredded chicken, dried shrimp and a drizzle of soy. Saigon street breakfast.',
+    subtitle: 'Xoi man â€” steamed glutinous rice piled high with Chinese sausage, shredded chicken, dried shrimp and a drizzle of soy. Saigon street breakfast.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '50 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/xoi-man.jpg',
-    intro: 'In Saigon, xoi man is the breakfast you grab from a bicycle vendor on the way to work — sticky rice mounded into a cone of banana leaf, weighed down with a small mountain of toppings, and eaten with a plastic spoon while waiting for the traffic light. The rice is steamed long enough to be glossy and chewy but not gummy. The toppings vary by stall but always include lap xuong (Chinese sausage), and always more than you think one person could eat. They are wrong. You will finish it.',
+    intro: 'In Saigon, xoi man is the breakfast you grab from a bicycle vendor on the way to work â€” sticky rice mounded into a cone of banana leaf, weighed down with a small mountain of toppings, and eaten with a plastic spoon while waiting for the traffic light. The rice is steamed long enough to be glossy and chewy but not gummy. The toppings vary by stall but always include lap xuong (Chinese sausage), and always more than you think one person could eat. They are wrong. You will finish it.',
     ingredientSections: [
         {
             title: 'Sticky rice',
@@ -55,7 +55,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Pan-fry the lap xuong',
-            description: 'In a dry pan over medium heat, fry the sliced Chinese sausage for 2 minutes until the edges curl and the fat renders. The rendered fat is liquid gold — reserve every drop.',
+            description: 'In a dry pan over medium heat, fry the sliced Chinese sausage for 2 minutes until the edges curl and the fat renders. The rendered fat is liquid gold â€” reserve every drop.',
         },
         {
             title: 'Saute the dried shrimp',
@@ -67,7 +67,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Finish and serve',
-            description: 'Toss the steamed rice with rendered chicken fat or oil while still hot — this gives the signature glossy chewy texture. Mound rice onto plates. Top with shredded chicken, lap xuong, cha lua, dried shrimp, fried shallots and spring onion. Drizzle generously with the soy sauce. Crack pepper over the top.',
+            description: 'Toss the steamed rice with rendered chicken fat or oil while still hot â€” this gives the signature glossy chewy texture. Mound rice onto plates. Top with shredded chicken, lap xuong, cha lua, dried shrimp, fried shallots and spring onion. Drizzle generously with the soy sauce. Crack pepper over the top.',
             tip: 'Eaten properly: mash everything together with a spoon before the first bite. Saigon street vendors do this for you with a flick of the wrist.',
         },
     ],

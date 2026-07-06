@@ -3,32 +3,32 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-trang-trung-nuong',
-    title: 'B·nh Tr·ng Tr?ng Nu?ng (Grilled Rice Paper with Egg)',
-    subtitle: 'The –‡ L?t street food that became a national obsession ó a crispy rice paper base grilled over charcoal, cracked egg spread across the surface, topped with spring onion oil, dried shrimp, and chili sauce, folded in half and eaten in two bites.',
+    title: 'B√°nh Tr√°ng Tr·ª©ng N∆∞·ªõng (Grilled Rice Paper with Egg)',
+    subtitle: 'The ƒê√† L·∫°t street food that became a national obsession ‚Äî a crispy rice paper base grilled over charcoal, cracked egg spread across the surface, topped with spring onion oil, dried shrimp, and chili sauce, folded in half and eaten in two bites.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '20 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-trang-nuong.jpg',
-    intro: `B·nh tr·ng tr?ng nu?ng is the dish that demonstrates the Vietnamese genius for transforming simple ingredients into something irresistible. A single sheet of dried rice paper. One egg. Spring onion oil. Dried shrimp. Chili sauce. Grilled over charcoal until the rice paper crackles and the egg sets in a thin, lacy layer across the surface. Folded in half, handed over, eaten immediately in the mountain cool of –‡ L?t where the dish originated. It has since spread to every city in Vietnam ó sold from carts, from market stalls, from the back of motorcycles at night markets. The ingredients cost almost nothing. The technique requires three minutes. The result is one of the most addictive things in Vietnamese street food. This recipe gives two methods: the correct charcoal method, and a home griddle method that produces a very good approximation.`,
+    intro: `B√°nh tr√°ng tr·ª©ng n∆∞·ªõng is the dish that demonstrates the Vietnamese genius for transforming simple ingredients into something irresistible. A single sheet of dried rice paper. One egg. Spring onion oil. Dried shrimp. Chili sauce. Grilled over charcoal until the rice paper crackles and the egg sets in a thin, lacy layer across the surface. Folded in half, handed over, eaten immediately in the mountain cool of ƒê√† L·∫°t where the dish originated. It has since spread to every city in Vietnam ‚Äî sold from carts, from market stalls, from the back of motorcycles at night markets. The ingredients cost almost nothing. The technique requires three minutes. The result is one of the most addictive things in Vietnamese street food. This recipe gives two methods: the correct charcoal method, and a home griddle method that produces a very good approximation.`,
     ingredientSections: [
         {
             title: 'Per serving (multiply as needed)',
             items: [
-                { amount: 1, name: 'round dried rice paper (b·nh tr·ng)', note: '22-25cm diameter ó thin variety, not the thick spring roll type' },
+                { amount: 1, name: 'round dried rice paper (b√°nh tr√°ng)', note: '22-25cm diameter ‚Äî thin variety, not the thick spring roll type' },
                 { amount: 1, name: 'egg', note: 'cracked directly onto the hot rice paper' },
-                { amount: 1, unit: 'tbsp', name: 'scallion oil (d?u h‡nh)', note: 'made from hot oil poured over sliced spring onion ó see step 2' },
-                { amount: 1, unit: 'tsp', name: 'dried shrimp (tÙm khÙ)', note: 'small, orange-pink, pre-soaked 10 min in water then drained' },
-                { amount: 1, unit: 'tsp', name: 'Vietnamese chili sauce (tuong ?t)', note: 'or sriracha ó the finishing heat' },
-                { amount: 1, unit: 'tsp', name: 'mayonnaise', note: 'optional but widely used in the modern Saigon version ó adds richness' },
-                { amount: 0.5, unit: 'tsp', name: 'Maggi seasoning sauce', note: 'the umami finishing drizzle ó small amount, big difference' },
+                { amount: 1, unit: 'tbsp', name: 'scallion oil (d·∫ßu h√†nh)', note: 'made from hot oil poured over sliced spring onion ‚Äî see step 2' },
+                { amount: 1, unit: 'tsp', name: 'dried shrimp (t√¥m kh√¥)', note: 'small, orange-pink, pre-soaked 10 min in water then drained' },
+                { amount: 1, unit: 'tsp', name: 'Vietnamese chili sauce (t∆∞∆°ng ·ªõt)', note: 'or sriracha ‚Äî the finishing heat' },
+                { amount: 1, unit: 'tsp', name: 'mayonnaise', note: 'optional but widely used in the modern Saigon version ‚Äî adds richness' },
+                { amount: 0.5, unit: 'tsp', name: 'Maggi seasoning sauce', note: 'the umami finishing drizzle ‚Äî small amount, big difference' },
             ],
         },
         {
             title: 'Scallion oil (makes enough for 8 servings)',
             items: [
-                { amount: 4, name: 'spring onions', note: 'thinly sliced ó green parts only' },
+                { amount: 4, name: 'spring onions', note: 'thinly sliced ‚Äî green parts only' },
                 { amount: 4, unit: 'tbsp', name: 'neutral oil' },
                 { amount: 0.25, unit: 'tsp', name: 'salt' },
             ],
@@ -37,33 +37,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the scallion oil',
-            description: 'Place thinly sliced spring onion greens in a small bowl with a pinch of salt. Heat neutral oil in a small pan until just smoking ó about 180∞C. Pour the hot oil over the spring onions in one motion. The sizzle will cook the onion slightly and release the aromatic oils. Stir to combine. The scallion oil can be made ahead and kept at room temperature for several hours.',
-            tip: 'The oil must be hot enough to sizzle aggressively on contact ó if it does not sizzle, it will not bloom the spring onion flavor properly.',
+            description: 'Place thinly sliced spring onion greens in a small bowl with a pinch of salt. Heat neutral oil in a small pan until just smoking ‚Äî about 180¬∞C. Pour the hot oil over the spring onions in one motion. The sizzle will cook the onion slightly and release the aromatic oils. Stir to combine. The scallion oil can be made ahead and kept at room temperature for several hours.',
+            tip: 'The oil must be hot enough to sizzle aggressively on contact ‚Äî if it does not sizzle, it will not bloom the spring onion flavor properly.',
         },
         {
             title: 'Soak the dried shrimp',
             description: 'Soak dried shrimp in warm water for 10 minutes until slightly softened. Drain and pat dry. The soaking removes excess salt and softens the texture so they do not scratch the rice paper when spreading.',
-            tip: 'Very small dried shrimp work best ó they integrate into the egg layer rather than sitting on top. If only large dried shrimp are available, roughly chop before using.',
+            tip: 'Very small dried shrimp work best ‚Äî they integrate into the egg layer rather than sitting on top. If only large dried shrimp are available, roughly chop before using.',
         },
         {
-            title: 'Grill the rice paper ó charcoal method',
-            description: 'Hold a sheet of rice paper about 10cm above hot charcoal embers (not flame) using tongs or a wire rack. The rice paper will begin to soften and become pliable in 20-30 seconds. Crack an egg directly onto the center of the softened rice paper. Use the back of a spoon to spread the egg quickly across the entire surface in a thin layer ó you have about 15 seconds before the egg begins to set.',
-            tip: 'Move fast with the egg spreading. The rice paper is hot and the egg sets quickly. The goal is a thin, lacy egg layer across the entire surface ó not a thick egg in the center.',
+            title: 'Grill the rice paper ‚Äî charcoal method',
+            description: 'Hold a sheet of rice paper about 10cm above hot charcoal embers (not flame) using tongs or a wire rack. The rice paper will begin to soften and become pliable in 20-30 seconds. Crack an egg directly onto the center of the softened rice paper. Use the back of a spoon to spread the egg quickly across the entire surface in a thin layer ‚Äî you have about 15 seconds before the egg begins to set.',
+            tip: 'Move fast with the egg spreading. The rice paper is hot and the egg sets quickly. The goal is a thin, lacy egg layer across the entire surface ‚Äî not a thick egg in the center.',
         },
         {
-            title: 'Grill the rice paper ó griddle method',
+            title: 'Grill the rice paper ‚Äî griddle method',
             description: 'Heat a flat griddle or wide non-stick pan over medium heat. Lightly oil the surface. Place the rice paper flat on the griddle for 20-30 seconds until it begins to soften and develop small bubbles. Crack an egg onto the center and spread quickly with the back of a spoon or a small brush to cover the surface thinly. Reduce heat to medium-low.',
             tip: 'The griddle must be hot enough to crisp the rice paper from below while the egg sets from above. Too cool: the rice paper stays soft. Too hot: the egg burns before the rice paper crisps.',
         },
         {
             title: 'Add toppings while egg is still wet',
             description: 'While the egg is still setting (surface looks wet but edges are beginning to firm), quickly scatter the soaked dried shrimp across the surface. Drizzle scallion oil generously over the egg. Add drops of chili sauce, mayonnaise if using, and a small amount of Maggi seasoning sauce. The toppings should be added while the egg is still wet enough to hold them in place as it finishes cooking.',
-            tip: 'Work fast ó once the egg is fully set, the toppings sit on top rather than being integrated. The ideal is toppings half-set into the egg surface.',
+            tip: 'Work fast ‚Äî once the egg is fully set, the toppings sit on top rather than being integrated. The ideal is toppings half-set into the egg surface.',
         },
         {
             title: 'Fold and serve',
-            description: 'When the egg is fully set and the bottom of the rice paper is crisp and beginning to show golden brown patches, fold the rice paper in half using a spatula or tongs ó toppings facing inward, crispy rice paper on the outside. The heat will finish pressing the toppings into the egg. Serve immediately on a small plate or wrapped in paper. Eat in two bites while still hot ó b·nh tr·ng tr?ng nu?ng exists only in the present tense.',
-            tip: 'The fold should be firm ó press the two halves together briefly so the egg interior bonds slightly. A loose fold means it falls apart on the first bite.',
+            description: 'When the egg is fully set and the bottom of the rice paper is crisp and beginning to show golden brown patches, fold the rice paper in half using a spatula or tongs ‚Äî toppings facing inward, crispy rice paper on the outside. The heat will finish pressing the toppings into the egg. Serve immediately on a small plate or wrapped in paper. Eat in two bites while still hot ‚Äî b√°nh tr√°ng tr·ª©ng n∆∞·ªõng exists only in the present tense.',
+            tip: 'The fold should be firm ‚Äî press the two halves together briefly so the egg interior bonds slightly. A loose fold means it falls apart on the first bite.',
         },
     ],
 };

@@ -3,24 +3,24 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-tre-nuong-muoi-ot',
-    title: 'C· TrÍ Nu?ng Mu?i ?t (Charcoal-Grilled Catfish with Chili Salt)',
-    subtitle: 'Whole catfish scored and coated in a lemongrass-chili-salt paste then grilled slowly over charcoal until the skin renders and crisps ó the fat dripping onto the coals and producing the flare-up smoke that perfumes the flesh, served with m?m nÍm or nu?c m?m g?ng and an abundance of fresh herbs.',
+    title: 'C√° Tr√™ N∆∞·ªõng Mu·ªëi ·ªöt (Charcoal-Grilled Catfish with Chili Salt)',
+    subtitle: 'Whole catfish scored and coated in a lemongrass-chili-salt paste then grilled slowly over charcoal until the skin renders and crisps ‚Äî the fat dripping onto the coals and producing the flare-up smoke that perfumes the flesh, served with m·∫Øm n√™m or n∆∞·ªõc m·∫Øm g·ª´ng and an abundance of fresh herbs.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ca-tre-nuong-muoi-ot.jpg',
-    intro: 'C· trÍ nu?ng mu?i ?t is the charcoal-grilled catfish preparation that appears at outdoor restaurants along the Mekong Delta canals, at riverside eating spots in the central provinces, and at the evening markets of C?n Tho, Vinh Long, and Ti?n Giang ó wherever a charcoal grill, a fresh catfish, and cold beer coincide. The preparation takes the same walking catfish of the kho t? and canh chua preparations and applies the direct heat of charcoal rather than the slow concentration of braising or the quick acidity of souring, producing a result that is as different from both as it could be: crispy, smoky, intensely flavored at the surface from the caramelized chili-salt paste, and retaining the specific juicy sweetness of catfish fat within the rendered skin. Catfish is specifically well-suited to charcoal grilling because of its high fat content relative to other freshwater fish ó the fat renders slowly over the moderate charcoal heat, self-basting the flesh from within and simultaneously dripping onto the coals to produce the brief flare-ups of smoke that perfume the skin without burning it. The lemongrass-chili paste applied before grilling caramelizes in three stages as the fish grills: first it dries from the charcoal heat, then it caramelizes as the surface temperature rises, then the fat from the fish skin renders through it and carries the caramelized paste flavor into the flesh itself. The result is a catfish where the skin is a concentration of all these elements simultaneously ó crispy, slightly charred, carrying the lemongrass-chili character, enriched by the rendered fat ó and the flesh beneath is sweet, moist, and carries the smoke from the coals. M?m nÍm ó the fermented anchovy paste of central and southern Vietnam ó is the traditional dipping sauce for grilled catfish, providing the pungent, complex fermented character that plays against the sweet, smoky fish in a way that nu?c ch?m does not.',
+    intro: 'C√° tr√™ n∆∞·ªõng mu·ªëi ·ªõt is the charcoal-grilled catfish preparation that appears at outdoor restaurants along the Mekong Delta canals, at riverside eating spots in the central provinces, and at the evening markets of C·∫ßn Th∆°, Vƒ©nh Long, and Ti·ªÅn Giang ‚Äî wherever a charcoal grill, a fresh catfish, and cold beer coincide. The preparation takes the same walking catfish of the kho t·ªô and canh chua preparations and applies the direct heat of charcoal rather than the slow concentration of braising or the quick acidity of souring, producing a result that is as different from both as it could be: crispy, smoky, intensely flavored at the surface from the caramelized chili-salt paste, and retaining the specific juicy sweetness of catfish fat within the rendered skin. Catfish is specifically well-suited to charcoal grilling because of its high fat content relative to other freshwater fish ‚Äî the fat renders slowly over the moderate charcoal heat, self-basting the flesh from within and simultaneously dripping onto the coals to produce the brief flare-ups of smoke that perfume the skin without burning it. The lemongrass-chili paste applied before grilling caramelizes in three stages as the fish grills: first it dries from the charcoal heat, then it caramelizes as the surface temperature rises, then the fat from the fish skin renders through it and carries the caramelized paste flavor into the flesh itself. The result is a catfish where the skin is a concentration of all these elements simultaneously ‚Äî crispy, slightly charred, carrying the lemongrass-chili character, enriched by the rendered fat ‚Äî and the flesh beneath is sweet, moist, and carries the smoke from the coals. M·∫Øm n√™m ‚Äî the fermented anchovy paste of central and southern Vietnam ‚Äî is the traditional dipping sauce for grilled catfish, providing the pungent, complex fermented character that plays against the sweet, smoky fish in a way that n∆∞·ªõc ch·∫•m does not.',
     ingredientSections: [
         {
             title: 'Catfish',
             items: [
-                { amount: 2, name: 'whole catfish (c· trÍ), 400-500g each', note: 'cleaned, heads left on. Score each side 4-5 times diagonally to the bone ó more deeply than for frying, as the scoring allows the paste to enter the flesh and the fat to render through the cuts.' },
+                { amount: 2, name: 'whole catfish (c√° tr√™), 400-500g each', note: 'cleaned, heads left on. Score each side 4-5 times diagonally to the bone ‚Äî more deeply than for frying, as the scoring allows the paste to enter the flesh and the fat to render through the cuts.' },
             ],
         },
         {
-            title: 'Mu?i ?t s? paste',
+            title: 'Mu·ªëi ·ªõt s·∫£ paste',
             items: [
                 { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, minced to paste' },
                 { amount: 5, name: 'garlic cloves', note: 'minced' },
@@ -35,10 +35,10 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'M?m nÍm dipping sauce',
+            title: 'M·∫Øm n√™m dipping sauce',
             items: [
-                { amount: 3, unit: 'tbsp', name: 'm?m nÍm (fermented anchovy paste)', note: 'the traditional dipping sauce for grilled catfish in southern Vietnam' },
-                { amount: 2, unit: 'tbsp', name: 'fresh pineapple juice or pineapple pieces', note: 'pounded ó thinned with pineapple rather than lime for m?m nÍm' },
+                { amount: 3, unit: 'tbsp', name: 'm·∫Øm n√™m (fermented anchovy paste)', note: 'the traditional dipping sauce for grilled catfish in southern Vietnam' },
+                { amount: 2, unit: 'tbsp', name: 'fresh pineapple juice or pineapple pieces', note: 'pounded ‚Äî thinned with pineapple rather than lime for m·∫Øm n√™m' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'bird\'s eye chili', note: 'minced' },
@@ -49,42 +49,42 @@ const recipe: RecipeData = {
             title: 'Fresh herb plate',
             items: [
                 { amount: 1, name: 'large bunch lettuce leaves', note: 'for wrapping' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
                 { amount: 1, name: 'bunch mint' },
-                { amount: 1, name: 'bunch perilla (tÌa tÙ)' },
-                { amount: 1, name: 'bunch Vietnamese balm (rau kinh gi?i)' },
+                { amount: 1, name: 'bunch perilla (t√≠a t√¥)' },
+                { amount: 1, name: 'bunch Vietnamese balm (rau kinh gi·ªõi)' },
                 { amount: 1, name: 'cucumber', note: 'sliced' },
-                { amount: 1, name: 'green banana or star fruit, sliced', note: 'optional ó the sourness contrasts with the fatty fish' },
+                { amount: 1, name: 'green banana or star fruit, sliced', note: 'optional ‚Äî the sourness contrasts with the fatty fish' },
                 { amount: 2, name: 'extra limes' },
-                { amount: 16, name: 'rice paper sheets (b·nh tr·ng)', note: 'for rolling ó served alongside the herb plate' },
+                { amount: 16, name: 'rice paper sheets (b√°nh tr√°ng)', note: 'for rolling ‚Äî served alongside the herb plate' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Score deeply and apply the paste ó overnight if possible',
+            title: 'Score deeply and apply the paste ‚Äî overnight if possible',
             description: 'Score each catfish 4-5 times on each side, cutting all the way to the central bone. Combine all paste ingredients until uniform. Apply the paste firmly into every score, over every surface, inside the body cavity, and around the head. The paste must enter the score lines to flavor the flesh and allow the fat to render through the cuts during grilling. Marinate minimum 1 hour at room temperature, or overnight refrigerated for the best result.',
-            tip: 'The overnight marination for c· trÍ nu?ng mu?i ?t produces a noticeably deeper-flavored result than the minimum 1-hour marination. The lemongrass paste has 8-12 hours to soften the fish surface proteins and penetrate through the score lines to the flesh beneath. This depth of marinade penetration is visible when the fish is sliced ó the flesh near the score lines is golden-tinted from the turmeric and seasoned throughout.',
+            tip: 'The overnight marination for c√° tr√™ n∆∞·ªõng mu·ªëi ·ªõt produces a noticeably deeper-flavored result than the minimum 1-hour marination. The lemongrass paste has 8-12 hours to soften the fish surface proteins and penetrate through the score lines to the flesh beneath. This depth of marinade penetration is visible when the fish is sliced ‚Äî the flesh near the score lines is golden-tinted from the turmeric and seasoned throughout.',
         },
         {
-            title: 'Prepare m?m nÍm sauce',
-            description: 'Combine m?m nÍm with pineapple juice or pounded pineapple pieces, sugar, garlic, and chili. Add warm water to reach a thick but pourable dipping consistency. M?m nÍm is traditionally thinned with pineapple rather than lime ó the pineapple\'s sweetness balances the intense fermented paste character in a way that lime\'s sharp acidity does not. The finished sauce should be fragrant, pungent, slightly sweet, and complex ó not merely salty.',
-            tip: 'M?m nÍm for grilled catfish is served at a less diluted concentration than for other preparations ó the fatty, smoky catfish can carry the intensity of the fermented paste that would overwhelm a lighter protein. If new to m?m nÍm, start with the dipping sauce at half the given quantity and dilute with additional pineapple juice to tolerance.',
+            title: 'Prepare m·∫Øm n√™m sauce',
+            description: 'Combine m·∫Øm n√™m with pineapple juice or pounded pineapple pieces, sugar, garlic, and chili. Add warm water to reach a thick but pourable dipping consistency. M·∫Øm n√™m is traditionally thinned with pineapple rather than lime ‚Äî the pineapple\'s sweetness balances the intense fermented paste character in a way that lime\'s sharp acidity does not. The finished sauce should be fragrant, pungent, slightly sweet, and complex ‚Äî not merely salty.',
+            tip: 'M·∫Øm n√™m for grilled catfish is served at a less diluted concentration than for other preparations ‚Äî the fatty, smoky catfish can carry the intensity of the fermented paste that would overwhelm a lighter protein. If new to m·∫Øm n√™m, start with the dipping sauce at half the given quantity and dilute with additional pineapple juice to tolerance.',
         },
         {
             title: 'Build a two-zone charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over. For catfish specifically, create a two-zone fire: one side with a thick coal bed for direct heat, one side with fewer coals for indirect heat. Catfish fat renders aggressively and produces sustained flare-ups ó the indirect zone allows you to move the fish when flare-ups become too intense. The total grilling time for a 400-500g catfish is 25-30 minutes, requiring sustained moderate heat throughout.',
-            tip: 'Catfish produces more flare-ups during grilling than almost any other freshwater fish because of its high fat content. A two-zone fire is essential ó not optional. A catfish grilled entirely over direct high heat will char on the exterior before the fat has fully rendered and the flesh has cooked through.',
+            description: 'Light hardwood charcoal and wait until fully ashed over. For catfish specifically, create a two-zone fire: one side with a thick coal bed for direct heat, one side with fewer coals for indirect heat. Catfish fat renders aggressively and produces sustained flare-ups ‚Äî the indirect zone allows you to move the fish when flare-ups become too intense. The total grilling time for a 400-500g catfish is 25-30 minutes, requiring sustained moderate heat throughout.',
+            tip: 'Catfish produces more flare-ups during grilling than almost any other freshwater fish because of its high fat content. A two-zone fire is essential ‚Äî not optional. A catfish grilled entirely over direct high heat will char on the exterior before the fat has fully rendered and the flesh has cooked through.',
         },
         {
-            title: 'Grill with patience ó 25-30 minutes total',
-            description: 'Place the catfish directly on the grill grate. Grill over the moderate zone for 10-12 minutes without moving ó the paste needs time to adhere and begin caramelizing before the fish can be turned. Flip carefully using two spatulas or a fish-grilling basket. Grill the second side for 10-12 minutes. Move to the direct heat zone for the final 5-6 minutes on each side to char the paste and crisp the skin. The fish is done when a chopstick passes through the thickest score without resistance.',
-            tip: 'The patience required for c· trÍ nu?ng mu?i ?t ó 25-30 minutes of careful monitoring rather than the quick grill of a lean fish ó reflects the catfish fat content. Lean fish cooks fast over high heat; fatty fish needs moderate heat over a longer time to render the fat and produce crispy skin rather than flabby, unrendered skin.',
+            title: 'Grill with patience ‚Äî 25-30 minutes total',
+            description: 'Place the catfish directly on the grill grate. Grill over the moderate zone for 10-12 minutes without moving ‚Äî the paste needs time to adhere and begin caramelizing before the fish can be turned. Flip carefully using two spatulas or a fish-grilling basket. Grill the second side for 10-12 minutes. Move to the direct heat zone for the final 5-6 minutes on each side to char the paste and crisp the skin. The fish is done when a chopstick passes through the thickest score without resistance.',
+            tip: 'The patience required for c√° tr√™ n∆∞·ªõng mu·ªëi ·ªõt ‚Äî 25-30 minutes of careful monitoring rather than the quick grill of a lean fish ‚Äî reflects the catfish fat content. Lean fish cooks fast over high heat; fatty fish needs moderate heat over a longer time to render the fat and produce crispy skin rather than flabby, unrendered skin.',
         },
         {
             title: 'Serve whole with the herb plate',
-            description: 'Bring the grilled catfish to the table whole. The skin should be deeply caramelized, slightly charred in patches from the direct heat phase, and the lemongrass-chili paste visible as a darker crust over the golden turmeric base. Serve alongside the full herb plate, rice paper, m?m nÍm sauce, and sliced cucumber. To eat: pull flesh from the bone with chopsticks, wrap in rice paper with herbs and cucumber, dip in m?m nÍm. The combination of the smoky charcoal catfish, the fresh herbs, the slightly astringent rice paper, and the pungent m?m nÍm is the complete Mekong Delta catfish experience.',
-            tip: 'The full herb plate alongside c· trÍ nu?ng mu?i ?t ó five or six different herbs, cucumber, and optionally green banana or star fruit ó is not excessive. The fatty, smoky catfish needs the full range of herb freshness and astringency to eat comfortably through a whole fish. Vietnamese cooks understand that the amount of fresh herb served alongside a fatty grilled protein is in direct proportion to the fat content of that protein.',
+            description: 'Bring the grilled catfish to the table whole. The skin should be deeply caramelized, slightly charred in patches from the direct heat phase, and the lemongrass-chili paste visible as a darker crust over the golden turmeric base. Serve alongside the full herb plate, rice paper, m·∫Øm n√™m sauce, and sliced cucumber. To eat: pull flesh from the bone with chopsticks, wrap in rice paper with herbs and cucumber, dip in m·∫Øm n√™m. The combination of the smoky charcoal catfish, the fresh herbs, the slightly astringent rice paper, and the pungent m·∫Øm n√™m is the complete Mekong Delta catfish experience.',
+            tip: 'The full herb plate alongside c√° tr√™ n∆∞·ªõng mu·ªëi ·ªõt ‚Äî five or six different herbs, cucumber, and optionally green banana or star fruit ‚Äî is not excessive. The fatty, smoky catfish needs the full range of herb freshness and astringency to eat comfortably through a whole fish. Vietnamese cooks understand that the amount of fresh herb served alongside a fatty grilled protein is in direct proportion to the fat content of that protein.',
         },
     ],
 };

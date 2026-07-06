@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'sup-mang-ga',
     title: 'Chicken Bamboo Shoot Soup (Sup Mang Ga)',
-    subtitle: 'Clear, aromatic chicken soup with bamboo shoots — light, comforting, and deeply Vietnamese.',
+    subtitle: 'Clear, aromatic chicken soup with bamboo shoots â€” light, comforting, and deeply Vietnamese.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '90 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/sup-mang-ga.jpg',
 
-    intro: `Súp mang cua is a traditional Vietnamese soup made with tender chicken, bamboo shoots, and a clear, naturally sweet broth.
+    intro: `SÃºp mÄƒng cua is a traditional Vietnamese soup made with tender chicken, bamboo shoots, and a clear, naturally sweet broth.
 
 This dish is often served during family meals or special occasions. The key is a clean broth, fragrant aromatics, and properly prepared bamboo shoots that are soft but still slightly crunchy.`,
 
@@ -59,7 +59,7 @@ This dish is often served during family meals or special occasions. The key is a
         },
         {
             title: 'Simmer broth',
-            description: 'Simmer chicken with ginger, charred shallots, and spring onions for 60–75 minutes.',
+            description: 'Simmer chicken with ginger, charred shallots, and spring onions for 60â€“75 minutes.',
             tip: 'Keep heat low to maintain a clear, sweet broth.',
         },
         {
@@ -73,7 +73,7 @@ This dish is often served during family meals or special occasions. The key is a
         },
         {
             title: 'Combine',
-            description: 'Add bamboo shoots into the broth and simmer for another 10–15 minutes.',
+            description: 'Add bamboo shoots into the broth and simmer for another 10â€“15 minutes.',
         },
         {
             title: 'Serve',

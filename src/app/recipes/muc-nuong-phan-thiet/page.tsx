@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'muc-nuong-phan-thiet',
     title: 'Phan Thiet Grilled Squid',
-    subtitle: 'Muc nuong Phan Thiet — fresh squid charred over coconut husks, brushed with fish sauce caramel, served with green chilli salt.',
+    subtitle: 'Muc nuong Phan Thiet â€” fresh squid charred over coconut husks, brushed with fish sauce caramel, served with green chilli salt.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/muc-nuong-phan-thiet.jpg',
-    intro: 'In Phan Thiet, fishermen come back at dawn and grill the morning catch right on the beach — squid scored on a board, brushed with fish sauce caramel, and laid on a metal grate over smouldering coconut husks. The husks burn slowly and impart a faint sweet smoke that gas can never replicate. Within four minutes the tentacles curl, the body blisters, and the coastal town wakes up to that smell. There is no marinade, no preparation, almost no recipe. There is the squid, the salt, the smoke, and the sea two metres away.',
+    intro: 'In Phan Thiet, fishermen come back at dawn and grill the morning catch right on the beach â€” squid scored on a board, brushed with fish sauce caramel, and laid on a metal grate over smouldering coconut husks. The husks burn slowly and impart a faint sweet smoke that gas can never replicate. Within four minutes the tentacles curl, the body blisters, and the coastal town wakes up to that smell. There is no marinade, no preparation, almost no recipe. There is the squid, the salt, the smoke, and the sea two metres away.',
     ingredientSections: [
         {
             title: 'The squid',
@@ -54,7 +54,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Clean the squid properly',
-            description: 'Rub squid with salt and rice vinegar, then rinse aggressively under cold running water until all slime and dark pigment is gone. Pat completely dry with paper towel. The squid must be bone dry — wet squid steams instead of grilling.',
+            description: 'Rub squid with salt and rice vinegar, then rinse aggressively under cold running water until all slime and dark pigment is gone. Pat completely dry with paper towel. The squid must be bone dry â€” wet squid steams instead of grilling.',
             tip: 'The thin purple skin can stay on. It darkens beautifully on the grill and adds flavour.',
         },
         {
@@ -63,7 +63,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Build the fish sauce caramel',
-            description: 'In a small saucepan, melt palm sugar with 2 tbsp water over medium heat until it turns the colour of dark amber, about 4 minutes — do not stir, only swirl. Off heat, add fish sauce carefully (it will bubble violently), oil, garlic and pepper. Whisk until smooth. The glaze should be glossy and pourable.',
+            description: 'In a small saucepan, melt palm sugar with 2 tbsp water over medium heat until it turns the colour of dark amber, about 4 minutes â€” do not stir, only swirl. Off heat, add fish sauce carefully (it will bubble violently), oil, garlic and pepper. Whisk until smooth. The glaze should be glossy and pourable.',
             tip: 'Past dark amber the caramel turns bitter in seconds. Pull it the moment it smells of toffee.',
         },
         {
@@ -73,7 +73,7 @@ const recipe: RecipeData = {
         {
             title: 'Grill over hot coals',
             description: 'Get the charcoal screaming hot and lightly grey. Brush squid with caramel glaze and lay on the grate scored-side down. Grill 90 seconds per side, brushing with more glaze each time you flip. The body should curl slightly, the tentacles should plump up, the surface should turn deep mahogany with charred edges.',
-            tip: 'Coconut husks are traditional but charcoal works fine. Avoid gas — the smoke is half the dish.',
+            tip: 'Coconut husks are traditional but charcoal works fine. Avoid gas â€” the smoke is half the dish.',
         },
         {
             title: 'Slice and serve immediately',

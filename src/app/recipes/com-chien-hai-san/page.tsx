@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'com-chien-hai-san',
     title: 'Vietnamese Seafood Fried Rice (Com Chien Hai San)',
-    subtitle: 'Wok-tossed fried rice with seafood, egg, and aromatic garlic ó smoky, fluffy, and full of umami.',
+    subtitle: 'Wok-tossed fried rice with seafood, egg, and aromatic garlic ‚Äî smoky, fluffy, and full of umami.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/com-chien-hai-san.jpg',
 
-    intro: `Com chiÍn h?i s?n is a classic Vietnamese wok dish combining fluffy fried rice with fresh seafood, eggs, and aromatic garlic.
-The secret lies in high heat and fast tossing ó each grain of rice is coated in oil, slightly toasted, and infused with seafood umami. Shrimp, squid, and scallions bring freshness, while soy sauce and fish sauce add depth.
-Itís quick, simple, but when done right ó it tastes like a street-side wok exploding with flavor.`,
+    intro: `C∆°m chi√™n h·∫£i s·∫£n is a classic Vietnamese wok dish combining fluffy fried rice with fresh seafood, eggs, and aromatic garlic.
+The secret lies in high heat and fast tossing ‚Äî each grain of rice is coated in oil, slightly toasted, and infused with seafood umami. Shrimp, squid, and scallions bring freshness, while soy sauce and fish sauce add depth.
+It‚Äôs quick, simple, but when done right ‚Äî it tastes like a street-side wok exploding with flavor.`,
 
     ingredientSections: [
         {
@@ -55,8 +55,8 @@ Itís quick, simple, but when done right ó it tastes like a street-side wok explo
         },
         {
             title: 'Fry the rice',
-            description: 'Add garlic and sautÈ until fragrant. Add rice and stir-fry over high heat until grains are separated and slightly toasted.',
-            tip: 'High heat is essential ó it creates the smoky ìwok heiî flavor.',
+            description: 'Add garlic and saut√© until fragrant. Add rice and stir-fry over high heat until grains are separated and slightly toasted.',
+            tip: 'High heat is essential ‚Äî it creates the smoky ‚Äúwok hei‚Äù flavor.',
         },
         {
             title: 'Season and combine',

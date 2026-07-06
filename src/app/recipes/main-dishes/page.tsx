@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * FlavorNest Vietnam � Main Dishes Page
+ * FlavorNest Vietnam — Main Dishes Page
  * src/app/recipes/main-dishes/page.tsx
  */
 
@@ -12,7 +12,7 @@ import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useFavorites } from '@/hooks/useFavorites'
 
-// --- TYPE ---------------------------------------------------------------------
+// ─── TYPE ─────────────────────────────────────────────────────────────────────
 interface Recipe {
     slug: string
     title: string
@@ -30,7 +30,7 @@ interface Recipe {
     tags: string[]
 }
 
-// --- Data ---------------------------------------------------------------------
+// ─── Data ─────────────────────────────────────────────────────────────────────
 const RECIPES: Recipe[] = [
     {
         slug: 'thit-kho-tau',
@@ -49,47 +49,47 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/ca-kho-to.jpg',
         region: 'Southern', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 198, cal: 320, tag: 'Southern Icon', tagColor: '#059669',
-        description: "Thick catfish fillets arrive still bubbling, coated in a near-black caramel that smells of burnt sugar, ginger and chilli. Layered with fish sauce, pork fat and cracked pepper, then braised slowly in an earthenware pot until the sauce clings like varnish. The pot keeps sizzling at the table � one sniff and no one waits politely for rice.",
+        description: "Thick catfish fillets arrive still bubbling, coated in a near-black caramel that smells of burnt sugar, ginger and chilli. Layered with fish sauce, pork fat and cracked pepper, then braised slowly in an earthenware pot until the sauce clings like varnish. The pot keeps sizzling at the table — one sniff and no one waits politely for rice.",
         tags: ['Fish', 'Caramel', 'Clay Pot', 'Spicy'],
     },
     {
         slug: 'bo-luc-lac',
         title: 'Shaking Beef',
-        subtitle: 'B� l�c l?c',
+        subtitle: 'Bò lúc lắc',
         image: '/images/recipes/bo-luc-lac.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.9', reviews: 276, cal: 420, tag: 'Restaurant Favourite', tagColor: '#7C3AED',
-        description: "Cubes of tender beef hit a screaming-hot wok with butter, garlic and oyster sauce, caramelising in seconds while the cook 'shakes' the pan to toss them. The crust is deep and glossy; the centre stays blushing pink. Served on peppery watercress with a lime-salt-pepper dip � the Saigon steakhouse classic French colonists left behind.",
+        description: "Cubes of tender beef hit a screaming-hot wok with butter, garlic and oyster sauce, caramelising in seconds while the cook 'shakes' the pan to toss them. The crust is deep and glossy; the centre stays blushing pink. Served on peppery watercress with a lime-salt-pepper dip — the Saigon steakhouse classic French colonists left behind.",
         tags: ['Beef', 'Wok', 'Quick', 'French-Inspired'],
     },
     {
         slug: 'ga-kho-gung',
         title: 'Ginger Braised Chicken',
-        subtitle: 'G� kho g?ng',
+        subtitle: 'Gà kho gừng',
         image: '/images/recipes/ga-kho-gung.jpg',
         region: 'Northern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 143, cal: 360, tag: 'Weeknight Hero', tagColor: '#EA580C',
-        description: "Bone-in chicken thighs simmer in fish sauce, palm sugar and a generous fistful of julienned young ginger until the sauce reduces to a sticky, fragrant glaze. The ginger turns sweet and mellow, the skin burnished mahogany. A weeknight staple in every Northern household � cheap, fast, and the kind of dish that makes plain rice feel like home.",
+        description: "Bone-in chicken thighs simmer in fish sauce, palm sugar and a generous fistful of julienned young ginger until the sauce reduces to a sticky, fragrant glaze. The ginger turns sweet and mellow, the skin burnished mahogany. A weeknight staple in every Northern household — cheap, fast, and the kind of dish that makes plain rice feel like home.",
         tags: ['Chicken', 'Ginger', 'Quick', 'Family'],
     },
     {
         slug: 'suon-nuong-sa',
         title: 'Lemongrass Pork Ribs',
-        subtitle: 'Su?n nu?ng s?',
+        subtitle: 'Sườn nướng sả',
         image: '/images/recipes/suon-nuong-sa.jpg',
         region: 'Southern', difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 167, cal: 510, tag: 'Grill Night', tagColor: '#D97706',
-        description: "Ribs marinate overnight in crushed lemongrass, garlic, fish sauce and a whisper of honey, then meet glowing charcoal until the edges char and the fat renders into smoke. Each bite is sweet, smoky and citrus-bright, with that unmistakable Saigon street-corner perfume. Serve with broken rice, pickled carrots and a fried egg � com t?m, the city's favourite dinner.",
+        description: "Ribs marinate overnight in crushed lemongrass, garlic, fish sauce and a whisper of honey, then meet glowing charcoal until the edges char and the fat renders into smoke. Each bite is sweet, smoky and citrus-bright, with that unmistakable Saigon street-corner perfume. Serve with broken rice, pickled carrots and a fried egg — cơm tấm, the city's favourite dinner.",
         tags: ['Pork', 'Grilled', 'Lemongrass', 'BBQ'],
     },
     {
         slug: 'ca-chien-sot-ca',
         title: 'Crispy Fish in Tomato Sauce',
-        subtitle: 'C� chi�n s?t c�',
+        subtitle: 'Cá chiên sốt cà',
         image: '/images/recipes/ca-chien-sot-ca.jpg',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.6', reviews: 112, cal: 340, tag: 'Northern Home Cook', tagColor: '#0284C7',
-        description: "A whole pan-fried fish, skin shattering-crisp, bathes in a vibrant tomato sauce loud with scallions and dill. The crunch of the crust against the tangy sauce is pure Hanoi home cooking � unfussy, balanced, endlessly comforting. It's the dish every Northern mother makes when she wants to show love without saying anything at all.",
+        description: "A whole pan-fried fish, skin shattering-crisp, bathes in a vibrant tomato sauce loud with scallions and dill. The crunch of the crust against the tangy sauce is pure Hanoi home cooking — unfussy, balanced, endlessly comforting. It's the dish every Northern mother makes when she wants to show love without saying anything at all.",
         tags: ['Fish', 'Tomato', 'Crispy', 'Quick'],
     },
     {
@@ -109,7 +109,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bo-nuong-la-lot.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 134, cal: 380, tag: 'Party Dish', tagColor: '#BE185D',
-        description: "Seasoned ground beef � perfumed with lemongrass, garlic and a hint of five-spice � wrapped snugly in glossy betel leaves, then grilled until the leaves blister and release their peppery, smoky aroma. One of Vietnam's great party dishes, eaten in rice paper rolls with herbs, pickles and nu?c ch?m, fingers sticky, beer cold, everyone talking at once.",
+        description: "Seasoned ground beef — perfumed with lemongrass, garlic and a hint of five-spice — wrapped snugly in glossy betel leaves, then grilled until the leaves blister and release their peppery, smoky aroma. One of Vietnam's great party dishes, eaten in rice paper rolls with herbs, pickles and nước chấm, fingers sticky, beer cold, everyone talking at once.",
         tags: ['Beef', 'Grilled', 'Herbs', 'Wraps'],
     },
     {
@@ -119,13 +119,13 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/cha-ca-la-vong.jpg',
         region: 'Northern', difficulty: 'Medium', time: '40 min',
         rating: '4.9', reviews: 221, cal: 350, tag: "Hanoi's Best", tagColor: '#D97706',
-        description: "Arguably Hanoi's greatest dish. Snakehead fillets marinate in turmeric and galangal-fermented shrimp paste, then finish sizzling tableside in a pan of dill and spring onion so abundant it looks like a green bouquet. Eaten with rice vermicelli, roasted peanuts, fresh herbs and m?m t�m � a ritual invented on Ch? C� Street and jealously guarded for 150 years.",
+        description: "Arguably Hanoi's greatest dish. Snakehead fillets marinate in turmeric and galangal-fermented shrimp paste, then finish sizzling tableside in a pan of dill and spring onion so abundant it looks like a green bouquet. Eaten with rice vermicelli, roasted peanuts, fresh herbs and mắm tôm — a ritual invented on Chả Cá Street and jealously guarded for 150 years.",
         tags: ['Fish', 'Turmeric', 'Dill', 'Heritage'],
     },
     {
         slug: 'bun-rieu',
         title: 'Crab & Tomato Noodle Soup',
-        subtitle: 'B�n Ri�u',
+        subtitle: 'Bún Riêu',
         image: '/images/recipes/bun-rieu.jpg',
         region: 'Northern', difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.8', reviews: 187, cal: 410, tag: 'Market Classic', tagColor: '#DC2626',
@@ -135,77 +135,77 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-canh-cua',
         title: 'Thick Tapioca Noodles with Crab',
-        subtitle: 'B�nh Canh Cua',
+        subtitle: 'Bánh Canh Cua',
         image: '/images/recipes/banh-canh-cua.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1 hr',
         rating: '4.7', reviews: 156, cal: 480, tag: 'Saigon Street', tagColor: '#D97706',
-        description: "Fat, chewy tapioca-and-rice noodles suspended in a velvety orange broth thickened to a near-gravy with crab fat. Generous chunks of mud crab, quail eggs and pork knuckle bob at the surface, finished with cilantro and a crack of black pepper. Eaten with chopsticks and a spoon � slurping is mandatory, table manners optional.",
+        description: "Fat, chewy tapioca-and-rice noodles suspended in a velvety orange broth thickened to a near-gravy with crab fat. Generous chunks of mud crab, quail eggs and pork knuckle bob at the surface, finished with cilantro and a crack of black pepper. Eaten with chopsticks and a spoon — slurping is mandatory, table manners optional.",
         tags: ['Crab', 'Noodles', 'Rich', 'Saigon'],
     },
     {
         slug: 'canh-chua-ca',
         title: 'Southern Sour Fish Soup',
-        subtitle: 'Canh Chua C�',
+        subtitle: 'Canh Chua Cá',
         image: '/images/recipes/canh-chua-ca.jpg',
         region: 'Southern', difficulty: 'Easy', time: '40 min',
         rating: '4.8', reviews: 174, cal: 290, tag: 'Mekong Favourite', tagColor: '#059669',
-        description: "The Mekong Delta in a bowl � a bright, herbaceous broth soured with tamarind, sweetened with pineapple, and scattered with tomato wedges, okra and elephant-ear stems. Chunks of catfish simmer just until tender, then the whole thing is showered with rice paddy herb and fried garlic. Tart, sweet, savoury and fragrant in a single spoonful.",
+        description: "The Mekong Delta in a bowl — a bright, herbaceous broth soured with tamarind, sweetened with pineapple, and scattered with tomato wedges, okra and elephant-ear stems. Chunks of catfish simmer just until tender, then the whole thing is showered with rice paddy herb and fried garlic. Tart, sweet, savoury and fragrant in a single spoonful.",
         tags: ['Fish', 'Tamarind', 'Pineapple', 'Herbs'],
     },
     {
         slug: 'canh-kho-qua-nhoi-thit',
         title: 'Stuffed Bitter Melon Soup',
-        subtitle: 'Canh Kh? Qua Nh?i Th?t',
+        subtitle: 'Canh Khổ Qua Nhồi Thịt',
         image: '/images/recipes/canh-kho-qua-nhoi-thit.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1 hr',
         rating: '4.6', reviews: 128, cal: 260, tag: 'Lunar New Year', tagColor: '#7C3AED',
-        description: "Whole bitter melons hollowed out and stuffed with seasoned pork and wood ear mushrooms, then simmered in a clear pork broth until the skin turns jade-green and tender. The name kh? qua means 'bitterness passes' � eaten at T?t to leave the previous year's hardships behind. Bitter, savoury, unexpectedly comforting.",
-        tags: ['Pork', 'Bitter Melon', 'T?t', 'Soup'],
+        description: "Whole bitter melons hollowed out and stuffed with seasoned pork and wood ear mushrooms, then simmered in a clear pork broth until the skin turns jade-green and tender. The name khổ qua means 'bitterness passes' — eaten at Tết to leave the previous year's hardships behind. Bitter, savoury, unexpectedly comforting.",
+        tags: ['Pork', 'Bitter Melon', 'Tết', 'Soup'],
     },
     {
         slug: 'canh-rau-ngot-thit-bam',
         title: 'Sweet Leaf Soup with Minced Pork',
-        subtitle: 'Canh Rau Ng�t Th?t Bam',
+        subtitle: 'Canh Rau Ngót Thịt Băm',
         image: '/images/recipes/canh-rau-ngot-thit-bam.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 156, cal: 140, tag: 'Daily Staple', tagColor: '#059669',
-        description: "A clear, jade-green broth where bruised sweet leaves release their slightly nutty, almost sweet flavour into lightly seasoned pork stock. The minced pork forms tender flecks throughout. Every Northern household has this soup on the table at least twice a week � cooling in summer, nourishing year-round, ready in the time it takes to cook a pot of rice.",
+        description: "A clear, jade-green broth where bruised sweet leaves release their slightly nutty, almost sweet flavour into lightly seasoned pork stock. The minced pork forms tender flecks throughout. Every Northern household has this soup on the table at least twice a week — cooling in summer, nourishing year-round, ready in the time it takes to cook a pot of rice.",
         tags: ['Vegetables', 'Pork', 'Light', 'Quick'],
     },
     {
         slug: 'rau-muong-xao-toi',
         title: 'Stir-Fried Water Spinach with Garlic',
-        subtitle: 'Rau Mu?ng X�o T?i',
+        subtitle: 'Rau Muống Xào Tỏi',
         image: '/images/recipes/rau-muong-xao-toi.jpg',
         region: 'Northern', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 203, cal: 120, tag: 'Everyday Green', tagColor: '#059669',
-        description: "Water spinach hits a screaming wok with smashed garlic, a splash of fish sauce and nothing else � cooked so fast the stems stay crunchy and the leaves barely wilt. The national green vegetable of Vietnam, served at every family meal from Hanoi to the Mekong. Ten minutes, three ingredients, impossible to get tired of.",
+        description: "Water spinach hits a screaming wok with smashed garlic, a splash of fish sauce and nothing else — cooked so fast the stems stay crunchy and the leaves barely wilt. The national green vegetable of Vietnam, served at every family meal from Hanoi to the Mekong. Ten minutes, three ingredients, impossible to get tired of.",
         tags: ['Vegan', 'Garlic', 'Quick', '3-Ingredient'],
     },
     {
         slug: 'trung-chien',
         title: 'Vietnamese Fried Egg Omelette',
-        subtitle: 'Tr?ng Chi�n',
+        subtitle: 'Trứng Chiên',
         image: '/images/recipes/trung-chien.jpg',
         region: 'Southern', difficulty: 'Easy', time: '10 min',
         rating: '4.6', reviews: 142, cal: 220, tag: 'Home Cook', tagColor: '#D97706',
-        description: "Eggs beaten with a splash of fish sauce, a handful of spring onion and sometimes a spoonful of minced pork, fried in generous oil until the edges go lace-crisp and the centre stays just set. The unsung hero of Vietnamese home cooking � cheap, fast, and the dish every student learns to make when they leave home.",
+        description: "Eggs beaten with a splash of fish sauce, a handful of spring onion and sometimes a spoonful of minced pork, fried in generous oil until the edges go lace-crisp and the centre stays just set. The unsung hero of Vietnamese home cooking — cheap, fast, and the dish every student learns to make when they leave home.",
         tags: ['Eggs', 'Quick', 'Family', 'Budget'],
     },
     {
         slug: 'thit-rang-chay-canh',
         title: 'Caramelised Crispy Pork',
-        subtitle: 'Th?t Rang Ch�y C?nh',
+        subtitle: 'Thịt Rang Cháy Cạnh',
         image: '/images/recipes/thit-rang-chay-canh.jpg',
         region: 'Northern', difficulty: 'Easy', time: '35 min',
         rating: '4.8', reviews: 189, cal: 430, tag: 'Rice Killer', tagColor: '#EA580C',
-        description: "Cubes of pork belly slow-fried in their own fat until the edges turn mahogany-black and shatter-crisp, glazed with fish sauce caramel and finished with black pepper. The name means 'burnt edges' � and those burnt edges are the whole point. Eaten with steamed rice and nothing else needed, it disappears faster than any other dish on the table.",
+        description: "Cubes of pork belly slow-fried in their own fat until the edges turn mahogany-black and shatter-crisp, glazed with fish sauce caramel and finished with black pepper. The name means 'burnt edges' — and those burnt edges are the whole point. Eaten with steamed rice and nothing else needed, it disappears faster than any other dish on the table.",
         tags: ['Pork', 'Caramel', 'Crispy', 'Rice'],
     },
     {
         slug: 'ga-kho-sa-ot',
         title: 'Lemongrass Chilli Chicken',
-        subtitle: 'G� Kho S? ?t',
+        subtitle: 'Gà Kho Sả Ớt',
         image: '/images/recipes/ga-kho-sa-ot.jpg',
         region: 'Central', difficulty: 'Easy', time: '45 min',
         rating: '4.8', reviews: 167, cal: 390, tag: 'Central Fire', tagColor: '#DC2626',
@@ -215,7 +215,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-thit-bam',
         title: 'Clear Soup with Minced Pork',
-        subtitle: 'Canh Th?t Bam',
+        subtitle: 'Canh Thịt Băm',
         image: '/images/recipes/canh-thit-bam.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 min',
         rating: '4.5', reviews: 118, cal: 160, tag: 'Weeknight Basic', tagColor: '#0284C7',
@@ -225,7 +225,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-kho-hot-vit',
         title: 'Caramelised Pork Belly with Eggs',
-        subtitle: 'Th?t Kho H?t V?t',
+        subtitle: 'Thịt Kho Hột Vịt',
         image: '/images/recipes/thit-kho-hot-vit.jpg',
         region: 'Southern', difficulty: 'Medium', time: '90 min',
         rating: '4.9', reviews: 312, cal: 580, tag: 'Lunar New Year', tagColor: '#DC2626',
@@ -235,7 +235,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-rang-trung',
         title: 'Vietnamese Egg Fried Rice',
-        subtitle: 'Com Rang Tr?ng',
+        subtitle: 'Cơm Rang Trứng',
         image: '/images/recipes/com-rang-trung.jpg',
         region: 'Southern', difficulty: 'Easy', time: '15 min',
         rating: '4.6', reviews: 128, cal: 350, tag: 'Quick Meal', tagColor: '#059669',
@@ -245,7 +245,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-chien-hai-san',
         title: 'Seafood Fried Rice',
-        subtitle: 'Com Chi�n H?i S?n',
+        subtitle: 'Cơm Chiên Hải Sản',
         image: '/images/recipes/com-chien-hai-san.jpg',
         region: 'Central', difficulty: 'Medium', time: '25 min',
         rating: '4.8', reviews: 215, cal: 480, tag: 'Coastal Classic', tagColor: '#0284C7',
@@ -255,7 +255,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'trung-chien-thit',
         title: 'Minced Pork Omelette',
-        subtitle: 'Tr?ng Chi�n Th?t',
+        subtitle: 'Trứng Chiên Thịt',
         image: '/images/recipes/trung-chien-thit.jpg',
         region: 'Central', difficulty: 'Easy', time: '15 min',
         rating: '4.7', reviews: 184, cal: 310, tag: 'Home Cook', tagColor: '#D97706',
@@ -265,7 +265,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-chien-duong-chau',
         title: 'Yangzhou Fried Rice',
-        subtitle: 'Com Chi�n Duong Ch�u',
+        subtitle: 'Cơm Chiên Dương Châu',
         image: '/images/recipes/com-chien-duong-chau.jpg',
         region: 'Southern', difficulty: 'Medium', time: '30 min',
         rating: '4.9', reviews: 420, cal: 520, tag: 'Party Favorite', tagColor: '#B91C1C',
@@ -275,7 +275,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tom-rim-man-ngot',
         title: 'Caramelised Savory Shrimp',
-        subtitle: 'T�m Rim M?n Ng?t',
+        subtitle: 'Tôm Rim Mặn Ngọt',
         image: '/images/recipes/tom-rim-man-ngot.jpg',
         region: 'Southern', difficulty: 'Easy', time: '20 min',
         rating: '4.8', reviews: 156, cal: 280, tag: 'Rice Killer', tagColor: '#EA580C',
@@ -285,7 +285,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-beo-phu-yen',
         title: 'Water Fern Rice Cakes',
-        subtitle: 'B�nh B�o Ph� Y�n',
+        subtitle: 'Bánh Bèo Phú Yên',
         image: '/images/recipes/banh-beo-phu-yen.jpg',
         region: 'Central', difficulty: 'Hard', time: '60 min',
         rating: '4.9', reviews: 289, cal: 210, tag: 'Hue Specialty', tagColor: '#7C3AED',
@@ -295,7 +295,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-mi-cha-ca',
         title: 'Fish Cake Banh Mi',
-        subtitle: 'B�nh M� Ch? C�',
+        subtitle: 'Bánh Mì Chả Cá',
         image: '/images/recipes/banh-mi-cha-ca.jpg',
         region: 'Central', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 312, cal: 420, tag: 'Street Breakfast', tagColor: '#059669',
@@ -305,7 +305,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nem-nuong',
         title: 'Grilled Pork Sausage Skewers',
-        subtitle: 'Nem Nu?ng',
+        subtitle: 'Nem Nướng',
         image: '/images/recipes/nem-nuong.jpg',
         region: 'Central', difficulty: 'Medium', time: '45 min',
         rating: '4.9', reviews: 245, cal: 380, tag: 'Nha Trang Style', tagColor: '#7C3AED',
@@ -315,7 +315,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-nuong-xien',
         title: 'Street Style Pork Skewers',
-        subtitle: 'Th?t Nu?ng Xi�n',
+        subtitle: 'Thịt Nướng Xiên',
         image: '/images/recipes/thit-nuong-xien.jpg',
         region: 'Northern', difficulty: 'Easy', time: '30 min',
         rating: '4.8', reviews: 189, cal: 320, tag: 'Street Snack', tagColor: '#059669',
@@ -325,7 +325,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ga-nuong-mat-ong',
         title: 'Honey Glazed Grilled Chicken',
-        subtitle: 'G� Nu?ng M?t Ong',
+        subtitle: 'Gà Nướng Mật Ong',
         image: '/images/recipes/ga-nuong-mat-ong.jpg',
         region: 'Southern', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 156, cal: 450, tag: 'Family Dinner', tagColor: '#D97706',
@@ -335,7 +335,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ga-nuong-muoi-ot',
         title: 'Chili Salt Grilled Chicken',
-        subtitle: 'G� Nu?ng Mu?i ?t',
+        subtitle: 'Gà Nướng Muối Ớt',
         image: '/images/recipes/ga-nuong-muoi-ot.jpg',
         region: 'Southern', difficulty: 'Medium', time: '50 min',
         rating: '4.9', reviews: 212, cal: 410, tag: 'Spicy Kick', tagColor: '#DC2626',
@@ -345,7 +345,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'vit-quay',
         title: 'Vietnamese Roasted Duck',
-        subtitle: 'V?t Quay',
+        subtitle: 'Vịt Quay',
         image: '/images/recipes/vit-quay.jpg',
         region: 'Northern', difficulty: 'Hard', time: '120 min',
         rating: '4.9', reviews: 342, cal: 620, tag: 'Festive Roast', tagColor: '#B91C1C',
@@ -365,7 +365,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-nuong-trui',
         title: 'Straw-Roasted Snakehead Fish',
-        subtitle: 'C� Nu?ng Trui',
+        subtitle: 'Cá Nướng Trui',
         image: '/images/recipes/ca-nuong-trui.jpg',
         region: 'Southern', difficulty: 'Medium', time: '40 min',
         rating: '4.8', reviews: 167, cal: 290, tag: 'Mekong Rustic', tagColor: '#059669',
@@ -375,7 +375,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-nuong-giay-bac',
         title: 'Foil-Wrapped Grilled Fish',
-        subtitle: 'C� Nu?ng Gi?y B?c',
+        subtitle: 'Cá Nướng Giấy Bạc',
         image: '/images/recipes/ca-nuong-giay-bac.jpg',
         region: 'Central', difficulty: 'Easy', time: '35 min',
         rating: '4.7', reviews: 134, cal: 310, tag: 'Seafood Feast', tagColor: '#0284C7',
@@ -385,7 +385,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'muc-nuong-sa-te',
         title: 'Spicy Sate Grilled Squid',
-        subtitle: 'M?c Nu?ng Sa T?',
+        subtitle: 'Mực Nướng Sa Tế',
         image: '/images/recipes/muc-nuong-sa-te.jpg',
         region: 'Central', difficulty: 'Easy', time: '20 min',
         rating: '4.8', reviews: 198, cal: 260, tag: 'Beach BBQ', tagColor: '#DC2626',
@@ -395,7 +395,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-tam-suon-bi-cha',
         title: 'Broken Rice with Grilled Pork & Egg Meatloaf',
-        subtitle: 'Com T?m Su?n B� Ch?',
+        subtitle: 'Cơm Tấm Sườn Bì Chả',
         image: '/images/recipes/com-tam-suon-bi-cha.jpg',
         region: 'Southern', difficulty: 'Medium', time: '60 min',
         rating: '4.9', reviews: 856, cal: 650, tag: 'Saigon Signature', tagColor: '#B91C1C',
@@ -405,7 +405,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-ga-hoi-an',
         title: 'Hoi An Chicken Rice',
-        subtitle: 'Com G� H?i An',
+        subtitle: 'Cơm Gà Hội An',
         image: '/images/recipes/com-ga-hoi-an.jpg',
         region: 'Central', difficulty: 'Medium', time: '50 min',
         rating: '4.8', reviews: 412, cal: 520, tag: 'Ancient Town Flavor', tagColor: '#D97706',
@@ -425,7 +425,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bun-cha-gio',
         title: 'Rice Vermicelli with Spring Rolls',
-        subtitle: 'B�n Ch? Gi�',
+        subtitle: 'Bún Chả Giò',
         image: '/images/recipes/bun-cha-gio.jpg',
         region: 'Southern', difficulty: 'Medium', time: '40 min',
         rating: '4.7', reviews: 342, cal: 480, tag: 'Quick Lunch', tagColor: '#059669',
@@ -435,7 +435,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ga-xao-sa-ot',
         title: 'Lemongrass & Chili Stir-fry Chicken',
-        subtitle: 'G� X�o S? ?t',
+        subtitle: 'Gà Xào Sả Ớt',
         image: '/images/recipes/ga-xao-sa-ot.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 min',
         rating: '4.6', reviews: 189, cal: 320, tag: 'Rice Killer', tagColor: '#D97706',
@@ -445,27 +445,27 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-hoi-chao-long',
         title: 'Woven Rice Vermicelli with Pork Congee',
-        subtitle: 'B�nh H?i Ch�o L�ng',
+        subtitle: 'Bánh Hỏi Cháo Lòng',
         image: '/images/recipes/banh-hoi-chao-long.jpg',
         region: 'Central', difficulty: 'Hard', time: '2.5 hrs',
         rating: '4.9', reviews: 94, cal: 460, tag: 'Phu Yen Pride', tagColor: '#0284C7',
-        description: "The dawn breakfast of Ph� Y�n � feather-light woven mats of rice vermicelli served alongside a bowl of silky pork congee studded with offal, fresh herbs and a crack of black pepper. The vermicelli arrives painted with scallion oil; the congee carries the depth of bones simmered since 4am. Eaten together, never apart.",
+        description: "The dawn breakfast of Phú Yên — feather-light woven mats of rice vermicelli served alongside a bowl of silky pork congee studded with offal, fresh herbs and a crack of black pepper. The vermicelli arrives painted with scallion oil; the congee carries the depth of bones simmered since 4am. Eaten together, never apart.",
         tags: ['Pork', 'Rice', 'Congee', 'Hometown'],
     },
     {
         slug: 'ga-chien-nuoc-mam',
         title: 'Crispy Chicken Glazed in Fish Sauce Caramel',
-        subtitle: 'G� Chi�n Nu?c M?m',
+        subtitle: 'Gà Chiên Nước Mắm',
         image: '/images/recipes/ga-chien-nuoc-mam.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 mins',
         rating: '4.8', reviews: 121, cal: 520, tag: 'Street Food Legend', tagColor: '#F59E0B',
-        description: "Golden chicken pieces fried until their skin crackles like autumn leaves, then tossed in a bubbling glaze of fish sauce, garlic, sugar, and chili. The sauce clings like lacquer � salty, sweet, and slightly smoky � turning every bite into a street-side symphony. Best eaten hot, with steamed rice or sticky fingers as the only utensils required.",
+        description: "Golden chicken pieces fried until their skin crackles like autumn leaves, then tossed in a bubbling glaze of fish sauce, garlic, sugar, and chili. The sauce clings like lacquer — salty, sweet, and slightly smoky — turning every bite into a street-side symphony. Best eaten hot, with steamed rice or sticky fingers as the only utensils required.",
         tags: ['Chicken', 'Street Food', 'Fried', 'Savory Sweet'],
     },
     {
         slug: 'bun-mang-ga',
         title: 'Chicken Bamboo Shoot Vermicelli Soup',
-        subtitle: 'B�n Mang G�',
+        subtitle: 'Bún Măng Gà',
         image: '/images/recipes/bun-mang-ga.jpg',
         region: 'Northern', difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.7', reviews: 88, cal: 410, tag: 'Comfort Bowl', tagColor: '#10B981',
@@ -475,7 +475,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-ga-hai-nam',
         title: 'Hainanese Chicken Rice',
-        subtitle: 'Com G� H?i Nam',
+        subtitle: 'Cơm Gà Hải Nam',
         image: '/images/recipes/com-ga-hai-nam.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.9', reviews: 156, cal: 590, tag: 'Iconic Classic', tagColor: '#EF4444',
@@ -485,17 +485,17 @@ const RECIPES: Recipe[] = [
     {
         slug: 'mo-hanh',
         title: 'Scallion Oil Drizzle',
-        subtitle: 'M? H�nh',
+        subtitle: 'Mỡ Hành',
         image: '/images/recipes/mo-hanh.jpg',
         region: 'Southern', difficulty: 'Easy', time: '10 mins',
         rating: '4.6', reviews: 74, cal: 120, tag: 'Simple Magic', tagColor: '#22C55E',
-        description: "A shimmering green-gold oil infused with sizzling scallions and a pinch of salt, poured over grilled meats, rice, or noodles. The hot oil wakes up the aroma instantly � fragrant, savory, and almost hypnotic � turning even the simplest dish into something alive.",
+        description: "A shimmering green-gold oil infused with sizzling scallions and a pinch of salt, poured over grilled meats, rice, or noodles. The hot oil wakes up the aroma instantly — fragrant, savory, and almost hypnotic — turning even the simplest dish into something alive.",
         tags: ['Scallion', 'Oil', 'Condiment', 'Essential'],
     },
     {
         slug: 'suon-rim-trung-cut',
         title: 'Caramel Braised Pork Ribs with Quail Eggs',
-        subtitle: 'Su?n Rim Tr?ng C�t',
+        subtitle: 'Sườn Rim Trứng Cút',
         image: '/images/recipes/suon-rim-trung-cut.jpg',
         region: 'Southern', difficulty: 'Medium', time: '1 hr',
         rating: '4.8', reviews: 132, cal: 610, tag: 'Home Comfort', tagColor: '#F97316',
@@ -505,7 +505,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'sup-mang-cua',
         title: 'Crab Bamboo Shoot Soup',
-        subtitle: 'S�p Mang Cua',
+        subtitle: 'Súp Măng Cua',
         image: '/images/recipes/sup-mang-cua.jpg',
         region: 'Central', difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.7', reviews: 96, cal: 320, tag: 'Light Elegance', tagColor: '#06B6D4',
@@ -515,17 +515,17 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-trung-ca-chua',
         title: 'Tomato Egg Drop Soup',
-        subtitle: 'Canh Tr?ng C� Chua',
+        subtitle: 'Canh Trứng Cà Chua',
         image: '/images/recipes/canh-trung-ca-chua.jpg',
         region: 'Northern', difficulty: 'Easy', time: '20 mins',
         rating: '4.5', reviews: 61, cal: 180, tag: 'Simple Warmth', tagColor: '#EF4444',
-        description: "A humble, comforting soup where ripe tomatoes melt into a light broth, carrying soft ribbons of scrambled egg that float like silk clouds. Sweet, sour, and gentle � a bowl that tastes like home in its simplest form.",
+        description: "A humble, comforting soup where ripe tomatoes melt into a light broth, carrying soft ribbons of scrambled egg that float like silk clouds. Sweet, sour, and gentle — a bowl that tastes like home in its simplest form.",
         tags: ['Egg', 'Tomato', 'Soup', 'Quick'],
     },
     {
         slug: 'kho-qua-xao-trung',
         title: 'Stir-Fried Bitter Melon with Eggs',
-        subtitle: 'Kh? Qua X�o Tr?ng',
+        subtitle: 'Khổ Qua Xào Trứng',
         image: '/images/recipes/kho-qua-xao-trung.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 mins',
         rating: '4.4', reviews: 58, cal: 210, tag: 'Bitter Balance', tagColor: '#22C55E',
@@ -535,7 +535,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-bo-xao-bap-cai-ca-rot',
         title: 'Stir-Fried Beef with Cabbage & Carrot',
-        subtitle: 'Th?t B� X�o B?p C?i C� R?t',
+        subtitle: 'Thịt Bò Xào Bắp Cải Cà Rốt',
         image: '/images/recipes/thit-bo-xao-bap-cai-ca-rot.jpg',
         region: 'Northern', difficulty: 'Easy', time: '25 mins',
         rating: '4.6', reviews: 72, cal: 340, tag: 'Quick Stir-Fry', tagColor: '#F59E0B',
@@ -545,7 +545,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'pho-xao-bo',
         title: 'Stir-Fried Beef Pho Noodles',
-        subtitle: 'Ph? X�o B�',
+        subtitle: 'Phở Xào Bò',
         image: '/images/recipes/pho-xao-bo.jpg',
         region: 'Northern', difficulty: 'Medium', time: '30 mins',
         rating: '4.7', reviews: 118, cal: 520, tag: 'Wok Noodles', tagColor: '#3B82F6',
@@ -555,17 +555,17 @@ const RECIPES: Recipe[] = [
     {
         slug: 'bo-tai-chanh',
         title: 'Vietnamese Lime Cured Beef',
-        subtitle: 'B� T�i Chanh',
+        subtitle: 'Bò Tái Chanh',
         image: '/images/recipes/bo-tai-chanh.jpg',
         region: 'Northern', difficulty: 'Medium', time: '40 mins',
         rating: '4.7', reviews: 91, cal: 280, tag: 'Fresh & Tangy', tagColor: '#10B981',
-        description: "Thinly sliced beef lightly �cooked� by lime juice, mixed with onions, herbs, peanuts, and a hint of chili. Fresh, tangy, and slightly raw in spirit � a refreshing dish that wakes up the palate.",
+        description: "Thinly sliced beef lightly ‘cooked’ by lime juice, mixed with onions, herbs, peanuts, and a hint of chili. Fresh, tangy, and slightly raw in spirit — a refreshing dish that wakes up the palate.",
         tags: ['Beef', 'Lime', 'Fresh', 'Salad'],
     },
     {
         slug: 'bun-bo-xao',
         title: 'Stir-Fried Beef Vermicelli',
-        subtitle: 'B�n B� X�o',
+        subtitle: 'Bún Bò Xào',
         image: '/images/recipes/bun-bo-xao.jpg',
         region: 'Southern', difficulty: 'Medium', time: '30 mins',
         rating: '4.6', reviews: 85, cal: 480, tag: 'Wok Fresh', tagColor: '#F59E0B',
@@ -575,7 +575,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'pho-duoi-bo',
         title: 'Beef Oxtail Pho',
-        subtitle: 'Ph? �u�i B�',
+        subtitle: 'Phở Đuôi Bò',
         image: '/images/recipes/pho-duoi-bo.jpg',
         region: 'Northern', difficulty: 'Hard', time: '4 hrs',
         rating: '4.9', reviews: 189, cal: 650, tag: 'Slow Simmer Soul', tagColor: '#F97316',
@@ -585,7 +585,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'pho-xao-thit-heo',
         title: 'Stir-Fried Rice Noodles with Pork',
-        subtitle: 'B�nh Ph? X�o Th?t Heo',
+        subtitle: 'Bánh Phở Xào Thịt Heo',
         image: '/images/recipes/pho-xao-thit-heo.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 mins',
         rating: '4.5', reviews: 66, cal: 430, tag: 'Quick Wok Bowl', tagColor: '#F59E0B',
@@ -595,7 +595,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-bau-thit-vien',
         title: 'Bottle Gourd Meatball Soup',
-        subtitle: 'Canh B?u Th?t Vi�n',
+        subtitle: 'Canh Bầu Thịt Viên',
         image: '/images/recipes/canh-bau-thit-vien.jpg',
         region: 'Southern', difficulty: 'Easy', time: '30 mins',
         rating: '4.6', reviews: 59, cal: 220, tag: 'Light Comfort', tagColor: '#22C55E',
@@ -605,7 +605,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-cai-chua-suon',
         title: 'Sour Mustard Greens Soup with Pork Ribs',
-        subtitle: 'Canh C?i Chua Su?n',
+        subtitle: 'Canh Cải Chua Sườn',
         image: '/images/recipes/canh-cai-chua-suon.jpg',
         region: 'Northern', difficulty: 'Medium', time: '1 hr',
         rating: '4.7', reviews: 91, cal: 310, tag: 'Tangy Warmth', tagColor: '#06B6D4',
@@ -615,7 +615,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'thit-rim-tom',
         title: 'Caramel Pork & Shrimp Simmer',
-        subtitle: 'Th?t Rim T�m',
+        subtitle: 'Thịt Rim Tôm',
         image: '/images/recipes/thit-rim-tom.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 mins',
         rating: '4.7', reviews: 82, cal: 520, tag: 'Sea & Land', tagColor: '#F97316',
@@ -625,7 +625,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-khoai-mo',
         title: 'Purple Yam Soup',
-        subtitle: 'Canh Khoai M?',
+        subtitle: 'Canh Khoai Mỡ',
         image: '/images/recipes/canh-khoai-mo.jpg',
         region: 'Southern', difficulty: 'Easy', time: '35 mins',
         rating: '4.6', reviews: 63, cal: 260, tag: 'Velvet Soup', tagColor: '#8B5CF6',
@@ -635,7 +635,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'com-chien-cua',
         title: 'Crab Fried Rice',
-        subtitle: 'Com Chi�n Cua',
+        subtitle: 'Cơm Chiên Cua',
         image: '/images/recipes/com-chien-cua.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 mins',
         rating: '4.8', reviews: 110, cal: 640, tag: 'Golden Wok Rice', tagColor: '#F59E0B',
@@ -645,7 +645,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-su-su-tom',
         title: 'Chayote & Shrimp Soup',
-        subtitle: 'Canh Su Su N?u T�m',
+        subtitle: 'Canh Su Su Nấu Tôm',
         image: '/images/recipes/canh-su-su-tom.jpg',
         region: 'Southern', difficulty: 'Easy', time: '30 mins',
         rating: '4.6', reviews: 57, cal: 210, tag: 'Clear Freshness', tagColor: '#22C55E',
@@ -655,7 +655,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'muc-xao',
         title: 'Stir-Fried Squid with Vegetables',
-        subtitle: 'M?c X�o',
+        subtitle: 'Mực Xào',
         image: '/images/recipes/muc-xao.jpg',
         region: 'Southern', difficulty: 'Medium', time: '20 mins',
         rating: '4.5', reviews: 68, cal: 300, tag: 'Ocean Wok', tagColor: '#06B6D4',
@@ -665,7 +665,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'chao-tom',
         title: 'Sugarcane Shrimp Paste',
-        subtitle: 'Ch?o T�m',
+        subtitle: 'Chạo Tôm',
         image: '/images/recipes/chao-tom.jpg',
         region: 'Central', difficulty: 'Hard', time: '1.5 hrs',
         rating: '4.9', reviews: 140, cal: 480, tag: 'Hue Royal Taste', tagColor: '#EF4444',
@@ -675,31 +675,31 @@ const RECIPES: Recipe[] = [
     {
         slug: 'canh-chua-ca-loc',
         title: 'Snakehead Fish Sweet & Sour Soup',
-        subtitle: 'Canh Chua C� L�c',
+        subtitle: 'Canh Chua Cá Lóc',
         image: '/images/recipes/canh-chua-ca-loc.jpg',
         region: 'Southern', difficulty: 'Medium', time: '45 mins',
         rating: '4.8', reviews: 128, cal: 310, tag: 'River Classic', tagColor: '#06B6D4',
-        description: "A signature Southern Vietnamese soup made with tender snakehead fish simmered in tamarind broth. Pineapple, tomatoes, okra, bean sprouts, and herbs create a lively balance of sour, sweet, and savory notes � like a full Mekong river in one bowl.",
+        description: "A signature Southern Vietnamese soup made with tender snakehead fish simmered in tamarind broth. Pineapple, tomatoes, okra, bean sprouts, and herbs create a lively balance of sour, sweet, and savory notes — like a full Mekong river in one bowl.",
         tags: ['Fish', 'Soup', 'Tamarind', 'Herbs'],
     },
     {
         slug: 'canh-bi-do-thit-bam',
         title: 'Pumpkin Soup with Minced Pork',
-        subtitle: 'Canh B� �? N?u Th?t B?m',
+        subtitle: 'Canh Bí Đỏ Nấu Thịt Bằm',
         image: '/images/recipes/canh-bi-do-thit-bam.jpg',
         region: 'Southern', difficulty: 'Easy', time: '30 mins',
         rating: '4.6', reviews: 78, cal: 240, tag: 'Soft Comfort', tagColor: '#F97316',
-        description: "A naturally sweet pumpkin soup simmered with minced pork, creating a silky, slightly creamy broth. The pumpkin melts gently into the soup while the pork adds savory depth � a soft, nourishing bowl perfect for everyday meals.",
+        description: "A naturally sweet pumpkin soup simmered with minced pork, creating a silky, slightly creamy broth. The pumpkin melts gently into the soup while the pork adds savory depth — a soft, nourishing bowl perfect for everyday meals.",
         tags: ['Pumpkin', 'Pork', 'Soup', 'Comfort'],
     },
     {
         slug: 'canh-muop-tom-kho',
         title: 'Loofah Soup with Dried Shrimp',
-        subtitle: 'Canh Mu?p T�m Kh�',
+        subtitle: 'Canh Mướp Tôm Khô',
         image: '/images/recipes/canh-muop-tom-kho.jpg',
         region: 'Southern', difficulty: 'Easy', time: '25 mins',
         rating: '4.5', reviews: 64, cal: 190, tag: 'Light Umami', tagColor: '#22C55E',
-        description: "Fresh loofah slices cooked in a clear broth with dried shrimp, releasing a subtle ocean sweetness. The soup is light, refreshing, and naturally aromatic � a simple dish that highlights pure ingredient flavors.",
+        description: "Fresh loofah slices cooked in a clear broth with dried shrimp, releasing a subtle ocean sweetness. The soup is light, refreshing, and naturally aromatic — a simple dish that highlights pure ingredient flavors.",
         tags: ['Loofah', 'Shrimp', 'Soup', 'Light'],
     },
 ]
@@ -708,7 +708,7 @@ const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
 const LS_KEY = 'fn_favorites'
 
-// --- Helpers ------------------------------------------------------------------
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 function loadFavSlugs(): Set<string> {
     try {
         const raw = localStorage.getItem(LS_KEY)
@@ -741,7 +741,7 @@ function saveFav(recipe: Recipe, add: boolean) {
     } catch { }
 }
 
-// --- Heart Button -------------------------------------------------------------
+// ─── Heart Button ─────────────────────────────────────────────────────────────
 function HeartBtn({ recipe }: { recipe: Recipe }) {
     const { toggle, isFavorite, mounted } = useFavorites()
     const liked = mounted && isFavorite(recipe.slug)
@@ -773,7 +773,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                         initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}
                     >
-                        {toast === 'added' ? '? Saved' : '? Removed'}
+                        {toast === 'added' ? '♥ Saved' : '✕ Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -789,7 +789,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
     )
 }
 
-// --- Page ---------------------------------------------------------------------
+// ─── Page ─────────────────────────────────────────────────────────────────────
 export default function MainDishesPage() {
     const [diff, setDiff] = useState('All')
     const [page, setPage] = useState(1);
@@ -826,7 +826,7 @@ export default function MainDishesPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
             `}</style>
 
-            {/* -- HERO -- */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', paddingTop: 120, paddingBottom: 72, padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -834,7 +834,7 @@ export default function MainDishesPage() {
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Main Dishes', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>�</span>}
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
                                 {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
@@ -870,7 +870,7 @@ export default function MainDishesPage() {
                             margin: 0,
                             paddingLeft: 18,
                         }}>
-                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>slow-braised clay pots</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>fiery wok dishes</span> � these are the recipes that define the Vietnamese dining table. Passed down through generations, perfected by time.
+                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>slow-braised clay pots</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>fiery wok dishes</span> — these are the recipes that define the Vietnamese dining table. Passed down through generations, perfected by time.
                         </p>
                     </div>
 
@@ -892,7 +892,7 @@ export default function MainDishesPage() {
                 </div>
             </section>
 
-            {/* -- FILTER BAR -- */}
+            {/* ── FILTER BAR ── */}
             <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
@@ -904,7 +904,7 @@ export default function MainDishesPage() {
                 </div>
             </div>
 
-            {/* -- GRID -- */}
+            {/* ── GRID ── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`}
@@ -914,14 +914,14 @@ export default function MainDishesPage() {
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     {/* Image */}
                                     <div className="md-card-img" style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} � ${recipe.subtitle} Vietnamese recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
+                                        <Image src={recipe.image} alt={`${recipe.title} — ${recipe.subtitle} Vietnamese recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
 
                                         {/* Tag */}
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
 
                                         {/* Time */}
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>? {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
 
                                         {/* Difficulty */}
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
@@ -959,7 +959,7 @@ export default function MainDishesPage() {
                             disabled={page === 1}
                             style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === 1 ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === 1 ? 'default' : 'pointer', fontFamily: 'inherit' }}
                         >
-                            ? Prev
+                            ← Prev
                         </button>
                         {Array.from({ length: Math.ceil(filtered.length / PER_PAGE) }, (_, i) => i + 1).map(n => (
                             <button
@@ -975,20 +975,20 @@ export default function MainDishesPage() {
                             disabled={page === Math.ceil(filtered.length / PER_PAGE)}
                             style={{ padding: '8px 20px', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 100, background: 'transparent', color: page === Math.ceil(filtered.length / PER_PAGE) ? 'rgba(75,46,26,0.25)' : '#4B2E1A', fontSize: 13, fontWeight: 500, cursor: page === Math.ceil(filtered.length / PER_PAGE) ? 'default' : 'pointer', fontFamily: 'inherit' }}
                         >
-                            Next ?
+                            Next →
                         </button>
                     </div>
                     </div>
                 )}
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
-                        <div style={{ fontSize: 44, marginBottom: 12 }}>??</div>
+                        <div style={{ fontSize: 44, marginBottom: 12 }}>🍖</div>
                         <p style={{ fontSize: 16, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>No recipes match this filter.</p>
                     </div>
                 )}
             </section>
 
-            {/* -- OTHER CATEGORIES -- */}
+            {/* ── OTHER CATEGORIES ── */}
             <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>
@@ -1019,4 +1019,4 @@ export default function MainDishesPage() {
         </main>
     )
 }
-'s? d?ng kh�ch h�ng'
+'sử dụng khách hàng'

@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'thit-rang-chay-canh',
     title: 'Caramelised Crispy Pork',
     subtitle:
-        'Th?t Rang Cháy C?nh — pork belly cubes slow-fried in their own fat until the edges turn mahogany-black and shatter-crisp, glazed in fish sauce caramel.',
+        'Thá»‹t Rang ChÃ¡y Cáº¡nh â€” pork belly cubes slow-fried in their own fat until the edges turn mahogany-black and shatter-crisp, glazed in fish sauce caramel.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '35 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/thit-rang-chay-canh.jpg',
     intro:
-        'Cháy c?nh means "burnt edges," and the burnt edges are the whole reason this dish exists. Pork belly is simmered briefly, then slow-fried in its own rendered fat until the cubes shrink, crack, and develop a mahogany-black crust that shatters under a chopstick. Served with white rice and a bowl of hot clear soup — no vegetable needed, no apology offered.',
+        'ChÃ¡y cáº¡nh means "burnt edges," and the burnt edges are the whole reason this dish exists. Pork belly is simmered briefly, then slow-fried in its own rendered fat until the cubes shrink, crack, and develop a mahogany-black crust that shatters under a chopstick. Served with white rice and a bowl of hot clear soup â€” no vegetable needed, no apology offered.',
     ingredientSections: [
         {
             title: 'Pork',
@@ -46,7 +46,7 @@ const recipe: RecipeData = {
         {
             title: 'Par-boil the pork',
             description: 'Blanch the pork belly cubes in salted boiling water for about 8 minutes. This firms up the meat and removes impurities. Drain the pork and use paper towels to pat each piece completely dry before frying.',
-            tip: 'Wet pork will not crisp; it will steam instead. Dry the meat twice—once right after draining and again just before it hits the wok—to ensure a golden, crunchy exterior.',
+            tip: 'Wet pork will not crisp; it will steam instead. Dry the meat twiceâ€”once right after draining and again just before it hits the wokâ€”to ensure a golden, crunchy exterior.',
         },
         {
             title: 'Render the fat',

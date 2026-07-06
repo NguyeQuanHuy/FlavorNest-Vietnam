@@ -3,23 +3,23 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-coc',
-    title: 'G?i CÛc (Vietnamese Hog Plum Salad)',
-    subtitle: 'Thinly sliced cÛc ó the sour green hog plum ó tossed with dried shrimp, roasted peanuts, chili, and a sweet-sour fish sauce dressing. The most aggressively sour salad in Vietnamese street food, and the one with the most devoted following.',
+    title: 'G·ªèi C√≥c (Vietnamese Hog Plum Salad)',
+    subtitle: 'Thinly sliced c√≥c ‚Äî the sour green hog plum ‚Äî tossed with dried shrimp, roasted peanuts, chili, and a sweet-sour fish sauce dressing. The most aggressively sour salad in Vietnamese street food, and the one with the most devoted following.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '20 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-coc.jpg',
-    intro: `G?i cÛc is the Vietnamese street snack built around cÛc ó Spondias mombin, the hog plum, a small green tropical fruit with an extraordinarily assertive sourness that functions more like a seasoning than a fruit. In southern Vietnam, particularly in Saigon and the Mekong Delta, cÛc is sold at every market and by street vendors who carry baskets of the small green fruits and slice them to order. The preparation is immediate: the cÛc is sliced, shaken in a bag with chili salt, dried shrimp, crushed peanuts, and a few drops of fish sauce, and handed over in the bag. The diner eats from the bag with a small fork, standing at the market, squinting slightly from the sourness. G?i cÛc is the Vietnamese snack that most reliably produces an immediate physical response ó the saliva gland activation from the sourness is almost instantaneous. It is not subtle food. It is the food of hot afternoons and school gates and markets and exactly the kind of direct, uncomplicated pleasure that Vietnamese street food delivers most reliably. Outside Vietnam, cÛc can sometimes be found at Vietnamese or Southeast Asian grocers. If unavailable, green mango is the closest substitute ó different flavor but similar sour-crunchy character.`,
+    intro: `G·ªèi c√≥c is the Vietnamese street snack built around c√≥c ‚Äî Spondias mombin, the hog plum, a small green tropical fruit with an extraordinarily assertive sourness that functions more like a seasoning than a fruit. In southern Vietnam, particularly in Saigon and the Mekong Delta, c√≥c is sold at every market and by street vendors who carry baskets of the small green fruits and slice them to order. The preparation is immediate: the c√≥c is sliced, shaken in a bag with chili salt, dried shrimp, crushed peanuts, and a few drops of fish sauce, and handed over in the bag. The diner eats from the bag with a small fork, standing at the market, squinting slightly from the sourness. G·ªèi c√≥c is the Vietnamese snack that most reliably produces an immediate physical response ‚Äî the saliva gland activation from the sourness is almost instantaneous. It is not subtle food. It is the food of hot afternoons and school gates and markets and exactly the kind of direct, uncomplicated pleasure that Vietnamese street food delivers most reliably. Outside Vietnam, c√≥c can sometimes be found at Vietnamese or Southeast Asian grocers. If unavailable, green mango is the closest substitute ‚Äî different flavor but similar sour-crunchy character.`,
     ingredientSections: [
         {
             title: 'Main',
             items: [
-                { amount: 500, unit: 'g', name: 'fresh cÛc (hog plum / Spondias mombin)', note: 'firm, unripe, bright green. Available at Vietnamese grocers. If unavailable: substitute with very sour green mango or green apple ó the flavor differs but the technique is the same.' },
-                { amount: 40, unit: 'g', name: 'dried shrimp (tÙm khÙ)', note: 'small, soaked 10 minutes in warm water, drained and squeezed dry' },
+                { amount: 500, unit: 'g', name: 'fresh c√≥c (hog plum / Spondias mombin)', note: 'firm, unripe, bright green. Available at Vietnamese grocers. If unavailable: substitute with very sour green mango or green apple ‚Äî the flavor differs but the technique is the same.' },
+                { amount: 40, unit: 'g', name: 'dried shrimp (t√¥m kh√¥)', note: 'small, soaked 10 minutes in warm water, drained and squeezed dry' },
                 { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed' },
-                { amount: 3, name: 'bird\'s eye chilies', note: 'thinly sliced ó g?i cÛc should be spicy' },
+                { amount: 3, name: 'bird\'s eye chilies', note: 'thinly sliced ‚Äî g·ªèi c√≥c should be spicy' },
                 { amount: 3, unit: 'tbsp', name: 'crispy fried shallots' },
             ],
         },
@@ -27,14 +27,14 @@ const recipe: RecipeData = {
             title: 'Dressing',
             items: [
                 { amount: 2, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 1, unit: 'tbsp', name: 'sugar', note: 'less sugar than other g?i ó the cÛc sourness should remain dominant' },
-                { amount: 1, unit: 'tbsp', name: 'fresh lime juice', note: 'adjust ó cÛc is already very sour, may need less lime than usual' },
+                { amount: 1, unit: 'tbsp', name: 'sugar', note: 'less sugar than other g·ªèi ‚Äî the c√≥c sourness should remain dominant' },
+                { amount: 1, unit: 'tbsp', name: 'fresh lime juice', note: 'adjust ‚Äî c√≥c is already very sour, may need less lime than usual' },
                 { amount: 1, unit: 'tbsp', name: 'water' },
                 { amount: 2, name: 'garlic cloves, minced' },
             ],
         },
         {
-            title: 'Chili salt (mu?i ?t)',
+            title: 'Chili salt (mu·ªëi ·ªõt)',
             items: [
                 { amount: 1, unit: 'tsp', name: 'sea salt' },
                 { amount: 2, name: 'bird\'s eye chilies, minced' },
@@ -45,7 +45,7 @@ const recipe: RecipeData = {
         {
             title: 'Herbs and garnish',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)', note: 'leaves only' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
                 { amount: 2, name: 'extra limes for serving' },
             ],
@@ -53,29 +53,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Prepare the cÛc',
-            description: 'Wash the cÛc. Using a sharp knife or mandoline, slice each fruit into thin rounds or wedges ó about 3-4mm thick. The seed inside is large relative to the fruit; slice around it. Some cÛc can be sliced pole-to-pole into thin wedges that include the flesh on both sides of the seed, discarding the seed. The flesh should be pale green-white and firm. Taste a piece ó the sourness should be immediate and strong. If it is mild, the cÛc is slightly overripe; it will still work but the salad will be less assertive.',
-            tip: 'The skin of cÛc is slightly waxy and edible ó do not peel. The texture contrast between the slightly resistant skin and the firm interior is part of the eating experience.',
+            title: 'Prepare the c√≥c',
+            description: 'Wash the c√≥c. Using a sharp knife or mandoline, slice each fruit into thin rounds or wedges ‚Äî about 3-4mm thick. The seed inside is large relative to the fruit; slice around it. Some c√≥c can be sliced pole-to-pole into thin wedges that include the flesh on both sides of the seed, discarding the seed. The flesh should be pale green-white and firm. Taste a piece ‚Äî the sourness should be immediate and strong. If it is mild, the c√≥c is slightly overripe; it will still work but the salad will be less assertive.',
+            tip: 'The skin of c√≥c is slightly waxy and edible ‚Äî do not peel. The texture contrast between the slightly resistant skin and the firm interior is part of the eating experience.',
         },
         {
             title: 'Make the chili salt',
-            description: 'Pound salt and minced chili together in a mortar until combined into a rough paste. Add sugar and a squeeze of lime juice. The chili salt is the traditional seasoning for cÛc eaten as a street snack ó applied directly to the sliced fruit or used as a dipping element. It concentrates the chili heat and salt into a paste that sticks to the fruit surface.',
-            tip: 'Chili salt applied directly to cÛc draws out moisture from the fruit through osmosis ó leave for 2 minutes and tiny droplets will appear on the cut surface. This is correct and adds to the juiciness.',
+            description: 'Pound salt and minced chili together in a mortar until combined into a rough paste. Add sugar and a squeeze of lime juice. The chili salt is the traditional seasoning for c√≥c eaten as a street snack ‚Äî applied directly to the sliced fruit or used as a dipping element. It concentrates the chili heat and salt into a paste that sticks to the fruit surface.',
+            tip: 'Chili salt applied directly to c√≥c draws out moisture from the fruit through osmosis ‚Äî leave for 2 minutes and tiny droplets will appear on the cut surface. This is correct and adds to the juiciness.',
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, sugar, lime juice, and water. Stir until sugar dissolves. Add minced garlic. Taste alongside a slice of cÛc ó the dressing should add savory depth and sweetness to balance the cÛc sourness without eliminating it. If the cÛc is extremely sour (which is correct), reduce the lime juice to a few drops only ó the fruit provides all the acidity needed.',
-            tip: 'G?i cÛc dressing is the least acidic of all Vietnamese salad dressings because the ingredient provides all the acid. Calibrate the dressing against the actual sourness of your specific cÛc.',
+            description: 'Combine fish sauce, sugar, lime juice, and water. Stir until sugar dissolves. Add minced garlic. Taste alongside a slice of c√≥c ‚Äî the dressing should add savory depth and sweetness to balance the c√≥c sourness without eliminating it. If the c√≥c is extremely sour (which is correct), reduce the lime juice to a few drops only ‚Äî the fruit provides all the acidity needed.',
+            tip: 'G·ªèi c√≥c dressing is the least acidic of all Vietnamese salad dressings because the ingredient provides all the acid. Calibrate the dressing against the actual sourness of your specific c√≥c.',
         },
         {
             title: 'Combine everything',
-            description: 'In a large bowl, combine sliced cÛc, soaked-and-dried shrimp, sliced chili, rau ram leaves, and spring onion. Pour the dressing over. Add a small amount of the chili salt paste. Toss to coat. Taste and adjust ó it should be bracingly sour, savory from the fish sauce, sweet from the sugar, hot from the chili, and fragrant from the rau ram.',
-            tip: 'The street food version is assembled in a plastic bag and shaken. At home in a bowl, toss gently and let the dressing coat the fruit for 2-3 minutes before serving ó the cÛc does not soften as fast as mango.',
+            description: 'In a large bowl, combine sliced c√≥c, soaked-and-dried shrimp, sliced chili, rau rƒÉm leaves, and spring onion. Pour the dressing over. Add a small amount of the chili salt paste. Toss to coat. Taste and adjust ‚Äî it should be bracingly sour, savory from the fish sauce, sweet from the sugar, hot from the chili, and fragrant from the rau rƒÉm.',
+            tip: 'The street food version is assembled in a plastic bag and shaken. At home in a bowl, toss gently and let the dressing coat the fruit for 2-3 minutes before serving ‚Äî the c√≥c does not soften as fast as mango.',
         },
         {
             title: 'Plate and serve',
-            description: 'Transfer to a plate. Top with crushed peanuts and fried shallots. Serve immediately. G?i cÛc is eaten as it is ó no crackers needed, no elaborate presentation. It is direct food: pick up a piece of cÛc with the dried shrimp and peanuts, eat, repeat. The sourness is the point. Serve with extra lime wedges and chili salt on the side for those who want more of either.',
-            tip: 'The experience of eating g?i cÛc for the first time ó the immediate, almost aggressive sourness that makes the salivary glands respond before the food is even chewed ó is one of the most distinctive sensory experiences in Vietnamese street food. Warn first-timers and watch their expression.',
+            description: 'Transfer to a plate. Top with crushed peanuts and fried shallots. Serve immediately. G·ªèi c√≥c is eaten as it is ‚Äî no crackers needed, no elaborate presentation. It is direct food: pick up a piece of c√≥c with the dried shrimp and peanuts, eat, repeat. The sourness is the point. Serve with extra lime wedges and chili salt on the side for those who want more of either.',
+            tip: 'The experience of eating g·ªèi c√≥c for the first time ‚Äî the immediate, almost aggressive sourness that makes the salivary glands respond before the food is even chewed ‚Äî is one of the most distinctive sensory experiences in Vietnamese street food. Warn first-timers and watch their expression.',
         },
     ],
 };

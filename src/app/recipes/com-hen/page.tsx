@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'com-hen',
     title: 'Baby Clam Rice',
-    subtitle: 'Hue\'s most beloved hidden dish — tiny river clams over cold rice with a complex cascade of toppings.',
+    subtitle: 'Hue\'s most beloved hidden dish â€” tiny river clams over cold rice with a complex cascade of toppings.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/com-hen.jpg',
-    intro: 'Com hen is eaten for breakfast in Hue, which tells you everything about the city. This is not simple morning food — it is a carefully composed dish of cold rice topped with stir-fried baby clams, shredded banana blossom, roasted peanuts, sesame seeds, crispy pork cracklings, fresh herbs, and a ladle of hot clam broth poured over at the table to warm everything through. The fermented shrimp paste (mam tom) stirred in at the end is optional but transformative. Nothing else in Vietnamese cuisine tastes quite like it.',
+    intro: 'Com hen is eaten for breakfast in Hue, which tells you everything about the city. This is not simple morning food â€” it is a carefully composed dish of cold rice topped with stir-fried baby clams, shredded banana blossom, roasted peanuts, sesame seeds, crispy pork cracklings, fresh herbs, and a ladle of hot clam broth poured over at the table to warm everything through. The fermented shrimp paste (mam tom) stirred in at the end is optional but transformative. Nothing else in Vietnamese cuisine tastes quite like it.',
     ingredientSections: [
         {
             title: 'Clams',
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
         {
             title: 'Cook and open the clams',
             description: 'Place clams in a pot with 300ml water and lemongrass. Bring to a boil over high heat, cover, and cook for 3 to 4 minutes until all clams open. Discard any that remain closed. Remove clam meat from shells and reserve the broth separately.',
-            tip: 'Baby clams cook fast. The moment they open is the moment to stop — overcooked clams become rubbery and lose their briny sweetness.',
+            tip: 'Baby clams cook fast. The moment they open is the moment to stop â€” overcooked clams become rubbery and lose their briny sweetness.',
         },
         {
             title: 'Stir-fry the clam meat',
@@ -63,7 +63,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Finish at the table',
-            description: 'Ladle hot clam broth over the bowl at the table — just enough to steam the herbs and warm the rice without making it soupy. Serve mam tom on the side for those who want it. Stir everything together before eating.',
+            description: 'Ladle hot clam broth over the bowl at the table â€” just enough to steam the herbs and warm the rice without making it soupy. Serve mam tom on the side for those who want it. Stir everything together before eating.',
         },
     ],
 };

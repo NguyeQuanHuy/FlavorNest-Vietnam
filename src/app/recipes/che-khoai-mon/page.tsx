@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'che-khoai-mon',
     title: 'Taro Sweet Soup (Che Khoai Mon)',
-    subtitle: 'Creamy taro dessert with coconut milk and soft tapioca pearls — rich, fragrant, and comforting.',
+    subtitle: 'Creamy taro dessert with coconut milk and soft tapioca pearls â€” rich, fragrant, and comforting.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '45 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/che-khoai-mon.jpg',
 
-    intro: `Chè khoai môn is a popular Vietnamese dessert made from taro, coconut milk, and tapioca pearls.
+    intro: `ChÃ¨ khoai mÃ´n is a popular Vietnamese dessert made from taro, coconut milk, and tapioca pearls.
 
 It has a naturally creamy texture from the taro, combined with the richness of coconut milk and the chewiness of pearls. This dessert can be served warm or cold, making it perfect for any season.`,
 
@@ -50,7 +50,7 @@ It has a naturally creamy texture from the taro, combined with the richness of c
         },
         {
             title: 'Simmer lightly',
-            description: 'Let everything simmer for 5–10 minutes so flavors blend together.',
+            description: 'Let everything simmer for 5â€“10 minutes so flavors blend together.',
         },
         {
             title: 'Serve',

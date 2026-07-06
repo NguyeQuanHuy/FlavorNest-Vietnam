@@ -3,55 +3,55 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-ca-mai-phu-yen',
-    title: 'G?i C· Mai Ph˙ YÍn (Ph˙ YÍn Silverfish Salad)',
-    subtitle: 'Tiny silverfish from the SÙng C?u bay cured for minutes in lime juice and m?m nhi until they turn from translucent silver to opaque white ó tossed with green mango, rau ram, roasted peanuts, and toasted sesame in the raw fish salad that Ph˙ YÍn fishermen eat immediately after the morning net comes in.',
+    title: 'G·ªèi C√° Mai Ph√∫ Y√™n (Ph√∫ Y√™n Silverfish Salad)',
+    subtitle: 'Tiny silverfish from the S√¥ng C·∫ßu bay cured for minutes in lime juice and m·∫Øm nhƒ© until they turn from translucent silver to opaque white ‚Äî tossed with green mango, rau rƒÉm, roasted peanuts, and toasted sesame in the raw fish salad that Ph√∫ Y√™n fishermen eat immediately after the morning net comes in.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/goi-ca-mai-phu-yen.jpg',
-    intro: `G?i c· mai is the raw silverfish salad of the Ph˙ YÍn coast ó a preparation built around c· mai, the tiny translucent silver fish (likely Anchoviella or Stolephorus species) caught in vast quantities in the protected waters of SÙng C?u bay and the coastal lagoons between Tuy HÚa and –?i L„nh. C· mai are small ó rarely longer than 5-6cm ó nearly transparent when alive, and so delicate that they begin to deteriorate within hours of leaving the water. This fragility is the quality that makes g?i c· mai what it is: the fish must be so fresh that it can be eaten raw, cured only by the lime juice and m?m nhi that the fishermen mix them with immediately after the morning catch. The curing takes 5-7 minutes ó longer than for the larger shrimp t·i preparations because the small fish need more time for the lime acid to penetrate the flesh ó and produces a fish that has gone from transparent silver to opaque white throughout, with a texture that is simultaneously firm (from the protein denaturation) and delicate (from the small size). The salad components in g?i c· mai are the classic Ph˙ YÍn raw seafood formula: green mango for sourness and crunch, rau ram in the generous Ph˙ YÍn quantity, roasted peanuts for fat and texture, toasted sesame for warmth, shallots soaked in ice water for mild allium bite. The m?m nhi in the curing and dressing makes this specifically Ph˙ YÍn ó the first-press fish sauce adds a depth to the raw fish preparation that the fish alone does not possess. G?i c· mai is eaten at SÙng C?u harbor restaurants in the late morning, at the tables closest to where the boats come in, where the fish arrive in the bowl having been in the water less than two hours earlier.`,
+    intro: `G·ªèi c√° mai is the raw silverfish salad of the Ph√∫ Y√™n coast ‚Äî a preparation built around c√° mai, the tiny translucent silver fish (likely Anchoviella or Stolephorus species) caught in vast quantities in the protected waters of S√¥ng C·∫ßu bay and the coastal lagoons between Tuy H√≤a and ƒê·∫°i L√£nh. C√° mai are small ‚Äî rarely longer than 5-6cm ‚Äî nearly transparent when alive, and so delicate that they begin to deteriorate within hours of leaving the water. This fragility is the quality that makes g·ªèi c√° mai what it is: the fish must be so fresh that it can be eaten raw, cured only by the lime juice and m·∫Øm nhƒ© that the fishermen mix them with immediately after the morning catch. The curing takes 5-7 minutes ‚Äî longer than for the larger shrimp t√°i preparations because the small fish need more time for the lime acid to penetrate the flesh ‚Äî and produces a fish that has gone from transparent silver to opaque white throughout, with a texture that is simultaneously firm (from the protein denaturation) and delicate (from the small size). The salad components in g·ªèi c√° mai are the classic Ph√∫ Y√™n raw seafood formula: green mango for sourness and crunch, rau rƒÉm in the generous Ph√∫ Y√™n quantity, roasted peanuts for fat and texture, toasted sesame for warmth, shallots soaked in ice water for mild allium bite. The m·∫Øm nhƒ© in the curing and dressing makes this specifically Ph√∫ Y√™n ‚Äî the first-press fish sauce adds a depth to the raw fish preparation that the fish alone does not possess. G·ªèi c√° mai is eaten at S√¥ng C·∫ßu harbor restaurants in the late morning, at the tables closest to where the boats come in, where the fish arrive in the bowl having been in the water less than two hours earlier.`,
     ingredientSections: [
         {
             title: 'Silverfish',
             items: [
-                { amount: 300, unit: 'g', name: 'fresh c· mai (silverfish / small anchovies)', note: 'must be same-day fresh ó near-transparent, silver-white, smelling only of clean sea. Available at Ph˙ YÍn and coastal Vietnamese markets. If unavailable: very fresh small sardines, whitebait, or small anchovies cleaned and filleted.' },
+                { amount: 300, unit: 'g', name: 'fresh c√° mai (silverfish / small anchovies)', note: 'must be same-day fresh ‚Äî near-transparent, silver-white, smelling only of clean sea. Available at Ph√∫ Y√™n and coastal Vietnamese markets. If unavailable: very fresh small sardines, whitebait, or small anchovies cleaned and filleted.' },
                 { amount: 1, unit: 'tsp', name: 'salt', note: 'for the initial brief rinse' },
             ],
         },
         {
             title: 'Curing liquid',
             items: [
-                { amount: 4, unit: 'tbsp', name: 'fresh lime juice', note: 'from 3 limes ó the primary curing acid' },
-                { amount: 2, unit: 'tbsp', name: 'm?m nhi (Ph˙ YÍn first-press fish sauce)', note: 'the Ph˙ YÍn specific addition that adds depth to the cured fish' },
+                { amount: 4, unit: 'tbsp', name: 'fresh lime juice', note: 'from 3 limes ‚Äî the primary curing acid' },
+                { amount: 2, unit: 'tbsp', name: 'm·∫Øm nhƒ© (Ph√∫ Y√™n first-press fish sauce)', note: 'the Ph√∫ Y√™n specific addition that adds depth to the cured fish' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
             ],
         },
         {
             title: 'Salad components',
             items: [
-                { amount: 150, unit: 'g', name: 'green unripe mango (xo‡i xanh)', note: 'finely julienned ó rock hard and assertively sour' },
+                { amount: 150, unit: 'g', name: 'green unripe mango (xo√†i xanh)', note: 'finely julienned ‚Äî rock hard and assertively sour' },
                 { amount: 3, name: 'shallots', note: 'thinly sliced, soaked in ice water 10 minutes, drained' },
                 { amount: 2, name: 'fresh red chilies', note: 'thinly sliced' },
                 { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed' },
                 { amount: 2, unit: 'tbsp', name: 'toasted sesame seeds' },
-                { amount: 2, unit: 'tbsp', name: 'crispy fried shallots (h‡nh phi)' },
+                { amount: 2, unit: 'tbsp', name: 'crispy fried shallots (h√†nh phi)' },
             ],
         },
         {
-            title: 'Herbs ó Ph˙ YÍn generous quantities',
+            title: 'Herbs ‚Äî Ph√∫ Y√™n generous quantities',
             items: [
-                { amount: 1, name: 'very large bunch Vietnamese coriander (rau ram)', note: 'leaves only ó the defining herb' },
+                { amount: 1, name: 'very large bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî the defining herb' },
                 { amount: 0.5, name: 'bunch mint' },
-                { amount: 0.5, name: 'bunch perilla (tÌa tÙ)' },
+                { amount: 0.5, name: 'bunch perilla (t√≠a t√¥)' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
         },
         {
             title: 'Final dressing',
             items: [
-                { amount: 1, unit: 'tbsp', name: 'm?m nhi', note: 'additional ó for the assembled salad' },
+                { amount: 1, unit: 'tbsp', name: 'm·∫Øm nhƒ©', note: 'additional ‚Äî for the assembled salad' },
                 { amount: 0.5, unit: 'tbsp', name: 'fresh lime juice' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil' },
@@ -60,8 +60,8 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
-                { amount: 1, name: 'bunch fresh l· È leaves', note: 'optional ó for eating alongside' },
+                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'optional ‚Äî for eating alongside' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 1, name: 'extra fresh chili, sliced' },
             ],
@@ -69,29 +69,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Freshness assessment ó the most critical step',
-            description: 'Examine the c· mai carefully before proceeding. They should: smell of clean sea and nothing else; be nearly transparent when held to light; have bright, clear eyes (if visible at this small size); feel firm when pressed. The flesh should feel slightly resistant, not soft or yielding. If any batch of fish smells of anything other than clean sea ó even a faint ammonia note ó do not proceed with a raw preparation. Cook them instead. Freshness is not a preference here; it is the requirement that makes the dish safe and delicious.',
-            tip: 'C· mai are more perishable than almost any other fish because of their tiny size and thin skin. The window between optimal raw eating quality and no longer suitable for raw preparation is very short ó 2-3 hours at room temperature, 4-6 hours refrigerated. If the fish were not live or near-live when purchased, they should not be eaten raw.',
+            title: 'Freshness assessment ‚Äî the most critical step',
+            description: 'Examine the c√° mai carefully before proceeding. They should: smell of clean sea and nothing else; be nearly transparent when held to light; have bright, clear eyes (if visible at this small size); feel firm when pressed. The flesh should feel slightly resistant, not soft or yielding. If any batch of fish smells of anything other than clean sea ‚Äî even a faint ammonia note ‚Äî do not proceed with a raw preparation. Cook them instead. Freshness is not a preference here; it is the requirement that makes the dish safe and delicious.',
+            tip: 'C√° mai are more perishable than almost any other fish because of their tiny size and thin skin. The window between optimal raw eating quality and no longer suitable for raw preparation is very short ‚Äî 2-3 hours at room temperature, 4-6 hours refrigerated. If the fish were not live or near-live when purchased, they should not be eaten raw.',
         },
         {
             title: 'Clean and prepare the silverfish',
-            description: 'Rinse the c· mai very gently in cold salted water. Because they are so small and delicate, they need only rinsing ó no scaling, no gutting for fish this size (the internal organs are minimal and become part of the cured fish). Drain carefully. Place in a glass or ceramic bowl ó not metal, which reacts with the lime juice.',
-            tip: 'Handle c· mai with extreme gentleness ó their flesh is so delicate that rough handling breaks the fish apart before the curing begins. Use the gentlest possible motion when rinsing and a light touch when tossing during the curing period.',
+            description: 'Rinse the c√° mai very gently in cold salted water. Because they are so small and delicate, they need only rinsing ‚Äî no scaling, no gutting for fish this size (the internal organs are minimal and become part of the cured fish). Drain carefully. Place in a glass or ceramic bowl ‚Äî not metal, which reacts with the lime juice.',
+            tip: 'Handle c√° mai with extreme gentleness ‚Äî their flesh is so delicate that rough handling breaks the fish apart before the curing begins. Use the gentlest possible motion when rinsing and a light touch when tossing during the curing period.',
         },
         {
-            title: 'Cure in lime and m?m nhi ó 5-7 minutes exactly',
-            description: 'Combine lime juice, m?m nhi, and sugar. Pour over the c· mai and toss very gently to coat. Set a timer for 5 minutes. At 5 minutes, check one fish: hold it to the light ó the flesh should have turned from transparent silver to completely opaque white throughout. At 7 minutes the cure is complete. The fish will have gone from translucent to white, from raw-smelling to bright-lime-sea fragrance, and the texture will have firmed to something between raw and cooked. Drain, reserving 2 tablespoons of the curing liquid.',
-            tip: 'The visual transformation of c· mai during curing is one of the most dramatic in Vietnamese raw preparation: the fish go in nearly transparent and come out completely white in 5-7 minutes. Watching this transformation is watching the lime acid denature the fish proteins in real time. The color change is the doneness indicator.',
+            title: 'Cure in lime and m·∫Øm nhƒ© ‚Äî 5-7 minutes exactly',
+            description: 'Combine lime juice, m·∫Øm nhƒ©, and sugar. Pour over the c√° mai and toss very gently to coat. Set a timer for 5 minutes. At 5 minutes, check one fish: hold it to the light ‚Äî the flesh should have turned from transparent silver to completely opaque white throughout. At 7 minutes the cure is complete. The fish will have gone from translucent to white, from raw-smelling to bright-lime-sea fragrance, and the texture will have firmed to something between raw and cooked. Drain, reserving 2 tablespoons of the curing liquid.',
+            tip: 'The visual transformation of c√° mai during curing is one of the most dramatic in Vietnamese raw preparation: the fish go in nearly transparent and come out completely white in 5-7 minutes. Watching this transformation is watching the lime acid denature the fish proteins in real time. The color change is the doneness indicator.',
         },
         {
             title: 'Assemble immediately',
-            description: 'Combine the cured c· mai with julienned green mango, soaked shallots, rau ram, mint, perilla, spring onion, and sliced chili. Add the final dressing: m?m nhi, lime juice, sugar, sesame oil, and the reserved curing liquid. Toss very gently ó the small cured fish break apart if handled roughly. The salad should show individual fish, not a fish paste.',
-            tip: 'The gentle tossing technique for g?i c· mai is more critical than for g?i with larger proteins. Each fish needs to remain intact in the finished salad for both texture and presentation. Use a folding motion rather than tossing, working from the bottom of the bowl upward.',
+            description: 'Combine the cured c√° mai with julienned green mango, soaked shallots, rau rƒÉm, mint, perilla, spring onion, and sliced chili. Add the final dressing: m·∫Øm nhƒ©, lime juice, sugar, sesame oil, and the reserved curing liquid. Toss very gently ‚Äî the small cured fish break apart if handled roughly. The salad should show individual fish, not a fish paste.',
+            tip: 'The gentle tossing technique for g·ªèi c√° mai is more critical than for g·ªèi with larger proteins. Each fish needs to remain intact in the finished salad for both texture and presentation. Use a folding motion rather than tossing, working from the bottom of the bowl upward.',
         },
         {
             title: 'Plate and serve within 5 minutes',
-            description: 'Transfer to a serving plate. Top with crushed peanuts, toasted sesame, and crispy fried shallots at the last moment. G?i c· mai must be eaten within 5-8 minutes of assembly ó the cured fish continues to firm from the lime acid and the salad quickly loses its fresh character. Serve with sesame crackers, extra rau ram, and lime. To eat: spoon onto a cracker, dip edge in the remaining dressing on the plate, eat in one bite.',
-            tip: 'The speed of service for g?i c· mai ó prepare, assemble, serve, eat in one continuous motion ó is part of the dish\'s identity. It is the food of fishermen eating immediately after the morning catch, not a dish that waits. At SÙng C?u restaurants, the fish arrive at the table within minutes of the boat docking. That immediacy is what the dish is.',
+            description: 'Transfer to a serving plate. Top with crushed peanuts, toasted sesame, and crispy fried shallots at the last moment. G·ªèi c√° mai must be eaten within 5-8 minutes of assembly ‚Äî the cured fish continues to firm from the lime acid and the salad quickly loses its fresh character. Serve with sesame crackers, extra rau rƒÉm, and lime. To eat: spoon onto a cracker, dip edge in the remaining dressing on the plate, eat in one bite.',
+            tip: 'The speed of service for g·ªèi c√° mai ‚Äî prepare, assemble, serve, eat in one continuous motion ‚Äî is part of the dish\'s identity. It is the food of fishermen eating immediately after the morning catch, not a dish that waits. At S√¥ng C·∫ßu restaurants, the fish arrive at the table within minutes of the boat docking. That immediacy is what the dish is.',
         },
     ],
 };

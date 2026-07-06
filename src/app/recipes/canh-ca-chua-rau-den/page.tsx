@@ -3,50 +3,50 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'canh-ca-chua-rau-den',
-    title: 'Canh C· Chua Rau D?n (Northern Sour Fish Soup with Amaranth)',
-    subtitle: 'The northern Vietnamese sour fish soup ó tomato-soured rather than tamarind-soured, with amaranth leaves (rau d?n) that turn the broth a specific deep red-purple, freshwater fish, and the clean vinegar acidity of the north rather than the fruity complexity of the Mekong. The H‡ N?i summer soup eaten when the amaranth grows abundantly in every garden.',
+    title: 'Canh C√° Chua Rau D·ªÅn (Northern Sour Fish Soup with Amaranth)',
+    subtitle: 'The northern Vietnamese sour fish soup ‚Äî tomato-soured rather than tamarind-soured, with amaranth leaves (rau d·ªÅn) that turn the broth a specific deep red-purple, freshwater fish, and the clean vinegar acidity of the north rather than the fruity complexity of the Mekong. The H√† N·ªôi summer soup eaten when the amaranth grows abundantly in every garden.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '35 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/canh-ca-chua-rau-den.jpg',
-    intro: `Canh c· chua rau d?n is the sour fish soup of northern Vietnam ó a preparation that is the direct northern counterpart to canh chua c· trÍ and canh chua c· rÙ phi of the Mekong Delta, and that demonstrates how differently the two culinary regions approach the same fundamental dish type. Where the Mekong sour fish soup uses tamarind as its primary souring agent, produces a deep orange broth colored by annatto oil and fresh turmeric, and includes the specific rau d?ng herbs of the waterway ecosystem (ngÚ om, bÙng s˙ng, b?c h‡), the northern version uses the tartness of ripe tomatoes cooked down into the broth as the primary souring agent ó sometimes supplemented with a small amount of rice vinegar ó produces a clear, lighter broth, and uses rau d?n (amaranth, Amaranthus tricolor) as its vegetable and visual defining element. Rau d?n is an annual leafy vegetable grown in northern Vietnamese gardens through the summer months, with red-veined leaves that release a deep red-purple pigment into the broth during cooking ó coloring it in a way that is one of the most visually distinctive of any Vietnamese soup and that is responsible for canh c· chua rau d?n being the most recognizable northern sour soup by sight alone. The fish used in canh c· chua rau d?n is typically whatever is freshest and available ó c· rÙ phi, c· tr?m, c· chÈp, or c· diÍu h?ng (red tilapia) ó but the northern cook's approach to the fish in this soup is different from the Mekong approach: the fish sections are added to the broth later and cooked for a shorter time, the broth being built primarily from tomatoes and aromatics rather than from a fish stock base, and the result being lighter and more broth-forward than the richer Mekong canh chua.`,
+    intro: `Canh c√° chua rau d·ªÅn is the sour fish soup of northern Vietnam ‚Äî a preparation that is the direct northern counterpart to canh chua c√° tr√™ and canh chua c√° r√¥ phi of the Mekong Delta, and that demonstrates how differently the two culinary regions approach the same fundamental dish type. Where the Mekong sour fish soup uses tamarind as its primary souring agent, produces a deep orange broth colored by annatto oil and fresh turmeric, and includes the specific rau ƒë·ªìng herbs of the waterway ecosystem (ng√≤ om, b√¥ng s√∫ng, b·∫°c h√†), the northern version uses the tartness of ripe tomatoes cooked down into the broth as the primary souring agent ‚Äî sometimes supplemented with a small amount of rice vinegar ‚Äî produces a clear, lighter broth, and uses rau d·ªÅn (amaranth, Amaranthus tricolor) as its vegetable and visual defining element. Rau d·ªÅn is an annual leafy vegetable grown in northern Vietnamese gardens through the summer months, with red-veined leaves that release a deep red-purple pigment into the broth during cooking ‚Äî coloring it in a way that is one of the most visually distinctive of any Vietnamese soup and that is responsible for canh c√° chua rau d·ªÅn being the most recognizable northern sour soup by sight alone. The fish used in canh c√° chua rau d·ªÅn is typically whatever is freshest and available ‚Äî c√° r√¥ phi, c√° tr·∫Øm, c√° ch√©p, or c√° ƒëi√™u h·ªìng (red tilapia) ‚Äî but the northern cook's approach to the fish in this soup is different from the Mekong approach: the fish sections are added to the broth later and cooked for a shorter time, the broth being built primarily from tomatoes and aromatics rather than from a fish stock base, and the result being lighter and more broth-forward than the richer Mekong canh chua.`,
     ingredientSections: [
         {
             title: 'Fish',
             items: [
-                { amount: 500, unit: 'g', name: 'freshwater fish sections', note: 'c· rÙ phi, c· tr?m c?, c· chÈp, or any firm-fleshed freshwater fish. Bone-in sections 5cm.' },
+                { amount: 500, unit: 'g', name: 'freshwater fish sections', note: 'c√° r√¥ phi, c√° tr·∫Øm c·ªè, c√° ch√©p, or any firm-fleshed freshwater fish. Bone-in sections 5cm.' },
                 { amount: 1, unit: 'tbsp', name: 'fish sauce', note: 'for brief marinating' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
             ],
         },
         {
-            title: 'Northern sour broth ó tomato-based',
+            title: 'Northern sour broth ‚Äî tomato-based',
             items: [
                 { amount: 1.2, unit: 'L', name: 'water' },
-                { amount: 4, name: 'ripe tomatoes', note: 'cut into wedges ó the primary souring agent in northern canh chua' },
-                { amount: 3, name: 'shallots', note: 'thinly sliced ó fried before the tomato' },
+                { amount: 4, name: 'ripe tomatoes', note: 'cut into wedges ‚Äî the primary souring agent in northern canh chua' },
+                { amount: 3, name: 'shallots', note: 'thinly sliced ‚Äî fried before the tomato' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil', note: 'for frying the shallots and tomato' },
-                { amount: 1, unit: 'tbsp', name: 'rice vinegar', note: 'optional ó adds the clean vinegar acidity specific to northern sour soups' },
+                { amount: 1, unit: 'tbsp', name: 'rice vinegar', note: 'optional ‚Äî adds the clean vinegar acidity specific to northern sour soups' },
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
             ],
         },
         {
-            title: 'Rau d?n ó the defining vegetable',
+            title: 'Rau d·ªÅn ‚Äî the defining vegetable',
             items: [
-                { amount: 300, unit: 'g', name: 'red amaranth leaves (rau d?n d?)', note: 'stems removed, leaves kept whole. The red variety produces the deepest color. Green amaranth can be used ó less dramatic visually but same flavor.' },
+                { amount: 300, unit: 'g', name: 'red amaranth leaves (rau d·ªÅn ƒë·ªè)', note: 'stems removed, leaves kept whole. The red variety produces the deepest color. Green amaranth can be used ‚Äî less dramatic visually but same flavor.' },
             ],
         },
         {
             title: 'Additional vegetables',
             items: [
-                { amount: 2, name: 'extra tomatoes', note: 'cut into wedges ó added late for texture' },
+                { amount: 2, name: 'extra tomatoes', note: 'cut into wedges ‚Äî added late for texture' },
                 { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces' },
-                { amount: 2, name: 'stalks Vietnamese celery (c?n ta)', note: 'sliced ó added at the end for the northern herb finish' },
+                { amount: 2, name: 'stalks Vietnamese celery (c·∫ßn ta)', note: 'sliced ‚Äî added at the end for the northern herb finish' },
             ],
         },
         {
@@ -60,7 +60,7 @@ const recipe: RecipeData = {
             title: 'To serve',
             items: [
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
                 { amount: 2, name: 'limes, cut in wedges' },
             ],
@@ -69,28 +69,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Build the tomato-sour broth base',
-            description: 'Heat oil in a pot over medium-high heat. Fry sliced shallots until golden ó 3 minutes. Add half the tomato wedges (two tomatoes) and cook for 8-10 minutes, pressing them down with a spoon, until they completely break down and the oil turns deep orange-red. Add water. Bring to a boil. The tomato-shallot base produces the specific bright, clean sourness of northern canh chua ó lighter and more immediate than tamarind. Add fish sauce, sugar, salt, and optional rice vinegar.',
+            description: 'Heat oil in a pot over medium-high heat. Fry sliced shallots until golden ‚Äî 3 minutes. Add half the tomato wedges (two tomatoes) and cook for 8-10 minutes, pressing them down with a spoon, until they completely break down and the oil turns deep orange-red. Add water. Bring to a boil. The tomato-shallot base produces the specific bright, clean sourness of northern canh chua ‚Äî lighter and more immediate than tamarind. Add fish sauce, sugar, salt, and optional rice vinegar.',
             tip: 'Cooking half the tomatoes into the broth base and adding the other half fresh toward the end is the northern technique that produces both a sour broth with depth from the cooked tomatoes and fresh tomato texture from the late addition. The Mekong version uses tamarind for depth and pineapple for freshness; the northern version uses the same tomato in two stages to achieve the same depth-and-freshness balance.',
         },
         {
             title: 'Add fish and cook briefly',
-            description: 'Add the marinated fish sections to the simmering tomato broth. The fish cooks through in 6-8 minutes in the acidic tomato broth ó the acid slightly firms the exterior and keeps the sections intact. Add the remaining fresh tomato wedges at 5 minutes. Taste the broth ó it should be clearly sour from the tomato, savory, and clean. Adjust with additional fish sauce or a few drops of rice vinegar.',
-            tip: 'The rice vinegar optional addition for canh c· chua rau d?n is the specifically northern element ó the north\'s preference for the clean, sharp acidity of vinegar rather than the warmer, fruitier sourness of tamarind is a regional flavor preference that is detectable throughout northern Vietnamese cooking and most clearly in their sour soups.',
+            description: 'Add the marinated fish sections to the simmering tomato broth. The fish cooks through in 6-8 minutes in the acidic tomato broth ‚Äî the acid slightly firms the exterior and keeps the sections intact. Add the remaining fresh tomato wedges at 5 minutes. Taste the broth ‚Äî it should be clearly sour from the tomato, savory, and clean. Adjust with additional fish sauce or a few drops of rice vinegar.',
+            tip: 'The rice vinegar optional addition for canh c√° chua rau d·ªÅn is the specifically northern element ‚Äî the north\'s preference for the clean, sharp acidity of vinegar rather than the warmer, fruitier sourness of tamarind is a regional flavor preference that is detectable throughout northern Vietnamese cooking and most clearly in their sour soups.',
         },
         {
-            title: 'Add rau d?n ó watch the color transform',
-            description: 'Add the red amaranth leaves to the simmering broth. Within 30-60 seconds, the red-purple pigment from the leaves will begin bleeding into the broth ó the clear tomato broth turning progressively deeper as the amaranth wilts. Cook for 2-3 minutes until the leaves are fully wilted and the broth has transformed to a deep reddish-purple. Add spring onion and Vietnamese celery pieces.',
-            tip: 'The color transformation of the broth when rau d?n is added is the visual moment that makes canh c· chua rau d?n the most dramatically beautiful of all Vietnamese sour soups. Within 60 seconds of adding the red amaranth, the broth changes from clear orange-red to a deep burgundy-purple that is specific to this soup and to no other. Watch it happen ó it is one of the most dramatic natural color changes in Vietnamese cooking.',
+            title: 'Add rau d·ªÅn ‚Äî watch the color transform',
+            description: 'Add the red amaranth leaves to the simmering broth. Within 30-60 seconds, the red-purple pigment from the leaves will begin bleeding into the broth ‚Äî the clear tomato broth turning progressively deeper as the amaranth wilts. Cook for 2-3 minutes until the leaves are fully wilted and the broth has transformed to a deep reddish-purple. Add spring onion and Vietnamese celery pieces.',
+            tip: 'The color transformation of the broth when rau d·ªÅn is added is the visual moment that makes canh c√° chua rau d·ªÅn the most dramatically beautiful of all Vietnamese sour soups. Within 60 seconds of adding the red amaranth, the broth changes from clear orange-red to a deep burgundy-purple that is specific to this soup and to no other. Watch it happen ‚Äî it is one of the most dramatic natural color changes in Vietnamese cooking.',
         },
         {
             title: 'Make the fried shallot oil',
-            description: 'Heat oil in a small pan. Fry sliced shallots until golden and beginning to crisp. Pour the entire shallot oil over the surface of the finished soup at the table. The fried shallot oil for northern canh chua serves the same function as for Mekong canh chua ó the aromatic signal that the soup is ready and the flavor element that lifts the entire bowl at service.',
-            tip: 'Northern canh chua uses the fried shallot oil at the table as a finishing element in exactly the same way as Mekong canh chua ó despite the profound differences between the two soups in every other respect. The shallot oil topping is the one element shared across the regional divide, suggesting it was the common original element and the souring agents, vegetables, and herbs diverged regionally while the shallot oil remained constant.',
+            description: 'Heat oil in a small pan. Fry sliced shallots until golden and beginning to crisp. Pour the entire shallot oil over the surface of the finished soup at the table. The fried shallot oil for northern canh chua serves the same function as for Mekong canh chua ‚Äî the aromatic signal that the soup is ready and the flavor element that lifts the entire bowl at service.',
+            tip: 'Northern canh chua uses the fried shallot oil at the table as a finishing element in exactly the same way as Mekong canh chua ‚Äî despite the profound differences between the two soups in every other respect. The shallot oil topping is the one element shared across the regional divide, suggesting it was the common original element and the souring agents, vegetables, and herbs diverged regionally while the shallot oil remained constant.',
         },
         {
             title: 'Serve and eat',
-            description: 'Ladle the deep reddish-purple soup into bowls. The visual of the finished canh c· chua rau d?n: deep burgundy-purple broth, orange-red tomato wedges, green spring onion and celery, white fish sections, and the golden shallot oil drizzled over the surface. Serve with rau ram, steamed rice, lime, and sliced chili. The flavors: clean, bright sourness from the tomato, the specific mild-bitter note of the amaranth, the savory fish, and the crispy shallot aromatic at the end of each spoonful.',
-            tip: 'The mild, pleasant bitterness of the cooked amaranth leaves in canh c· chua rau d?n is the specific flavor note that distinguishes this northern soup from any southern preparation. Cooked amaranth provides a bitter dimension that no Mekong rau d?ng herb produces, and it is this bitterness ó light, clean, not unpleasant ó that makes the northern version a different eating experience from the southern despite the same basic structure.',
+            description: 'Ladle the deep reddish-purple soup into bowls. The visual of the finished canh c√° chua rau d·ªÅn: deep burgundy-purple broth, orange-red tomato wedges, green spring onion and celery, white fish sections, and the golden shallot oil drizzled over the surface. Serve with rau rƒÉm, steamed rice, lime, and sliced chili. The flavors: clean, bright sourness from the tomato, the specific mild-bitter note of the amaranth, the savory fish, and the crispy shallot aromatic at the end of each spoonful.',
+            tip: 'The mild, pleasant bitterness of the cooked amaranth leaves in canh c√° chua rau d·ªÅn is the specific flavor note that distinguishes this northern soup from any southern preparation. Cooked amaranth provides a bitter dimension that no Mekong rau ƒë·ªìng herb produces, and it is this bitterness ‚Äî light, clean, not unpleasant ‚Äî that makes the northern version a different eating experience from the southern despite the same basic structure.',
         },
     ],
 };

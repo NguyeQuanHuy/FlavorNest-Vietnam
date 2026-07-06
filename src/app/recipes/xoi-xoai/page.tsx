@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'xoi-xoai',
     title: 'Mango Sticky Rice',
-    subtitle: 'Sweet coconut sticky rice with ripe mango — Thailand and Vietnam meet in a bowl.',
+    subtitle: 'Sweet coconut sticky rice with ripe mango â€” Thailand and Vietnam meet in a bowl.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/xoi-xoai.jpg',
-    intro: `Xoi xoai is the dessert that needs no introduction — sweet glutinous rice steamed with coconut milk, served alongside ripe mango slices, finished with a drizzle of salted coconut cream. Simple, seasonal, and universally loved across Southeast Asia. The key is perfectly ripe mango and the balance of sweet rice against the salty coconut topping.`,
+    intro: `Xoi xoai is the dessert that needs no introduction â€” sweet glutinous rice steamed with coconut milk, served alongside ripe mango slices, finished with a drizzle of salted coconut cream. Simple, seasonal, and universally loved across Southeast Asia. The key is perfectly ripe mango and the balance of sweet rice against the salty coconut topping.`,
     ingredientSections: [
         {
             title: 'Coconut sticky rice',
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
         {
             title: 'Season with coconut milk',
             description: 'Warm coconut milk with sugar and salt until dissolved. Pour over hot steamed rice and fold gently to combine. Cover and rest 15 minutes to absorb.',
-            tip: 'The rice absorbs the coconut milk as it rests. Do not rush — the rest time is essential.',
+            tip: 'The rice absorbs the coconut milk as it rests. Do not rush â€” the rest time is essential.',
         },
         {
             title: 'Make the coconut topping',

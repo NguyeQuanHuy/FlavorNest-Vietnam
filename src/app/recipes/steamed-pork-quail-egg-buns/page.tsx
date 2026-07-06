@@ -4,22 +4,22 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'steamed-pork-quail-egg-buns',
     title: 'Vietnamese Steamed Pork and Quail Egg Buns',
-    subtitle: 'Pillowy milk-dough buns filled with seasoned pork, wood ear mushrooms, and a whole quail egg at the center — the Vietnamese breakfast standard, reimagined at home.',
+    subtitle: 'Pillowy milk-dough buns filled with seasoned pork, wood ear mushrooms, and a whole quail egg at the center â€” the Vietnamese breakfast standard, reimagined at home.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,
     baseServings: 6,
     heroImage: '/images/recipes/steamed-pork-quail-egg-buns.jpg',
-    intro: 'Bánh bao is Vietnam\'s answer to the Chinese baozi — softened and sweetened to match the Vietnamese palate. You\'ll find it at every bus station, school gate, and morning market, steamed in tall bamboo towers. Each region has its preference: Hanoi versions are meatier, Saigon versions sweeter, homemade versions always better than either.',
+    intro: 'BÃ¡nh bao is Vietnam\'s answer to the Chinese baozi â€” softened and sweetened to match the Vietnamese palate. You\'ll find it at every bus station, school gate, and morning market, steamed in tall bamboo towers. Each region has its preference: Hanoi versions are meatier, Saigon versions sweeter, homemade versions always better than either.',
     ingredientSections: [
         {
             title: 'For the dough',
             items: [
-                { amount: 500, unit: 'g', name: 'all-purpose flour', note: 'bánh bao flour from Asian grocer is best' },
+                { amount: 500, unit: 'g', name: 'all-purpose flour', note: 'bÃ¡nh bao flour from Asian grocer is best' },
                 { amount: 7, unit: 'g', name: 'instant yeast' },
                 { amount: 60, unit: 'g', name: 'sugar' },
-                { amount: 250, unit: 'ml', name: 'whole milk', note: 'warm, 40°C / 104°F' },
+                { amount: 250, unit: 'ml', name: 'whole milk', note: 'warm, 40Â°C / 104Â°F' },
                 { amount: 30, unit: 'ml', name: 'neutral oil' },
                 { amount: 1, unit: 'tsp', name: 'baking powder' },
                 { amount: 0.5, unit: 'tsp', name: 'salt' },
@@ -54,8 +54,8 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Activate the yeast',
-            description: 'Warm the milk to 40°C — it should feel like warm bath water, never hot. Stir in sugar and instant yeast. Let sit 10 minutes until foamy. If nothing happens, your yeast is dead — start over.',
-            tip: 'Milk too hot kills yeast. Too cold won\'t activate it. No thermometer? Dip a clean finger in — it should feel barely warm.',
+            description: 'Warm the milk to 40Â°C â€” it should feel like warm bath water, never hot. Stir in sugar and instant yeast. Let sit 10 minutes until foamy. If nothing happens, your yeast is dead â€” start over.',
+            tip: 'Milk too hot kills yeast. Too cold won\'t activate it. No thermometer? Dip a clean finger in â€” it should feel barely warm.',
         },
         {
             title: 'Make the dough',
@@ -63,7 +63,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'First proof',
-            description: 'Place dough in a lightly oiled bowl, cover with a damp cloth. Let rise in a warm spot until doubled — about 1 hour. Test: poke with a floured finger. If the indent springs back slowly, it\'s ready.',
+            description: 'Place dough in a lightly oiled bowl, cover with a damp cloth. Let rise in a warm spot until doubled â€” about 1 hour. Test: poke with a floured finger. If the indent springs back slowly, it\'s ready.',
         },
         {
             title: 'Make the filling',
@@ -72,7 +72,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Shape the buns',
-            description: 'Punch down dough and divide into 12 pieces (~65 g each). Flatten each into a 12 cm circle — thicker center, thinner edges. Add 2 tbsp filling and a quail egg. Gather edges up, pleat, and pinch to seal. Place on parchment squares pinched-side up.',
+            description: 'Punch down dough and divide into 12 pieces (~65 g each). Flatten each into a 12 cm circle â€” thicker center, thinner edges. Add 2 tbsp filling and a quail egg. Gather edges up, pleat, and pinch to seal. Place on parchment squares pinched-side up.',
             tip: 'If dough tears, your filling is too wet or you\'re using too much. Use slightly less while learning.',
         },
         {
@@ -81,12 +81,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Steam',
-            description: 'Bring steamer to a rolling boil, then reduce to medium. Space buns at least 3 cm apart. Wrap lid in a kitchen towel to catch condensation. Steam exactly 15 minutes — do NOT lift the lid.',
+            description: 'Bring steamer to a rolling boil, then reduce to medium. Space buns at least 3 cm apart. Wrap lid in a kitchen towel to catch condensation. Steam exactly 15 minutes â€” do NOT lift the lid.',
             tip: 'The towel trick is critical. Condensation drops leave yellow spots on snow-white buns.',
         },
         {
             title: 'Rest and serve',
-            description: 'Turn off heat. Let buns rest in covered steamer 3 more minutes — this prevents collapsing. Lift lid slowly. Serve warm with soy sauce and sliced chili on the side.',
+            description: 'Turn off heat. Let buns rest in covered steamer 3 more minutes â€” this prevents collapsing. Lift lid slowly. Serve warm with soy sauce and sliced chili on the side.',
         },
     ],
 };

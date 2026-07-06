@@ -5,38 +5,38 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-bo-thot-not',
     title: `Palm Sugar Honeycomb Cake`,
-    subtitle: `B·nh BÚ Th?t N?t ó An Giang's Khmer steamed rice cake, risen with toddy palm sugar and coconut milk into a golden honeycomb crumb.`,
+    subtitle: `B√°nh B√≤ Th·ªët N·ªët ‚Äî An Giang's Khmer steamed rice cake, risen with toddy palm sugar and coconut milk into a golden honeycomb crumb.`,
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '4 hrs',
     rating: 4.9,
     baseServings: 8,
     heroImage: `https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=1600&q=85`,
-    intro: `B·nh bÚ th?t n?t is the dessert that defines An Giang province ó specifically the Khmer communities around Tri TÙn and T?nh BiÍn at the base of the Seven Mountains (Th?t Son). Th?t n?t is the toddy palm (Borassus flabellifer), a tall, fan-palmed tree that grows in the dry limestone hills of the Cambodian border region. Its sap is collected before dawn by climbers who scale the trunk barefoot to reach the flower clusters at the crown. The fresh sap ferments within hours in the heat ó this natural fermentation is what leavens the cake.\n\nThe cake itself is a steamed rice batter enriched with coconut milk and coloured a deep amber by the palm sugar. When steamed correctly, the batter rises into a fine, regular honeycomb structure ó hundreds of tiny air pockets through the crumb ó that gives the cake its signature bounce and its Vietnamese name: b·nh bÚ means literally "cow cake," a reference to the pockmarked surface resembling a cow's hide. The honeycomb is the test of a skilled baker. A flat, dense crumb means the fermentation was incomplete or the batter was overworked.\n\nOutside An Giang, th?t n?t palm sugar (du?ng th?t n?t) is sold in round cakes at Vietnamese and Cambodian grocers in Europe and Germany. It has a caramel-floral flavour entirely unlike cane sugar or coconut sugar ó faintly smoky, complex, and irreplaceable in this recipe. Do not substitute.`,
+    intro: `B√°nh b√≤ th·ªët n·ªët is the dessert that defines An Giang province ‚Äî specifically the Khmer communities around Tri T√¥n and T·ªãnh Bi√™n at the base of the Seven Mountains (Th·∫•t S∆°n). Th·ªët n·ªët is the toddy palm (Borassus flabellifer), a tall, fan-palmed tree that grows in the dry limestone hills of the Cambodian border region. Its sap is collected before dawn by climbers who scale the trunk barefoot to reach the flower clusters at the crown. The fresh sap ferments within hours in the heat ‚Äî this natural fermentation is what leavens the cake.\n\nThe cake itself is a steamed rice batter enriched with coconut milk and coloured a deep amber by the palm sugar. When steamed correctly, the batter rises into a fine, regular honeycomb structure ‚Äî hundreds of tiny air pockets through the crumb ‚Äî that gives the cake its signature bounce and its Vietnamese name: b√°nh b√≤ means literally "cow cake," a reference to the pockmarked surface resembling a cow's hide. The honeycomb is the test of a skilled baker. A flat, dense crumb means the fermentation was incomplete or the batter was overworked.\n\nOutside An Giang, th·ªët n·ªët palm sugar (ƒë∆∞·ªùng th·ªët n·ªët) is sold in round cakes at Vietnamese and Cambodian grocers in Europe and Germany. It has a caramel-floral flavour entirely unlike cane sugar or coconut sugar ‚Äî faintly smoky, complex, and irreplaceable in this recipe. Do not substitute.`,
     ingredientSections: [
         {
             title: `Dry ingredients`,
             items: [
-                { amount: 300, unit: 'g', name: `rice flour (b?t g?o)`, note: `fine-milled, not glutinous rice flour` },
-                { amount: 50, unit: 'g', name: `tapioca starch (b?t nang)`, note: `gives the honeycomb its slightly chewy bite` },
-                { amount: 200, unit: 'g', name: `toddy palm sugar (du?ng th?t n?t)`, note: `grated or broken ó sold in round cakes at Asian grocers; do not substitute` },
+                { amount: 300, unit: 'g', name: `rice flour (b·ªôt g·∫°o)`, note: `fine-milled, not glutinous rice flour` },
+                { amount: 50, unit: 'g', name: `tapioca starch (b·ªôt nƒÉng)`, note: `gives the honeycomb its slightly chewy bite` },
+                { amount: 200, unit: 'g', name: `toddy palm sugar (ƒë∆∞·ªùng th·ªët n·ªët)`, note: `grated or broken ‚Äî sold in round cakes at Asian grocers; do not substitute` },
                 { amount: 0.5, unit: 'tsp', name: `salt` },
             ],
         },
         {
             title: `Wet ingredients`,
             items: [
-                { amount: 400, unit: 'ml', name: `fresh coconut milk (nu?c c?t d?a)`, note: `full-fat, room temperature ó cold coconut milk inhibits fermentation` },
-                { amount: 150, unit: 'ml', name: `warm water`, note: `40∞C ó warm enough to dissolve sugar, not hot enough to kill yeast` },
-                { amount: 7, unit: 'g', name: `instant dry yeast (men n?)`, note: `1 standard sachet ó activates the honeycomb rise` },
+                { amount: 400, unit: 'ml', name: `fresh coconut milk (n∆∞·ªõc c·ªët d·ª´a)`, note: `full-fat, room temperature ‚Äî cold coconut milk inhibits fermentation` },
+                { amount: 150, unit: 'ml', name: `warm water`, note: `40¬∞C ‚Äî warm enough to dissolve sugar, not hot enough to kill yeast` },
+                { amount: 7, unit: 'g', name: `instant dry yeast (men n·ªü)`, note: `1 standard sachet ‚Äî activates the honeycomb rise` },
                 { amount: 1, unit: 'tsp', name: `sugar`, note: `to feed the yeast during proofing` },
-                { amount: 2, unit: 'tbsp', name: `fresh toddy palm sap (nu?c th?t n?t tuoi)`, note: `optional ó if available near Khmer community in Germany; adds authentic fermented depth` },
+                { amount: 2, unit: 'tbsp', name: `fresh toddy palm sap (n∆∞·ªõc th·ªët n·ªët t∆∞∆°i)`, note: `optional ‚Äî if available near Khmer community in Germany; adds authentic fermented depth` },
             ],
         },
         {
             title: `For steaming`,
             items: [
-                { amount: 8, name: `small round molds or ramekins (8ñ10 cm diameter)`, note: `lined with banana leaf or lightly oiled` },
+                { amount: 8, name: `small round molds or ramekins (8‚Äì10 cm diameter)`, note: `lined with banana leaf or lightly oiled` },
                 { amount: 1, name: `large steamer or wok with lid` },
                 { amount: 1, name: `clean cloth`, note: `wrapped under the lid to catch condensation drips` },
             ],
@@ -45,39 +45,39 @@ const recipe: RecipeData = {
     steps: [
         {
             title: `Proof the yeast`,
-            description: `Combine warm water (40∞C), 1 tsp sugar, and instant yeast in a small bowl. Stir once and leave undisturbed for 10 minutes. The surface should become foamy and fragrant ó this confirms the yeast is active. If nothing happens after 10 minutes, the yeast is dead or the water was too hot. Discard and start again with fresh yeast.`,
+            description: `Combine warm water (40¬∞C), 1 tsp sugar, and instant yeast in a small bowl. Stir once and leave undisturbed for 10 minutes. The surface should become foamy and fragrant ‚Äî this confirms the yeast is active. If nothing happens after 10 minutes, the yeast is dead or the water was too hot. Discard and start again with fresh yeast.`,
         },
         {
             title: `Dissolve the palm sugar`,
-            description: `Grate or break the toddy palm sugar into a small saucepan. Add 100 ml of the coconut milk and heat over low flame, stirring until sugar fully dissolves ó do not boil. Remove from heat and cool to room temperature before using. The mixture should be a deep amber syrup. If the sugar is not fully dissolved, the batter will be uneven and the honeycomb inconsistent.`,
-            tip: `–u?ng th?t n?t varies in hardness between brands. Some cakes need grating on a box grater; others break apart easily. The dissolved syrup should smell of caramel and faintly of smoke ó this is the characteristic toddy palm note that makes the cake identifiable from across a room.`,
+            description: `Grate or break the toddy palm sugar into a small saucepan. Add 100 ml of the coconut milk and heat over low flame, stirring until sugar fully dissolves ‚Äî do not boil. Remove from heat and cool to room temperature before using. The mixture should be a deep amber syrup. If the sugar is not fully dissolved, the batter will be uneven and the honeycomb inconsistent.`,
+            tip: `ƒê∆∞·ªùng th·ªët n·ªët varies in hardness between brands. Some cakes need grating on a box grater; others break apart easily. The dissolved syrup should smell of caramel and faintly of smoke ‚Äî this is the characteristic toddy palm note that makes the cake identifiable from across a room.`,
         },
         {
             title: `Make the batter`,
-            description: `Sift rice flour and tapioca starch together with salt into a large bowl. Make a well in the centre. Pour in the cooled palm sugar syrup, remaining coconut milk, and proofed yeast mixture. Stir gently from the centre outward until a smooth, pourable batter forms ó similar in consistency to thick cream. If using fresh toddy palm sap, add now. Do not whisk vigorously; gentle folding preserves the gas bubbles beginning to form from the yeast.`,
+            description: `Sift rice flour and tapioca starch together with salt into a large bowl. Make a well in the centre. Pour in the cooled palm sugar syrup, remaining coconut milk, and proofed yeast mixture. Stir gently from the centre outward until a smooth, pourable batter forms ‚Äî similar in consistency to thick cream. If using fresh toddy palm sap, add now. Do not whisk vigorously; gentle folding preserves the gas bubbles beginning to form from the yeast.`,
         },
         {
-            title: `Ferment the batter ó 2 to 3 hours`,
-            description: `Cover the bowl with a clean cloth and leave at room temperature (ideally 28ñ32∞C) for 2 to 3 hours. The batter will increase in volume by about 30ñ40%, develop small bubbles on the surface, and smell faintly sour and yeasty. In a cool European kitchen, place the bowl near a warm oven or in a cold oven with just the light on. The fermentation is complete when the surface is visibly aerated and the batter smells active. Do not stir after fermentation.`,
-            tip: `This fermentation step is what creates the honeycomb. An underfermented batter produces a flat, dense cake with no air pockets. An overfermented batter (more than 4 hours in heat) turns too sour. The 2ñ3 hour window in a warm kitchen is correct. In Germany in winter, extend to 3ñ4 hours.`,
+            title: `Ferment the batter ‚Äî 2 to 3 hours`,
+            description: `Cover the bowl with a clean cloth and leave at room temperature (ideally 28‚Äì32¬∞C) for 2 to 3 hours. The batter will increase in volume by about 30‚Äì40%, develop small bubbles on the surface, and smell faintly sour and yeasty. In a cool European kitchen, place the bowl near a warm oven or in a cold oven with just the light on. The fermentation is complete when the surface is visibly aerated and the batter smells active. Do not stir after fermentation.`,
+            tip: `This fermentation step is what creates the honeycomb. An underfermented batter produces a flat, dense cake with no air pockets. An overfermented batter (more than 4 hours in heat) turns too sour. The 2‚Äì3 hour window in a warm kitchen is correct. In Germany in winter, extend to 3‚Äì4 hours.`,
         },
         {
             title: `Prepare the molds and steamer`,
-            description: `Line each mold with a piece of banana leaf cut to fit, lightly oiled on the top surface ó or simply oil the inside of each ramekin thoroughly. Fill a wok or large steamer with 5 cm of water and bring to a rolling boil. Wrap the inside of the lid with a clean dry cloth tied securely ó this absorbs condensation and prevents water drips from falling onto the batter surface, which would cause uneven rising and pitting.`,
+            description: `Line each mold with a piece of banana leaf cut to fit, lightly oiled on the top surface ‚Äî or simply oil the inside of each ramekin thoroughly. Fill a wok or large steamer with 5 cm of water and bring to a rolling boil. Wrap the inside of the lid with a clean dry cloth tied securely ‚Äî this absorbs condensation and prevents water drips from falling onto the batter surface, which would cause uneven rising and pitting.`,
         },
         {
-            title: `Fill and steam ó 20 minutes`,
-            description: `Gently ladle fermented batter into prepared molds, filling each to about æ full. Do not tap or shake the molds ó the trapped bubbles in the batter are what will become the honeycomb. Place molds in the steamer over vigorously boiling water. Cover immediately with the cloth-wrapped lid. Steam on high heat for exactly 20 minutes without opening the lid. Opening the lid drops the temperature and collapses the rising structure.`,
+            title: `Fill and steam ‚Äî 20 minutes`,
+            description: `Gently ladle fermented batter into prepared molds, filling each to about ¬æ full. Do not tap or shake the molds ‚Äî the trapped bubbles in the batter are what will become the honeycomb. Place molds in the steamer over vigorously boiling water. Cover immediately with the cloth-wrapped lid. Steam on high heat for exactly 20 minutes without opening the lid. Opening the lid drops the temperature and collapses the rising structure.`,
             tip: `The moment of truth is at 20 minutes: lift one cake carefully and use a toothpick inserted in the centre. If it comes out clean and the surface is dry and slightly springy, the cakes are done. If the toothpick shows wet batter, add 3 more minutes and check again.`,
         },
         {
             title: `Cool and unmold`,
-            description: `Remove molds from the steamer and place on a wire rack. Leave to cool for 10 minutes before unmolding ó the cake is fragile when hot and will tear if turned out immediately. After 10 minutes, run a thin knife around the edge and invert onto a plate. The cake should release cleanly, showing the amber colour on top and the honeycomb cross-section when cut. Slice with a wet knife to see the interior structure clearly.`,
+            description: `Remove molds from the steamer and place on a wire rack. Leave to cool for 10 minutes before unmolding ‚Äî the cake is fragile when hot and will tear if turned out immediately. After 10 minutes, run a thin knife around the edge and invert onto a plate. The cake should release cleanly, showing the amber colour on top and the honeycomb cross-section when cut. Slice with a wet knife to see the interior structure clearly.`,
         },
         {
             title: `Serve at room temperature`,
-            description: `B·nh bÚ th?t n?t is served at room temperature, never hot. The texture firms slightly as it cools ó the bounce and chew that define the cake only develop fully once cooled. Serve whole or sliced into wedges. In An Giang, it is eaten plain as an afternoon snack with hot tea, or alongside chË (sweet soup) as a dessert combination. The palm sugar flavour deepens over the first 2 hours after steaming ó the cake eaten the next morning is better than the cake eaten immediately.`,
-            tip: `Store covered at room temperature up to 2 days ó do not refrigerate, as cold temperatures harden the rice flour and destroy the honeycomb texture. If the cake hardens, steam briefly for 3 minutes to restore softness.`,
+            description: `B√°nh b√≤ th·ªët n·ªët is served at room temperature, never hot. The texture firms slightly as it cools ‚Äî the bounce and chew that define the cake only develop fully once cooled. Serve whole or sliced into wedges. In An Giang, it is eaten plain as an afternoon snack with hot tea, or alongside ch√® (sweet soup) as a dessert combination. The palm sugar flavour deepens over the first 2 hours after steaming ‚Äî the cake eaten the next morning is better than the cake eaten immediately.`,
+            tip: `Store covered at room temperature up to 2 days ‚Äî do not refrigerate, as cold temperatures harden the rice flour and destroy the honeycomb texture. If the cake hardens, steam briefly for 3 minutes to restore softness.`,
         },
     ],
 };

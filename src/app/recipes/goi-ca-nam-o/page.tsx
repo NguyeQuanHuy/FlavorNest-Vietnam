@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'goi-ca-nam-o',
     title: 'Da Nang Raw Fish Salad',
-    subtitle: 'Goi ca Nam O — paper-thin slices of raw herring rolled with green banana, star fruit and herbs, dunked in thick mam nem peanut sauce.',
+    subtitle: 'Goi ca Nam O â€” paper-thin slices of raw herring rolled with green banana, star fruit and herbs, dunked in thick mam nem peanut sauce.',
     category: 'APPETIZER',
     difficulty: 'Hard',
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-ca-nam-o.jpg',
-    intro: 'Nam O is a small fishing village on the outskirts of Da Nang, and goi ca Nam O is its single most famous export. Fresh herring or anchovy is filleted within hours of being landed, sliced paper-thin, and tossed with toasted rice powder until each piece is coated in a fragrant pale dust. The fish is not technically cooked — but the rice powder dries the surface and the lime juice in the sauce does the rest. Wrapped in rice paper with green banana, star fruit, fresh herbs and the village mam nem (fermented anchovy sauce thickened with peanut and pineapple), it is one of those dishes that exists nowhere else in the world.',
+    intro: 'Nam O is a small fishing village on the outskirts of Da Nang, and goi ca Nam O is its single most famous export. Fresh herring or anchovy is filleted within hours of being landed, sliced paper-thin, and tossed with toasted rice powder until each piece is coated in a fragrant pale dust. The fish is not technically cooked â€” but the rice powder dries the surface and the lime juice in the sauce does the rest. Wrapped in rice paper with green banana, star fruit, fresh herbs and the village mam nem (fermented anchovy sauce thickened with peanut and pineapple), it is one of those dishes that exists nowhere else in the world.',
     ingredientSections: [
         {
             title: 'The fish',
@@ -58,7 +58,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prepare the fish',
-            description: 'Fillet the fish and remove all bones. Slice each fillet against the grain into pieces 3mm thick. Toss the slices with lime juice in a glass bowl and let sit 5 minutes — the surface should turn opaque-white at the edges. Drain off the lime juice.',
+            description: 'Fillet the fish and remove all bones. Slice each fillet against the grain into pieces 3mm thick. Toss the slices with lime juice in a glass bowl and let sit 5 minutes â€” the surface should turn opaque-white at the edges. Drain off the lime juice.',
         },
         {
             title: 'Coat with toasted rice powder',

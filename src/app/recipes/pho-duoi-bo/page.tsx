@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/pho-duoi-bo.jpg',
 
-    intro: `Ph? duôi bò is a rich and deeply flavorful variation of traditional Vietnamese pho, made using beef oxtail.
+    intro: `Phá»Ÿ Ä‘uÃ´i bÃ² is a rich and deeply flavorful variation of traditional Vietnamese pho, made using beef oxtail.
 
 The long simmering process extracts collagen and marrow from the bones, resulting in a thick, silky, and intensely aromatic broth. The dish is hearty, comforting, and highly prized for its depth of flavor.`,
 
@@ -66,7 +66,7 @@ The long simmering process extracts collagen and marrow from the bones, resultin
         },
         {
             title: 'Simmer broth',
-            description: 'Simmer oxtail, bones, aromatics, and spices for 3–4 hours.',
+            description: 'Simmer oxtail, bones, aromatics, and spices for 3â€“4 hours.',
             tip: 'Low heat is essential to keep broth clear and rich.',
         },
         {

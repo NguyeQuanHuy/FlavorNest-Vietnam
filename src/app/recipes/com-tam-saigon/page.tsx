@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/com-tam-sai-gon.jpg',
-    intro: `Com tam means broken rice — the fractured grains left over after milling that were sold cheaply to those who could not afford whole rice. Saigon took this humble ingredient and built its most iconic dish around it. The broken grains have a slightly different texture to whole rice, absorbing sauces more readily and providing a softer, starchier base. The plate arrives loaded: a char-grilled pork chop, a fried egg, steamed pork cake (bi), scallion oil, and a pool of nuoc cham. The taste of Saigon at 7am.`,
+    intro: `Com tam means broken rice â€” the fractured grains left over after milling that were sold cheaply to those who could not afford whole rice. Saigon took this humble ingredient and built its most iconic dish around it. The broken grains have a slightly different texture to whole rice, absorbing sauces more readily and providing a softer, starchier base. The plate arrives loaded: a char-grilled pork chop, a fried egg, steamed pork cake (bi), scallion oil, and a pool of nuoc cham. The taste of Saigon at 7am.`,
     ingredientSections: [
         {
             title: 'Grilled pork chop (suon nuong)',
@@ -63,7 +63,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the sauce',
-            description: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste and adjust — it should be balanced between sweet, salty, sour, and spicy. Set aside.',
+            description: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste and adjust â€” it should be balanced between sweet, salty, sour, and spicy. Set aside.',
         },
         {
             title: 'Make the scallion oil',

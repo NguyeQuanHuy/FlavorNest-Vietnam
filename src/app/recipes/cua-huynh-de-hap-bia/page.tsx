@@ -3,37 +3,37 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'cua-huynh-de-hap-bia',
-    title: 'Cua Hu?nh –? H?p Bia (Ph˙ YÍn Slipper Lobster Steamed with Beer)',
-    subtitle: 'The rarest seafood of Ph˙ YÍn ó cua hu?nh d?, the royal slipper lobster found only in the deep waters off the central Vietnamese coast ó steamed over Vietnamese beer with lemongrass and ginger, served with the mu?i l· È that is its only worthy accompaniment.',
+    title: 'Cua Hu·ª≥nh ƒê·∫ø H·∫•p Bia (Ph√∫ Y√™n Slipper Lobster Steamed with Beer)',
+    subtitle: 'The rarest seafood of Ph√∫ Y√™n ‚Äî cua hu·ª≥nh ƒë·∫ø, the royal slipper lobster found only in the deep waters off the central Vietnamese coast ‚Äî steamed over Vietnamese beer with lemongrass and ginger, served with the mu·ªëi l√° √© that is its only worthy accompaniment.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/cua-huynh-de-hap-bia.jpg',
-    intro: `Cua hu?nh d? is the Vietnamese name for Thenus orientalis ó the slipper lobster, also called the Balmain bug in Australia and the moreton bay bug in Queensland ó a crustacean that looks like a flattened lobster, has two broad antennae instead of the spiny projections of a true lobster, and is found in the deeper waters off the central Vietnamese coast from Ph˙ YÍn south to BÏnh Thu?n. The name hu?nh d? means emperor ó a name that reflects the historical prestige of this crustacean and its reputation as the finest eating seafood of the central Vietnamese deep sea. Cua hu?nh d? commands the highest price at the Ph˙ YÍn fish market precisely because the flesh ó concentrated in the broad tail, with smaller amounts in the head section ó is unlike any other crustacean: sweet and dense like lobster tail, with a specific mineral-ocean depth that deep-water crustaceans develop and shallow-water species do not. The correct preparation for cua hu?nh d? is the simplest one: steaming over beer and lemongrass for exactly 8-10 minutes, which cooks the flesh through without robbing it of the moisture that makes it extraordinary. Any sauce applied during or after cooking competes with the flavor of the flesh ó the only accompaniment worth serving is mu?i l· È, the pounded litsea leaf salt of Ph˙ YÍn, which provides the aromatic counterpoint that completes the experience without obscuring it. Cua hu?nh d? h?p bia is a seasonal dish, available in Ph˙ YÍn markets from around April to August when the deep-sea fishing boats bring in their catches, and it is a dish to be made when you find a good source rather than planned weeks in advance.`,
+    intro: `Cua hu·ª≥nh ƒë·∫ø is the Vietnamese name for Thenus orientalis ‚Äî the slipper lobster, also called the Balmain bug in Australia and the moreton bay bug in Queensland ‚Äî a crustacean that looks like a flattened lobster, has two broad antennae instead of the spiny projections of a true lobster, and is found in the deeper waters off the central Vietnamese coast from Ph√∫ Y√™n south to B√¨nh Thu·∫≠n. The name hu·ª≥nh ƒë·∫ø means emperor ‚Äî a name that reflects the historical prestige of this crustacean and its reputation as the finest eating seafood of the central Vietnamese deep sea. Cua hu·ª≥nh ƒë·∫ø commands the highest price at the Ph√∫ Y√™n fish market precisely because the flesh ‚Äî concentrated in the broad tail, with smaller amounts in the head section ‚Äî is unlike any other crustacean: sweet and dense like lobster tail, with a specific mineral-ocean depth that deep-water crustaceans develop and shallow-water species do not. The correct preparation for cua hu·ª≥nh ƒë·∫ø is the simplest one: steaming over beer and lemongrass for exactly 8-10 minutes, which cooks the flesh through without robbing it of the moisture that makes it extraordinary. Any sauce applied during or after cooking competes with the flavor of the flesh ‚Äî the only accompaniment worth serving is mu·ªëi l√° √©, the pounded litsea leaf salt of Ph√∫ Y√™n, which provides the aromatic counterpoint that completes the experience without obscuring it. Cua hu·ª≥nh ƒë·∫ø h·∫•p bia is a seasonal dish, available in Ph√∫ Y√™n markets from around April to August when the deep-sea fishing boats bring in their catches, and it is a dish to be made when you find a good source rather than planned weeks in advance.`,
     ingredientSections: [
         {
             title: 'Slipper lobster',
             items: [
-                { amount: 800, unit: 'g', name: 'fresh slipper lobster (cua hu?nh d? / Thenus orientalis)', note: 'live or very recently caught ó 2-4 pieces depending on size. Available at Vietnamese specialty seafood markets. Substitute: Balmain bugs or Moreton Bay bugs (same species) from Australian fish markets, or scampi tails as a last resort.' },
+                { amount: 800, unit: 'g', name: 'fresh slipper lobster (cua hu·ª≥nh ƒë·∫ø / Thenus orientalis)', note: 'live or very recently caught ‚Äî 2-4 pieces depending on size. Available at Vietnamese specialty seafood markets. Substitute: Balmain bugs or Moreton Bay bugs (same species) from Australian fish markets, or scampi tails as a last resort.' },
             ],
         },
         {
             title: 'Beer steaming bath',
             items: [
-                { amount: 330, unit: 'ml', name: 'Vietnamese beer (Saigon or 333)', note: 'one can ó the specific beer of the central coast' },
+                { amount: 330, unit: 'ml', name: 'Vietnamese beer (Saigon or 333)', note: 'one can ‚Äî the specific beer of the central coast' },
                 { amount: 250, unit: 'ml', name: 'water' },
-                { amount: 4, name: 'lemongrass stalks', note: 'bruised and cut ó essential aromatic for cua hu?nh d? specifically' },
+                { amount: 4, name: 'lemongrass stalks', note: 'bruised and cut ‚Äî essential aromatic for cua hu·ª≥nh ƒë·∫ø specifically' },
                 { amount: 30, unit: 'g', name: 'fresh ginger', note: '3 slices, smashed' },
                 { amount: 4, name: 'kaffir lime leaves', note: 'torn' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
             ],
         },
         {
-            title: 'Mu?i l· È (the only accompaniment worth serving)',
+            title: 'Mu·ªëi l√° √© (the only accompaniment worth serving)',
             items: [
-                { amount: 25, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)', note: 'the Ph˙ YÍn herb that appears alongside every premium seafood in the province. Substitute: 8 kaffir lime leaves + 8 rau ram leaves ó different but the closest approximation.' },
+                { amount: 25, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)', note: 'the Ph√∫ Y√™n herb that appears alongside every premium seafood in the province. Substitute: 8 kaffir lime leaves + 8 rau rƒÉm leaves ‚Äî different but the closest approximation.' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'freshly ground black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -43,8 +43,8 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 6, name: 'kaffir lime leaves, extra', note: 'finely shredded ó scattered over the finished slipper lobster' },
-                { amount: 1, name: 'bunch fresh l· È leaves, extra', note: 'for eating raw alongside each piece' },
+                { amount: 6, name: 'kaffir lime leaves, extra', note: 'finely shredded ‚Äî scattered over the finished slipper lobster' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves, extra', note: 'for eating raw alongside each piece' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 3, name: 'spring onions', note: 'sliced' },
                 { amount: 1, name: 'bowl warm water with lime', note: 'finger bowl' },
@@ -54,33 +54,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Handle and prepare the slipper lobster',
-            description: 'Slipper lobsters are less aggressive than true lobsters but should still be handled with care ó place in the freezer for 15 minutes if live. Rinse under cold water. The slipper lobster can be steamed whole ó no cleaning required before cooking. The entire animal goes into the steamer shell-side down, flesh-side up if halved, or whole if small. For larger slipper lobsters (over 300g), halve lengthwise with a heavy knife before steaming ó this allows the steam to access the flesh more directly and produces more even cooking.',
+            description: 'Slipper lobsters are less aggressive than true lobsters but should still be handled with care ‚Äî place in the freezer for 15 minutes if live. Rinse under cold water. The slipper lobster can be steamed whole ‚Äî no cleaning required before cooking. The entire animal goes into the steamer shell-side down, flesh-side up if halved, or whole if small. For larger slipper lobsters (over 300g), halve lengthwise with a heavy knife before steaming ‚Äî this allows the steam to access the flesh more directly and produces more even cooking.',
             tip: 'Slipper lobsters have a much flatter body than true lobsters and fit more easily into a standard steamer. Smaller ones (under 200g) steam whole; larger ones benefit from halving to ensure the center of the thick tail cooks through in the same time as the edges.',
         },
         {
             title: 'Build the aromatic steaming bath',
-            description: 'Combine beer, water, bruised lemongrass, smashed ginger, torn kaffir lime leaves, and salt in the steamer base. Bring to a vigorous full boil. The steam must be intensely fragrant before the slipper lobsters go in ó this is even more important for cua hu?nh d? than for other crustaceans because the delicate deep-sea flesh absorbs the steaming aromatics more readily than shallow-water species.',
-            tip: 'The lemongrass for cua hu?nh d? steaming should be extra-bruised ó pound the stalks firmly with the back of a knife before cutting them. The more aromatic oil released into the steaming liquid, the more the steam carries into the delicate flesh.',
+            description: 'Combine beer, water, bruised lemongrass, smashed ginger, torn kaffir lime leaves, and salt in the steamer base. Bring to a vigorous full boil. The steam must be intensely fragrant before the slipper lobsters go in ‚Äî this is even more important for cua hu·ª≥nh ƒë·∫ø than for other crustaceans because the delicate deep-sea flesh absorbs the steaming aromatics more readily than shallow-water species.',
+            tip: 'The lemongrass for cua hu·ª≥nh ƒë·∫ø steaming should be extra-bruised ‚Äî pound the stalks firmly with the back of a knife before cutting them. The more aromatic oil released into the steaming liquid, the more the steam carries into the delicate flesh.',
         },
         {
             title: 'Steam for exactly 8-10 minutes',
-            description: 'Place the slipper lobsters shell-side down (or cut-side up if halved) on the steaming rack. Cover tightly. Steam over maximum heat: small whole slipper lobster (under 200g) ó 8 minutes. Halved larger slipper lobster (200-300g per half) ó 10 minutes. The flesh is done when it has turned from translucent grey-white to completely opaque white and the shell has brightened from its raw muted color to a vivid orange-red.',
-            tip: 'Cua hu?nh d? flesh is more delicate than mud crab and overcooks faster. The flesh should be just set ó firm when pressed but not tight or rubbery. Pull at the first sign of complete opaqueness throughout. One minute past correct doneness is noticeable in the texture.',
+            description: 'Place the slipper lobsters shell-side down (or cut-side up if halved) on the steaming rack. Cover tightly. Steam over maximum heat: small whole slipper lobster (under 200g) ‚Äî 8 minutes. Halved larger slipper lobster (200-300g per half) ‚Äî 10 minutes. The flesh is done when it has turned from translucent grey-white to completely opaque white and the shell has brightened from its raw muted color to a vivid orange-red.',
+            tip: 'Cua hu·ª≥nh ƒë·∫ø flesh is more delicate than mud crab and overcooks faster. The flesh should be just set ‚Äî firm when pressed but not tight or rubbery. Pull at the first sign of complete opaqueness throughout. One minute past correct doneness is noticeable in the texture.',
         },
         {
-            title: 'Make the mu?i l· È',
-            description: 'Pound the l· È leaves with coarse salt and black pepper in a mortar for 2 minutes until the leaves are completely broken down and the salt has turned green and smells intensely of the leaf ó its characteristic citrus-pepper-wild fragrance should be immediately detectable. Add sugar. Transfer to small individual dipping plates. Squeeze fresh lime directly over the salt at the table ó the lime oil released from the skin in the act of squeezing is the final aromatic element.',
-            tip: 'For cua hu?nh d? specifically, the mu?i l· È should be slightly more salt-forward than when used with chicken ó the richness of the deep-sea crustacean flesh needs a more assertive salt note to balance it. Add a small extra pinch of salt to the pounded mixture.',
+            title: 'Make the mu·ªëi l√° √©',
+            description: 'Pound the l√° √© leaves with coarse salt and black pepper in a mortar for 2 minutes until the leaves are completely broken down and the salt has turned green and smells intensely of the leaf ‚Äî its characteristic citrus-pepper-wild fragrance should be immediately detectable. Add sugar. Transfer to small individual dipping plates. Squeeze fresh lime directly over the salt at the table ‚Äî the lime oil released from the skin in the act of squeezing is the final aromatic element.',
+            tip: 'For cua hu·ª≥nh ƒë·∫ø specifically, the mu·ªëi l√° √© should be slightly more salt-forward than when used with chicken ‚Äî the richness of the deep-sea crustacean flesh needs a more assertive salt note to balance it. Add a small extra pinch of salt to the pounded mixture.',
         },
         {
-            title: 'Plate with restraint ó this ingredient needs nothing',
-            description: 'Transfer the steamed slipper lobsters to a plate. Scatter shredded kaffir lime leaves and spring onion over the top ó minimally, not the generous piling used for other preparations. Arrange the fresh l· È leaves alongside. Serve the mu?i l· È in individual small plates with lime wedges. The presentation should be clean and uncluttered ó cua hu?nh d? needs no garnish beyond the herbs and the dipping salt.',
-            tip: 'The visual restraint of the presentation for cua hu?nh d? is intentional. A cluttered plate distracts from the central reality: you have a rare and extraordinary piece of seafood in front of you. Let it be seen.',
+            title: 'Plate with restraint ‚Äî this ingredient needs nothing',
+            description: 'Transfer the steamed slipper lobsters to a plate. Scatter shredded kaffir lime leaves and spring onion over the top ‚Äî minimally, not the generous piling used for other preparations. Arrange the fresh l√° √© leaves alongside. Serve the mu·ªëi l√° √© in individual small plates with lime wedges. The presentation should be clean and uncluttered ‚Äî cua hu·ª≥nh ƒë·∫ø needs no garnish beyond the herbs and the dipping salt.',
+            tip: 'The visual restraint of the presentation for cua hu·ª≥nh ƒë·∫ø is intentional. A cluttered plate distracts from the central reality: you have a rare and extraordinary piece of seafood in front of you. Let it be seen.',
         },
         {
-            title: 'How to eat cua hu?nh d?',
-            description: 'The tail is the primary eating section: use scissors to cut along both sides of the underside shell, then lift the top shell away ó the tail meat comes out in one piece, dense and white. The head section contains less meat but has the most concentrated flavor: break it open and eat what you find inside. Dip each piece in the lime-squeezed mu?i l· È. Eat a leaf of fresh l· È raw alongside each piece of flesh. The raw leaf against the cooked meat is the Ph˙ YÍn way with every premium seafood the province produces.',
-            tip: 'The meat inside the head section of cua hu?nh d? ó analogous to crab butter ó is present in smaller quantity than in true crab but has an even more concentrated flavor. Eat it with the mu?i l· È without dipping, directly from the shell. This is the part that seafood-knowledgeable diners eat first.',
+            title: 'How to eat cua hu·ª≥nh ƒë·∫ø',
+            description: 'The tail is the primary eating section: use scissors to cut along both sides of the underside shell, then lift the top shell away ‚Äî the tail meat comes out in one piece, dense and white. The head section contains less meat but has the most concentrated flavor: break it open and eat what you find inside. Dip each piece in the lime-squeezed mu·ªëi l√° √©. Eat a leaf of fresh l√° √© raw alongside each piece of flesh. The raw leaf against the cooked meat is the Ph√∫ Y√™n way with every premium seafood the province produces.',
+            tip: 'The meat inside the head section of cua hu·ª≥nh ƒë·∫ø ‚Äî analogous to crab butter ‚Äî is present in smaller quantity than in true crab but has an even more concentrated flavor. Eat it with the mu·ªëi l√° √© without dipping, directly from the shell. This is the part that seafood-knowledgeable diners eat first.',
         },
     ],
 };

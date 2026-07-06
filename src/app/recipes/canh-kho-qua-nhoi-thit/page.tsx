@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'canh-kho-qua-nhoi-thit',
     title: 'Stuffed Bitter Melon Soup',
     subtitle:
-        'Canh Kh? Qua Nh?i Th?t � whole bitter melons stuffed with seasoned pork and wood ear, simmered in clear pork broth until the skin turns jade-green and tender.',
+        'Canh Khổ Qua Nhồi Thịt — whole bitter melons stuffed with seasoned pork and wood ear, simmered in clear pork broth until the skin turns jade-green and tender.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/canh-kho-qua-nhoi-thit.jpg',
     intro:
-        'The name kh? qua literally means "bitterness passes." This is why it lands on the Southern T?t table every year � an edible prayer that the hardships of the previous twelve months leave with the old year. The bitterness is real, but it softens in the broth, and the pork filling brings sweetness that balances the whole bowl. A dish that tastes like symbolism and comfort in equal parts.',
+        'The name khổ qua literally means "bitterness passes." This is why it lands on the Southern Tết table every year — an edible prayer that the hardships of the previous twelve months leave with the old year. The bitterness is real, but it softens in the broth, and the pork filling brings sweetness that balances the whole bowl. A dish that tastes like symbolism and comfort in equal parts.',
     ingredientSections: [
         {
             title: 'Bitter melons',
@@ -51,7 +51,7 @@ const recipe: RecipeData = {
         {
             title: 'Hollow the bitter melons',
             description: 'Cut each bitter melon into 3 or 4 even rings. Use the handle of a teaspoon to carefully scoop out the seeds and the spongy white pith from the center of each segment.',
-            tip: 'The whiter you scrape, the less bitter the final dish. That inner white lining holds the majority of the melon�s intense bitterness, so a clean scrape ensures a milder, more balanced flavor.',
+            tip: 'The whiter you scrape, the less bitter the final dish. That inner white lining holds the majority of the melon’s intense bitterness, so a clean scrape ensures a milder, more balanced flavor.',
         },
         {
             title: 'Tame the bitterness',

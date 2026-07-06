@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'bun-cha-hanoi',
     title: 'Hanoi Grilled Pork Vermicelli',
-    subtitle: 'Smoke, caramel and tangy broth — the lunch that stopped a president.',
+    subtitle: 'Smoke, caramel and tangy broth â€” the lunch that stopped a president.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/bun-cha-hanoi.jpg',
-    intro: `In May 2016, Barack Obama and Anthony Bourdain sat down at a plastic-stool eatery on Le Van Huu street in Hanoi and ordered bun cha. The photograph went viral within hours. But for Hanoians, bun cha had been their quiet lunchtime secret long before any president discovered it. Charcoal-grilled pork patties and sliced belly in a warm, tangy broth — cold vermicelli on the side, a mountain of fresh herbs, and a pot of warm dipping broth in which you submerge everything at once.`,
+    intro: `In May 2016, Barack Obama and Anthony Bourdain sat down at a plastic-stool eatery on Le Van Huu street in Hanoi and ordered bun cha. The photograph went viral within hours. But for Hanoians, bun cha had been their quiet lunchtime secret long before any president discovered it. Charcoal-grilled pork patties and sliced belly in a warm, tangy broth â€” cold vermicelli on the side, a mountain of fresh herbs, and a pot of warm dipping broth in which you submerge everything at once.`,
     ingredientSections: [
         {
             title: 'Grilled pork',

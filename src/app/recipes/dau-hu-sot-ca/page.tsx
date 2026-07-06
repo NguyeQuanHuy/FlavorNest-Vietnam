@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'dau-hu-sot-ca',
     title: 'Tofu in Tomato Sauce',
     subtitle:
-        '–?u Hu S?t C‡ ó golden-fried tofu simmered in a sweet-savoury tomato and spring onion sauce.',
+        'ƒê·∫≠u H≈© S·ªët C√† ‚Äî golden-fried tofu simmered in a sweet-savoury tomato and spring onion sauce.',
     category: 'VEGETARIAN',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/dau-hu-sot-ca.jpg',
     intro:
-        '–?u s?t c‡ is the dish that converts tofu sceptics. The secret is treating it like meat ó fried hard first so the outside turns custardy-crisp, then simmered just long enough to drink in the tomato sauce without going soggy. In Northern families it is on the table at least once a week, often without anyone planning it.',
+        'ƒê·∫≠u s·ªët c√† is the dish that converts tofu sceptics. The secret is treating it like meat ‚Äî fried hard first so the outside turns custardy-crisp, then simmered just long enough to drink in the tomato sauce without going soggy. In Northern families it is on the table at least once a week, often without anyone planning it.',
     ingredientSections: [
         {
             title: 'Tofu',
@@ -53,11 +53,11 @@ const recipe: RecipeData = {
             {
                 title: 'Fry to golden crust',
                 description: 'Heat oil in a pan over medium-high heat. Carefully add the tofu cubes and fry for about 2-3 minutes per side until each face has a light golden-brown, crispy crust. Drain the cubes on paper towels to remove excess grease.',
-                tip: 'Donít crowd the pan; if the temperature drops too much, the tofu will boil in the oil rather than fry, resulting in a soggy texture.',
+                tip: 'Don‚Äôt crowd the pan; if the temperature drops too much, the tofu will boil in the oil rather than fry, resulting in a soggy texture.',
             },
             {
                 title: 'Soften the shallots',
-                description: 'Wipe the pan or leave a tablespoon of oil. Add the finely minced shallots and garlic, sautÈing them over medium heat until they become translucent, soft, and highly fragrant.',
+                description: 'Wipe the pan or leave a tablespoon of oil. Add the finely minced shallots and garlic, saut√©ing them over medium heat until they become translucent, soft, and highly fragrant.',
                 tip: 'Low and slow is key here; you want to extract the sweetness of the shallots without burning the garlic.',
             },
             {

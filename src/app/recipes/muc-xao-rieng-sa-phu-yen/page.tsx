@@ -3,30 +3,30 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'muc-xao-rieng-sa-phu-yen',
-    title: 'M?c X‡o Ri?ng S? Ph˙ YÍn (Ph˙ YÍn Squid Stir-Fried with Galangal and Lemongrass)',
-    subtitle: 'Fresh squid stir-fried at maximum wok heat with the galangal-forward aromatic combination that defines Ph˙ YÍn\'s inland and highland cooking ó more galangal than lemongrass, more galangal than the southern x‡o s? ?t uses ó producing a squid stir-fry that is warmer, more complex, and more specifically of the central coast than the standard version.',
+    title: 'M·ª±c X√†o Ri·ªÅng S·∫£ Ph√∫ Y√™n (Ph√∫ Y√™n Squid Stir-Fried with Galangal and Lemongrass)',
+    subtitle: 'Fresh squid stir-fried at maximum wok heat with the galangal-forward aromatic combination that defines Ph√∫ Y√™n\'s inland and highland cooking ‚Äî more galangal than lemongrass, more galangal than the southern x√†o s·∫£ ·ªõt uses ‚Äî producing a squid stir-fry that is warmer, more complex, and more specifically of the central coast than the standard version.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/muc-xao-rieng-sa-phu-yen.jpg',
-    intro: `M?c x‡o ri?ng s? Ph˙ YÍn is the Ph˙ YÍn version of the squid stir-fry ó the preparation that takes the m?c x‡o s? ?t technique already documented in the general collection and makes it specifically provincial by replacing the lemongrass-dominant aromatic base with the galangal-dominant combination that characterizes Ph˙ YÍn's central and highland cooking. The difference is the same difference that separates c· kho ri?ng from c· kho g?ng, c· tr?m kho c?n from the southern versions, and the Ph˙ YÍn ?ch kho from the Mekong versions: galangal (ri?ng) as the leading aromatic rather than ginger or lemongrass. In Ph˙ YÍn's cooking, galangal appears more prominently than in any other Vietnamese regional cuisine ó a reflection of the abundant fresh galangal that grows in the province's highland interior and that the coastal communities have incorporated into their cooking across the full range of proteins and preparation methods. Applied to squid stir-fry, the galangal-forward aromatic base produces a different result from the lemongrass-forward standard version: where m?c x‡o s? ?t has a citrus-grass character that is bright and immediately aromatic, m?c x‡o ri?ng s? Ph˙ YÍn has a warmer, more complex, slightly piney character that arrives more slowly and lingers longer. The lemongrass remains present ó this is a galangal-dominant combination, not galangal-only ó and the two together produce the specific aromatic character of central Vietnamese highland cooking that neither ingredient achieves alone. The m?m nhi used in the Ph˙ YÍn version rather than standard fish sauce is the third differentiating element: the premium first-press fish sauce carries the galangal and lemongrass aromatics into the squid flesh more completely than standard fish sauce, because its higher amino acid concentration interacts with the volatile oils of the aromatics and produces a more integrated flavour in the finished dish. The 90-second cooking time from m?c x‡o s? ?t is retained ó this is non-negotiable for squid regardless of which aromatic combination is used.`,
+    intro: `M·ª±c x√†o ri·ªÅng s·∫£ Ph√∫ Y√™n is the Ph√∫ Y√™n version of the squid stir-fry ‚Äî the preparation that takes the m·ª±c x√†o s·∫£ ·ªõt technique already documented in the general collection and makes it specifically provincial by replacing the lemongrass-dominant aromatic base with the galangal-dominant combination that characterizes Ph√∫ Y√™n's central and highland cooking. The difference is the same difference that separates c√° kho ri·ªÅng from c√° kho g·ª´ng, c√° tr·∫Øm kho c·∫ßn from the southern versions, and the Ph√∫ Y√™n ·∫øch kho from the Mekong versions: galangal (ri·ªÅng) as the leading aromatic rather than ginger or lemongrass. In Ph√∫ Y√™n's cooking, galangal appears more prominently than in any other Vietnamese regional cuisine ‚Äî a reflection of the abundant fresh galangal that grows in the province's highland interior and that the coastal communities have incorporated into their cooking across the full range of proteins and preparation methods. Applied to squid stir-fry, the galangal-forward aromatic base produces a different result from the lemongrass-forward standard version: where m·ª±c x√†o s·∫£ ·ªõt has a citrus-grass character that is bright and immediately aromatic, m·ª±c x√†o ri·ªÅng s·∫£ Ph√∫ Y√™n has a warmer, more complex, slightly piney character that arrives more slowly and lingers longer. The lemongrass remains present ‚Äî this is a galangal-dominant combination, not galangal-only ‚Äî and the two together produce the specific aromatic character of central Vietnamese highland cooking that neither ingredient achieves alone. The m·∫Øm nhƒ© used in the Ph√∫ Y√™n version rather than standard fish sauce is the third differentiating element: the premium first-press fish sauce carries the galangal and lemongrass aromatics into the squid flesh more completely than standard fish sauce, because its higher amino acid concentration interacts with the volatile oils of the aromatics and produces a more integrated flavour in the finished dish. The 90-second cooking time from m·ª±c x√†o s·∫£ ·ªõt is retained ‚Äî this is non-negotiable for squid regardless of which aromatic combination is used.`,
     ingredientSections: [
         {
             title: 'Squid',
             items: [
-                { amount: 600, unit: 'g', name: 'fresh squid (m?c tuoi)', note: 'body tubes cut into rings 1.5cm wide, tentacles in clusters. Pat completely dry ó the 90-second rule applies here as in every squid stir-fry.' },
-                { amount: 1, unit: 'tbsp', name: 'm?m nhi', note: 'for pre-marinating ó the Ph˙ YÍn version uses m?m nhi even in the marinade' },
+                { amount: 600, unit: 'g', name: 'fresh squid (m·ª±c t∆∞∆°i)', note: 'body tubes cut into rings 1.5cm wide, tentacles in clusters. Pat completely dry ‚Äî the 90-second rule applies here as in every squid stir-fry.' },
+                { amount: 1, unit: 'tbsp', name: 'm·∫Øm nhƒ©', note: 'for pre-marinating ‚Äî the Ph√∫ Y√™n version uses m·∫Øm nhƒ© even in the marinade' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 0.5, unit: 'tsp', name: 'white pepper' },
             ],
         },
         {
-            title: 'Ph˙ YÍn galangal-forward aromatic base',
+            title: 'Ph√∫ Y√™n galangal-forward aromatic base',
             items: [
-                { amount: 50, unit: 'g', name: 'fresh galangal (ri?ng tuoi)', note: 'minced to paste ó more galangal than lemongrass, the Ph˙ YÍn proportion' },
-                { amount: 2, name: 'lemongrass stalks', note: 'inner stalk, minced ó secondary, supporting role' },
+                { amount: 50, unit: 'g', name: 'fresh galangal (ri·ªÅng t∆∞∆°i)', note: 'minced to paste ‚Äî more galangal than lemongrass, the Ph√∫ Y√™n proportion' },
+                { amount: 2, name: 'lemongrass stalks', note: 'inner stalk, minced ‚Äî secondary, supporting role' },
                 { amount: 5, name: 'garlic cloves', note: 'minced' },
                 { amount: 3, name: 'shallots', note: 'minced' },
                 { amount: 3, name: 'bird\'s eye chilies', note: 'minced' },
@@ -37,7 +37,7 @@ const recipe: RecipeData = {
         {
             title: 'Seasoning',
             items: [
-                { amount: 2, unit: 'tbsp', name: 'm?m nhi (Ph˙ YÍn first-press fish sauce)', note: 'added during the wok toss ó more complex than standard fish sauce in the finished dish' },
+                { amount: 2, unit: 'tbsp', name: 'm·∫Øm nhƒ© (Ph√∫ Y√™n first-press fish sauce)', note: 'added during the wok toss ‚Äî more complex than standard fish sauce in the finished dish' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil', note: 'added at the very end' },
@@ -46,17 +46,17 @@ const recipe: RecipeData = {
         {
             title: 'Finishing',
             items: [
-                { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces ó added off-heat' },
+                { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces ‚Äî added off-heat' },
                 { amount: 4, name: 'kaffir lime leaves', note: 'finely shredded' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper', note: 'freshly ground' },
             ],
         },
         {
-            title: 'To serve ó Ph˙ YÍn style',
+            title: 'To serve ‚Äî Ph√∫ Y√™n style',
             items: [
-                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
-                { amount: 1, name: 'bunch rau ram' },
-                { amount: 1, name: 'bunch fresh l· È leaves' },
+                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch rau rƒÉm' },
+                { amount: 1, name: 'bunch fresh l√° √© leaves' },
                 { amount: 2, name: 'limes, cut in wedges' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
             ],
@@ -65,23 +65,23 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate and dry the squid',
-            description: 'Combine squid rings and tentacles with m?m nhi, turmeric, and white pepper. Toss and leave 10 minutes. Then pat completely and firmly dry with paper towels. The m?m nhi in the marinade begins the flavoring process before the wok, and the drying removes the surface moisture that the marinade has drawn out. Dry squid sears; wet squid steams. The 90-second rule applies regardless of the aromatic base used.',
-            tip: 'Using m?m nhi rather than standard fish sauce in the squid marinade for the Ph˙ YÍn version produces a subtly different surface on the dried squid before it enters the wok ó the higher amino acid concentration of m?m nhi interacts with the turmeric and produces a slightly more golden, slightly more complex marinated surface that caramelizes marginally better in the hot wok.',
+            description: 'Combine squid rings and tentacles with m·∫Øm nhƒ©, turmeric, and white pepper. Toss and leave 10 minutes. Then pat completely and firmly dry with paper towels. The m·∫Øm nhƒ© in the marinade begins the flavoring process before the wok, and the drying removes the surface moisture that the marinade has drawn out. Dry squid sears; wet squid steams. The 90-second rule applies regardless of the aromatic base used.',
+            tip: 'Using m·∫Øm nhƒ© rather than standard fish sauce in the squid marinade for the Ph√∫ Y√™n version produces a subtly different surface on the dried squid before it enters the wok ‚Äî the higher amino acid concentration of m·∫Øm nhƒ© interacts with the turmeric and produces a slightly more golden, slightly more complex marinated surface that caramelizes marginally better in the hot wok.',
         },
         {
             title: 'Build the galangal-forward aromatic base',
-            description: 'Heat the wok over maximum heat until smoking. Add oil. Add the galangal paste and lemongrass together ó fry for 90 seconds until the galangal edges caramelize and the piney-citrus aroma begins to fill the room. The galangal requires slightly longer than lemongrass to develop its best character. Add garlic, shallots, and minced chili. Fry 30 more seconds. The aromatic base for m?c x‡o ri?ng s? Ph˙ YÍn should smell warmer, more complex, and more specifically central Vietnamese than the standard lemongrass-only base.',
-            tip: 'The galangal-to-lemongrass proportion ó more galangal than lemongrass ó is the single element that makes this Ph˙ YÍn rather than generic Vietnamese squid stir-fry. The cooking time for the galangal-forward base is slightly longer (90 seconds vs 60-70 seconds for lemongrass-only) because galangal is denser and takes slightly more time to release its volatile oils completely.',
+            description: 'Heat the wok over maximum heat until smoking. Add oil. Add the galangal paste and lemongrass together ‚Äî fry for 90 seconds until the galangal edges caramelize and the piney-citrus aroma begins to fill the room. The galangal requires slightly longer than lemongrass to develop its best character. Add garlic, shallots, and minced chili. Fry 30 more seconds. The aromatic base for m·ª±c x√†o ri·ªÅng s·∫£ Ph√∫ Y√™n should smell warmer, more complex, and more specifically central Vietnamese than the standard lemongrass-only base.',
+            tip: 'The galangal-to-lemongrass proportion ‚Äî more galangal than lemongrass ‚Äî is the single element that makes this Ph√∫ Y√™n rather than generic Vietnamese squid stir-fry. The cooking time for the galangal-forward base is slightly longer (90 seconds vs 60-70 seconds for lemongrass-only) because galangal is denser and takes slightly more time to release its volatile oils completely.',
         },
         {
-            title: 'Add squid ó 90 seconds, set the timer',
-            description: 'Add all the dried squid at once. Toss continuously at maximum heat. Add m?m nhi, sugar, and black pepper at 30 seconds. Continue tossing. At 60 seconds the squid should be white throughout. At 90 seconds, remove from heat. The galangal-lemongrass caramelized base should be visibly coating the squid surface ó the warm, slightly piney colour of caramelized galangal paste is slightly darker and more amber than the golden colour of caramelized lemongrass paste.',
-            tip: 'The visual difference between m?c x‡o ri?ng s? Ph˙ YÍn and m?c x‡o s? ?t at the 90-second mark: the galangal-forward version has a slightly darker, more amber caramelized coating; the lemongrass-forward version has a brighter, more golden coating. Both are correctly caramelized ó the colour difference is from the galangal\'s slightly higher natural sugar concentration.',
+            title: 'Add squid ‚Äî 90 seconds, set the timer',
+            description: 'Add all the dried squid at once. Toss continuously at maximum heat. Add m·∫Øm nhƒ©, sugar, and black pepper at 30 seconds. Continue tossing. At 60 seconds the squid should be white throughout. At 90 seconds, remove from heat. The galangal-lemongrass caramelized base should be visibly coating the squid surface ‚Äî the warm, slightly piney colour of caramelized galangal paste is slightly darker and more amber than the golden colour of caramelized lemongrass paste.',
+            tip: 'The visual difference between m·ª±c x√†o ri·ªÅng s·∫£ Ph√∫ Y√™n and m·ª±c x√†o s·∫£ ·ªõt at the 90-second mark: the galangal-forward version has a slightly darker, more amber caramelized coating; the lemongrass-forward version has a brighter, more golden coating. Both are correctly caramelized ‚Äî the colour difference is from the galangal\'s slightly higher natural sugar concentration.',
         },
         {
             title: 'Finish off-heat and serve',
-            description: 'Remove from heat at 90 seconds. Add spring onion, shredded kaffir lime leaves, and sesame oil. Toss once off the heat. Transfer immediately to a serving plate. Scatter sliced red chili. Serve with sesame crackers, fresh l· È leaves, rau ram, lime, and rice. The Ph˙ YÍn eating: squid piece on sesame cracker, raw l· È leaf placed alongside, dipped in a squeeze of lime. The galangal warmth of the squid against the citrus-camphor of the l· È leaf is the specific flavour pairing that makes m?c x‡o ri?ng s? a specifically Ph˙ YÍn preparation.',
-            tip: 'The comparison between m?c x‡o s? ?t (lemongrass-forward, bright) and m?c x‡o ri?ng s? Ph˙ YÍn (galangal-forward, warm) eaten alongside each other from the same batch of squid is the clearest possible demonstration of what aromatic proportion does to a stir-fry. The squid is identical. The technique is identical. The aromatic balance is the only variable ó and it produces two dishes that taste specifically of different parts of Vietnam.',
+            description: 'Remove from heat at 90 seconds. Add spring onion, shredded kaffir lime leaves, and sesame oil. Toss once off the heat. Transfer immediately to a serving plate. Scatter sliced red chili. Serve with sesame crackers, fresh l√° √© leaves, rau rƒÉm, lime, and rice. The Ph√∫ Y√™n eating: squid piece on sesame cracker, raw l√° √© leaf placed alongside, dipped in a squeeze of lime. The galangal warmth of the squid against the citrus-camphor of the l√° √© leaf is the specific flavour pairing that makes m·ª±c x√†o ri·ªÅng s·∫£ a specifically Ph√∫ Y√™n preparation.',
+            tip: 'The comparison between m·ª±c x√†o s·∫£ ·ªõt (lemongrass-forward, bright) and m·ª±c x√†o ri·ªÅng s·∫£ Ph√∫ Y√™n (galangal-forward, warm) eaten alongside each other from the same batch of squid is the clearest possible demonstration of what aromatic proportion does to a stir-fry. The squid is identical. The technique is identical. The aromatic balance is the only variable ‚Äî and it produces two dishes that taste specifically of different parts of Vietnam.',
         },
     ],
 };

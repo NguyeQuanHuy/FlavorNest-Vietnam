@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/canh-bi-do-thit-bam.jpg',
 
-    intro: `Canh b� d? th?t b?m is a classic Vietnamese home-style soup made with pumpkin and minced pork.
+    intro: `Canh bí đỏ thịt bằm is a classic Vietnamese home-style soup made with pumpkin and minced pork.
 
 The soup is naturally sweet, soft in texture, and very easy to eat with rice. It is often cooked in daily family meals because it is simple, nutritious, and comforting.`,
 
@@ -20,7 +20,7 @@ The soup is naturally sweet, soft in texture, and very easy to eat with rice. It
         {
             title: 'Main ingredients',
             items: [
-                { amount: 400, unit: 'g', name: 'pumpkin (b� d?)', note: 'peeled and cut into chunks' },
+                { amount: 400, unit: 'g', name: 'pumpkin (bí đỏ)', note: 'peeled and cut into chunks' },
                 { amount: 200, unit: 'g', name: 'minced pork' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'spring onion', note: 'chopped' },
@@ -44,8 +44,8 @@ The soup is naturally sweet, soft in texture, and very easy to eat with rice. It
             description: 'Peel pumpkin and cut into bite-sized chunks.',
         },
         {
-            title: 'Saut� garlic',
-            description: 'Heat a little oil and saut� garlic until fragrant.',
+            title: 'Sauté garlic',
+            description: 'Heat a little oil and sauté garlic until fragrant.',
         },
         {
             title: 'Cook minced pork',

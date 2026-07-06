@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'hu-tieu',
     title: 'Southern Pork Noodle Soup',
-    subtitle: 'Hu tieu — clear pork-and-dried-squid broth with shrimp, sliced pork and springy rice noodles. The Southern answer to pho.',
+    subtitle: 'Hu tieu â€” clear pork-and-dried-squid broth with shrimp, sliced pork and springy rice noodles. The Southern answer to pho.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/hu-tieu.jpg',
-    intro: 'Hu tieu is the Southern Vietnamese answer to pho — and it could not be more different. Where pho is brooding and cinnamon-deep, hu tieu is bright, clean, almost translucent. The broth is built on pork bones and dried squid (or dried shrimp), giving it a faint sweetness of the sea. The noodles are slim, springy rice strands. The toppings are generous: shrimp, sliced pork loin, ground pork, quail eggs, crispy fried garlic. Eaten "nuoc" (in soup) or "kho" (dry, with the broth on the side) — the choice is a small local identity test. Each Mekong town has its own version.',
+    intro: 'Hu tieu is the Southern Vietnamese answer to pho â€” and it could not be more different. Where pho is brooding and cinnamon-deep, hu tieu is bright, clean, almost translucent. The broth is built on pork bones and dried squid (or dried shrimp), giving it a faint sweetness of the sea. The noodles are slim, springy rice strands. The toppings are generous: shrimp, sliced pork loin, ground pork, quail eggs, crispy fried garlic. Eaten "nuoc" (in soup) or "kho" (dry, with the broth on the side) â€” the choice is a small local identity test. Each Mekong town has its own version.',
     ingredientSections: [
         {
             title: 'Broth',
@@ -65,12 +65,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Strain and season the broth',
-            description: 'Strain the broth through a fine sieve into a clean pot. Discard solids. Add rock sugar, fish sauce and salt. Taste — it should be clean, sweet, deeply savoury. Keep at a gentle simmer.',
+            description: 'Strain the broth through a fine sieve into a clean pot. Discard solids. Add rock sugar, fish sauce and salt. Taste â€” it should be clean, sweet, deeply savoury. Keep at a gentle simmer.',
         },
         {
             title: 'Cook the noodles',
             description: 'Bring a separate pot of water to a boil. Drop in fresh hu tieu noodles for 90 seconds until translucent and springy. Drain and divide among 4 bowls.',
-            tip: 'Never cook noodles in the broth itself — they release starch and cloud everything.',
+            tip: 'Never cook noodles in the broth itself â€” they release starch and cloud everything.',
         },
         {
             title: 'Assemble and serve',

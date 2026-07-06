@@ -3,29 +3,29 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tom-cang-xanh-nuong-muoi-ot',
-    title: 'TÙm C‡ng Xanh Nu?ng Mu?i ?t (Mekong Giant Freshwater Prawn Grilled with Chili Salt)',
-    subtitle: 'The giant freshwater prawns of the Mekong Delta ó longer than a hand, with claws the size of a finger ó split, coated in chili-salt paste, and grilled over charcoal until the shells turn vivid blue-red and the sweet river flesh inside caramelizes at the edges. The flagship seafood of the C?u Long.',
+    title: 'T√¥m C√†ng Xanh N∆∞·ªõng Mu·ªëi ·ªöt (Mekong Giant Freshwater Prawn Grilled with Chili Salt)',
+    subtitle: 'The giant freshwater prawns of the Mekong Delta ‚Äî longer than a hand, with claws the size of a finger ‚Äî split, coated in chili-salt paste, and grilled over charcoal until the shells turn vivid blue-red and the sweet river flesh inside caramelizes at the edges. The flagship seafood of the C·ª≠u Long.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/tom-cang-xanh-nuong-muoi-ot.jpg',
-    intro: `TÙm c‡ng xanh ó Macrobrachium rosenbergii, the giant freshwater prawn ó is the flagship crustacean of the Mekong Delta, a river prawn that grows to extraordinary size in the waterways and flooded rice fields of the C?u Long basin and has a flavor entirely its own: sweeter than saltwater shrimp, with a cleaner, lighter taste and a texture in the large claws that is closer to lobster knuckle than to shrimp tail. The largest tÙm c‡ng xanh, called tÙm c‡ng xanh king by the Mekong vendors, can reach 30cm in length and weight over 200g individually ó prawns that arrive at the market table with their characteristic blue-green claws and translucent grey bodies and are sold still alive and moving. Nu?ng mu?i ?t ó grilled with chili salt ó is the preparation that shows tÙm c‡ng xanh at its most straightforward and most impressive. The prawn is split lengthwise through the body (the claw is left intact and grilled whole), coated in a paste of salt, chili, lemongrass, and garlic, and grilled over charcoal at medium-high heat. The freshwater body turns from grey to a specific vivid combination of blue-green and red-orange that no saltwater crustacean replicates ó the color change of tÙm c‡ng xanh on charcoal is one of the most distinctive visual moments in Mekong Delta cooking. The flesh inside the body is sweet and delicate; the flesh inside the large claws is denser and richer, closer in character to crab claw meat. Both require different eating techniques and reward the patience required. TÙm c‡ng xanh nu?ng mu?i ?t is the dish eaten at river restaurants along the Mekong's banks from C?n Tho to Ti?n Giang, at floating restaurants moored in the current, and at the markets of Vinh Long and –?ng Th·p where the prawns arrive still wet from the river.`,
+    intro: `T√¥m c√†ng xanh ‚Äî Macrobrachium rosenbergii, the giant freshwater prawn ‚Äî is the flagship crustacean of the Mekong Delta, a river prawn that grows to extraordinary size in the waterways and flooded rice fields of the C·ª≠u Long basin and has a flavor entirely its own: sweeter than saltwater shrimp, with a cleaner, lighter taste and a texture in the large claws that is closer to lobster knuckle than to shrimp tail. The largest t√¥m c√†ng xanh, called t√¥m c√†ng xanh king by the Mekong vendors, can reach 30cm in length and weight over 200g individually ‚Äî prawns that arrive at the market table with their characteristic blue-green claws and translucent grey bodies and are sold still alive and moving. N∆∞·ªõng mu·ªëi ·ªõt ‚Äî grilled with chili salt ‚Äî is the preparation that shows t√¥m c√†ng xanh at its most straightforward and most impressive. The prawn is split lengthwise through the body (the claw is left intact and grilled whole), coated in a paste of salt, chili, lemongrass, and garlic, and grilled over charcoal at medium-high heat. The freshwater body turns from grey to a specific vivid combination of blue-green and red-orange that no saltwater crustacean replicates ‚Äî the color change of t√¥m c√†ng xanh on charcoal is one of the most distinctive visual moments in Mekong Delta cooking. The flesh inside the body is sweet and delicate; the flesh inside the large claws is denser and richer, closer in character to crab claw meat. Both require different eating techniques and reward the patience required. T√¥m c√†ng xanh n∆∞·ªõng mu·ªëi ·ªõt is the dish eaten at river restaurants along the Mekong's banks from C·∫ßn Th∆° to Ti·ªÅn Giang, at floating restaurants moored in the current, and at the markets of Vƒ©nh Long and ƒê·ªìng Th√°p where the prawns arrive still wet from the river.`,
     ingredientSections: [
         {
             title: 'Prawns',
             items: [
-                { amount: 800, unit: 'g', name: 'giant freshwater prawns (tÙm c‡ng xanh)', note: 'large, live ó 3-4 prawns per 800g at the size typical of Mekong Delta markets. If unavailable: large black tiger prawns are the closest saltwater substitute, though the flavor differs.' },
+                { amount: 800, unit: 'g', name: 'giant freshwater prawns (t√¥m c√†ng xanh)', note: 'large, live ‚Äî 3-4 prawns per 800g at the size typical of Mekong Delta markets. If unavailable: large black tiger prawns are the closest saltwater substitute, though the flavor differs.' },
             ],
         },
         {
-            title: 'Mu?i ?t paste',
+            title: 'Mu·ªëi ·ªõt paste',
             items: [
                 { amount: 1.5, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 3, name: 'bird\'s eye chilies', note: 'minced' },
                 { amount: 2, name: 'fresh red chilies', note: 'minced' },
-                { amount: 3, name: 'lemongrass stalks', note: 'inner stalk, minced to paste ó lemongrass is the essential aromatic for freshwater prawn, not just for flavor but because it neutralizes any river character in the flesh' },
+                { amount: 3, name: 'lemongrass stalks', note: 'inner stalk, minced to paste ‚Äî lemongrass is the essential aromatic for freshwater prawn, not just for flavor but because it neutralizes any river character in the flesh' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
@@ -34,7 +34,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Mekong dipping sauce (nu?c ch?m ki?u mi?n T‚y)',
+            title: 'Mekong dipping sauce (n∆∞·ªõc ch·∫•m ki·ªÉu mi·ªÅn T√¢y)',
             items: [
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 2, unit: 'tbsp', name: 'fresh lime juice' },
@@ -42,51 +42,51 @@ const recipe: RecipeData = {
                 { amount: 4, unit: 'tbsp', name: 'water' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'bird\'s eye chili', note: 'minced' },
-                { amount: 1, unit: 'tsp', name: 'tamarind paste', note: 'dissolved in 1 tbsp warm water ó the Mekong addition that gives the dipping sauce a deeper sourness than lime alone' },
+                { amount: 1, unit: 'tsp', name: 'tamarind paste', note: 'dissolved in 1 tbsp warm water ‚Äî the Mekong addition that gives the dipping sauce a deeper sourness than lime alone' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
                 { amount: 1, name: 'bunch mint' },
                 { amount: 2, name: 'limes, extra wedges' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice or fresh baguette' },
-                { amount: 1, name: 'bowl warm water with lime', note: 'finger bowl ó this dish requires hands' },
+                { amount: 1, name: 'bowl warm water with lime', note: 'finger bowl ‚Äî this dish requires hands' },
             ],
         },
     ],
     steps: [
         {
             title: 'Dispatch and prepare the prawns',
-            description: 'Place the live prawns in the freezer for 15 minutes to sedate. The large claws should be handled carefully ó even sedated, a large tÙm c‡ng xanh can deliver a significant pinch. Using a sharp, heavy knife, split the body of each prawn lengthwise from head to tail ó do not split the claw section, which is left whole for grilling. Remove the intestinal tract running through the tail. The roe (if present, orange-red eggs under the body between the swimmerets) should be left in place ó it is delicious when grilled.',
-            tip: 'Splitting only the body and leaving the claw intact is the correct technique for tÙm c‡ng xanh. The claw meat cooks at a different rate from the body meat and benefits from the whole-shell protection during the full grilling time. Splitting the claw would expose the delicate meat to direct charcoal heat and dry it out.',
+            description: 'Place the live prawns in the freezer for 15 minutes to sedate. The large claws should be handled carefully ‚Äî even sedated, a large t√¥m c√†ng xanh can deliver a significant pinch. Using a sharp, heavy knife, split the body of each prawn lengthwise from head to tail ‚Äî do not split the claw section, which is left whole for grilling. Remove the intestinal tract running through the tail. The roe (if present, orange-red eggs under the body between the swimmerets) should be left in place ‚Äî it is delicious when grilled.',
+            tip: 'Splitting only the body and leaving the claw intact is the correct technique for t√¥m c√†ng xanh. The claw meat cooks at a different rate from the body meat and benefits from the whole-shell protection during the full grilling time. Splitting the claw would expose the delicate meat to direct charcoal heat and dry it out.',
         },
         {
-            title: 'Apply the mu?i ?t paste',
-            description: 'Make the chili-salt paste by combining all paste ingredients. Apply generously to the cut surface of the split body ó pressing the paste into the flesh directly. Coat the outside of the claw shells with paste as well. Leave for 15 minutes. The lemongrass in the paste is specifically important with freshwater prawns: it neutralizes the faint river character that tÙm c‡ng xanh can carry and replaces it with the aromatic citrus-grass note that makes the finished grilled prawn taste of the delta rather than of the river.',
-            tip: 'The lemongrass quantity for tÙm c‡ng xanh is higher than for saltwater prawns specifically because freshwater crustaceans have a subtly different flavor profile that lemongrass complements and harmonizes. Three stalks for 800g of prawn is the Mekong Delta proportion.',
+            title: 'Apply the mu·ªëi ·ªõt paste',
+            description: 'Make the chili-salt paste by combining all paste ingredients. Apply generously to the cut surface of the split body ‚Äî pressing the paste into the flesh directly. Coat the outside of the claw shells with paste as well. Leave for 15 minutes. The lemongrass in the paste is specifically important with freshwater prawns: it neutralizes the faint river character that t√¥m c√†ng xanh can carry and replaces it with the aromatic citrus-grass note that makes the finished grilled prawn taste of the delta rather than of the river.',
+            tip: 'The lemongrass quantity for t√¥m c√†ng xanh is higher than for saltwater prawns specifically because freshwater crustaceans have a subtly different flavor profile that lemongrass complements and harmonizes. Three stalks for 800g of prawn is the Mekong Delta proportion.',
         },
         {
             title: 'Grill body-side down over medium-hot charcoal',
-            description: 'Place the split prawns body/cut-side down first over medium-hot charcoal ó the exposed flesh faces the heat. Grill for 4-5 minutes until the flesh is white and set and the paste has caramelized. Place the whole claws directly on the coals or the hottest part of the grill simultaneously ó they need longer. Flip the bodies shell-side down and continue 2-3 minutes. The bodies are done when the shell turns the characteristic blue-green and orange combination and the flesh pulls away from the shell.',
-            tip: 'The color change of tÙm c‡ng xanh on the grill is unlike any other crustacean ó the natural blue-green pigment in the shell reacts with the charcoal heat to produce a vivid combination of blue, green, and orange that is specific to this species. It is one of the most visually striking moments in Vietnamese cooking.',
+            description: 'Place the split prawns body/cut-side down first over medium-hot charcoal ‚Äî the exposed flesh faces the heat. Grill for 4-5 minutes until the flesh is white and set and the paste has caramelized. Place the whole claws directly on the coals or the hottest part of the grill simultaneously ‚Äî they need longer. Flip the bodies shell-side down and continue 2-3 minutes. The bodies are done when the shell turns the characteristic blue-green and orange combination and the flesh pulls away from the shell.',
+            tip: 'The color change of t√¥m c√†ng xanh on the grill is unlike any other crustacean ‚Äî the natural blue-green pigment in the shell reacts with the charcoal heat to produce a vivid combination of blue, green, and orange that is specific to this species. It is one of the most visually striking moments in Vietnamese cooking.',
         },
         {
-            title: 'Cook the claws ó they need more time',
-            description: 'The large claws of tÙm c‡ng xanh need 8-10 minutes total on the grill ó significantly more than the body. Keep them on the hottest part of the grill while the bodies cook. The claws are done when the shell is completely red-orange throughout and tapping them with tongs produces a hollow sound. The flesh inside will be dense and slightly sweet ó the best part of the entire prawn.',
-            tip: 'Under-cooked claw meat in tÙm c‡ng xanh is translucent and slightly gelatinous ó not harmful but texturally unpleasant. Correctly cooked claw meat is white throughout, firms when pressed, and pulls away from the inner claw shell in one piece. If uncertain, give the claws 2 more minutes.',
+            title: 'Cook the claws ‚Äî they need more time',
+            description: 'The large claws of t√¥m c√†ng xanh need 8-10 minutes total on the grill ‚Äî significantly more than the body. Keep them on the hottest part of the grill while the bodies cook. The claws are done when the shell is completely red-orange throughout and tapping them with tongs produces a hollow sound. The flesh inside will be dense and slightly sweet ‚Äî the best part of the entire prawn.',
+            tip: 'Under-cooked claw meat in t√¥m c√†ng xanh is translucent and slightly gelatinous ‚Äî not harmful but texturally unpleasant. Correctly cooked claw meat is white throughout, firms when pressed, and pulls away from the inner claw shell in one piece. If uncertain, give the claws 2 more minutes.',
         },
         {
             title: 'Make the Mekong dipping sauce',
-            description: 'Combine fish sauce, lime juice, sugar, water, garlic, and chili. Stir until sugar dissolves. Add the tamarind dissolved in water ó this is the southern Vietnamese addition that gives the sauce a warmer, deeper sourness than pure lime juice. Taste: the Mekong version should be slightly sweeter and slightly more sour than the standard nu?c ch?m of central Vietnam, with the tamarind providing the depth note.',
-            tip: 'The tamarind in the Mekong dipping sauce is a small addition that produces a noticeable difference ó the sourness becomes more complex and rounded, complementing the sweetness of the freshwater prawn better than pure citric acid from lime alone. Even a small amount (1 tsp dissolved paste) changes the character of the sauce.',
+            description: 'Combine fish sauce, lime juice, sugar, water, garlic, and chili. Stir until sugar dissolves. Add the tamarind dissolved in water ‚Äî this is the southern Vietnamese addition that gives the sauce a warmer, deeper sourness than pure lime juice. Taste: the Mekong version should be slightly sweeter and slightly more sour than the standard n∆∞·ªõc ch·∫•m of central Vietnam, with the tamarind providing the depth note.',
+            tip: 'The tamarind in the Mekong dipping sauce is a small addition that produces a noticeable difference ‚Äî the sourness becomes more complex and rounded, complementing the sweetness of the freshwater prawn better than pure citric acid from lime alone. Even a small amount (1 tsp dissolved paste) changes the character of the sauce.',
         },
         {
             title: 'Serve and eat at the table',
-            description: 'Transfer the grilled prawns to a large plate or newspaper-lined tray. Serve with the Mekong dipping sauce, rau ram, lime wedges, and finger bowls. To eat the body: peel the charred shell away from the flesh ó it comes off easily after grilling. Dip in the sauce. To eat the claw: use a heavy spoon or the back of a cleaver to crack the claw shell ó it is harder than the body shell and requires more force. The claw meat comes out in one piece if the prawn was correctly cooked. Eat immediately, with hands, with beer.',
-            tip: 'Cracking the claw is the skill that separates experienced tÙm c‡ng xanh eaters from first-timers. The correct technique: hold the claw with one hand, tap firmly with the back of a spoon along the joint where the two claw segments meet ó one firm tap at the right point opens the claw cleanly. Multiple light taps crush the shell into the meat.',
+            description: 'Transfer the grilled prawns to a large plate or newspaper-lined tray. Serve with the Mekong dipping sauce, rau rƒÉm, lime wedges, and finger bowls. To eat the body: peel the charred shell away from the flesh ‚Äî it comes off easily after grilling. Dip in the sauce. To eat the claw: use a heavy spoon or the back of a cleaver to crack the claw shell ‚Äî it is harder than the body shell and requires more force. The claw meat comes out in one piece if the prawn was correctly cooked. Eat immediately, with hands, with beer.',
+            tip: 'Cracking the claw is the skill that separates experienced t√¥m c√†ng xanh eaters from first-timers. The correct technique: hold the claw with one hand, tap firmly with the back of a spoon along the joint where the two claw segments meet ‚Äî one firm tap at the right point opens the claw cleanly. Multiple light taps crush the shell into the meat.',
         },
     ],
 };

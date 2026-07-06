@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'hu-tieu-kho',
     title: 'Dry Hu Tieu',
-    subtitle: 'Hu tieu kho — springy rice noodles tossed with sweet soy and fried garlic oil, with shrimp, pork and a small bowl of broth on the side.',
+    subtitle: 'Hu tieu kho â€” springy rice noodles tossed with sweet soy and fried garlic oil, with shrimp, pork and a small bowl of broth on the side.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/hu-tieu-kho.jpg',
-    intro: 'Hu tieu kho is the format Saigon mornings prefer — same toppings as the soup version, but the noodles arrive tossed with sweet soy and fried garlic oil, with the broth in a small bowl on the side. The sauce-coated noodles are slurped first while still hot and glossy; the broth is sipped between bites like tea. Choose this over hu tieu nuoc and locals will quietly nod at you. Order it with the broth poured over and they will not.',
+    intro: 'Hu tieu kho is the format Saigon mornings prefer â€” same toppings as the soup version, but the noodles arrive tossed with sweet soy and fried garlic oil, with the broth in a small bowl on the side. The sauce-coated noodles are slurped first while still hot and glossy; the broth is sipped between bites like tea. Choose this over hu tieu nuoc and locals will quietly nod at you. Order it with the broth poured over and they will not.',
     ingredientSections: [
         {
             title: 'Pork broth',
@@ -60,7 +60,7 @@ const recipe: RecipeData = {
         {
             title: 'Build the broth',
             description: 'Blanch pork bones 5 minutes, drain and rinse. Return to a clean pot with pork loin, charred onion, dried squid and 2.5L fresh water. Simmer gently for 90 minutes, skimming for the first 10. Pull the pork loin after 30 minutes, slice thin. Strain and season with rock sugar and fish sauce.',
-            tip: 'A clear sweet broth is what makes the dry version sing — it cuts through the rich noodles.',
+            tip: 'A clear sweet broth is what makes the dry version sing â€” it cuts through the rich noodles.',
         },
         {
             title: 'Cook the toppings',
@@ -68,7 +68,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the fried garlic oil',
-            description: 'Heat 6 tbsp neutral oil in a small pan over medium heat. Add 6 tbsp minced garlic and fry, stirring constantly, until pale gold — 2 minutes only. Strain immediately. Reserve 4 tbsp of the fragrant oil for tossing the noodles; reserve 4 tbsp of crispy fried garlic for garnish.',
+            description: 'Heat 6 tbsp neutral oil in a small pan over medium heat. Add 6 tbsp minced garlic and fry, stirring constantly, until pale gold â€” 2 minutes only. Strain immediately. Reserve 4 tbsp of the fragrant oil for tossing the noodles; reserve 4 tbsp of crispy fried garlic for garnish.',
             tip: 'Burnt garlic ruins the dish. Pull it the moment it turns gold, not brown.',
         },
         {
@@ -77,7 +77,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cook the noodles',
-            description: 'Bring water to a boil. Cook fresh hu tieu noodles for 90 seconds until springy and translucent. Drain and add immediately to the dressing bowl while still hot — toss thoroughly until every strand is glossy.',
+            description: 'Bring water to a boil. Cook fresh hu tieu noodles for 90 seconds until springy and translucent. Drain and add immediately to the dressing bowl while still hot â€” toss thoroughly until every strand is glossy.',
         },
         {
             title: 'Plate and serve',

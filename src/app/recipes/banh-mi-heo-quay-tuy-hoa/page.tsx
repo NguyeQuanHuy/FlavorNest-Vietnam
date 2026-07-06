@@ -3,43 +3,43 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-mi-heo-quay-tuy-hoa',
-    title: 'B·nh MÏ Heo Quay Tuy HÚa (Tuy HÚa Crispy Pork Belly B·nh MÏ)',
-    subtitle: 'A Vietnamese baguette filled with slices of crispy pork belly, pork liver p‚tÈ, butter, pickled daikon and carrot, fresh cucumber, cilantro, spring onion, and the specific chili sauce of Tuy HÚa ó the b·nh mÏ that Ph˙ YÍn people consider the definitive version of the sandwich.',
+    title: 'B√°nh M√¨ Heo Quay Tuy H√≤a (Tuy H√≤a Crispy Pork Belly B√°nh M√¨)',
+    subtitle: 'A Vietnamese baguette filled with slices of crispy pork belly, pork liver p√¢t√©, butter, pickled daikon and carrot, fresh cucumber, cilantro, spring onion, and the specific chili sauce of Tuy H√≤a ‚Äî the b√°nh m√¨ that Ph√∫ Y√™n people consider the definitive version of the sandwich.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-mi-heo-quay-tuy-hoa.jpg',
-    intro: `B·nh mÏ heo quay Tuy HÚa is the version of b·nh mÏ that Ph˙ YÍn people consider definitive ó not the Saigon b·nh mÏ with its abundance of cold cuts, not the H?i An chicken b·nh mÏ, but this specific assembly built around heo quay: crispy roast pork belly with crackling skin that shatters when the sandwich is pressed together, producing a textural contrast that no other b·nh mÏ filling can provide. The b·nh mÏ of Tuy HÚa is notable for several specific elements that distinguish it from versions in other cities. The bread is thin-crusted and particularly airy ó the local bakers in Tuy HÚa have been making b·nh mÏ for generations with a crumb structure that is softer than Saigon versions, allowing the bread to compress slightly when bitten without the filling shooting out. The p‚tÈ is applied generously and directly onto the buttered bread before any other filling ó in Tuy HÚa it is always pork liver p‚tÈ from a specific brand sold at the morning market, but any good p‚tÈ gan performs the same function. The chili sauce is made fresh at the shop each morning ó not from a bottle, not from hoisin, but from a specific preparation of bird's eye chili, garlic, and sugar that is simultaneously fiery and slightly sweet. The heo quay itself is sliced at the moment of assembly so the crackling skin is still warm and the fat beneath it is still slightly soft. B·nh mÏ heo quay Tuy HÚa is the morning food of the city ó sold from 6am to 9am at the stalls near Ch? Tuy HÚa and consumed immediately, standing or walking, still warm from the assembly.`,
+    intro: `B√°nh m√¨ heo quay Tuy H√≤a is the version of b√°nh m√¨ that Ph√∫ Y√™n people consider definitive ‚Äî not the Saigon b√°nh m√¨ with its abundance of cold cuts, not the H·ªôi An chicken b√°nh m√¨, but this specific assembly built around heo quay: crispy roast pork belly with crackling skin that shatters when the sandwich is pressed together, producing a textural contrast that no other b√°nh m√¨ filling can provide. The b√°nh m√¨ of Tuy H√≤a is notable for several specific elements that distinguish it from versions in other cities. The bread is thin-crusted and particularly airy ‚Äî the local bakers in Tuy H√≤a have been making b√°nh m√¨ for generations with a crumb structure that is softer than Saigon versions, allowing the bread to compress slightly when bitten without the filling shooting out. The p√¢t√© is applied generously and directly onto the buttered bread before any other filling ‚Äî in Tuy H√≤a it is always pork liver p√¢t√© from a specific brand sold at the morning market, but any good p√¢t√© gan performs the same function. The chili sauce is made fresh at the shop each morning ‚Äî not from a bottle, not from hoisin, but from a specific preparation of bird's eye chili, garlic, and sugar that is simultaneously fiery and slightly sweet. The heo quay itself is sliced at the moment of assembly so the crackling skin is still warm and the fat beneath it is still slightly soft. B√°nh m√¨ heo quay Tuy H√≤a is the morning food of the city ‚Äî sold from 6am to 9am at the stalls near Ch·ª£ Tuy H√≤a and consumed immediately, standing or walking, still warm from the assembly.`,
     ingredientSections: [
         {
-            title: 'B·nh mÏ bread',
+            title: 'B√°nh m√¨ bread',
             items: [
-                { amount: 4, name: 'Vietnamese baguettes (b·nh mÏ)', note: '25-30cm long, thin-crusted, airy crumb. Fresh from a Vietnamese bakery if possible ó day-old bread should be warmed in the oven for 3 minutes at 180∞C before assembling.' },
+                { amount: 4, name: 'Vietnamese baguettes (b√°nh m√¨)', note: '25-30cm long, thin-crusted, airy crumb. Fresh from a Vietnamese bakery if possible ‚Äî day-old bread should be warmed in the oven for 3 minutes at 180¬∞C before assembling.' },
             ],
         },
         {
             title: 'Crispy pork belly (heo quay)',
             items: [
-                { amount: 600, unit: 'g', name: 'crispy pork belly with crackling skin', note: 'from the ba ch? quay recipe on this site, or purchased from a Vietnamese roast pork shop (ti?m heo quay). The skin must be genuinely crispy ó not soft or chewy.' },
+                { amount: 600, unit: 'g', name: 'crispy pork belly with crackling skin', note: 'from the ba ch·ªâ quay recipe on this site, or purchased from a Vietnamese roast pork shop (ti·ªám heo quay). The skin must be genuinely crispy ‚Äî not soft or chewy.' },
             ],
         },
         {
             title: 'Essential fillings',
             items: [
-                { amount: 4, unit: 'tbsp', name: 'unsalted butter', note: 'room temperature ó spread generously on both inner surfaces of the bread first' },
-                { amount: 8, unit: 'tbsp', name: 'pork liver p‚tÈ (p‚tÈ gan)', note: 'Vissan brand or good-quality French-style pork p‚tÈ. Applied directly on top of the butter, before any other filling.' },
-                { amount: 1, name: 'cucumber', note: 'sliced lengthwise into thin batons ó 2-3 per sandwich' },
+                { amount: 4, unit: 'tbsp', name: 'unsalted butter', note: 'room temperature ‚Äî spread generously on both inner surfaces of the bread first' },
+                { amount: 8, unit: 'tbsp', name: 'pork liver p√¢t√© (p√¢t√© gan)', note: 'Vissan brand or good-quality French-style pork p√¢t√©. Applied directly on top of the butter, before any other filling.' },
+                { amount: 1, name: 'cucumber', note: 'sliced lengthwise into thin batons ‚Äî 2-3 per sandwich' },
                 { amount: 6, name: 'spring onions', note: 'green parts, cut into 5cm pieces' },
-                { amount: 1, name: 'bunch cilantro', note: 'whole sprigs ó the essential Vietnamese b·nh mÏ herb' },
+                { amount: 1, name: 'bunch cilantro', note: 'whole sprigs ‚Äî the essential Vietnamese b√°nh m√¨ herb' },
             ],
         },
         {
-            title: '–? chua (pickled daikon and carrot)',
+            title: 'ƒê·ªì chua (pickled daikon and carrot)',
             items: [
                 { amount: 1, name: 'medium carrot', note: 'julienned' },
-                { amount: 150, unit: 'g', name: 'daikon radish (c? c?i tr?ng)', note: 'julienned' },
+                { amount: 150, unit: 'g', name: 'daikon radish (c·ªß c·∫£i tr·∫Øng)', note: 'julienned' },
                 { amount: 100, unit: 'ml', name: 'rice vinegar' },
                 { amount: 2, unit: 'tbsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
@@ -47,9 +47,9 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Tuy HÚa fresh chili sauce',
+            title: 'Tuy H√≤a fresh chili sauce',
             items: [
-                { amount: 10, name: 'bird\'s eye chilies', note: 'the sauce should be genuinely spicy ó this is not decorative' },
+                { amount: 10, name: 'bird\'s eye chilies', note: 'the sauce should be genuinely spicy ‚Äî this is not decorative' },
                 { amount: 3, name: 'garlic cloves' },
                 { amount: 1, unit: 'tbsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
@@ -60,41 +60,41 @@ const recipe: RecipeData = {
         {
             title: 'Optional additions',
             items: [
-                { amount: 4, unit: 'tbsp', name: 'maggi seasoning sauce', note: 'a few drops drizzled inside ó the umami layer that many Tuy HÚa b·nh mÏ shops add' },
-                { amount: 2, name: 'eggs, fried', note: 'some Tuy HÚa versions include a fried egg ó b·nh mÏ tr?ng heo quay' },
+                { amount: 4, unit: 'tbsp', name: 'maggi seasoning sauce', note: 'a few drops drizzled inside ‚Äî the umami layer that many Tuy H√≤a b√°nh m√¨ shops add' },
+                { amount: 2, name: 'eggs, fried', note: 'some Tuy H√≤a versions include a fried egg ‚Äî b√°nh m√¨ tr·ª©ng heo quay' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Make the d? chua first ó minimum 30 minutes ahead',
-            description: 'Dissolve sugar and salt in warm water. Add rice vinegar. Combine with julienned carrot and daikon. Toss to coat and leave for minimum 30 minutes at room temperature ó the vegetables should taste bright and sweet-sour with retained crunch. Refrigerate if making further ahead. Good d? chua keeps for 2 weeks refrigerated and improves for the first 2 days.',
-            tip: 'The d? chua must be made ahead ó this is the component that requires time and is the one most b·nh mÏ at home get wrong by using fresh vegetables. The pickled vegetables provide the acidity that balances the fat of the pork belly and p‚tÈ. Without them the sandwich is rich and heavy; with them it is complete.',
+            title: 'Make the ƒë·ªì chua first ‚Äî minimum 30 minutes ahead',
+            description: 'Dissolve sugar and salt in warm water. Add rice vinegar. Combine with julienned carrot and daikon. Toss to coat and leave for minimum 30 minutes at room temperature ‚Äî the vegetables should taste bright and sweet-sour with retained crunch. Refrigerate if making further ahead. Good ƒë·ªì chua keeps for 2 weeks refrigerated and improves for the first 2 days.',
+            tip: 'The ƒë·ªì chua must be made ahead ‚Äî this is the component that requires time and is the one most b√°nh m√¨ at home get wrong by using fresh vegetables. The pickled vegetables provide the acidity that balances the fat of the pork belly and p√¢t√©. Without them the sandwich is rich and heavy; with them it is complete.',
         },
         {
-            title: 'Make the Tuy HÚa fresh chili sauce',
-            description: 'Blend bird\'s eye chilies, garlic, sugar, salt, rice vinegar, and water until smooth. Do not strain ó the small seeds and skin of the chili stay in the sauce and add texture. Taste: it should be fiery, slightly sweet, and sharp from the vinegar. This sauce is made fresh for each day\'s service at Tuy HÚa b·nh mÏ shops ó it is not a stored sauce. Make it the morning of serving.',
-            tip: 'The freshness of the chili sauce is what distinguishes Tuy HÚa b·nh mÏ from versions using bottled sriracha or commercial chili sauce. Fresh bird\'s eye chili has a specific brightness and heat character that aged commercial sauce does not. Make it fresh and use it the same day.',
+            title: 'Make the Tuy H√≤a fresh chili sauce',
+            description: 'Blend bird\'s eye chilies, garlic, sugar, salt, rice vinegar, and water until smooth. Do not strain ‚Äî the small seeds and skin of the chili stay in the sauce and add texture. Taste: it should be fiery, slightly sweet, and sharp from the vinegar. This sauce is made fresh for each day\'s service at Tuy H√≤a b√°nh m√¨ shops ‚Äî it is not a stored sauce. Make it the morning of serving.',
+            tip: 'The freshness of the chili sauce is what distinguishes Tuy H√≤a b√°nh m√¨ from versions using bottled sriracha or commercial chili sauce. Fresh bird\'s eye chili has a specific brightness and heat character that aged commercial sauce does not. Make it fresh and use it the same day.',
         },
         {
             title: 'Prepare and slice the heo quay',
-            description: 'If using freshly made ba ch? quay, slice immediately before assembly ó the crackling is at its most dramatic when still warm. Slice into pieces 5-6mm thick with the crackling skin intact on each piece. If using purchased heo quay that has cooled: place skin-side up on a wire rack and blast in a 230∞C oven for 5-7 minutes to re-crisp the skin before slicing. Never microwave heo quay ó it destroys the crackling permanently.',
-            tip: 'The crackling must be crispy when it goes into the sandwich ó soft crackling defeats the purpose of the heo quay b·nh mÏ. The contrast of shatteringly crisp skin, soft fat, and tender meat against the soft bread is the entire textural point of this sandwich.',
+            description: 'If using freshly made ba ch·ªâ quay, slice immediately before assembly ‚Äî the crackling is at its most dramatic when still warm. Slice into pieces 5-6mm thick with the crackling skin intact on each piece. If using purchased heo quay that has cooled: place skin-side up on a wire rack and blast in a 230¬∞C oven for 5-7 minutes to re-crisp the skin before slicing. Never microwave heo quay ‚Äî it destroys the crackling permanently.',
+            tip: 'The crackling must be crispy when it goes into the sandwich ‚Äî soft crackling defeats the purpose of the heo quay b√°nh m√¨. The contrast of shatteringly crisp skin, soft fat, and tender meat against the soft bread is the entire textural point of this sandwich.',
         },
         {
             title: 'Warm the bread',
-            description: 'If the b·nh mÏ is not fresh from the bakery, warm in a 180∞C oven for 3 minutes ó just enough to restore the crust crispness. The outer crust should be firm when squeezed; the inner crumb should be soft and airy. Cut lengthwise along one side, opening like a book but leaving one side intact ó do not cut all the way through or the filling falls out.',
-            tip: 'The bread temperature matters. Warm bread against the cold pickled vegetables and the warm pork creates the specific contrast that makes a b·nh mÏ satisfying. Cold bread from the refrigerator does not provide this contrast.',
+            description: 'If the b√°nh m√¨ is not fresh from the bakery, warm in a 180¬∞C oven for 3 minutes ‚Äî just enough to restore the crust crispness. The outer crust should be firm when squeezed; the inner crumb should be soft and airy. Cut lengthwise along one side, opening like a book but leaving one side intact ‚Äî do not cut all the way through or the filling falls out.',
+            tip: 'The bread temperature matters. Warm bread against the cold pickled vegetables and the warm pork creates the specific contrast that makes a b√°nh m√¨ satisfying. Cold bread from the refrigerator does not provide this contrast.',
         },
         {
-            title: 'Assemble in the correct Tuy HÚa order',
-            description: 'The assembly order is specific and matters for flavor integration: 1) Spread butter generously on both inner surfaces. 2) Spread p‚tÈ directly onto the butter on the bottom half. 3) Layer pork belly slices on the p‚tÈ ó the fat side down, crackling up. 4) Add d? chua generously. 5) Lay cucumber batons and spring onion pieces over the d? chua. 6) Tuck cilantro sprigs in. 7) Drizzle Tuy HÚa chili sauce over everything. 8) Add a few drops of maggi if using. Close and press gently.',
-            tip: 'The p‚tÈ directly on butter (not on top of the meat) is the structural element ó it adheres to the bread surface and provides the foundation of savory depth that the rest of the filling builds on. P‚tÈ placed on top of the meat slides out with the first bite.',
+            title: 'Assemble in the correct Tuy H√≤a order',
+            description: 'The assembly order is specific and matters for flavor integration: 1) Spread butter generously on both inner surfaces. 2) Spread p√¢t√© directly onto the butter on the bottom half. 3) Layer pork belly slices on the p√¢t√© ‚Äî the fat side down, crackling up. 4) Add ƒë·ªì chua generously. 5) Lay cucumber batons and spring onion pieces over the ƒë·ªì chua. 6) Tuck cilantro sprigs in. 7) Drizzle Tuy H√≤a chili sauce over everything. 8) Add a few drops of maggi if using. Close and press gently.',
+            tip: 'The p√¢t√© directly on butter (not on top of the meat) is the structural element ‚Äî it adheres to the bread surface and provides the foundation of savory depth that the rest of the filling builds on. P√¢t√© placed on top of the meat slides out with the first bite.',
         },
         {
-            title: 'Eat immediately ó b·nh mÏ waits for nobody',
-            description: 'Wrap the assembled b·nh mÏ in paper or a napkin and eat immediately. The crackling begins softening from the moisture of the vegetables and the steam of the warm bread within 5 minutes of assembly. A b·nh mÏ heo quay Tuy HÚa eaten within 2 minutes of assembly is a different eating experience from one that has sat for 10 minutes. The crackling shatters. The bread crust cracks. The cold pickled vegetables contrast with the warm pork fat. This is the Tuy HÚa morning.',
-            tip: 'The Tuy HÚa practice of eating b·nh mÏ immediately ó standing at the stall, walking away with it, eating in the first 2 minutes ó is not impatience. It is the correct way to eat this sandwich. Plan to eat it the moment it is assembled, not to photograph it and then eat it.',
+            title: 'Eat immediately ‚Äî b√°nh m√¨ waits for nobody',
+            description: 'Wrap the assembled b√°nh m√¨ in paper or a napkin and eat immediately. The crackling begins softening from the moisture of the vegetables and the steam of the warm bread within 5 minutes of assembly. A b√°nh m√¨ heo quay Tuy H√≤a eaten within 2 minutes of assembly is a different eating experience from one that has sat for 10 minutes. The crackling shatters. The bread crust cracks. The cold pickled vegetables contrast with the warm pork fat. This is the Tuy H√≤a morning.',
+            tip: 'The Tuy H√≤a practice of eating b√°nh m√¨ immediately ‚Äî standing at the stall, walking away with it, eating in the first 2 minutes ‚Äî is not impatience. It is the correct way to eat this sandwich. Plan to eat it the moment it is assembled, not to photograph it and then eat it.',
         },
     ],
 };

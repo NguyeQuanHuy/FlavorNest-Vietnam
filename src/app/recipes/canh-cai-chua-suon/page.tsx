@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'canh-cai-chua-suon',
     title: 'Sour Mustard Greens Soup with Pork Ribs (Canh Cai Chua Suon)',
-    subtitle: 'Tangy fermented mustard greens soup with tender pork ribs ó a classic Vietnamese comfort dish.',
+    subtitle: 'Tangy fermented mustard greens soup with tender pork ribs ‚Äî a classic Vietnamese comfort dish.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '75 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/canh-cai-chua-suon.jpg',
 
-    intro: `Canh c?i chua su?n is a traditional Vietnamese sour soup made with fermented mustard greens and pork ribs.
+    intro: `Canh c·∫£i chua s∆∞·ªùn is a traditional Vietnamese sour soup made with fermented mustard greens and pork ribs.
 
 The broth has a natural tanginess from the pickled vegetables, balanced with the sweetness of slow-cooked pork ribs. It is a very popular everyday family dish in Vietnam.`,
 
@@ -21,7 +21,7 @@ The broth has a natural tanginess from the pickled vegetables, balanced with the
             title: 'Main ingredients',
             items: [
                 { amount: 500, unit: 'g', name: 'pork ribs', note: 'cut into pieces' },
-                { amount: 300, unit: 'g', name: 'fermented mustard greens (c?i chua)' },
+                { amount: 300, unit: 'g', name: 'fermented mustard greens (c·∫£i chua)' },
                 { amount: 2, name: 'tomatoes', note: 'quartered' },
                 { amount: 2, name: 'shallots', note: 'sliced' },
             ],
@@ -44,8 +44,8 @@ The broth has a natural tanginess from the pickled vegetables, balanced with the
             description: 'Blanch pork ribs in boiling water to remove impurities, then rinse clean.',
         },
         {
-            title: 'SautÈ aromatics',
-            description: 'Heat oil and sautÈ shallots until fragrant.',
+            title: 'Saut√© aromatics',
+            description: 'Heat oil and saut√© shallots until fragrant.',
         },
         {
             title: 'Cook ribs',
@@ -53,7 +53,7 @@ The broth has a natural tanginess from the pickled vegetables, balanced with the
         },
         {
             title: 'Simmer broth',
-            description: 'Add water and simmer ribs for 45ñ60 minutes until tender.',
+            description: 'Add water and simmer ribs for 45‚Äì60 minutes until tender.',
             tip: 'Low heat makes the broth clear and sweet.',
         },
         {
@@ -66,7 +66,7 @@ The broth has a natural tanginess from the pickled vegetables, balanced with the
         },
         {
             title: 'Finish',
-            description: 'Simmer 5ñ10 more minutes and serve hot.',
+            description: 'Simmer 5‚Äì10 more minutes and serve hot.',
         },
     ],
 };

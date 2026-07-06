@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-xeo-mien-tay',
     title: 'Crispy Mekong Delta Banh Xeo',
-    subtitle: 'A giant, crackling turmeric crepe ó lacy, golden, and meant to be torn, wrapped, and devoured.',
+    subtitle: 'A giant, crackling turmeric crepe ‚Äî lacy, golden, and meant to be torn, wrapped, and devoured.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -12,11 +12,11 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-xeo-mien-tay.jpg',
 
-    intro: `:contentReference[oaicite:0]{index=0} is the bold, oversized version of Vietnamís famous sizzling crepe. Unlike the smaller Central style, this southern classic stretches across a wide pan, forming a thin, lacy crust infused with turmeric and coconut milk.
+    intro: `:contentReference[oaicite:0]{index=0} is the bold, oversized version of Vietnam‚Äôs famous sizzling crepe. Unlike the smaller Central style, this southern classic stretches across a wide pan, forming a thin, lacy crust infused with turmeric and coconut milk.
 
-The batter hits the hot oil with a sharp ìxËoî ó a sound that gives the dish its name ó before setting into a golden, crispy shell. Inside, itís generously filled with shrimp, pork belly, bean sprouts, and soft mung beans.
+The batter hits the hot oil with a sharp ‚Äúx√®o‚Äù ‚Äî a sound that gives the dish its name ‚Äî before setting into a golden, crispy shell. Inside, it‚Äôs generously filled with shrimp, pork belly, bean sprouts, and soft mung beans.
 
-Itís not eaten politely. You tear it apart with your hands, wrap it in mustard greens and a wild mix of herbs, then dip it into tangy nuoc cham. Crunch, freshness, richness ó all colliding in a single bite.`,
+It‚Äôs not eaten politely. You tear it apart with your hands, wrap it in mustard greens and a wild mix of herbs, then dip it into tangy nuoc cham. Crunch, freshness, richness ‚Äî all colliding in a single bite.`,
 
     ingredientSections: [
         {
@@ -66,15 +66,15 @@ Itís not eaten politely. You tear it apart with your hands, wrap it in mustard g
         {
             title: 'Cook the crepe',
             description: 'Heat a 30cm pan over high heat. Add 2 tablespoons of oil. Add pork and prawns, cook briefly. Add shallots, bean sprouts, and mung beans. Pour in a thin layer of batter and immediately swirl to coat the pan.',
-            tip: 'The pan must be very hot ó you should hear a sharp sizzle the moment the batter hits. That sound defines the dish.',
+            tip: 'The pan must be very hot ‚Äî you should hear a sharp sizzle the moment the batter hits. That sound defines the dish.',
         },
         {
             title: 'Crisp uncovered',
-            description: 'Cover briefly for 1ñ2 minutes, then remove the lid. Continue cooking uncovered for 3ñ4 minutes until the edges turn deep golden and lift from the pan. The bottom should be evenly crisp.',
+            description: 'Cover briefly for 1‚Äì2 minutes, then remove the lid. Continue cooking uncovered for 3‚Äì4 minutes until the edges turn deep golden and lift from the pan. The bottom should be evenly crisp.',
         },
         {
             title: 'Fold and serve',
-            description: 'Fold the crepe in half and slide onto a plate. Serve immediately. Tear pieces by hand, wrap in mustard greens with herbs, and dip into nuoc cham. Eat fast ó the crunch fades quickly.',
+            description: 'Fold the crepe in half and slide onto a plate. Serve immediately. Tear pieces by hand, wrap in mustard greens with herbs, and dip into nuoc cham. Eat fast ‚Äî the crunch fades quickly.',
         },
     ],
 };

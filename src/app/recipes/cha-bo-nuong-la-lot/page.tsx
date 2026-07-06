@@ -3,42 +3,42 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'cha-bo-nuong-la-lot',
-    title: 'Ch? BÚ Nu?ng L· L?t (Beef Wrapped in Wild Betel Leaves)',
-    subtitle: 'Seasoned minced beef mixed with lemongrass, garlic, and fish sauce wrapped in fresh l· l?t leaves and grilled over charcoal until the leaf chars and smokes and the beef inside caramelizes ó the southern Vietnamese nh?u preparation where the wild betel leaf does to beef what no other herb in the collection achieves.',
+    title: 'Ch·∫£ B√≤ N∆∞·ªõng L√° L·ªët (Beef Wrapped in Wild Betel Leaves)',
+    subtitle: 'Seasoned minced beef mixed with lemongrass, garlic, and fish sauce wrapped in fresh l√° l·ªët leaves and grilled over charcoal until the leaf chars and smokes and the beef inside caramelizes ‚Äî the southern Vietnamese nh·∫≠u preparation where the wild betel leaf does to beef what no other herb in the collection achieves.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/cha-bo-nuong-la-lot.jpg',
-    intro: `Ch? bÚ nu?ng l· l?t is the beef and wild betel leaf preparation ó one of the most specific and most immediately identifiable Vietnamese dishes by aroma alone, because the fragrance of l· l?t leaves (Piper sarmentosum, wild betel leaf) charring over hardwood charcoal is unmistakable and unreproducible by any other ingredient combination. L· l?t is the leaf that most clearly belongs to specifically Vietnamese cooking rather than to the broader Southeast Asian culinary tradition ó it appears in Thai and Cambodian cooking but nowhere with the same centrality and in the same variety of preparations as in Vietnamese cuisine, where it serves as both a wrapper (for beef and pork patties) and as a herb eaten raw alongside grilled and braised preparations. The leaf has a complex aromatic character: simultaneously warm and slightly medicinal from its connection to the pepper family, with a specific clove-adjacent spice note that intensifies dramatically when the leaf makes contact with direct heat, and a slightly bitter, clean green note that moderates the richness of the beef it wraps. When a l· l?t-wrapped beef roll is placed on hot charcoal and the leaf begins to char, the specific volatile compounds in the leaf are released simultaneously ó the medicinal warmth, the clove note, the green bitterness ó and they penetrate the beef patty through the charring leaf surface, flavoring the meat from outside in during the 3-4 minutes of grilling. The result is a beef preparation that carries the l· l?t character not as a condiment but as an intrinsic flavor element ó the leaf and the beef have become one thing rather than two things presented together. Ch? bÚ nu?ng l· l?t is most commonly eaten as a component of bÚ 7 mÛn (seven beef dishes), the Vietnamese beef-tasting menu that is one of the most elaborate celebrations of a single protein in the repertoire, but it appears equally often as a standalone nh?u dish eaten with cold beer and the standard Vietnamese herb plate.`,
+    intro: `Ch·∫£ b√≤ n∆∞·ªõng l√° l·ªët is the beef and wild betel leaf preparation ‚Äî one of the most specific and most immediately identifiable Vietnamese dishes by aroma alone, because the fragrance of l√° l·ªët leaves (Piper sarmentosum, wild betel leaf) charring over hardwood charcoal is unmistakable and unreproducible by any other ingredient combination. L√° l·ªët is the leaf that most clearly belongs to specifically Vietnamese cooking rather than to the broader Southeast Asian culinary tradition ‚Äî it appears in Thai and Cambodian cooking but nowhere with the same centrality and in the same variety of preparations as in Vietnamese cuisine, where it serves as both a wrapper (for beef and pork patties) and as a herb eaten raw alongside grilled and braised preparations. The leaf has a complex aromatic character: simultaneously warm and slightly medicinal from its connection to the pepper family, with a specific clove-adjacent spice note that intensifies dramatically when the leaf makes contact with direct heat, and a slightly bitter, clean green note that moderates the richness of the beef it wraps. When a l√° l·ªët-wrapped beef roll is placed on hot charcoal and the leaf begins to char, the specific volatile compounds in the leaf are released simultaneously ‚Äî the medicinal warmth, the clove note, the green bitterness ‚Äî and they penetrate the beef patty through the charring leaf surface, flavoring the meat from outside in during the 3-4 minutes of grilling. The result is a beef preparation that carries the l√° l·ªët character not as a condiment but as an intrinsic flavor element ‚Äî the leaf and the beef have become one thing rather than two things presented together. Ch·∫£ b√≤ n∆∞·ªõng l√° l·ªët is most commonly eaten as a component of b√≤ 7 m√≥n (seven beef dishes), the Vietnamese beef-tasting menu that is one of the most elaborate celebrations of a single protein in the repertoire, but it appears equally often as a standalone nh·∫≠u dish eaten with cold beer and the standard Vietnamese herb plate.`,
     ingredientSections: [
         {
             title: 'Beef mixture',
             items: [
-                { amount: 400, unit: 'g', name: 'minced beef (th?t bÚ bam)', note: '20% fat ó not lean mince. The fat keeps the patty moist during the charcoal grilling period. Ask for a coarser grind if possible.' },
+                { amount: 400, unit: 'g', name: 'minced beef (th·ªãt b√≤ bƒÉm)', note: '20% fat ‚Äî not lean mince. The fat keeps the patty moist during the charcoal grilling period. Ask for a coarser grind if possible.' },
                 { amount: 2, name: 'lemongrass stalks', note: 'inner stalk, minced very finely' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 2, name: 'shallots', note: 'minced' },
                 { amount: 2.5, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
-                { amount: 0.5, unit: 'tsp', name: 'five-spice powder (ngu v? huong)', note: 'small amount ó the aromatic that connects this dish to Vietnamese-Chinese cooking' },
+                { amount: 0.5, unit: 'tsp', name: 'five-spice powder (ng≈© v·ªã h∆∞∆°ng)', note: 'small amount ‚Äî the aromatic that connects this dish to Vietnamese-Chinese cooking' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil' },
                 { amount: 1, unit: 'tbsp', name: 'toasted sesame seeds' },
                 { amount: 1, unit: 'tbsp', name: 'neutral oil', note: 'helps the mixture hold together' },
             ],
         },
         {
-            title: 'L· l?t leaves',
+            title: 'L√° l·ªët leaves',
             items: [
-                { amount: 30, name: 'fresh l· l?t leaves (wild betel leaves)', note: 'large, intact leaves ó the darker green the better. Available at Vietnamese specialty markets. The leaf is the preparation; there is no substitute.' },
+                { amount: 30, name: 'fresh l√° l·ªët leaves (wild betel leaves)', note: 'large, intact leaves ‚Äî the darker green the better. Available at Vietnamese specialty markets. The leaf is the preparation; there is no substitute.' },
             ],
         },
         {
             title: 'Charcoal fire',
             items: [
-                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ó the leaf chars in 3-4 minutes at this temperature' },
+                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ‚Äî the leaf chars in 3-4 minutes at this temperature' },
             ],
         },
         {
@@ -57,10 +57,10 @@ const recipe: RecipeData = {
             items: [
                 { amount: 1, name: 'head butter lettuce', note: 'leaves for wrapping' },
                 { amount: 1, name: 'bunch mint' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
-                { amount: 1, name: 'bunch perilla (tÌa tÙ)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
+                { amount: 1, name: 'bunch perilla (t√≠a t√¥)' },
                 { amount: 1, name: 'cucumber, sliced' },
-                { amount: 16, name: 'b·nh tr·ng mË (sesame rice crackers)', note: 'for serving alongside' },
+                { amount: 16, name: 'b√°nh tr√°ng m√® (sesame rice crackers)', note: 'for serving alongside' },
                 { amount: 50, unit: 'g', name: 'roasted peanuts, roughly crushed' },
                 { amount: 2, name: 'extra limes' },
             ],
@@ -69,28 +69,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make and rest the beef mixture',
-            description: 'Combine all beef mixture ingredients: minced beef, minced lemongrass, garlic, shallots, fish sauce, sugar, black pepper, five-spice, sesame oil, sesame seeds, and neutral oil. Mix thoroughly ó knead for 2-3 minutes until the mixture becomes sticky and cohesive. Refrigerate for 20 minutes. The resting period allows the fish sauce to begin seasoning the beef throughout and the lemongrass oils to integrate into the fat of the mince. Test one small patty by frying ó the seasoning should be assertive as the charcoal grilling will slightly moderate the intensity.',
-            tip: 'The beef mixture for ch? bÚ nu?ng l· l?t should be slightly more aggressively seasoned than seems correct at the testing stage ó the charcoal grilling and the charring l· l?t both moderately dilute the perceived seasoning of the finished roll. A mixture that tastes slightly over-seasoned as a fried test patty will be correctly seasoned when grilled inside the leaf.',
+            description: 'Combine all beef mixture ingredients: minced beef, minced lemongrass, garlic, shallots, fish sauce, sugar, black pepper, five-spice, sesame oil, sesame seeds, and neutral oil. Mix thoroughly ‚Äî knead for 2-3 minutes until the mixture becomes sticky and cohesive. Refrigerate for 20 minutes. The resting period allows the fish sauce to begin seasoning the beef throughout and the lemongrass oils to integrate into the fat of the mince. Test one small patty by frying ‚Äî the seasoning should be assertive as the charcoal grilling will slightly moderate the intensity.',
+            tip: 'The beef mixture for ch·∫£ b√≤ n∆∞·ªõng l√° l·ªët should be slightly more aggressively seasoned than seems correct at the testing stage ‚Äî the charcoal grilling and the charring l√° l·ªët both moderately dilute the perceived seasoning of the finished roll. A mixture that tastes slightly over-seasoned as a fried test patty will be correctly seasoned when grilled inside the leaf.',
         },
         {
-            title: 'Wrap in l· l?t ó the rolling technique',
-            description: 'Select the largest, most intact l· l?t leaves. Place a leaf shiny-side down. Place 1.5 tablespoons of the beef mixture in the center, forming a small log parallel to the leaf stem. Roll the leaf around the beef from stem to tip, tucking as you roll to keep the roll compact. Secure with a toothpick through the tip of the leaf or simply place seam-side down. The roll should be compact and firm ó loose rolls open during grilling and the beef can fall into the coals.',
-            tip: 'The shiny side of the l· l?t leaf facing down during rolling means the rough, matte surface of the leaf faces outward on the finished roll ó this is the side that chars more aggressively on the grill and produces the most aromatic result. The shiny side, now on the inside, provides a slightly more protected surface for the beef.',
+            title: 'Wrap in l√° l·ªët ‚Äî the rolling technique',
+            description: 'Select the largest, most intact l√° l·ªët leaves. Place a leaf shiny-side down. Place 1.5 tablespoons of the beef mixture in the center, forming a small log parallel to the leaf stem. Roll the leaf around the beef from stem to tip, tucking as you roll to keep the roll compact. Secure with a toothpick through the tip of the leaf or simply place seam-side down. The roll should be compact and firm ‚Äî loose rolls open during grilling and the beef can fall into the coals.',
+            tip: 'The shiny side of the l√° l·ªët leaf facing down during rolling means the rough, matte surface of the leaf faces outward on the finished roll ‚Äî this is the side that chars more aggressively on the grill and produces the most aromatic result. The shiny side, now on the inside, provides a slightly more protected surface for the beef.',
         },
         {
-            title: 'Build charcoal fire and grill ó 3-4 minutes per side',
-            description: 'Build a medium-hot charcoal fire. Place the l· l?t rolls seam-side down on the grill. The leaf will immediately begin to smoke and char at the edges ó this is correct. Grill for 3-4 minutes without moving until the bottom of the leaf is charred and the beef inside is partially cooked. Flip carefully and grill the other side 2-3 minutes. The rolls are done when the leaf is charred on both sides and the beef inside is cooked through ó test by pressing the roll firmly; it should feel firm throughout.',
-            tip: 'The charring of the l· l?t leaf during grilling is not a mistake to be avoided but the specific cooking process that produces the dish\'s defining character. A l· l?t roll grilled until the leaf is merely wilted and lightly colored produces a fraction of the aromatic intensity of a roll with properly charred leaf. The char is where the flavor is.',
+            title: 'Build charcoal fire and grill ‚Äî 3-4 minutes per side',
+            description: 'Build a medium-hot charcoal fire. Place the l√° l·ªët rolls seam-side down on the grill. The leaf will immediately begin to smoke and char at the edges ‚Äî this is correct. Grill for 3-4 minutes without moving until the bottom of the leaf is charred and the beef inside is partially cooked. Flip carefully and grill the other side 2-3 minutes. The rolls are done when the leaf is charred on both sides and the beef inside is cooked through ‚Äî test by pressing the roll firmly; it should feel firm throughout.',
+            tip: 'The charring of the l√° l·ªët leaf during grilling is not a mistake to be avoided but the specific cooking process that produces the dish\'s defining character. A l√° l·ªët roll grilled until the leaf is merely wilted and lightly colored produces a fraction of the aromatic intensity of a roll with properly charred leaf. The char is where the flavor is.',
         },
         {
             title: 'Remove toothpicks and arrange',
-            description: 'Remove the toothpicks from each roll. Arrange on a serving plate. The finished ch? bÚ nu?ng l· l?t: charred, slightly shrunken l· l?t leaf exterior with the aroma of charred wild betel filling the immediate vicinity, the beef inside visible at the ends of each roll as a golden-brown, cooked cylinder. Scatter crushed peanuts over the plate.',
-            tip: 'The aroma of correctly grilled ch? bÚ nu?ng l· l?t ó the specific combination of charred l· l?t and caramelized seasoned beef ó is one of the most immediately identifiable cooking smells in Vietnamese cuisine. It is the smell that draws people to the grill and that signals the dish is ready before any timer or visual confirmation is needed.',
+            description: 'Remove the toothpicks from each roll. Arrange on a serving plate. The finished ch·∫£ b√≤ n∆∞·ªõng l√° l·ªët: charred, slightly shrunken l√° l·ªët leaf exterior with the aroma of charred wild betel filling the immediate vicinity, the beef inside visible at the ends of each roll as a golden-brown, cooked cylinder. Scatter crushed peanuts over the plate.',
+            tip: 'The aroma of correctly grilled ch·∫£ b√≤ n∆∞·ªõng l√° l·ªët ‚Äî the specific combination of charred l√° l·ªët and caramelized seasoned beef ‚Äî is one of the most immediately identifiable cooking smells in Vietnamese cuisine. It is the smell that draws people to the grill and that signals the dish is ready before any timer or visual confirmation is needed.',
         },
         {
-            title: 'Eat the BÚ 7 MÛn way ó or the nh?u way',
-            description: 'B“ 7 M”N STYLE: Place one roll on a sheet of b·nh tr·ng mË, add herbs, cucumber, and peanuts, roll into a tight cylinder, dip in nu?c ch?m. B“ NH?U STYLE: pick up the whole roll by hand, dip directly in nu?c ch?m, eat in two bites with a fresh l· l?t leaf alongside. Both are correct ó the difference is the setting. The b·nh tr·ng mË wrapper makes the experience more complete and more structured; eating directly makes the l· l?t char the primary experience. The nu?c ch?m is not optional in either version ó the lime-fish sauce-chili brightness is the specific counterpoint to the warm, slightly medicinal sweetness of the charred leaf and the rich beef.',
-            tip: 'A raw l· l?t leaf eaten alongside the grilled roll ó not instead of but in addition to ó is the eating technique that allows comparison between the raw and cooked characters of the same leaf. The raw leaf is green, slightly medicinal, gently bitter. The charred leaf on the roll is smoky, intensely aromatic, sweet from the caramelization. Eating both in the same mouthful produces the complete l· l?t experience ó the most specific and most Vietnamese herb experience in the collection.',
+            title: 'Eat the B√≤ 7 M√≥n way ‚Äî or the nh·∫≠u way',
+            description: 'B√í 7 M√ìN STYLE: Place one roll on a sheet of b√°nh tr√°ng m√®, add herbs, cucumber, and peanuts, roll into a tight cylinder, dip in n∆∞·ªõc ch·∫•m. B√í NH·∫¨U STYLE: pick up the whole roll by hand, dip directly in n∆∞·ªõc ch·∫•m, eat in two bites with a fresh l√° l·ªët leaf alongside. Both are correct ‚Äî the difference is the setting. The b√°nh tr√°ng m√® wrapper makes the experience more complete and more structured; eating directly makes the l√° l·ªët char the primary experience. The n∆∞·ªõc ch·∫•m is not optional in either version ‚Äî the lime-fish sauce-chili brightness is the specific counterpoint to the warm, slightly medicinal sweetness of the charred leaf and the rich beef.',
+            tip: 'A raw l√° l·ªët leaf eaten alongside the grilled roll ‚Äî not instead of but in addition to ‚Äî is the eating technique that allows comparison between the raw and cooked characters of the same leaf. The raw leaf is green, slightly medicinal, gently bitter. The charred leaf on the roll is smoky, intensely aromatic, sweet from the caramelization. Eating both in the same mouthful produces the complete l√° l·ªët experience ‚Äî the most specific and most Vietnamese herb experience in the collection.',
         },
     ],
 };

@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'thit-bo-xao-bap-cai-ca-rot',
     title: 'Beef Stir-fry with Cabbage and Carrots (Bo Xao Bap Cai Ca Rot)',
-    subtitle: 'Quick, colorful stir-fry with tender beef, crunchy cabbage, and sweet carrots — simple Vietnamese home cooking.',
+    subtitle: 'Quick, colorful stir-fry with tender beef, crunchy cabbage, and sweet carrots â€” simple Vietnamese home cooking.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/thit-bo-xao-bap-cai-ca-rot.jpg',
 
-    intro: `Th?t bò xào b?p c?i cà r?t is a simple and nutritious Vietnamese home dish.
+    intro: `Thá»‹t bÃ² xÃ o báº¯p cáº£i cÃ  rá»‘t is a simple and nutritious Vietnamese home dish.
 
 Tender beef is quickly stir-fried with crunchy cabbage and sweet carrots, creating a balanced dish that is both flavorful and healthy. It is commonly served with steamed rice as a quick weekday meal.`,
 
@@ -50,7 +50,7 @@ Tender beef is quickly stir-fried with crunchy cabbage and sweet carrots, creati
         },
         {
             title: 'Stir-fry garlic',
-            description: 'Heat oil in a pan and sauté garlic until fragrant.',
+            description: 'Heat oil in a pan and sautÃ© garlic until fragrant.',
         },
         {
             title: 'Cook beef',
@@ -58,7 +58,7 @@ Tender beef is quickly stir-fried with crunchy cabbage and sweet carrots, creati
         },
         {
             title: 'Cook vegetables',
-            description: 'Add carrots and cabbage, stir-fry for 2–3 minutes until slightly tender but still crunchy.',
+            description: 'Add carrots and cabbage, stir-fry for 2â€“3 minutes until slightly tender but still crunchy.',
         },
         {
             title: 'Combine',

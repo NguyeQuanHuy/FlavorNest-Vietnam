@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'xoi-xeo',
     title: 'Golden Sticky Rice with Mung Bean',
-    subtitle: 'Xoi xeo — the breakfast of Hanoi streets, golden with turmeric and fragrant with fried shallots.',
+    subtitle: 'Xoi xeo â€” the breakfast of Hanoi streets, golden with turmeric and fragrant with fried shallots.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr',
@@ -42,7 +42,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare the sticky rice',
-            description: 'Drain soaked glutinous rice. Toss with turmeric, salt, and oil until evenly coated — the rice should turn a uniform golden yellow. Steam in a bamboo steamer or steamer basket over boiling water for 25 to 30 minutes, stirring once halfway, until grains are fully translucent and sticky.',
+            description: 'Drain soaked glutinous rice. Toss with turmeric, salt, and oil until evenly coated â€” the rice should turn a uniform golden yellow. Steam in a bamboo steamer or steamer basket over boiling water for 25 to 30 minutes, stirring once halfway, until grains are fully translucent and sticky.',
         },
         {
             title: 'Prepare the mung bean',
@@ -50,12 +50,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the shallot oil',
-            description: 'Heat oil in a small saucepan over medium heat. Add sliced shallots and cook slowly, stirring occasionally, for 8 to 12 minutes until deep golden and crispy. Watch carefully — they go from golden to burnt in seconds. Remove shallots with a slotted spoon and drain on paper towels. Reserve the fragrant oil.',
-            tip: 'The shallot oil is as important as the shallots themselves. Save every drop — it gets drizzled over the finished rice.',
+            description: 'Heat oil in a small saucepan over medium heat. Add sliced shallots and cook slowly, stirring occasionally, for 8 to 12 minutes until deep golden and crispy. Watch carefully â€” they go from golden to burnt in seconds. Remove shallots with a slotted spoon and drain on paper towels. Reserve the fragrant oil.',
+            tip: 'The shallot oil is as important as the shallots themselves. Save every drop â€” it gets drizzled over the finished rice.',
         },
         {
             title: 'Assemble',
-            description: 'Mound hot sticky rice onto plates or banana leaves. Press a generous layer of mung bean paste over the surface. Top with crispy fried shallots and drizzle shallot oil over everything. Serve immediately — xoi xeo is best eaten warm.',
+            description: 'Mound hot sticky rice onto plates or banana leaves. Press a generous layer of mung bean paste over the surface. Top with crispy fried shallots and drizzle shallot oil over everything. Serve immediately â€” xoi xeo is best eaten warm.',
         },
     ],
 };

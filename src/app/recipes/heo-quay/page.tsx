@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'heo-quay',
     title: 'Crispy Roasted Pork Belly',
 subtitle: 
-    'Crispy Roasted Pork Belly (Heo Quay) — a masterclass in textures featuring a gold-dusted, shatteringly crisp crackling atop succulent, five-spice infused pork belly.',
+    'Crispy Roasted Pork Belly (Heo Quay) â€” a masterclass in textures featuring a gold-dusted, shatteringly crisp crackling atop succulent, five-spice infused pork belly.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '5 hours',
@@ -14,7 +14,7 @@ subtitle:
     baseServings: 4,
     heroImage: '/images/recipes/heo-quay.jpg',
 intro:
-    'Crispy Roasted Pork Belly (Heo Quay) is the undisputed crown jewel of Vietnamese roasted meats, a dish where texture is just as important as taste. The magic lies in the contrast: a top layer of skin that shattered like glass upon the first bite, giving way to succulent, five-spice scented meat underneath. While it’s a staple of celebratory feasts and bustling street-side stalls, achieving that perfect, bubbly crackle at home is a rewarding ritual that transforms a simple slab of pork belly into an extraordinary centerpiece.',
+    'Crispy Roasted Pork Belly (Heo Quay) is the undisputed crown jewel of Vietnamese roasted meats, a dish where texture is just as important as taste. The magic lies in the contrast: a top layer of skin that shattered like glass upon the first bite, giving way to succulent, five-spice scented meat underneath. While itâ€™s a staple of celebratory feasts and bustling street-side stalls, achieving that perfect, bubbly crackle at home is a rewarding ritual that transforms a simple slab of pork belly into an extraordinary centerpiece.',
 ingredientSections: [
     {
         title: 'Main Meat',
@@ -65,11 +65,11 @@ ingredientSections: [
         },
         {
             title: 'First roast: Cook through',
-            description: 'Wrap the bottom and sides of the pork in aluminum foil to create a tray, leaving only the skin exposed. Roast at 180°C (350°F) for 30–40 minutes.',
+            description: 'Wrap the bottom and sides of the pork in aluminum foil to create a tray, leaving only the skin exposed. Roast at 180Â°C (350Â°F) for 30â€“40 minutes.',
         },
         {
             title: 'Second roast: The crackling',
-            description: 'Increase the temperature to 220°C (430°F). Roast for another 15–20 minutes until the skin puffed up and turns a deep golden brown.',
+            description: 'Increase the temperature to 220Â°C (430Â°F). Roast for another 15â€“20 minutes until the skin puffed up and turns a deep golden brown.',
             tip: 'Watch the oven closely during this stage; the transition from perfectly golden to burnt happens very quickly.',
         },
     ],

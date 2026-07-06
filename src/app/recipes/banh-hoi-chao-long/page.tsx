@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'banh-hoi-chao-long',
     title: 'Banh Hoi & Pork Offal Porridge (Banh Hoi Chao Long)',
-    subtitle: 'Soft rice vermicelli paired with rich pork offal porridge ó a classic Vietnamese breakfast duo.',
+    subtitle: 'Soft rice vermicelli paired with rich pork offal porridge ‚Äî a classic Vietnamese breakfast duo.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -12,17 +12,17 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-hoi-chao-long.jpg',
 
-    intro: `B·nh h?i ch·o lÚng is a traditional Vietnamese breakfast set combining two contrasting textures: delicate woven rice vermicelli (b·nh h?i) and a warm, rich pork offal porridge (ch·o lÚng).
+    intro: `B√°nh h·ªèi ch√°o l√≤ng is a traditional Vietnamese breakfast set combining two contrasting textures: delicate woven rice vermicelli (b√°nh h·ªèi) and a warm, rich pork offal porridge (ch√°o l√≤ng).
 
-The b·nh h?i is soft, airy, and lightly brushed with scallion oil, while the ch·o lÚng is hearty, aromatic, and made from pork organs simmered until tender. Together, they create a balanced meal ó light yet deeply satisfying.
+The b√°nh h·ªèi is soft, airy, and lightly brushed with scallion oil, while the ch√°o l√≤ng is hearty, aromatic, and made from pork organs simmered until tender. Together, they create a balanced meal ‚Äî light yet deeply satisfying.
 
 Often served in central and southern Vietnam, this dish is commonly enjoyed in the morning with fresh herbs, fried shallots, and dipping fish sauce.`,
 
     ingredientSections: [
         {
-            title: 'B·nh h?i',
+            title: 'B√°nh h·ªèi',
             items: [
-                { amount: 400, unit: 'g', name: 'rice vermicelli sheets (b·nh h?i)' },
+                { amount: 400, unit: 'g', name: 'rice vermicelli sheets (b√°nh h·ªèi)' },
                 { amount: 3, unit: 'tbsp', name: 'scallion oil' },
                 { amount: 1, unit: 'pinch', name: 'salt' },
             ],
@@ -54,7 +54,7 @@ Often served in central and southern Vietnam, this dish is commonly enjoyed in t
         {
             title: 'Cook the porridge base',
             description: 'Rinse rice and simmer with water until it breaks down into a soft porridge base.',
-            tip: 'Slow cooking creates a silky texture for the ch·o.',
+            tip: 'Slow cooking creates a silky texture for the ch√°o.',
         },
         {
             title: 'Prepare pork offal',
@@ -65,12 +65,12 @@ Often served in central and southern Vietnam, this dish is commonly enjoyed in t
             description: 'Add pork organs into the porridge and simmer gently. Season with fish sauce, salt, and pepper.',
         },
         {
-            title: 'Prepare b·nh h?i',
+            title: 'Prepare b√°nh h·ªèi',
             description: 'Steam or warm the rice vermicelli sheets. Brush lightly with scallion oil and a pinch of salt.',
         },
         {
             title: 'Assemble and serve',
-            description: 'Serve b·nh h?i on one plate and hot ch·o lÚng in a bowl. Add fried shallots, herbs, and dipping fish sauce on the side.',
+            description: 'Serve b√°nh h·ªèi on one plate and hot ch√°o l√≤ng in a bowl. Add fried shallots, herbs, and dipping fish sauce on the side.',
         },
     ],
 };

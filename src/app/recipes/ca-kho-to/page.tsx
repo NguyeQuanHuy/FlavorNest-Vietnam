@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'ca-kho-to',
     title: 'Clay Pot Caramelised Fish',
-    subtitle: 'Catfish braised in dark caramel with chilli and ginger — the clay pot keeps it sizzling at the table.',
+    subtitle: 'Catfish braised in dark caramel with chilli and ginger â€” the clay pot keeps it sizzling at the table.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/ca-kho-to.jpg',
-    intro: `Ca kho to is the everyday fish dish of the Mekong Delta, where catfish swim in every canal and every household keeps a clay pot for braising. The technique is the same as thit kho — caramel, fish sauce, coconut water — but applied to fish, which cooks faster and absorbs the dark, intense sauce differently. The clay pot retains heat and arrives at the table still bubbling. You eat it with plain steamed rice and let the sauce do all the work.`,
+    intro: `Ca kho to is the everyday fish dish of the Mekong Delta, where catfish swim in every canal and every household keeps a clay pot for braising. The technique is the same as thit kho â€” caramel, fish sauce, coconut water â€” but applied to fish, which cooks faster and absorbs the dark, intense sauce differently. The clay pot retains heat and arrives at the table still bubbling. You eat it with plain steamed rice and let the sauce do all the work.`,
     ingredientSections: [
         {
             title: 'Main',
@@ -52,11 +52,11 @@ const recipe: RecipeData = {
         {
             title: 'Braise until lacquered',
             description: 'Simmer uncovered for 20 to 25 minutes, basting the fish occasionally, until the sauce reduces to a thick, glossy coating. The fish should be deeply coloured and the sauce almost syrupy.',
-            tip: 'Do not stir the fish once it is in the pot — catfish breaks apart easily. Baste with a spoon instead.',
+            tip: 'Do not stir the fish once it is in the pot â€” catfish breaks apart easily. Baste with a spoon instead.',
         },
         {
             title: 'Serve',
-            description: 'Bring the clay pot directly to the table while still sizzling. Serve with steamed jasmine rice. The sauce is the star — spoon it generously over the rice.',
+            description: 'Bring the clay pot directly to the table while still sizzling. Serve with steamed jasmine rice. The sauce is the star â€” spoon it generously over the rice.',
         },
     ],
 };

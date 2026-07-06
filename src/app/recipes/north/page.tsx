@@ -29,27 +29,27 @@ const RECIPES: Recipe[] = [
     {
         slug: 'hanoi-beef-pho',
         title: 'Hanoi Beef Pho',
-        subtitle: 'Ph? B� H� N?i',
+        subtitle: 'Phở Bò Hà Nội',
         image: '/images/recipes/pho-bo-ha-noi-1.jpg',
         time: '3 hrs', difficulty: 'Medium', rating: '4.9', reviews: 248, cal: 420,
         tag: 'Iconic', tagColor: '#D97706',
-        description: "The national soul food � slow-charred bones, star anise and cinnamon simmered for hours into a clear, fragrant broth. Silky noodles, paper-thin beef and a plate of fresh herbs. The dish that defines Hanoi mornings and Vietnam's identity on the world stage.",
+        description: "The national soul food — slow-charred bones, star anise and cinnamon simmered for hours into a clear, fragrant broth. Silky noodles, paper-thin beef and a plate of fresh herbs. The dish that defines Hanoi mornings and Vietnam's identity on the world stage.",
         tags: ['Beef', 'Noodles', 'Slow Cook', 'Heritage'],
     },
     {
         slug: 'bun-cha-hanoi',
         title: 'Hanoi Grilled Pork Vermicelli',
-        subtitle: 'B�n Ch? H� N?i',
+        subtitle: 'Bún Chả Hà Nội',
         image: '/images/recipes/bun-cha-ha-noi-1.jpg',
         time: '45 min', difficulty: 'Easy', rating: '4.7', reviews: 142, cal: 380,
         tag: 'Street Classic', tagColor: '#059669',
-        description: "Chargrilled pork patties and belly strips arrive sizzling in a bowl of sweet-savory dipping broth alongside a plate of cold rice vermicelli and fresh herbs. Born on the charcoal smoke of Hanoi's old quarter streets � the dish Obama and Bourdain made famous.",
+        description: "Chargrilled pork patties and belly strips arrive sizzling in a bowl of sweet-savory dipping broth alongside a plate of cold rice vermicelli and fresh herbs. Born on the charcoal smoke of Hanoi's old quarter streets — the dish Obama and Bourdain made famous.",
         tags: ['Pork', 'Grilled', 'Noodles', 'Street Food'],
     },
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'B�nh Cu?n H� N?i',
+        subtitle: 'Bánh Cuốn Hà Nội',
         image: '/images/recipes/banh-cuon.jpg',
         time: '45 min', difficulty: 'Medium', rating: '4.8', reviews: 167, cal: 290,
         tag: 'Morning Ritual', tagColor: '#7C3AED',
@@ -59,31 +59,31 @@ const RECIPES: Recipe[] = [
     {
         slug: 'xoi-xeo',
         title: 'Mung Bean Sticky Rice',
-        subtitle: 'X�i X�o',
+        subtitle: 'Xôi Xéo',
         image: '/images/recipes/xoi-xeo.jpg',
         time: '1 hr', difficulty: 'Easy', rating: '4.8', reviews: 134, cal: 380,
         tag: 'Breakfast', tagColor: '#EA580C',
-        description: "Golden glutinous rice steamed over split mung bean until fragrant and soft, crowned with crispy fried shallots and turmeric scallion oil. Sold from bamboo baskets before dawn in Hanoi's markets � wrapped in banana leaf, eaten standing, the fuel of the city.",
+        description: "Golden glutinous rice steamed over split mung bean until fragrant and soft, crowned with crispy fried shallots and turmeric scallion oil. Sold from bamboo baskets before dawn in Hanoi's markets — wrapped in banana leaf, eaten standing, the fuel of the city.",
         tags: ['Rice', 'Vegan', 'Mung Bean', 'Quick'],
     },
     {
         slug: 'cha-ca-la-vong',
         title: 'Turmeric Fish with Dill',
-        subtitle: 'Ch? C� L� V?ng',
+        subtitle: 'Chả Cá Lã Vọng',
         image: '/images/recipes/cha-ca-la-vong.jpg',
         time: '40 min', difficulty: 'Medium', rating: '4.9', reviews: 89, cal: 340,
         tag: 'Heritage', tagColor: '#D97706',
-        description: "Hanoi's most celebrated dish � snakehead fish marinated in turmeric and galangal, sizzled tableside in a pan overflowing with dill and spring onion. Eaten with rice vermicelli, roasted peanuts and shrimp paste. A recipe guarded jealously on Ch? C� Street for 150 years.",
+        description: "Hanoi's most celebrated dish — snakehead fish marinated in turmeric and galangal, sizzled tableside in a pan overflowing with dill and spring onion. Eaten with rice vermicelli, roasted peanuts and shrimp paste. A recipe guarded jealously on Chả Cá Street for 150 years.",
         tags: ['Fish', 'Turmeric', 'Dill', 'Heritage'],
     },
     {
         slug: 'bun-thang',
         title: 'Hanoi Vermicelli Soup',
-        subtitle: 'B�n Thang',
+        subtitle: 'Bún Thang',
         image: '/images/recipes/bun-thang.jpg',
         time: '2 hrs', difficulty: 'Hard', rating: '4.8', reviews: 76, cal: 310,
         tag: 'Royal Kitchen', tagColor: '#BE185D',
-        description: "A dish of extraordinary refinement � crystal-clear chicken broth ladled over vermicelli, topped with gossamer egg ribbons, shredded poached chicken, Vietnamese ham and dried shrimp. Finished with a whisper of shrimp paste and aromatic garnishes. The Sunday dish of Hanoi's old families.",
+        description: "A dish of extraordinary refinement — crystal-clear chicken broth ladled over vermicelli, topped with gossamer egg ribbons, shredded poached chicken, Vietnamese ham and dried shrimp. Finished with a whisper of shrimp paste and aromatic garnishes. The Sunday dish of Hanoi's old families.",
         tags: ['Chicken', 'Noodles', 'Refined', 'Heritage'],
     },
     {
@@ -93,7 +93,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bun-dau-mam-tom.jpg',
         difficulty: 'Easy', time: '40 min',
         rating: '4.8', reviews: 245, cal: 410, tag: 'Hanoi Lunch', tagColor: '#7C3AED',
-        description: "Hanoi at its most unapologetic � a wooden tray loaded with cold vermicelli, golden-fried tofu, sliced boiled pork belly, fresh herbs and a small dish of mam tom (purple fermented shrimp paste) whipped with lime, sugar and chilli. Funky, briny, addictive. The dish that separates the curious from the converted.",
+        description: "Hanoi at its most unapologetic — a wooden tray loaded with cold vermicelli, golden-fried tofu, sliced boiled pork belly, fresh herbs and a small dish of mam tom (purple fermented shrimp paste) whipped with lime, sugar and chilli. Funky, briny, addictive. The dish that separates the curious from the converted.",
         tags: ['Pork', 'Tofu', 'Fermented', 'Hanoi'],
     },
     {
@@ -103,7 +103,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/mien-luon.jpg',
         difficulty: 'Hard', time: '2 hrs',
         rating: '4.9', reviews: 189, cal: 380, tag: 'Hanoi Heritage', tagColor: '#B91C1C',
-        description: "A Hanoi specialty that takes patience to do right � translucent glass noodles in a deep, faintly smoky eel broth, topped with strips of crispy fried eel, wood ear mushrooms, fried shallots and a generous shower of fresh dill. Served as soup or dry, the crisp eel against the silky noodles is the whole point.",
+        description: "A Hanoi specialty that takes patience to do right — translucent glass noodles in a deep, faintly smoky eel broth, topped with strips of crispy fried eel, wood ear mushrooms, fried shallots and a generous shower of fresh dill. Served as soup or dry, the crisp eel against the silky noodles is the whole point.",
         tags: ['Eel', 'Glass Noodles', 'Hanoi', 'Heritage'],
     },
     {
@@ -123,7 +123,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/banh-chung.jpg',
         difficulty: 'Hard', time: '12 hrs',
         rating: '4.9', reviews: 412, cal: 520, tag: 'Tet Tradition', tagColor: '#D97706',
-        description: "The most symbolic dish of Vietnamese Tet � a perfect square of glutinous rice, mung bean and seasoned pork belly wrapped tightly in banana and dong leaves, then boiled for 10 to 12 hours over a wood fire. The rice turns deep green from the leaves; the centre, still warm, smells of wood smoke and pork fat. A 4,000-year-old recipe attributed to Prince Lang Lieu.",
+        description: "The most symbolic dish of Vietnamese Tet — a perfect square of glutinous rice, mung bean and seasoned pork belly wrapped tightly in banana and dong leaves, then boiled for 10 to 12 hours over a wood fire. The rice turns deep green from the leaves; the centre, still warm, smells of wood smoke and pork fat. A 4,000-year-old recipe attributed to Prince Lang Lieu.",
         tags: ['Pork', 'Sticky Rice', 'Tet', 'Heritage'],
     },
     {
@@ -163,7 +163,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '? Saved' : '? Removed'}
+                        {toast === 'added' ? '♥ Saved' : '✕ Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -196,14 +196,14 @@ export default function NorthernCuisinePage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
             `}</style>
 
-            {/* -- HERO -- */}
+            {/* ── HERO ── */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }}>
                     <div>
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                             {[['Home', '/'], ['Recipes', '/recipes'], ['Northern', '']].map(([label, href], i) => (
                                 <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>�</span>}
+                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
                                     {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                         : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                                 </span>
@@ -236,7 +236,7 @@ export default function NorthernCuisinePage() {
                                 margin: 0,
                                 paddingLeft: 18,
                             }}>
-                                From the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>dawn ph? stalls of Hanoi</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>smoky b�n ch? of L� Van Huu street</span> � Northern Vietnamese cuisine is defined by restraint, clarity, and the quiet confidence of a thousand-year capital.
+                                From the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>dawn phở stalls of Hanoi</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>smoky bún chả of Lê Văn Hưu street</span> — Northern Vietnamese cuisine is defined by restraint, clarity, and the quiet confidence of a thousand-year capital.
                             </p>
                         </div>
                         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
@@ -260,7 +260,7 @@ export default function NorthernCuisinePage() {
                 </div>
             </section>
 
-            {/* -- FILTER + GRID -- */}
+            {/* ── FILTER + GRID ── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '64px 32px 96px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 20, marginBottom: 32 }}>
                     <div>
@@ -285,7 +285,7 @@ export default function NorthernCuisinePage() {
                                         <Image src={recipe.image} alt={recipe.title} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.9 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
                                        <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>? {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
@@ -310,13 +310,13 @@ export default function NorthernCuisinePage() {
 
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
-                        <div style={{ fontSize: 44, marginBottom: 12 }}>??</div>
+                        <div style={{ fontSize: 44, marginBottom: 12 }}>🍜</div>
                         <p style={{ fontSize: 16, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>No recipes match this filter.</p>
                     </div>
                 )}
             </section>
 
-            {/* -- EXPLORE MORE -- */}
+            {/* ── EXPLORE MORE ── */}
             <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>

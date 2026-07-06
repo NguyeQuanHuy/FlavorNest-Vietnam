@@ -4,9 +4,9 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nuoc-dua-tuoi',
-    title: 'Fresh Coconut Water (Nu?c D?a Tuoi)',
+    title: 'Fresh Coconut Water (Nước Dừa Tươi)',
     subtitle:
-        'Fresh Coconut Water � nature�s ultimate electrolyte drink, served chilled straight from the shell for a sweet, nutty, and incredibly hydrating experience.',
+        'Fresh Coconut Water — nature’s ultimate electrolyte drink, served chilled straight from the shell for a sweet, nutty, and incredibly hydrating experience.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '5 min',
@@ -14,12 +14,12 @@ const recipe: RecipeData = {
     baseServings: 1,
     heroImage: '/images/recipes/nuoc-dua-tuoi.jpg',
     intro:
-        'In the tropical heat of Vietnam, "Nu?c D?a" is the gold standard of refreshments. Unlike bottled versions, fresh coconut water is alive with a delicate sweetness and a complex mineral profile that shifts depending on the variety of the coconut. From the tiny, super-sweet "D?a Xi�m" to the larger, refreshing types found on every street corner, this drink is a testament to the simplicity of natural perfection�often enjoyed with a spoon to scoop out the tender, translucent flesh.',
+        'In the tropical heat of Vietnam, "Nước Dừa" is the gold standard of refreshments. Unlike bottled versions, fresh coconut water is alive with a delicate sweetness and a complex mineral profile that shifts depending on the variety of the coconut. From the tiny, super-sweet "Dừa Xiêm" to the larger, refreshing types found on every street corner, this drink is a testament to the simplicity of natural perfection—often enjoyed with a spoon to scoop out the tender, translucent flesh.',
     ingredientSections: [
         {
             title: 'The Fruit',
             items: [
-                { amount: 1, unit: 'whole', name: 'young green coconut', note: 'look for "D?a Xi�m" for the best sweetness' },
+                { amount: 1, unit: 'whole', name: 'young green coconut', note: 'look for "Dừa Xiêm" for the best sweetness' },
             ],
         },
         {

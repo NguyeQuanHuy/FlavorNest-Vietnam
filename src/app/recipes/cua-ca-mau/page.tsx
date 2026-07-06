@@ -4,14 +4,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'cua-ca-mau',
     title: 'Ca Mau Mud Crab Stir-Fry',
-    subtitle: 'Cua Ca Mau Rang Me — the famous Ca Mau mud crab stir-fried in tamarind, fish sauce caramel and fragrant aromatics.',
+    subtitle: 'Cua Ca Mau Rang Me â€” the famous Ca Mau mud crab stir-fried in tamarind, fish sauce caramel and fragrant aromatics.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1600&q=85',
-    intro: 'Ca Mau province at the southernmost tip of Vietnam produces what many Vietnamese consider the finest mud crab in the country. The Ca Mau mangrove ecosystem — a maze of brackish channels and tidal flats — produces crabs with extraordinarily sweet, dense flesh. The classic preparation is rang me — stir-fried in tamarind — where the sourness of tamarind, the sweetness of palm sugar, and the saltiness of fish sauce create a glaze that is more complex than any single ingredient suggests.',
+    intro: 'Ca Mau province at the southernmost tip of Vietnam produces what many Vietnamese consider the finest mud crab in the country. The Ca Mau mangrove ecosystem â€” a maze of brackish channels and tidal flats â€” produces crabs with extraordinarily sweet, dense flesh. The classic preparation is rang me â€” stir-fried in tamarind â€” where the sourness of tamarind, the sweetness of palm sugar, and the saltiness of fish sauce create a glaze that is more complex than any single ingredient suggests.',
     ingredientSections: [
         {
             title: 'Crab',
@@ -44,11 +44,11 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare the crab',
-            description: 'Clean the crab, remove gills and apron, chop into pieces through the joints. Pat dry thoroughly with paper towels. Dust lightly with cornstarch — this helps the sauce cling to the shell.',
+            description: 'Clean the crab, remove gills and apron, chop into pieces through the joints. Pat dry thoroughly with paper towels. Dust lightly with cornstarch â€” this helps the sauce cling to the shell.',
         },
         {
             title: 'Mix the sauce',
-            description: 'Combine tamarind paste, palm sugar, fish sauce, oyster sauce, and water in a bowl. Stir until the sugar dissolves. Taste — it should be a balance of sour, sweet, and salty, slightly on the sour side at this stage.',
+            description: 'Combine tamarind paste, palm sugar, fish sauce, oyster sauce, and water in a bowl. Stir until the sugar dissolves. Taste â€” it should be a balance of sour, sweet, and salty, slightly on the sour side at this stage.',
             tip: 'The sauce will concentrate during cooking, so slightly sour now is correct.',
         },
         {

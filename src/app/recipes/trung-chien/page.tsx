@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'trung-chien',
     title: 'Vietnamese Fried Egg Omelette',
     subtitle:
-        'Tr?ng Chiên — eggs beaten with fish sauce and spring onion, fried in generous oil until the edges go lace-crisp and the centre stays just set.',
+        'Trá»©ng ChiÃªn â€” eggs beaten with fish sauce and spring onion, fried in generous oil until the edges go lace-crisp and the centre stays just set.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '10 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/trung-chien.jpg',
     intro:
-        'Every Vietnamese student learns to make tr?ng chiên the week they leave home. It is the dish you fall back on when the rice is cooked and the fridge is almost empty — eggs, fish sauce, spring onion, sometimes a tablespoon of minced pork if you feel fancy. The secret, if there is one, is more oil than you think is right.',
+        'Every Vietnamese student learns to make trá»©ng chiÃªn the week they leave home. It is the dish you fall back on when the rice is cooked and the fridge is almost empty â€” eggs, fish sauce, spring onion, sometimes a tablespoon of minced pork if you feel fancy. The secret, if there is one, is more oil than you think is right.',
     ingredientSections: [
         {
             title: 'Eggs',

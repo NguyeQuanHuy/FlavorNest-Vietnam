@@ -3,20 +3,20 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-ro-phi-chien-gion',
-    title: 'C· RÙ Phi ChiÍn GiÚn (Crispy Fried Tilapia)',
-    subtitle: 'Whole tilapia scored to the bone, turmeric-marinated, and deep-fried at 180∞C until the skin shatters and the bones from the tail to the fin rays become edible ó served whole with garlic-chili fish sauce and a full plate of herbs. The everyday Vietnamese fried fish where correct technique produces a result that is anything but everyday.',
+    title: 'C√° R√¥ Phi Chi√™n Gi√≤n (Crispy Fried Tilapia)',
+    subtitle: 'Whole tilapia scored to the bone, turmeric-marinated, and deep-fried at 180¬∞C until the skin shatters and the bones from the tail to the fin rays become edible ‚Äî served whole with garlic-chili fish sauce and a full plate of herbs. The everyday Vietnamese fried fish where correct technique produces a result that is anything but everyday.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ca-ro-phi-chien-gion.jpg',
-    intro: `C· rÙ phi chiÍn giÚn is the crispy fried tilapia that appears on Vietnamese family dinner tables so frequently that it risks being taken for granted ó an everyday fish preparation that, when executed with the correct technique, produces a result that is considerably more than its apparent simplicity suggests. C· rÙ phi (Oreochromis niloticus, Nile tilapia) was introduced to Vietnam in the 1950s and has become one of the most widely farmed and most widely eaten freshwater fish in the country, prized for its mild, slightly sweet white flesh, its relative affordability, and its specific suitability to frying ó the tilapia's firm flesh holds together during deep-frying without breaking apart, and its lean composition means the skin can crisp completely without the extended rendering time that fatty fish like catfish require. The technique for c· rÙ phi chiÍn giÚn is the same as for c· trÍ chiÍn s? ?t in its essential structure ó deep scoring to the bone, turmeric marinade, high-temperature frying ó but the tilapia's different fat content and flesh density produce a different result from the same technique: a crisper, more delicate skin and a lighter-tasting flesh that is more versatile in its herb and sauce pairings. The garlic-chili fish sauce (nu?c m?m t?i ?t) served alongside is the dipping sauce that is most specifically associated with fried white fish throughout Vietnam ó its sweet-sour-salty-spicy balance providing the sharp aromatic contrast that the mild, clean-tasting tilapia needs to be complete. Eaten whole at the table, with each diner pulling flesh from the bone with chopsticks and dipping each piece in the sauce before eating it with rice and herbs, c· rÙ phi chiÍn giÚn is the Vietnamese family dinner at its most archetypal.`,
+    intro: `C√° r√¥ phi chi√™n gi√≤n is the crispy fried tilapia that appears on Vietnamese family dinner tables so frequently that it risks being taken for granted ‚Äî an everyday fish preparation that, when executed with the correct technique, produces a result that is considerably more than its apparent simplicity suggests. C√° r√¥ phi (Oreochromis niloticus, Nile tilapia) was introduced to Vietnam in the 1950s and has become one of the most widely farmed and most widely eaten freshwater fish in the country, prized for its mild, slightly sweet white flesh, its relative affordability, and its specific suitability to frying ‚Äî the tilapia's firm flesh holds together during deep-frying without breaking apart, and its lean composition means the skin can crisp completely without the extended rendering time that fatty fish like catfish require. The technique for c√° r√¥ phi chi√™n gi√≤n is the same as for c√° tr√™ chi√™n s·∫£ ·ªõt in its essential structure ‚Äî deep scoring to the bone, turmeric marinade, high-temperature frying ‚Äî but the tilapia's different fat content and flesh density produce a different result from the same technique: a crisper, more delicate skin and a lighter-tasting flesh that is more versatile in its herb and sauce pairings. The garlic-chili fish sauce (n∆∞·ªõc m·∫Øm t·ªèi ·ªõt) served alongside is the dipping sauce that is most specifically associated with fried white fish throughout Vietnam ‚Äî its sweet-sour-salty-spicy balance providing the sharp aromatic contrast that the mild, clean-tasting tilapia needs to be complete. Eaten whole at the table, with each diner pulling flesh from the bone with chopsticks and dipping each piece in the sauce before eating it with rice and herbs, c√° r√¥ phi chi√™n gi√≤n is the Vietnamese family dinner at its most archetypal.`,
     ingredientSections: [
         {
             title: 'Fish',
             items: [
-                { amount: 2, name: 'whole tilapia (c· rÙ phi), 400-500g each', note: 'cleaned, scaled, scored 4-5 times deeply on each side to the central bone. Pat completely dry after scoring.' },
+                { amount: 2, name: 'whole tilapia (c√° r√¥ phi), 400-500g each', note: 'cleaned, scaled, scored 4-5 times deeply on each side to the central bone. Pat completely dry after scoring.' },
                 { amount: 2, unit: 'tbsp', name: 'fish sauce', note: 'for pre-marinating' },
                 { amount: 1, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
@@ -25,7 +25,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Nu?c m?m t?i ?t (garlic-chili fish sauce)',
+            title: 'N∆∞·ªõc m·∫Øm t·ªèi ·ªõt (garlic-chili fish sauce)',
             items: [
                 { amount: 4, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 3, unit: 'tbsp', name: 'fresh lime juice' },
@@ -33,24 +33,24 @@ const recipe: RecipeData = {
                 { amount: 5, unit: 'tbsp', name: 'water' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 2, name: 'bird\'s eye chilies', note: 'minced' },
-                { amount: 1, name: 'fresh red chili', note: 'thinly sliced ó for color' },
+                { amount: 1, name: 'fresh red chili', note: 'thinly sliced ‚Äî for color' },
             ],
         },
         {
             title: 'Fried garlic and shallot topping',
             items: [
-                { amount: 4, name: 'garlic cloves', note: 'thinly sliced ó fried until golden' },
-                { amount: 3, name: 'shallots', note: 'thinly sliced ó fried until golden' },
+                { amount: 4, name: 'garlic cloves', note: 'thinly sliced ‚Äî fried until golden' },
+                { amount: 3, name: 'shallots', note: 'thinly sliced ‚Äî fried until golden' },
                 { amount: 3, unit: 'tbsp', name: 'neutral oil', note: 'for frying the topping' },
-                { amount: 3, name: 'spring onions', note: 'sliced ó scattered over the fish after frying' },
+                { amount: 3, name: 'spring onions', note: 'sliced ‚Äî scattered over the fish after frying' },
             ],
         },
         {
             title: 'Fresh herb plate',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
                 { amount: 1, name: 'bunch mint' },
-                { amount: 1, name: 'bunch perilla (tÌa tÙ)' },
+                { amount: 1, name: 'bunch perilla (t√≠a t√¥)' },
                 { amount: 1, name: 'cucumber, sliced' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
@@ -66,28 +66,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Score, marinate and dry',
-            description: 'Score each tilapia 4-5 times on each side, cutting deeply to the central bone ó the score lines should be clearly visible through the skin and flesh to the bone. Combine fish sauce, turmeric, pepper, and sugar. Rub firmly into every score, over every surface, and inside the body cavity. Marinate 20 minutes. Pat completely dry with paper towels ó press firmly into each score line to remove moisture. The dry surface is essential for crackling skin.',
+            description: 'Score each tilapia 4-5 times on each side, cutting deeply to the central bone ‚Äî the score lines should be clearly visible through the skin and flesh to the bone. Combine fish sauce, turmeric, pepper, and sugar. Rub firmly into every score, over every surface, and inside the body cavity. Marinate 20 minutes. Pat completely dry with paper towels ‚Äî press firmly into each score line to remove moisture. The dry surface is essential for crackling skin.',
             tip: 'Tilapia scores more cleanly than catfish because its flesh is firmer and less fatty. The clean score lines in tilapia allow the oil to penetrate directly to the bone during frying in a way that is more precise than in fattier fish. Each score should be made with a single decisive cut rather than a sawing motion.',
         },
         {
-            title: 'Deep-fry at 180∞C ó 10-12 minutes',
-            description: 'Heat oil to 180∞C in a wok or deep pot. Carefully lower the tilapia into the oil tail-first ó hold by the head end and lower slowly to avoid splash. Fry without moving for 5-6 minutes until the bottom side is deeply golden and the skin has crisped. Carefully flip using two spatulas or a fish-turning tool. Fry the second side 5-6 minutes. Total: 10-12 minutes. The tilapia is done when the thickest flesh near the head is white throughout and the fin rays snap when pressed.',
-            tip: 'Tilapia fries faster than catfish at the same temperature because of its lower fat content ó 10-12 minutes versus 12-15 minutes for catfish. The leaner flesh also crisps more quickly and more completely. Watch from the 8-minute mark ó tilapia at 180∞C can go from perfectly golden to over-brown in about 90 seconds.',
+            title: 'Deep-fry at 180¬∞C ‚Äî 10-12 minutes',
+            description: 'Heat oil to 180¬∞C in a wok or deep pot. Carefully lower the tilapia into the oil tail-first ‚Äî hold by the head end and lower slowly to avoid splash. Fry without moving for 5-6 minutes until the bottom side is deeply golden and the skin has crisped. Carefully flip using two spatulas or a fish-turning tool. Fry the second side 5-6 minutes. Total: 10-12 minutes. The tilapia is done when the thickest flesh near the head is white throughout and the fin rays snap when pressed.',
+            tip: 'Tilapia fries faster than catfish at the same temperature because of its lower fat content ‚Äî 10-12 minutes versus 12-15 minutes for catfish. The leaner flesh also crisps more quickly and more completely. Watch from the 8-minute mark ‚Äî tilapia at 180¬∞C can go from perfectly golden to over-brown in about 90 seconds.',
         },
         {
-            title: 'Make the nu?c m?m t?i ?t',
-            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until the sugar dissolves completely. Add minced garlic, minced bird\'s eye chili, and sliced red chili. The sauce should arrive in sequence: sweet first, then the fish sauce depth, then the lime brightness, then the chili heat building. This is the dipping sauce that the whole of Vietnam uses for plain fried white fish and that most clearly demonstrates what nu?c ch?m is at its most functional ó a sauce that makes a simple ingredient taste complete.',
-            tip: 'The sugar-to-lime balance in nu?c m?m t?i ?t for fried white fish is slightly sweeter than the standard nu?c ch?m ó the mildness of tilapia benefits from the additional sweetness that rounds the sauce\'s edges. The same sauce applied to fatty pork would taste cloying; applied to mild fried tilapia it tastes exactly right.',
+            title: 'Make the n∆∞·ªõc m·∫Øm t·ªèi ·ªõt',
+            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until the sugar dissolves completely. Add minced garlic, minced bird\'s eye chili, and sliced red chili. The sauce should arrive in sequence: sweet first, then the fish sauce depth, then the lime brightness, then the chili heat building. This is the dipping sauce that the whole of Vietnam uses for plain fried white fish and that most clearly demonstrates what n∆∞·ªõc ch·∫•m is at its most functional ‚Äî a sauce that makes a simple ingredient taste complete.',
+            tip: 'The sugar-to-lime balance in n∆∞·ªõc m·∫Øm t·ªèi ·ªõt for fried white fish is slightly sweeter than the standard n∆∞·ªõc ch·∫•m ‚Äî the mildness of tilapia benefits from the additional sweetness that rounds the sauce\'s edges. The same sauce applied to fatty pork would taste cloying; applied to mild fried tilapia it tastes exactly right.',
         },
         {
             title: 'Make the fried garlic-shallot topping',
-            description: 'While the fish drains, heat 3 tablespoons of oil in a small pan. Add sliced garlic and shallots. Fry over medium heat until golden and beginning to crisp ó 3-4 minutes. Remove with a slotted spoon and drain. The oil used for frying the garlic and shallots is now flavored ó this is the oil drizzled over the fish before serving.',
-            tip: 'The fried garlic and shallot topping is the element that elevates c· rÙ phi chiÍn giÚn from plain fried fish to the specific Vietnamese preparation. The golden, slightly crispy garlic and shallot pieces provide both texture and flavor against the crispy fish skin, and the garlic-shallot oil drizzled underneath carries the fragrance of the frying directly to the fish surface.',
+            description: 'While the fish drains, heat 3 tablespoons of oil in a small pan. Add sliced garlic and shallots. Fry over medium heat until golden and beginning to crisp ‚Äî 3-4 minutes. Remove with a slotted spoon and drain. The oil used for frying the garlic and shallots is now flavored ‚Äî this is the oil drizzled over the fish before serving.',
+            tip: 'The fried garlic and shallot topping is the element that elevates c√° r√¥ phi chi√™n gi√≤n from plain fried fish to the specific Vietnamese preparation. The golden, slightly crispy garlic and shallot pieces provide both texture and flavor against the crispy fish skin, and the garlic-shallot oil drizzled underneath carries the fragrance of the frying directly to the fish surface.',
         },
         {
             title: 'Plate and serve whole',
-            description: 'Place the fried tilapia on a serving plate. Drizzle the warm garlic-shallot oil over the surface. Scatter the fried garlic and shallot pieces and sliced spring onion over the fish. Serve the nu?c m?m t?i ?t in individual dipping bowls. The full herb plate alongside with cucumber, mint, rau ram, perilla, and lime. Steamed rice in individual bowls. To eat: use chopsticks to pull pieces of flesh from the bone ó starting from the scored sections where the flesh separates most cleanly ó dip in the nu?c m?m t?i ?t, eat with a leaf of herb and a mouthful of rice.',
-            tip: 'The scored sections of the fried tilapia are the entry points for chopstick work at the table ó the scores that allow oil penetration during frying become the natural separation lines for eating. Working along each score with chopsticks, the flesh lifts cleanly from the bone in pieces that are already the right size for dipping and eating. This is why the scoring technique is as important for eating as it is for frying.',
+            description: 'Place the fried tilapia on a serving plate. Drizzle the warm garlic-shallot oil over the surface. Scatter the fried garlic and shallot pieces and sliced spring onion over the fish. Serve the n∆∞·ªõc m·∫Øm t·ªèi ·ªõt in individual dipping bowls. The full herb plate alongside with cucumber, mint, rau rƒÉm, perilla, and lime. Steamed rice in individual bowls. To eat: use chopsticks to pull pieces of flesh from the bone ‚Äî starting from the scored sections where the flesh separates most cleanly ‚Äî dip in the n∆∞·ªõc m·∫Øm t·ªèi ·ªõt, eat with a leaf of herb and a mouthful of rice.',
+            tip: 'The scored sections of the fried tilapia are the entry points for chopstick work at the table ‚Äî the scores that allow oil penetration during frying become the natural separation lines for eating. Working along each score with chopsticks, the flesh lifts cleanly from the bone in pieces that are already the right size for dipping and eating. This is why the scoring technique is as important for eating as it is for frying.',
         },
     ],
 };

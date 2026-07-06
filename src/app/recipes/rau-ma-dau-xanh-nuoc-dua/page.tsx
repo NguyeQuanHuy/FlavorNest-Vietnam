@@ -12,15 +12,15 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/rau-ma-dau-xanh-nuoc-dua.jpg',
 
-    intro: `Rau m� d?u xanh nu?c d?a is a popular Vietnamese refreshing drink combining pennywort juice, mung beans, and coconut milk.
+    intro: `Rau má đậu xanh nước dừa is a popular Vietnamese refreshing drink combining pennywort juice, mung beans, and coconut milk.
 
-It is known for its cooling properties, nutty flavor from mung beans, and creamy coconut aroma � a perfect drink for hot weather.`,
+It is known for its cooling properties, nutty flavor from mung beans, and creamy coconut aroma — a perfect drink for hot weather.`,
 
     ingredientSections: [
         {
             title: 'Main ingredients',
             items: [
-                { amount: 200, unit: 'g', name: 'pennywort (rau m�)' },
+                { amount: 200, unit: 'g', name: 'pennywort (rau má)' },
                 { amount: 100, unit: 'g', name: 'mung beans', note: 'soaked and steamed' },
                 { amount: 200, unit: 'ml', name: 'coconut milk' },
                 { amount: 100, unit: 'g', name: 'sugar' },
@@ -39,7 +39,7 @@ It is known for its cooling properties, nutty flavor from mung beans, and creamy
     steps: [
         {
             title: 'Prepare mung beans',
-            description: 'Soak mung beans for 2�3 hours, then steam until soft.',
+            description: 'Soak mung beans for 2–3 hours, then steam until soft.',
         },
         {
             title: 'Blend pennywort',

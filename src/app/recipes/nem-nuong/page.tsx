@@ -3,8 +3,8 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-nuong',
-    title: 'Vietnamese Grilled Pork Skewers (Nem nu?ng)',
-    subtitle: 'Smoky, juicy, and lightly caramelized — grilled pork skewers wrapped in herbs and dipped in rich sauce.',
+    title: 'Vietnamese Grilled Pork Skewers (Nem nÆ°á»›ng)',
+    subtitle: 'Smoky, juicy, and lightly caramelized â€” grilled pork skewers wrapped in herbs and dipped in rich sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '50 min',
@@ -12,11 +12,11 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/nem-nuong.jpg',
 
-    intro: `Nem nu?ng is one of Vietnam’s most addictive street foods — smoky, juicy pork grilled over charcoal until lightly charred and caramelized at the edges.
+    intro: `Nem nÆ°á»›ng is one of Vietnamâ€™s most addictive street foods â€” smoky, juicy pork grilled over charcoal until lightly charred and caramelized at the edges.
 
 The meat is finely ground and seasoned with garlic, fish sauce, sugar, and a touch of starch for bounce, then shaped onto skewers and grilled until fragrant. But the real magic happens at the table: the pork is wrapped in rice paper with fresh herbs, pickled vegetables, and crisp lettuce, then dipped into a thick, savory peanut sauce.
 
-It’s not just a dish — it’s a hands-on experience. Sweet, smoky, fresh, and rich all in one bite.`,
+Itâ€™s not just a dish â€” itâ€™s a hands-on experience. Sweet, smoky, fresh, and rich all in one bite.`,
 
     ingredientSections: [
         {
@@ -68,12 +68,12 @@ It’s not just a dish — it’s a hands-on experience. Sweet, smoky, fresh, and rich
         },
         {
             title: 'Grill the skewers',
-            description: 'Grill over medium-hot charcoal for 8–10 minutes, turning occasionally, until fully cooked with light charring on the edges.',
-            tip: 'Charcoal grilling gives the signature smoky aroma. A grill pan works, but you’ll miss that deep street-food flavor.',
+            description: 'Grill over medium-hot charcoal for 8â€“10 minutes, turning occasionally, until fully cooked with light charring on the edges.',
+            tip: 'Charcoal grilling gives the signature smoky aroma. A grill pan works, but youâ€™ll miss that deep street-food flavor.',
         },
         {
             title: 'Make the peanut sauce',
-            description: 'Heat oil in a small pan. Add garlic and sauté until fragrant. Add water, peanut butter, hoisin sauce, fish sauce, and sugar. Stir until smooth and slightly thickened.',
+            description: 'Heat oil in a small pan. Add garlic and sautÃ© until fragrant. Add water, peanut butter, hoisin sauce, fish sauce, and sugar. Stir until smooth and slightly thickened.',
         },
         {
             title: 'Assemble and serve',

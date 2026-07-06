@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'bun-mang-ga',
     title: 'Chicken Bamboo Shoot Noodle Soup (Bun Mang Ga)',
-    subtitle: 'Light, aromatic chicken broth with tender bamboo shoots and rice noodles — a comforting Vietnamese soup.',
+    subtitle: 'Light, aromatic chicken broth with tender bamboo shoots and rice noodles â€” a comforting Vietnamese soup.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '90 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/bun-mang-ga.jpg',
 
-    intro: `Bún mang  is a traditional Vietnamese noodle soup made with chicken, bamboo shoots, and clear aromatic broth.
+    intro: `BÃºn mÄƒng  is a traditional Vietnamese noodle soup made with chicken, bamboo shoots, and clear aromatic broth.
 
 The dish balances the sweetness of chicken bones with the earthy crunch of bamboo shoots. It is often enjoyed as a light but nourishing meal, especially in family gatherings or casual lunches.`,
 
@@ -45,7 +45,7 @@ The dish balances the sweetness of chicken bones with the earthy crunch of bambo
         {
             title: 'To serve',
             items: [
-                { amount: 400, unit: 'g', name: 'rice noodles (bún)' },
+                { amount: 400, unit: 'g', name: 'rice noodles (bÃºn)' },
                 { amount: 1, name: 'fresh herbs', note: 'mint, cilantro, banana blossom' },
                 { amount: 2, name: 'lime' },
                 { amount: 2, name: 'chilies', note: 'sliced' },
@@ -60,7 +60,7 @@ The dish balances the sweetness of chicken bones with the earthy crunch of bambo
         },
         {
             title: 'Simmer broth',
-            description: 'Simmer chicken with ginger, charred shallots, and spring onion knots for 60–75 minutes.',
+            description: 'Simmer chicken with ginger, charred shallots, and spring onion knots for 60â€“75 minutes.',
             tip: 'Slow simmering keeps the broth clear and naturally sweet.',
         },
         {

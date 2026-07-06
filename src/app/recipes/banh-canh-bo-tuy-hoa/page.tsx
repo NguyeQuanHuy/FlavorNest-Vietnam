@@ -3,27 +3,27 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-canh-bo-tuy-hoa',
-    title: 'B·nh Canh BÚ Tuy HÚa (Tuy HÚa Beef Thick Noodle Soup)',
-    subtitle: 'Thick round tapioca noodles in a clear beef bone broth perfumed with charred onion, star anise, and cinnamon ó topped with tender braised beef brisket, thinly sliced rare beef, fried shallots, and the specific green onion oil that makes every bowl from Tuy HÚa identifiable.',
+    title: 'B√°nh Canh B√≤ Tuy H√≤a (Tuy H√≤a Beef Thick Noodle Soup)',
+    subtitle: 'Thick round tapioca noodles in a clear beef bone broth perfumed with charred onion, star anise, and cinnamon ‚Äî topped with tender braised beef brisket, thinly sliced rare beef, fried shallots, and the specific green onion oil that makes every bowl from Tuy H√≤a identifiable.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '3 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-canh-bo-tuy-hoa.jpg',
-    intro: `B·nh canh bÚ Tuy HÚa is the beef noodle soup that Ph˙ YÍn's provincial capital has made its own ó a preparation that exists nowhere else in quite this form, built from the intersection of thick tapioca noodles (b·nh canh) and a beef bone broth that owes something to ph? in its aromatic spicing but is lighter, cleaner, and more specifically central Vietnamese in character. The broth is the foundation: beef bones simmered for hours with charred onion and ginger in the ph? tradition, but with a restrained hand on the spices ó one cinnamon stick, two star anise, a piece of cardamom ó so that the result is fragrant without being heavy. The toppings are what distinguish the Tuy HÚa version from similar soups elsewhere: braised beef brisket (bÚ b?p) that has been simmered separately in the broth until it slices cleanly and cleanly; thin slices of raw beef (bÚ t·i) that cook in the hot broth in the bowl; and the m? h‡nh ó the spring onion oil that Tuy HÚa cooks apply in more generous quantities than anywhere else in Vietnam, so that the surface of each bowl is fragrant, golden, and slightly glossy. B·nh canh bÚ Tuy HÚa is a morning bowl, eaten at the small shops on Tr?n Hung –?o and LÍ Du?n streets before 9am, from tables that are already occupied at 6:30am by people who have been eating here their entire lives. It is not a bowl that exists in the food media canon yet. This recipe is its first documentation in English.`,
+    intro: `B√°nh canh b√≤ Tuy H√≤a is the beef noodle soup that Ph√∫ Y√™n's provincial capital has made its own ‚Äî a preparation that exists nowhere else in quite this form, built from the intersection of thick tapioca noodles (b√°nh canh) and a beef bone broth that owes something to ph·ªü in its aromatic spicing but is lighter, cleaner, and more specifically central Vietnamese in character. The broth is the foundation: beef bones simmered for hours with charred onion and ginger in the ph·ªü tradition, but with a restrained hand on the spices ‚Äî one cinnamon stick, two star anise, a piece of cardamom ‚Äî so that the result is fragrant without being heavy. The toppings are what distinguish the Tuy H√≤a version from similar soups elsewhere: braised beef brisket (b√≤ b·∫Øp) that has been simmered separately in the broth until it slices cleanly and cleanly; thin slices of raw beef (b√≤ t√°i) that cook in the hot broth in the bowl; and the m·ª° h√†nh ‚Äî the spring onion oil that Tuy H√≤a cooks apply in more generous quantities than anywhere else in Vietnam, so that the surface of each bowl is fragrant, golden, and slightly glossy. B√°nh canh b√≤ Tuy H√≤a is a morning bowl, eaten at the small shops on Tr·∫ßn H∆∞ng ƒê·∫°o and L√™ Du·∫©n streets before 9am, from tables that are already occupied at 6:30am by people who have been eating here their entire lives. It is not a bowl that exists in the food media canon yet. This recipe is its first documentation in English.`,
     ingredientSections: [
         {
             title: 'Beef bone broth',
             items: [
-                { amount: 1, unit: 'kg', name: 'beef marrow and knuckle bones (xuong bÚ)', note: 'blanched and rinsed before use' },
-                { amount: 300, unit: 'g', name: 'beef brisket (th?t bÚ b?p)', note: 'added to the broth to braise ó removed when tender and sliced for topping' },
+                { amount: 1, unit: 'kg', name: 'beef marrow and knuckle bones (x∆∞∆°ng b√≤)', note: 'blanched and rinsed before use' },
+                { amount: 300, unit: 'g', name: 'beef brisket (th·ªãt b√≤ b·∫Øp)', note: 'added to the broth to braise ‚Äî removed when tender and sliced for topping' },
                 { amount: 2.5, unit: 'L', name: 'water' },
                 { amount: 1, name: 'large onion', note: 'halved and charred over flame until deeply blackened on the cut side' },
                 { amount: 40, unit: 'g', name: 'fresh ginger', note: '4 slices, smashed and charred briefly over flame' },
                 { amount: 1, name: 'cinnamon stick (5cm)', note: 'toasted dry in a pan until fragrant' },
                 { amount: 2, name: 'star anise', note: 'toasted dry' },
-                { amount: 1, name: 'black cardamom pod (th?o qu?)', note: 'lightly crushed ó optional but adds depth specific to central Vietnamese beef broth' },
+                { amount: 1, name: 'black cardamom pod (th·∫£o qu·∫£)', note: 'lightly crushed ‚Äî optional but adds depth specific to central Vietnamese beef broth' },
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
@@ -32,7 +32,7 @@ const recipe: RecipeData = {
         {
             title: 'Toppings',
             items: [
-                { amount: 200, unit: 'g', name: 'beef sirloin or eye fillet (bÚ t·i)', note: 'sliced paper-thin against the grain ó placed raw in the bowl and cooked by the hot broth' },
+                { amount: 200, unit: 'g', name: 'beef sirloin or eye fillet (b√≤ t√°i)', note: 'sliced paper-thin against the grain ‚Äî placed raw in the bowl and cooked by the hot broth' },
                 { amount: 1, unit: 'tbsp', name: 'fish sauce', note: 'for briefly seasoning the raw beef slices' },
                 { amount: 0.25, unit: 'tsp', name: 'black pepper' },
             ],
@@ -40,60 +40,60 @@ const recipe: RecipeData = {
         {
             title: 'Noodles',
             items: [
-                { amount: 500, unit: 'g', name: 'fresh b·nh canh noodles (thick round tapioca noodles)', note: 'if unavailable: dried b·nh canh soaked 20 minutes, or thick udon noodles as a substitute' },
+                { amount: 500, unit: 'g', name: 'fresh b√°nh canh noodles (thick round tapioca noodles)', note: 'if unavailable: dried b√°nh canh soaked 20 minutes, or thick udon noodles as a substitute' },
             ],
         },
         {
-            title: 'M? h‡nh Tuy HÚa (essential ó more generous than anywhere else)',
+            title: 'M·ª° h√†nh Tuy H√≤a (essential ‚Äî more generous than anywhere else)',
             items: [
-                { amount: 6, name: 'spring onions', note: 'green parts only, thinly sliced ó more than any other Vietnamese noodle soup uses' },
-                { amount: 100, unit: 'ml', name: 'neutral oil', note: 'heated to smoking ó poured over the spring onion' },
+                { amount: 6, name: 'spring onions', note: 'green parts only, thinly sliced ‚Äî more than any other Vietnamese noodle soup uses' },
+                { amount: 100, unit: 'ml', name: 'neutral oil', note: 'heated to smoking ‚Äî poured over the spring onion' },
                 { amount: 0.5, unit: 'tsp', name: 'salt' },
-                { amount: 4, unit: 'tbsp', name: 'crispy fried shallots', note: 'scattered over each bowl in addition to the m? h‡nh' },
+                { amount: 4, unit: 'tbsp', name: 'crispy fried shallots', note: 'scattered over each bowl in addition to the m·ª° h√†nh' },
             ],
         },
         {
             title: 'Table accompaniments',
             items: [
                 { amount: 150, unit: 'g', name: 'bean sprouts' },
-                { amount: 1, name: 'bunch Vietnamese basil (h˙ng qu?)' },
+                { amount: 1, name: 'bunch Vietnamese basil (h√∫ng qu·∫ø)' },
                 { amount: 1, name: 'bunch cilantro' },
                 { amount: 2, name: 'limes, cut in wedges' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
-                { amount: 3, unit: 'tbsp', name: 'fermented shrimp paste (m?m ru?c)', note: 'served alongside in the Ph˙ YÍn style ó optional but traditional' },
+                { amount: 3, unit: 'tbsp', name: 'fermented shrimp paste (m·∫Øm ru·ªëc)', note: 'served alongside in the Ph√∫ Y√™n style ‚Äî optional but traditional' },
             ],
         },
     ],
     steps: [
         {
             title: 'Blanch bones and char aromatics',
-            description: 'Place bones in cold water, bring to a vigorous boil, blanch 10 minutes. Drain and rinse every bone thoroughly. Separately, char the onion halves and ginger slices directly over a gas flame or under a hot broiler until deeply blackened on the surfaces. Toast the cinnamon stick, star anise, and cardamom in a dry pan until fragrant ó 1-2 minutes. These three steps ó blanching bones, charring aromatics, toasting spices ó are the foundation of a clear, deep broth rather than a cloudy, flat one.',
-            tip: 'The onion and ginger must be genuinely blackened ó not just browned. The char produces sweetness and a specific depth that is the background note of central Vietnamese beef broth. Insufficiently charred aromatics produce a flat, pale broth no matter how long it simmers.',
+            description: 'Place bones in cold water, bring to a vigorous boil, blanch 10 minutes. Drain and rinse every bone thoroughly. Separately, char the onion halves and ginger slices directly over a gas flame or under a hot broiler until deeply blackened on the surfaces. Toast the cinnamon stick, star anise, and cardamom in a dry pan until fragrant ‚Äî 1-2 minutes. These three steps ‚Äî blanching bones, charring aromatics, toasting spices ‚Äî are the foundation of a clear, deep broth rather than a cloudy, flat one.',
+            tip: 'The onion and ginger must be genuinely blackened ‚Äî not just browned. The char produces sweetness and a specific depth that is the background note of central Vietnamese beef broth. Insufficiently charred aromatics produce a flat, pale broth no matter how long it simmers.',
         },
         {
-            title: 'Build the broth ó minimum 2 hours',
-            description: 'Place blanched bones in a large pot with 2.5L cold water. Add charred onion, charred ginger, toasted spices. Bring to a boil, reduce immediately to the lowest simmer ó barely moving. Skim foam for the first 20 minutes. After 45 minutes, add the whole brisket to braise in the developing broth. Simmer uncovered for 2-2.5 hours total. The brisket is done when a chopstick passes through without resistance ó remove and set aside to cool. The broth should be clear amber-gold.',
-            tip: 'The brisket and bones cooking together is the technique that produces the specifically complex Tuy HÚa broth ó the braised brisket gives gelatin and beef flavor back to the broth as the bones give their collagen. Separate cooking would produce two good things; together they produce one exceptional broth.',
+            title: 'Build the broth ‚Äî minimum 2 hours',
+            description: 'Place blanched bones in a large pot with 2.5L cold water. Add charred onion, charred ginger, toasted spices. Bring to a boil, reduce immediately to the lowest simmer ‚Äî barely moving. Skim foam for the first 20 minutes. After 45 minutes, add the whole brisket to braise in the developing broth. Simmer uncovered for 2-2.5 hours total. The brisket is done when a chopstick passes through without resistance ‚Äî remove and set aside to cool. The broth should be clear amber-gold.',
+            tip: 'The brisket and bones cooking together is the technique that produces the specifically complex Tuy H√≤a broth ‚Äî the braised brisket gives gelatin and beef flavor back to the broth as the bones give their collagen. Separate cooking would produce two good things; together they produce one exceptional broth.',
         },
         {
             title: 'Strain and season the broth',
-            description: 'Remove bones and discard. Strain the broth through a fine-mesh sieve into a clean pot. The broth should be clear, amber-golden, and smell of beef with a background warmth from the spices. Season with fish sauce, sugar, and salt. The spice level in b·nh canh bÚ Tuy HÚa should be present but subtle ó the cinnamon and star anise are a background note, not the foreground. Bring to a boil before serving.',
-            tip: 'Taste the broth before seasoning and assess the spice level. Central Vietnamese beef broth has noticeably less spice than ph? ó more restrained, cleaner, letting the beef character be primary. If the spice is too prominent, dilute with a small amount of hot water.',
+            description: 'Remove bones and discard. Strain the broth through a fine-mesh sieve into a clean pot. The broth should be clear, amber-golden, and smell of beef with a background warmth from the spices. Season with fish sauce, sugar, and salt. The spice level in b√°nh canh b√≤ Tuy H√≤a should be present but subtle ‚Äî the cinnamon and star anise are a background note, not the foreground. Bring to a boil before serving.',
+            tip: 'Taste the broth before seasoning and assess the spice level. Central Vietnamese beef broth has noticeably less spice than ph·ªü ‚Äî more restrained, cleaner, letting the beef character be primary. If the spice is too prominent, dilute with a small amount of hot water.',
         },
         {
             title: 'Slice the brisket and prepare raw beef',
-            description: 'When the braised brisket has cooled enough to handle, slice against the grain into 5mm rounds ó it should slice cleanly without shredding. The interior should be tender throughout with no resistance. Separately, freeze the raw sirloin for 20 minutes until firm, then slice paper-thin against the grain. Season lightly with fish sauce and black pepper. Keep cold until serving ó it goes into the bowl raw.',
+            description: 'When the braised brisket has cooled enough to handle, slice against the grain into 5mm rounds ‚Äî it should slice cleanly without shredding. The interior should be tender throughout with no resistance. Separately, freeze the raw sirloin for 20 minutes until firm, then slice paper-thin against the grain. Season lightly with fish sauce and black pepper. Keep cold until serving ‚Äî it goes into the bowl raw.',
             tip: 'Slicing the brisket when slightly cooled but still warm produces cleaner slices than cutting it cold from the refrigerator. At the right temperature, the brisket holds together in neat rounds rather than shredding.',
         },
         {
-            title: 'Make the m? h‡nh ó Tuy HÚa style',
-            description: 'Slice 6 spring onions thinly and place in a heatproof bowl with salt. Heat 100ml of neutral oil until genuinely smoking ó 210∞C. Pour the smoking oil over the spring onion all at once. It will sizzle loudly and the onion will turn from raw green to cooked green in seconds. Stir immediately. This is significantly more m? h‡nh than any other Vietnamese noodle soup uses ó this is the Tuy HÚa quantity, and it is not an accident. The generous spring onion oil is the taste signature of the city.',
-            tip: 'The quantity of m? h‡nh in b·nh canh bÚ Tuy HÚa is triple what most recipes specify. Local shops apply it so generously that the surface of each bowl is visibly golden with oil and fragrant with spring onion. Do not reduce the amount.',
+            title: 'Make the m·ª° h√†nh ‚Äî Tuy H√≤a style',
+            description: 'Slice 6 spring onions thinly and place in a heatproof bowl with salt. Heat 100ml of neutral oil until genuinely smoking ‚Äî 210¬∞C. Pour the smoking oil over the spring onion all at once. It will sizzle loudly and the onion will turn from raw green to cooked green in seconds. Stir immediately. This is significantly more m·ª° h√†nh than any other Vietnamese noodle soup uses ‚Äî this is the Tuy H√≤a quantity, and it is not an accident. The generous spring onion oil is the taste signature of the city.',
+            tip: 'The quantity of m·ª° h√†nh in b√°nh canh b√≤ Tuy H√≤a is triple what most recipes specify. Local shops apply it so generously that the surface of each bowl is visibly golden with oil and fragrant with spring onion. Do not reduce the amount.',
         },
         {
             title: 'Assemble the bowl',
-            description: 'Blanch fresh b·nh canh noodles in boiling water for 2-3 minutes. Drain and place in deep bowls. Arrange sliced braised brisket over the noodles. Place raw beef slices on top ó they will cook from the boiling broth. Ladle the boiling broth generously over everything ó the raw beef should turn pink within 30-60 seconds. Spoon m? h‡nh very generously over the surface. Scatter crispy fried shallots. Serve with bean sprouts, herbs, lime, chili, and m?m ru?c alongside.',
-            tip: 'The bowl must be served and eaten immediately ó the raw beef continues cooking in the hot broth. After 2 minutes the t·i beef is fully cooked. Eat the t·i first, before it overcooks, then take your time with the braised brisket and noodles.',
+            description: 'Blanch fresh b√°nh canh noodles in boiling water for 2-3 minutes. Drain and place in deep bowls. Arrange sliced braised brisket over the noodles. Place raw beef slices on top ‚Äî they will cook from the boiling broth. Ladle the boiling broth generously over everything ‚Äî the raw beef should turn pink within 30-60 seconds. Spoon m·ª° h√†nh very generously over the surface. Scatter crispy fried shallots. Serve with bean sprouts, herbs, lime, chili, and m·∫Øm ru·ªëc alongside.',
+            tip: 'The bowl must be served and eaten immediately ‚Äî the raw beef continues cooking in the hot broth. After 2 minutes the t√°i beef is fully cooked. Eat the t√°i first, before it overcooks, then take your time with the braised brisket and noodles.',
         },
     ],
 };

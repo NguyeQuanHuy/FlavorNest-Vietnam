@@ -4,7 +4,7 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'trung-chien-thit',
     title: 'Vietnamese Pork Omelet (Trung Chien Thit)',
-    subtitle: 'Fluffy eggs mixed with savory minced pork � simple, hearty, and perfect with steamed rice.',
+    subtitle: 'Fluffy eggs mixed with savory minced pork — simple, hearty, and perfect with steamed rice.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/trung-chien-thit.jpg',
 
-    intro: `Tr?ng chi�n th?t is a classic Vietnamese home-style dish made from beaten eggs mixed with seasoned minced pork, then pan-fried until golden and fluffy.
+    intro: `Trứng chiên thịt is a classic Vietnamese home-style dish made from beaten eggs mixed with seasoned minced pork, then pan-fried until golden and fluffy.
 
 It is one of the simplest yet most comforting dishes in Vietnamese cuisine. The eggs are soft and airy, while the pork adds a savory, umami-rich depth. Often served with steamed rice and soy or fish sauce, it is a staple in everyday family meals.`,
 

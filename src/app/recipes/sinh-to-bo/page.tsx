@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 2,
     heroImage: '/images/recipes/sinh-to-bo.jpg',
-    intro: 'In Vietnam, avocado is never put in salads or on toast. It is a fruit — sweet, fatty, and best blended with condensed milk and ice into the thickest, creamiest smoothie you have ever had. Sinh to bo is sold at juice stalls across Saigon from early afternoon, served in a tall glass so thick the straw stands upright. The colour is a deep, matte green. The flavour is pure richness.',
+    intro: 'In Vietnam, avocado is never put in salads or on toast. It is a fruit â€” sweet, fatty, and best blended with condensed milk and ice into the thickest, creamiest smoothie you have ever had. Sinh to bo is sold at juice stalls across Saigon from early afternoon, served in a tall glass so thick the straw stands upright. The colour is a deep, matte green. The flavour is pure richness.',
     ingredientSections: [
         {
             title: 'Ingredients',
@@ -27,7 +27,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Check avocado ripeness',
-            description: 'The avocado must be fully ripe — soft when pressed, dark-skinned, no brown spots inside. An underripe avocado produces a chalky, bitter smoothie with no creaminess.',
+            description: 'The avocado must be fully ripe â€” soft when pressed, dark-skinned, no brown spots inside. An underripe avocado produces a chalky, bitter smoothie with no creaminess.',
             tip: 'If avocados are not yet ripe, place them in a paper bag with a banana overnight. The ethylene gas speeds up ripening.',
         },
         {
@@ -36,7 +36,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Serve immediately',
-            description: 'Pour into tall glasses. The smoothie should be thick enough that a straw stands upright. Serve immediately — avocado oxidises quickly and will begin to brown within 20 minutes.',
+            description: 'Pour into tall glasses. The smoothie should be thick enough that a straw stands upright. Serve immediately â€” avocado oxidises quickly and will begin to brown within 20 minutes.',
         },
     ],
 };

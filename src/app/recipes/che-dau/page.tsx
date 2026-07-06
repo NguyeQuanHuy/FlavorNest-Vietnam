@@ -5,14 +5,14 @@ import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 const recipe: RecipeData = {
     slug: 'che-dau',
     title: 'Vietnamese Sweet Bean Soup',
-    subtitle: 'A bowl of quiet comfort — slow-cooked mung beans in lightly sweetened broth, finished with coconut cream.',
+    subtitle: 'A bowl of quiet comfort â€” slow-cooked mung beans in lightly sweetened broth, finished with coconut cream.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '1 hr',
     rating: 4.6,
     baseServings: 4,
     heroImage: '/images/recipes/che-dau.jpg',
-    intro: 'Che dau xanh is the dessert Vietnamese grandmothers make when someone is unwell, tired, or simply needs feeding. It is not showy. A pot of split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with a pour of salted coconut cream. The whole thing comes together in under an hour. Its power is entirely in its simplicity — clean, warm, and deeply satisfying in the way only honest food can be.',
+    intro: 'Che dau xanh is the dessert Vietnamese grandmothers make when someone is unwell, tired, or simply needs feeding. It is not showy. A pot of split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with a pour of salted coconut cream. The whole thing comes together in under an hour. Its power is entirely in its simplicity â€” clean, warm, and deeply satisfying in the way only honest food can be.',
     ingredientSections: [
         {
             title: 'Bean soup',

@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'canh-rau-ngot-thit-bam',
     title: 'Sweet Leaf Soup with Minced Pork',
     subtitle:
-        'Canh Rau Ngót Th?t Bam — a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
+        'Canh Rau NgÃ³t Thá»‹t BÄƒm â€” a clear jade-green broth with bruised sweet leaves and tender flecks of minced pork, ready in twenty minutes.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/canh-rau-ngot-thit-bam.jpg',
     intro:
-        'Rau ngót is one of those vegetables that never made it out of Vietnam, which is a shame — the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
+        'Rau ngÃ³t is one of those vegetables that never made it out of Vietnam, which is a shame â€” the leaves carry a mild, almost nutty sweetness that turns a plain pork broth into something quietly special. This is the Northern soup that appears on the table at least twice a week, not because it is celebrated, but because it is dependable: cooling in summer, nourishing in winter, and done in the time it takes to cook rice.',
     ingredientSections: [
         {
             title: 'Broth and pork',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
         {
             title: 'Sweet leaves',
             items: [
-                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngót)', note: 'stripped from stems, bruised by hand' },
+                { amount: 300, unit: 'g', name: 'sweet leaf (rau ngÃ³t)', note: 'stripped from stems, bruised by hand' },
             ],
         },
         {
@@ -62,7 +62,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Add the sweet leaves',
-            description: 'Stir in the bruised rau ngót leaves and bring the heat up slightly. Simmer for only 3 minutes until the leaves are a vibrant deep green and just tender enough to eat.',
+            description: 'Stir in the bruised rau ngÃ³t leaves and bring the heat up slightly. Simmer for only 3 minutes until the leaves are a vibrant deep green and just tender enough to eat.',
         },
         {
             title: 'Finish and serve',
