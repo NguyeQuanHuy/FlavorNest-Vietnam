@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-nuong-trui',
     title: 'Straw-Grilled Fish (Ca Nuong Trui)',
-    subtitle: 'Rustic, smoky, and deeply aromatic — whole fish roasted in straw fire until the skin turns charred and fragrant.',
+    subtitle: 'Rustic, smoky, and deeply aromatic � whole fish roasted in straw fire until the skin turns charred and fragrant.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/ca-nuong-trui.jpg',
 
-    intro: `Cá nướng trui is a traditional rural Vietnamese dish where whole fish is grilled directly in straw fire until the skin is charred and smoky.
+    intro: `C� nu?ng trui is a traditional rural Vietnamese dish where whole fish is grilled directly in straw fire until the skin is charred and smoky.
 
-No heavy seasoning is needed — just fresh fish and fire. The straw burns quickly, sealing in moisture while creating a smoky crust. The result is tender, juicy fish with a deep, earthy aroma.
+No heavy seasoning is needed � just fresh fish and fire. The straw burns quickly, sealing in moisture while creating a smoky crust. The result is tender, juicy fish with a deep, earthy aroma.
 
 Often eaten in the countryside, the fish is peeled open at the table and served with rice paper, herbs, and dipping sauce.`,
 

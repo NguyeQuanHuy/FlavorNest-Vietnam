@@ -1,29 +1,29 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-ngu-dai-duong-phu-yen',
-    title: 'C√° Ng·ª´ ƒê·∫°i D∆∞∆°ng Ph√∫ Y√™n (Ph√∫ Y√™n Ocean Tuna ‚Äî Three Preparations)',
-    subtitle: 'The hand-line caught yellowfin and bigeye tuna of Ph√∫ Y√™n\'s deep-sea fleet ‚Äî the fish that the province has staked its culinary reputation on ‚Äî prepared three ways from the same catch: sashimi-style raw with m·∫Øm nhƒ© ginger sauce, grilled over charcoal with mu·ªëi l√° √©, and braised dark and slow with galangal and fish sauce.',
+    title: 'C· Ng? –?i Duong Ph˙ YÍn (Ph˙ YÍn Ocean Tuna ó Three Preparations)',
+    subtitle: 'The hand-line caught yellowfin and bigeye tuna of Ph˙ YÍn\'s deep-sea fleet ó the fish that the province has staked its culinary reputation on ó prepared three ways from the same catch: sashimi-style raw with m?m nhi ginger sauce, grilled over charcoal with mu?i l· È, and braised dark and slow with galangal and fish sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ca-ngu-dai-duong-phu-yen.jpg',
-    intro: `C√° ng·ª´ ƒë·∫°i d∆∞∆°ng Ph√∫ Y√™n is the tuna that has made the province famous throughout Vietnam ‚Äî not the canned tuna of industrial fishing, but the hand-line caught (c√¢u tay) yellowfin (c√° ng·ª´ v√¢y v√†ng) and bigeye tuna (c√° ng·ª´ m·∫Øt to) that Ph√∫ Y√™n's deep-sea fleet brings in from the waters of the South China Sea, some of the most productive tuna fishing grounds in Southeast Asia. The c√¢u tay method ‚Äî hand-line fishing, where individual fish are caught on a single line rather than netted ‚Äî produces tuna of a specific quality: less stressed than netted fish, with the lactic acid in the muscle not depleted by exhaustion, which means the flesh retains its sweetness and its specific red color rather than the pale, slightly bitter flesh that heavily stressed tuna produces. Ph√∫ Y√™n tuna is sold at the Tuy H√≤a harbor market from the early morning when the boats come in, at prices calibrated to the freshness in hours rather than days, and is eaten throughout the province in preparations that range from raw to grilled to braised ‚Äî the three cooking philosophies of the province applied to the ingredient that most rewards all three. The raw preparation (t√°i or g·ªèi style) showcases the tuna's sweetness and color directly. The grilled preparation produces the caramelized exterior that the dense, fat-rich tuna flesh develops magnificently on charcoal. The kho preparation ‚Äî the slow braise in fish sauce and galangal ‚Äî produces the deepest, most concentrated expression of the fish's flavor. This recipe covers all three, because a single large tuna piece from Ph√∫ Y√™n's boats deserves to be understood from all directions.`,
+    intro: `C· ng? d?i duong Ph˙ YÍn is the tuna that has made the province famous throughout Vietnam ó not the canned tuna of industrial fishing, but the hand-line caught (c‚u tay) yellowfin (c· ng? v‚y v‡ng) and bigeye tuna (c· ng? m?t to) that Ph˙ YÍn's deep-sea fleet brings in from the waters of the South China Sea, some of the most productive tuna fishing grounds in Southeast Asia. The c‚u tay method ó hand-line fishing, where individual fish are caught on a single line rather than netted ó produces tuna of a specific quality: less stressed than netted fish, with the lactic acid in the muscle not depleted by exhaustion, which means the flesh retains its sweetness and its specific red color rather than the pale, slightly bitter flesh that heavily stressed tuna produces. Ph˙ YÍn tuna is sold at the Tuy HÚa harbor market from the early morning when the boats come in, at prices calibrated to the freshness in hours rather than days, and is eaten throughout the province in preparations that range from raw to grilled to braised ó the three cooking philosophies of the province applied to the ingredient that most rewards all three. The raw preparation (t·i or g?i style) showcases the tuna's sweetness and color directly. The grilled preparation produces the caramelized exterior that the dense, fat-rich tuna flesh develops magnificently on charcoal. The kho preparation ó the slow braise in fish sauce and galangal ó produces the deepest, most concentrated expression of the fish's flavor. This recipe covers all three, because a single large tuna piece from Ph˙ YÍn's boats deserves to be understood from all directions.`,
     ingredientSections: [
         {
             title: 'Tuna',
             items: [
-                { amount: 800, unit: 'g', name: 'sashimi-grade fresh tuna loin (c√° ng·ª´ ƒë·∫°i d∆∞∆°ng phi l√™)', note: 'deep red, very fresh ‚Äî from hand-line caught yellowfin or bigeye if possible. The flesh should be deep burgundy-red, firm but slightly yielding, with no brown discoloration. Divide into three portions: 250g for the raw preparation, 300g for grilling, 250g for kho.' },
+                { amount: 800, unit: 'g', name: 'sashimi-grade fresh tuna loin (c· ng? d?i duong phi lÍ)', note: 'deep red, very fresh ó from hand-line caught yellowfin or bigeye if possible. The flesh should be deep burgundy-red, firm but slightly yielding, with no brown discoloration. Divide into three portions: 250g for the raw preparation, 300g for grilling, 250g for kho.' },
             ],
         },
         {
-            title: 'Raw preparation (t√°i c√° ng·ª´)',
+            title: 'Raw preparation (t·i c· ng?)',
             items: [
-                { amount: 250, unit: 'g', name: 'tuna, paper-thin sliced', note: 'across the grain ‚Äî 3mm maximum. Served immediately after slicing.' },
-                { amount: 3, unit: 'tbsp', name: 'm·∫Øm nhƒ© (Ph√∫ Y√™n first-press fish sauce)', note: 'thinned with 1 tbsp lime juice ‚Äî the curing agent and primary seasoning' },
+                { amount: 250, unit: 'g', name: 'tuna, paper-thin sliced', note: 'across the grain ó 3mm maximum. Served immediately after slicing.' },
+                { amount: 3, unit: 'tbsp', name: 'm?m nhi (Ph˙ YÍn first-press fish sauce)', note: 'thinned with 1 tbsp lime juice ó the curing agent and primary seasoning' },
                 { amount: 1, unit: 'tbsp', name: 'fresh lime juice' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 20, unit: 'g', name: 'fresh ginger', note: 'microplane-grated' },
@@ -31,7 +31,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Grilled preparation (c√° ng·ª´ n∆∞·ªõng than)',
+            title: 'Grilled preparation (c· ng? nu?ng than)',
             items: [
                 { amount: 300, unit: 'g', name: 'tuna steak, 2cm thick' },
                 { amount: 1, unit: 'tsp', name: 'coarse salt', note: 'rubbed on both surfaces' },
@@ -40,12 +40,12 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Braised preparation (c√° ng·ª´ kho)',
+            title: 'Braised preparation (c· ng? kho)',
             items: [
                 { amount: 250, unit: 'g', name: 'tuna, cut into 4cm cubes' },
                 { amount: 2, unit: 'tbsp', name: 'sugar', note: 'for the caramel base' },
-                { amount: 3, unit: 'tbsp', name: 'm·∫Øm nhƒ©' },
-                { amount: 30, unit: 'g', name: 'fresh galangal', note: 'sliced ‚Äî essential for fish kho in Ph√∫ Y√™n' },
+                { amount: 3, unit: 'tbsp', name: 'm?m nhi' },
+                { amount: 30, unit: 'g', name: 'fresh galangal', note: 'sliced ó essential for fish kho in Ph˙ YÍn' },
                 { amount: 4, name: 'garlic cloves', note: 'sliced' },
                 { amount: 2, name: 'shallots', note: 'halved' },
                 { amount: 2, name: 'bird\'s eye chilies', note: 'whole' },
@@ -54,9 +54,9 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Mu·ªëi l√° √© (for grilled preparation)',
+            title: 'Mu?i l· È (for grilled preparation)',
             items: [
-                { amount: 15, unit: 'g', name: 'fresh l√° √© leaves' },
+                { amount: 15, unit: 'g', name: 'fresh l· È leaves' },
                 { amount: 1.5, unit: 'tsp', name: 'coarse salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -66,9 +66,9 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An' },
-                { amount: 1, name: 'bunch rau rƒÉm' },
-                { amount: 1, name: 'bunch fresh l√° √© leaves' },
+                { amount: 16, name: 'b·nh tr·ng mË Tuy An' },
+                { amount: 1, name: 'bunch rau ram' },
+                { amount: 1, name: 'bunch fresh l· È leaves' },
                 { amount: 1, name: 'bunch Vietnamese coriander' },
                 { amount: 1, name: 'cucumber', note: 'sliced into batons' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
@@ -78,29 +78,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'PREPARATION 1: Raw t√°i c√° ng·ª´ ‚Äî serve first',
-            description: 'Slice 250g of tuna paper-thin (3mm) across the grain immediately before serving ‚Äî tuna oxidizes and changes color within minutes of slicing. Combine m·∫Øm nhƒ©, lime juice, sugar, microplane-grated ginger, and chili. Arrange the slices on a cold plate. Drizzle the m·∫Øm nhƒ© ginger sauce over. Serve immediately with rau rƒÉm and sesame crackers. The raw tuna in this preparation should taste of the sea, of the fat richness specific to deep-water tuna, and of the m·∫Øm nhƒ© that frames rather than overpowers it.',
-            tip: 'Slice the raw tuna on a chilled surface and serve within 2 minutes of slicing. Ph√∫ Y√™n\'s c√¢u tay tuna at peak freshness has a specific sweetness in the raw flesh that is the clearest argument for why hand-line fishing produces better eating quality than net fishing. This sweetness is the first and most important flavor in t√°i c√° ng·ª´ Ph√∫ Y√™n.',
+            title: 'PREPARATION 1: Raw t·i c· ng? ó serve first',
+            description: 'Slice 250g of tuna paper-thin (3mm) across the grain immediately before serving ó tuna oxidizes and changes color within minutes of slicing. Combine m?m nhi, lime juice, sugar, microplane-grated ginger, and chili. Arrange the slices on a cold plate. Drizzle the m?m nhi ginger sauce over. Serve immediately with rau ram and sesame crackers. The raw tuna in this preparation should taste of the sea, of the fat richness specific to deep-water tuna, and of the m?m nhi that frames rather than overpowers it.',
+            tip: 'Slice the raw tuna on a chilled surface and serve within 2 minutes of slicing. Ph˙ YÍn\'s c‚u tay tuna at peak freshness has a specific sweetness in the raw flesh that is the clearest argument for why hand-line fishing produces better eating quality than net fishing. This sweetness is the first and most important flavor in t·i c· ng? Ph˙ YÍn.',
         },
         {
             title: 'PREPARATION 2: Grilled tuna over charcoal',
-            description: 'Season the 2cm-thick tuna steak with coarse salt and black pepper. Brush with oil. Build charcoal to medium-hot. Grill the tuna steak 2-3 minutes per side for medium-rare (the correct doneness for tuna) ‚Äî the surface should be charred and caramelized while the center remains deep pink. Tuna cooked to well-done loses its characteristic richness entirely. Rest 2 minutes. Slice and serve with mu·ªëi l√° √© alongside.',
-            tip: 'The correct doneness for grilled Ph√∫ Y√™n tuna is medium-rare ‚Äî a charred exterior with a warm pink center. The dense, fat-rich flesh of yellowfin and bigeye tuna at this doneness is the most satisfying version of the fish. Well-done tuna is dry and flavorless. The char from the charcoal against the rich tuna flesh is the preparation that most clearly demonstrates why this tuna is priced at a premium.',
+            description: 'Season the 2cm-thick tuna steak with coarse salt and black pepper. Brush with oil. Build charcoal to medium-hot. Grill the tuna steak 2-3 minutes per side for medium-rare (the correct doneness for tuna) ó the surface should be charred and caramelized while the center remains deep pink. Tuna cooked to well-done loses its characteristic richness entirely. Rest 2 minutes. Slice and serve with mu?i l· È alongside.',
+            tip: 'The correct doneness for grilled Ph˙ YÍn tuna is medium-rare ó a charred exterior with a warm pink center. The dense, fat-rich flesh of yellowfin and bigeye tuna at this doneness is the most satisfying version of the fish. Well-done tuna is dry and flavorless. The char from the charcoal against the rich tuna flesh is the preparation that most clearly demonstrates why this tuna is priced at a premium.',
         },
         {
-            title: 'PREPARATION 3: C√° ng·ª´ kho ‚Äî the slow braise',
-            description: 'Make a dark caramel: heat oil and sugar in a small clay pot until deep amber. Add galangal, garlic, and shallots ‚Äî fry 1 minute. Add tuna cubes and coat in the caramel. Add m·∫Øm nhƒ©, whole chilies, and water. Bring to a boil, reduce to the lowest simmer. Braise uncovered for 20-25 minutes until the sauce has reduced to a dark, thick glaze. The kho tuna should be dark and intensely flavored ‚Äî the fish that in the raw preparation tasted of the sea now tastes of the sea concentrated through caramel and galangal.',
-            tip: 'Tuna kho is unusual in Vietnamese cooking because tuna is typically a raw or grilled fish ‚Äî the kho treatment is specific to Ph√∫ Y√™n, where the abundance of high-quality tuna makes using some pieces for braising an uncontroversial decision. The galangal in tuna kho is the aromatic that most specifically complements the rich, dense tuna flesh in a braised context.',
+            title: 'PREPARATION 3: C· ng? kho ó the slow braise',
+            description: 'Make a dark caramel: heat oil and sugar in a small clay pot until deep amber. Add galangal, garlic, and shallots ó fry 1 minute. Add tuna cubes and coat in the caramel. Add m?m nhi, whole chilies, and water. Bring to a boil, reduce to the lowest simmer. Braise uncovered for 20-25 minutes until the sauce has reduced to a dark, thick glaze. The kho tuna should be dark and intensely flavored ó the fish that in the raw preparation tasted of the sea now tastes of the sea concentrated through caramel and galangal.',
+            tip: 'Tuna kho is unusual in Vietnamese cooking because tuna is typically a raw or grilled fish ó the kho treatment is specific to Ph˙ YÍn, where the abundance of high-quality tuna makes using some pieces for braising an uncontroversial decision. The galangal in tuna kho is the aromatic that most specifically complements the rich, dense tuna flesh in a braised context.',
         },
         {
-            title: 'Pound the mu·ªëi l√° √©',
-            description: 'Pound l√° √© leaves with salt, pepper, and sugar until intensely green and fragrant. Transfer to plates. This is the dipping condiment specifically for the grilled preparation ‚Äî the raw version uses the m·∫Øm nhƒ© ginger sauce, and the kho version needs no dipping sauce because the braising sauce is self-contained. The three preparations use three different condiment approaches: raw m·∫Øm nhƒ©, grilled mu·ªëi l√° √©, braised self-sauce.',
-            tip: 'The three condiment approaches across three preparations from the same fish illustrates the Ph√∫ Y√™n cooking philosophy completely: the raw preparation needs the cleanest, most complex condiment (m·∫Øm nhƒ© ginger); the grilled preparation needs the most aromatic (mu·ªëi l√° √©); the braised preparation needs nothing external. The fish dictates the condiment.',
+            title: 'Pound the mu?i l· È',
+            description: 'Pound l· È leaves with salt, pepper, and sugar until intensely green and fragrant. Transfer to plates. This is the dipping condiment specifically for the grilled preparation ó the raw version uses the m?m nhi ginger sauce, and the kho version needs no dipping sauce because the braising sauce is self-contained. The three preparations use three different condiment approaches: raw m?m nhi, grilled mu?i l· È, braised self-sauce.',
+            tip: 'The three condiment approaches across three preparations from the same fish illustrates the Ph˙ YÍn cooking philosophy completely: the raw preparation needs the cleanest, most complex condiment (m?m nhi ginger); the grilled preparation needs the most aromatic (mu?i l· È); the braised preparation needs nothing external. The fish dictates the condiment.',
         },
         {
-            title: 'Serve all three together ‚Äî the complete Ph√∫ Y√™n tuna experience',
-            description: 'Serve all three preparations simultaneously on a shared table: the raw t√°i on a cold plate, the grilled steak sliced alongside mu·ªëi l√° √©, the kho in its clay pot. Provide sesame crackers, all fresh herbs, cucumber, rice, and lime. The complete experience: raw tuna shows the ingredient. Grilled tuna shows what fire does to it. Braised tuna shows what time and concentration do to it. Eating all three from the same fish is understanding why Ph√∫ Y√™n considers this tuna worth protecting.',
-            tip: 'The three preparations served together from the same fish is specifically the Ph√∫ Y√™n way of honoring a premium ingredient ‚Äî showing what it is, what fire makes it, and what slow cooking makes it. This three-way service is done at the better tuna restaurants along the Tuy H√≤a harbor, where the morning catch is prepared in all forms before noon.',
+            title: 'Serve all three together ó the complete Ph˙ YÍn tuna experience',
+            description: 'Serve all three preparations simultaneously on a shared table: the raw t·i on a cold plate, the grilled steak sliced alongside mu?i l· È, the kho in its clay pot. Provide sesame crackers, all fresh herbs, cucumber, rice, and lime. The complete experience: raw tuna shows the ingredient. Grilled tuna shows what fire does to it. Braised tuna shows what time and concentration do to it. Eating all three from the same fish is understanding why Ph˙ YÍn considers this tuna worth protecting.',
+            tip: 'The three preparations served together from the same fish is specifically the Ph˙ YÍn way of honoring a premium ingredient ó showing what it is, what fire makes it, and what slow cooking makes it. This three-way service is done at the better tuna restaurants along the Tuy HÚa harbor, where the morning catch is prepared in all forms before noon.',
         },
     ],
 };

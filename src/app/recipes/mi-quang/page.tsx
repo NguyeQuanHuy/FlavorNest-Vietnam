@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'mi-quang',
     title: 'Quang-Style Turmeric Noodles',
-    subtitle: 'Wide turmeric noodles with just enough broth to coat â€” the pride of Quang Nam province.',
+    subtitle: 'Wide turmeric noodles with just enough broth to coat — the pride of Quang Nam province.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/mi-quang.jpg',
-    intro: 'Mi Quang defies easy categorisation. It is not a soup â€” there is barely enough broth to wet the noodles. It is not a dry noodle dish â€” the broth is essential, rich with pork and shrimp fat. The wide turmeric-yellow noodles sit in a shallow pool of intensely savoury broth, topped with shrimp, pork belly, quail eggs, toasted peanuts, and sesame rice crackers that shatter when you mix everything together. It is loud, textural, and deeply satisfying.',
+    intro: 'Mi Quang defies easy categorisation. It is not a soup — there is barely enough broth to wet the noodles. It is not a dry noodle dish — the broth is essential, rich with pork and shrimp fat. The wide turmeric-yellow noodles sit in a shallow pool of intensely savoury broth, topped with shrimp, pork belly, quail eggs, toasted peanuts, and sesame rice crackers that shatter when you mix everything together. It is loud, textural, and deeply satisfying.',
     ingredientSections: [
         {
             title: 'Broth',
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Build the broth',
-            description: 'Simmer pork bones in water for 30 minutes, skimming foam. Add shrimp shells and heads, annatto oil, fish sauce, and sugar. Simmer 15 more minutes. Strain â€” the broth should be a rich orange-gold. Keep hot.',
+            description: 'Simmer pork bones in water for 30 minutes, skimming foam. Add shrimp shells and heads, annatto oil, fish sauce, and sugar. Simmer 15 more minutes. Strain — the broth should be a rich orange-gold. Keep hot.',
         },
         {
             title: 'Cook the toppings',
@@ -59,12 +59,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Assemble',
-            description: 'Ladle 4 to 5 tablespoons of hot broth over each bowl of noodles â€” the broth should pool at the bottom but not submerge the noodles. Arrange pork belly, shrimp, and quail egg halves on top. Add fresh herbs and banana blossom.',
+            description: 'Ladle 4 to 5 tablespoons of hot broth over each bowl of noodles — the broth should pool at the bottom but not submerge the noodles. Arrange pork belly, shrimp, and quail egg halves on top. Add fresh herbs and banana blossom.',
             tip: 'The broth ratio is the defining characteristic of mi Quang. Too much broth and it becomes a soup. Too little and it is dry. The noodles should glisten, not swim.',
         },
         {
             title: 'Finish and serve',
-            description: 'Top with crushed peanuts and shards of sesame rice cracker. Mix everything at the table. The crackers soften gradually in the broth â€” eat quickly for maximum texture contrast.',
+            description: 'Top with crushed peanuts and shards of sesame rice cracker. Mix everything at the table. The crackers soften gradually in the broth — eat quickly for maximum texture contrast.',
         },
     ],
 };

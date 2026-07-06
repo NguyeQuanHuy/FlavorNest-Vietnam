@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 1,
     heroImage: '/images/recipes/ca-phe-sua-da.jpg',
-    intro: 'Ca phe sua da is Vietnam distilled into a glass. Strong robusta coffee drips slowly through a phin filter onto a thick layer of sweetened condensed milk, then poured over ice. The ritual is part of the experience â€” the slow drip, the anticipation, then the stir and the first sip of something bitter, sweet, and cold all at once. It is the most ordered drink in the country and has been for decades.',
+    intro: 'Ca phe sua da is Vietnam distilled into a glass. Strong robusta coffee drips slowly through a phin filter onto a thick layer of sweetened condensed milk, then poured over ice. The ritual is part of the experience — the slow drip, the anticipation, then the stir and the first sip of something bitter, sweet, and cold all at once. It is the most ordered drink in the country and has been for decades.',
     ingredientSections: [
         {
             title: 'Per serving',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Brew coffee via phin',
-            description: 'Place the phin filter on top of the glass. Add coffee grounds and press the filter plate down lightly. Pour a small amount of hot water to bloom the grounds for 30 seconds, then fill the phin to the top. Allow to drip completely â€” about 4 to 5 minutes.',
+            description: 'Place the phin filter on top of the glass. Add coffee grounds and press the filter plate down lightly. Pour a small amount of hot water to bloom the grounds for 30 seconds, then fill the phin to the top. Allow to drip completely — about 4 to 5 minutes.',
             tip: 'Do not rush the drip. A faster pour means weaker coffee. The slow drip is where the flavour develops.',
         },
         {

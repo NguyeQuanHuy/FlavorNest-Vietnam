@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/thit-nuong-xien.jpg',
 
-    intro: `Thịt nướng xiên is a popular Vietnamese street food made from marinated pork or beef skewered and grilled over charcoal.
+    intro: `Th?t nu?ng xi�n is a popular Vietnamese street food made from marinated pork or beef skewered and grilled over charcoal.
 
 The meat is infused with garlic, lemongrass, fish sauce, and a touch of sugar, then grilled until slightly caramelized and smoky. The result is juicy, aromatic skewers with a perfect balance of savory, sweet, and smoky flavors.
 

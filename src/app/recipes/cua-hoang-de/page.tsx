@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'cua-hoang-de',
     title: 'Steamed King Crab',
-    subtitle: 'Cua Hoang De â€” whole king crab steamed over lemongrass and ginger, served with salted egg butter dipping sauce.',
+    subtitle: 'Cua Hoang De — whole king crab steamed over lemongrass and ginger, served with salted egg butter dipping sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '35 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1600&q=85',
-    intro: 'King crab â€” cua hoang de â€” is the most prized crab in Vietnamese coastal cooking. The legs are thick, the meat is sweet and dense, and the shell turns a deep orange-red when cooked. The Vietnamese approach is to steam it simply over aromatics so nothing interferes with the natural flavour of the crab. The dipping sauce is the only place where complexity is permitted.',
+    intro: 'King crab — cua hoang de — is the most prized crab in Vietnamese coastal cooking. The legs are thick, the meat is sweet and dense, and the shell turns a deep orange-red when cooked. The Vietnamese approach is to steam it simply over aromatics so nothing interferes with the natural flavour of the crab. The dipping sauce is the only place where complexity is permitted.',
     ingredientSections: [
         {
             title: 'Crab',
@@ -53,7 +53,7 @@ const recipe: RecipeData = {
         {
             title: 'Make the salted egg butter sauce',
             description: 'While the crab steams, melt butter in a small pan over medium heat. Add garlic and fry 1 minute until fragrant. Add curry leaves and chilli, toss 30 seconds. Add mashed salted egg yolks, fish sauce, and sugar. Stir until the sauce foams and turns golden, about 2 minutes.',
-            tip: 'The salted egg yolks should foam in the butter â€” this is the texture you want. Keep the heat medium, not high.',
+            tip: 'The salted egg yolks should foam in the butter — this is the texture you want. Keep the heat medium, not high.',
         },
         {
             title: 'Serve',

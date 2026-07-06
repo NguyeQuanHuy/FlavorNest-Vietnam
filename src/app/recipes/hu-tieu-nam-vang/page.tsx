@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'hu-tieu-nam-vang',
     title: 'Phnom Penh Noodle Soup',
-    subtitle: 'A Saigon institution with Cambodian roots â€” clear, slightly sweet pork broth with rice noodles and prawns.',
+    subtitle: 'A Saigon institution with Cambodian roots — clear, slightly sweet pork broth with rice noodles and prawns.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/hu-tieu-nam-vang.jpg',
-    intro: `Hu tieu Nam Vang arrived in Saigon with the Teochew Chinese community from Phnom Penh in the mid-20th century and never left. The broth is lighter and sweeter than pho â€” built on pork bones and dried squid, seasoned with fish sauce and rock sugar into something clean and slightly marine. The noodles can be flat rice noodles or thin egg noodles. The toppings are generous: minced pork, sliced pork, whole prawns, and a poached egg. The dish can be served as a soup or "kho" â€” dry, with the broth on the side for dipping.`,
+    intro: `Hu tieu Nam Vang arrived in Saigon with the Teochew Chinese community from Phnom Penh in the mid-20th century and never left. The broth is lighter and sweeter than pho — built on pork bones and dried squid, seasoned with fish sauce and rock sugar into something clean and slightly marine. The noodles can be flat rice noodles or thin egg noodles. The toppings are generous: minced pork, sliced pork, whole prawns, and a poached egg. The dish can be served as a soup or "kho" — dry, with the broth on the side for dipping.`,
     ingredientSections: [
         {
             title: 'Broth',
@@ -53,7 +53,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Season the broth',
-            description: 'Strain broth through a fine sieve. Season with fish sauce, rock sugar, and salt. Taste carefully â€” the broth should be lighter and sweeter than pho, with a clean finish.',
+            description: 'Strain broth through a fine sieve. Season with fish sauce, rock sugar, and salt. Taste carefully — the broth should be lighter and sweeter than pho, with a clean finish.',
         },
         {
             title: 'Cook the toppings',

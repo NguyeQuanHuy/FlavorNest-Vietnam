@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-chua',
     title: 'Nem Chua (Vietnamese Fermented Pork)',
-    subtitle: 'Tangy, garlicky, and lightly sweet â€” cured pork bites wrapped and naturally fermented.',
+    subtitle: 'Tangy, garlicky, and lightly sweet — cured pork bites wrapped and naturally fermented.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '48 hours',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/nem-chua.jpg',
 
-    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnamâ€™s most distinctive delicacies â€” a naturally fermented pork snack with a signature balance of sour, savory, and slightly sweet flavors.
+    intro: `:contentReference[oaicite:1]{index=1} is one of Vietnam’s most distinctive delicacies — a naturally fermented pork snack with a signature balance of sour, savory, and slightly sweet flavors.
 
-Fresh pork is finely ground, seasoned with garlic, fish sauce, and sugar, then mixed with toasted rice powder and wrapped tightly in banana leaves. Over 1â€“2 days, natural fermentation transforms the meat, developing a gentle tang and a firm, slightly springy texture.
+Fresh pork is finely ground, seasoned with garlic, fish sauce, and sugar, then mixed with toasted rice powder and wrapped tightly in banana leaves. Over 1–2 days, natural fermentation transforms the meat, developing a gentle tang and a firm, slightly springy texture.
 
 Often enjoyed as a snack or with drinks, nem chua delivers a bold combination of aroma and taste: garlicky, tangy, and deeply satisfying.`,
 
@@ -54,11 +54,11 @@ Often enjoyed as a snack or with drinks, nem chua delivers a bold combination of
         {
             title: 'Shape and wrap',
             description: 'Divide the mixture into small portions. Wrap tightly in plastic wrap first, forming compact logs or squares, then wrap again with banana leaves.',
-            tip: 'Tight wrapping is crucial â€” it creates the anaerobic environment needed for fermentation.',
+            tip: 'Tight wrapping is crucial — it creates the anaerobic environment needed for fermentation.',
         },
         {
             title: 'Ferment',
-            description: 'Leave the wrapped nem at room temperature for 24â€“48 hours until slightly firm and tangy. Warmer temperatures speed up fermentation.',
+            description: 'Leave the wrapped nem at room temperature for 24–48 hours until slightly firm and tangy. Warmer temperatures speed up fermentation.',
         },
         {
             title: 'Serve',

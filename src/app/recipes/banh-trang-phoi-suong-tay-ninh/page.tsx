@@ -1,28 +1,28 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-trang-phoi-suong-tay-ninh',
-    title: 'B√°nh Tr√°ng Ph∆°i S∆∞∆°ng T√¢y Ninh (T√¢y Ninh Dew-Dried Rice Paper with Grilled Pork)',
-    subtitle: 'The uniquely soft, slightly chewy rice paper of T√¢y Ninh ‚Äî dried in the morning dew rather than the midday sun, producing a wrapper that is flexible without soaking and that carries a specific mild sourness ‚Äî wrapped around grilled pork, fresh herbs, green mango, and the T√¢y Ninh mu·ªëi t√¥m shrimp salt that is the province\'s defining condiment.',
+    title: 'B·nh Tr·ng Phoi Suong T‚y Ninh (T‚y Ninh Dew-Dried Rice Paper with Grilled Pork)',
+    subtitle: 'The uniquely soft, slightly chewy rice paper of T‚y Ninh ó dried in the morning dew rather than the midday sun, producing a wrapper that is flexible without soaking and that carries a specific mild sourness ó wrapped around grilled pork, fresh herbs, green mango, and the T‚y Ninh mu?i tÙm shrimp salt that is the province\'s defining condiment.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-trang-phoi-suong-tay-ninh.jpg',
-    intro: `B√°nh tr√°ng ph∆°i s∆∞∆°ng T√¢y Ninh is the dew-dried rice paper of T√¢y Ninh province ‚Äî a preparation that exists because of a specific rice paper production technique developed in this border province west of Ho Chi Minh City, where the rice paper sheets are dried overnight in the ambient dew rather than in the direct midday sun used for standard dried rice paper. This dew-drying technique produces a rice paper with a fundamentally different texture and character from both standard dried rice paper and fresh rice paper: it is softer and more pliable than sun-dried rice paper (which requires soaking in water before it can be wrapped), flexible enough to fold and roll without soaking or soaking, and carrying a slight, clean sourness from the overnight dew exposure that no other rice paper production method produces. B√°nh tr√°ng ph∆°i s∆∞∆°ng is eaten without soaking ‚Äî the paper is ready to wrap directly from the package, which is the detail that makes it the most convenient rice paper wrapper in the Vietnamese repertoire and the reason it has become the preferred rice paper for outdoor eating, picnics, and the specific style of wrapping food at the table that characterizes T√¢y Ninh eating culture. The preparation is most typically served alongside th·ªãt n∆∞·ªõng (grilled pork) and accompanied by mu·ªëi t√¥m T√¢y Ninh ‚Äî the province's specific shrimp salt condiment that is the most distinctive regional flavoring element in T√¢y Ninh cooking and that appears on virtually every table in the province as the all-purpose seasoning for fresh fruit, grilled meats, and rice paper preparations alike. Mu·ªëi t√¥m T√¢y Ninh is a dry mixture of dried shrimp, salt, sugar, chili, and five-spice that is simultaneously a dipping condiment, a fruit seasoning, and a spice mix ‚Äî the specific flavor of shrimp and chili together in a dry format that produces an addictive combination when used with the slightly sour b√°nh tr√°ng ph∆°i s∆∞∆°ng and the smoky grilled pork.`,
+    intro: `B·nh tr·ng phoi suong T‚y Ninh is the dew-dried rice paper of T‚y Ninh province ó a preparation that exists because of a specific rice paper production technique developed in this border province west of Ho Chi Minh City, where the rice paper sheets are dried overnight in the ambient dew rather than in the direct midday sun used for standard dried rice paper. This dew-drying technique produces a rice paper with a fundamentally different texture and character from both standard dried rice paper and fresh rice paper: it is softer and more pliable than sun-dried rice paper (which requires soaking in water before it can be wrapped), flexible enough to fold and roll without soaking or soaking, and carrying a slight, clean sourness from the overnight dew exposure that no other rice paper production method produces. B·nh tr·ng phoi suong is eaten without soaking ó the paper is ready to wrap directly from the package, which is the detail that makes it the most convenient rice paper wrapper in the Vietnamese repertoire and the reason it has become the preferred rice paper for outdoor eating, picnics, and the specific style of wrapping food at the table that characterizes T‚y Ninh eating culture. The preparation is most typically served alongside th?t nu?ng (grilled pork) and accompanied by mu?i tÙm T‚y Ninh ó the province's specific shrimp salt condiment that is the most distinctive regional flavoring element in T‚y Ninh cooking and that appears on virtually every table in the province as the all-purpose seasoning for fresh fruit, grilled meats, and rice paper preparations alike. Mu?i tÙm T‚y Ninh is a dry mixture of dried shrimp, salt, sugar, chili, and five-spice that is simultaneously a dipping condiment, a fruit seasoning, and a spice mix ó the specific flavor of shrimp and chili together in a dry format that produces an addictive combination when used with the slightly sour b·nh tr·ng phoi suong and the smoky grilled pork.`,
     ingredientSections: [
         {
-            title: 'B√°nh tr√°ng ph∆°i s∆∞∆°ng',
+            title: 'B·nh tr·ng phoi suong',
             items: [
-                { amount: 20, name: 'b√°nh tr√°ng ph∆°i s∆∞∆°ng T√¢y Ninh sheets', note: 'the dew-dried rice paper that requires no soaking ‚Äî pliable straight from the package. Available at Vietnamese specialty markets. If unavailable, use fresh rice paper (b√°nh tr√°ng t∆∞∆°i) as the closest substitute.' },
+                { amount: 20, name: 'b·nh tr·ng phoi suong T‚y Ninh sheets', note: 'the dew-dried rice paper that requires no soaking ó pliable straight from the package. Available at Vietnamese specialty markets. If unavailable, use fresh rice paper (b·nh tr·ng tuoi) as the closest substitute.' },
             ],
         },
         {
-            title: 'Grilled pork (th·ªãt n∆∞·ªõng)',
+            title: 'Grilled pork (th?t nu?ng)',
             items: [
-                { amount: 500, unit: 'g', name: 'pork shoulder or neck (th·ªãt c·ªï heo)', note: 'thinly sliced 5mm ‚Äî the thin slicing ensures quick cooking and tenderness on the charcoal grill' },
+                { amount: 500, unit: 'g', name: 'pork shoulder or neck (th?t c? heo)', note: 'thinly sliced 5mm ó the thin slicing ensures quick cooking and tenderness on the charcoal grill' },
                 { amount: 2, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 1, unit: 'tbsp', name: 'soy sauce' },
                 { amount: 1.5, unit: 'tbsp', name: 'sugar' },
@@ -35,31 +35,31 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Mu·ªëi t√¥m T√¢y Ninh ‚Äî the defining condiment',
+            title: 'Mu?i tÙm T‚y Ninh ó the defining condiment',
             items: [
-                { amount: 30, unit: 'g', name: 'dried shrimp (t√¥m kh√¥)', note: 'finely ground in a blender or mortar' },
+                { amount: 30, unit: 'g', name: 'dried shrimp (tÙm khÙ)', note: 'finely ground in a blender or mortar' },
                 { amount: 1.5, unit: 'tsp', name: 'coarse salt' },
                 { amount: 2, unit: 'tsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'chili powder', note: 'or 2 dried chilies, ground' },
                 { amount: 0.5, unit: 'tsp', name: 'five-spice powder' },
-                { amount: 0.5, unit: 'tsp', name: 'MSG', note: 'traditional in T√¢y Ninh mu·ªëi t√¥m ‚Äî optional but authentic' },
+                { amount: 0.5, unit: 'tsp', name: 'MSG', note: 'traditional in T‚y Ninh mu?i tÙm ó optional but authentic' },
             ],
         },
         {
-            title: 'Fresh accompaniments ‚Äî generous T√¢y Ninh style',
+            title: 'Fresh accompaniments ó generous T‚y Ninh style',
             items: [
-                { amount: 1, name: 'green unripe mango (xo√†i xanh)', note: 'julienned ‚Äî the primary fruit for dipping in mu·ªëi t√¥m' },
+                { amount: 1, name: 'green unripe mango (xo‡i xanh)', note: 'julienned ó the primary fruit for dipping in mu?i tÙm' },
                 { amount: 1, name: 'cucumber', note: 'julienned into batons' },
                 { amount: 1, name: 'bunch mint' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
-                { amount: 1, name: 'bunch perilla (t√≠a t√¥)' },
-                { amount: 100, unit: 'g', name: 'ƒë·ªì chua (pickled daikon and carrot)', note: 'drained' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
+                { amount: 1, name: 'bunch perilla (tÌa tÙ)' },
+                { amount: 100, unit: 'g', name: 'd? chua (pickled daikon and carrot)', note: 'drained' },
                 { amount: 100, unit: 'g', name: 'bean sprouts', note: 'blanched briefly' },
                 { amount: 1, name: 'head butter lettuce' },
             ],
         },
         {
-            title: 'N∆∞·ªõc ch·∫•m for the pork',
+            title: 'Nu?c ch?m for the pork',
             items: [
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 2, unit: 'tbsp', name: 'fresh lime juice' },
@@ -72,29 +72,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Make mu·ªëi t√¥m T√¢y Ninh',
-            description: 'Grind the dried shrimp in a blender or mortar until fine ‚Äî the texture should be between powder and fine crumbs, not completely smooth. Combine with salt, sugar, chili powder, five-spice, and optional MSG. Mix thoroughly. Transfer to a small plate or shallow bowl for dipping. Taste: mu·ªëi t√¥m T√¢y Ninh should be simultaneously salty, sweet, spicy, and carrying the specific umami depth of the dried shrimp. This is the condiment that makes the T√¢y Ninh eating experience specifically itself ‚Äî once tasted with fresh green mango and b√°nh tr√°ng ph∆°i s∆∞∆°ng, it becomes immediately understandable why T√¢y Ninh people consider it irreplaceable.',
-            tip: 'Mu·ªëi t√¥m T√¢y Ninh made with freshly ground dried shrimp is significantly more fragrant and more complex than commercial versions. The specific combination of dried shrimp umami, five-spice warmth, and chili heat in dry form produces a condiment that behaves differently from liquid dipping sauces ‚Äî it adheres to the surface of what it touches, providing a concentrated hit of flavor at the point of contact rather than a distributed flavor that liquid sauces produce.',
+            title: 'Make mu?i tÙm T‚y Ninh',
+            description: 'Grind the dried shrimp in a blender or mortar until fine ó the texture should be between powder and fine crumbs, not completely smooth. Combine with salt, sugar, chili powder, five-spice, and optional MSG. Mix thoroughly. Transfer to a small plate or shallow bowl for dipping. Taste: mu?i tÙm T‚y Ninh should be simultaneously salty, sweet, spicy, and carrying the specific umami depth of the dried shrimp. This is the condiment that makes the T‚y Ninh eating experience specifically itself ó once tasted with fresh green mango and b·nh tr·ng phoi suong, it becomes immediately understandable why T‚y Ninh people consider it irreplaceable.',
+            tip: 'Mu?i tÙm T‚y Ninh made with freshly ground dried shrimp is significantly more fragrant and more complex than commercial versions. The specific combination of dried shrimp umami, five-spice warmth, and chili heat in dry form produces a condiment that behaves differently from liquid dipping sauces ó it adheres to the surface of what it touches, providing a concentrated hit of flavor at the point of contact rather than a distributed flavor that liquid sauces produce.',
         },
         {
             title: 'Marinate and grill the pork',
-            description: 'Combine pork slices with fish sauce, soy sauce, sugar, garlic, shallots, five-spice, black pepper, and oil. Marinate 30 minutes minimum. Grill over medium-hot charcoal for 2-3 minutes per side ‚Äî the thin slicing ensures quick cooking. Brush honey over the pork in the final minute for glaze. The pork should be caramelized and slightly charred at the edges. Rest 2 minutes before serving alongside the b√°nh tr√°ng.',
-            tip: 'The thin slicing of the pork for th·ªãt n∆∞·ªõng accompanying b√°nh tr√°ng ph∆°i s∆∞∆°ng ‚Äî 5mm ‚Äî is deliberately thinner than for other grilled pork preparations. The thin slice caramelizes more aggressively in the available grilling time, produces more surface area for the honey glaze, and is more easily wrapped without compressing the delicate dew-dried rice paper wrapper.',
+            description: 'Combine pork slices with fish sauce, soy sauce, sugar, garlic, shallots, five-spice, black pepper, and oil. Marinate 30 minutes minimum. Grill over medium-hot charcoal for 2-3 minutes per side ó the thin slicing ensures quick cooking. Brush honey over the pork in the final minute for glaze. The pork should be caramelized and slightly charred at the edges. Rest 2 minutes before serving alongside the b·nh tr·ng.',
+            tip: 'The thin slicing of the pork for th?t nu?ng accompanying b·nh tr·ng phoi suong ó 5mm ó is deliberately thinner than for other grilled pork preparations. The thin slice caramelizes more aggressively in the available grilling time, produces more surface area for the honey glaze, and is more easily wrapped without compressing the delicate dew-dried rice paper wrapper.',
         },
         {
-            title: 'Prepare the green mango for mu·ªëi t√¥m dipping',
-            description: 'Julienne the green mango into thin batons. The green mango for mu·ªëi t√¥m dipping is one of the most important elements of the T√¢y Ninh experience ‚Äî it is eaten as much as a condiment delivery vehicle as a component of the roll. Each mango baton dipped in mu·ªëi t√¥m and eaten before or alongside the roll provides the specific combination of tart-sour mango and sweet-salty-spicy shrimp salt that defines T√¢y Ninh eating culture. Prepare extra ‚Äî it will disappear quickly.',
-            tip: 'Green mango with mu·ªëi t√¥m T√¢y Ninh is the snack combination that Vietnamese people from T√¢y Ninh province specifically seek out when they travel, because no other province has the same mu·ªëi t√¥m. The specific combination of this condiment with unripe mango is the flavor memory of T√¢y Ninh for anyone who grew up in or near the province.',
+            title: 'Prepare the green mango for mu?i tÙm dipping',
+            description: 'Julienne the green mango into thin batons. The green mango for mu?i tÙm dipping is one of the most important elements of the T‚y Ninh experience ó it is eaten as much as a condiment delivery vehicle as a component of the roll. Each mango baton dipped in mu?i tÙm and eaten before or alongside the roll provides the specific combination of tart-sour mango and sweet-salty-spicy shrimp salt that defines T‚y Ninh eating culture. Prepare extra ó it will disappear quickly.',
+            tip: 'Green mango with mu?i tÙm T‚y Ninh is the snack combination that Vietnamese people from T‚y Ninh province specifically seek out when they travel, because no other province has the same mu?i tÙm. The specific combination of this condiment with unripe mango is the flavor memory of T‚y Ninh for anyone who grew up in or near the province.',
         },
         {
-            title: 'The no-soak wrap ‚Äî the T√¢y Ninh method',
-            description: 'Take one sheet of b√°nh tr√°ng ph∆°i s∆∞∆°ng directly from the package ‚Äî do not soak, do not wet. The paper is already at the correct moisture level from the overnight dew-drying process. Lay flat. Place a lettuce leaf, herbs, bean sprouts, cucumber, and ƒë·ªì chua across the lower third. Add 2-3 pieces of grilled pork. Add a few pieces of green mango. Fold up the bottom, fold in the sides, roll forward. The paper should fold without cracking ‚Äî its dew-dried pliability is what makes this possible without soaking.',
-            tip: 'The no-soak technique for b√°nh tr√°ng ph∆°i s∆∞∆°ng is the detail that most surprises those accustomed to standard dried rice paper. Standard dried rice paper soaked in water for standard fresh rolls becomes soft and slightly sticky ‚Äî it is at a different hydration level. B√°nh tr√°ng ph∆°i s∆∞∆°ng, dried in overnight dew rather than the midday sun, is already at the optimal hydration level straight from the package and requires nothing added to be ready to roll.',
+            title: 'The no-soak wrap ó the T‚y Ninh method',
+            description: 'Take one sheet of b·nh tr·ng phoi suong directly from the package ó do not soak, do not wet. The paper is already at the correct moisture level from the overnight dew-drying process. Lay flat. Place a lettuce leaf, herbs, bean sprouts, cucumber, and d? chua across the lower third. Add 2-3 pieces of grilled pork. Add a few pieces of green mango. Fold up the bottom, fold in the sides, roll forward. The paper should fold without cracking ó its dew-dried pliability is what makes this possible without soaking.',
+            tip: 'The no-soak technique for b·nh tr·ng phoi suong is the detail that most surprises those accustomed to standard dried rice paper. Standard dried rice paper soaked in water for standard fresh rolls becomes soft and slightly sticky ó it is at a different hydration level. B·nh tr·ng phoi suong, dried in overnight dew rather than the midday sun, is already at the optimal hydration level straight from the package and requires nothing added to be ready to roll.',
         },
         {
-            title: 'Two dipping sauces ‚Äî one roll, two experiences',
-            description: 'Serve both the n∆∞·ªõc ch·∫•m (for the pork) and the mu·ªëi t√¥m (for the mango and the roll) simultaneously. The n∆∞·ªõc ch·∫•m provides the liquid brightness that the roll needs as a whole; the mu·ªëi t√¥m provides the specific T√¢y Ninh shrimp-spice dimension that makes the bite specifically of this province. To eat: dip the roll end in n∆∞·ªõc ch·∫•m, take a bite, then dip a green mango baton in mu·ªëi t√¥m and eat it alongside. The alternation between the two condiments ‚Äî liquid and dry, clear and complex ‚Äî is the complete T√¢y Ninh eating rhythm.',
-            tip: 'Eating b√°nh tr√°ng ph∆°i s∆∞∆°ng th·ªãt n∆∞·ªõng T√¢y Ninh with only n∆∞·ªõc ch·∫•m is eating half the dish. The mu·ªëi t√¥m is not a garnish or an option ‚Äî it is the condiment that makes the preparation specifically T√¢y Ninh. The province is famous for its mu·ªëi t√¥m throughout Vietnam in the same way that Ph√∫ Y√™n is famous for its m·∫Øm nhƒ© and Hu·∫ø is famous for its m·∫Øm t√¥m. The condiment is the regional identity.',
+            title: 'Two dipping sauces ó one roll, two experiences',
+            description: 'Serve both the nu?c ch?m (for the pork) and the mu?i tÙm (for the mango and the roll) simultaneously. The nu?c ch?m provides the liquid brightness that the roll needs as a whole; the mu?i tÙm provides the specific T‚y Ninh shrimp-spice dimension that makes the bite specifically of this province. To eat: dip the roll end in nu?c ch?m, take a bite, then dip a green mango baton in mu?i tÙm and eat it alongside. The alternation between the two condiments ó liquid and dry, clear and complex ó is the complete T‚y Ninh eating rhythm.',
+            tip: 'Eating b·nh tr·ng phoi suong th?t nu?ng T‚y Ninh with only nu?c ch?m is eating half the dish. The mu?i tÙm is not a garnish or an option ó it is the condiment that makes the preparation specifically T‚y Ninh. The province is famous for its mu?i tÙm throughout Vietnam in the same way that Ph˙ YÍn is famous for its m?m nhi and Hu? is famous for its m?m tÙm. The condiment is the regional identity.',
         },
     ],
 };

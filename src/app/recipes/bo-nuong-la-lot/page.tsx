@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'bo-nuong-la-lot',
     title: 'Beef in Betel Leaf',
     subtitle:
-        'Bò Nướng Lá Lốt — seasoned ground beef wrapped in glossy betel leaves, grilled until the leaves blister and release their peppery aroma.',
+        'B� Nu?ng L� L?t � seasoned ground beef wrapped in glossy betel leaves, grilled until the leaves blister and release their peppery aroma.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/bo-nuong-la-lot.jpg',
     intro:
-        'Lá lốt is not the same plant as betel leaf (though everyone calls it that in English) — it is a wild piper relative with a distinct, peppery-woody perfume that only wakes up over direct flame. This is a party dish: made in batches, eaten with your hands, wrapped in rice paper with so many herbs and pickles you forget about the plate altogether.',
+        'L� l?t is not the same plant as betel leaf (though everyone calls it that in English) � it is a wild piper relative with a distinct, peppery-woody perfume that only wakes up over direct flame. This is a party dish: made in batches, eaten with your hands, wrapped in rice paper with so many herbs and pickles you forget about the plate altogether.',
     ingredientSections: [
         {
             title: 'Filling',
@@ -33,7 +33,7 @@ const recipe: RecipeData = {
         {
             title: 'Wrapping',
             items: [
-                { amount: 30, name: 'lá lốt (wild betel) leaves', note: 'washed, stems trimmed' },
+                { amount: 30, name: 'l� l?t (wild betel) leaves', note: 'washed, stems trimmed' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil', note: 'for brushing' },
             ],
         },
@@ -43,7 +43,7 @@ const recipe: RecipeData = {
                 { amount: 1, name: 'pack rice paper wrappers' },
                 { amount: 300, unit: 'g', name: 'vermicelli noodles', note: 'cooked' },
                 { amount: 1, name: 'platter of herbs', note: 'mint, perilla, lettuce, cucumber' },
-                { amount: 1, name: 'bowl nước chấm or peanut-hoisin sauce' },
+                { amount: 1, name: 'bowl nu?c ch?m or peanut-hoisin sauce' },
             ],
         },
     ],
@@ -55,7 +55,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prepare the leaves',
-            description: 'Wash the Piper sarmentosum (Lá Lốt) leaves carefully and pat them dry. Lay each leaf flat on your workspace with the matte, textured vein-side facing up and the vibrant, shiny side facing down.',
+            description: 'Wash the Piper sarmentosum (L� L?t) leaves carefully and pat them dry. Lay each leaf flat on your workspace with the matte, textured vein-side facing up and the vibrant, shiny side facing down.',
             tip: 'If the leaves are too stiff to roll, blanch them in hot water for 2 seconds or leave them out to wilt slightly so they become more pliable.',
         },
         {
@@ -75,7 +75,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Build the table',
-            description: 'Arrange the hot rolls on a platter alongside rice paper, thin vermicelli noodles (bánh hỏi), a variety of fresh herbs, and a bowl of Mắm Nêm (fermented pineapple anchovy dip) so everyone can wrap their own rolls at the table.',
+            description: 'Arrange the hot rolls on a platter alongside rice paper, thin vermicelli noodles (b�nh h?i), a variety of fresh herbs, and a bowl of M?m N�m (fermented pineapple anchovy dip) so everyone can wrap their own rolls at the table.',
             tip: 'For the best experience, include starfruit or green banana slices in your herb platter to provide a sour and astringent contrast to the savory beef.',
         },
     ],

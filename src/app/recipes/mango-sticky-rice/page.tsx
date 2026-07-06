@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/mango-sticky-rice.jpg',
-    intro: `Xoi xoai is the dessert that needs no introduction â€” sweet glutinous rice steamed and folded with coconut milk, served alongside ripe mango slices, finished with a drizzle of salted coconut cream. Simple, seasonal, and universally loved across Southeast Asia. The key is a perfectly ripe mango and the balance of sweet rice against the salty coconut topping.`,
+    intro: `Xoi xoai is the dessert that needs no introduction — sweet glutinous rice steamed and folded with coconut milk, served alongside ripe mango slices, finished with a drizzle of salted coconut cream. Simple, seasonal, and universally loved across Southeast Asia. The key is a perfectly ripe mango and the balance of sweet rice against the salty coconut topping.`,
     ingredientSections: [
         {
             title: 'Coconut sticky rice',
@@ -27,7 +27,7 @@ const recipe: RecipeData = {
             items: [
                 { amount: 100, unit: 'ml', name: 'coconut cream', note: 'full-fat' },
                 { amount: 1, unit: 'tbsp', name: 'sugar' },
-                { amount: 1, name: 'pinch of salt', note: 'do not skip â€” the salt is essential' },
+                { amount: 1, name: 'pinch of salt', note: 'do not skip — the salt is essential' },
                 { amount: 1, unit: 'tsp', name: 'tapioca starch', note: 'mixed with 1 tbsp cold water' },
             ],
         },
@@ -48,7 +48,7 @@ const recipe: RecipeData = {
         {
             title: 'Fold in coconut milk',
             description: 'Warm coconut milk with sugar and salt in a small saucepan until sugar dissolves. Pour over hot steamed rice and fold gently to combine. Cover and rest 15 minutes to absorb.',
-            tip: 'The rice continues absorbing the coconut milk as it rests. Do not rush this step â€” the rest time is what makes the rice creamy and fragrant.',
+            tip: 'The rice continues absorbing the coconut milk as it rests. Do not rush this step — the rest time is what makes the rice creamy and fragrant.',
         },
         {
             title: 'Make the salted coconut topping',

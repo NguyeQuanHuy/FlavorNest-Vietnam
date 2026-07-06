@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'fresh-spring-rolls',
     title: 'Fresh Spring Rolls with Shrimp and Pork',
-    subtitle: `Vietnam's most elegant finger food â€” cool, fresh, and impossibly beautiful.`,
+    subtitle: `Vietnam's most elegant finger food — cool, fresh, and impossibly beautiful.`,
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/fresh-spring-rolls.jpg',
-    intro: `Goi cuon is the anti-spring-roll â€” no frying, no heat, no grease. Translucent rice paper wrapped around plump prawns, pork, rice vermicelli, lettuce, and Vietnamese herbs. Dipped in hoisin-peanut sauce, each roll is cool, clean, and refreshing. You can see every layer through the translucent wrapper before you bite.`,
+    intro: `Goi cuon is the anti-spring-roll — no frying, no heat, no grease. Translucent rice paper wrapped around plump prawns, pork, rice vermicelli, lettuce, and Vietnamese herbs. Dipped in hoisin-peanut sauce, each roll is cool, clean, and refreshing. You can see every layer through the translucent wrapper before you bite.`,
     ingredientSections: [
         {
             title: 'Fillings',
@@ -46,7 +46,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Soften rice paper',
-            description: 'Dip one rice paper sheet in warm water for exactly 5 seconds. Lay on a clean board â€” it will continue softening.',
+            description: 'Dip one rice paper sheet in warm water for exactly 5 seconds. Lay on a clean board — it will continue softening.',
             tip: 'Over-soaked rice paper tears when rolling. 5 seconds only.',
         },
         {

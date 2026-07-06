@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'hue-spicy-beef-noodle-soup',
     title: 'Hue Spicy Beef Noodle Soup',
     subtitle:
-        'Bún Bò Huế — the fiery, lemongrass-scented noodle soup from the imperial city of Huế, with tender beef shank, pork knuckle, and a broth stained red from annatto and shrimp paste.',
+        'B�n B� Hu? � the fiery, lemongrass-scented noodle soup from the imperial city of Hu?, with tender beef shank, pork knuckle, and a broth stained red from annatto and shrimp paste.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '3 hrs',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/hue-spicy-beef-noodle-soup.jpg',
     intro:
-        `If phở is the quiet poetry of Hanoi, bún bò Huế is the defiant opera of central Vietnam. Born in the imperial city that once served the Nguyễn dynasty, this soup refuses to be polite. The broth is deep red-orange from annatto oil, perfumed with lemongrass, and funked with mắm ruốc — a fermented shrimp paste that divides first-time tasters and converts them for life. Anthony Bourdain called it "the greatest soup in the world." He wasn\'t wrong. Most of the 3 hours is passive simmering; the result tastes even better on day two.`,
+        `If ph? is the quiet poetry of Hanoi, b�n b� Hu? is the defiant opera of central Vietnam. Born in the imperial city that once served the Nguy?n dynasty, this soup refuses to be polite. The broth is deep red-orange from annatto oil, perfumed with lemongrass, and funked with m?m ru?c � a fermented shrimp paste that divides first-time tasters and converts them for life. Anthony Bourdain called it "the greatest soup in the world." He wasn\'t wrong. Most of the 3 hours is passive simmering; the result tastes even better on day two.`,
     ingredientSections: [
         {
             title: 'Broth and meats',
@@ -33,16 +33,16 @@ const recipe: RecipeData = {
             title: 'Lemongrass-shrimp paste base',
             items: [
                 { amount: 8, name: 'lemongrass stalks', note: 'bruised, tied in bundles' },
-                { amount: 3, unit: 'tbsp', name: 'mắm ruốc Huế', note: 'fermented shrimp paste' },
+                { amount: 3, unit: 'tbsp', name: 'm?m ru?c Hu?', note: 'fermented shrimp paste' },
                 { amount: 4, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 2, unit: 'tbsp', name: 'sa tế', note: 'Vietnamese chilli oil, optional' },
+                { amount: 2, unit: 'tbsp', name: 'sa t?', note: 'Vietnamese chilli oil, optional' },
             ],
         },
         {
             title: 'Annatto red oil',
             items: [
                 { amount: 4, unit: 'tbsp', name: 'neutral oil' },
-                { amount: 2, unit: 'tbsp', name: 'annatto seeds (hạt điều màu)' },
+                { amount: 2, unit: 'tbsp', name: 'annatto seeds (h?t di?u m�u)' },
                 { amount: 5, name: 'shallots', note: 'minced' },
                 { amount: 6, name: 'garlic cloves', note: 'minced' },
                 { amount: 2, unit: 'tbsp', name: 'crushed dried chilli flakes' },
@@ -51,8 +51,8 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 600, unit: 'g', name: 'thick round bún bò noodles' },
-                { amount: 200, unit: 'g', name: 'chả Huế', note: 'Huế-style pork sausage, sliced — optional' },
+                { amount: 600, unit: 'g', name: 'thick round b�n b� noodles' },
+                { amount: 200, unit: 'g', name: 'ch? Hu?', note: 'Hu?-style pork sausage, sliced � optional' },
                 { amount: 200, unit: 'g', name: 'pig blood cubes', note: 'optional, traditional' },
                 { amount: 1, name: 'plate of bean sprouts, banana blossom, Thai basil, rice paddy herb' },
                 { amount: 3, name: 'limes', note: 'cut in wedges' },
@@ -64,13 +64,13 @@ const recipe: RecipeData = {
         {
             title: 'Blanch the meats',
             description:
-                'In a large pot, cover the beef shank, pork knuckle and beef bones with cold water. Add a tablespoon of salt. Bring to a rolling boil for 5 minutes — the surface will turn grey with foam. Drain everything, rinse the meats and bones thoroughly under cold water, and scrub the pot. This step removes the off-smell and is what keeps the final broth clear.',
+                'In a large pot, cover the beef shank, pork knuckle and beef bones with cold water. Add a tablespoon of salt. Bring to a rolling boil for 5 minutes � the surface will turn grey with foam. Drain everything, rinse the meats and bones thoroughly under cold water, and scrub the pot. This step removes the off-smell and is what keeps the final broth clear.',
             tip: 'Skip this and your broth will be cloudy and taste muddy. Non-negotiable.',
         },
         {
             title: 'Char the aromatics',
             description:
-                'Place the whole onion and ginger directly over an open flame (or in a dry cast-iron pan) until the skins blacken and the kitchen smells smoky, about 5 minutes. Don\'t rinse off the char — it carries deep colour and flavour into the broth.',
+                'Place the whole onion and ginger directly over an open flame (or in a dry cast-iron pan) until the skins blacken and the kitchen smells smoky, about 5 minutes. Don\'t rinse off the char � it carries deep colour and flavour into the broth.',
         },
         {
             title: 'Build and simmer the broth',
@@ -86,28 +86,28 @@ const recipe: RecipeData = {
         {
             title: 'Make the annatto red oil',
             description:
-                'In a small saucepan, warm the oil with the annatto seeds over low heat for 2 minutes until the oil turns deep red. Strain out the seeds and discard. Return the red oil to the pan, add minced shallots, garlic and chilli flakes; fry 90 seconds until fragrant. This oil is what gives bún bò Huế its signature crimson sheen.',
-            tip: 'Don\'t overheat the annatto — it turns bitter above 80°C. Keep the heat gentle.',
+                'In a small saucepan, warm the oil with the annatto seeds over low heat for 2 minutes until the oil turns deep red. Strain out the seeds and discard. Return the red oil to the pan, add minced shallots, garlic and chilli flakes; fry 90 seconds until fragrant. This oil is what gives b�n b� Hu? its signature crimson sheen.',
+            tip: 'Don\'t overheat the annatto � it turns bitter above 80�C. Keep the heat gentle.',
         },
         {
             title: 'Finish the broth',
             description:
-                'Strain the simmered broth through a fine-mesh sieve into a clean pot. Discard the solids. Dissolve the mắm ruốc in a cup of hot broth, then strain it back into the pot through a fine sieve (this catches any sand). Add fish sauce, rock sugar and sa tế. Stir in half of the red oil. Taste and adjust — it should be deeply savoury, slightly sweet, pleasantly spicy, and unmistakably funky from the shrimp paste.',
+                'Strain the simmered broth through a fine-mesh sieve into a clean pot. Discard the solids. Dissolve the m?m ru?c in a cup of hot broth, then strain it back into the pot through a fine sieve (this catches any sand). Add fish sauce, rock sugar and sa t?. Stir in half of the red oil. Taste and adjust � it should be deeply savoury, slightly sweet, pleasantly spicy, and unmistakably funky from the shrimp paste.',
         },
         {
             title: 'Slice the meats',
             description:
-                'Slice the cooled beef shank against the grain into 3mm slices. Cut the pork knuckle into smaller serving pieces. Slice the chả Huế if using.',
+                'Slice the cooled beef shank against the grain into 3mm slices. Cut the pork knuckle into smaller serving pieces. Slice the ch? Hu? if using.',
         },
         {
             title: 'Cook the noodles',
             description:
-                'Bring a separate pot of water to a boil. Cook the bún bò noodles according to package instructions — usually 5–7 minutes for dried, 2 minutes for fresh. Drain and divide among 6 large bowls.',
+                'Bring a separate pot of water to a boil. Cook the b�n b� noodles according to package instructions � usually 5�7 minutes for dried, 2 minutes for fresh. Drain and divide among 6 large bowls.',
         },
         {
             title: 'Assemble and serve',
             description:
-                'Top each bowl with slices of beef shank, a piece of pork knuckle, chả Huế and pig blood if using. Ladle the hot broth over everything, then drizzle an extra spoonful of red oil on top for colour. Serve immediately with the herb plate, lime wedges and sliced chillies on the side. Each person adds herbs and squeezes lime to their own bowl. Eat it hot — this soup is meant to make you sweat.',
+                'Top each bowl with slices of beef shank, a piece of pork knuckle, ch? Hu? and pig blood if using. Ladle the hot broth over everything, then drizzle an extra spoonful of red oil on top for colour. Serve immediately with the herb plate, lime wedges and sliced chillies on the side. Each person adds herbs and squeezes lime to their own bowl. Eat it hot � this soup is meant to make you sweat.',
             tip: 'First-time eaters: start with a small spoonful of broth to adjust to the shrimp paste. By bowl end, you\'ll be a convert.',
         },
     ],

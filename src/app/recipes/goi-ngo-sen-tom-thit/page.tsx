@@ -1,9 +1,9 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-ngo-sen-tom-thit',
-    title: 'G·ªèi Ng√≥ Sen T√¥m Th·ªãt (Lotus Root Salad with Shrimp and Pork)',
+    title: 'G?i NgÛ Sen TÙm Th?t (Lotus Root Salad with Shrimp and Pork)',
     subtitle: 'Thinly sliced lotus root tossed with poached shrimp, boiled pork, Vietnamese herbs, roasted peanuts, and crispy shallots in a bright lime-fish sauce dressing. The Vietnamese salad built around lotus root\'s unique crunch and its capacity to hold a dressing without softening.',
     category: 'APPETIZER',
     difficulty: 'Medium',
@@ -11,13 +11,13 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/goi-ngo-sen-tom-thit.jpg',
-    intro: `G·ªèi ng√≥ sen t√¥m th·ªãt is the lotus root salad that appears at Vietnamese family celebrations, T·∫øt feasts, and restaurant menus throughout the south ‚Äî particularly in Hu·∫ø, where lotus is not only an ingredient but a cultural symbol of purity and refinement. Ng√≥ sen ‚Äî lotus root ‚Äî has a texture that no other vegetable replicates: firm, slightly crunchy, with a clean starchy character and natural holes running through each cross-section that are as visually striking as they are functional (they capture the dressing). When sliced thin and briefly pickled in rice vinegar, the lotus root becomes bright, slightly tart, and maintains its crunch even after dressing. The combination of lotus root crunch, tender shrimp and pork, the sharp peppery note of rau rƒÉm, and the richness of peanuts and fried shallots produces one of the most texturally complete salads in Vietnamese cooking. It is also one of the most photogenic ‚Äî the cross-sectioned lotus root slices with their natural hole pattern arranged across a plate are immediately recognizable as distinctly Vietnamese. This salad takes patience in the preparation but rewards it fully.`,
+    intro: `G?i ngÛ sen tÙm th?t is the lotus root salad that appears at Vietnamese family celebrations, T?t feasts, and restaurant menus throughout the south ó particularly in Hu?, where lotus is not only an ingredient but a cultural symbol of purity and refinement. NgÛ sen ó lotus root ó has a texture that no other vegetable replicates: firm, slightly crunchy, with a clean starchy character and natural holes running through each cross-section that are as visually striking as they are functional (they capture the dressing). When sliced thin and briefly pickled in rice vinegar, the lotus root becomes bright, slightly tart, and maintains its crunch even after dressing. The combination of lotus root crunch, tender shrimp and pork, the sharp peppery note of rau ram, and the richness of peanuts and fried shallots produces one of the most texturally complete salads in Vietnamese cooking. It is also one of the most photogenic ó the cross-sectioned lotus root slices with their natural hole pattern arranged across a plate are immediately recognizable as distinctly Vietnamese. This salad takes patience in the preparation but rewards it fully.`,
     ingredientSections: [
         {
             title: 'Lotus root',
             items: [
-                { amount: 400, unit: 'g', name: 'fresh lotus root (ng√≥ sen)', note: 'firm, unblemished, the lighter-colored the better. Available at Vietnamese and Asian grocers. Frozen pre-sliced lotus root is acceptable.' },
-                { amount: 100, unit: 'ml', name: 'rice vinegar', note: 'for the quick pickle ‚Äî prevents oxidation and adds brightness' },
+                { amount: 400, unit: 'g', name: 'fresh lotus root (ngÛ sen)', note: 'firm, unblemished, the lighter-colored the better. Available at Vietnamese and Asian grocers. Frozen pre-sliced lotus root is acceptable.' },
+                { amount: 100, unit: 'ml', name: 'rice vinegar', note: 'for the quick pickle ó prevents oxidation and adds brightness' },
                 { amount: 1, unit: 'tsp', name: 'sugar', note: 'for the pickling liquid' },
                 { amount: 0.5, unit: 'tsp', name: 'salt' },
                 { amount: 500, unit: 'ml', name: 'water', note: 'for blanching' },
@@ -26,29 +26,29 @@ const recipe: RecipeData = {
         {
             title: 'Proteins',
             items: [
-                { amount: 250, unit: 'g', name: 'fresh shrimp, medium', note: 'peeled and deveined ‚Äî boiled 3 minutes, halved lengthwise' },
+                { amount: 250, unit: 'g', name: 'fresh shrimp, medium', note: 'peeled and deveined ó boiled 3 minutes, halved lengthwise' },
                 { amount: 200, unit: 'g', name: 'pork belly or shoulder', note: 'boiled whole with lemongrass and ginger until just cooked (15 min), cooled and sliced 3mm thin' },
             ],
         },
         {
             title: 'Salad components',
             items: [
-                { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ‚Äî not too fine' },
-                { amount: 4, unit: 'tbsp', name: 'crispy fried shallots (h√†nh phi)' },
-                { amount: 3, unit: 'tbsp', name: 'shallot-infused oil', note: 'from the fried shallots ‚Äî drizzled over for fragrance' },
+                { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ó not too fine' },
+                { amount: 4, unit: 'tbsp', name: 'crispy fried shallots (h‡nh phi)' },
+                { amount: 3, unit: 'tbsp', name: 'shallot-infused oil', note: 'from the fried shallots ó drizzled over for fragrance' },
             ],
         },
         {
             title: 'Herbs',
             items: [
-                { amount: 1, name: 'large bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî the essential herb for this salad' },
-                { amount: 0.5, name: 'bunch mint (h√∫ng l·ªßi)', note: 'leaves only' },
-                { amount: 1, name: 'stalk culantro (ng√≤ gai / saw-tooth herb)', note: 'thinly sliced ‚Äî adds citrusy depth. Optional but traditional.' },
+                { amount: 1, name: 'large bunch Vietnamese coriander (rau ram)', note: 'leaves only ó the essential herb for this salad' },
+                { amount: 0.5, name: 'bunch mint (h˙ng l?i)', note: 'leaves only' },
+                { amount: 1, name: 'stalk culantro (ngÚ gai / saw-tooth herb)', note: 'thinly sliced ó adds citrusy depth. Optional but traditional.' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
         },
         {
-            title: 'Dressing (n∆∞·ªõc ch·∫•m g·ªèi)',
+            title: 'Dressing (nu?c ch?m g?i)',
             items: [
                 { amount: 3.5, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 3, unit: 'tbsp', name: 'fresh lime juice', note: 'about 2 limes' },
@@ -61,7 +61,7 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 8, name: 'prawn crackers (b√°nh ph·ªìng t√¥m)', note: 'for scooping ‚Äî traditional accompaniment' },
+                { amount: 8, name: 'prawn crackers (b·nh ph?ng tÙm)', note: 'for scooping ó traditional accompaniment' },
                 { amount: 2, name: 'limes, extra wedges' },
                 { amount: 1, name: 'fresh red chili, sliced', note: 'optional garnish' },
             ],
@@ -70,33 +70,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Prepare and pickle the lotus root',
-            description: 'Peel the lotus root using a vegetable peeler ‚Äî the skin is thin and comes off easily. Slice into rounds 3-4mm thick. As you slice, drop each round immediately into a bowl of cold water mixed with a splash of rice vinegar ‚Äî this prevents the lotus root from oxidizing and turning brown, and begins the pickling process. After all the lotus root is sliced, combine the rice vinegar, sugar, and salt in a separate bowl. Transfer the lotus root to this pickling liquid and leave for 20 minutes. The lotus root will become slightly translucent at the edges and taste bright and tart.',
-            tip: 'The immediate drop into acidulated water after slicing is critical ‚Äî lotus root oxidizes within minutes of being cut and turns an unappetizing grey. The vinegar pickle also firms the texture slightly, which helps it maintain crunch even after dressing.',
+            description: 'Peel the lotus root using a vegetable peeler ó the skin is thin and comes off easily. Slice into rounds 3-4mm thick. As you slice, drop each round immediately into a bowl of cold water mixed with a splash of rice vinegar ó this prevents the lotus root from oxidizing and turning brown, and begins the pickling process. After all the lotus root is sliced, combine the rice vinegar, sugar, and salt in a separate bowl. Transfer the lotus root to this pickling liquid and leave for 20 minutes. The lotus root will become slightly translucent at the edges and taste bright and tart.',
+            tip: 'The immediate drop into acidulated water after slicing is critical ó lotus root oxidizes within minutes of being cut and turns an unappetizing grey. The vinegar pickle also firms the texture slightly, which helps it maintain crunch even after dressing.',
         },
         {
             title: 'Blanch the lotus root briefly',
-            description: 'Bring a pot of water to a full boil. Drain the pickled lotus root. Blanch in the boiling water for exactly 60-90 seconds ‚Äî just enough to remove the raw starchy taste while maintaining full crunch. Immediately transfer to ice water for 3 minutes to stop cooking. Drain and pat dry. The lotus root should be crisp, slightly translucent, and taste clean ‚Äî no raw starch, no softness.',
-            tip: 'Do not over-blanch. Lotus root that is cooked for more than 2 minutes loses its crunch and becomes the texture of boiled potato ‚Äî completely wrong for this salad. 60-90 seconds is the maximum.',
+            description: 'Bring a pot of water to a full boil. Drain the pickled lotus root. Blanch in the boiling water for exactly 60-90 seconds ó just enough to remove the raw starchy taste while maintaining full crunch. Immediately transfer to ice water for 3 minutes to stop cooking. Drain and pat dry. The lotus root should be crisp, slightly translucent, and taste clean ó no raw starch, no softness.',
+            tip: 'Do not over-blanch. Lotus root that is cooked for more than 2 minutes loses its crunch and becomes the texture of boiled potato ó completely wrong for this salad. 60-90 seconds is the maximum.',
         },
         {
             title: 'Cook the proteins',
             description: 'For the pork: place pork belly in cold water with 1 bruised lemongrass stalk, 2 ginger slices, and 1 tsp salt. Bring to a boil, reduce to a simmer, and cook for 15-20 minutes until just cooked through. Cool completely in the cooking liquid, then remove and slice 3mm thin against the grain. For the shrimp: boil salted water with a squeeze of lime. Add shrimp and cook for exactly 3 minutes until just pink. Transfer to ice water, peel, and halve lengthwise.',
-            tip: 'Both proteins should be cooled completely before adding to the salad ‚Äî warm proteins wilt the herbs and accelerate the dressing\'s absorption into the lotus root, softening it prematurely.',
+            tip: 'Both proteins should be cooled completely before adding to the salad ó warm proteins wilt the herbs and accelerate the dressing\'s absorption into the lotus root, softening it prematurely.',
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, lime juice, sugar, and water in a small bowl. Stir until the sugar dissolves completely. Add minced garlic and chili. Taste: it should be a balanced sweet-sour-salty combination with clean heat. For g·ªèi ng√≥ sen specifically, the dressing should be slightly sweeter than standard n∆∞·ªõc ch·∫•m ‚Äî the lotus root has a subtle starchiness that responds well to a touch more sweetness.',
-            tip: 'Make the dressing 10-15 minutes before using ‚Äî the garlic mellows and integrates as it steeps. A freshly made dressing with raw garlic has a sharp bite that can overpower the delicate lotus root flavor.',
+            description: 'Combine fish sauce, lime juice, sugar, and water in a small bowl. Stir until the sugar dissolves completely. Add minced garlic and chili. Taste: it should be a balanced sweet-sour-salty combination with clean heat. For g?i ngÛ sen specifically, the dressing should be slightly sweeter than standard nu?c ch?m ó the lotus root has a subtle starchiness that responds well to a touch more sweetness.',
+            tip: 'Make the dressing 10-15 minutes before using ó the garlic mellows and integrates as it steeps. A freshly made dressing with raw garlic has a sharp bite that can overpower the delicate lotus root flavor.',
         },
         {
             title: 'Assemble the salad',
-            description: 'In a large wide bowl, combine the drained lotus root, sliced pork, halved shrimp, and all the herbs ‚Äî rau rƒÉm, mint, culantro if using, and spring onion. Pour the dressing over and toss gently to coat everything evenly. The lotus root should be the visual feature ‚Äî try to keep the slices intact and visible rather than broken up. Taste and adjust ‚Äî add more lime if flat, more sugar if too sharp.',
+            description: 'In a large wide bowl, combine the drained lotus root, sliced pork, halved shrimp, and all the herbs ó rau ram, mint, culantro if using, and spring onion. Pour the dressing over and toss gently to coat everything evenly. The lotus root should be the visual feature ó try to keep the slices intact and visible rather than broken up. Taste and adjust ó add more lime if flat, more sugar if too sharp.',
             tip: 'Toss with two large spoons using a lifting-and-folding motion rather than mixing. The goal is to coat every element while keeping the lotus root rounds whole. Broken lotus root pieces are not wrong, just less visually striking.',
         },
         {
             title: 'Plate and finish',
-            description: 'Arrange the dressed salad on a serving plate. Drizzle the shallot-infused oil over the top ‚Äî it adds a final layer of aromatic depth. Scatter the crushed peanuts and crispy fried shallots over everything at the last moment. Add sliced fresh chili for color. Serve with prawn crackers arranged around the plate for scooping. Serve immediately ‚Äî g·ªèi ng√≥ sen holds up slightly longer than mango or papaya salads (the lotus root is more stable) but is best within 20 minutes of dressing.',
-            tip: 'The shallot oil drizzle is not optional ‚Äî it adds the aromatic finishing layer that ties the dish together. Without it the salad tastes complete but slightly flat. With it, every bite carries an additional dimension.',
+            description: 'Arrange the dressed salad on a serving plate. Drizzle the shallot-infused oil over the top ó it adds a final layer of aromatic depth. Scatter the crushed peanuts and crispy fried shallots over everything at the last moment. Add sliced fresh chili for color. Serve with prawn crackers arranged around the plate for scooping. Serve immediately ó g?i ngÛ sen holds up slightly longer than mango or papaya salads (the lotus root is more stable) but is best within 20 minutes of dressing.',
+            tip: 'The shallot oil drizzle is not optional ó it adds the aromatic finishing layer that ties the dish together. Without it the salad tastes complete but slightly flat. With it, every bite carries an additional dimension.',
         },
     ],
 };

@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ga-xao-sa-ot',
     title: 'Lemongrass Chili Chicken (Ga Xao Sa Ot)',
-    subtitle: 'Spicy, fragrant, and aromatic â€” tender chicken stir-fried with lemongrass and chili.',
+    subtitle: 'Spicy, fragrant, and aromatic — tender chicken stir-fried with lemongrass and chili.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
@@ -12,9 +12,9 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/ga-xao-sa-ot.jpg',
 
-    intro: `GÃ  xÃ o sáº£ á»›t is a classic Vietnamese home-style dish known for its bold aroma and spicy kick.
+    intro: `Gà xào s? ?t is a classic Vietnamese home-style dish known for its bold aroma and spicy kick.
 
-Tender chicken is marinated, then stir-fried with crushed lemongrass, chili, and garlic until fragrant and slightly caramelized. The result is a dish that is spicy, savory, and deeply aromatic â€” perfect with steamed rice.
+Tender chicken is marinated, then stir-fried with crushed lemongrass, chili, and garlic until fragrant and slightly caramelized. The result is a dish that is spicy, savory, and deeply aromatic — perfect with steamed rice.
 
 The magic lies in the lemongrass: it releases a citrusy fragrance that defines the entire dish.`,
 
@@ -44,7 +44,7 @@ The magic lies in the lemongrass: it releases a citrusy fragrance that defines t
     steps: [
         {
             title: 'Marinate the chicken',
-            description: 'Mix chicken with fish sauce, soy sauce, sugar, pepper, and oil. Let it sit for 15â€“20 minutes.',
+            description: 'Mix chicken with fish sauce, soy sauce, sugar, pepper, and oil. Let it sit for 15–20 minutes.',
             tip: 'Marinating helps the chicken absorb flavor and stay juicy during stir-frying.',
         },
         {

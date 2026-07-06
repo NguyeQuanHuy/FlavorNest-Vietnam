@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'mien-luon',
     title: 'Glass Noodles with Crispy Eel',
-    subtitle: 'Mien luon â€” translucent glass noodles in a faintly smoky eel broth, topped with strips of fried eel and a generous shower of fresh dill.',
+    subtitle: 'Mien luon — translucent glass noodles in a faintly smoky eel broth, topped with strips of fried eel and a generous shower of fresh dill.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '2 hrs',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/mien-luon.jpg',
-    intro: 'Mien luon is one of those Hanoi dishes that takes patience to do properly and effort to find. The eel must be live or fresh â€” never frozen â€” boned by hand, then cut into strips and twice-fried until each piece is shatter-crisp on the outside, tender within. The broth is built on the eel bones with charred ginger and dried shrimp; the noodles are translucent mung bean glass noodles. Served as soup or dry, what defines mien luon is the contrast: the silk of the noodles, the crackle of the eel, and a violent shower of fresh dill at the end.',
+    intro: 'Mien luon is one of those Hanoi dishes that takes patience to do properly and effort to find. The eel must be live or fresh — never frozen — boned by hand, then cut into strips and twice-fried until each piece is shatter-crisp on the outside, tender within. The broth is built on the eel bones with charred ginger and dried shrimp; the noodles are translucent mung bean glass noodles. Served as soup or dry, what defines mien luon is the contrast: the silk of the noodles, the crackle of the eel, and a violent shower of fresh dill at the end.',
     ingredientSections: [
         {
             title: 'Eel preparation',

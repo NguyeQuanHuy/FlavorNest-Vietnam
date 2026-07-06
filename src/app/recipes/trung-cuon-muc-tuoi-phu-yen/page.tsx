@@ -1,23 +1,23 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'trung-cuon-muc-tuoi-phu-yen',
-    title: 'Tr·ª©ng Cu·ªôn M·ª±c T∆∞∆°i Ph√∫ Y√™n (Ph√∫ Y√™n Fresh Squid Egg Roll)',
-    subtitle: 'A thin egg sheet rolled around a filling of fresh squid stir-fried with lemongrass, chili, and m·∫Øm nhƒ© ‚Äî the Ph√∫ Y√™n egg roll where the squid filling is cooked with the province\'s four-stalk lemongrass proportion and the egg wrapper is seasoned with m·∫Øm nhƒ© before rolling.',
+    title: 'Tr?ng Cu?n M?c Tuoi Ph˙ YÍn (Ph˙ YÍn Fresh Squid Egg Roll)',
+    subtitle: 'A thin egg sheet rolled around a filling of fresh squid stir-fried with lemongrass, chili, and m?m nhi ó the Ph˙ YÍn egg roll where the squid filling is cooked with the province\'s four-stalk lemongrass proportion and the egg wrapper is seasoned with m?m nhi before rolling.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/trung-cuon-muc-tuoi-phu-yen.jpg',
-    intro: `Tr·ª©ng cu·ªôn m·ª±c t∆∞∆°i Ph√∫ Y√™n is the fresh squid egg roll of the province ‚Äî a preparation that takes the tr·ª©ng cu·ªôn (rolled egg) format that appears throughout Vietnamese and East Asian cooking and fills it with m·ª±c t∆∞∆°i (fresh squid) cooked specifically in the Ph√∫ Y√™n way: with four stalks of lemongrass, bird's eye chili, and m·∫Øm nhƒ© as the primary aromatics and seasoning. The m·ª±c (squid) available along the Ph√∫ Y√™n coast ‚Äî particularly the fresh market squid from the Tuy H√≤a fishing harbor and the smaller inshore squid from the rocky coast near M≈©i ƒêi·ªán ‚Äî is prized for its specific sweetness and firm, clean-tasting flesh that the province's fishermen describe as tasting of the specific cold upwelling water that flows along the central Vietnamese coast. Stir-fried briefly with lemongrass and chili in a hot wok, this squid caramelizes at its edges, stays sweet and tender at the center, and carries the four-stalk lemongrass aromatics that make it identifiably Ph√∫ Y√™n in character. The egg wrapper ‚Äî beaten with m·∫Øm nhƒ© and fried as a thin sheet in a flat pan ‚Äî provides the neutral, silky vehicle for this filling without competing with the squid's character. The rolling is done while the egg sheet is still warm and pliable, with the hot squid filling inside warming the egg from within and helping it seal cleanly. Sliced on the diagonal and served with mu·ªëi l√° √© alongside, tr·ª©ng cu·ªôn m·ª±c t∆∞∆°i Ph√∫ Y√™n brings the province's signature condiment to its most refined egg preparation ‚Äî the l√° √© salt against the lemongrass-squid filling wrapped in the m·∫Øm nhƒ© egg sheet producing the complete Ph√∫ Y√™n flavor profile in a single diagonal slice.`,
+    intro: `Tr?ng cu?n m?c tuoi Ph˙ YÍn is the fresh squid egg roll of the province ó a preparation that takes the tr?ng cu?n (rolled egg) format that appears throughout Vietnamese and East Asian cooking and fills it with m?c tuoi (fresh squid) cooked specifically in the Ph˙ YÍn way: with four stalks of lemongrass, bird's eye chili, and m?m nhi as the primary aromatics and seasoning. The m?c (squid) available along the Ph˙ YÍn coast ó particularly the fresh market squid from the Tuy HÚa fishing harbor and the smaller inshore squid from the rocky coast near Mui –i?n ó is prized for its specific sweetness and firm, clean-tasting flesh that the province's fishermen describe as tasting of the specific cold upwelling water that flows along the central Vietnamese coast. Stir-fried briefly with lemongrass and chili in a hot wok, this squid caramelizes at its edges, stays sweet and tender at the center, and carries the four-stalk lemongrass aromatics that make it identifiably Ph˙ YÍn in character. The egg wrapper ó beaten with m?m nhi and fried as a thin sheet in a flat pan ó provides the neutral, silky vehicle for this filling without competing with the squid's character. The rolling is done while the egg sheet is still warm and pliable, with the hot squid filling inside warming the egg from within and helping it seal cleanly. Sliced on the diagonal and served with mu?i l· È alongside, tr?ng cu?n m?c tuoi Ph˙ YÍn brings the province's signature condiment to its most refined egg preparation ó the l· È salt against the lemongrass-squid filling wrapped in the m?m nhi egg sheet producing the complete Ph˙ YÍn flavor profile in a single diagonal slice.`,
     ingredientSections: [
         {
             title: 'Egg wrapper',
             items: [
                 { amount: 4, name: 'large eggs' },
-                { amount: 1, unit: 'tbsp', name: 'm·∫Øm nhƒ©', note: 'beaten into the eggs ‚Äî seasons the wrapper with the province\'s fish sauce' },
+                { amount: 1, unit: 'tbsp', name: 'm?m nhi', note: 'beaten into the eggs ó seasons the wrapper with the province\'s fish sauce' },
                 { amount: 1, unit: 'tbsp', name: 'water', note: 'thins the egg slightly for a more pliable wrapper' },
                 { amount: 0.5, unit: 'tsp', name: 'white pepper' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil', note: 'for frying the egg sheet' },
@@ -26,13 +26,13 @@ const recipe: RecipeData = {
         {
             title: 'Fresh squid filling',
             items: [
-                { amount: 250, unit: 'g', name: 'fresh squid (m·ª±c t∆∞∆°i)', note: 'cleaned, bodies cut into rings, tentacles left whole. Very fresh ‚Äî squid that is not fresh smells strongly and toughens badly when cooked.' },
-                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, finely minced ‚Äî four stalks, the Ph√∫ Y√™n proportion' },
+                { amount: 250, unit: 'g', name: 'fresh squid (m?c tuoi)', note: 'cleaned, bodies cut into rings, tentacles left whole. Very fresh ó squid that is not fresh smells strongly and toughens badly when cooked.' },
+                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, finely minced ó four stalks, the Ph˙ YÍn proportion' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 3, name: 'shallots', note: 'minced' },
                 { amount: 2, name: 'bird\'s eye chilies', note: 'minced' },
-                { amount: 1, name: 'fresh red chili', note: 'sliced ‚Äî for color' },
-                { amount: 1.5, unit: 'tbsp', name: 'm·∫Øm nhƒ©', note: 'primary seasoning for the filling' },
+                { amount: 1, name: 'fresh red chili', note: 'sliced ó for color' },
+                { amount: 1.5, unit: 'tbsp', name: 'm?m nhi', note: 'primary seasoning for the filling' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil' },
@@ -41,15 +41,15 @@ const recipe: RecipeData = {
         {
             title: 'Filling aromatics and greens',
             items: [
-                { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces ‚Äî added at end of squid stir-fry' },
-                { amount: 1, name: 'small bunch rau rƒÉm', note: 'leaves only ‚Äî mixed into the filling before rolling' },
+                { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces ó added at end of squid stir-fry' },
+                { amount: 1, name: 'small bunch rau ram', note: 'leaves only ó mixed into the filling before rolling' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil', note: 'finished into the squid filling' },
             ],
         },
         {
-            title: 'Mu·ªëi l√° √©',
+            title: 'Mu?i l· È',
             items: [
-                { amount: 15, unit: 'g', name: 'fresh l√° √© leaves' },
+                { amount: 15, unit: 'g', name: 'fresh l· È leaves' },
                 { amount: 1, unit: 'tsp', name: 'coarse salt' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -60,8 +60,8 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'for eating raw alongside each slice' },
-                { amount: 8, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch fresh l· È leaves', note: 'for eating raw alongside each slice' },
+                { amount: 8, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
                 { amount: 2, unit: 'portions', name: 'steamed jasmine rice' },
                 { amount: 1, name: 'cucumber, sliced' },
                 { amount: 2, name: 'limes, cut in wedges' },
@@ -71,28 +71,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Cook the squid filling first',
-            description: 'Heat oil in a wok over maximum heat until smoking. Add lemongrass, garlic, and shallots ‚Äî fry 60 seconds until golden. Add minced and sliced chili. Add the fresh squid rings and tentacles ‚Äî they will spit aggressively in the hot wok. Stir-fry over maximum heat for exactly 90 seconds ‚Äî squid toughens rapidly and 90 seconds at high heat is the window between tender and rubbery. Add m·∫Øm nhƒ©, sugar, and black pepper in the final 20 seconds. Add spring onion and sesame oil. Remove from heat. Fold in rau rƒÉm leaves. The filling should be fragrant, slightly saucy, and the squid just cooked through.',
-            tip: 'The 90-second maximum for fresh squid stir-fry is absolute ‚Äî squid that cooks for 3-4 minutes at high heat becomes rubbery and almost inedible. At 90 seconds the squid rings should be just opaque throughout, slightly curved, and tender. The high heat is essential ‚Äî lower heat produces moisture-releasing squid that steams rather than sears.',
+            description: 'Heat oil in a wok over maximum heat until smoking. Add lemongrass, garlic, and shallots ó fry 60 seconds until golden. Add minced and sliced chili. Add the fresh squid rings and tentacles ó they will spit aggressively in the hot wok. Stir-fry over maximum heat for exactly 90 seconds ó squid toughens rapidly and 90 seconds at high heat is the window between tender and rubbery. Add m?m nhi, sugar, and black pepper in the final 20 seconds. Add spring onion and sesame oil. Remove from heat. Fold in rau ram leaves. The filling should be fragrant, slightly saucy, and the squid just cooked through.',
+            tip: 'The 90-second maximum for fresh squid stir-fry is absolute ó squid that cooks for 3-4 minutes at high heat becomes rubbery and almost inedible. At 90 seconds the squid rings should be just opaque throughout, slightly curved, and tender. The high heat is essential ó lower heat produces moisture-releasing squid that steams rather than sears.',
         },
         {
-            title: 'Pound the mu·ªëi l√° √©',
-            description: 'Pound l√° √© leaves with salt, pepper, sugar, and chili until intensely green. Transfer to plates. Squeeze lime at the table. Prepare before the egg wrapper so everything is ready for immediate assembly.',
-            tip: 'Making the mu·ªëi l√° √© before the egg wrapper ensures the assembly can happen immediately while the wrapper is still warm and pliable. A cooled egg wrapper cracks when rolled rather than folding cleanly.',
+            title: 'Pound the mu?i l· È',
+            description: 'Pound l· È leaves with salt, pepper, sugar, and chili until intensely green. Transfer to plates. Squeeze lime at the table. Prepare before the egg wrapper so everything is ready for immediate assembly.',
+            tip: 'Making the mu?i l· È before the egg wrapper ensures the assembly can happen immediately while the wrapper is still warm and pliable. A cooled egg wrapper cracks when rolled rather than folding cleanly.',
         },
         {
-            title: 'Make the egg wrapper ‚Äî thin and pliable',
-            description: 'Beat eggs with m·∫Øm nhƒ©, water, and white pepper until smooth. Heat a non-stick pan or well-seasoned wok over medium heat. Add just enough oil to coat the surface. Pour a thin layer of egg mixture ‚Äî swirl immediately to coat the entire pan surface in a thin, even sheet. Cook over medium heat for 60-90 seconds until the top surface is just set but still slightly tacky ‚Äî not fully dried. The wrapper should be pale gold, thin, and flexible.',
-            tip: 'The medium heat for the egg wrapper is the temperature that produces a pliable, thin sheet without browning or crisping. High heat produces a thin sheet that tears when rolled. The surface should be just set ‚Äî still slightly sticky when touched ‚Äî when the filling goes on. This stickiness is what seals the roll.',
+            title: 'Make the egg wrapper ó thin and pliable',
+            description: 'Beat eggs with m?m nhi, water, and white pepper until smooth. Heat a non-stick pan or well-seasoned wok over medium heat. Add just enough oil to coat the surface. Pour a thin layer of egg mixture ó swirl immediately to coat the entire pan surface in a thin, even sheet. Cook over medium heat for 60-90 seconds until the top surface is just set but still slightly tacky ó not fully dried. The wrapper should be pale gold, thin, and flexible.',
+            tip: 'The medium heat for the egg wrapper is the temperature that produces a pliable, thin sheet without browning or crisping. High heat produces a thin sheet that tears when rolled. The surface should be just set ó still slightly sticky when touched ó when the filling goes on. This stickiness is what seals the roll.',
         },
         {
             title: 'Fill and roll while warm',
-            description: 'Place the squid filling across the center of the still-warm egg wrapper ‚Äî a line of filling from one side to the other, leaving 2cm border on the near and far edges. Scatter a few extra rau rƒÉm leaves over the filling. Roll the near edge of the wrapper over the filling, pressing gently to seal. Continue rolling to complete the cylinder. The warm, slightly sticky egg surface will seal the roll without needing any additional binding.',
-            tip: 'Rolling the egg while warm and the surface is still slightly tacky is the critical step ‚Äî the tackiness acts as a natural sealant. A cooled egg wrapper has dried and lost its stickiness, making sealing difficult and the roll prone to opening when sliced. Work quickly from pan to filling to roll.',
+            description: 'Place the squid filling across the center of the still-warm egg wrapper ó a line of filling from one side to the other, leaving 2cm border on the near and far edges. Scatter a few extra rau ram leaves over the filling. Roll the near edge of the wrapper over the filling, pressing gently to seal. Continue rolling to complete the cylinder. The warm, slightly sticky egg surface will seal the roll without needing any additional binding.',
+            tip: 'Rolling the egg while warm and the surface is still slightly tacky is the critical step ó the tackiness acts as a natural sealant. A cooled egg wrapper has dried and lost its stickiness, making sealing difficult and the roll prone to opening when sliced. Work quickly from pan to filling to roll.',
         },
         {
             title: 'Slice and serve',
-            description: 'Using a sharp knife, slice the roll diagonally into 3-4cm sections ‚Äî the diagonal cut exposes the spiral cross-section of egg and squid filling simultaneously. Arrange on a plate, cut-side up to display the spiral. Scatter shredded kaffir lime leaves. Serve with mu·ªëi l√° √©, sesame crackers, fresh l√° √© leaves, and rice. To eat: place a roll section on a sesame cracker with a raw l√° √© leaf, dip in lime-squeezed mu·ªëi l√° √©. The cross-section of golden egg and lemongrass-fragrant squid on the cracker with the l√° √© salt is the Ph√∫ Y√™n egg roll eaten at its most complete.',
-            tip: 'The diagonal cut to display the spiral cross-section is both aesthetic and practical ‚Äî the visual of the golden egg spiral wrapped around the squid filling makes the dish immediately appetizing, and the diagonal slice is thicker than a straight cut of the same section, producing a more substantial single piece to eat.',
+            description: 'Using a sharp knife, slice the roll diagonally into 3-4cm sections ó the diagonal cut exposes the spiral cross-section of egg and squid filling simultaneously. Arrange on a plate, cut-side up to display the spiral. Scatter shredded kaffir lime leaves. Serve with mu?i l· È, sesame crackers, fresh l· È leaves, and rice. To eat: place a roll section on a sesame cracker with a raw l· È leaf, dip in lime-squeezed mu?i l· È. The cross-section of golden egg and lemongrass-fragrant squid on the cracker with the l· È salt is the Ph˙ YÍn egg roll eaten at its most complete.',
+            tip: 'The diagonal cut to display the spiral cross-section is both aesthetic and practical ó the visual of the golden egg spiral wrapped around the squid filling makes the dish immediately appetizing, and the diagonal slice is thicker than a straight cut of the same section, producing a more substantial single piece to eat.',
         },
     ],
 };

@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'grilled-lemongrass-pork',
     title: 'Grilled Lemongrass Pork Chops',
-    subtitle: 'Pork chops marinated overnight in lemongrass and fish sauce â€” grilled until deeply caramelised.',
+    subtitle: 'Pork chops marinated overnight in lemongrass and fish sauce — grilled until deeply caramelised.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/grilled-lemongrass-pork.jpg',
-    intro: `Suon nuong xa is the pork chop of Saigon's com tam stalls â€” marinated overnight in lemongrass, fish sauce, garlic, and five-spice, then grilled over charcoal until the exterior is deeply caramelised and the edges char. The lemongrass perfumes the meat throughout rather than just coating the surface. Served over broken rice with a fried egg and nuoc cham, it is one of the definitive tastes of the city.`,
+    intro: `Suon nuong xa is the pork chop of Saigon's com tam stalls — marinated overnight in lemongrass, fish sauce, garlic, and five-spice, then grilled over charcoal until the exterior is deeply caramelised and the edges char. The lemongrass perfumes the meat throughout rather than just coating the surface. Served over broken rice with a fried egg and nuoc cham, it is one of the definitive tastes of the city.`,
     ingredientSections: [
         {
             title: 'Marinade',
@@ -43,7 +43,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Score and marinate',
-            description: 'Score the pork chops lightly on both sides with a knife to help the marinade penetrate. Combine all marinade ingredients and coat the chops thoroughly. Marinate at least 2 hours â€” overnight in the fridge produces noticeably deeper flavour.',
+            description: 'Score the pork chops lightly on both sides with a knife to help the marinade penetrate. Combine all marinade ingredients and coat the chops thoroughly. Marinate at least 2 hours — overnight in the fridge produces noticeably deeper flavour.',
             tip: 'The overnight marinade is not optional if you want the lemongrass flavour to penetrate the meat rather than just coat the surface.',
         },
         {
@@ -53,11 +53,11 @@ const recipe: RecipeData = {
         {
             title: 'Grill the pork',
             description: 'Grill over high heat or in a screaming-hot cast iron pan for 3 to 4 minutes per side until deeply caramelised with charred edges. Rest 2 minutes before serving.',
-            tip: 'The sugar in the marinade burns quickly. Watch the heat and do not walk away. The slight char at the edges is correct and desirable â€” it adds bitterness that balances the sweetness.',
+            tip: 'The sugar in the marinade burns quickly. Watch the heat and do not walk away. The slight char at the edges is correct and desirable — it adds bitterness that balances the sweetness.',
         },
         {
             title: 'Assemble the plate',
-            description: `Plate broken rice. Top with grilled pork chop and fried egg. Drizzle scallion oil over the rice. Add cucumber and pickled vegetables on the side. Serve nuoc cham generously alongside â€” pour it over everything at the table.`,
+            description: `Plate broken rice. Top with grilled pork chop and fried egg. Drizzle scallion oil over the rice. Add cucumber and pickled vegetables on the side. Serve nuoc cham generously alongside — pour it over everything at the table.`,
         },
     ],
 };

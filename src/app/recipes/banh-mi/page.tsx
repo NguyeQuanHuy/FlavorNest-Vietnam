@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-mi',
     title: 'Lemongrass Pork Banh Mi',
-    subtitle: 'A shatteringly crisp baguette â€” the greatest sandwich in the world.',
+    subtitle: 'A shatteringly crisp baguette — the greatest sandwich in the world.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
@@ -46,7 +46,7 @@ const recipe: RecipeData = {
         {
             title: 'Grill the pork',
             description: 'Grill over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred.',
-            tip: 'The caramel char on the pork is everything. Do not crowd the pan â€” cook in batches.',
+            tip: 'The caramel char on the pork is everything. Do not crowd the pan — cook in batches.',
         },
         {
             title: 'Toast the bread',

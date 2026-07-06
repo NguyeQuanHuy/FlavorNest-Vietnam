@@ -1,37 +1,37 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ga-ri-nuong-moi-phu-yen',
-    title: 'G√† Ri N∆∞·ªõng M·ªçi Ph√∫ Y√™n (Ph√∫ Y√™n Bantam Chicken Whole-Fire Grilled)',
-    subtitle: 'The small free-range bantam chickens of Ph√∫ Y√™n grilled whole over hardwood charcoal with nothing but coarse salt ‚Äî the fire doing what marinades attempt and rarely achieve, the mu·ªëi l√° √© providing everything the unseasoned exterior lacks.',
+    title: 'G‡ Ri Nu?ng M?i Ph˙ YÍn (Ph˙ YÍn Bantam Chicken Whole-Fire Grilled)',
+    subtitle: 'The small free-range bantam chickens of Ph˙ YÍn grilled whole over hardwood charcoal with nothing but coarse salt ó the fire doing what marinades attempt and rarely achieve, the mu?i l· È providing everything the unseasoned exterior lacks.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 15 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/ga-ri-nuong-moi-phu-yen.jpg',
-    intro: `G√† ri n∆∞·ªõng m·ªçi Ph√∫ Y√™n is the bantam chicken version of g√† n∆∞·ªõng m·ªçi ‚Äî the fire-only preparation that is the oldest and most honest way to cook a bird on the central Vietnamese coast. G√† ri is a specific breed: the small, lean, free-ranging bantam chicken of the central Vietnamese countryside, raised in backyards and on hillsides rather than in intensive farms, with yellow skin from the carotenoids in their varied diet, firm muscle from their constant movement, and a concentrated flavor that commercial chicken at three or four times the weight cannot approach. They weigh between 600-900g whole ‚Äî small enough that a single bird is the correct portion for one person, large enough to sustain a full grilling over real charcoal. The n∆∞·ªõng m·ªçi technique applied to g√† ri produces results that are specifically different from what the same technique produces with a standard 1.5kg commercial chicken: the smaller bird cooks through faster, the skin-to-meat ratio is higher so the fire-crisped skin constitutes a larger proportion of each bite, and the flavor of the flesh ‚Äî already more concentrated than commercial chicken ‚Äî is further intensified by the charcoal heat without any masking marinade. The salt rubbed into the skin before grilling is slightly more generous per gram of bird than for larger chickens, because g√† ri's higher skin-to-meat ratio means the salt does more work seasoning the meat through the skin. The mu·ªëi l√° √© is the condiment that was created for preparations exactly like this: a protein cooked with nothing but fire and salt, needing a dipping preparation that provides all the aromatic complexity the cooking has deliberately excluded.`,
+    intro: `G‡ ri nu?ng m?i Ph˙ YÍn is the bantam chicken version of g‡ nu?ng m?i ó the fire-only preparation that is the oldest and most honest way to cook a bird on the central Vietnamese coast. G‡ ri is a specific breed: the small, lean, free-ranging bantam chicken of the central Vietnamese countryside, raised in backyards and on hillsides rather than in intensive farms, with yellow skin from the carotenoids in their varied diet, firm muscle from their constant movement, and a concentrated flavor that commercial chicken at three or four times the weight cannot approach. They weigh between 600-900g whole ó small enough that a single bird is the correct portion for one person, large enough to sustain a full grilling over real charcoal. The nu?ng m?i technique applied to g‡ ri produces results that are specifically different from what the same technique produces with a standard 1.5kg commercial chicken: the smaller bird cooks through faster, the skin-to-meat ratio is higher so the fire-crisped skin constitutes a larger proportion of each bite, and the flavor of the flesh ó already more concentrated than commercial chicken ó is further intensified by the charcoal heat without any masking marinade. The salt rubbed into the skin before grilling is slightly more generous per gram of bird than for larger chickens, because g‡ ri's higher skin-to-meat ratio means the salt does more work seasoning the meat through the skin. The mu?i l· È is the condiment that was created for preparations exactly like this: a protein cooked with nothing but fire and salt, needing a dipping preparation that provides all the aromatic complexity the cooking has deliberately excluded.`,
     ingredientSections: [
         {
             title: 'Chicken',
             items: [
-                { amount: 2, name: 'whole g√† ri (bantam chickens), 600-800g each', note: 'free-range small chickens ‚Äî yellow-skinned, firm-fleshed. Substitute: the smallest available free-range chicken or Cornish hen. The smaller the bird, the closer to the original.' },
-                { amount: 2, unit: 'tsp', name: 'coarse sea salt', note: 'the only exterior seasoning ‚Äî slightly more per gram than for larger birds' },
+                { amount: 2, name: 'whole g‡ ri (bantam chickens), 600-800g each', note: 'free-range small chickens ó yellow-skinned, firm-fleshed. Substitute: the smallest available free-range chicken or Cornish hen. The smaller the bird, the closer to the original.' },
+                { amount: 2, unit: 'tsp', name: 'coarse sea salt', note: 'the only exterior seasoning ó slightly more per gram than for larger birds' },
                 { amount: 0.5, unit: 'tsp', name: 'white pepper', note: 'inside the cavity only' },
-                { amount: 1, name: 'small knob fresh ginger', note: 'placed inside the cavity ‚Äî no external aromatics' },
+                { amount: 1, name: 'small knob fresh ginger', note: 'placed inside the cavity ó no external aromatics' },
             ],
         },
         {
             title: 'Hardwood charcoal fire',
             items: [
-                { amount: 1, unit: 'kg', name: 'hardwood charcoal', note: 'lychee or longan wood preferred for the Ph√∫ Y√™n character ‚Äî or any dense hardwood charcoal' },
+                { amount: 1, unit: 'kg', name: 'hardwood charcoal', note: 'lychee or longan wood preferred for the Ph˙ YÍn character ó or any dense hardwood charcoal' },
             ],
         },
         {
-            title: 'Mu·ªëi l√° √© Ph√∫ Y√™n',
+            title: 'Mu?i l· È Ph˙ YÍn',
             items: [
-                { amount: 25, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)', note: 'the dipping condiment specific to Ph√∫ Y√™n ‚Äî more generous than usual because g√† ri is smaller and each piece needs more salt per bite' },
+                { amount: 25, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)', note: 'the dipping condiment specific to Ph˙ YÍn ó more generous than usual because g‡ ri is smaller and each piece needs more salt per bite' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper', note: 'coarsely ground' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -42,45 +42,45 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'for eating raw alongside each bite' },
-                { amount: 1, name: 'bunch rau rƒÉm' },
+                { amount: 1, name: 'bunch fresh l· È leaves', note: 'for eating raw alongside each bite' },
+                { amount: 1, name: 'bunch rau ram' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
-                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
+                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Salt the g√† ri ‚Äî minimum 1 hour',
-            description: 'Pat each bantam chicken completely dry inside and out. Rub coarse salt firmly over every external surface ‚Äî under the wings, around the neck, between the thighs and body. Place white pepper and the ginger knob inside the cavity. Leave on a rack at room temperature for 1 hour, or uncovered in the refrigerator for up to 6 hours. The small size of g√† ri means the salt penetrates to the meat surface faster than with larger birds ‚Äî 1 hour is sufficient for full flavor development.',
-            tip: 'G√† ri\'s high skin-to-meat ratio means the salt on the skin seasons the meat beneath more effectively than with a large chicken. The salt also partially dries the skin surface, which produces a more crackling result when the fire hits it. The 1-hour rest is the minimum ‚Äî 6 hours produces a noticeably better bird.',
+            title: 'Salt the g‡ ri ó minimum 1 hour',
+            description: 'Pat each bantam chicken completely dry inside and out. Rub coarse salt firmly over every external surface ó under the wings, around the neck, between the thighs and body. Place white pepper and the ginger knob inside the cavity. Leave on a rack at room temperature for 1 hour, or uncovered in the refrigerator for up to 6 hours. The small size of g‡ ri means the salt penetrates to the meat surface faster than with larger birds ó 1 hour is sufficient for full flavor development.',
+            tip: 'G‡ ri\'s high skin-to-meat ratio means the salt on the skin seasons the meat beneath more effectively than with a large chicken. The salt also partially dries the skin surface, which produces a more crackling result when the fire hits it. The 1-hour rest is the minimum ó 6 hours produces a noticeably better bird.',
         },
         {
             title: 'Build the correct charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over ‚Äî 25-30 minutes. For g√† ri specifically, the fire should be medium rather than medium-hot: the smaller bird cooks through faster than a large chicken and needs slightly less intense heat to avoid the exterior charring before the interior is done. Hold your hand 15cm above the grill ‚Äî 4-5 seconds comfortable is the correct temperature for g√† ri n∆∞·ªõng m·ªçi.',
-            tip: 'G√† ri grilled over an overly hot fire chars the thin skin before the small breast has cooked through. The slightly cooler fire compensates ‚Äî the bird needs 35-40 minutes, and at the correct temperature the skin chars gradually and evenly rather than immediately.',
+            description: 'Light hardwood charcoal and wait until fully ashed over ó 25-30 minutes. For g‡ ri specifically, the fire should be medium rather than medium-hot: the smaller bird cooks through faster than a large chicken and needs slightly less intense heat to avoid the exterior charring before the interior is done. Hold your hand 15cm above the grill ó 4-5 seconds comfortable is the correct temperature for g‡ ri nu?ng m?i.',
+            tip: 'G‡ ri grilled over an overly hot fire chars the thin skin before the small breast has cooked through. The slightly cooler fire compensates ó the bird needs 35-40 minutes, and at the correct temperature the skin chars gradually and evenly rather than immediately.',
         },
         {
-            title: 'Grill whole ‚Äî both sides',
-            description: 'Place the salted g√† ri breast-side up on the grill. Grill without moving for 12-15 minutes. The skin on the bottom will begin to char and the fat will render and drip onto the coals, creating brief flare-ups that add the specific hardwood-smoke char of m·ªçi cooking. Flip breast-side down for 10-12 minutes. Then rotate 90 degrees for 5 minutes on each flank to char the sides. Total grilling time: 35-40 minutes.',
-            tip: 'The flare-ups from the rendering g√† ri fat are an essential part of the m·ªçi technique ‚Äî they add a specific charred note to the skin that direct heat alone does not produce. Move the birds to the cooler zone when the flare-ups are too aggressive, but brief flame contact on the skin is the goal, not something to prevent.',
+            title: 'Grill whole ó both sides',
+            description: 'Place the salted g‡ ri breast-side up on the grill. Grill without moving for 12-15 minutes. The skin on the bottom will begin to char and the fat will render and drip onto the coals, creating brief flare-ups that add the specific hardwood-smoke char of m?i cooking. Flip breast-side down for 10-12 minutes. Then rotate 90 degrees for 5 minutes on each flank to char the sides. Total grilling time: 35-40 minutes.',
+            tip: 'The flare-ups from the rendering g‡ ri fat are an essential part of the m?i technique ó they add a specific charred note to the skin that direct heat alone does not produce. Move the birds to the cooler zone when the flare-ups are too aggressive, but brief flame contact on the skin is the goal, not something to prevent.',
         },
         {
             title: 'Test and rest',
-            description: 'Pierce the thigh joint ‚Äî juices must run completely clear. The skin should be deeply charred in patches with golden areas between. Because g√† ri is smaller, it is more prone to drying out if overcooked ‚Äî pull immediately when the juices run clear and rest on a rack for 8 minutes. The small size means the carry-over cooking during resting finishes any slight underdone areas without risk of drying the breast.',
-            tip: 'G√† ri rested on a rack rather than a plate is especially important ‚Äî the small bird\'s steam volume is proportionally large and softens the charred skin significantly if trapped under the bird on a flat plate. The rack allows steam to escape from all surfaces simultaneously.',
+            description: 'Pierce the thigh joint ó juices must run completely clear. The skin should be deeply charred in patches with golden areas between. Because g‡ ri is smaller, it is more prone to drying out if overcooked ó pull immediately when the juices run clear and rest on a rack for 8 minutes. The small size means the carry-over cooking during resting finishes any slight underdone areas without risk of drying the breast.',
+            tip: 'G‡ ri rested on a rack rather than a plate is especially important ó the small bird\'s steam volume is proportionally large and softens the charred skin significantly if trapped under the bird on a flat plate. The rack allows steam to escape from all surfaces simultaneously.',
         },
         {
-            title: 'Pound the mu·ªëi l√° √©',
-            description: 'Pound l√° √© leaves with coarse salt, black pepper, sugar, and the chili bird\'s eye in a mortar until the leaves are completely broken down and the salt has turned intensely green and fragrant. For g√† ri specifically, the mu·ªëi l√° √© should be pounded to a finer consistency than for larger seafood preparations ‚Äî g√† ri pieces are small and the salt should coat each piece more completely. Transfer to individual small plates. Squeeze lime at the table.',
-            tip: 'The quantity of mu·ªëi l√° √© for g√† ri n∆∞·ªõng m·ªçi is more generous per bird than for larger chickens ‚Äî because the pieces are smaller, each bite needs more salt contact to be seasoned correctly. Serve a larger plate of mu·ªëi l√° √© than might seem necessary.',
+            title: 'Pound the mu?i l· È',
+            description: 'Pound l· È leaves with coarse salt, black pepper, sugar, and the chili bird\'s eye in a mortar until the leaves are completely broken down and the salt has turned intensely green and fragrant. For g‡ ri specifically, the mu?i l· È should be pounded to a finer consistency than for larger seafood preparations ó g‡ ri pieces are small and the salt should coat each piece more completely. Transfer to individual small plates. Squeeze lime at the table.',
+            tip: 'The quantity of mu?i l· È for g‡ ri nu?ng m?i is more generous per bird than for larger chickens ó because the pieces are smaller, each bite needs more salt contact to be seasoned correctly. Serve a larger plate of mu?i l· È than might seem necessary.',
         },
         {
-            title: 'Chop and serve ‚Äî the Ph√∫ Y√™n way',
-            description: 'Chop each g√† ri through the bone with a cleaver into small pieces ‚Äî the small bird should produce 10-12 pieces per bird. Arrange on a plate. Scatter fresh l√° √© leaves and rau rƒÉm. Serve with the mu·ªëi l√° √©, sesame crackers, and lime. To eat the Ph√∫ Y√™n way: place a piece of g√† ri on a sesame cracker, add a raw l√° √© leaf, dip the assembled cracker in the lime-squeezed mu·ªëi l√° √©. The cracker, the crispy-charred chicken skin, and the l√° √© leaf eaten together in one bite is the Ph√∫ Y√™n m·ªçi experience at its most complete.',
-            tip: 'The sesame cracker assembly for g√† ri n∆∞·ªõng m·ªçi is specific to Ph√∫ Y√™n ‚Äî the province eats its fire-grilled proteins on b√°nh tr√°ng m√® rather than with plain rice. The cracker adds the crunch dimension that the small g√† ri pieces, already crispy from the fire, do not need from a heavier starch.',
+            title: 'Chop and serve ó the Ph˙ YÍn way',
+            description: 'Chop each g‡ ri through the bone with a cleaver into small pieces ó the small bird should produce 10-12 pieces per bird. Arrange on a plate. Scatter fresh l· È leaves and rau ram. Serve with the mu?i l· È, sesame crackers, and lime. To eat the Ph˙ YÍn way: place a piece of g‡ ri on a sesame cracker, add a raw l· È leaf, dip the assembled cracker in the lime-squeezed mu?i l· È. The cracker, the crispy-charred chicken skin, and the l· È leaf eaten together in one bite is the Ph˙ YÍn m?i experience at its most complete.',
+            tip: 'The sesame cracker assembly for g‡ ri nu?ng m?i is specific to Ph˙ YÍn ó the province eats its fire-grilled proteins on b·nh tr·ng mË rather than with plain rice. The cracker adds the crunch dimension that the small g‡ ri pieces, already crispy from the fire, do not need from a heavier starch.',
         },
     ],
 };

@@ -1,18 +1,18 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-phe-trung',
     title: 'Vietnamese Egg Coffee',
-    subtitle: 'Invented in Hanoi in 1946 â€” part drink, part dessert, entirely unforgettable.',
+    subtitle: 'Invented in Hanoi in 1946 — part drink, part dessert, entirely unforgettable.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '15 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/ca-phe-trung.jpg',
-    intro: 'In 1946, fresh milk was rationed in Hanoi. Nguyen Van Giang, a bartender at the Sofitel Metropole, replaced it with whipped egg yolks beaten with condensed milk into a silky, custard-like foam. He spooned it over strong robusta coffee. Eighty years later, his son still runs the same recipe at Giang Cafe on Hang Gai street. The drink is extraordinary â€” the foam sits warm and weightless on the coffee like a cloud, sweet and rich, while the dark robusta cuts through from beneath. You drink it slowly, with a small spoon.',
+    intro: 'In 1946, fresh milk was rationed in Hanoi. Nguyen Van Giang, a bartender at the Sofitel Metropole, replaced it with whipped egg yolks beaten with condensed milk into a silky, custard-like foam. He spooned it over strong robusta coffee. Eighty years later, his son still runs the same recipe at Giang Cafe on Hang Gai street. The drink is extraordinary — the foam sits warm and weightless on the coffee like a cloud, sweet and rich, while the dark robusta cuts through from beneath. You drink it slowly, with a small spoon.',
     ingredientSections: [
         {
             title: 'Coffee base',

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/tom-rim-man-ngot.jpg',
 
-    intro: `Tôm rim mặn ngọt is a classic Vietnamese home-cooked dish where shrimp are simmered in a glossy caramel sauce made from fish sauce, sugar, and aromatics.
+    intro: `T�m rim m?n ng?t is a classic Vietnamese home-cooked dish where shrimp are simmered in a glossy caramel sauce made from fish sauce, sugar, and aromatics.
 
 The result is a perfect balance of salty, sweet, and umami flavors. The shrimp become shiny, slightly chewy, and deeply coated in a rich glaze that clings beautifully to steamed rice.
 
@@ -38,7 +38,7 @@ Simple ingredients, fast cooking, but maximum comfort food energy.`,
         {
             title: 'Make caramel base',
             description: 'Heat oil in a pan over medium heat. Add sugar and cook until it melts and turns light amber.',
-            tip: 'Do not burn the caramel — it should be golden, not dark brown.',
+            tip: 'Do not burn the caramel � it should be golden, not dark brown.',
         },
         {
             title: 'Aromatics',

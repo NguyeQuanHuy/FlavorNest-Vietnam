@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'ga-kho-sa-ot',
     title: 'Lemongrass Chilli Chicken',
     subtitle:
-        'Gà Kho Sả Ớt — chicken thighs braised with a small mountain of minced lemongrass and bird\'s eye chilli until the sauce clings like glaze.',
+        'G� Kho S? ?t � chicken thighs braised with a small mountain of minced lemongrass and bird\'s eye chilli until the sauce clings like glaze.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '45 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/ga-kho-sa-ot.jpg',
     intro:
-        'Central Vietnamese cooking has its own devoted following, and this is one of the dishes that explains why. Where the Northern gà kho gừng leans on ginger and restraint, the Central version turns up every dial: more lemongrass, more chilli, more fish sauce, cooked down until the sauce is almost a paste. The kitchen ends up smelling like a Hue market at sunrise.',
+        'Central Vietnamese cooking has its own devoted following, and this is one of the dishes that explains why. Where the Northern g� kho g?ng leans on ginger and restraint, the Central version turns up every dial: more lemongrass, more chilli, more fish sauce, cooked down until the sauce is almost a paste. The kitchen ends up smelling like a Hue market at sunrise.',
     ingredientSections: [
         {
             title: 'Chicken',

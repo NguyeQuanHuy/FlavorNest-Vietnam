@@ -1,38 +1,38 @@
-Ôªø'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-nuoc-leo',
     title: `Khmer Fermented Fish Noodle Soup`,
-    subtitle: `B√∫n N∆∞·ªõc L√®o ‚Äî The soul of S√≥c TrƒÉng in a bowl. Prawn paste broth, pork hock, and lemongrass over rice vermicelli.`,
+    subtitle: `B˙n Nu?c LËo ó The soul of SÛc Trang in a bowl. Prawn paste broth, pork hock, and lemongrass over rice vermicelli.`,
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: `https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=1600&q=85`,
-    intro: `B√∫n n∆∞·ªõc l√®o is the signature noodle soup of the Mekong Delta's Khmer community ‚Äî most authentically eaten in S√≥c TrƒÉng, Tr√† Vinh, and B·∫°c Li√™u provinces. The broth is built on m·∫Øm pr√¥ng (Khmer fermented prawn paste), lemongrass, and pork hock simmered for two hours until the collagen dissolves into silk. Unlike the Vietnamese-Chinese broths of the north, this one does not seek clarity ‚Äî it is deliberately opaque, rust-orange, layered with fermented depth and aromatic lemongrass top notes.\n\nThe dish belongs to the tri-cultural cuisine of the Mekong Delta: Vietnamese technique, Khmer ingredients, Chinese pork hock tradition. Served over thick rice vermicelli with shrimp, sliced pork, and a mandatory herb plate that includes banana blossom and water spinach, it is one of the few Vietnamese noodle soups where you eat the broth and the greens in equal proportion. Every Khmer household in S√≥c TrƒÉng has its own m·∫Øm pr√¥ng ratio. This recipe uses the middle road ‚Äî fragrant but not overwhelming for the uninitiated.`,
+    intro: `B˙n nu?c lËo is the signature noodle soup of the Mekong Delta's Khmer community ó most authentically eaten in SÛc Trang, Tr‡ Vinh, and B?c LiÍu provinces. The broth is built on m?m prÙng (Khmer fermented prawn paste), lemongrass, and pork hock simmered for two hours until the collagen dissolves into silk. Unlike the Vietnamese-Chinese broths of the north, this one does not seek clarity ó it is deliberately opaque, rust-orange, layered with fermented depth and aromatic lemongrass top notes.\n\nThe dish belongs to the tri-cultural cuisine of the Mekong Delta: Vietnamese technique, Khmer ingredients, Chinese pork hock tradition. Served over thick rice vermicelli with shrimp, sliced pork, and a mandatory herb plate that includes banana blossom and water spinach, it is one of the few Vietnamese noodle soups where you eat the broth and the greens in equal proportion. Every Khmer household in SÛc Trang has its own m?m prÙng ratio. This recipe uses the middle road ó fragrant but not overwhelming for the uninitiated.`,
     ingredientSections: [
         {
-            title: `For the broth (n∆∞·ªõc l√®o)`,
+            title: `For the broth (nu?c lËo)`,
             items: [
-                { amount: 600, unit: 'g', name: `pork hock (gi√≤ heo)`, note: `cut into 3‚Äì4 cm pieces by butcher` },
-                { amount: 200, unit: 'g', name: `dried shrimp (t√¥m kh√¥)`, note: `soaked 20 min, drained` },
-                { amount: 3, unit: 'tbsp', name: `Khmer fermented prawn paste (m·∫Øm pr√¥ng)`, note: `substitute: 2 tbsp m·∫Øm ru·ªëc Hu·∫ø + 1 tbsp shrimp paste` },
+                { amount: 600, unit: 'g', name: `pork hock (giÚ heo)`, note: `cut into 3ñ4 cm pieces by butcher` },
+                { amount: 200, unit: 'g', name: `dried shrimp (tÙm khÙ)`, note: `soaked 20 min, drained` },
+                { amount: 3, unit: 'tbsp', name: `Khmer fermented prawn paste (m?m prÙng)`, note: `substitute: 2 tbsp m?m ru?c Hu? + 1 tbsp shrimp paste` },
                 { amount: 3, name: `lemongrass stalks`, note: `bruised, tied in a knot` },
-                { amount: 4, name: `kaffir lime leaves (l√° chanh)` },
-                { amount: 2, unit: 'tbsp', name: `fish sauce (n∆∞·ªõc m·∫Øm)` },
+                { amount: 4, name: `kaffir lime leaves (l· chanh)` },
+                { amount: 2, unit: 'tbsp', name: `fish sauce (nu?c m?m)` },
                 { amount: 1, unit: 'tbsp', name: `sugar` },
                 { amount: 2, unit: 'tsp', name: `salt` },
                 { amount: 2.5, unit: 'L', name: `water` },
             ],
         },
         {
-            title: `For the annatto oil (d·∫ßu m√†u ƒëi·ªÅu)`,
+            title: `For the annatto oil (d?u m‡u di?u)`,
             items: [
                 { amount: 3, unit: 'tbsp', name: `neutral oil` },
-                { amount: 1.5, unit: 'tbsp', name: `annatto seeds (h·∫°t ƒëi·ªÅu m√†u)`, note: `gives broth its signature rust-orange colour` },
+                { amount: 1.5, unit: 'tbsp', name: `annatto seeds (h?t di?u m‡u)`, note: `gives broth its signature rust-orange colour` },
                 { amount: 3, name: `shallots, minced` },
                 { amount: 2, name: `garlic cloves, minced` },
             ],
@@ -40,33 +40,33 @@ const recipe: RecipeData = {
         {
             title: `For the toppings`,
             items: [
-                { amount: 300, unit: 'g', name: `medium shrimp (t√¥m)`, note: `peeled, deveined` },
-                { amount: 200, unit: 'g', name: `pork shoulder (th·ªãt heo)`, note: `sliced thin, blanched 3 min` },
-                { amount: 500, unit: 'g', name: `fresh thick rice vermicelli (b√∫n)`, note: `or 250 g dried, soaked and blanched` },
+                { amount: 300, unit: 'g', name: `medium shrimp (tÙm)`, note: `peeled, deveined` },
+                { amount: 200, unit: 'g', name: `pork shoulder (th?t heo)`, note: `sliced thin, blanched 3 min` },
+                { amount: 500, unit: 'g', name: `fresh thick rice vermicelli (b˙n)`, note: `or 250 g dried, soaked and blanched` },
             ],
         },
         {
-            title: `Herb plate (mandatory ‚Äî do not skip)`,
+            title: `Herb plate (mandatory ó do not skip)`,
             items: [
-                { amount: 150, unit: 'g', name: `bean sprouts (gi√° ƒë·ªó)`, note: `blanched 30 seconds` },
-                { amount: 100, unit: 'g', name: `thinly shredded banana blossom (b·∫Øp chu·ªëi b√†o)` },
-                { amount: 1, name: `bunch water spinach (rau mu·ªëng)`, note: `cut into 5 cm pieces, blanched` },
-                { amount: 1, name: `bunch Vietnamese coriander (rau rƒÉm)` },
-                { amount: 1, name: `bunch sawtooth coriander (ng√≤ gai)` },
+                { amount: 150, unit: 'g', name: `bean sprouts (gi· d?)`, note: `blanched 30 seconds` },
+                { amount: 100, unit: 'g', name: `thinly shredded banana blossom (b?p chu?i b‡o)` },
+                { amount: 1, name: `bunch water spinach (rau mu?ng)`, note: `cut into 5 cm pieces, blanched` },
+                { amount: 1, name: `bunch Vietnamese coriander (rau ram)` },
+                { amount: 1, name: `bunch sawtooth coriander (ngÚ gai)` },
                 { amount: 2, name: `limes, cut into wedges` },
-                { amount: 3, name: `bird's eye chili (·ªõt hi·ªÉm), sliced` },
+                { amount: 3, name: `bird's eye chili (?t hi?m), sliced` },
             ],
         },
     ],
     steps: [
         {
             title: `Prepare the pork hock`,
-            description: `Bring a pot of water to a rolling boil. Add pork hock pieces and boil for 5 minutes ‚Äî grey scum will rise. Drain, rinse each piece under cold water, scrub off residue. This blanching step is non-negotiable for a clean-tasting broth. Set cleaned hock aside.`,
+            description: `Bring a pot of water to a rolling boil. Add pork hock pieces and boil for 5 minutes ó grey scum will rise. Drain, rinse each piece under cold water, scrub off residue. This blanching step is non-negotiable for a clean-tasting broth. Set cleaned hock aside.`,
         },
         {
             title: `Dissolve the prawn paste`,
-            description: `In a small bowl, combine m·∫Øm pr√¥ng with 100 ml warm water. Stir and press with a spoon until fully dissolved. Strain through a fine sieve, discarding solids. This step removes grit and ensures the fermented flavour infuses evenly into the broth without muddy texture.`,
-            tip: `If m·∫Øm pr√¥ng is unavailable in Germany, Vinh Thuan or Coop brand m·∫Øm ru·ªëc from Vietnamese grocery stores (Asien-Markt, Dong Xuan Center) works as a 1:1 substitute ‚Äî add 1 extra tsp of shrimp paste to compensate.`,
+            description: `In a small bowl, combine m?m prÙng with 100 ml warm water. Stir and press with a spoon until fully dissolved. Strain through a fine sieve, discarding solids. This step removes grit and ensures the fermented flavour infuses evenly into the broth without muddy texture.`,
+            tip: `If m?m prÙng is unavailable in Germany, Vinh Thuan or Coop brand m?m ru?c from Vietnamese grocery stores (Asien-Markt, Dong Xuan Center) works as a 1:1 substitute ó add 1 extra tsp of shrimp paste to compensate.`,
         },
         {
             title: `Build the broth`,
@@ -74,25 +74,25 @@ const recipe: RecipeData = {
         },
         {
             title: `Make the annatto oil`,
-            description: `While broth simmers, heat neutral oil in a small saucepan over medium-low heat. Add annatto seeds and stir for 2‚Äì3 minutes until oil turns deep orange-red. Remove seeds with a spoon. In the same coloured oil, saut√© minced shallots and garlic until fragrant, about 90 seconds. Set aside.`,
-            tip: `The annatto oil is what gives b√∫n n∆∞·ªõc l√®o its distinctive rust colour. Without it the broth looks dull and pale ‚Äî the visual is part of the dish's identity.`,
+            description: `While broth simmers, heat neutral oil in a small saucepan over medium-low heat. Add annatto seeds and stir for 2ñ3 minutes until oil turns deep orange-red. Remove seeds with a spoon. In the same coloured oil, sautÈ minced shallots and garlic until fragrant, about 90 seconds. Set aside.`,
+            tip: `The annatto oil is what gives b˙n nu?c lËo its distinctive rust colour. Without it the broth looks dull and pale ó the visual is part of the dish's identity.`,
         },
         {
             title: `Cook the shrimp`,
-            description: `Remove pork hock from the simmering broth after 90 minutes. Increase heat slightly and add shrimp directly to the broth. Cook 2‚Äì3 minutes until pink and just cooked through. Remove shrimp with a slotted spoon. Slice pork hock meat from the bone into bite-sized pieces. Return bone to broth if desired for extra richness.`,
+            description: `Remove pork hock from the simmering broth after 90 minutes. Increase heat slightly and add shrimp directly to the broth. Cook 2ñ3 minutes until pink and just cooked through. Remove shrimp with a slotted spoon. Slice pork hock meat from the bone into bite-sized pieces. Return bone to broth if desired for extra richness.`,
         },
         {
             title: `Season the broth`,
-            description: `Add the annatto oil to the broth, stirring to combine. Season with fish sauce, sugar, and salt. Taste ‚Äî it should be savoury, lightly sweet, with a distinct fermented prawn depth and lemongrass fragrance at the finish. Adjust as needed. Remove lemongrass stalks before serving. Keep at a low simmer.`,
+            description: `Add the annatto oil to the broth, stirring to combine. Season with fish sauce, sugar, and salt. Taste ó it should be savoury, lightly sweet, with a distinct fermented prawn depth and lemongrass fragrance at the finish. Adjust as needed. Remove lemongrass stalks before serving. Keep at a low simmer.`,
         },
         {
             title: `Assemble the bowls`,
-            description: `Divide rice vermicelli between 4 bowls. Top each with pork hock slices, 4‚Äì5 shrimp, and a pinch of sliced pork shoulder. Ladle broth generously over everything ‚Äî it should come up to just below the noodle surface, not drowning it. Finish with a drizzle of any remaining annatto oil for colour.`,
+            description: `Divide rice vermicelli between 4 bowls. Top each with pork hock slices, 4ñ5 shrimp, and a pinch of sliced pork shoulder. Ladle broth generously over everything ó it should come up to just below the noodle surface, not drowning it. Finish with a drizzle of any remaining annatto oil for colour.`,
         },
         {
             title: `Serve with the herb plate`,
-            description: `Place bean sprouts, shredded banana blossom, water spinach, rau rƒÉm, and ng√≤ gai alongside in a communal plate. Each person adds their own greens as they eat ‚Äî this is not a soup you dress in advance. Squeeze lime, add chili, and eat immediately. The broth cools quickly, so do not let the bowls wait.`,
-            tip: `B√∫n n∆∞·ªõc l√®o is eaten all morning in S√≥c TrƒÉng ‚Äî street vendors set up before 6am and sell out by 10am. The best bowls are the ones where the broth has been simmering since midnight.`,
+            description: `Place bean sprouts, shredded banana blossom, water spinach, rau ram, and ngÚ gai alongside in a communal plate. Each person adds their own greens as they eat ó this is not a soup you dress in advance. Squeeze lime, add chili, and eat immediately. The broth cools quickly, so do not let the bowls wait.`,
+            tip: `B˙n nu?c lËo is eaten all morning in SÛc Trang ó street vendors set up before 6am and sell out by 10am. The best bowls are the ones where the broth has been simmering since midnight.`,
         },
     ],
 };

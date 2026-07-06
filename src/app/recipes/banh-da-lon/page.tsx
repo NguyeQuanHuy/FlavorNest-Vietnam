@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-da-lon',
     title: 'Vietnamese Layered Pandan Cake (Banh Da Lon)',
-    subtitle: 'Soft, chewy layers of pandan and mung bean â€” a traditional Vietnamese steamed dessert.',
+    subtitle: 'Soft, chewy layers of pandan and mung bean — a traditional Vietnamese steamed dessert.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/banh-da-lon.jpg',
 
-    intro: `BÃ¡nh da lá»£n is a traditional Vietnamese steamed dessert famous for its beautiful green and yellow layers.
+    intro: `Bánh da l?n is a traditional Vietnamese steamed dessert famous for its beautiful green and yellow layers.
 
 Made from tapioca starch, mung beans, pandan juice, and coconut milk, the cake has a chewy, slightly bouncy texture. Each layer is steamed separately, creating a soft, elastic dessert that is both visually stunning and delicious.`,
 
@@ -42,7 +42,7 @@ Made from tapioca starch, mung beans, pandan juice, and coconut milk, the cake h
     steps: [
         {
             title: 'Prepare mung beans',
-            description: 'Soak mung beans for 2â€“3 hours, then steam until soft. Blend with coconut milk, sugar, and water.',
+            description: 'Soak mung beans for 2–3 hours, then steam until soft. Blend with coconut milk, sugar, and water.',
             tip: 'Blend until smooth for a silky yellow layer.',
         },
         {
@@ -59,7 +59,7 @@ Made from tapioca starch, mung beans, pandan juice, and coconut milk, the cake h
         },
         {
             title: 'Steam layers',
-            description: 'Steam alternating layers (green then yellow) for 5â€“7 minutes each until set.',
+            description: 'Steam alternating layers (green then yellow) for 5–7 minutes each until set.',
             tip: 'Each layer must be fully set before adding the next.',
         },
         {

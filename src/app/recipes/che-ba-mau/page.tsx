@@ -1,4 +1,4 @@
-Ôªø'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'che-ba-mau',
     title: 'Three-Colour Dessert',
     subtitle:
-        'Saigon in a glass ‚Äî three jewel-toned layers of mung bean, pandan jelly, and red jelly, crowned with coconut cream over crushed ice.',
+        'Saigon in a glass ó three jewel-toned layers of mung bean, pandan jelly, and red jelly, crowned with coconut cream over crushed ice.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '50 min',
@@ -14,10 +14,10 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/che-ba-mau.jpg',
     intro:
-        'Ch√® ba m√†u is Saigon\'s most photogenic street dessert ‚Äî three distinct layers built in a glass like a sunset seen through sweetened condensed milk. The green comes from pandan jelly, the red from kidney bean or agar jelly, and the yellow from steamed split mung bean. Everything sits on a mound of crushed ice and is finished with a generous pour of coconut cream. It is not a complicated dessert. It is an honest one.',
+        'ChË ba m‡u is Saigon\'s most photogenic street dessert ó three distinct layers built in a glass like a sunset seen through sweetened condensed milk. The green comes from pandan jelly, the red from kidney bean or agar jelly, and the yellow from steamed split mung bean. Everything sits on a mound of crushed ice and is finished with a generous pour of coconut cream. It is not a complicated dessert. It is an honest one.',
     ingredientSections: [
         {
-            title: 'Mung bean layer (ƒë·∫≠u xanh)',
+            title: 'Mung bean layer (d?u xanh)',
             items: [
                 { amount: 150, unit: 'g', name: 'split mung beans', note: 'soaked 2 hrs' },
                 { amount: 2, unit: 'tbsp', name: 'caster sugar' },
@@ -25,7 +25,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Pandan jelly layer (th·∫°ch l√° d·ª©a)',
+            title: 'Pandan jelly layer (th?ch l· d?a)',
             items: [
                 { amount: 500, unit: 'ml', name: 'water' },
                 { amount: 5, unit: 'g', name: 'agar-agar powder' },
@@ -34,7 +34,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Red jelly layer (th·∫°ch ƒë·ªè)',
+            title: 'Red jelly layer (th?ch d?)',
             items: [
                 { amount: 500, unit: 'ml', name: 'water' },
                 { amount: 5, unit: 'g', name: 'agar-agar powder' },
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
             items: [
                 { amount: 200, unit: 'ml', name: 'coconut cream', note: 'full-fat' },
                 { amount: 1, unit: 'tbsp', name: 'caster sugar' },
-                { amount: 1, name: 'pinch of salt', note: 'the salt is essential ‚Äî do not skip' },
+                { amount: 1, name: 'pinch of salt', note: 'the salt is essential ó do not skip' },
             ],
         },
         {
@@ -62,14 +62,14 @@ const recipe: RecipeData = {
         {
             title: 'Cook the mung beans',
             description:
-                'Drain the soaked mung beans and steam or boil them for 20‚Äì25 minutes until completely soft and mashable. Season with sugar and a pinch of salt while still warm. The texture should be smooth and slightly sticky ‚Äî like a thick paste, not dry crumbles. Set aside to cool.',
+                'Drain the soaked mung beans and steam or boil them for 20ñ25 minutes until completely soft and mashable. Season with sugar and a pinch of salt while still warm. The texture should be smooth and slightly sticky ó like a thick paste, not dry crumbles. Set aside to cool.',
             tip: 'Do not overcook into soup. You want individual beans that are soft but still hold their shape when you press one between your fingers.',
         },
         {
             title: 'Make the pandan jelly',
             description:
-                'Combine water, agar-agar, and sugar in a saucepan. Stir in pandan extract or strain in juice from blended pandan leaves. Bring to a full boil over medium heat, stirring constantly, until the agar-agar fully dissolves ‚Äî about 5 minutes. Pour into a shallow tray to a depth of 1.5 cm. Leave at room temperature to set (about 20 minutes), then refrigerate until firm. Cut into small cubes or strips.',
-            tip: 'Agar-agar sets at room temperature, unlike gelatin. Don\'t rush it into the fridge ‚Äî condensation will cloud the jelly.',
+                'Combine water, agar-agar, and sugar in a saucepan. Stir in pandan extract or strain in juice from blended pandan leaves. Bring to a full boil over medium heat, stirring constantly, until the agar-agar fully dissolves ó about 5 minutes. Pour into a shallow tray to a depth of 1.5 cm. Leave at room temperature to set (about 20 minutes), then refrigerate until firm. Cut into small cubes or strips.',
+            tip: 'Agar-agar sets at room temperature, unlike gelatin. Don\'t rush it into the fridge ó condensation will cloud the jelly.',
         },
         {
             title: 'Make the red jelly',
@@ -79,13 +79,13 @@ const recipe: RecipeData = {
         {
             title: 'Warm the coconut cream',
             description:
-                'Gently heat coconut cream in a small saucepan with sugar and salt over low heat, stirring until sugar dissolves. Do not boil ‚Äî just warm enough to dissolve. Remove from heat and let cool to room temperature. The salt-sugar balance is what makes this topping addictive rather than cloying.',
+                'Gently heat coconut cream in a small saucepan with sugar and salt over low heat, stirring until sugar dissolves. Do not boil ó just warm enough to dissolve. Remove from heat and let cool to room temperature. The salt-sugar balance is what makes this topping addictive rather than cloying.',
         },
         {
             title: 'Assemble the glasses',
             description:
-                'Fill each glass with a generous layer of crushed ice. Spoon in the mung bean paste first (yellow layer), then add cubes of red jelly, then pandan jelly. The layering order is traditional ‚Äî yellow at base, red in middle, green on top ‚Äî but feel free to reverse for visual drama. Finish with a generous pour of coconut cream over everything.',
-            tip: 'Serve immediately. Ch√® ba m√†u waits for no one ‚Äî the ice melts fast and the layers begin to bleed into each other beautifully after a few minutes.',
+                'Fill each glass with a generous layer of crushed ice. Spoon in the mung bean paste first (yellow layer), then add cubes of red jelly, then pandan jelly. The layering order is traditional ó yellow at base, red in middle, green on top ó but feel free to reverse for visual drama. Finish with a generous pour of coconut cream over everything.',
+            tip: 'Serve immediately. ChË ba m‡u waits for no one ó the ice melts fast and the layers begin to bleed into each other beautifully after a few minutes.',
         },
     ],
 };

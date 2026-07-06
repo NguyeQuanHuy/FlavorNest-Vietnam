@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-lui',
     title: 'Hue Lemongrass Pork Skewers',
-    subtitle: 'Nem lui Hue â€” seasoned ground pork moulded around lemongrass stalks and grilled over charcoal, eaten DIY in rice paper with the famous peanut-liver sauce.',
+    subtitle: 'Nem lui Hue — seasoned ground pork moulded around lemongrass stalks and grilled over charcoal, eaten DIY in rice paper with the famous peanut-liver sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/nem-lui.jpg',
-    intro: 'Nem lui is a Hue royal court dish that escaped the palace and became the city street food everyone wraps with their hands. The lemongrass stalk is not a flavour â€” it is the skewer itself, perfuming the seasoned pork from the inside as it grills. What makes nem lui Hue different from every other Vietnamese pork skewer is the dipping sauce: a thick, glossy, golden-orange sauce built on roasted peanut butter, sesame, fermented bean paste and a small amount of pork liver. Each guest wraps the hot skewer in rice paper with green banana, star fruit, herbs and pickles, then dunks. The first wrap is awkward. The fifth is muscle memory.',
+    intro: 'Nem lui is a Hue royal court dish that escaped the palace and became the city street food everyone wraps with their hands. The lemongrass stalk is not a flavour — it is the skewer itself, perfuming the seasoned pork from the inside as it grills. What makes nem lui Hue different from every other Vietnamese pork skewer is the dipping sauce: a thick, glossy, golden-orange sauce built on roasted peanut butter, sesame, fermented bean paste and a small amount of pork liver. Each guest wraps the hot skewer in rice paper with green banana, star fruit, herbs and pickles, then dunks. The first wrap is awkward. The fifth is muscle memory.',
     ingredientSections: [
         {
             title: 'Pork mixture',
@@ -65,7 +65,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Knead the pork until sticky',
-            description: 'Combine all pork mixture ingredients in a large bowl. Knead and slap the mixture against the sides of the bowl for 5 full minutes â€” the pork should turn pale, glossy, and noticeably sticky. This develops the bind that lets the meat cling to the lemongrass.',
+            description: 'Combine all pork mixture ingredients in a large bowl. Knead and slap the mixture against the sides of the bowl for 5 full minutes — the pork should turn pale, glossy, and noticeably sticky. This develops the bind that lets the meat cling to the lemongrass.',
             tip: 'Skipping the kneading equals pork sliding off the lemongrass on the grill. Five minutes, no shortcut.',
         },
         {
@@ -85,7 +85,7 @@ const recipe: RecipeData = {
         {
             title: 'Grill over hot charcoal',
             description: 'Brush skewers with oil. Grill over hot coals for 4 minutes per side, turning twice, until the pork is deep mahogany with charred edges and the lemongrass is blackened and fragrant. The pork should sizzle audibly the whole time.',
-            tip: 'A grill pan over high heat works indoors. Avoid an oven broiler â€” you lose the smoke that defines the dish.',
+            tip: 'A grill pan over high heat works indoors. Avoid an oven broiler — you lose the smoke that defines the dish.',
         },
         {
             title: 'Build the wrapping platter',

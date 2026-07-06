@@ -1,31 +1,31 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ech-tai-chanh-mam-nhi',
-    title: '·∫æch T√°i Chanh M·∫Øm Nhƒ© Ph√∫ Y√™n (Ph√∫ Y√™n Lime-Cured Frog with Premium Fish Sauce)',
-    subtitle: 'Frog legs sliced thin and cured in fresh lime juice and m·∫Øm nhƒ© until the flesh turns from translucent to opaque white ‚Äî tossed with rau rƒÉm, ginger, lemongrass, and peanuts in the raw preparation that applies the t√°i philosophy to the most delicate protein in Ph√∫ Y√™n\'s cooking.',
+    title: '?ch T·i Chanh M?m Nhi Ph˙ YÍn (Ph˙ YÍn Lime-Cured Frog with Premium Fish Sauce)',
+    subtitle: 'Frog legs sliced thin and cured in fresh lime juice and m?m nhi until the flesh turns from translucent to opaque white ó tossed with rau ram, ginger, lemongrass, and peanuts in the raw preparation that applies the t·i philosophy to the most delicate protein in Ph˙ YÍn\'s cooking.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '35 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ech-tai-chanh-mam-nhi.jpg',
-    intro: `·∫æch t√°i chanh m·∫Øm nhƒ© is the Ph√∫ Y√™n lime-cured frog ‚Äî a preparation that applies the t√°i (raw-cured) philosophy to ·∫øch, the paddy frog, using the same m·∫Øm nhƒ©-and-lime curing approach that the province uses for d√™ t√°i chanh, g·ªèi t√¥m S√¥ng C·∫ßu, and g·ªèi c√° mai. The t√°i technique ‚Äî curing raw protein in lime juice and fish sauce until the acid denatures the surface proteins without heat ‚Äî is one of the most demanding preparations in Vietnamese cooking because it requires the highest quality ingredient (freshness cannot be compensated for by technique), the most precise timing (the window between correctly cured and over-cured is narrow), and the most honest assessment of the result (nothing masks the ingredient's character). Applied to frog, the t√°i technique produces something that surprises even experienced Vietnamese diners: the cured frog flesh is white, slightly firm, and carries a clean sweetness that is more delicate than any other t√°i preparation in the province's repertoire. The m·∫Øm nhƒ© in the curing liquid is the Ph√∫ Y√™n specific choice ‚Äî where other central Vietnamese provinces use standard fish sauce or even m·∫Øm t√¥m (fermented shrimp paste) for their t√°i preparations, Ph√∫ Y√™n uses its premium first-press fish sauce, which adds umami depth without the pungency that would overwhelm the delicate frog. The galangal added to the curing liquid ‚Äî in small amount, finely grated ‚Äî is the province's specific aromatic addition for frog preparations: just enough to provide the warm, slightly piney note that makes the difference between t√°i ·∫øch that tastes flat and t√°i ·∫øch that tastes complete.`,
+    intro: `?ch t·i chanh m?m nhi is the Ph˙ YÍn lime-cured frog ó a preparation that applies the t·i (raw-cured) philosophy to ?ch, the paddy frog, using the same m?m nhi-and-lime curing approach that the province uses for dÍ t·i chanh, g?i tÙm SÙng C?u, and g?i c· mai. The t·i technique ó curing raw protein in lime juice and fish sauce until the acid denatures the surface proteins without heat ó is one of the most demanding preparations in Vietnamese cooking because it requires the highest quality ingredient (freshness cannot be compensated for by technique), the most precise timing (the window between correctly cured and over-cured is narrow), and the most honest assessment of the result (nothing masks the ingredient's character). Applied to frog, the t·i technique produces something that surprises even experienced Vietnamese diners: the cured frog flesh is white, slightly firm, and carries a clean sweetness that is more delicate than any other t·i preparation in the province's repertoire. The m?m nhi in the curing liquid is the Ph˙ YÍn specific choice ó where other central Vietnamese provinces use standard fish sauce or even m?m tÙm (fermented shrimp paste) for their t·i preparations, Ph˙ YÍn uses its premium first-press fish sauce, which adds umami depth without the pungency that would overwhelm the delicate frog. The galangal added to the curing liquid ó in small amount, finely grated ó is the province's specific aromatic addition for frog preparations: just enough to provide the warm, slightly piney note that makes the difference between t·i ?ch that tastes flat and t·i ?ch that tastes complete.`,
     ingredientSections: [
         {
             title: 'Frog',
             items: [
-                { amount: 350, unit: 'g', name: 'frog legs, boneless if possible', note: 'skinned, cleaned. Slice against the grain into 3-4mm pieces ‚Äî thin enough to cure through completely in 8 minutes. Must be same-day fresh from a trusted source.' },
+                { amount: 350, unit: 'g', name: 'frog legs, boneless if possible', note: 'skinned, cleaned. Slice against the grain into 3-4mm pieces ó thin enough to cure through completely in 8 minutes. Must be same-day fresh from a trusted source.' },
             ],
         },
         {
-            title: 'Ph√∫ Y√™n curing liquid',
+            title: 'Ph˙ YÍn curing liquid',
             items: [
-                { amount: 4, unit: 'tbsp', name: 'fresh lime juice', note: 'from 3 limes ‚Äî squeezed immediately before using' },
-                { amount: 2, unit: 'tbsp', name: 'm·∫Øm nhƒ© (Ph√∫ Y√™n first-press fish sauce)', note: 'the condiment that makes this specifically Ph√∫ Y√™n rather than generic t√°i ·∫øch' },
+                { amount: 4, unit: 'tbsp', name: 'fresh lime juice', note: 'from 3 limes ó squeezed immediately before using' },
+                { amount: 2, unit: 'tbsp', name: 'm?m nhi (Ph˙ YÍn first-press fish sauce)', note: 'the condiment that makes this specifically Ph˙ YÍn rather than generic t·i ?ch' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
-                { amount: 15, unit: 'g', name: 'fresh galangal', note: 'microplane-grated to paste ‚Äî small amount, specific to frog t√°i in Ph√∫ Y√™n' },
+                { amount: 15, unit: 'g', name: 'fresh galangal', note: 'microplane-grated to paste ó small amount, specific to frog t·i in Ph˙ YÍn' },
             ],
         },
         {
@@ -41,10 +41,10 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Herbs ‚Äî Ph√∫ Y√™n generous',
+            title: 'Herbs ó Ph˙ YÍn generous',
             items: [
-                { amount: 1, name: 'large bunch Vietnamese coriander (rau rƒÉm)', note: 'the essential herb ‚Äî generous Ph√∫ Y√™n quantity' },
-                { amount: 0.5, name: 'bunch perilla (t√≠a t√¥)' },
+                { amount: 1, name: 'large bunch Vietnamese coriander (rau ram)', note: 'the essential herb ó generous Ph˙ YÍn quantity' },
+                { amount: 0.5, name: 'bunch perilla (tÌa tÙ)' },
                 { amount: 0.5, name: 'bunch mint' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
@@ -52,7 +52,7 @@ const recipe: RecipeData = {
         {
             title: 'Final dressing',
             items: [
-                { amount: 1, unit: 'tbsp', name: 'm·∫Øm nhƒ©', note: 'additional ‚Äî for the assembled salad' },
+                { amount: 1, unit: 'tbsp', name: 'm?m nhi', note: 'additional ó for the assembled salad' },
                 { amount: 0.5, unit: 'tbsp', name: 'fresh lime juice' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil' },
@@ -61,8 +61,8 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
-                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'for eating raw alongside ‚Äî the Ph√∫ Y√™n aromatic finish' },
+                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch fresh l· È leaves', note: 'for eating raw alongside ó the Ph˙ YÍn aromatic finish' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 1, name: 'extra fresh chili, sliced' },
             ],
@@ -70,29 +70,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Freshness assessment ‚Äî non-negotiable',
-            description: 'Before anything else: smell the frog legs. They should smell of nothing except the very faint clean sweetness of fresh frog ‚Äî no ammonia, no sourness, no strong animal smell. Touch them: the flesh should feel firm and slightly slippery, not soft or yielding. Fresh frog legs for t√°i preparation should be purchased live or killed the same morning. This is the preparation that most uncompromisingly requires freshness because the lime acid cures but does not make safe what was not safe before curing.',
-            tip: 'The freshness standard for ·∫øch t√°i is higher than for d√™ t√°i or even g·ªèi t√¥m s·ªëng because frog flesh deteriorates faster than most other proteins. The safest source is a live frog that is dispatched immediately before preparation. If purchasing pre-cleaned frog legs, they must have been cleaned the same morning and kept cold continuously since.',
+            title: 'Freshness assessment ó non-negotiable',
+            description: 'Before anything else: smell the frog legs. They should smell of nothing except the very faint clean sweetness of fresh frog ó no ammonia, no sourness, no strong animal smell. Touch them: the flesh should feel firm and slightly slippery, not soft or yielding. Fresh frog legs for t·i preparation should be purchased live or killed the same morning. This is the preparation that most uncompromisingly requires freshness because the lime acid cures but does not make safe what was not safe before curing.',
+            tip: 'The freshness standard for ?ch t·i is higher than for dÍ t·i or even g?i tÙm s?ng because frog flesh deteriorates faster than most other proteins. The safest source is a live frog that is dispatched immediately before preparation. If purchasing pre-cleaned frog legs, they must have been cleaned the same morning and kept cold continuously since.',
         },
         {
             title: 'Slice and prepare the curing liquid',
-            description: 'Slice the frog legs very thin ‚Äî 3-4mm across the muscle fibers. Frog legs that are boned first slice more cleanly; bone-in legs can also be sliced through the bone with a sharp knife. Place in a glass or ceramic bowl. Make the curing liquid: combine lime juice, m·∫Øm nhƒ©, sugar, and microplane-grated galangal. The galangal should be near-liquid ‚Äî only the aromatic oils matter, not the fiber texture. Stir to combine.',
-            tip: 'The microplane-grated galangal in the curing liquid is the most specific and most important element that distinguishes ·∫øch t√°i chanh m·∫Øm nhƒ© Ph√∫ Y√™n from all other t√°i ·∫øch versions. The galangal oils distributed through the curing liquid penetrate the frog flesh during the 8-minute cure and provide the warm, piney note that makes the finished t√°i taste specifically of the central Vietnamese coast rather than of generic lime-cured protein.',
+            description: 'Slice the frog legs very thin ó 3-4mm across the muscle fibers. Frog legs that are boned first slice more cleanly; bone-in legs can also be sliced through the bone with a sharp knife. Place in a glass or ceramic bowl. Make the curing liquid: combine lime juice, m?m nhi, sugar, and microplane-grated galangal. The galangal should be near-liquid ó only the aromatic oils matter, not the fiber texture. Stir to combine.',
+            tip: 'The microplane-grated galangal in the curing liquid is the most specific and most important element that distinguishes ?ch t·i chanh m?m nhi Ph˙ YÍn from all other t·i ?ch versions. The galangal oils distributed through the curing liquid penetrate the frog flesh during the 8-minute cure and provide the warm, piney note that makes the finished t·i taste specifically of the central Vietnamese coast rather than of generic lime-cured protein.',
         },
         {
             title: 'Cure for exactly 8 minutes',
-            description: 'Pour the curing liquid over the sliced frog legs. Toss very gently to coat every piece. Set a timer for exactly 8 minutes. At 6 minutes, check one piece: the exterior should be turning from translucent to opaque white. At 8 minutes, the cure should be complete ‚Äî the flesh completely white throughout, slightly firmed, and smelling of lime, m·∫Øm nhƒ©, and the galangal\'s specific warm character. Drain immediately, reserving 2 tablespoons of the curing liquid.',
-            tip: 'The 8-minute cure for ·∫øch is slightly longer than for larger shrimp (5-7 minutes) and shorter than for goat (10-12 minutes) ‚Äî reflecting the specific density and composition of frog flesh. Frog is leaner than shrimp but less dense than mammal meat, and the lime acid works through it at a specific rate that 8 minutes has been calibrated for.',
+            description: 'Pour the curing liquid over the sliced frog legs. Toss very gently to coat every piece. Set a timer for exactly 8 minutes. At 6 minutes, check one piece: the exterior should be turning from translucent to opaque white. At 8 minutes, the cure should be complete ó the flesh completely white throughout, slightly firmed, and smelling of lime, m?m nhi, and the galangal\'s specific warm character. Drain immediately, reserving 2 tablespoons of the curing liquid.',
+            tip: 'The 8-minute cure for ?ch is slightly longer than for larger shrimp (5-7 minutes) and shorter than for goat (10-12 minutes) ó reflecting the specific density and composition of frog flesh. Frog is leaner than shrimp but less dense than mammal meat, and the lime acid works through it at a specific rate that 8 minutes has been calibrated for.',
         },
         {
             title: 'Assemble with extreme gentleness',
-            description: 'Combine the drained cured frog with julienned ginger, lemongrass rings, soaked shallots, rau rƒÉm, perilla, mint, spring onion, and sliced chili. Add the final dressing and the reserved curing liquid. Fold very gently ‚Äî more gently than for d√™ t√°i, more gently than for g·ªèi t√¥m. Frog flesh after curing is the most fragile t√°i protein in the Ph√∫ Y√™n series. It tears easily. A folding motion from the bottom of the bowl rather than tossing keeps each piece intact.',
-            tip: 'The folding technique for ·∫øch t√°i is the most careful handling in all the t√°i preparations in this series. Frog flesh at the correct level of cure is simultaneously perfectly textured and extremely fragile. Rough tossing produces mashed frog t√°i. Gentle folding produces intact pieces that show the white cured flesh clearly ‚Äî visually as important as texturally.',
+            description: 'Combine the drained cured frog with julienned ginger, lemongrass rings, soaked shallots, rau ram, perilla, mint, spring onion, and sliced chili. Add the final dressing and the reserved curing liquid. Fold very gently ó more gently than for dÍ t·i, more gently than for g?i tÙm. Frog flesh after curing is the most fragile t·i protein in the Ph˙ YÍn series. It tears easily. A folding motion from the bottom of the bowl rather than tossing keeps each piece intact.',
+            tip: 'The folding technique for ?ch t·i is the most careful handling in all the t·i preparations in this series. Frog flesh at the correct level of cure is simultaneously perfectly textured and extremely fragile. Rough tossing produces mashed frog t·i. Gentle folding produces intact pieces that show the white cured flesh clearly ó visually as important as texturally.',
         },
         {
             title: 'Add toppings and serve immediately',
-            description: 'Transfer to a serving plate. Top with crushed peanuts, crispy fried shallots, and toasted sesame seeds at the last moment. Arrange sesame crackers, fresh l√° √© leaves, and lime wedges alongside. G·ªèi ·∫øch t√°i must be eaten within 5 minutes ‚Äî the lime continues curing the frog after assembly, and the peanuts begin to soften from the moisture within 8 minutes. Serve and eat in one continuous motion.',
-            tip: 'Fresh l√° √© leaves eaten between bites of the cured frog is the specifically Ph√∫ Y√™n element that elevates this beyond generic t√°i ·∫øch. The wild citrus-pepper character of the raw leaf provides the aromatic complexity that the deliberately simple curing omits. One piece of cured frog on a cracker, one raw l√° √© leaf placed over it, one dip in the m·∫Øm nhƒ© pooled in the plate, one bite.',
+            description: 'Transfer to a serving plate. Top with crushed peanuts, crispy fried shallots, and toasted sesame seeds at the last moment. Arrange sesame crackers, fresh l· È leaves, and lime wedges alongside. G?i ?ch t·i must be eaten within 5 minutes ó the lime continues curing the frog after assembly, and the peanuts begin to soften from the moisture within 8 minutes. Serve and eat in one continuous motion.',
+            tip: 'Fresh l· È leaves eaten between bites of the cured frog is the specifically Ph˙ YÍn element that elevates this beyond generic t·i ?ch. The wild citrus-pepper character of the raw leaf provides the aromatic complexity that the deliberately simple curing omits. One piece of cured frog on a cracker, one raw l· È leaf placed over it, one dip in the m?m nhi pooled in the plate, one bite.',
         },
     ],
 };

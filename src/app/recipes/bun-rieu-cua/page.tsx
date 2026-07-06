@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-rieu-cua',
     title: 'Crab and Tomato Vermicelli Soup',
-    subtitle: `Vietnam's most vibrant soup â€” tangy tomatoes, fluffy crab cakes, and a mountain of herbs.`,
+    subtitle: `Vietnam's most vibrant soup — tangy tomatoes, fluffy crab cakes, and a mountain of herbs.`,
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 20 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/bun-rieu-cua.jpg',
-    intro: `If pho is the meditative monk of Vietnamese soups â€” patient, restrained â€” then bun rieu cua is its loud, joyful, market-day cousin. Vivid scarlet from fresh tomatoes and annatto oil, built on a pork and crab broth, with fluffy crab-and-pork dumplings that bloom in the simmering liquid. A mountain of herbs, tofu, and shrimp paste on the side. It announces itself before you see it.`,
+    intro: `If pho is the meditative monk of Vietnamese soups — patient, restrained — then bun rieu cua is its loud, joyful, market-day cousin. Vivid scarlet from fresh tomatoes and annatto oil, built on a pork and crab broth, with fluffy crab-and-pork dumplings that bloom in the simmering liquid. A mountain of herbs, tofu, and shrimp paste on the side. It announces itself before you see it.`,
     ingredientSections: [
         {
             title: 'Broth',
@@ -56,12 +56,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the crab dumplings',
-            description: 'Mix crab paste, ground pork, eggs, fish sauce, and pepper until combined. The mixture will be loose â€” that is correct.',
+            description: 'Mix crab paste, ground pork, eggs, fish sauce, and pepper until combined. The mixture will be loose — that is correct.',
         },
         {
             title: 'Cook the dumplings',
-            description: 'Bring broth to a gentle simmer. Drop crab mixture by the spoonful into the broth. The dumplings will rise and set into soft, fluffy cakes â€” about 5 minutes.',
-            tip: 'Do not stir after adding the crab mixture â€” let the dumplings set undisturbed.',
+            description: 'Bring broth to a gentle simmer. Drop crab mixture by the spoonful into the broth. The dumplings will rise and set into soft, fluffy cakes — about 5 minutes.',
+            tip: 'Do not stir after adding the crab mixture — let the dumplings set undisturbed.',
         },
         {
             title: 'Assemble',

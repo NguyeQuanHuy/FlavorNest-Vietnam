@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'che-buoi-mien-nam',
     title: 'Southern Pomelo Sweet Soup (Che Buoi)',
-    subtitle: 'Crispy pomelo rind, soft mung beans, and creamy coconut sauce — a refreshing Vietnamese dessert.',
+    subtitle: 'Crispy pomelo rind, soft mung beans, and creamy coconut sauce � a refreshing Vietnamese dessert.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '60 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/che-buoi.jpg',
 
-    intro: `Chè bưởi miền Nam is a famous Southern Vietnamese dessert made from pomelo rind, mung beans, and coconut sauce.
+    intro: `Ch� bu?i mi?n Nam is a famous Southern Vietnamese dessert made from pomelo rind, mung beans, and coconut sauce.
 
 What makes it special is the texture contrast: crunchy yet tender pomelo rind, soft mung beans, and rich, fragrant coconut milk. When served cold with ice, it becomes a perfect tropical dessert for hot weather.`,
 
@@ -45,7 +45,7 @@ What makes it special is the texture contrast: crunchy yet tender pomelo rind, s
         },
         {
             title: 'Prepare mung beans',
-            description: 'Soak mung beans for 2–3 hours, then steam until soft but not mushy.',
+            description: 'Soak mung beans for 2�3 hours, then steam until soft but not mushy.',
         },
         {
             title: 'Coat pomelo rind',

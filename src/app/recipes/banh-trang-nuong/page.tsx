@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-trang-nuong',
     title: 'Grilled Rice Paper Pizza',
-    subtitle: `Born in the misty highlands of Da Lat â€” Vietnam's answer to pizza, and arguably better.`,
+    subtitle: `Born in the misty highlands of Da Lat — Vietnam's answer to pizza, and arguably better.`,
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/banh-trang-nuong.jpg',
-    intro: `Banh trang nuong was invented by Da Lat street food vendors who discovered that a dry rice paper sheet placed over hot charcoal becomes a crispy, blistered base that holds toppings beautifully. An egg cracked on top, spring onions, dried shrimp, and a drizzle of chilli sauce â€” the whole thing cooked in under 3 minutes. Da Lat's night market has sold this since the 1990s. It is now found on street carts throughout Vietnam and beloved especially by students and anyone who needs dinner for 15,000 dong.`,
+    intro: `Banh trang nuong was invented by Da Lat street food vendors who discovered that a dry rice paper sheet placed over hot charcoal becomes a crispy, blistered base that holds toppings beautifully. An egg cracked on top, spring onions, dried shrimp, and a drizzle of chilli sauce — the whole thing cooked in under 3 minutes. Da Lat's night market has sold this since the 1990s. It is now found on street carts throughout Vietnam and beloved especially by students and anyone who needs dinner for 15,000 dong.`,
     ingredientSections: [
         {
             title: 'Per rice paper pizza',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Set up the grill',
-            description: `Heat a wire grill rack over a gas burner on medium-low, or use a dry non-stick pan over low heat. The heat should be gentle â€” rice paper burns quickly over high flame.`,
+            description: `Heat a wire grill rack over a gas burner on medium-low, or use a dry non-stick pan over low heat. The heat should be gentle — rice paper burns quickly over high flame.`,
         },
         {
             title: 'Toast the rice paper',

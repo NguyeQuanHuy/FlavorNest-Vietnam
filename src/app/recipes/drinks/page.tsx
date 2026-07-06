@@ -1,7 +1,7 @@
-Ôªø'use client'
+'use client'
 
 /**
- * FlavorNest Vietnam ‚Äî Specialty Drinks Page
+ * FlavorNest Vietnam ó Specialty Drinks Page
  * src/app/recipes/drinks/page.tsx
  */
 
@@ -38,7 +38,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/ca-phe-trung.jpg',
         type: 'Coffee', difficulty: 'Medium', time: '15 min',
         rating: '4.9', reviews: 387, cal: 180, tag: 'Hanoi Icon', tagColor: '#D97706', cold: false,
-        description: "Invented in 1946 when fresh milk was scarce, a Hanoi bartender whipped egg yolks with condensed milk into a silky, custard-like foam and spooned it over strong robusta coffee. The result is extraordinary ‚Äî part drink, part dessert.",
+        description: "Invented in 1946 when fresh milk was scarce, a Hanoi bartender whipped egg yolks with condensed milk into a silky, custard-like foam and spooned it over strong robusta coffee. The result is extraordinary ó part drink, part dessert.",
         tags: ['Coffee', 'Egg', 'Hanoi', 'Hot'],
     },
     {
@@ -58,7 +58,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/tra-da.jpg',
         type: 'Tea', difficulty: 'Easy', time: '5 min',
         rating: '4.7', reviews: 198, cal: 5, tag: 'Free Everywhere', tagColor: '#166534', cold: true,
-        description: "The unofficial national beverage ‚Äî a large glass of unsweetened green tea over ice, given free at almost every restaurant in the country. Refreshing, clean, and exactly what you need after a bowl of ph·ªü in the midday heat.",
+        description: "The unofficial national beverage ó a large glass of unsweetened green tea over ice, given free at almost every restaurant in the country. Refreshing, clean, and exactly what you need after a bowl of ph? in the midday heat.",
         tags: ['Tea', 'Unsweetened', 'Vegan', 'Free'],
     },
     {
@@ -68,7 +68,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/sinh-to-bo.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 276, cal: 290, tag: 'Saigon Favourite', tagColor: '#7C3AED', cold: true,
-        description: "In Vietnam, avocado is a dessert fruit, not a savoury one. Blended with condensed milk, fresh milk and crushed ice into a thick, ultra-creamy smoothie ‚Äî this is what they serve at every juice stall in Saigon from 2pm onwards.",
+        description: "In Vietnam, avocado is a dessert fruit, not a savoury one. Blended with condensed milk, fresh milk and crushed ice into a thick, ultra-creamy smoothie ó this is what they serve at every juice stall in Saigon from 2pm onwards.",
         tags: ['Avocado', 'Condensed Milk', 'Creamy', 'Cold'],
     },
     {
@@ -78,7 +78,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/nuoc-mia.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '5 min',
         rating: '4.8', reviews: 241, cal: 120, tag: 'Street Cart Classic', tagColor: '#EA580C', cold: true,
-        description: "The freshest drink in Vietnam ‚Äî sugarcane stalks pressed through steel rollers right in front of you, the pale green juice catching in a plastic cup over ice, sometimes with a squeeze of kumquat. Costs almost nothing. Tastes like pure happiness.",
+        description: "The freshest drink in Vietnam ó sugarcane stalks pressed through steel rollers right in front of you, the pale green juice catching in a plastic cup over ice, sometimes with a squeeze of kumquat. Costs almost nothing. Tastes like pure happiness.",
         tags: ['Sugarcane', 'Fresh-Pressed', 'Vegan', 'Street'],
     },
     {
@@ -88,7 +88,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/ca-phe-muoi.jpg',
         type: 'Coffee', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 203, cal: 170, tag: 'Hue Specialty', tagColor: '#BE185D', cold: false,
-        description: "A specialty of Hu·∫ø ‚Äî strong coffee topped with a salted cream foam made from whipped cream and a pinch of sea salt. The contrast between the bitter coffee, sweet milk and savoury salt creates something genuinely addictive.",
+        description: "A specialty of Hu? ó strong coffee topped with a salted cream foam made from whipped cream and a pinch of sea salt. The contrast between the bitter coffee, sweet milk and savoury salt creates something genuinely addictive.",
         tags: ['Coffee', 'Salted Cream', 'Hue', 'Trending'],
     },
     {
@@ -98,7 +98,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/tra-thai.jpg',
         type: 'Tea', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 167, cal: 240, tag: 'Boba Generation', tagColor: '#D97706', cold: true,
-        description: "Bright orange Thai tea steeped strong, sweetened and topped with condensed milk over ice ‚Äî a staple of every Vietnamese milk tea shop. Rich, creamy, slightly floral. Add tapioca pearls if you want the full experience.",
+        description: "Bright orange Thai tea steeped strong, sweetened and topped with condensed milk over ice ó a staple of every Vietnamese milk tea shop. Rich, creamy, slightly floral. Add tapioca pearls if you want the full experience.",
         tags: ['Tea', 'Condensed Milk', 'Iced', 'Sweet'],
     },
     {
@@ -108,13 +108,13 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/nuoc-sam.jpg',
         type: 'Traditional', difficulty: 'Medium', time: '30 min',
         rating: '4.6', reviews: 112, cal: 80, tag: 'Traditional Medicine', tagColor: '#166534', cold: true,
-        description: "A centuries-old Vietnamese herbal drink made from a blend of roots, bark and dried flowers ‚Äî chrysanthemum, cogon grass root, pandan and water chestnuts. Sweetened lightly and served cold. Vietnamese families make this to 'cool the body' in summer.",
+        description: "A centuries-old Vietnamese herbal drink made from a blend of roots, bark and dried flowers ó chrysanthemum, cogon grass root, pandan and water chestnuts. Sweetened lightly and served cold. Vietnamese families make this to 'cool the body' in summer.",
         tags: ['Herbal', 'Traditional', 'Cooling', 'Healthy'],
     },
     {
         slug: 'ca-phe-den-da',
         title: 'Vietnamese Iced Black Coffee',
-        subtitle: 'C√† Ph√™ ƒêen ƒê√°',
+        subtitle: 'C‡ PhÍ –en –·',
         image: '/images/recipes/ca-phe-den-da.jpg',
         type: 'Coffee', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 524, cal: 50, tag: 'Caffeine Boost', tagColor: '#451a03', cold: true,
@@ -124,7 +124,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'ca-phe-trung',
         title: 'Hanoi Egg Coffee',
-        subtitle: 'C√† Ph√™ Tr·ª©ng',
+        subtitle: 'C‡ PhÍ Tr?ng',
         image: '/images/recipes/ca-phe-trung.jpg',
         type: 'Coffee', difficulty: 'Hard', time: '15 min',
         rating: '4.9', reviews: 867, cal: 210, tag: 'Hanoi Specialty', tagColor: '#d97706', cold: false,
@@ -134,7 +134,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tra-da',
         title: 'Vietnamese Iced Tea',
-        subtitle: 'Tr√† ƒê√°',
+        subtitle: 'Tr‡ –·',
         image: '/images/recipes/tra-da.jpg',
         type: 'Tea', difficulty: 'Easy', time: '5 min',
         rating: '4.5', reviews: 1200, cal: 5, tag: 'Pavement Culture', tagColor: '#166534', cold: true,
@@ -144,7 +144,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tra-dao',
         title: 'Peach Tea with Lemongrass',
-        subtitle: 'Tr√† ƒê√†o',
+        subtitle: 'Tr‡ –‡o',
         image: '/images/recipes/tra-dao.jpg',
         type: 'Tea', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 432, cal: 150, tag: 'Youth Favorite', tagColor: '#ea580c', cold: true,
@@ -154,7 +154,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'tra-chanh-sa',
         title: 'Lemongrass Lime Tea',
-        subtitle: 'Tr√† Chanh S·∫£',
+        subtitle: 'Tr‡ Chanh S?',
         image: '/images/recipes/tra-chanh-sa.jpg',
         type: 'Tea', difficulty: 'Easy', time: '10 min',
         rating: '4.6', reviews: 215, cal: 90, tag: 'Detox Vibes', tagColor: '#65a30d', cold: true,
@@ -164,7 +164,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-mia',
         title: 'Sugarcane Juice',
-        subtitle: 'N∆∞·ªõc M√≠a',
+        subtitle: 'Nu?c MÌa',
         image: '/images/recipes/nuoc-mia.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '5 min',
         rating: '4.8', reviews: 654, cal: 180, tag: 'Pure Energy', tagColor: '#84cc16', cold: true,
@@ -174,7 +174,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-dua-tuoi',
         title: 'Fresh Coconut Water',
-        subtitle: 'N∆∞·ªõc D·ª´a T∆∞∆°i',
+        subtitle: 'Nu?c D?a Tuoi',
         image: '/images/recipes/nuoc-dua-tuoi.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '2 min',
         rating: '4.9', reviews: 312, cal: 45, tag: 'Island Breeze', tagColor: '#0ea5e9', cold: true,
@@ -184,7 +184,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'sinh-to-bo',
         title: 'Avocado Smoothie',
-        subtitle: 'Sinh T·ªë B∆°',
+        subtitle: 'Sinh T? Bo',
         image: '/images/recipes/sinh-to-bo.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 543, cal: 350, tag: 'Rich & Creamy', tagColor: '#16a34a', cold: true,
@@ -194,7 +194,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'sinh-to-mang-cau',
         title: 'Soursop Smoothie',
-        subtitle: 'Sinh T·ªë M√£ng C·∫ßu',
+        subtitle: 'Sinh T? M„ng C?u',
         image: '/images/recipes/sinh-to-mang-cau.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 184, cal: 220, tag: 'Tropical Tangy', tagColor: '#65a30d', cold: true,
@@ -204,17 +204,17 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-ep-cam',
         title: 'Fresh Orange Juice',
-        subtitle: 'N∆∞·ªõc √âp Cam',
+        subtitle: 'Nu?c …p Cam',
         image: '/images/recipes/nuoc-ep-cam.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '5 min',
         rating: '4.9', reviews: 412, cal: 110, tag: 'Morning Energy', tagColor: '#ea580c', cold: true,
-        description: "Vietnamese oranges (Cam S√†nh) are known for their dark green skin and deep orange, intensely flavored interior. Pressed fresh to order, this juice is the perfect balance of tartness and natural sweetness to start your day.",
+        description: "Vietnamese oranges (Cam S‡nh) are known for their dark green skin and deep orange, intensely flavored interior. Pressed fresh to order, this juice is the perfect balance of tartness and natural sweetness to start your day.",
         tags: ['Citrus', 'Fresh', 'Healthy', 'Breakfast'],
     },
     {
         slug: 'nuoc-ep-dua-hau',
         title: 'Watermelon Juice',
-        subtitle: 'N∆∞·ªõc √âp D∆∞a H·∫•u',
+        subtitle: 'Nu?c …p Dua H?u',
         image: '/images/recipes/nuoc-ep-dua-hau.jpg',
         type: 'Smoothie', difficulty: 'Easy', time: '5 min',
         rating: '4.6', reviews: 256, cal: 90, tag: 'Instant Hydration', tagColor: '#dc2626', cold: true,
@@ -224,7 +224,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-mat-ong-chanh',
         title: 'Honey Lime Water',
-        subtitle: 'N∆∞·ªõc M·∫≠t Ong Chanh',
+        subtitle: 'Nu?c M?t Ong Chanh',
         image: '/images/recipes/nuoc-mat-ong-chanh.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '5 min',
         rating: '4.8', reviews: 156, cal: 120, tag: 'Immunity Boost', tagColor: '#d97706', cold: true,
@@ -234,7 +234,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-rau-ma',
         title: 'Pennywort Juice',
-        subtitle: 'N∆∞·ªõc Rau M√°',
+        subtitle: 'Nu?c Rau M·',
         image: '/images/recipes/nuoc-rau-ma.jpg',
         type: 'Traditional', difficulty: 'Medium', time: '15 min',
         rating: '4.7', reviews: 289, cal: 60, tag: 'Body Cooling', tagColor: '#166534', cold: true,
@@ -244,7 +244,7 @@ const RECIPES: Recipe[] = [
     {
         slug: 'nuoc-la-dua',
         title: 'Pandan Leaf Tea',
-        subtitle: 'N∆∞·ªõc L√° D·ª©a',
+        subtitle: 'Nu?c L· D?a',
         image: '/images/recipes/nuoc-la-dua.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '20 min',
         rating: '4.5', reviews: 98, cal: 10, tag: 'Aromatic Relax', tagColor: '#15803d', cold: true,
@@ -258,7 +258,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bac-siu.jpg',
         type: 'Coffee', difficulty: 'Easy', time: '10 min',
         rating: '4.8', reviews: 234, cal: 220, tag: 'Saigon Original', tagColor: '#D97706', cold: true,
-        description: "Bac siu ‚Äî Cantonese for 'a little white' ‚Äî is what you order in Saigon when you want coffee but mostly milk. A small shot of strong robusta poured over a generous lake of sweetened condensed milk and fresh milk, finished with ice. Gentler than ca phe sua da, beloved by office workers and grandmothers alike.",
+        description: "Bac siu ó Cantonese for 'a little white' ó is what you order in Saigon when you want coffee but mostly milk. A small shot of strong robusta poured over a generous lake of sweetened condensed milk and fresh milk, finished with ice. Gentler than ca phe sua da, beloved by office workers and grandmothers alike.",
         tags: ['Coffee', 'Milky', 'Iced', 'Mild'],
     },
     {
@@ -268,7 +268,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/tra-tac.jpg',
         type: 'Tea', difficulty: 'Easy', time: '10 min',
         rating: '4.7', reviews: 198, cal: 90, tag: 'Sidewalk Refresher', tagColor: '#059669', cold: true,
-        description: "Strong jasmine tea cooled and poured over a tall glass packed with ice and crushed kumquat ‚Äî peel and all. The bitter pith of the kumquat balances the sweetness of the syrup, and the citrus oils float on top in tiny golden droplets. The drink that 20-something Saigonese argue over after work.",
+        description: "Strong jasmine tea cooled and poured over a tall glass packed with ice and crushed kumquat ó peel and all. The bitter pith of the kumquat balances the sweetness of the syrup, and the citrus oils float on top in tiny golden droplets. The drink that 20-something Saigonese argue over after work.",
         tags: ['Tea', 'Citrus', 'Refreshing', 'Sweet-Sour'],
     },
     {
@@ -278,7 +278,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/sua-dau-nanh.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 156, cal: 130, tag: 'Morning Ritual', tagColor: '#166534', cold: false,
-        description: "Made fresh every morning from soaked soybeans ground with pandan leaves and a hint of sugar ‚Äî sold warm in glass bottles from bicycle vendors before sunrise. Creamy, faintly grassy, comforting. Drunk hot in winter, iced in summer, paired with a still-warm patongo (Vietnamese fried dough stick) for the full breakfast experience.",
+        description: "Made fresh every morning from soaked soybeans ground with pandan leaves and a hint of sugar ó sold warm in glass bottles from bicycle vendors before sunrise. Creamy, faintly grassy, comforting. Drunk hot in winter, iced in summer, paired with a still-warm patongo (Vietnamese fried dough stick) for the full breakfast experience.",
         tags: ['Soy', 'Pandan', 'Vegan', 'Healthy'],
     },
     {
@@ -288,7 +288,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bia-hoi.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '5 min',
         rating: '4.8', reviews: 312, cal: 90, tag: 'Hanoi Sidewalk', tagColor: '#EA580C', cold: true,
-        description: "Bia hoi is Hanoi street culture in liquid form ‚Äî a light, fresh-brewed draft beer delivered daily to corner kegs and poured into thick glass mugs at plastic stools on the sidewalk. Lower in alcohol than bottled beer, lighter than a pilsner, and astonishingly cheap at around 8,000 VND. The drink that turns strangers into friends by 6pm.",
+        description: "Bia hoi is Hanoi street culture in liquid form ó a light, fresh-brewed draft beer delivered daily to corner kegs and poured into thick glass mugs at plastic stools on the sidewalk. Lower in alcohol than bottled beer, lighter than a pilsner, and astonishingly cheap at around 8,000 VND. The drink that turns strangers into friends by 6pm.",
         tags: ['Beer', 'Fresh', 'Hanoi', 'Sidewalk'],
     },
     {
@@ -298,17 +298,17 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/sam-bo-luong.jpg',
         type: 'Traditional', difficulty: 'Medium', time: '1 hr 30 min',
         rating: '4.7', reviews: 134, cal: 280, tag: 'Cantonese Heritage', tagColor: '#7C3AED', cold: true,
-        description: "A Cantonese-Vietnamese cooling tonic served chilled in tall glasses ‚Äî lotus seeds, white fungus, longan, dried jujubes, pearl barley, sea coconut and seaweed simmered in a faintly sweet broth, crowned with shaved ice. Considered medicinal in the summer heat, when the body 'runs hot'. Sweet, herbal, and unlike anything else.",
+        description: "A Cantonese-Vietnamese cooling tonic served chilled in tall glasses ó lotus seeds, white fungus, longan, dried jujubes, pearl barley, sea coconut and seaweed simmered in a faintly sweet broth, crowned with shaved ice. Considered medicinal in the summer heat, when the body 'runs hot'. Sweet, herbal, and unlike anything else.",
         tags: ['Cooling', 'Herbal', 'Vegan', 'Cantonese'],
     },
     {
         slug: 'dong-suong-rau-cau',
         title: 'Vietnamese Agar Jelly',
-        subtitle: 'ƒê√¥ng S∆∞∆°ng / Th·∫°ch Rau C√¢u',
+        subtitle: '–Ùng Suong / Th?ch Rau C‚u',
         image: '/images/recipes/thach-rau-cau.jpg',
         type: 'Traditional', difficulty: 'Easy', time: '30 min',
         rating: '4.8', reviews: 156, cal: 95, tag: 'Trending', tagColor: '#BE185D', cold: true,
-        description: "The wobbly, nostalgic jelly dessert that appears at every Vietnamese family gathering ‚Äî layered pandan green and coconut white, or dark with Vietnamese coffee. Made from agar agar, sets firm at room temperature, holds its shape in summer heat. Vegan, gluten-free, and ready in 30 minutes.",
+        description: "The wobbly, nostalgic jelly dessert that appears at every Vietnamese family gathering ó layered pandan green and coconut white, or dark with Vietnamese coffee. Made from agar agar, sets firm at room temperature, holds its shape in summer heat. Vegan, gluten-free, and ready in 30 minutes.",
         tags: ['Dessert', 'Vegan', 'Pandan', 'Coconut'],
     },
 ]
@@ -339,7 +339,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '‚ô• Saved' : '‚úï Removed'}
+                        {toast === 'added' ? '? Saved' : '? Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -379,7 +379,7 @@ export default function DrinksPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-            {/* ‚îÄ‚îÄ HERO ‚îÄ‚îÄ */}
+            {/* -- HERO -- */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
@@ -387,7 +387,7 @@ export default function DrinksPage() {
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Drinks', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>‚Ä∫</span>}
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>õ</span>}
                                 {href ?
                                     <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
@@ -427,7 +427,7 @@ export default function DrinksPage() {
                             margin: 0,
                             paddingLeft: 18,
                         }}>
-                            From the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>dark, sweet ceremony of c√† ph√™ s·ªØa ƒë√°</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky elegance of egg coffee</span> ‚Äî Vietnamese drinks are an art of patience, balance, and bold contrasts.
+                            From the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>dark, sweet ceremony of c‡ phÍ s?a d·</span> to the <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky elegance of egg coffee</span> ó Vietnamese drinks are an art of patience, balance, and bold contrasts.
                         </p>
                     </div>
 
@@ -477,7 +477,7 @@ export default function DrinksPage() {
                                 transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     <div style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} ‚Äî ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
+                                        <Image src={recipe.image} alt={`${recipe.title} ó ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
                                         <div style={{ position: 'absolute', top: 14, right: 14, background: recipe.cold ? 'rgba(2,132,199,0.85)' : 'rgba(180,83,9,0.85)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 11px', borderRadius: 100 }}>
@@ -513,7 +513,7 @@ export default function DrinksPage() {
 
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
-                        <div style={{ fontSize: 44, marginBottom: 12 }}>üßã</div>
+                        <div style={{ fontSize: 44, marginBottom: 12 }}>??</div>
                         <p style={{ fontSize: 16, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>No drinks match this filter.</p>
                     </div>
                 )}

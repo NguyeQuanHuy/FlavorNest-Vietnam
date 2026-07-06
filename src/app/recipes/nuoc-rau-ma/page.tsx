@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nuoc-rau-ma',
     title: 'Vietnamese Pennywort Juice (Nuoc Rau Ma)',
-    subtitle: 'Earthy, refreshing, and naturally cooling â€” a green herbal drink from Vietnamese street culture.',
+    subtitle: 'Earthy, refreshing, and naturally cooling — a green herbal drink from Vietnamese street culture.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '15 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/nuoc-rau-ma.jpg',
 
-    intro: `NÆ°á»›c rau mÃ¡ is one of Vietnamâ€™s most iconic herbal drinks. Made from fresh pennywort leaves, it has a naturally earthy, slightly grassy flavor with a clean, cooling finish.
+    intro: `Nu?c rau má is one of Vietnam’s most iconic herbal drinks. Made from fresh pennywort leaves, it has a naturally earthy, slightly grassy flavor with a clean, cooling finish.
 
 Often sold on street corners and markets, this bright green drink is believed to help cool the body and support hydration in hot weather. Blended fresh and lightly sweetened, it is both a traditional remedy and a daily refreshment.`,
 
@@ -20,7 +20,7 @@ Often sold on street corners and markets, this bright green drink is believed to
         {
             title: 'Main ingredients',
             items: [
-                { amount: 200, unit: 'g', name: 'fresh pennywort leaves (rau mÃ¡)' },
+                { amount: 200, unit: 'g', name: 'fresh pennywort leaves (rau má)' },
                 { amount: 500, unit: 'ml', name: 'cold water' },
                 { amount: 2, unit: 'tbsp', name: 'sugar', note: 'adjust to taste' },
                 { amount: 1, name: 'pinch salt', note: 'optional, enhances flavor' },

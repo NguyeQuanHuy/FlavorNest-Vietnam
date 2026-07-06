@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'chao-tom',
     title: 'Sugarcane Shrimp Skewers (Chao Tom)',
-    subtitle: 'Sweet shrimp paste wrapped around sugarcane, grilled until golden and fragrant — a classic Vietnamese appetizer.',
+    subtitle: 'Sweet shrimp paste wrapped around sugarcane, grilled until golden and fragrant � a classic Vietnamese appetizer.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/chao-tom.jpg',
 
-    intro: `Chạo tôm is a traditional Vietnamese dish made from minced shrimp paste wrapped around sugarcane sticks and grilled until golden.
+    intro: `Ch?o t�m is a traditional Vietnamese dish made from minced shrimp paste wrapped around sugarcane sticks and grilled until golden.
 
 The sugarcane adds natural sweetness and aroma while the shrimp paste becomes bouncy, juicy, and slightly smoky from grilling. It is often served with herbs, rice paper, and dipping sauce.`,
 

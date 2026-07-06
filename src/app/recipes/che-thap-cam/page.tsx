@@ -1,11 +1,11 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'che-thap-cam',
     title: 'Pomelo Sweet Soup',
-    subtitle: 'Translucent pomelo pith pearls in fragrant pandan coconut milk — delicate, floral, and unlike anything else.',
+    subtitle: 'Translucent pomelo pith pearls in fragrant pandan coconut milk � delicate, floral, and unlike anything else.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',

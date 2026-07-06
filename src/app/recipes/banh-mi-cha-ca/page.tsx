@@ -1,12 +1,12 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-mi-cha-ca',
-    title: 'Fried Fish Cake Baguette (BÃ¡nh MÃ¬ Cháº£ CÃ¡)',
+    title: 'Fried Fish Cake Baguette (Bánh Mì Ch? Cá)',
     subtitle:
-        'BÃ¡nh MÃ¬ Cháº£ CÃ¡ â€” a crispy Vietnamese baguette filled with savory fried fish cakes, aromatic cilantro, spicy chilies, and a signature garlic-soy glaze.',
+        'Bánh Mì Ch? Cá — a crispy Vietnamese baguette filled with savory fried fish cakes, aromatic cilantro, spicy chilies, and a signature garlic-soy glaze.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
@@ -14,10 +14,10 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-mi-cha-ca.jpg',
     intro:
-        'While the world knows the classic cold-cut BÃ¡nh MÃ¬, the Cháº£ CÃ¡ version is a beloved specialty often found at morning street carts. The soul of this sandwich is the fish cakeâ€”traditionally made from bronze featherback fish, seasoned with an abundance of black pepper and dill, then fried until golden. What sets it apart is the heat; unlike other BÃ¡nh MÃ¬, this one is served with a generous amount of Vietnamese coriander (rau rÄƒm) and a warm, savory sauce that seeps into the airy crumb of the bread.',
+        'While the world knows the classic cold-cut Bánh Mì, the Ch? Cá version is a beloved specialty often found at morning street carts. The soul of this sandwich is the fish cake—traditionally made from bronze featherback fish, seasoned with an abundance of black pepper and dill, then fried until golden. What sets it apart is the heat; unlike other Bánh Mì, this one is served with a generous amount of Vietnamese coriander (rau ram) and a warm, savory sauce that seeps into the airy crumb of the bread.',
     ingredientSections: [
         {
-            title: 'Fish Cakes (Cháº£ CÃ¡)',
+            title: 'Fish Cakes (Ch? Cá)',
             items: [
                 { amount: 500, unit: 'g', name: 'fish paste', note: 'featherback or white fish, well-kneaded' },
                 { amount: 1, unit: 'tbsp', name: 'minced purple shallots' },
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
             title: 'The Bread and Fillings',
             items: [
                 { amount: 4, unit: 'individual', name: 'Vietnamese baguettes', note: 'short, airy, and crispy' },
-                { amount: 1, unit: 'bunch', name: 'Vietnamese coriander (rau rÄƒm)', note: 'the signature herb for fish' },
+                { amount: 1, unit: 'bunch', name: 'Vietnamese coriander (rau ram)', note: 'the signature herb for fish' },
                 { amount: 1, unit: 'large', name: 'cucumber', note: 'sliced into long strips' },
                 { amount: 2, unit: 'large', name: 'fresh chilies', note: 'sliced' },
                 { amount: 1, unit: 'cup', name: 'pickled daikon and carrots' },
@@ -50,20 +50,20 @@ const recipe: RecipeData = {
         {
             title: 'Season and fry the fish cakes',
             description: 'Mix the fish paste with shallots, fish sauce, and plenty of black pepper. Shape into small patties or long strips. Deep-fry until golden brown and bouncy.',
-            tip: 'Knead the fish paste firmly with a spoon for 5-10 minutes before frying to achieve the signature springy "chew" (Ä‘á»™ dai).',
+            tip: 'Knead the fish paste firmly with a spoon for 5-10 minutes before frying to achieve the signature springy "chew" (d? dai).',
         },
         {
             title: 'Simmer the sauce',
-            description: 'In a small pan, sautÃ© minced garlic until fragrant. Add soy sauce, chili sauce, and sugar. Simmer over low heat until the sauce thickens slightly.',
+            description: 'In a small pan, sauté minced garlic until fragrant. Add soy sauce, chili sauce, and sugar. Simmer over low heat until the sauce thickens slightly.',
         },
         {
             title: 'Prepare the baguette',
-            description: 'Toast the baguettes in the oven for 2-3 minutes at 180Â°C until the crust is shatteringly crisp. Slice open lengthwise.',
+            description: 'Toast the baguettes in the oven for 2-3 minutes at 180°C until the crust is shatteringly crisp. Slice open lengthwise.',
         },
         {
             title: 'Assemble the sandwich',
             description: 'Spread a little sauce inside the bread. Layer in the hot fried fish cakes, followed by cucumber strips, pickled vegetables, and a generous handful of Vietnamese coriander.',
-            tip: 'Do not swap the Vietnamese coriander (rau rÄƒm) for regular cilantro; its peppery, citrusy bite is what neutralizes the "fishy" scent and defines this specific BÃ¡nh MÃ¬.',
+            tip: 'Do not swap the Vietnamese coriander (rau ram) for regular cilantro; its peppery, citrusy bite is what neutralizes the "fishy" scent and defines this specific Bánh Mì.',
         },
         {
             title: 'Final touch',

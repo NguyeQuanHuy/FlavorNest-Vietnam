@@ -1,12 +1,12 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nuoc-ep-cam',
-    title: 'Freshly Squeezed Orange Juice (NÆ°á»›c Cam Ã‰p)',
+    title: 'Freshly Squeezed Orange Juice (Nu?c Cam Ép)',
     subtitle:
-        'Freshly Squeezed Orange Juice â€” a refreshing, vitamin-packed glass of pure sunshine, balanced with a hint of sweetness and a pinch of salt.',
+        'Freshly Squeezed Orange Juice — a refreshing, vitamin-packed glass of pure sunshine, balanced with a hint of sweetness and a pinch of salt.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '5 min',
@@ -14,12 +14,12 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/nuoc-ep-cam.jpg',
     intro:
-        'In Vietnam, "Orange Juice" is more than just a breakfast drink; it is the ultimate pick-me-up served at every street-side cafe. Traditionally made with the local "Cam SÃ nh" (King Orange)â€”known for its dark, bumpy green skin and deep orange interiorâ€”this juice is prized for its bold acidity and intense aroma. Whether you enjoy it pure or over a tall glass of ice, it is the perfect antidote to a humid afternoon.',
+        'In Vietnam, "Orange Juice" is more than just a breakfast drink; it is the ultimate pick-me-up served at every street-side cafe. Traditionally made with the local "Cam Sành" (King Orange)—known for its dark, bumpy green skin and deep orange interior—this juice is prized for its bold acidity and intense aroma. Whether you enjoy it pure or over a tall glass of ice, it is the perfect antidote to a humid afternoon.',
     ingredientSections: [
         {
             title: 'Main Ingredients',
             items: [
-                { amount: 4, unit: 'large', name: 'fresh oranges', note: 'preferably King Oranges (Cam SÃ nh) or Valencia' },
+                { amount: 4, unit: 'large', name: 'fresh oranges', note: 'preferably King Oranges (Cam Sành) or Valencia' },
                 { amount: 1, unit: 'tbsp', name: 'granulated sugar', note: 'or honey, adjust to taste' },
                 { amount: 1, unit: 'pinch', name: 'sea salt', note: 'to enhance the natural citrus flavor' },
             ],

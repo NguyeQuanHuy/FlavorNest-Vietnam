@@ -1,4 +1,4 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -14,13 +14,13 @@ const recipe: RecipeData = {
 
     intro: `:contentReference[oaicite:1]{index=1} is a signature dish of Southern Vietnam, especially the Mekong Delta.
 
-Made with snakehead fish (c√° l√≥c), tamarind, pineapple, and fresh herbs, this soup delivers a perfect balance of sour, sweet, and savory flavors. It is light, refreshing, and deeply comforting.`,
+Made with snakehead fish (c· lÛc), tamarind, pineapple, and fresh herbs, this soup delivers a perfect balance of sour, sweet, and savory flavors. It is light, refreshing, and deeply comforting.`,
 
     ingredientSections: [
         {
             title: 'Main ingredients',
             items: [
-                { amount: 600, unit: 'g', name: 'snakehead fish (c√° l√≥c)', note: 'cut into chunks' },
+                { amount: 600, unit: 'g', name: 'snakehead fish (c· lÛc)', note: 'cut into chunks' },
                 { amount: 1, name: 'pineapple', note: 'sliced' },
                 { amount: 2, name: 'tomatoes', note: 'wedged' },
                 { amount: 100, unit: 'g', name: 'bean sprouts' },
@@ -41,8 +41,8 @@ Made with snakehead fish (c√° l√≥c), tamarind, pineapple, and fresh herbs, this 
         {
             title: 'Herbs & finish',
             items: [
-                { amount: 1, name: 'rice paddy herb (ng√≤ om)' },
-                { amount: 1, name: 'culantro (ng√≤ gai)' },
+                { amount: 1, name: 'rice paddy herb (ngÚ om)' },
+                { amount: 1, name: 'culantro (ngÚ gai)' },
                 { amount: 2, name: 'chilies', note: 'sliced' },
                 { amount: 1, unit: 'tbsp', name: 'fried garlic' },
             ],

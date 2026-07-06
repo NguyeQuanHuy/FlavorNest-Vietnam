@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nuoc-mat-ong-chanh',
     title: 'Herbal Cooling Drink',
-    subtitle: 'A centuries-old Vietnamese remedy â€” sweet, earthy, and genuinely cooling.',
+    subtitle: 'A centuries-old Vietnamese remedy — sweet, earthy, and genuinely cooling.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '30 min',
     rating: 4.6,
     baseServings: 4,
     heroImage: '/images/recipes/nuoc-mat-ong-chanh.jpg',
-    intro: 'Nuoc sam is Vietnamese traditional medicine you actually want to drink. A blend of cooling herbs and roots â€” cogon grass root, chrysanthemum, dried longan, pandan, and water chestnuts â€” simmered together and sweetened lightly with rock sugar. Vietnamese families make this throughout summer to "giai nhiet" â€” cool the internal body heat. Whether or not you believe in the medicine, the drink itself is extraordinary: complex, faintly floral, earthy, and deeply refreshing cold.',
+    intro: 'Nuoc sam is Vietnamese traditional medicine you actually want to drink. A blend of cooling herbs and roots — cogon grass root, chrysanthemum, dried longan, pandan, and water chestnuts — simmered together and sweetened lightly with rock sugar. Vietnamese families make this throughout summer to "giai nhiet" — cool the internal body heat. Whether or not you believe in the medicine, the drink itself is extraordinary: complex, faintly floral, earthy, and deeply refreshing cold.',
     ingredientSections: [
         {
             title: 'Herbs and roots',
@@ -44,7 +44,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Sweeten and strain',
-            description: 'Add rock sugar and salt. Stir until dissolved. Taste and adjust â€” nuoc sam should be lightly sweet, not syrupy. Strain through a fine mesh sieve into a pitcher. Discard the spent herbs but keep the water chestnuts if desired â€” they are pleasant to eat.',
+            description: 'Add rock sugar and salt. Stir until dissolved. Taste and adjust — nuoc sam should be lightly sweet, not syrupy. Strain through a fine mesh sieve into a pitcher. Discard the spent herbs but keep the water chestnuts if desired — they are pleasant to eat.',
         },
         {
             title: 'Chill and serve',

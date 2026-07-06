@@ -1,27 +1,27 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'nem-ran-ha-noi',
-    title: 'Nem R√°n H√† N·ªôi (Northern Vietnamese Fried Spring Rolls)',
-    subtitle: 'Minced pork, crab meat, glass noodles, wood ear mushrooms, and taro wrapped in thin wheat spring roll wrappers and deep-fried until the exterior is shatteringly smooth and uniformly golden ‚Äî the northern Vietnamese fried roll where the wheat wrapper fries differently from the rice paper of ch·∫£ gi√≤, producing a smoother, more even crispiness and a different internal steam character.',
+    title: 'Nem R·n H‡ N?i (Northern Vietnamese Fried Spring Rolls)',
+    subtitle: 'Minced pork, crab meat, glass noodles, wood ear mushrooms, and taro wrapped in thin wheat spring roll wrappers and deep-fried until the exterior is shatteringly smooth and uniformly golden ó the northern Vietnamese fried roll where the wheat wrapper fries differently from the rice paper of ch? giÚ, producing a smoother, more even crispiness and a different internal steam character.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 6,
     heroImage: '/images/recipes/nem-ran-ha-noi.jpg',
-    intro: `Nem r√°n is the northern Vietnamese fried spring roll ‚Äî the preparation that Vietnamese people from H√† N·ªôi consider the original and definitive fried roll, and that differs from the southern ch·∫£ gi√≤ in the wrapper, the filling proportions, and the specific texture that results from the combination of both. The wheat-based spring roll wrapper (v·ªè b√°nh cu·ªën chi√™n, or the commercial Fr√ºhlingsrollen-Bl√§tter available throughout Europe and Asia) produces a fundamentally different fried exterior from the rice paper (b√°nh tr√°ng) used in southern ch·∫£ gi√≤: where rice paper creates a bubbled, shatteringly irregular surface from the air pockets between its layers, wheat wrapper creates a smooth, uniformly golden exterior that is more even, slightly thicker, and with a different crunch character ‚Äî less shattering and more crispy-yielding, similar in character to a well-made Chinese egg roll. The filling of nem r√°n H√† N·ªôi reflects northern Vietnamese taste preferences: crab meat (either real crab or the crab-flavored pork mixture called th·ªãt cua that traditional recipes use) alongside minced pork, glass noodles, wood ear mushrooms, and a proportion of vegetables that is slightly more restrained than the generous-vegetable southern version. The crab element in nem r√°n ‚Äî whether from actual crab or from the traditional pork preparation that approximates crab flavor ‚Äî is the filling component that most specifically marks this as a northern preparation and that provides the specific sweetness and slight marine character that makes nem r√°n H√† N·ªôi taste different from ch·∫£ gi√≤ even when the two are served alongside each other. In H√† N·ªôi, nem r√°n is eaten with b√∫n, lettuce, and the n∆∞·ªõc ch·∫•m that is the standard dipping sauce for fried rolls throughout Vietnam ‚Äî the same eating format as ch·∫£ gi√≤, despite the very different wrapper and filling character.`,
+    intro: `Nem r·n is the northern Vietnamese fried spring roll ó the preparation that Vietnamese people from H‡ N?i consider the original and definitive fried roll, and that differs from the southern ch? giÚ in the wrapper, the filling proportions, and the specific texture that results from the combination of both. The wheat-based spring roll wrapper (v? b·nh cu?n chiÍn, or the commercial Fr¸hlingsrollen-Bl‰tter available throughout Europe and Asia) produces a fundamentally different fried exterior from the rice paper (b·nh tr·ng) used in southern ch? giÚ: where rice paper creates a bubbled, shatteringly irregular surface from the air pockets between its layers, wheat wrapper creates a smooth, uniformly golden exterior that is more even, slightly thicker, and with a different crunch character ó less shattering and more crispy-yielding, similar in character to a well-made Chinese egg roll. The filling of nem r·n H‡ N?i reflects northern Vietnamese taste preferences: crab meat (either real crab or the crab-flavored pork mixture called th?t cua that traditional recipes use) alongside minced pork, glass noodles, wood ear mushrooms, and a proportion of vegetables that is slightly more restrained than the generous-vegetable southern version. The crab element in nem r·n ó whether from actual crab or from the traditional pork preparation that approximates crab flavor ó is the filling component that most specifically marks this as a northern preparation and that provides the specific sweetness and slight marine character that makes nem r·n H‡ N?i taste different from ch? giÚ even when the two are served alongside each other. In H‡ N?i, nem r·n is eaten with b˙n, lettuce, and the nu?c ch?m that is the standard dipping sauce for fried rolls throughout Vietnam ó the same eating format as ch? giÚ, despite the very different wrapper and filling character.`,
     ingredientSections: [
         {
             title: 'Filling',
             items: [
-                { amount: 200, unit: 'g', name: 'minced pork (th·ªãt heo bƒÉm)', note: '20% fat' },
-                { amount: 100, unit: 'g', name: 'crab meat (th·ªãt cua)', note: 'fresh or canned crab meat, drained. Or substitute with 100g additional minced pork mixed with 1 tsp fish sauce and 0.5 tsp sugar to approximate the sweetness.' },
+                { amount: 200, unit: 'g', name: 'minced pork (th?t heo bam)', note: '20% fat' },
+                { amount: 100, unit: 'g', name: 'crab meat (th?t cua)', note: 'fresh or canned crab meat, drained. Or substitute with 100g additional minced pork mixed with 1 tsp fish sauce and 0.5 tsp sugar to approximate the sweetness.' },
                 { amount: 100, unit: 'g', name: 'raw shrimp', note: 'peeled, deveined, roughly chopped' },
-                { amount: 20, unit: 'g', name: 'dried wood ear mushrooms (m·ªôc nhƒ©)', note: 'soaked 20 minutes, drained, finely diced' },
-                { amount: 20, unit: 'g', name: 'dried glass noodles (mi·∫øn)', note: 'soaked 10 minutes, drained, cut into 2cm pieces' },
-                { amount: 100, unit: 'g', name: 'taro (khoai m√¥n)', note: 'peeled and finely grated ‚Äî or substitute with jicama' },
+                { amount: 20, unit: 'g', name: 'dried wood ear mushrooms (m?c nhi)', note: 'soaked 20 minutes, drained, finely diced' },
+                { amount: 20, unit: 'g', name: 'dried glass noodles (mi?n)', note: 'soaked 10 minutes, drained, cut into 2cm pieces' },
+                { amount: 100, unit: 'g', name: 'taro (khoai mÙn)', note: 'peeled and finely grated ó or substitute with jicama' },
                 { amount: 1, name: 'medium carrot', note: 'finely grated' },
                 { amount: 3, name: 'shallots', note: 'minced' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
@@ -34,19 +34,19 @@ const recipe: RecipeData = {
         {
             title: 'Wrappers',
             items: [
-                { amount: 20, name: 'wheat spring roll wrappers (Fr√ºhlingsrollen-Bl√§tter)', note: '20x20cm square sheets ‚Äî thawed if frozen, kept covered with a damp cloth to prevent drying.' },
-                { amount: 1, name: 'egg', note: 'beaten ‚Äî for sealing the rolls' },
+                { amount: 20, name: 'wheat spring roll wrappers (Fr¸hlingsrollen-Bl‰tter)', note: '20x20cm square sheets ó thawed if frozen, kept covered with a damp cloth to prevent drying.' },
+                { amount: 1, name: 'egg', note: 'beaten ó for sealing the rolls' },
                 { amount: 1, unit: 'tbsp', name: 'cornstarch mixed with 2 tbsp water', note: 'alternative sealing paste if egg is unavailable' },
             ],
         },
         {
             title: 'For frying',
             items: [
-                { amount: 700, unit: 'ml', name: 'neutral oil', note: 'for deep frying at 175¬∞C' },
+                { amount: 700, unit: 'ml', name: 'neutral oil', note: 'for deep frying at 175∞C' },
             ],
         },
         {
-            title: 'N∆∞·ªõc ch·∫•m',
+            title: 'Nu?c ch?m',
             items: [
                 { amount: 4, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 3, unit: 'tbsp', name: 'fresh lime juice' },
@@ -55,47 +55,47 @@ const recipe: RecipeData = {
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'bird\'s eye chili', note: 'minced' },
                 { amount: 1, name: 'fresh red chili', note: 'sliced' },
-                { amount: 1, unit: 'tbsp', name: 'grated carrot', note: 'traditional garnish in H√† N·ªôi n∆∞·ªõc ch·∫•m' },
+                { amount: 1, unit: 'tbsp', name: 'grated carrot', note: 'traditional garnish in H‡ N?i nu?c ch?m' },
             ],
         },
         {
-            title: 'To serve ‚Äî the northern way',
+            title: 'To serve ó the northern way',
             items: [
-                { amount: 300, unit: 'g', name: 'dried b√∫n (rice vermicelli)', note: 'cooked and drained ‚Äî the base for nem r√°n H√† N·ªôi' },
+                { amount: 300, unit: 'g', name: 'dried b˙n (rice vermicelli)', note: 'cooked and drained ó the base for nem r·n H‡ N?i' },
                 { amount: 1, name: 'head butter lettuce', note: 'leaves separated' },
                 { amount: 1, name: 'bunch mint' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
                 { amount: 1, name: 'cucumber', note: 'sliced' },
-                { amount: 100, unit: 'g', name: 'ƒë·ªì chua (pickled daikon and carrot)', note: 'drained' },
-                { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'crushed ‚Äî scattered over the bowl' },
+                { amount: 100, unit: 'g', name: 'd? chua (pickled daikon and carrot)', note: 'drained' },
+                { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'crushed ó scattered over the bowl' },
             ],
         },
     ],
     steps: [
         {
             title: 'Make the filling and rest',
-            description: 'Combine minced pork, crab meat, chopped shrimp, diced wood ear mushrooms, cut glass noodles, grated taro, grated carrot, minced shallots, spring onion, fish sauce, sugar, white pepper, and sesame oil. Mix thoroughly until cohesive. Refrigerate 30 minutes. The crab meat in nem r√°n filling provides the specific sweetness and slight marine depth that distinguishes the northern filling from the plain pork-and-vegetable filling of simpler versions. Test a small amount by frying ‚Äî the flavour should be assertive, as the wheat wrapper moderates the perceived seasoning more than rice paper does.',
-            tip: 'The taro and carrot in nem r√°n H√† N·ªôi serve different purposes: the taro binds and provides starchy sweetness; the carrot provides colour and a slight earthiness. Together they give the filling the specific northern character that is slightly sweeter and more vegetable-forward than the simpler southern ch·∫£ gi√≤ filling. The grated taro specifically also helps prevent the filling from becoming too wet from the crab and shrimp moisture.',
+            description: 'Combine minced pork, crab meat, chopped shrimp, diced wood ear mushrooms, cut glass noodles, grated taro, grated carrot, minced shallots, spring onion, fish sauce, sugar, white pepper, and sesame oil. Mix thoroughly until cohesive. Refrigerate 30 minutes. The crab meat in nem r·n filling provides the specific sweetness and slight marine depth that distinguishes the northern filling from the plain pork-and-vegetable filling of simpler versions. Test a small amount by frying ó the flavour should be assertive, as the wheat wrapper moderates the perceived seasoning more than rice paper does.',
+            tip: 'The taro and carrot in nem r·n H‡ N?i serve different purposes: the taro binds and provides starchy sweetness; the carrot provides colour and a slight earthiness. Together they give the filling the specific northern character that is slightly sweeter and more vegetable-forward than the simpler southern ch? giÚ filling. The grated taro specifically also helps prevent the filling from becoming too wet from the crab and shrimp moisture.',
         },
         {
-            title: 'Roll with wheat wrappers ‚Äî the different technique',
-            description: 'Lay one wheat wrapper on a clean flat surface in a diamond orientation (corner pointing toward you). Place 2-3 tablespoons of filling in a compact horizontal log across the lower third of the wrapper. Fold the bottom corner up over the filling. Fold both side corners inward. Roll firmly upward toward the top corner. Brush the top corner with beaten egg and press to seal. The wheat wrapper rolls more easily than rice paper ‚Äî it does not require moistening and is more forgiving during rolling. Keep completed rolls covered with a damp cloth to prevent drying.',
-            tip: 'The wheat spring roll wrapper (Fr√ºhlingsrollen-Bl√§tter) rolls very differently from rice paper: it needs no preparation before rolling, does not stick to itself the way wet rice paper does, and is significantly more forgiving of imperfect rolling technique. This is why the European and Chinese restaurant industry adopted wheat wrappers ‚Äî they produce consistent results with less skill than rice paper requires. The tradeoff is a different (smoother, less bubbly) fried exterior.',
+            title: 'Roll with wheat wrappers ó the different technique',
+            description: 'Lay one wheat wrapper on a clean flat surface in a diamond orientation (corner pointing toward you). Place 2-3 tablespoons of filling in a compact horizontal log across the lower third of the wrapper. Fold the bottom corner up over the filling. Fold both side corners inward. Roll firmly upward toward the top corner. Brush the top corner with beaten egg and press to seal. The wheat wrapper rolls more easily than rice paper ó it does not require moistening and is more forgiving during rolling. Keep completed rolls covered with a damp cloth to prevent drying.',
+            tip: 'The wheat spring roll wrapper (Fr¸hlingsrollen-Bl‰tter) rolls very differently from rice paper: it needs no preparation before rolling, does not stick to itself the way wet rice paper does, and is significantly more forgiving of imperfect rolling technique. This is why the European and Chinese restaurant industry adopted wheat wrappers ó they produce consistent results with less skill than rice paper requires. The tradeoff is a different (smoother, less bubbly) fried exterior.',
         },
         {
-            title: 'Fry at 175¬∞C ‚Äî single stage',
-            description: 'Heat oil to 175¬∞C. Fry the nem r√°n in batches of 4-5 for 5-6 minutes, turning once at 3 minutes, until uniformly deep golden and the surface is smooth and crispy throughout. Wheat wrappers do not require the two-stage frying used for rice paper ch·∫£ gi√≤ ‚Äî the denser wheat wrapper can handle the full frying temperature from the start without the exterior burning before the interior cooks. Drain on a rack.',
-            tip: 'The 5-6 minute single-stage frying for nem r√°n with wheat wrappers versus the two-stage frying for rice paper ch·∫£ gi√≤ reflects the different thermal properties of the two wrapper materials. Wheat wrapper is denser and more heat-resistant than rice paper ‚Äî it can absorb sustained 175¬∞C heat without burning and requires this sustained heat to cook through completely. Rice paper is more delicate and burns if subjected to the same sustained temperature.',
+            title: 'Fry at 175∞C ó single stage',
+            description: 'Heat oil to 175∞C. Fry the nem r·n in batches of 4-5 for 5-6 minutes, turning once at 3 minutes, until uniformly deep golden and the surface is smooth and crispy throughout. Wheat wrappers do not require the two-stage frying used for rice paper ch? giÚ ó the denser wheat wrapper can handle the full frying temperature from the start without the exterior burning before the interior cooks. Drain on a rack.',
+            tip: 'The 5-6 minute single-stage frying for nem r·n with wheat wrappers versus the two-stage frying for rice paper ch? giÚ reflects the different thermal properties of the two wrapper materials. Wheat wrapper is denser and more heat-resistant than rice paper ó it can absorb sustained 175∞C heat without burning and requires this sustained heat to cook through completely. Rice paper is more delicate and burns if subjected to the same sustained temperature.',
         },
         {
-            title: 'Make the H√† N·ªôi n∆∞·ªõc ch·∫•m',
-            description: 'Combine fish sauce, lime juice, sugar, and water until sugar dissolves. Add minced garlic, minced chili, and sliced red chili. Add the grated carrot ‚Äî the traditional H√† N·ªôi garnish in n∆∞·ªõc ch·∫•m that the south typically omits. The H√† N·ªôi n∆∞·ªõc ch·∫•m for nem r√°n is slightly more acidic than the standard version ‚Äî the northern palate for fried rolls uses a brighter sauce to cut through the denser wheat wrapper.',
-            tip: 'The grated carrot in H√† N·ªôi n∆∞·ªõc ch·∫•m is the detail that northern Vietnamese people notice immediately when served a sauce without it ‚Äî its presence is so established in the northern tradition for fried rolls and b√∫n dishes that its absence reads as an incomplete sauce. The carrot contributes minimal flavor but provides the visual of a properly H√† N·ªôi dipping sauce.',
+            title: 'Make the H‡ N?i nu?c ch?m',
+            description: 'Combine fish sauce, lime juice, sugar, and water until sugar dissolves. Add minced garlic, minced chili, and sliced red chili. Add the grated carrot ó the traditional H‡ N?i garnish in nu?c ch?m that the south typically omits. The H‡ N?i nu?c ch?m for nem r·n is slightly more acidic than the standard version ó the northern palate for fried rolls uses a brighter sauce to cut through the denser wheat wrapper.',
+            tip: 'The grated carrot in H‡ N?i nu?c ch?m is the detail that northern Vietnamese people notice immediately when served a sauce without it ó its presence is so established in the northern tradition for fried rolls and b˙n dishes that its absence reads as an incomplete sauce. The carrot contributes minimal flavor but provides the visual of a properly H‡ N?i dipping sauce.',
         },
         {
-            title: 'Assemble the H√† N·ªôi b√∫n bowl',
-            description: 'The northern way to eat nem r√°n: place a mound of b√∫n in a bowl. Arrange 2-3 nem r√°n on top ‚Äî not whole, but cut diagonally in half to show the cross-section of filling. Add cucumber slices, ƒë·ªì chua, lettuce torn into pieces, and herbs. Scatter crushed peanuts. Pour n∆∞·ªõc ch·∫•m over the entire bowl or serve alongside for dipping. This b√∫n-based bowl format ‚Äî called b√∫n nem r√°n ‚Äî is the specifically northern eating format that differs from the direct hand-eating more common in the south. The n∆∞·ªõc ch·∫•m poured over the bowl softens the b√∫n slightly and distributes through all the components.',
-            tip: 'Cutting the nem r√°n diagonally in half before placing in the b√∫n bowl is the northern presentation technique that reveals the cross-section of filling and provides two flat surfaces that absorb the n∆∞·ªõc ch·∫•m more effectively than a whole uncut roll. The diagonal cut also produces a more visually attractive presentation ‚Äî the spiral of filling visible in the cross-section demonstrates that the roll was made correctly.',
+            title: 'Assemble the H‡ N?i b˙n bowl',
+            description: 'The northern way to eat nem r·n: place a mound of b˙n in a bowl. Arrange 2-3 nem r·n on top ó not whole, but cut diagonally in half to show the cross-section of filling. Add cucumber slices, d? chua, lettuce torn into pieces, and herbs. Scatter crushed peanuts. Pour nu?c ch?m over the entire bowl or serve alongside for dipping. This b˙n-based bowl format ó called b˙n nem r·n ó is the specifically northern eating format that differs from the direct hand-eating more common in the south. The nu?c ch?m poured over the bowl softens the b˙n slightly and distributes through all the components.',
+            tip: 'Cutting the nem r·n diagonally in half before placing in the b˙n bowl is the northern presentation technique that reveals the cross-section of filling and provides two flat surfaces that absorb the nu?c ch?m more effectively than a whole uncut roll. The diagonal cut also produces a more visually attractive presentation ó the spiral of filling visible in the cross-section demonstrates that the roll was made correctly.',
         },
     ],
 };

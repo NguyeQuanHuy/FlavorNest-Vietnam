@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-chuoi-hap',
     title: 'Steamed Banana Cake (Banh Chuoi Hap)',
-    subtitle: 'Soft and chewy Vietnamese steamed banana cake with coconut milk — sweet, fragrant, and comforting.',
+    subtitle: 'Soft and chewy Vietnamese steamed banana cake with coconut milk � sweet, fragrant, and comforting.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '40 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-chuoi-hap.jpg',
 
-    intro: `Bánh chuối hấp is a traditional Vietnamese dessert made from ripe bananas, tapioca flour, and coconut milk, then steamed until soft and glossy.
+    intro: `B�nh chu?i h?p is a traditional Vietnamese dessert made from ripe bananas, tapioca flour, and coconut milk, then steamed until soft and glossy.
 
 The cake has a chewy texture, natural banana sweetness, and a creamy coconut topping that makes it both simple and addictive.`,
 
@@ -53,7 +53,7 @@ The cake has a chewy texture, natural banana sweetness, and a creamy coconut top
         },
         {
             title: 'Steam',
-            description: 'Pour mixture into a mold and steam for 25–30 minutes.',
+            description: 'Pour mixture into a mold and steam for 25�30 minutes.',
             tip: 'Check if center is firm and translucent before removing.',
         },
         {

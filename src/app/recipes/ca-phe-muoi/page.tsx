@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-phe-muoi',
     title: 'Salted Coffee',
-    subtitle: 'A Hue specialty â€” bitter coffee beneath a cloud of salted cream. Once you try it, regular coffee feels incomplete.',
+    subtitle: 'A Hue specialty — bitter coffee beneath a cloud of salted cream. Once you try it, regular coffee feels incomplete.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '10 min',
     rating: 4.8,
     baseServings: 2,
     heroImage: '/images/recipes/ca-phe-muoi.jpg',
-    intro: 'Ca phe muoi comes from Hue, Vietnam\'s former imperial capital â€” a city known for its refined, complex food culture. The concept is simple: strong coffee topped with a lightly salted whipped cream foam. The salt does something remarkable to the sweetness of the cream and the bitterness of the coffee, creating a harmony that is greater than the sum of its parts. It has become one of Vietnam\'s most-photographed drinks and for good reason.',
+    intro: 'Ca phe muoi comes from Hue, Vietnam\'s former imperial capital — a city known for its refined, complex food culture. The concept is simple: strong coffee topped with a lightly salted whipped cream foam. The salt does something remarkable to the sweetness of the cream and the bitterness of the coffee, creating a harmony that is greater than the sum of its parts. It has become one of Vietnam\'s most-photographed drinks and for good reason.',
     ingredientSections: [
         {
             title: 'Coffee base',
@@ -37,8 +37,8 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the salted cream',
-            description: 'Combine cold heavy cream, condensed milk, and sea salt in a bowl. Whisk or use a hand mixer on medium speed for 2 to 3 minutes until the cream thickens to a pourable, slightly fluffy consistency. It should flow slowly off a spoon â€” not stiff peaks, not liquid.',
-            tip: 'Cold cream whips faster and more stably. Do not over-whip into stiff peaks â€” the cream should pour gently over the coffee, not sit like a meringue.',
+            description: 'Combine cold heavy cream, condensed milk, and sea salt in a bowl. Whisk or use a hand mixer on medium speed for 2 to 3 minutes until the cream thickens to a pourable, slightly fluffy consistency. It should flow slowly off a spoon — not stiff peaks, not liquid.',
+            tip: 'Cold cream whips faster and more stably. Do not over-whip into stiff peaks — the cream should pour gently over the coffee, not sit like a meringue.',
         },
         {
             title: 'Assemble and serve',

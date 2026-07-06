@@ -1,22 +1,22 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ech-xao-mang-rung',
-    title: 'áº¾ch XÃ o MÄƒng Rá»«ng PhÃº YÃªn (PhÃº YÃªn Frog Stir-Fried with Forest Bamboo Shoots)',
-    subtitle: 'Paddy frogs from PhÃº YÃªn\'s highland rice fields stir-fried with fresh forest bamboo shoots from the SÆ¡n HÃ²a mountain forests â€” the sweet, delicate frog and the earthy, slightly bitter bamboo producing the flavor equilibrium that the highland communities of the province have understood for generations.',
+    title: '?ch Xào Mang R?ng Phú Yên (Phú Yên Frog Stir-Fried with Forest Bamboo Shoots)',
+    subtitle: 'Paddy frogs from Phú Yên\'s highland rice fields stir-fried with fresh forest bamboo shoots from the Son Hòa mountain forests — the sweet, delicate frog and the earthy, slightly bitter bamboo producing the flavor equilibrium that the highland communities of the province have understood for generations.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ech-xao-mang-rung.jpg',
-    intro: `áº¾ch xÃ o mÄƒng rá»«ng is the highland PhÃº YÃªn stir-fry that combines the two most abundant and most complementary ingredients of the inland communities: áº¿ch, the paddy frogs caught in the rice fields and streams of the highland valleys, and mÄƒng rá»«ng, the wild forest bamboo shoots that grow along every hillside in the wet season, harvested at dawn when the tips are still tight and the flesh is at maximum tenderness. The combination of frog and bamboo is not accidental â€” it reflects both geographic reality (they grow in the same highland ecosystem) and flavor logic (the bamboo's earthy, slightly bitter character and its moisture-releasing stir-fry behavior provide the contrast and the cooking liquid that the lean, sweet frog needs to stay juicy during the high-heat wok process). Unlike áº¿ch xÃ o lÄƒn where the sauce dries completely onto the protein, áº¿ch xÃ o mÄƒng rá»«ng retains a small amount of sauce â€” the moisture released by the bamboo during stir-frying, combined with the fish sauce and a small amount of water, produces a light, naturally thickened liquid that pools slightly in the wok and coats both the frog and bamboo pieces. The lemongrass-galangal aromatic base is present but less dominant than in the kho preparation â€” here the bamboo's own character is meant to be tasted alongside the aromatic, not obscured by it. The garnishing herbs â€” rau rÄƒm in the PhÃº YÃªn generous quantity, plus perilla and spring onion â€” are added off-heat to preserve their freshness, providing the bright herbal counterpoint that the earthy bamboo-frog combination needs to taste complete rather than heavy.`,
+    intro: `?ch xào mang r?ng is the highland Phú Yên stir-fry that combines the two most abundant and most complementary ingredients of the inland communities: ?ch, the paddy frogs caught in the rice fields and streams of the highland valleys, and mang r?ng, the wild forest bamboo shoots that grow along every hillside in the wet season, harvested at dawn when the tips are still tight and the flesh is at maximum tenderness. The combination of frog and bamboo is not accidental — it reflects both geographic reality (they grow in the same highland ecosystem) and flavor logic (the bamboo's earthy, slightly bitter character and its moisture-releasing stir-fry behavior provide the contrast and the cooking liquid that the lean, sweet frog needs to stay juicy during the high-heat wok process). Unlike ?ch xào lan where the sauce dries completely onto the protein, ?ch xào mang r?ng retains a small amount of sauce — the moisture released by the bamboo during stir-frying, combined with the fish sauce and a small amount of water, produces a light, naturally thickened liquid that pools slightly in the wok and coats both the frog and bamboo pieces. The lemongrass-galangal aromatic base is present but less dominant than in the kho preparation — here the bamboo's own character is meant to be tasted alongside the aromatic, not obscured by it. The garnishing herbs — rau ram in the Phú Yên generous quantity, plus perilla and spring onion — are added off-heat to preserve their freshness, providing the bright herbal counterpoint that the earthy bamboo-frog combination needs to taste complete rather than heavy.`,
     ingredientSections: [
         {
             title: 'Frog',
             items: [
-                { amount: 500, unit: 'g', name: 'frog sections (áº¿ch cháº·t miáº¿ng)', note: 'cleaned, skin removed, chopped into 4-5cm bone-in sections' },
+                { amount: 500, unit: 'g', name: 'frog sections (?ch ch?t mi?ng)', note: 'cleaned, skin removed, chopped into 4-5cm bone-in sections' },
                 { amount: 2, unit: 'tbsp', name: 'fish sauce', note: 'for pre-marinating' },
                 { amount: 0.5, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
@@ -26,14 +26,14 @@ const recipe: RecipeData = {
         {
             title: 'Forest bamboo shoots',
             items: [
-                { amount: 350, unit: 'g', name: 'fresh forest bamboo shoots (mÄƒng rá»«ng)', note: 'peeled to the tender inner layers, sliced 5mm thick. Must be blanched â€” see step 2. Substitute: canned bamboo shoots drained and rinsed (milder flavor but same technique).' },
+                { amount: 350, unit: 'g', name: 'fresh forest bamboo shoots (mang r?ng)', note: 'peeled to the tender inner layers, sliced 5mm thick. Must be blanched — see step 2. Substitute: canned bamboo shoots drained and rinsed (milder flavor but same technique).' },
             ],
         },
         {
             title: 'Stir-fry aromatics',
             items: [
                 { amount: 3, name: 'lemongrass stalks', note: 'inner stalk, finely minced' },
-                { amount: 30, unit: 'g', name: 'fresh galangal', note: 'minced â€” the highland aromatic' },
+                { amount: 30, unit: 'g', name: 'fresh galangal', note: 'minced — the highland aromatic' },
                 { amount: 5, name: 'garlic cloves', note: 'minced' },
                 { amount: 3, name: 'shallots', note: 'thinly sliced' },
                 { amount: 3, name: 'bird\'s eye chilies', note: 'minced' },
@@ -52,10 +52,10 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Herbs â€” added off-heat',
+            title: 'Herbs — added off-heat',
             items: [
-                { amount: 1, name: 'large bunch Vietnamese coriander (rau rÄƒm)', note: 'generous PhÃº YÃªn quantity' },
-                { amount: 0.5, name: 'bunch perilla (tÃ­a tÃ´)', note: 'leaves torn' },
+                { amount: 1, name: 'large bunch Vietnamese coriander (rau ram)', note: 'generous Phú Yên quantity' },
+                { amount: 0.5, name: 'bunch perilla (tía tô)', note: 'leaves torn' },
                 { amount: 4, name: 'spring onions', note: 'cut into 3cm pieces' },
             ],
         },
@@ -71,33 +71,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate the frog',
-            description: 'Combine frog sections with fish sauce, turmeric, black pepper, and sugar. Toss gently. Marinate 20 minutes. The longer marination for áº¿ch xÃ o mÄƒng rá»«ng compared to other preparations reflects the presence of the bamboo: the bamboo will release moisture into the wok during cooking, which dilutes the seasoning on the frog surface. Starting with a more fully seasoned frog compensates for this dilution.',
+            description: 'Combine frog sections with fish sauce, turmeric, black pepper, and sugar. Toss gently. Marinate 20 minutes. The longer marination for ?ch xào mang r?ng compared to other preparations reflects the presence of the bamboo: the bamboo will release moisture into the wok during cooking, which dilutes the seasoning on the frog surface. Starting with a more fully seasoned frog compensates for this dilution.',
             tip: 'The turmeric in the frog marinade serves double duty in this dish: it removes any gamey freshwater notes AND provides the golden color that visually distinguishes the frog pieces from the bamboo shoots in the finished dish. The color differentiation makes the plate look complete rather than monochromatic.',
         },
         {
-            title: 'Blanch the bamboo shoots â€” mandatory',
-            description: 'Peel the fresh bamboo shoots down to the white, tender inner layers. Slice 5mm thick. Place in a large pot of cold water, bring to a full boil, blanch for 15-20 minutes. Drain and rinse. Taste a piece â€” it should be tender-crunchy with a mild pleasant bitterness. If strongly bitter, blanch again for 10 more minutes. Fresh bamboo must always be blanched to remove natural cyanogenic glycosides and to bring the bitterness to an enjoyable level.',
-            tip: 'Forest bamboo (mÄƒng rá»«ng) from PhÃº YÃªn\'s SÆ¡n HÃ²a mountains is typically more bitter than lowland bamboo because it grows in less-cultivated conditions. A second blanching may be necessary. The bitterness of correctly blanched forest bamboo is an asset â€” the mild pleasant bitterness that remains after correct blanching is precisely what makes it complement the sweet frog flesh in the way that tamer bamboo cannot.',
+            title: 'Blanch the bamboo shoots — mandatory',
+            description: 'Peel the fresh bamboo shoots down to the white, tender inner layers. Slice 5mm thick. Place in a large pot of cold water, bring to a full boil, blanch for 15-20 minutes. Drain and rinse. Taste a piece — it should be tender-crunchy with a mild pleasant bitterness. If strongly bitter, blanch again for 10 more minutes. Fresh bamboo must always be blanched to remove natural cyanogenic glycosides and to bring the bitterness to an enjoyable level.',
+            tip: 'Forest bamboo (mang r?ng) from Phú Yên\'s Son Hòa mountains is typically more bitter than lowland bamboo because it grows in less-cultivated conditions. A second blanching may be necessary. The bitterness of correctly blanched forest bamboo is an asset — the mild pleasant bitterness that remains after correct blanching is precisely what makes it complement the sweet frog flesh in the way that tamer bamboo cannot.',
         },
         {
             title: 'Sear the frog separately first',
             description: 'Heat 2 tablespoons of oil in a wok over maximum heat until smoking. Add the marinated frog sections in a single layer. Sear without moving for 2-3 minutes until golden. Flip and sear 1 minute. The frog should be 65-70% cooked at this stage with a caramelized exterior. Remove and set aside. This separate searing is the technique that prevents the frog from steaming in the bamboo moisture when both are cooked together.',
-            tip: 'Searing the frog before the bamboo is the technique that distinguishes a properly structured áº¿ch xÃ o mÄƒng rá»«ng from a version where everything is cooked together from raw. Together from raw: the bamboo moisture steams the frog gray and flat. Seared frog added to the bamboo: the caramelized exterior holds against the moisture and produces a stir-fry with distinct textures.',
+            tip: 'Searing the frog before the bamboo is the technique that distinguishes a properly structured ?ch xào mang r?ng from a version where everything is cooked together from raw. Together from raw: the bamboo moisture steams the frog gray and flat. Seared frog added to the bamboo: the caramelized exterior holds against the moisture and produces a stir-fry with distinct textures.',
         },
         {
             title: 'Stir-fry the aromatics and bamboo',
-            description: 'Add remaining oil to the wok. Fry lemongrass, galangal, garlic, and shallots over high heat for 90 seconds until golden and fragrant. Add minced chili. Add the blanched bamboo shoots â€” stir-fry over maximum heat for 3-4 minutes. The bamboo will begin releasing moisture â€” this is the natural cooking liquid that gives áº¿ch xÃ o mÄƒng rá»«ng its slightly saucy character. Add the water around the wok edge for additional steam.',
-            tip: 'The moisture released by the bamboo during stir-frying is the cooking liquid specific to this preparation â€” it carries the lemongrass-galangal flavor from the oil into every piece of bamboo and will subsequently carry it into the returned frog. This natural liquid is why áº¿ch xÃ o mÄƒng rá»«ng has a slightly different character from áº¿ch xÃ o without bamboo.',
+            description: 'Add remaining oil to the wok. Fry lemongrass, galangal, garlic, and shallots over high heat for 90 seconds until golden and fragrant. Add minced chili. Add the blanched bamboo shoots — stir-fry over maximum heat for 3-4 minutes. The bamboo will begin releasing moisture — this is the natural cooking liquid that gives ?ch xào mang r?ng its slightly saucy character. Add the water around the wok edge for additional steam.',
+            tip: 'The moisture released by the bamboo during stir-frying is the cooking liquid specific to this preparation — it carries the lemongrass-galangal flavor from the oil into every piece of bamboo and will subsequently carry it into the returned frog. This natural liquid is why ?ch xào mang r?ng has a slightly different character from ?ch xào without bamboo.',
         },
         {
             title: 'Return frog and season',
             description: 'Return the seared frog sections to the wok with the bamboo. Add fish sauce, sugar, and black pepper. Toss everything together over high heat for 3-4 minutes until the frog is completely cooked through, the sauce has reduced to coat both frog and bamboo, and the wok smells of lemongrass and galangal throughout. Add sesame oil and toss once more.',
-            tip: 'The final 3-4 minutes of combined cooking produces the integration that makes áº¿ch xÃ o mÄƒng rá»«ng a unified dish rather than frog alongside bamboo. The bamboo takes on the frog-fish sauce character; the frog takes on the bamboo-lemongrass character. Each element tastes of the other by the end.',
+            tip: 'The final 3-4 minutes of combined cooking produces the integration that makes ?ch xào mang r?ng a unified dish rather than frog alongside bamboo. The bamboo takes on the frog-fish sauce character; the frog takes on the bamboo-lemongrass character. Each element tastes of the other by the end.',
         },
         {
             title: 'Add herbs off-heat and serve',
-            description: 'Remove from heat. Add rau rÄƒm, perilla, and spring onion pieces immediately â€” the residual heat wilts them gently without cooking them flat. The herbs should be clearly green and fragrant, not wilted and dark. Transfer to a serving plate. Scatter sliced red chili. Serve with steamed rice and lime wedges. The eating: a piece of frog and a piece of bamboo together in each bite â€” this combination is the dish.',
-            tip: 'Eating áº¿ch xÃ o mÄƒng rá»«ng requires deliberately combining the frog and bamboo in each bite â€” not eating them separately. The sweet frog flesh and the earthy bamboo need each other to produce the highland PhÃº YÃªn flavor equilibrium that makes this dish what it is. Each element alone is good; together they are the specific thing the highland communities have been eating for generations.',
+            description: 'Remove from heat. Add rau ram, perilla, and spring onion pieces immediately — the residual heat wilts them gently without cooking them flat. The herbs should be clearly green and fragrant, not wilted and dark. Transfer to a serving plate. Scatter sliced red chili. Serve with steamed rice and lime wedges. The eating: a piece of frog and a piece of bamboo together in each bite — this combination is the dish.',
+            tip: 'Eating ?ch xào mang r?ng requires deliberately combining the frog and bamboo in each bite — not eating them separately. The sweet frog flesh and the earthy bamboo need each other to produce the highland Phú Yên flavor equilibrium that makes this dish what it is. Each element alone is good; together they are the specific thing the highland communities have been eating for generations.',
         },
     ],
 };

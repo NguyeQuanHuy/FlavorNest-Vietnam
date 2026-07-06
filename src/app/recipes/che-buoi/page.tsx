@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'che-buoi',
     title: 'Pomelo Peel Sweet Soup',
-    subtitle: 'Che buoi â€” crunchy candied pomelo pith with mung beans in a thick coconut soup. The masterpiece of patience.',
+    subtitle: 'Che buoi — crunchy candied pomelo pith with mung beans in a thick coconut soup. The masterpiece of patience.',
     category: 'DESSERT',
     difficulty: 'Hard',
     totalTime: '1 hr 30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/che-buoi.jpg',
-    intro: 'Che buoi is one of those Vietnamese desserts that demonstrates how a culture transforms scarcity into beauty. The bitter white pith of a pomelo â€” the part everyone else discards â€” is washed, salted, and squeezed obsessively for an hour to remove every trace of bitterness. Then it is dredged in tapioca starch and boiled until the squares turn translucent and glassy, with a slight crunch that no other dessert in the world has. Combined with soft yellow mung beans in a thick coconut soup, this is a Southern Vietnamese masterpiece of patience.',
+    intro: 'Che buoi is one of those Vietnamese desserts that demonstrates how a culture transforms scarcity into beauty. The bitter white pith of a pomelo — the part everyone else discards — is washed, salted, and squeezed obsessively for an hour to remove every trace of bitterness. Then it is dredged in tapioca starch and boiled until the squares turn translucent and glassy, with a slight crunch that no other dessert in the world has. Combined with soft yellow mung beans in a thick coconut soup, this is a Southern Vietnamese masterpiece of patience.',
     ingredientSections: [
         {
             title: 'Pomelo pith',
@@ -52,12 +52,12 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Strip the bitter pomelo skin',
-            description: 'Peel the green outer skin from the pomelo, being careful to remove all of it â€” any green left will turn the dessert bitter. You should be left with only the soft white pith. Cut the pith into 1cm squares.',
+            description: 'Peel the green outer skin from the pomelo, being careful to remove all of it — any green left will turn the dessert bitter. You should be left with only the soft white pith. Cut the pith into 1cm squares.',
             tip: 'A vegetable peeler works better than a knife for stripping the green oil glands cleanly.',
         },
         {
             title: 'Salt and squeeze the pith',
-            description: 'Place pith squares in a bowl, sprinkle generously with salt, and massage with your hands for 5 minutes â€” the pith will release a yellow-green bitter liquid. Rinse thoroughly under cold running water, then squeeze the pith squares hard between your palms to release more liquid. Repeat the salt-massage-rinse-squeeze cycle 3 to 4 times until the squeezed liquid runs clear and the pith no longer tastes bitter.',
+            description: 'Place pith squares in a bowl, sprinkle generously with salt, and massage with your hands for 5 minutes — the pith will release a yellow-green bitter liquid. Rinse thoroughly under cold running water, then squeeze the pith squares hard between your palms to release more liquid. Repeat the salt-massage-rinse-squeeze cycle 3 to 4 times until the squeezed liquid runs clear and the pith no longer tastes bitter.',
             tip: 'This step is the entire dessert. Skipping or shortcutting will give a bitter unpleasant result. Allow the full 30 minutes.',
         },
         {
@@ -66,7 +66,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Boil the pith squares',
-            description: 'Bring a pot of water to a boil. Drop in the starched pith squares and cook for 3 minutes â€” they will turn translucent and float to the surface. Drain and immediately plunge into ice water to set the texture and stop cooking. The pith should now be glassy with a slight crunch.',
+            description: 'Bring a pot of water to a boil. Drop in the starched pith squares and cook for 3 minutes — they will turn translucent and float to the surface. Drain and immediately plunge into ice water to set the texture and stop cooking. The pith should now be glassy with a slight crunch.',
         },
         {
             title: 'Cook the mung beans',

@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'chao-ga',
     title: 'Vietnamese Chicken Congee',
-    subtitle: 'Chao ga â€” silky rice porridge built on a whole chicken simmered with charred ginger and onion, then shredded back into the pot.',
+    subtitle: 'Chao ga — silky rice porridge built on a whole chicken simmered with charred ginger and onion, then shredded back into the pot.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/chao-ga.jpg',
-    intro: 'Chao ga is the soup every Vietnamese mother makes when someone has a cold â€” and the soup that proves she was right. The rice is toasted briefly to deepen the flavour, then simmered low and slow with a whole chicken until the grains break down into something between a porridge and a soup. The chicken is pulled, shredded, and returned at the end. Finished with fried shallots, spring onion, a handful of fresh herbs and a violent crack of black pepper. Served with a small saucer of fish sauce mixed with fresh chilli for dipping the chicken pieces.',
+    intro: 'Chao ga is the soup every Vietnamese mother makes when someone has a cold — and the soup that proves she was right. The rice is toasted briefly to deepen the flavour, then simmered low and slow with a whole chicken until the grains break down into something between a porridge and a soup. The chicken is pulled, shredded, and returned at the end. Finished with fried shallots, spring onion, a handful of fresh herbs and a violent crack of black pepper. Served with a small saucer of fish sauce mixed with fresh chilli for dipping the chicken pieces.',
     ingredientSections: [
         {
             title: 'Chicken and broth',
@@ -50,7 +50,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Toast the rice',
-            description: 'In a dry heavy pot, toast both rice varieties together over medium heat for 5 minutes, stirring constantly, until pale gold and nutty-smelling. This is the secret to deeply flavoured chao â€” untoasted rice gives a flat porridge.',
+            description: 'In a dry heavy pot, toast both rice varieties together over medium heat for 5 minutes, stirring constantly, until pale gold and nutty-smelling. This is the secret to deeply flavoured chao — untoasted rice gives a flat porridge.',
             tip: 'Aim for the colour of straw, not toast. Burnt rice turns the whole pot bitter.',
         },
         {
@@ -64,11 +64,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Pull and shred',
-            description: 'Lift the chicken out and plunge into a bowl of ice water for 5 minutes â€” this firms the skin and keeps the meat moist. Once cool, pull the meat from the bones in long shreds. Return the bones to the pot and continue simmering for another 30 minutes so the rice fully breaks down.',
+            description: 'Lift the chicken out and plunge into a bowl of ice water for 5 minutes — this firms the skin and keeps the meat moist. Once cool, pull the meat from the bones in long shreds. Return the bones to the pot and continue simmering for another 30 minutes so the rice fully breaks down.',
         },
         {
             title: 'Finish the chao',
-            description: 'Strain bones from the porridge. The texture should be silky â€” somewhere between thick soup and loose porridge. If too thick, splash in hot water; if too thin, simmer uncovered a few more minutes. Season with fish sauce and salt. Taste and adjust.',
+            description: 'Strain bones from the porridge. The texture should be silky — somewhere between thick soup and loose porridge. If too thick, splash in hot water; if too thin, simmer uncovered a few more minutes. Season with fish sauce and salt. Taste and adjust.',
         },
         {
             title: 'Assemble and serve',

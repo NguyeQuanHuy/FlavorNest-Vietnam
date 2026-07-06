@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -58,11 +58,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make nuoc cham',
-            description: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste and adjust balance. It should be assertively flavoured â€” this sauce will season the entire bowl.',
+            description: 'Dissolve sugar in warm water. Add fish sauce, lime juice, garlic, and chilli. Taste and adjust balance. It should be assertively flavoured — this sauce will season the entire bowl.',
         },
         {
             title: 'Grill the pork',
-            description: 'Grill pork slices over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred. The thin slices cook fast â€” do not overcrowd the pan.',
+            description: 'Grill pork slices over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred. The thin slices cook fast — do not overcrowd the pan.',
             tip: 'Thread pork slices onto bamboo skewers before grilling for easier handling and better char.',
         },
         {
@@ -71,7 +71,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Dress and serve',
-            description: 'Pour a generous amount of nuoc cham over the bowl â€” more than feels comfortable. Mix everything together at the table before eating. Every forkful should have noodle, pork, herb, and sauce.',
+            description: 'Pour a generous amount of nuoc cham over the bowl — more than feels comfortable. Mix everything together at the table before eating. Every forkful should have noodle, pork, herb, and sauce.',
         },
     ],
 };

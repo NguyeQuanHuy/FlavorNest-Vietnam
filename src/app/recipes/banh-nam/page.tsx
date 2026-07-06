@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-nam',
     title: 'Flat Steamed Rice Dumplings',
-    subtitle: 'Paper-thin Hue parcels steamed in banana leaf â€” one of the most delicate dumplings in Vietnamese cuisine.',
+    subtitle: 'Paper-thin Hue parcels steamed in banana leaf — one of the most delicate dumplings in Vietnamese cuisine.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '1 hr 30 min',
@@ -45,7 +45,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Cook the dough',
-            description: 'Whisk rice flour, tapioca starch, water, and salt until smooth. Pour into a saucepan and cook over medium heat, stirring constantly, until the mixture thickens into a smooth, translucent paste that pulls away from the sides â€” about 8 to 10 minutes. Stir in oil. Remove from heat.',
+            description: 'Whisk rice flour, tapioca starch, water, and salt until smooth. Pour into a saucepan and cook over medium heat, stirring constantly, until the mixture thickens into a smooth, translucent paste that pulls away from the sides — about 8 to 10 minutes. Stir in oil. Remove from heat.',
             tip: 'The dough must be completely smooth and lump-free before it thickens. Whisk the raw batter thoroughly before applying heat.',
         },
         {
@@ -58,7 +58,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Assemble the parcels',
-            description: 'Spread 2 tablespoons of warm dough thinly over one half of each banana leaf square, leaving a 2cm border. The layer should be almost translucent â€” no thicker than 3mm. Place a small teaspoon of filling in the centre of the dough layer. Fold the bare half of the leaf over to cover, pressing gently to flatten.',
+            description: 'Spread 2 tablespoons of warm dough thinly over one half of each banana leaf square, leaving a 2cm border. The layer should be almost translucent — no thicker than 3mm. Place a small teaspoon of filling in the centre of the dough layer. Fold the bare half of the leaf over to cover, pressing gently to flatten.',
             tip: 'The dough must be warm and pliable to spread. If it cools and stiffens, briefly reheat over low heat with a splash of water.',
         },
         {

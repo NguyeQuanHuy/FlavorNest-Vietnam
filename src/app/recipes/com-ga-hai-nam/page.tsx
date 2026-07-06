@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/com-ga-hai-nam.jpg',
 
-    intro: `Cơm gà Hải Nam is a famous dish originating from Hainan (China) and widely popular in Southeast Asia, especially Vietnam, Singapore, and Malaysia.
+    intro: `Com g� H?i Nam is a famous dish originating from Hainan (China) and widely popular in Southeast Asia, especially Vietnam, Singapore, and Malaysia.
 
 The dish features tender poached chicken served with fragrant rice cooked in chicken fat and broth. It is accompanied by a trio of dipping sauces that elevate its clean yet deeply savory flavor.`,
 
@@ -54,7 +54,7 @@ The dish features tender poached chicken served with fragrant rice cooked in chi
         },
         {
             title: 'Prepare rice',
-            description: 'Sauté garlic and ginger in chicken fat, then add rice and stir before cooking in chicken broth.',
+            description: 'Saut� garlic and ginger in chicken fat, then add rice and stir before cooking in chicken broth.',
         },
         {
             title: 'Cook rice',

@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'canh-muop-tom-kho',
     title: 'Loofah Soup with Dried Shrimp (Canh Muop Tom Kho)',
-    subtitle: 'Light Vietnamese soup with tender loofah and sweet dried shrimp â€” simple, refreshing, and aromatic.',
+    subtitle: 'Light Vietnamese soup with tender loofah and sweet dried shrimp — simple, refreshing, and aromatic.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/canh-muop-tom-kho.jpg',
 
-    intro: `Canh mÆ°á»›p tÃ´m khÃ´ is a traditional Vietnamese home soup made with loofah (mÆ°á»›p) and dried shrimp (tÃ´m khÃ´).
+    intro: `Canh mu?p tôm khô is a traditional Vietnamese home soup made with loofah (mu?p) and dried shrimp (tôm khô).
 
 The dish is light, naturally sweet, and fragrant. The dried shrimp gives a deep umami flavor while the loofah becomes soft and silky when cooked.`,
 
@@ -20,8 +20,8 @@ The dish is light, naturally sweet, and fragrant. The dried shrimp gives a deep 
         {
             title: 'Main ingredients',
             items: [
-                { amount: 2, name: 'loofah (mÆ°á»›p)', note: 'peeled and sliced' },
-                { amount: 30, unit: 'g', name: 'dried shrimp (tÃ´m khÃ´)', note: 'soaked in warm water' },
+                { amount: 2, name: 'loofah (mu?p)', note: 'peeled and sliced' },
+                { amount: 30, unit: 'g', name: 'dried shrimp (tôm khô)', note: 'soaked in warm water' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'spring onion', note: 'chopped' },
             ],
@@ -41,11 +41,11 @@ The dish is light, naturally sweet, and fragrant. The dried shrimp gives a deep 
     steps: [
         {
             title: 'Prepare dried shrimp',
-            description: 'Soak dried shrimp in warm water for 10â€“15 minutes until soft.',
+            description: 'Soak dried shrimp in warm water for 10–15 minutes until soft.',
         },
         {
-            title: 'SautÃ© garlic',
-            description: 'Heat a little oil and sautÃ© garlic until fragrant.',
+            title: 'Sauté garlic',
+            description: 'Heat a little oil and sauté garlic until fragrant.',
         },
         {
             title: 'Cook dried shrimp',
@@ -58,7 +58,7 @@ The dish is light, naturally sweet, and fragrant. The dried shrimp gives a deep 
         {
             title: 'Add loofah',
             description: 'Add sliced loofah and simmer until just soft.',
-            tip: 'Do not overcook â€” loofah should stay slightly firm and green.',
+            tip: 'Do not overcook — loofah should stay slightly firm and green.',
         },
         {
             title: 'Season',

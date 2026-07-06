@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'che-troi-nuoc',
     title: 'Glutinous Rice Dumplings in Ginger Syrup (Che Troi Nuoc)',
-    subtitle: 'Soft sticky rice balls filled with mung bean, served in warm ginger syrup — a classic Vietnamese dessert.',
+    subtitle: 'Soft sticky rice balls filled with mung bean, served in warm ginger syrup � a classic Vietnamese dessert.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/che-troi-nuoc.jpg',
 
-    intro: `Chè trôi nước is a traditional Vietnamese dessert made of glutinous rice balls filled with mung bean, served in warm ginger syrup and topped with coconut milk.
+    intro: `Ch� tr�i nu?c is a traditional Vietnamese dessert made of glutinous rice balls filled with mung bean, served in warm ginger syrup and topped with coconut milk.
 
 The dish symbolizes reunion and completeness in Vietnamese culture, often enjoyed during festivals or family gatherings.`,
 

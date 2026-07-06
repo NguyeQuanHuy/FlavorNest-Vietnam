@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/ga-la-e-phu-yen.jpg',
-    intro: 'Ga la e is the dish that tells you where you are. La e â€” Vietnamese litsea leaves, harvested from wild trees in the mountains of Phu Yen and Binh Dinh â€” have a fragrance unlike anything else in the Vietnamese herb repertoire: citrusy, resinous, faintly floral, with a warmth that sits at the back of the throat. Stir-fried with free-range chicken and fish sauce until the leaves wilt and release their oils into the pan, the result is intensely aromatic and deeply regional. If you cannot find fresh la e, dried litsea berries (hat mac khen, used in Northern Vietnamese and Nung cuisine) are the closest available substitute.',
+    intro: 'Ga la e is the dish that tells you where you are. La e — Vietnamese litsea leaves, harvested from wild trees in the mountains of Phu Yen and Binh Dinh — have a fragrance unlike anything else in the Vietnamese herb repertoire: citrusy, resinous, faintly floral, with a warmth that sits at the back of the throat. Stir-fried with free-range chicken and fish sauce until the leaves wilt and release their oils into the pan, the result is intensely aromatic and deeply regional. If you cannot find fresh la e, dried litsea berries (hat mac khen, used in Northern Vietnamese and Nung cuisine) are the closest available substitute.',
     ingredientSections: [
         {
             title: 'Main',
@@ -46,8 +46,8 @@ const recipe: RecipeData = {
         },
         {
             title: 'Sear the chicken',
-            description: 'Add marinated chicken pieces in a single layer. Cook without stirring for 3 minutes to develop a golden crust. Turn and cook 3 more minutes. The wok must stay very hot throughout â€” add chicken in batches if needed to avoid steaming.',
-            tip: 'Free-range chicken takes longer than commercial chicken and the meat is firmer. Do not rush the searing â€” the Maillard crust is essential to the flavour of the dish.',
+            description: 'Add marinated chicken pieces in a single layer. Cook without stirring for 3 minutes to develop a golden crust. Turn and cook 3 more minutes. The wok must stay very hot throughout — add chicken in batches if needed to avoid steaming.',
+            tip: 'Free-range chicken takes longer than commercial chicken and the meat is firmer. Do not rush the searing — the Maillard crust is essential to the flavour of the dish.',
         },
         {
             title: 'Add the litsea leaves',

@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'canh-su-su-nau-tom',
     title: 'Chayote and Shrimp Soup (Canh Su Su Nau Tom)',
-    subtitle: 'Light, sweet Vietnamese soup made with chayote and fresh shrimp â€” simple, refreshing, and naturally sweet.',
+    subtitle: 'Light, sweet Vietnamese soup made with chayote and fresh shrimp — simple, refreshing, and naturally sweet.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/canh-su-su-tom.jpg',
 
-    intro: `Canh su su náº¥u tÃ´m is a light Vietnamese home-style soup made with chayote (su su) and fresh shrimp.
+    intro: `Canh su su n?u tôm is a light Vietnamese home-style soup made with chayote (su su) and fresh shrimp.
 
 The dish is known for its naturally sweet broth from both vegetables and seafood, making it refreshing, easy to digest, and perfect for everyday family meals.`,
 
@@ -44,8 +44,8 @@ The dish is known for its naturally sweet broth from both vegetables and seafood
             description: 'Clean shrimp, remove shells and devein. Lightly season with salt and pepper.',
         },
         {
-            title: 'SautÃ© garlic',
-            description: 'Heat a little oil and sautÃ© garlic until fragrant.',
+            title: 'Sauté garlic',
+            description: 'Heat a little oil and sauté garlic until fragrant.',
         },
         {
             title: 'Cook shrimp',

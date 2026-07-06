@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-duc',
     title: 'Steamed Rice Pudding Cake',
-    subtitle: 'Banh duc â€” a humble Northern classic served two ways: warm in a bowl with pork topping, or cold in chunks with fermented soybean dip.',
+    subtitle: 'Banh duc — a humble Northern classic served two ways: warm in a bowl with pork topping, or cold in chunks with fermented soybean dip.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '1 hr',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/banh-duc.jpg',
-    intro: 'Banh duc lives two lives in Hanoi. Banh duc nong arrives in a small bowl, warm and almost custardy, draped with a savoury topping of minced pork, wood ear mushrooms and fried shallots, eaten with a spoon while it is still trembling. Banh duc lac is its older, country cousin â€” a firm chilled rice cake studded with peanuts, cut into chunks and dipped in tuong, the ancient Northern fermented soybean sauce. Both are humble, both are beloved, and both taste unmistakably of 1950s Hanoi.',
+    intro: 'Banh duc lives two lives in Hanoi. Banh duc nong arrives in a small bowl, warm and almost custardy, draped with a savoury topping of minced pork, wood ear mushrooms and fried shallots, eaten with a spoon while it is still trembling. Banh duc lac is its older, country cousin — a firm chilled rice cake studded with peanuts, cut into chunks and dipped in tuong, the ancient Northern fermented soybean sauce. Both are humble, both are beloved, and both taste unmistakably of 1950s Hanoi.',
     ingredientSections: [
         {
             title: 'Banh duc base',
@@ -49,7 +49,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the rice batter',
-            description: 'In a large bowl, whisk rice flour, tapioca starch, water and salt until completely smooth with no lumps. Rest for 30 minutes â€” this lets the starches hydrate fully and gives the cake its silky texture.',
+            description: 'In a large bowl, whisk rice flour, tapioca starch, water and salt until completely smooth with no lumps. Rest for 30 minutes — this lets the starches hydrate fully and gives the cake its silky texture.',
             tip: 'Lumpy batter equals lumpy cake. Whisk until the spoon glides through with no resistance.',
         },
         {

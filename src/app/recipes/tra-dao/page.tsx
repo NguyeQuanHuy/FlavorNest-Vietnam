@@ -1,12 +1,12 @@
-Ôªø'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tra-dao',
-    title: 'Peach Ice Tea (Tr√† ƒê√†o)',
+    title: 'Peach Ice Tea (Tr‡ –‡o)',
     subtitle:
-        'Peach Ice Tea ‚Äî a refreshing blend of robust black tea, sweet aromatic peach syrup, and crunchy fruit slices, made famous by Saigon‚Äôs cafe culture.',
+        'Peach Ice Tea ó a refreshing blend of robust black tea, sweet aromatic peach syrup, and crunchy fruit slices, made famous by Saigonís cafe culture.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '15 min',
@@ -14,13 +14,13 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/tra-dao.jpg',
     intro:
-        'Tr√† ƒê√†o became an overnight sensation in Vietnam and has since turned into a modern classic. It‚Äôs not just about the tea; it‚Äôs about the experience of biting into a crisp, syrupy peach slice between sips of cold, fragrant black tea. While many cafes use pre-made syrups, the best versions balance the tannins of the tea with a hint of lemongrass or mint, making it the ultimate thirst-quencher for a tropical climate.',
+        'Tr‡ –‡o became an overnight sensation in Vietnam and has since turned into a modern classic. Itís not just about the tea; itís about the experience of biting into a crisp, syrupy peach slice between sips of cold, fragrant black tea. While many cafes use pre-made syrups, the best versions balance the tannins of the tea with a hint of lemongrass or mint, making it the ultimate thirst-quencher for a tropical climate.',
     ingredientSections: [
         {
             title: 'The Tea Base',
             items: [
                 { amount: 2, unit: 'bags', name: 'black tea', note: 'Earl Grey or Oolong also work well' },
-                { amount: 300, unit: 'ml', name: 'hot water', note: 'around 90¬∞C' },
+                { amount: 300, unit: 'ml', name: 'hot water', note: 'around 90∞C' },
                 { amount: 2, unit: 'stalks', name: 'lemongrass', note: 'bruised, to infuse with tea' },
             ],
         },

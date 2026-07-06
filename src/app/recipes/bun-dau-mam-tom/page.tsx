@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-dau-mam-tom',
     title: 'Vermicelli with Tofu and Shrimp Paste',
-    subtitle: 'Bun dau mam tom â€” a wooden tray of cold vermicelli, golden-fried tofu, boiled pork belly, fresh herbs and the most divisive condiment in Vietnam.',
+    subtitle: 'Bun dau mam tom — a wooden tray of cold vermicelli, golden-fried tofu, boiled pork belly, fresh herbs and the most divisive condiment in Vietnam.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/bun-dau-mam-tom.jpg',
-    intro: 'Bun dau mam tom is the dish that separates the curious from the converted. The components are humble â€” vermicelli, fried tofu, boiled pork â€” but the heart of the dish is the small saucer of mam tom, a purple fermented shrimp paste whipped with lime, sugar, kumquat and a splash of hot oil until it foams pink and pale. The smell is uncompromising. The taste, after the third dip, is genuinely addictive. Hanoi at its most unapologetic, traditionally eaten on small plastic stools at noon with a glass of bia hoi.',
+    intro: 'Bun dau mam tom is the dish that separates the curious from the converted. The components are humble — vermicelli, fried tofu, boiled pork — but the heart of the dish is the small saucer of mam tom, a purple fermented shrimp paste whipped with lime, sugar, kumquat and a splash of hot oil until it foams pink and pale. The smell is uncompromising. The taste, after the third dip, is genuinely addictive. Hanoi at its most unapologetic, traditionally eaten on small plastic stools at noon with a glass of bia hoi.',
     ingredientSections: [
         {
             title: 'The tray',
@@ -50,7 +50,7 @@ const recipe: RecipeData = {
         {
             title: 'Boil the pork belly',
             description: 'Place pork belly in a small pot, cover with cold water, add a pinch of salt and a slice of ginger. Bring to a gentle simmer and poach for 25 minutes until a chopstick slides through cleanly. Plunge into ice water for 5 minutes to firm the texture, then slice thin against the grain.',
-            tip: 'Never boil hard â€” high heat turns the belly stringy. A lazy simmer keeps it silky.',
+            tip: 'Never boil hard — high heat turns the belly stringy. A lazy simmer keeps it silky.',
         },
         {
             title: 'Cook and form the vermicelli',
@@ -64,7 +64,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Whip the mam tom',
-            description: 'In a small bowl, combine mam tom with sugar, lime juice and kumquat juice. Whisk vigorously for 30 seconds. Pour the reserved hot oil straight in â€” it will foam violently and turn the paste a pale lilac-pink. Stir in chillies and rice wine. Taste â€” adjust sugar and lime to balance the funk.',
+            description: 'In a small bowl, combine mam tom with sugar, lime juice and kumquat juice. Whisk vigorously for 30 seconds. Pour the reserved hot oil straight in — it will foam violently and turn the paste a pale lilac-pink. Stir in chillies and rice wine. Taste — adjust sugar and lime to balance the funk.',
             tip: 'The hot oil step is what tames the smell and develops the flavour. Do not skip.',
         },
         {
@@ -73,7 +73,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Eat the Hanoi way',
-            description: 'Take a vermicelli mat, top with a piece of tofu and pork, a leaf of perilla and a sliver of cucumber. Dip the whole bundle into the mam tom â€” generously, do not be shy. Eat with chopsticks and one hand. Repeat. Drink bia hoi between bites if available.',
+            description: 'Take a vermicelli mat, top with a piece of tofu and pork, a leaf of perilla and a sliver of cucumber. Dip the whole bundle into the mam tom — generously, do not be shy. Eat with chopsticks and one hand. Repeat. Drink bia hoi between bites if available.',
             tip: 'First-timers should start with a tiny dip. By the third bite the smell becomes appetite.',
         },
     ],

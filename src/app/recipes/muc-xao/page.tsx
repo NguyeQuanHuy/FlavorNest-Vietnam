@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'muc-xao',
     title: 'Stir-fried Squid (Muc Xao)',
-    subtitle: 'Tender squid stir-fried with garlic, vegetables, and savory sauce â€” quick, fresh, and aromatic.',
+    subtitle: 'Tender squid stir-fried with garlic, vegetables, and savory sauce — quick, fresh, and aromatic.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/muc-xao.jpg',
 
-    intro: `Má»±c xÃ o is a quick and flavorful Vietnamese seafood dish made with fresh squid stir-fried with garlic, vegetables, and savory seasonings.
+    intro: `M?c xào is a quick and flavorful Vietnamese seafood dish made with fresh squid stir-fried with garlic, vegetables, and savory seasonings.
 
 The key to this dish is high heat and short cooking time to keep the squid tender and slightly crispy, not rubbery.`,
 
@@ -50,13 +50,13 @@ The key to this dish is high heat and short cooking time to keep the squid tende
             description: 'Heat oil in a wok or pan until very hot.',
         },
         {
-            title: 'SautÃ© aromatics',
+            title: 'Sauté aromatics',
             description: 'Add garlic and onion, stir until fragrant.',
         },
         {
             title: 'Stir-fry squid',
-            description: 'Add squid and stir-fry quickly over high heat for 2â€“3 minutes.',
-            tip: 'Do not overcook â€” squid becomes rubbery if cooked too long.',
+            description: 'Add squid and stir-fry quickly over high heat for 2–3 minutes.',
+            tip: 'Do not overcook — squid becomes rubbery if cooked too long.',
         },
         {
             title: 'Add vegetables',

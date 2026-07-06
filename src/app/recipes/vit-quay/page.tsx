@@ -1,12 +1,12 @@
-Ôªø'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'vit-quay',
-    title: 'Roasted Duck (V·ªãt Quay)',
+    title: 'Roasted Duck (V?t Quay)',
     subtitle:
-        'V·ªãt Quay ‚Äî succulent, tender duck meat encased in a mahogany, honey-glazed skin, infused with the deep aromatics of star anise and fermented bean curd.',
+        'V?t Quay ó succulent, tender duck meat encased in a mahogany, honey-glazed skin, infused with the deep aromatics of star anise and fermented bean curd.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '24 hours',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/vit-quay.jpg',
     intro:
-        'Vietnamese Roasted Duck is a celebration of patience and technique. Influenced by Cantonese traditions but refined with local flavors, the perfect "V·ªãt Quay" requires a dry, lacquered skin that yields to remarkably juicy meat. The secret lies in the internal marinade‚Äîa potent paste of spices sewn inside the cavity‚Äîensuring that every fiber of the bird is seasoned from the inside out while the exterior is basted to a glass-like finish.',
+        'Vietnamese Roasted Duck is a celebration of patience and technique. Influenced by Cantonese traditions but refined with local flavors, the perfect "V?t Quay" requires a dry, lacquered skin that yields to remarkably juicy meat. The secret lies in the internal marinadeóa potent paste of spices sewn inside the cavityóensuring that every fiber of the bird is seasoned from the inside out while the exterior is basted to a glass-like finish.',
     ingredientSections: [
         {
             title: 'The Duck',
@@ -28,7 +28,7 @@ const recipe: RecipeData = {
             title: 'Internal Marinade',
             items: [
                 { amount: 1, unit: 'tbsp', name: 'five-spice powder' },
-                { amount: 2, unit: 'cubes', name: 'red fermented bean curd (chao ƒë·ªè)' },
+                { amount: 2, unit: 'cubes', name: 'red fermented bean curd (chao d?)' },
                 { amount: 1, unit: 'tbsp', name: 'minced garlic' },
                 { amount: 1, unit: 'tbsp', name: 'minced shallots' },
                 { amount: 1, unit: 'tbsp', name: 'sugar' },
@@ -58,16 +58,16 @@ const recipe: RecipeData = {
         },
         {
             title: 'Apply the glaze and air-dry',
-            description: 'Mix the maltose, vinegar, and water. Brush it evenly over the skin. Hang the duck or place it on a rack in the fridge, uncovered, for at least 12‚Äì24 hours.',
+            description: 'Mix the maltose, vinegar, and water. Brush it evenly over the skin. Hang the duck or place it on a rack in the fridge, uncovered, for at least 12ñ24 hours.',
             tip: 'The skin must be bone-dry to the touch before it hits the oven. This is the only way to get a professional, lacquered finish.',
         },
         {
             title: 'The roasting process',
-            description: 'Roast at 170¬∞C (340¬∞F) for 60‚Äì75 minutes. Flip the bird halfway through to ensure even browning.',
+            description: 'Roast at 170∞C (340∞F) for 60ñ75 minutes. Flip the bird halfway through to ensure even browning.',
         },
         {
             title: 'The final crisp',
-            description: 'Increase the heat to 200¬∞C (400¬∞F) for the last 10 minutes. Keep a close eye on it as the honey-based glaze can burn quickly.',
+            description: 'Increase the heat to 200∞C (400∞F) for the last 10 minutes. Keep a close eye on it as the honey-based glaze can burn quickly.',
         },
         {
             title: 'Rest and carve',

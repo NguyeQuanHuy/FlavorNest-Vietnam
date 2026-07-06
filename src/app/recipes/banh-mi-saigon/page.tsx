@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-mi-saigon',
     title: 'Saigon Banh Mi',
-    subtitle: 'The greatest sandwich in the world â€” a French baguette that became entirely Vietnamese.',
+    subtitle: 'The greatest sandwich in the world — a French baguette that became entirely Vietnamese.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-mi-saigon.jpg',
-    intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and shatteringly crisp, the crumb lighter and more airy, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon and carrot, fresh cucumber, coriander, sliced chilli, and maggi seasoning sauce. The result is one of the greatest street foods on earth â€” a five-minute assembly that somehow contains every flavour and texture simultaneously. This recipe covers the classic Saigon version: thit nguoi (cold cuts), but the format works with grilled pork, fried egg, or sardines.`,
+    intro: `The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made the crust thinner and shatteringly crisp, the crumb lighter and more airy, and then filled it with things no French baker ever imagined: pate, cha lua, pickled daikon and carrot, fresh cucumber, coriander, sliced chilli, and maggi seasoning sauce. The result is one of the greatest street foods on earth — a five-minute assembly that somehow contains every flavour and texture simultaneously. This recipe covers the classic Saigon version: thit nguoi (cold cuts), but the format works with grilled pork, fried egg, or sardines.`,
     ingredientSections: [
         {
             title: 'The bread',
@@ -49,7 +49,7 @@ const recipe: RecipeData = {
         {
             title: 'Make quick pickles',
             description: `Julienne daikon and carrot into thin matchsticks. Toss with 1 tsp salt and leave 10 minutes. Rinse, then soak in a mixture of 3 tbsp rice vinegar, 2 tbsp sugar, and 4 tbsp warm water for at least 20 minutes. The pickles should be tangy, lightly sweet, and still crunchy.`,
-            tip: `Make pickles the night before â€” they improve significantly after a few hours. They keep in the fridge for 2 weeks.`,
+            tip: `Make pickles the night before — they improve significantly after a few hours. They keep in the fridge for 2 weeks.`,
         },
         {
             title: 'Toast the bread',
@@ -63,11 +63,11 @@ const recipe: RecipeData = {
         {
             title: 'Layer the fillings',
             description: `Layer cha lua, roast pork, and head cheese if using. Add cucumber spears, a generous pinch of pickled daikon and carrot, whole coriander sprigs, and sliced chilli.`,
-            tip: `Do not compress the fillings. Banh mi should be overfull and slightly chaotic â€” ingredients falling out is a sign of generosity, not poor assembly.`,
+            tip: `Do not compress the fillings. Banh mi should be overfull and slightly chaotic — ingredients falling out is a sign of generosity, not poor assembly.`,
         },
         {
             title: 'Serve immediately',
-            description: `Wrap in paper and eat within 5 minutes. Banh mi does not wait â€” the steam from the fillings softens the crust quickly. The first bite, taken standing up, is always the best one.`,
+            description: `Wrap in paper and eat within 5 minutes. Banh mi does not wait — the steam from the fillings softens the crust quickly. The first bite, taken standing up, is always the best one.`,
         },
     ],
 };

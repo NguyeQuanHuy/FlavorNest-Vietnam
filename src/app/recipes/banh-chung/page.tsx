@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-chung',
     title: 'Lunar New Year Square Rice Cake',
-    subtitle: 'Banh chung â€” a perfect square of glutinous rice, mung bean and pork wrapped in banana leaves and boiled for 12 hours. The most symbolic dish of Vietnamese Tet.',
+    subtitle: 'Banh chung — a perfect square of glutinous rice, mung bean and pork wrapped in banana leaves and boiled for 12 hours. The most symbolic dish of Vietnamese Tet.',
     category: 'MAIN COURSE',
     difficulty: 'Hard',
     totalTime: '12 hrs',
     rating: 4.9,
     baseServings: 8,
     heroImage: '/images/recipes/banh-chung.jpg',
-    intro: 'Banh chung is more than food. The legend tells of Prince Lang Lieu, the eighteenth son of the Hung King, who in the 4th century BCE created this square cake to symbolise the earth and was crowned for it. Four thousand years later, every Vietnamese family north of Hue still makes banh chung at Tet â€” sometimes wrapping them on Lunar New Year Eve, then sitting around a wood fire all night to boil them. The square shape is the earth; the green colour, the trees; the rice, the harvest; the pork, prosperity. It is the dish that anchors a national identity to a single block of glutinous rice.',
+    intro: 'Banh chung is more than food. The legend tells of Prince Lang Lieu, the eighteenth son of the Hung King, who in the 4th century BCE created this square cake to symbolise the earth and was crowned for it. Four thousand years later, every Vietnamese family north of Hue still makes banh chung at Tet — sometimes wrapping them on Lunar New Year Eve, then sitting around a wood fire all night to boil them. The square shape is the earth; the green colour, the trees; the rice, the harvest; the pork, prosperity. It is the dish that anchors a national identity to a single block of glutinous rice.',
     ingredientSections: [
         {
             title: 'Rice',
@@ -73,7 +73,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Wrap and tie tightly',
-            description: 'Fold the leaves up and over the cake, pressing tightly to compact. Lift the wrapped cake out of the mould and bind with bamboo string crosswise â€” first the underside, then the top, then around the sides â€” pulling the strings taut so the parcel holds its perfect square shape.',
+            description: 'Fold the leaves up and over the cake, pressing tightly to compact. Lift the wrapped cake out of the mould and bind with bamboo string crosswise — first the underside, then the top, then around the sides — pulling the strings taut so the parcel holds its perfect square shape.',
             tip: 'Loose tying = the rice expands and ruptures the cake. Tie like you mean it.',
         },
         {
@@ -83,7 +83,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Press, cool and serve',
-            description: 'Remove cakes and rinse briefly in cold water. Place under a heavy weight (a wooden board with bricks) for 4 hours to compress and firm. Untie before serving. Eat at room temperature, sliced into wedges with cross-section visible â€” the pork in the centre, the mung bean ring around it, the green rice outside. Traditionally served with dua hanh (pickled spring onions) and Vietnamese cured pork (gio lua). Keeps 7 to 10 days.',
+            description: 'Remove cakes and rinse briefly in cold water. Place under a heavy weight (a wooden board with bricks) for 4 hours to compress and firm. Untie before serving. Eat at room temperature, sliced into wedges with cross-section visible — the pork in the centre, the mung bean ring around it, the green rice outside. Traditionally served with dua hanh (pickled spring onions) and Vietnamese cured pork (gio lua). Keeps 7 to 10 days.',
         },
     ],
 };

@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-cuon',
     title: 'Fresh Rice Paper Rolls',
-    subtitle: 'Translucent, light, and beautiful â€” the most elegant Vietnamese street food.',
+    subtitle: 'Translucent, light, and beautiful — the most elegant Vietnamese street food.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-cuon.jpg',
-    intro: `Goi cuon is the anti-spring-roll â€” no frying, no heat, no grease. Fresh prawns, sliced pork, rice vermicelli, lettuce, and Vietnamese herbs wrapped tightly in a translucent rice paper sheet until you can see every layer inside. Dipped in hoisin-peanut sauce, each roll is cool, clean, and refreshing in a way that feels almost medicinal in the Saigon heat. They are assembled at the table, eaten immediately, and impossible to eat just one of.`,
+    intro: `Goi cuon is the anti-spring-roll — no frying, no heat, no grease. Fresh prawns, sliced pork, rice vermicelli, lettuce, and Vietnamese herbs wrapped tightly in a translucent rice paper sheet until you can see every layer inside. Dipped in hoisin-peanut sauce, each roll is cool, clean, and refreshing in a way that feels almost medicinal in the Saigon heat. They are assembled at the table, eaten immediately, and impossible to eat just one of.`,
     ingredientSections: [
         {
             title: 'Fillings',
@@ -51,11 +51,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the dipping sauce',
-            description: `Combine hoisin sauce, peanut butter, warm water, sugar, and garlic. Stir until smooth and combined. Adjust consistency with more water if needed â€” it should coat a spoon but still flow. Top with crushed peanuts and chilli.`,
+            description: `Combine hoisin sauce, peanut butter, warm water, sugar, and garlic. Stir until smooth and combined. Adjust consistency with more water if needed — it should coat a spoon but still flow. Top with crushed peanuts and chilli.`,
         },
         {
             title: 'Soften rice paper',
-            description: `Fill a wide, shallow dish with warm water. Dip one rice paper sheet for exactly 5 seconds â€” no longer. It will still feel stiff when you lay it on your board. It continues softening as you fill it.`,
+            description: `Fill a wide, shallow dish with warm water. Dip one rice paper sheet for exactly 5 seconds — no longer. It will still feel stiff when you lay it on your board. It continues softening as you fill it.`,
             tip: `Over-soaked rice paper tears when you roll it. 5 seconds in warm water is the rule. The paper will be perfectly pliable by the time you finish adding fillings.`,
         },
         {

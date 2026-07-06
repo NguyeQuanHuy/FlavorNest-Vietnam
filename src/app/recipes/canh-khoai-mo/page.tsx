@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'canh-khoai-mo',
     title: 'Purple Yam Soup (Canh Khoai Mo)',
-    subtitle: 'Creamy Vietnamese purple yam soup with minced meat — soft, velvety, and naturally sweet.',
+    subtitle: 'Creamy Vietnamese purple yam soup with minced meat � soft, velvety, and naturally sweet.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/canh-khoai-mo.jpg',
 
-    intro: `Canh khoai mỡ is a traditional Vietnamese soup made from purple yam (khoai mỡ), often combined with minced pork or shrimp.
+    intro: `Canh khoai m? is a traditional Vietnamese soup made from purple yam (khoai m?), often combined with minced pork or shrimp.
 
 The soup has a naturally creamy and slightly sticky texture, with a gentle sweetness that makes it very comforting and easy to eat with rice.`,
 
@@ -20,7 +20,7 @@ The soup has a naturally creamy and slightly sticky texture, with a gentle sweet
         {
             title: 'Main ingredients',
             items: [
-                { amount: 300, unit: 'g', name: 'purple yam (khoai mỡ)', note: 'peeled and grated' },
+                { amount: 300, unit: 'g', name: 'purple yam (khoai m?)', note: 'peeled and grated' },
                 { amount: 150, unit: 'g', name: 'minced pork or shrimp' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'spring onion', note: 'chopped' },
@@ -44,8 +44,8 @@ The soup has a naturally creamy and slightly sticky texture, with a gentle sweet
             description: 'Marinate minced pork or shrimp with a pinch of salt and pepper.',
         },
         {
-            title: 'Sauté garlic',
-            description: 'Heat oil and sauté garlic until fragrant.',
+            title: 'Saut� garlic',
+            description: 'Heat oil and saut� garlic until fragrant.',
         },
         {
             title: 'Cook protein',

@@ -1,9 +1,9 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-du-du',
-    title: 'G·ªèi ƒêu ƒê·ªß (Vietnamese Green Papaya Salad)',
+    title: 'G?i –u –? (Vietnamese Green Papaya Salad)',
     subtitle: 'Finely shredded unripe papaya tossed with shrimp, pork, Vietnamese herbs, roasted peanuts, and a lime-fish sauce dressing. Lighter and more fragrant than the Thai version, with the herb plate playing an equal role to the papaya itself.',
     category: 'APPETIZER',
     difficulty: 'Easy',
@@ -11,15 +11,15 @@ const recipe: RecipeData = {
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-du-du.jpg',
-    intro: `G·ªèi ƒëu ƒë·ªß is the Vietnamese green papaya salad ‚Äî related to the more internationally famous Thai som tam but distinct in character. Where the Thai version is pounded in a mortar and carries a direct, aggressive heat, the Vietnamese version is tossed rather than pounded, lighter in its seasoning, and relies on the freshness of the herbs as much as the papaya itself. The papaya provides crunch and a mild tartness. The herbs ‚Äî Vietnamese coriander, mint, perilla ‚Äî provide fragrance and complexity. The shrimp and pork provide protein and savory depth. The dressing ties everything together with the classic Vietnamese sweet-sour-salty balance. G·ªèi ƒëu ƒë·ªß is a summer salad in the truest sense: light enough to eat in heat, flavored enough to be satisfying, assembled in minutes once the papaya is shredded. The key is the papaya: it must be genuinely unripe ‚Äî rock hard, pale green-white inside, with absolutely no sweetness. Any ripeness produces a salad that is soft and flat-tasting.`,
+    intro: `G?i du d? is the Vietnamese green papaya salad ó related to the more internationally famous Thai som tam but distinct in character. Where the Thai version is pounded in a mortar and carries a direct, aggressive heat, the Vietnamese version is tossed rather than pounded, lighter in its seasoning, and relies on the freshness of the herbs as much as the papaya itself. The papaya provides crunch and a mild tartness. The herbs ó Vietnamese coriander, mint, perilla ó provide fragrance and complexity. The shrimp and pork provide protein and savory depth. The dressing ties everything together with the classic Vietnamese sweet-sour-salty balance. G?i du d? is a summer salad in the truest sense: light enough to eat in heat, flavored enough to be satisfying, assembled in minutes once the papaya is shredded. The key is the papaya: it must be genuinely unripe ó rock hard, pale green-white inside, with absolutely no sweetness. Any ripeness produces a salad that is soft and flat-tasting.`,
     ingredientSections: [
         {
             title: 'Salad base',
             items: [
-                { amount: 400, unit: 'g', name: 'green papaya (ƒëu ƒë·ªß xanh)', note: 'peeled, seeded, and finely shredded ‚Äî must be rock-hard and unripe. About half a medium papaya.' },
-                { amount: 200, unit: 'g', name: 'cooked shrimp', note: 'medium size, peeled ‚Äî boiled or steamed 3 minutes. Halved lengthwise.' },
-                { amount: 150, unit: 'g', name: 'boiled pork belly or shoulder', note: 'thinly sliced ‚Äî boil with salt and lemongrass until just cooked, cool, slice 3mm thin.' },
-                { amount: 1, name: 'small carrot', note: 'finely julienned ‚Äî for color contrast' },
+                { amount: 400, unit: 'g', name: 'green papaya (du d? xanh)', note: 'peeled, seeded, and finely shredded ó must be rock-hard and unripe. About half a medium papaya.' },
+                { amount: 200, unit: 'g', name: 'cooked shrimp', note: 'medium size, peeled ó boiled or steamed 3 minutes. Halved lengthwise.' },
+                { amount: 150, unit: 'g', name: 'boiled pork belly or shoulder', note: 'thinly sliced ó boil with salt and lemongrass until just cooked, cool, slice 3mm thin.' },
+                { amount: 1, name: 'small carrot', note: 'finely julienned ó for color contrast' },
                 { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed' },
                 { amount: 3, unit: 'tbsp', name: 'crispy fried shallots' },
             ],
@@ -27,17 +27,17 @@ const recipe: RecipeData = {
         {
             title: 'Herbs (essential)',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî the defining herb for this salad' },
-                { amount: 1, name: 'bunch mint (h√∫ng l·ªßi)', note: 'leaves only' },
-                { amount: 0.5, name: 'bunch perilla (t√≠a t√¥)', note: 'leaves torn ‚Äî optional but adds complexity' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)', note: 'leaves only ó the defining herb for this salad' },
+                { amount: 1, name: 'bunch mint (h˙ng l?i)', note: 'leaves only' },
+                { amount: 0.5, name: 'bunch perilla (tÌa tÙ)', note: 'leaves torn ó optional but adds complexity' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
         },
         {
-            title: 'Dressing (n∆∞·ªõc ch·∫•m g·ªèi)',
+            title: 'Dressing (nu?c ch?m g?i)',
             items: [
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
-                { amount: 3, unit: 'tbsp', name: 'fresh lime juice', note: 'about 2-3 limes ‚Äî must be fresh' },
+                { amount: 3, unit: 'tbsp', name: 'fresh lime juice', note: 'about 2-3 limes ó must be fresh' },
                 { amount: 2, unit: 'tbsp', name: 'sugar' },
                 { amount: 3, unit: 'tbsp', name: 'water' },
                 { amount: 2, name: 'garlic cloves, finely minced' },
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 8, name: 'prawn crackers or rice crackers', note: 'for scooping ‚Äî optional but traditional' },
+                { amount: 8, name: 'prawn crackers or rice crackers', note: 'for scooping ó optional but traditional' },
                 { amount: 1, name: 'lime', note: 'extra wedges for the table' },
             ],
         },
@@ -55,7 +55,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Shred the green papaya',
-            description: 'Peel the papaya, halve lengthwise, and scoop out the seeds. Using a box grater (large holes), a mandoline with julienne attachment, or a dedicated papaya shredder, shred the papaya into very thin matchstick strips ‚Äî 2mm wide, 5-6cm long. Place in a large bowl, sprinkle with 1 teaspoon of salt, toss, and leave for 10 minutes. The salt draws out excess moisture. Rinse under cold water and squeeze gently to drain.',
+            description: 'Peel the papaya, halve lengthwise, and scoop out the seeds. Using a box grater (large holes), a mandoline with julienne attachment, or a dedicated papaya shredder, shred the papaya into very thin matchstick strips ó 2mm wide, 5-6cm long. Place in a large bowl, sprinkle with 1 teaspoon of salt, toss, and leave for 10 minutes. The salt draws out excess moisture. Rinse under cold water and squeeze gently to drain.',
             tip: 'The salting and rinsing step prevents the salad from becoming watery. Un-salted papaya releases liquid into the dressing and dilutes everything within minutes.',
         },
         {
@@ -65,23 +65,23 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, fresh lime juice, sugar, and water. Stir until the sugar dissolves completely. Add minced garlic and chili. Taste: the dressing should be balanced between sweet, sour, and salty with a clean heat. Adjust each element to your preference ‚Äî Vietnamese dressings are not fixed ratios but personal calibrations.',
-            tip: 'Make the dressing 10 minutes before using ‚Äî the garlic and chili flavor develops and mellows slightly as it steeps.',
+            description: 'Combine fish sauce, fresh lime juice, sugar, and water. Stir until the sugar dissolves completely. Add minced garlic and chili. Taste: the dressing should be balanced between sweet, sour, and salty with a clean heat. Adjust each element to your preference ó Vietnamese dressings are not fixed ratios but personal calibrations.',
+            tip: 'Make the dressing 10 minutes before using ó the garlic and chili flavor develops and mellows slightly as it steeps.',
         },
         {
             title: 'Julienne the carrot',
-            description: 'Cut the carrot into fine julienne strips matching the papaya in size. The carrot provides color contrast and a slightly different crunch from the papaya. It can be lightly pickled (toss with 1 tsp rice vinegar and pinch of sugar, leave 10 minutes) for extra brightness ‚Äî optional but good.',
+            description: 'Cut the carrot into fine julienne strips matching the papaya in size. The carrot provides color contrast and a slightly different crunch from the papaya. It can be lightly pickled (toss with 1 tsp rice vinegar and pinch of sugar, leave 10 minutes) for extra brightness ó optional but good.',
             tip: 'Uniform julienne size means everything in the salad dresses at the same rate. Thick carrot chunks remain underdressed while thin shreds absorb too much dressing.',
         },
         {
             title: 'Assemble just before serving',
-            description: 'In a large bowl, combine drained papaya, julienned carrot, shrimp, sliced pork, and all the herbs ‚Äî Vietnamese coriander, mint, perilla, spring onion. Add the dressing and toss gently until evenly coated. Taste and adjust. The salad should taste bright, savory, and fragrant ‚Äî no single element should dominate.',
-            tip: 'Assemble immediately before serving. G·ªèi ƒëu ƒë·ªß softens quickly once dressed ‚Äî it should be eaten within 15-20 minutes of tossing.',
+            description: 'In a large bowl, combine drained papaya, julienned carrot, shrimp, sliced pork, and all the herbs ó Vietnamese coriander, mint, perilla, spring onion. Add the dressing and toss gently until evenly coated. Taste and adjust. The salad should taste bright, savory, and fragrant ó no single element should dominate.',
+            tip: 'Assemble immediately before serving. G?i du d? softens quickly once dressed ó it should be eaten within 15-20 minutes of tossing.',
         },
         {
             title: 'Plate and finish',
-            description: 'Arrange on a serving plate. Top with crushed roasted peanuts, crispy fried shallots, and sliced chili. Serve with rice crackers alongside for scooping. The complete eating experience: a spoonful of salad on a cracker, eaten in one bite ‚Äî the crunch of the cracker against the fresh herbs and tender papaya is the combination the dish is designed for.',
-            tip: 'The fried shallots and crushed peanuts should be added at the very last moment ‚Äî they lose their crunch within minutes of contact with the dressed salad.',
+            description: 'Arrange on a serving plate. Top with crushed roasted peanuts, crispy fried shallots, and sliced chili. Serve with rice crackers alongside for scooping. The complete eating experience: a spoonful of salad on a cracker, eaten in one bite ó the crunch of the cracker against the fresh herbs and tender papaya is the combination the dish is designed for.',
+            tip: 'The fried shallots and crushed peanuts should be added at the very last moment ó they lose their crunch within minutes of contact with the dressed salad.',
         },
     ],
 };

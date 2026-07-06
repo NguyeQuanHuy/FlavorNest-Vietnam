@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-mi-thit-nuong.jpg',
-    intro: `Banh mi thit nuong is the grilled pork version of Vietnam's most famous sandwich â€” smoky lemongrass pork against shatteringly crisp baguette, pate, pickled daikon, fresh coriander and sliced chilli. It costs almost nothing to make and tastes extraordinary. The French gave Vietnam the baguette in the 19th century. Vietnam improved it â€” a thinner, airier crust, a lighter crumb â€” and then filled it with things no French baker ever imagined.`,
+    intro: `Banh mi thit nuong is the grilled pork version of Vietnam's most famous sandwich — smoky lemongrass pork against shatteringly crisp baguette, pate, pickled daikon, fresh coriander and sliced chilli. It costs almost nothing to make and tastes extraordinary. The French gave Vietnam the baguette in the 19th century. Vietnam improved it — a thinner, airier crust, a lighter crumb — and then filled it with things no French baker ever imagined.`,
     ingredientSections: [
         {
             title: 'Grilled pork (thit nuong)',
@@ -53,7 +53,7 @@ const recipe: RecipeData = {
         {
             title: 'Grill the pork',
             description: `Grill pork slices over high heat or in a very hot cast iron pan for 2 minutes per side until caramelised and slightly charred. The sugar in the marinade creates a sticky, smoky crust.`,
-            tip: `Do not crowd the pan. Cook in batches if needed â€” crowding steams the pork instead of grilling it.`,
+            tip: `Do not crowd the pan. Cook in batches if needed — crowding steams the pork instead of grilling it.`,
         },
         {
             title: 'Toast the bread',

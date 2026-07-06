@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-mam-nem',
     title: 'Vermicelli with Anchovy Sauce',
-    subtitle: 'Bun mam nem â€” cold rice vermicelli with sliced pork, fried tofu and herbs, with the funky pineapple-anchovy dipping sauce that defines Da Nang.',
+    subtitle: 'Bun mam nem — cold rice vermicelli with sliced pork, fried tofu and herbs, with the funky pineapple-anchovy dipping sauce that defines Da Nang.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/bun-mam-nem.jpg',
-    intro: 'Bun mam nem is the lunchtime answer in Da Nang. The components are simple â€” vermicelli, boiled pork belly, fried tofu, a pile of fresh herbs â€” but the entire dish hinges on the sauce. Mam nem is fermented anchovy at its most uncompromising, smoothed and brightened with grated pineapple, lime, garlic, sugar and chilli into something pungent and sweet and sour and spicy at the same time. Once you understand mam nem, every other dipping sauce in the world feels polite by comparison. Da Nang locals eat this 3 times a week without complaint.',
+    intro: 'Bun mam nem is the lunchtime answer in Da Nang. The components are simple — vermicelli, boiled pork belly, fried tofu, a pile of fresh herbs — but the entire dish hinges on the sauce. Mam nem is fermented anchovy at its most uncompromising, smoothed and brightened with grated pineapple, lime, garlic, sugar and chilli into something pungent and sweet and sour and spicy at the same time. Once you understand mam nem, every other dipping sauce in the world feels polite by comparison. Da Nang locals eat this 3 times a week without complaint.',
     ingredientSections: [
         {
             title: 'The bowl',
@@ -66,7 +66,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Build the mam nem sauce',
-            description: 'In a saucepan, warm oil over medium heat. Add garlic and saute 30 seconds until fragrant. Add grated pineapple and palm sugar, cook 3 minutes until the pineapple softens and releases juice. Stir in mam nem and 60ml water. Simmer 5 minutes until slightly thickened. Off heat, add lime juice and minced chilli. Taste â€” the sauce should be funky, sweet, sour and spicy in roughly equal measure.',
+            description: 'In a saucepan, warm oil over medium heat. Add garlic and saute 30 seconds until fragrant. Add grated pineapple and palm sugar, cook 3 minutes until the pineapple softens and releases juice. Stir in mam nem and 60ml water. Simmer 5 minutes until slightly thickened. Off heat, add lime juice and minced chilli. Taste — the sauce should be funky, sweet, sour and spicy in roughly equal measure.',
             tip: 'Mam nem is intense. Start with less lime than you think and build up.',
         },
         {

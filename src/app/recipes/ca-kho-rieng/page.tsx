@@ -1,38 +1,38 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ca-kho-rieng',
-    title: 'C√° Kho Ri·ªÅng (Fish Braised with Galangal)',
-    subtitle: 'Freshwater fish sections caramelized in dark sugar then braised with a generous amount of fresh galangal ‚Äî more galangal than ginger, more galangal than the southern kho tradition ever uses ‚Äî until the sauce reduces to a thick, aromatic glaze that is warm and piney-citrus in a way that ginger-forward kho never achieves. The northern Vietnamese kho where galangal is not an accessory but the point.',
+    title: 'C· Kho Ri?ng (Fish Braised with Galangal)',
+    subtitle: 'Freshwater fish sections caramelized in dark sugar then braised with a generous amount of fresh galangal ó more galangal than ginger, more galangal than the southern kho tradition ever uses ó until the sauce reduces to a thick, aromatic glaze that is warm and piney-citrus in a way that ginger-forward kho never achieves. The northern Vietnamese kho where galangal is not an accessory but the point.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/ca-kho-rieng.jpg',
-    intro: `C√° kho ri·ªÅng is the galangal-braised fish of northern Vietnam ‚Äî a kho preparation that is as specifically northern as c√° tr·∫Øm kho c·∫ßn and that demonstrates the fundamental aromatic difference between northern and southern Vietnamese kho cooking. In the south, ginger (g·ª´ng) is the dominant kho aromatic ‚Äî appearing in c√° tr√™ kho t·ªô, v·ªãt kho g·ª´ng, and the fish kho preparations of the Mekong Delta in the starring role. In the north, galangal (ri·ªÅng) holds this position ‚Äî a rhizome that is related to ginger but produces a significantly different aromatic character: warmer, more complex, with a specific piney-citrus note that ginger does not have and that pairs with freshwater fish in a way that makes c√° kho ri·ªÅng taste both more intensely spiced and more specifically northern than any southern kho preparation. Ri·ªÅng ‚Äî fresh galangal, Alpinia galanga ‚Äî has been used in northern Vietnamese cooking for centuries, appearing in the five-spice mixture of the north (which differs from the southern version in its galangal content), in the marinades for northern grilled meats, and most prominently in the kho preparations of the Red River Delta. The quantity used in c√° kho ri·ªÅng is the quantity that marks the cook as northern: 80-100g of fresh galangal for 700-800g of fish, sliced thicker than for southern preparations so that each piece remains identifiable in the finished kho rather than dissolving into the sauce. The galangal in the finished dish is eaten as a food in itself rather than discarded ‚Äî the long braising time softens it to a yielding, intensely flavored piece that is the most prized element of the bowl for those who grew up eating c√° kho ri·ªÅng.`,
+    intro: `C· kho ri?ng is the galangal-braised fish of northern Vietnam ó a kho preparation that is as specifically northern as c· tr?m kho c?n and that demonstrates the fundamental aromatic difference between northern and southern Vietnamese kho cooking. In the south, ginger (g?ng) is the dominant kho aromatic ó appearing in c· trÍ kho t?, v?t kho g?ng, and the fish kho preparations of the Mekong Delta in the starring role. In the north, galangal (ri?ng) holds this position ó a rhizome that is related to ginger but produces a significantly different aromatic character: warmer, more complex, with a specific piney-citrus note that ginger does not have and that pairs with freshwater fish in a way that makes c· kho ri?ng taste both more intensely spiced and more specifically northern than any southern kho preparation. Ri?ng ó fresh galangal, Alpinia galanga ó has been used in northern Vietnamese cooking for centuries, appearing in the five-spice mixture of the north (which differs from the southern version in its galangal content), in the marinades for northern grilled meats, and most prominently in the kho preparations of the Red River Delta. The quantity used in c· kho ri?ng is the quantity that marks the cook as northern: 80-100g of fresh galangal for 700-800g of fish, sliced thicker than for southern preparations so that each piece remains identifiable in the finished kho rather than dissolving into the sauce. The galangal in the finished dish is eaten as a food in itself rather than discarded ó the long braising time softens it to a yielding, intensely flavored piece that is the most prized element of the bowl for those who grew up eating c· kho ri?ng.`,
     ingredientSections: [
         {
             title: 'Fish',
             items: [
-                { amount: 700, unit: 'g', name: 'freshwater fish sections', note: 'c√° tr·∫Øm, c√° ch√©p, or c√° r√¥ phi ‚Äî bone-in sections 5-6cm. Score each section once.' },
+                { amount: 700, unit: 'g', name: 'freshwater fish sections', note: 'c· tr?m, c· chÈp, or c· rÙ phi ó bone-in sections 5-6cm. Score each section once.' },
                 { amount: 1.5, unit: 'tbsp', name: 'fish sauce', note: 'for pre-marinating' },
                 { amount: 1, unit: 'tsp', name: 'turmeric powder' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper' },
             ],
         },
         {
-            title: 'Northern kho base ‚Äî galangal-starring',
+            title: 'Northern kho base ó galangal-starring',
             items: [
                 { amount: 2, unit: 'tbsp', name: 'sugar', note: 'for the dark caramel' },
                 { amount: 2, unit: 'tbsp', name: 'neutral oil' },
-                { amount: 90, unit: 'g', name: 'fresh galangal (ri·ªÅng t∆∞∆°i)', note: 'peeled and sliced 3-4mm thick ‚Äî thick enough to remain identifiable in the finished kho. This is the starring ingredient.' },
-                { amount: 20, unit: 'g', name: 'fresh ginger', note: 'thinly sliced ‚Äî secondary, supporting role only' },
+                { amount: 90, unit: 'g', name: 'fresh galangal (ri?ng tuoi)', note: 'peeled and sliced 3-4mm thick ó thick enough to remain identifiable in the finished kho. This is the starring ingredient.' },
+                { amount: 20, unit: 'g', name: 'fresh ginger', note: 'thinly sliced ó secondary, supporting role only' },
                 { amount: 5, name: 'garlic cloves', note: 'smashed' },
                 { amount: 4, name: 'shallots', note: 'halved' },
-                { amount: 3, name: 'bird\'s eye chilies', note: 'whole ‚Äî heat without sharpness' },
-                { amount: 1, unit: 'tsp', name: 'fermented shrimp paste (m·∫Øm t√¥m)', note: 'small amount ‚Äî the northern umami addition that southern kho does not use' },
+                { amount: 3, name: 'bird\'s eye chilies', note: 'whole ó heat without sharpness' },
+                { amount: 1, unit: 'tsp', name: 'fermented shrimp paste (m?m tÙm)', note: 'small amount ó the northern umami addition that southern kho does not use' },
             ],
         },
         {
@@ -48,7 +48,7 @@ const recipe: RecipeData = {
         {
             title: 'Garnish and to serve',
             items: [
-                { amount: 3, name: 'spring onions', note: 'sliced ‚Äî added at the end' },
+                { amount: 3, name: 'spring onions', note: 'sliced ó added at the end' },
                 { amount: 4, name: 'kaffir lime leaves', note: 'finely shredded' },
                 { amount: 0.5, unit: 'tsp', name: 'black pepper', note: 'freshly ground' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
@@ -60,28 +60,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate the fish with turmeric',
-            description: 'Combine fish sections with fish sauce, turmeric, and black pepper. Toss to coat. Marinate 20 minutes. The turmeric in c√° kho ri·ªÅng provides a golden base that works visually and aromatically with the galangal ‚Äî both have warm, slightly earthy characters that reinforce each other. The turmeric gold beneath the dark caramel produces the specific appearance of northern fish kho that is different from the uniform dark brown of southern versions.',
-            tip: 'The combination of turmeric in the marinade and galangal in the kho base produces two layers of warm aromatic character in the finished dish ‚Äî the turmeric providing earthy warmth throughout the flesh and the galangal providing the piney-citrus warmth in the sauce. These two aromatics from different rhizome species are specifically compatible in the way that they do not compete but accumulate.',
+            description: 'Combine fish sections with fish sauce, turmeric, and black pepper. Toss to coat. Marinate 20 minutes. The turmeric in c· kho ri?ng provides a golden base that works visually and aromatically with the galangal ó both have warm, slightly earthy characters that reinforce each other. The turmeric gold beneath the dark caramel produces the specific appearance of northern fish kho that is different from the uniform dark brown of southern versions.',
+            tip: 'The combination of turmeric in the marinade and galangal in the kho base produces two layers of warm aromatic character in the finished dish ó the turmeric providing earthy warmth throughout the flesh and the galangal providing the piney-citrus warmth in the sauce. These two aromatics from different rhizome species are specifically compatible in the way that they do not compete but accumulate.',
         },
         {
             title: 'Build the dark caramel and fry the galangal',
-            description: 'Make a dark caramel with oil and sugar. When the caramel is deep amber, add the thick galangal slices immediately. The galangal will sizzle in the hot caramel. Fry for 3 minutes until the galangal edges caramelize and the piney-citrus aroma begins to release into the room ‚Äî this specific aroma is the moment that confirms the galangal is cooking correctly. Add ginger slices, garlic, shallots, and chilies. Add the small amount of m·∫Øm t√¥m and stir into the caramel.',
-            tip: 'The 3-minute frying of the galangal slices in the hot caramel before anything else is the technique that develops the galangal\'s best character. Raw galangal is harsh and medicinal; caramelized galangal in dark sugar is warm, complex, and specifically piney-citrus in a way that is the defining aromatic of c√° kho ri·ªÅng. The m·∫Øm t√¥m adds the northern umami depth that fermented shrimp paste contributes throughout northern Vietnamese cooking.',
+            description: 'Make a dark caramel with oil and sugar. When the caramel is deep amber, add the thick galangal slices immediately. The galangal will sizzle in the hot caramel. Fry for 3 minutes until the galangal edges caramelize and the piney-citrus aroma begins to release into the room ó this specific aroma is the moment that confirms the galangal is cooking correctly. Add ginger slices, garlic, shallots, and chilies. Add the small amount of m?m tÙm and stir into the caramel.',
+            tip: 'The 3-minute frying of the galangal slices in the hot caramel before anything else is the technique that develops the galangal\'s best character. Raw galangal is harsh and medicinal; caramelized galangal in dark sugar is warm, complex, and specifically piney-citrus in a way that is the defining aromatic of c· kho ri?ng. The m?m tÙm adds the northern umami depth that fermented shrimp paste contributes throughout northern Vietnamese cooking.',
         },
         {
             title: 'Sear fish and add braising liquid',
-            description: 'Add the marinated fish sections to the galangal caramel. Sear 2 minutes skin-side down. Flip and sear 1 minute. Add fish sauce, dark soy, sugar, pepper, and water around the fish. The water should come about halfway up the fish sections ‚Äî not enough to submerge. Bring to a boil then reduce to the lowest possible simmer.',
-            tip: 'The galangal slices visible in the pot alongside the fish sections as the braising begins are one of the most appealing visual elements of c√° kho ri·ªÅng preparation ‚Äî the thick golden-caramelized rounds of galangal among the dark caramel and the turmeric-golden fish is the specific visual of this northern dish before the braising reduces everything to the final glaze.',
+            description: 'Add the marinated fish sections to the galangal caramel. Sear 2 minutes skin-side down. Flip and sear 1 minute. Add fish sauce, dark soy, sugar, pepper, and water around the fish. The water should come about halfway up the fish sections ó not enough to submerge. Bring to a boil then reduce to the lowest possible simmer.',
+            tip: 'The galangal slices visible in the pot alongside the fish sections as the braising begins are one of the most appealing visual elements of c· kho ri?ng preparation ó the thick golden-caramelized rounds of galangal among the dark caramel and the turmeric-golden fish is the specific visual of this northern dish before the braising reduces everything to the final glaze.',
         },
         {
-            title: 'Braise uncovered ‚Äî 30-35 minutes',
-            description: 'Braise uncovered at the lowest simmer for 30-35 minutes. Turn the fish once at 18 minutes. The galangal slices during the braise will soften from firm to yielding ‚Äî by 30 minutes they should be completely tender and have absorbed the surrounding sauce completely, becoming intensely flavored pieces that are the most concentrated expression of the galangal-caramel combination in the dish. The sauce should reduce to a thick, dark glaze by 30-35 minutes.',
-            tip: 'The galangal pieces in the finished c√° kho ri·ªÅng ‚Äî soft, dark with absorbed caramel, intensely flavored throughout ‚Äî are eaten and prized rather than discarded. This is the northern understanding of galangal in kho: not an aromatic to be removed but a vegetable-condiment to be consumed. In the south, galangal matchsticks in kho are often thinner and more fully dissolved; in the north, the thick slices remain identifiable and are the most anticipated pieces in the pot.',
+            title: 'Braise uncovered ó 30-35 minutes',
+            description: 'Braise uncovered at the lowest simmer for 30-35 minutes. Turn the fish once at 18 minutes. The galangal slices during the braise will soften from firm to yielding ó by 30 minutes they should be completely tender and have absorbed the surrounding sauce completely, becoming intensely flavored pieces that are the most concentrated expression of the galangal-caramel combination in the dish. The sauce should reduce to a thick, dark glaze by 30-35 minutes.',
+            tip: 'The galangal pieces in the finished c· kho ri?ng ó soft, dark with absorbed caramel, intensely flavored throughout ó are eaten and prized rather than discarded. This is the northern understanding of galangal in kho: not an aromatic to be removed but a vegetable-condiment to be consumed. In the south, galangal matchsticks in kho are often thinner and more fully dissolved; in the north, the thick slices remain identifiable and are the most anticipated pieces in the pot.',
         },
         {
             title: 'Finish and serve',
-            description: 'Add shredded kaffir lime leaves, sliced spring onion, and freshly ground black pepper. The finished c√° kho ri·ªÅng: dark, thick sauce coating the fish and the galangal pieces equally, the piney-citrus fragrance of the galangal still present through the caramel depth. Serve from the clay pot with plain hot rice. The galangal pieces should be distributed to each bowl alongside the fish ‚Äî they are not garnish but an equal component of the dish.',
-            tip: 'Serving the galangal pieces equally with the fish sections is the northern table manner for c√° kho ri·ªÅng that most clearly expresses the dish\'s philosophy. The galangal is not extracted before service; it is an equal component. A bowl of c√° kho ri·ªÅng that contains only fish and no galangal is an incomplete bowl.',
+            description: 'Add shredded kaffir lime leaves, sliced spring onion, and freshly ground black pepper. The finished c· kho ri?ng: dark, thick sauce coating the fish and the galangal pieces equally, the piney-citrus fragrance of the galangal still present through the caramel depth. Serve from the clay pot with plain hot rice. The galangal pieces should be distributed to each bowl alongside the fish ó they are not garnish but an equal component of the dish.',
+            tip: 'Serving the galangal pieces equally with the fish sections is the northern table manner for c· kho ri?ng that most clearly expresses the dish\'s philosophy. The galangal is not extracted before service; it is an equal component. A bowl of c· kho ri?ng that contains only fish and no galangal is an incomplete bowl.',
         },
     ],
 };

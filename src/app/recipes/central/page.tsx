@@ -1,7 +1,7 @@
-Ôªø'use client'
+'use client'
 
 /**
- * FlavorNest Vietnam ‚Äî Central Cuisine Page
+ * FlavorNest Vietnam ó Central Cuisine Page
  * src/app/recipes/central/page.tsx
  */
 
@@ -38,7 +38,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bun-bo-hue.jpg',
         difficulty: 'Hard', time: '2.5 hrs',
         rating: '4.9', reviews: 312, cal: 480, tag: "Hue's Finest", tagColor: '#DC2626',
-        description: "The dish that deserves more global fame than it gets. Lemongrass-perfumed beef broth, thick round noodles, sliced beef shank, pork knuckle and crab paste ‚Äî bold, spicy, deeply aromatic. The royal city's greatest contribution to Vietnamese cuisine.",
+        description: "The dish that deserves more global fame than it gets. Lemongrass-perfumed beef broth, thick round noodles, sliced beef shank, pork knuckle and crab paste ó bold, spicy, deeply aromatic. The royal city's greatest contribution to Vietnamese cuisine.",
         tags: ['Beef', 'Spicy', 'Lemongrass', 'Slow Cook'],
     },
     {
@@ -48,7 +48,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/cao-lau-hoi-an-1.jpg',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.9', reviews: 287, cal: 420, tag: 'Hoi An Only', tagColor: '#7C3AED',
-        description: "A dish so unique it can only truly be made in Hoi An ‚Äî legend says the noodles require water from a single ancient well in the old town. Thick ash-treated noodles with roasted pork, crispy rice crackers and fresh herbs. Quietly extraordinary.",
+        description: "A dish so unique it can only truly be made in Hoi An ó legend says the noodles require water from a single ancient well in the old town. Thick ash-treated noodles with roasted pork, crispy rice crackers and fresh herbs. Quietly extraordinary.",
         tags: ['Pork', 'Noodles', 'Heritage', 'Unique'],
     },
     {
@@ -58,7 +58,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/mi-quang.jpg',
         difficulty: 'Medium', time: '1.5 hrs',
         rating: '4.8', reviews: 198, cal: 440, tag: 'Da Nang Staple', tagColor: '#D97706',
-        description: "Wide turmeric-yellow noodles with just enough broth to coat ‚Äî not a soup, not a dry dish. Topped with shrimp, pork, quail eggs, peanuts and sesame rice crackers. The pride of Qu·∫£ng Nam province.",
+        description: "Wide turmeric-yellow noodles with just enough broth to coat ó not a soup, not a dry dish. Topped with shrimp, pork, quail eggs, peanuts and sesame rice crackers. The pride of Qu?ng Nam province.",
         tags: ['Shrimp', 'Pork', 'Turmeric', 'Noodles'],
     },
     {
@@ -78,7 +78,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/com-hen.jpg',
         difficulty: 'Medium', time: '1 hr',
         rating: '4.8', reviews: 167, cal: 380, tag: 'Hue Hidden Gem', tagColor: '#059669',
-        description: "One of Hue's most beloved and least-known dishes ‚Äî tiny river clams stir-fried with lemongrass and chilli, served over cold rice with a complex array of toppings: herbs, peanuts, sesame, cracklings and fermented shrimp paste.",
+        description: "One of Hue's most beloved and least-known dishes ó tiny river clams stir-fried with lemongrass and chilli, served over cold rice with a complex array of toppings: herbs, peanuts, sesame, cracklings and fermented shrimp paste.",
         tags: ['Clams', 'Rice', 'Fermented', 'Spicy'],
     },
     {
@@ -88,7 +88,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/banh-xeo-mien-trung.jpg',
         difficulty: 'Medium', time: '40 min',
         rating: '4.7', reviews: 134, cal: 350, tag: 'Street Favourite', tagColor: '#EA580C',
-        description: "Smaller and crispier than the southern version ‚Äî Central Vietnamese b√°nh x√®o uses less batter and more heat, creating a thinner, crunchier shell filled with shrimp, pork and bean sprouts. Eaten wrapped in mustard leaf with nuoc cham.",
+        description: "Smaller and crispier than the southern version ó Central Vietnamese b·nh xËo uses less batter and more heat, creating a thinner, crunchier shell filled with shrimp, pork and bean sprouts. Eaten wrapped in mustard leaf with nuoc cham.",
         tags: ['Shrimp', 'Pork', 'Crispy', 'Central'],
     },
     {
@@ -98,7 +98,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/banh-nam.jpg',
         difficulty: 'Hard', time: '1.5 hrs',
         rating: '4.6', reviews: 98, cal: 240, tag: 'Hue Heritage', tagColor: '#166534',
-        description: "Paper-thin parcels of rice flour, steamed in banana leaf with a filling of seasoned ground pork and wood ear mushroom. One of the most delicate dumplings in Vietnamese cuisine ‚Äî the banana leaf imparts a subtle fragrance you cannot replicate.",
+        description: "Paper-thin parcels of rice flour, steamed in banana leaf with a filling of seasoned ground pork and wood ear mushroom. One of the most delicate dumplings in Vietnamese cuisine ó the banana leaf imparts a subtle fragrance you cannot replicate.",
         tags: ['Pork', 'Banana Leaf', 'Steamed', 'Delicate'],
     },
     {
@@ -108,7 +108,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/chao-long-hue.jpg',
         difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.7', reviews: 112, cal: 320, tag: 'Morning Comfort', tagColor: '#D97706',
-        description: "Silky rice porridge enriched with pork offal, fresh herbs, ginger and a scattering of fried shallots. Hue's version is more deeply flavoured than other regions ‚Äî a warming, restorative bowl eaten at dawn in narrow shophouse restaurants.",
+        description: "Silky rice porridge enriched with pork offal, fresh herbs, ginger and a scattering of fried shallots. Hue's version is more deeply flavoured than other regions ó a warming, restorative bowl eaten at dawn in narrow shophouse restaurants.",
         tags: ['Pork', 'Congee', 'Comfort', 'Breakfast'],
     },
     {
@@ -128,7 +128,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/ga-la-e-phu-yen.jpg',
         difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 64, cal: 340, tag: 'Phu Yen Hidden Gem', tagColor: '#166534',
-        description: 'Free-range chicken stir-fried with fresh litsea leaves (la e) ‚Äî a wild herb unique to the central highlands. Intensely aromatic, slightly citrusy, and completely unlike anything else in Vietnamese cuisine.',
+        description: 'Free-range chicken stir-fried with fresh litsea leaves (la e) ó a wild herb unique to the central highlands. Intensely aromatic, slightly citrusy, and completely unlike anything else in Vietnamese cuisine.',
         tags: ['Chicken', 'Herbs', 'Phu Yen', 'Unique'],
     },
     {
@@ -148,7 +148,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/chao-canh-quang-binh.jpg',
         difficulty: 'Medium', time: '1 hr 30 min',
         rating: '4.7', reviews: 142, cal: 410, tag: 'Quang Binh Pride', tagColor: '#0284C7',
-        description: "A Central coastal speciality from Quang Binh province ‚Äî hand-rolled flat wheat noodles, rougher and chewier than industrial pasta, served in a clear pork broth with shrimp, sliced fish cake and a fistful of fresh herbs. The broth is gentle, the noodles are the point. A breakfast dish that locals defend fiercely against any other province claiming it.",
+        description: "A Central coastal speciality from Quang Binh province ó hand-rolled flat wheat noodles, rougher and chewier than industrial pasta, served in a clear pork broth with shrimp, sliced fish cake and a fistful of fresh herbs. The broth is gentle, the noodles are the point. A breakfast dish that locals defend fiercely against any other province claiming it.",
         tags: ['Pork', 'Wheat Noodles', 'Coastal', 'Quang Binh'],
     },
     {
@@ -158,7 +158,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/goi-ca-nam-o.jpg',
         difficulty: 'Hard', time: '45 min',
         rating: '4.8', reviews: 167, cal: 320, tag: 'Da Nang Coastal', tagColor: '#059669',
-        description: "From the fishing village of Nam O on the outskirts of Da Nang ‚Äî paper-thin slices of raw herring or anchovy 'cooked' in lime juice and rolled with green banana, star fruit, fresh herbs and roasted rice powder in soft rice paper, then dunked in a thick mam nem peanut sauce. Briny, bright, intensely fresh. Vietnam's answer to ceviche.",
+        description: "From the fishing village of Nam O on the outskirts of Da Nang ó paper-thin slices of raw herring or anchovy 'cooked' in lime juice and rolled with green banana, star fruit, fresh herbs and roasted rice powder in soft rice paper, then dunked in a thick mam nem peanut sauce. Briny, bright, intensely fresh. Vietnam's answer to ceviche.",
         tags: ['Raw Fish', 'Herbs', 'Coastal', 'Da Nang'],
     },
     {
@@ -168,7 +168,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/muc-nuong-phan-thiet.jpg',
         difficulty: 'Easy', time: '25 min',
         rating: '4.8', reviews: 198, cal: 280, tag: 'Beach Town', tagColor: '#DC2626',
-        description: "On the beach in Phan Thiet, fishermen grill the morning's catch right on the sand ‚Äî fresh squid scored, brushed with fish sauce caramel, and charred over coconut husks until the tentacles curl and blister. Served with green salt (muoi tieu chanh) and a cold bottle of beer. The simplest possible cooking, the most unforgettable result.",
+        description: "On the beach in Phan Thiet, fishermen grill the morning's catch right on the sand ó fresh squid scored, brushed with fish sauce caramel, and charred over coconut husks until the tentacles curl and blister. Served with green salt (muoi tieu chanh) and a cold bottle of beer. The simplest possible cooking, the most unforgettable result.",
         tags: ['Squid', 'Grilled', 'Coastal', 'Beach'],
     },
     {
@@ -178,7 +178,7 @@ const RECIPES: Recipe[] = [
         image: '/images/recipes/bun-mam-nem.jpg',
         difficulty: 'Easy', time: '40 min',
         rating: '4.7', reviews: 156, cal: 380, tag: 'Da Nang Lunch', tagColor: '#7C3AED',
-        description: "Da Nang at lunchtime ‚Äî cold rice vermicelli piled high with sliced boiled pork, fried tofu, fresh herbs and a thick reddish dipping sauce of fermented anchovies, pineapple, lime, garlic and chilli. The sauce is the entire dish: pungent, sweet, sour and spicy at once. Once you understand mam nem, every other dipping sauce feels polite.",
+        description: "Da Nang at lunchtime ó cold rice vermicelli piled high with sliced boiled pork, fried tofu, fresh herbs and a thick reddish dipping sauce of fermented anchovies, pineapple, lime, garlic and chilli. The sauce is the entire dish: pungent, sweet, sour and spicy at once. Once you understand mam nem, every other dipping sauce feels polite.",
         tags: ['Pork', 'Vermicelli', 'Fermented', 'Da Nang'],
     },
 ]
@@ -208,7 +208,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '‚ô• Saved' : '‚úï Removed'}
+                        {toast === 'added' ? '? Saved' : '? Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -242,7 +242,7 @@ export default function CentralCuisinePage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; }
             `}</style>
 
-            {/* ‚îÄ‚îÄ HERO ‚îÄ‚îÄ */}
+            {/* -- HERO -- */}
             <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 24px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }}>
                     <div>
@@ -250,7 +250,7 @@ export default function CentralCuisinePage() {
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                             {[['Home', '/'], ['Recipes', '/recipes'], ['Central', '']].map(([label, href], i) => (
                                 <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>‚Ä∫</span>}
+                                    {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>õ</span>}
                                     {href ?
                                         <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                         : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
@@ -261,7 +261,7 @@ export default function CentralCuisinePage() {
                         {/* Eyebrow */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
                             <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Hu·∫ø, H·ªôi An & The Coast</span>
+                            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>Hu?, H?i An & The Coast</span>
                         </div>
 
                         {/* Title */}
@@ -290,7 +290,7 @@ export default function CentralCuisinePage() {
                                 margin: 0,
                                 paddingLeft: 18,
                             }}>
-                                <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Imperial courts in Hu·∫ø</span>, <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>lantern-lit alleys in H·ªôi An</span>, fishing villages along the South China Sea ‚Äî Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
+                                <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>Imperial courts in Hu?</span>, <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>lantern-lit alleys in H?i An</span>, fishing villages along the South China Sea ó Central Vietnamese cuisine is bold, spicy, and unapologetically complex.
                             </p>
                         </div>
 
@@ -326,10 +326,10 @@ export default function CentralCuisinePage() {
                                 transition={{ duration: 0.55, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}>
                                 <Link href={`/recipes/${recipe.slug}`} className="r-card">
                                     <div style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#1a0a0a' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} ‚Äî ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.9 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
+                                        <Image src={recipe.image} alt={`${recipe.title} ó ${recipe.subtitle}`} fill className="r-img" style={{ objectFit: 'cover', opacity: 0.9 }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(45,10,10,0.7) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>‚è± {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>? {recipe.time}</div>
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
@@ -353,7 +353,7 @@ export default function CentralCuisinePage() {
                 </AnimatePresence>
             </section>
 
-            {/* ‚îÄ‚îÄ EXPLORE MORE ‚îÄ‚îÄ */}
+            {/* -- EXPLORE MORE -- */}
             <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>

@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-beo',
     title: 'Steamed Rice Cakes with Shrimp',
-    subtitle: 'Delicate Hue snack cakes â€” eaten one tiny bowl at a time, with scallion oil and dried shrimp.',
+    subtitle: 'Delicate Hue snack cakes — eaten one tiny bowl at a time, with scallion oil and dried shrimp.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/banh-beo.jpg',
-    intro: 'Banh beo is the quintessential Hue snack â€” a city obsessed with small, refined, intensely flavoured bites eaten over long afternoon conversations. Each rice cake is steamed in its own tiny clay saucer until set into a thin, silky disc. The topping is minimal by design: dried shrimp powder, crispy pork cracklings, a drizzle of scallion oil, and a spoonful of sweet fish sauce. You eat a dozen without thinking. That is the point.',
+    intro: 'Banh beo is the quintessential Hue snack — a city obsessed with small, refined, intensely flavoured bites eaten over long afternoon conversations. Each rice cake is steamed in its own tiny clay saucer until set into a thin, silky disc. The topping is minimal by design: dried shrimp powder, crispy pork cracklings, a drizzle of scallion oil, and a spoonful of sweet fish sauce. You eat a dozen without thinking. That is the point.',
     ingredientSections: [
         {
             title: 'Rice cake batter',
@@ -46,12 +46,12 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the batter',
-            description: 'Whisk rice flour, tapioca starch, water, salt, and oil until completely smooth. Rest 20 minutes. The batter is very thin â€” thinner than crepe batter.',
+            description: 'Whisk rice flour, tapioca starch, water, salt, and oil until completely smooth. Rest 20 minutes. The batter is very thin — thinner than crepe batter.',
         },
         {
             title: 'Steam the rice cakes',
             description: 'Lightly oil small saucers, ramekins, or a shallow muffin tray. Fill each about halfway with batter. Steam over boiling water for 5 to 6 minutes until the cakes are set, opaque, and slightly glossy. They should pull away from the edges slightly when done.',
-            tip: 'Traditional banh beo uses tiny ceramic saucers about 8cm wide. Small ramekins work perfectly. Do not use deep moulds â€” banh beo should be thin.',
+            tip: 'Traditional banh beo uses tiny ceramic saucers about 8cm wide. Small ramekins work perfectly. Do not use deep moulds — banh beo should be thin.',
         },
         {
             title: 'Make the scallion oil',
@@ -59,7 +59,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the dipping sauce',
-            description: 'Dissolve sugar in warm water. Add fish sauce, garlic, and chilli. Taste â€” the sauce should be sweet, salty, and aromatic.',
+            description: 'Dissolve sugar in warm water. Add fish sauce, garlic, and chilli. Taste — the sauce should be sweet, salty, and aromatic.',
         },
         {
             title: 'Top and serve',

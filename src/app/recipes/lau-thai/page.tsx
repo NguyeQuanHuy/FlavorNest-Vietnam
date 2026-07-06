@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'lau-thai',
     title: 'Thai-Style Hot Pot',
-    subtitle: 'Sour, spicy, lemongrass-scented broth filled with seafood â€” a weekend feast eaten slowly with friends.',
+    subtitle: 'Sour, spicy, lemongrass-scented broth filled with seafood — a weekend feast eaten slowly with friends.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/lau-thai.jpg',
-    intro: `Lau Thai is Vietnam's adopted version of Thai hot pot â€” a communal pot of intensely aromatic broth set in the centre of the table, kept at a rolling simmer, into which everyone dunks raw seafood, vegetables, mushrooms, and noodles at their own pace. The broth is built on lemongrass, galangal, kaffir lime leaves, tomato, and pineapple â€” sour, spicy, and deeply fragrant. It is not a weeknight dish. It is a reason to call friends over.`,
+    intro: `Lau Thai is Vietnam's adopted version of Thai hot pot — a communal pot of intensely aromatic broth set in the centre of the table, kept at a rolling simmer, into which everyone dunks raw seafood, vegetables, mushrooms, and noodles at their own pace. The broth is built on lemongrass, galangal, kaffir lime leaves, tomato, and pineapple — sour, spicy, and deeply fragrant. It is not a weeknight dish. It is a reason to call friends over.`,
     ingredientSections: [
         {
             title: 'Hot pot broth',
@@ -45,7 +45,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Build the broth',
-            description: 'Combine stock, lemongrass, galangal, and kaffir lime leaves in a pot. Bring to a boil and simmer 15 minutes to infuse. Add tomatoes, pineapple, fish sauce, sugar, tamarind, and chilli paste. Taste and adjust â€” the broth should be aggressively sour, spicy, and fragrant.',
+            description: 'Combine stock, lemongrass, galangal, and kaffir lime leaves in a pot. Bring to a boil and simmer 15 minutes to infuse. Add tomatoes, pineapple, fish sauce, sugar, tamarind, and chilli paste. Taste and adjust — the broth should be aggressively sour, spicy, and fragrant.',
             tip: 'The broth should taste too strong at this point. Once the raw seafood cooks in it, the flavours will mellow and balance.',
         },
         {

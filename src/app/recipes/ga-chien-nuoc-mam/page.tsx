@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'ga-chien-nuoc-mam',
     title: 'Fish Sauce Fried Chicken (Ga Chien Nuoc Mam)',
-    subtitle: 'Crispy fried chicken coated in a glossy, savory-sweet fish sauce glaze — bold, addictive, and deeply flavorful.',
+    subtitle: 'Crispy fried chicken coated in a glossy, savory-sweet fish sauce glaze � bold, addictive, and deeply flavorful.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '40 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/ga-chien-nuoc-mam.jpg',
 
-    intro: `Gà chiên nước mắm is one of Vietnam’s most popular street and home-style dishes.
+    intro: `G� chi�n nu?c m?m is one of Vietnam�s most popular street and home-style dishes.
 
 Crispy fried chicken pieces are tossed in a caramelized fish sauce glaze made from garlic, sugar, and fish sauce. The result is a perfect balance of sweet, salty, and umami with a sticky, glossy coating that clings to every bite.`,
 

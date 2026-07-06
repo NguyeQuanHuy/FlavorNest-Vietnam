@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'pho-xao-bo',
     title: 'Stir-fried Beef Pho (Pho Xao Bo)',
-    subtitle: 'Soft rice noodles stir-fried with tender beef, garlic, and soy sauce â€” smoky, savory, and addictive.',
+    subtitle: 'Soft rice noodles stir-fried with tender beef, garlic, and soy sauce — smoky, savory, and addictive.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '30 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/pho-xao-bo.jpg',
 
-    intro: `Phá»Ÿ xÃ o bÃ² is a popular Vietnamese street-style dish made by stir-frying flat rice noodles with beef and vegetables.
+    intro: `Ph? xào bò is a popular Vietnamese street-style dish made by stir-frying flat rice noodles with beef and vegetables.
 
 Unlike traditional pho soup, this version is dry and smoky, with noodles coated in a savory sauce and wok aroma. It is quick, filling, and full of umami flavor.`,
 
@@ -51,7 +51,7 @@ Unlike traditional pho soup, this version is dry and smoky, with noodles coated 
         },
         {
             title: 'Stir-fry aromatics',
-            description: 'Heat oil in a wok and sautÃ© garlic and onion until fragrant.',
+            description: 'Heat oil in a wok and sauté garlic and onion until fragrant.',
         },
         {
             title: 'Cook beef',
@@ -64,7 +64,7 @@ Unlike traditional pho soup, this version is dry and smoky, with noodles coated 
         },
         {
             title: 'Combine',
-            description: 'Add beef and vegetables back into the wok and stir-fry for 1â€“2 minutes.',
+            description: 'Add beef and vegetables back into the wok and stir-fry for 1–2 minutes.',
         },
         {
             title: 'Serve',

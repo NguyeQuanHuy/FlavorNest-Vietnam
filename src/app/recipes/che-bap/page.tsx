@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/che-bap.jpg',
 
-    intro: `Chè bắp is a traditional Vietnamese dessert made from sweet corn, glutinous rice, and coconut milk.
+    intro: `Ch� b?p is a traditional Vietnamese dessert made from sweet corn, glutinous rice, and coconut milk.
 
 It has a natural sweetness from fresh corn, a slightly thick texture, and a creamy coconut topping that makes it both refreshing and comforting.`,
 
@@ -20,7 +20,7 @@ It has a natural sweetness from fresh corn, a slightly thick texture, and a crea
         {
             title: 'Main ingredients',
             items: [
-                { amount: 2, name: 'fresh corn (bắp)', note: 'kernels removed' },
+                { amount: 2, name: 'fresh corn (b?p)', note: 'kernels removed' },
                 { amount: 50, unit: 'g', name: 'glutinous rice' },
                 { amount: 100, unit: 'g', name: 'sugar' },
                 { amount: 800, unit: 'ml', name: 'water' },

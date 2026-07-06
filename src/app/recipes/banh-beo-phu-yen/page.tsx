@@ -1,12 +1,12 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-beo-phu-yen',
-    title: 'Phu Yen Steamed Rice Cakes (BÃ¡nh BÃ¨o PhÃº YÃªn)',
+    title: 'Phu Yen Steamed Rice Cakes (Bánh Bèo Phú Yên)',
     subtitle:
-        'BÃ¡nh BÃ¨o PhÃº YÃªn â€” dainty, warm steamed rice cakes served in individual ceramic saucers, topped with savory shrimp flakes, crispy bread, and fragrant chive oil.',
+        'Bánh Bèo Phú Yên — dainty, warm steamed rice cakes served in individual ceramic saucers, topped with savory shrimp flakes, crispy bread, and fragrant chive oil.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '50 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/banh-beo-phu-yen.jpg',
     intro:
-        'While BÃ¡nh BÃ¨o is famous across Vietnam, the version from the coastal province of PhÃº YÃªn has a soulful, rustic charm. Unlike the cold, firm versions elsewhere, BÃ¡nh BÃ¨o PhÃº YÃªn is best enjoyed steaming hot. Each tiny saucer holds a silky, melt-in-your-mouth rice cake topped with "chÃ  bÃ´ng" (pork floss) or toasted shrimp flakes, but the defining feature is the generous drizzle of háº¹ (chive) oil instead of the usual scallion oil. Itâ€™s a delicate balance of earthy rice, savory toppings, and a light, spicy-sweet dipping sauce.',
+        'While Bánh Bèo is famous across Vietnam, the version from the coastal province of Phú Yên has a soulful, rustic charm. Unlike the cold, firm versions elsewhere, Bánh Bèo Phú Yên is best enjoyed steaming hot. Each tiny saucer holds a silky, melt-in-your-mouth rice cake topped with "chà bông" (pork floss) or toasted shrimp flakes, but the defining feature is the generous drizzle of h? (chive) oil instead of the usual scallion oil. It’s a delicate balance of earthy rice, savory toppings, and a light, spicy-sweet dipping sauce.',
     ingredientSections: [
         {
             title: 'Rice Cake Batter',
@@ -30,7 +30,7 @@ const recipe: RecipeData = {
             title: 'Toppings',
             items: [
                 { amount: 100, unit: 'g', name: 'dried shrimp', note: 'soaked and finely pulsed' },
-                { amount: 50, unit: 'g', name: 'pork floss (chÃ  bÃ´ng)' },
+                { amount: 50, unit: 'g', name: 'pork floss (chà bông)' },
                 { amount: 1, unit: 'cup', name: 'fresh chives', note: 'finely chopped' },
                 { amount: 4, unit: 'tbsp', name: 'neutral oil' },
                 { amount: 1, unit: 'slice', name: 'bread', note: 'diced and fried into croutons' },
@@ -54,16 +54,16 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prepare the toppings',
-            description: 'SautÃ© the pulsed dried shrimp in a pan until dry and fluffy. For the chive oil, heat oil until shimmering and pour it over the freshly chopped chives.',
+            description: 'Sauté the pulsed dried shrimp in a pan until dry and fluffy. For the chive oil, heat oil until shimmering and pour it over the freshly chopped chives.',
         },
         {
             title: 'Steam the cakes',
-            description: 'Place empty ceramic saucers in a steamer for 2 minutes to get them hot. Stir the batter and pour a thin layer into each saucer. Steam on high heat for 6â€“8 minutes.',
-            tip: 'A hot saucer ensures the cake doesnâ€™t stick and creates a slight "dimple" in the center to hold the sauce.',
+            description: 'Place empty ceramic saucers in a steamer for 2 minutes to get them hot. Stir the batter and pour a thin layer into each saucer. Steam on high heat for 6–8 minutes.',
+            tip: 'A hot saucer ensures the cake doesn’t stick and creates a slight "dimple" in the center to hold the sauce.',
         },
         {
             title: 'Make the dipping sauce',
-            description: 'Dissolve sugar in warm water, add fish sauce and lime juice. The sauce for BÃ¡nh BÃ¨o PhÃº YÃªn should be light and dilute, not overly salty.',
+            description: 'Dissolve sugar in warm water, add fish sauce and lime juice. The sauce for Bánh Bèo Phú Yên should be light and dilute, not overly salty.',
         },
         {
             title: 'Assemble',

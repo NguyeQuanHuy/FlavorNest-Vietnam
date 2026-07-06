@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-cuon',
     title: 'Steamed Rice Rolls',
-    subtitle: 'Silky steamed rice sheets rolled with seasoned pork and wood ear mushrooms â€” the morning ritual of Hanoi.',
+    subtitle: 'Silky steamed rice sheets rolled with seasoned pork and wood ear mushrooms — the morning ritual of Hanoi.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -47,7 +47,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the batter',
-            description: 'Whisk rice flour, tapioca starch, water, oil, and salt until completely smooth with no lumps. Rest for 30 minutes. The batter should be very thin â€” thinner than crepe batter.',
+            description: 'Whisk rice flour, tapioca starch, water, oil, and salt until completely smooth with no lumps. Rest for 30 minutes. The batter should be very thin — thinner than crepe batter.',
         },
         {
             title: 'Cook the filling',
@@ -64,8 +64,8 @@ const recipe: RecipeData = {
         },
         {
             title: 'Roll and serve',
-            description: 'Using a flat wooden dowel or spatula, roll the sheet over the filling and slide off the cloth onto a plate. Work quickly â€” the sheets cool and tear if left too long. Top with crispy shallots, cha lua, and fresh herbs. Serve with nuoc cham.',
-            tip: 'The first 2 or 3 sheets are almost always imperfect. Do not be discouraged â€” the technique clicks suddenly and each sheet improves dramatically.',
+            description: 'Using a flat wooden dowel or spatula, roll the sheet over the filling and slide off the cloth onto a plate. Work quickly — the sheets cool and tear if left too long. Top with crispy shallots, cha lua, and fresh herbs. Serve with nuoc cham.',
+            tip: 'The first 2 or 3 sheets are almost always imperfect. Do not be discouraged — the technique clicks suddenly and each sheet improves dramatically.',
         },
     ],
 };

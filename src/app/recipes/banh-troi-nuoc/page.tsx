@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-troi-nuoc',
     title: 'Floating Glutinous Rice Balls',
-    subtitle: 'Banh troi nuoc â€” chewy rice balls filled with mung bean paste, served in a warm ginger-syrup with toasted sesame.',
+    subtitle: 'Banh troi nuoc — chewy rice balls filled with mung bean paste, served in a warm ginger-syrup with toasted sesame.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '1 hr',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/banh-troi-nuoc.jpg',
-    intro: 'Banh troi nuoc is the dessert that arrives at the Cold Foods Festival in early March (Tet Han Thuc) â€” round white rice balls filled with sweet mung bean paste, floating in a warm syrup perfumed with ginger. The dish has 4,000 years of Chinese-Vietnamese ancestry and a quiet philosophical weight: the round shape symbolises completeness, the white colour symbolises purity, and the floating in syrup symbolises the human passage through life. None of which prevents it from being delicious. The chewy outer shell and warm sweet centre is one of those textures you cannot describe but never forget.',
+    intro: 'Banh troi nuoc is the dessert that arrives at the Cold Foods Festival in early March (Tet Han Thuc) — round white rice balls filled with sweet mung bean paste, floating in a warm syrup perfumed with ginger. The dish has 4,000 years of Chinese-Vietnamese ancestry and a quiet philosophical weight: the round shape symbolises completeness, the white colour symbolises purity, and the floating in syrup symbolises the human passage through life. None of which prevents it from being delicious. The chewy outer shell and warm sweet centre is one of those textures you cannot describe but never forget.',
     ingredientSections: [
         {
             title: 'Mung bean filling',
@@ -61,7 +61,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Make the rice flour dough',
-            description: 'In a bowl, combine glutinous rice flour and salt. Slowly add warm water while mixing until a soft pliable dough forms â€” it should be smooth and not sticky. Knead for 3 minutes. Cover with a damp cloth and rest 10 minutes.',
+            description: 'In a bowl, combine glutinous rice flour and salt. Slowly add warm water while mixing until a soft pliable dough forms — it should be smooth and not sticky. Knead for 3 minutes. Cover with a damp cloth and rest 10 minutes.',
             tip: 'Add water a tablespoon at a time at the end. Too wet and the dough sticks; too dry and it cracks.',
         },
         {
@@ -80,7 +80,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Serve warm',
-            description: 'Ladle 4 balls and a generous amount of ginger syrup into each small bowl. Drizzle with coconut cream and shower with toasted sesame seeds and shredded coconut. Eat immediately while warm â€” the ginger fragrance and the chewy-soft contrast of shell and filling is at its peak in the first 5 minutes.',
+            description: 'Ladle 4 balls and a generous amount of ginger syrup into each small bowl. Drizzle with coconut cream and shower with toasted sesame seeds and shredded coconut. Eat immediately while warm — the ginger fragrance and the chewy-soft contrast of shell and filling is at its peak in the first 5 minutes.',
             tip: 'Banh troi nuoc does not keep. Eat the same day; reheating turns the rice balls gummy.',
         },
     ],

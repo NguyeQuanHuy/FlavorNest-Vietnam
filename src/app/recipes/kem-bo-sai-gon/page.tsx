@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'kem-bo-sai-gon',
     title: 'Saigon Avocado Ice Cream',
-    subtitle: 'Kem bo â€” buttery avocado mash topped with coconut ice cream and crispy dried coconut. The Saigon street dessert that went viral.',
+    subtitle: 'Kem bo — buttery avocado mash topped with coconut ice cream and crispy dried coconut. The Saigon street dessert that went viral.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '15 min',
@@ -47,12 +47,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Mash the avocado base',
-            description: 'Add condensed milk, fresh milk, sugar and salt to the avocado. Mash with a fork until mostly smooth but still with some chunks for texture. Do not blend smooth â€” kem bo should have body, not be a puree.',
+            description: 'Add condensed milk, fresh milk, sugar and salt to the avocado. Mash with a fork until mostly smooth but still with some chunks for texture. Do not blend smooth — kem bo should have body, not be a puree.',
             tip: 'A blender turns this into a smoothie. The Saigon way is hand-mashed and chunky.',
         },
         {
             title: 'Toast the coconut flakes',
-            description: 'In a dry pan over medium heat, toast unsweetened coconut flakes for 3 minutes, stirring constantly, until pale gold and intensely fragrant. Watch carefully â€” coconut goes from gold to burnt in 30 seconds.',
+            description: 'In a dry pan over medium heat, toast unsweetened coconut flakes for 3 minutes, stirring constantly, until pale gold and intensely fragrant. Watch carefully — coconut goes from gold to burnt in 30 seconds.',
         },
         {
             title: 'Build the bowl',

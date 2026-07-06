@@ -1,29 +1,29 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-cua',
-    title: 'G·ªèi Cua (Vietnamese Crab Salad)',
-    subtitle: 'Fresh crab meat dressed in a lime-fish sauce vinaigrette with green mango, cucumber, Vietnamese herbs, and roasted peanuts ‚Äî the coastal Vietnamese salad where crab is the centerpiece rather than a component.',
+    title: 'G?i Cua (Vietnamese Crab Salad)',
+    subtitle: 'Fresh crab meat dressed in a lime-fish sauce vinaigrette with green mango, cucumber, Vietnamese herbs, and roasted peanuts ó the coastal Vietnamese salad where crab is the centerpiece rather than a component.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '40 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/goi-cua.jpg',
-    intro: `G·ªèi cua is the Vietnamese crab salad ‚Äî a dish that requires the best crab you can find and does almost nothing to obscure it. The crab meat is lightly dressed in a lime-fish sauce vinaigrette with just enough acidity to brighten its natural sweetness without overwhelming it. The shredded green mango or young coconut adds crunch and tartness. The fresh herbs ‚Äî rau rƒÉm, mint, and culantro if available ‚Äî add the herbal depth that turns dressed crab meat into a complete dish. G·ªèi cua is associated particularly with the coastal provinces of central and southern Vietnam ‚Äî Nha Trang, Ph√∫ Qu·ªëc, V≈©ng T√†u ‚Äî where fresh crab is harvested daily and the morning market has piles of mud crabs and blue swimmer crabs still moving. The version from Nha Trang uses crab from the Kh√°nh H√≤a coast specifically, with young coconut as the crunchy element instead of mango. The version from the Mekong Delta uses river crab with more herbs and less mango. This recipe covers the central coast version ‚Äî mud crab or blue swimmer, green mango, and a bright, herb-forward dressing.`,
+    intro: `G?i cua is the Vietnamese crab salad ó a dish that requires the best crab you can find and does almost nothing to obscure it. The crab meat is lightly dressed in a lime-fish sauce vinaigrette with just enough acidity to brighten its natural sweetness without overwhelming it. The shredded green mango or young coconut adds crunch and tartness. The fresh herbs ó rau ram, mint, and culantro if available ó add the herbal depth that turns dressed crab meat into a complete dish. G?i cua is associated particularly with the coastal provinces of central and southern Vietnam ó Nha Trang, Ph˙ Qu?c, Vung T‡u ó where fresh crab is harvested daily and the morning market has piles of mud crabs and blue swimmer crabs still moving. The version from Nha Trang uses crab from the Kh·nh HÚa coast specifically, with young coconut as the crunchy element instead of mango. The version from the Mekong Delta uses river crab with more herbs and less mango. This recipe covers the central coast version ó mud crab or blue swimmer, green mango, and a bright, herb-forward dressing.`,
     ingredientSections: [
         {
             title: 'Crab',
             items: [
-                { amount: 500, unit: 'g', name: 'fresh cooked crab meat (th·ªãt cua)', note: 'from 2 medium mud crabs or blue swimmer crabs, steamed and picked. Or 500g good-quality fresh crab meat from a fishmonger ‚Äî never canned.' },
-                { amount: 2, name: 'medium mud crabs or blue swimmer crabs', note: 'if cooking yourself: steam for 12-15 minutes, cool, pick the meat. Reserve any crab roe (g·∫°ch cua) ‚Äî mix into the dressing.' },
+                { amount: 500, unit: 'g', name: 'fresh cooked crab meat (th?t cua)', note: 'from 2 medium mud crabs or blue swimmer crabs, steamed and picked. Or 500g good-quality fresh crab meat from a fishmonger ó never canned.' },
+                { amount: 2, name: 'medium mud crabs or blue swimmer crabs', note: 'if cooking yourself: steam for 12-15 minutes, cool, pick the meat. Reserve any crab roe (g?ch cua) ó mix into the dressing.' },
             ],
         },
         {
             title: 'Salad',
             items: [
-                { amount: 150, unit: 'g', name: 'green unripe mango', note: 'finely julienned ‚Äî for crunch and tartness' },
+                { amount: 150, unit: 'g', name: 'green unripe mango', note: 'finely julienned ó for crunch and tartness' },
                 { amount: 1, name: 'cucumber', note: 'seeds removed, julienned' },
                 { amount: 1, name: 'small carrot', note: 'finely julienned' },
                 { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed' },
@@ -33,9 +33,9 @@ const recipe: RecipeData = {
         {
             title: 'Herbs',
             items: [
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî essential' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)', note: 'leaves only ó essential' },
                 { amount: 0.5, name: 'bunch mint', note: 'leaves only' },
-                { amount: 1, name: 'stalk culantro (ng√≤ gai / saw-tooth herb)', note: 'thinly sliced ‚Äî optional but adds depth' },
+                { amount: 1, name: 'stalk culantro (ngÚ gai / saw-tooth herb)', note: 'thinly sliced ó optional but adds depth' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
         },
@@ -49,13 +49,13 @@ const recipe: RecipeData = {
                 { amount: 2, name: 'garlic cloves, minced' },
                 { amount: 1, name: 'bird\'s eye chili, minced' },
                 { amount: 1, unit: 'tsp', name: 'sesame oil' },
-                { amount: 1, unit: 'tbsp', name: 'crab roe (g·∫°ch cua)', note: 'if available ‚Äî stirred into the dressing for extra depth' },
+                { amount: 1, unit: 'tbsp', name: 'crab roe (g?ch cua)', note: 'if available ó stirred into the dressing for extra depth' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 8, name: 'prawn crackers or b√°nh ph·ªìng t√¥m', note: 'for scooping' },
+                { amount: 8, name: 'prawn crackers or b·nh ph?ng tÙm', note: 'for scooping' },
                 { amount: 2, name: 'limes, extra wedges' },
             ],
         },
@@ -63,28 +63,28 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Cook and pick the crab',
-            description: 'If cooking live crabs: place in freezer 15 minutes to sedate. Steam over boiling water with lemongrass and ginger in the steaming liquid ‚Äî 12 minutes for medium crabs (800g each), 15 minutes for large. Cool under cold water. Remove the top shell, gills, and mustard (reserve the roe). Pick all the meat from the body and claws ‚Äî use a skewer for the thin leg passages. The meat should come out in recognizable pieces, not shredded ‚Äî pieces are better for a salad than fine shreds.',
-            tip: 'Pick crab while still slightly warm ‚Äî the meat separates more cleanly from the cartilage when warm. Cold picked crab from the refrigerator has more cartilage fragments mixed in.',
+            description: 'If cooking live crabs: place in freezer 15 minutes to sedate. Steam over boiling water with lemongrass and ginger in the steaming liquid ó 12 minutes for medium crabs (800g each), 15 minutes for large. Cool under cold water. Remove the top shell, gills, and mustard (reserve the roe). Pick all the meat from the body and claws ó use a skewer for the thin leg passages. The meat should come out in recognizable pieces, not shredded ó pieces are better for a salad than fine shreds.',
+            tip: 'Pick crab while still slightly warm ó the meat separates more cleanly from the cartilage when warm. Cold picked crab from the refrigerator has more cartilage fragments mixed in.',
         },
         {
             title: 'Make the dressing with roe',
-            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until sugar dissolves. Add garlic, chili, and sesame oil. If you have crab roe, stir it into the dressing ‚Äî it emulsifies and adds a rich, oceanic depth that elevates the entire salad. Taste: the dressing should be balanced and bright. For crab specifically, the dressing should be slightly less acidic than for mango or papaya salads ‚Äî the crab sweetness is delicate.',
-            tip: 'Crab roe in the dressing is the technique that distinguishes g·ªèi cua from other Vietnamese seafood salads. The roe carries the concentrated crab flavor into every element of the dish.',
+            description: 'Combine fish sauce, lime juice, sugar, and water. Stir until sugar dissolves. Add garlic, chili, and sesame oil. If you have crab roe, stir it into the dressing ó it emulsifies and adds a rich, oceanic depth that elevates the entire salad. Taste: the dressing should be balanced and bright. For crab specifically, the dressing should be slightly less acidic than for mango or papaya salads ó the crab sweetness is delicate.',
+            tip: 'Crab roe in the dressing is the technique that distinguishes g?i cua from other Vietnamese seafood salads. The roe carries the concentrated crab flavor into every element of the dish.',
         },
         {
             title: 'Prepare the vegetables',
-            description: 'Julienne the green mango very finely ‚Äî 2mm wide strips. Julienne the cucumber after removing the seeds. Julienne the carrot. Keep all three vegetables in separate small piles ‚Äî they go into the bowl together but are easier to portion if kept separate until assembly.',
-            tip: 'The vegetables should be julienned finer than the crab pieces ‚Äî this prevents the vegetables from dominating the texture. The crab is the main event; the vegetables are the supporting crunch.',
+            description: 'Julienne the green mango very finely ó 2mm wide strips. Julienne the cucumber after removing the seeds. Julienne the carrot. Keep all three vegetables in separate small piles ó they go into the bowl together but are easier to portion if kept separate until assembly.',
+            tip: 'The vegetables should be julienned finer than the crab pieces ó this prevents the vegetables from dominating the texture. The crab is the main event; the vegetables are the supporting crunch.',
         },
         {
             title: 'Assemble gently',
-            description: 'In a wide bowl, combine the crab meat, green mango, cucumber, carrot, and all the herbs. Pour the dressing over. Toss very gently ‚Äî crab meat breaks apart easily and the goal is to maintain identifiable pieces rather than shredded strings. Every element should be lightly coated with dressing. Taste and adjust.',
-            tip: 'Toss gently with two large spoons using a folding motion rather than mixing. Aggressive tossing breaks the crab into fibers. The visual appeal of g·ªèi cua depends on visible crab pieces.',
+            description: 'In a wide bowl, combine the crab meat, green mango, cucumber, carrot, and all the herbs. Pour the dressing over. Toss very gently ó crab meat breaks apart easily and the goal is to maintain identifiable pieces rather than shredded strings. Every element should be lightly coated with dressing. Taste and adjust.',
+            tip: 'Toss gently with two large spoons using a folding motion rather than mixing. Aggressive tossing breaks the crab into fibers. The visual appeal of g?i cua depends on visible crab pieces.',
         },
         {
             title: 'Plate and finish',
-            description: 'Arrange on a serving plate. Top generously with crushed peanuts and fried shallots. Serve immediately with prawn crackers and lime wedges. G·ªèi cua must be eaten within 15-20 minutes of dressing ‚Äî the crab and mango both release moisture quickly and the salad becomes watery if left.',
-            tip: 'For a restaurant-style presentation: mound the salad in the center of the plate, arrange the crackers around the edge as scoops, scatter the peanuts and shallots over the top at the last moment. The visual contrast of the white crab, green mango, orange carrot, and dark green herbs is the complete g·ªèi cua image.',
+            description: 'Arrange on a serving plate. Top generously with crushed peanuts and fried shallots. Serve immediately with prawn crackers and lime wedges. G?i cua must be eaten within 15-20 minutes of dressing ó the crab and mango both release moisture quickly and the salad becomes watery if left.',
+            tip: 'For a restaurant-style presentation: mound the salad in the center of the plate, arrange the crackers around the edge as scoops, scatter the peanuts and shallots over the top at the last moment. The visual contrast of the white crab, green mango, orange carrot, and dark green herbs is the complete g?i cua image.',
         },
     ],
 };

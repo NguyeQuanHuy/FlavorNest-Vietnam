@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'canh-thit-bam',
     title: 'Clear Soup with Minced Pork',
     subtitle:
-        'Canh Thịt Băm — a gentle clear broth with minced pork poached into tender flecks, often brightened with winter melon or young mustard greens.',
+        'Canh Th?t Bam � a gentle clear broth with minced pork poached into tender flecks, often brightened with winter melon or young mustard greens.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '20 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/canh-thit-bam.jpg',
     intro:
-        'Canh thịt băm is the soup Vietnamese mothers make when they want something easy, comforting, and respectful of a small budget. It rarely makes it into cookbooks, and yet it probably appears on more Vietnamese dinner tables than any celebrated pho or bún. Unshowy, deeply home-cooking, and proof that the quietest dishes are often the ones that define a cuisine.',
+        'Canh th?t bam is the soup Vietnamese mothers make when they want something easy, comforting, and respectful of a small budget. It rarely makes it into cookbooks, and yet it probably appears on more Vietnamese dinner tables than any celebrated pho or b�n. Unshowy, deeply home-cooking, and proof that the quietest dishes are often the ones that define a cuisine.',
     ingredientSections: [
         {
             title: 'Broth and pork',
@@ -31,8 +31,8 @@ const recipe: RecipeData = {
             title: 'Vegetable (pick one)',
             items: [
                 { amount: 400, unit: 'g', name: 'winter melon', note: 'peeled, cut in 2cm cubes' },
-                { amount: 300, unit: 'g', name: 'young mustard greens', note: 'chopped — alternative' },
-                { amount: 300, unit: 'g', name: 'bottle gourd', note: 'peeled, sliced — alternative' },
+                { amount: 300, unit: 'g', name: 'young mustard greens', note: 'chopped � alternative' },
+                { amount: 300, unit: 'g', name: 'bottle gourd', note: 'peeled, sliced � alternative' },
             ],
         },
         {
@@ -64,7 +64,7 @@ const recipe: RecipeData = {
     },
     {
         title: 'Simmer with the vegetable',
-        description: 'Add the winter melon cubes to the pot and increase the heat slightly. Simmer for about 8 minutes—just long enough for the melon to become translucent and tender, but not so long that it loses its shape or collapses into a mush.',
+        description: 'Add the winter melon cubes to the pot and increase the heat slightly. Simmer for about 8 minutes�just long enough for the melon to become translucent and tender, but not so long that it loses its shape or collapses into a mush.',
     },
     {
         title: 'Season and serve',

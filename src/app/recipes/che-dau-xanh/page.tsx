@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/che-dau-xanh.jpg',
     intro:
-        'BÃ¡nh flan arrived in Vietnam with the French in the 19th century and never left. What Vietnam did with it is quietly brilliant â€” the custard became silkier, the caramel deeper, and somewhere along the way someone decided to serve it over crushed ice with a splash of cÃ  phÃª Ä‘en. That last addition is not official. It is, however, correct. This recipe produces six trembling, dark-topped flans with a bittersweet caramel that pools at the bottom of each ramekin when you invert them.',
+        'Bánh flan arrived in Vietnam with the French in the 19th century and never left. What Vietnam did with it is quietly brilliant — the custard became silkier, the caramel deeper, and somewhere along the way someone decided to serve it over crushed ice with a splash of cà phê den. That last addition is not official. It is, however, correct. This recipe produces six trembling, dark-topped flans with a bittersweet caramel that pools at the bottom of each ramekin when you invert them.',
     ingredientSections: [
         {
             title: 'Caramel',
@@ -47,14 +47,14 @@ const recipe: RecipeData = {
         {
             title: 'Make the caramel',
             description:
-                'Combine sugar, water, and lemon juice in a heavy-bottomed saucepan over medium heat. Do not stir â€” swirl the pan gently if needed. Cook until the caramel turns a deep amber colour (about 8â€“10 minutes). Immediately pour into 6 ramekins, tilting each to coat the base evenly. Work fast â€” caramel sets within seconds.',
+                'Combine sugar, water, and lemon juice in a heavy-bottomed saucepan over medium heat. Do not stir — swirl the pan gently if needed. Cook until the caramel turns a deep amber colour (about 8–10 minutes). Immediately pour into 6 ramekins, tilting each to coat the base evenly. Work fast — caramel sets within seconds.',
             tip: 'Aim for a dark amber, almost burnt-looking caramel. Pale caramel tastes of sugar; dark caramel tastes of complexity.',
         },
         {
             title: 'Make the custard',
             description:
-                'Warm milk and condensed milk together in a saucepan over low heat until just steaming â€” do not boil. In a separate bowl, whisk eggs and yolks gently with vanilla and salt. Pour the warm milk mixture slowly into the egg mixture, whisking constantly. Strain through a fine mesh sieve to remove any cooked egg strands.',
-            tip: 'Whisking vigorously creates bubbles that leave craters in the finished flan. Stir gently â€” you want a smooth, flat custard surface.',
+                'Warm milk and condensed milk together in a saucepan over low heat until just steaming — do not boil. In a separate bowl, whisk eggs and yolks gently with vanilla and salt. Pour the warm milk mixture slowly into the egg mixture, whisking constantly. Strain through a fine mesh sieve to remove any cooked egg strands.',
+            tip: 'Whisking vigorously creates bubbles that leave craters in the finished flan. Stir gently — you want a smooth, flat custard surface.',
         },
         {
             title: 'Fill and prepare bain-marie',
@@ -64,8 +64,8 @@ const recipe: RecipeData = {
         {
             title: 'Bake low and slow',
             description:
-                'Bake in a preheated oven at 150Â°C (300Â°F) for 45â€“55 minutes. The flan is ready when the edges are set but the centre has a gentle wobble â€” like firm jelly. Remove from the water bath and cool to room temperature, then refrigerate for at least 2 hours, ideally overnight.',
-            tip: 'If bubbles appear on the surface during baking, your oven is too hot. Drop to 140Â°C and add more water to the bain-marie.',
+                'Bake in a preheated oven at 150°C (300°F) for 45–55 minutes. The flan is ready when the edges are set but the centre has a gentle wobble — like firm jelly. Remove from the water bath and cool to room temperature, then refrigerate for at least 2 hours, ideally overnight.',
+            tip: 'If bubbles appear on the surface during baking, your oven is too hot. Drop to 140°C and add more water to the bain-marie.',
         },
         {
             title: 'Unmould and serve',

@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-khoai-mi-nuong',
     title: 'Baked Cassava Cake (Banh Khoai Mi Nuong)',
-    subtitle: 'Chewy Vietnamese cassava cake baked with coconut milk â€” golden, fragrant, and naturally sweet.',
+    subtitle: 'Chewy Vietnamese cassava cake baked with coconut milk — golden, fragrant, and naturally sweet.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '60 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 6,
     heroImage: '/images/recipes/banh-khoai-mi-nuong.jpg',
 
-    intro: `BÃ¡nh khoai mÃ¬ nÆ°á»›ng is a traditional Vietnamese dessert made from grated cassava, coconut milk, and sugar, baked until golden.
+    intro: `Bánh khoai mì nu?ng is a traditional Vietnamese dessert made from grated cassava, coconut milk, and sugar, baked until golden.
 
 The cake has a chewy, slightly sticky texture with a rich coconut aroma and a lightly caramelized surface. It is commonly enjoyed as a street snack or family dessert.`,
 
@@ -20,7 +20,7 @@ The cake has a chewy, slightly sticky texture with a rich coconut aroma and a li
         {
             title: 'Main ingredients',
             items: [
-                { amount: 1, unit: 'kg', name: 'cassava (khoai mÃ¬)', note: 'grated and squeezed' },
+                { amount: 1, unit: 'kg', name: 'cassava (khoai mì)', note: 'grated and squeezed' },
                 { amount: 200, unit: 'ml', name: 'coconut milk' },
                 { amount: 150, unit: 'g', name: 'sugar' },
                 { amount: 2, name: 'eggs' },
@@ -48,11 +48,11 @@ The cake has a chewy, slightly sticky texture with a rich coconut aroma and a li
         },
         {
             title: 'Preheat oven',
-            description: 'Preheat oven to 180Â°C.',
+            description: 'Preheat oven to 180°C.',
         },
         {
             title: 'Bake',
-            description: 'Pour mixture into a baking tray and bake for 45â€“50 minutes until golden brown.',
+            description: 'Pour mixture into a baking tray and bake for 45–50 minutes until golden brown.',
         },
         {
             title: 'Check texture',

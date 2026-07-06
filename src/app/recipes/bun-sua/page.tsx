@@ -1,35 +1,35 @@
-Ôªø'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-sua',
     title: `Jellyfish Noodle Soup`,
-    subtitle: `B√∫n S·ª©a ‚Äî Nha Trang's coastal noodle soup with cured jellyfish, clear pork and shrimp broth, and a mandatory plate of raw herbs.`,
+    subtitle: `B˙n S?a ó Nha Trang's coastal noodle soup with cured jellyfish, clear pork and shrimp broth, and a mandatory plate of raw herbs.`,
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '2 hrs 30 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: `https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?auto=format&fit=crop&w=1600&q=85`,
-    intro: `B√∫n s·ª©a is Nha Trang's most distinctly coastal noodle soup ‚Äî a dish built around cured jellyfish (s·ª©a), which appears nowhere else in Vietnamese noodle culture with such prominence. Nha Trang sits on one of the most productive jellyfish fishing grounds in Southeast Asia; the fishing boats bring in moon jellyfish (Aurelia aurita) and rhizostome jellyfish by the basket, and the curing yards along the coast process them overnight in layers of salt and alum before they reach the morning market.\n\nThe broth is deceptively simple: pork bones and dried shrimp simmered until clear, seasoned with fish sauce and a small amount of rock sugar for the southern sweetness that marks Kh√°nh H√≤a province cooking. What makes it different from every other clear broth noodle soup in Vietnam is the jellyfish ‚Äî cured, rinsed, and served cold alongside the hot soup, providing a texture that has no equivalent in any other cuisine. Properly cured jellyfish is firm, faintly crunchy, slightly slippery, and almost entirely flavourless on its own. It absorbs the broth, the dipping sauce, and the lime squeezed over it. The texture is the point.\n\nB√∫n s·ª©a is eaten at breakfast in Nha Trang, at small shops along Nguy·ªÖn Thi·ªán Thu·∫≠t street that open at 5am and close when the jellyfish runs out ‚Äî usually by 9am. Outside Kh√°nh H√≤a province it is almost unknown. Outside Vietnam it is entirely undocumented in English food writing.`,
+    intro: `B˙n s?a is Nha Trang's most distinctly coastal noodle soup ó a dish built around cured jellyfish (s?a), which appears nowhere else in Vietnamese noodle culture with such prominence. Nha Trang sits on one of the most productive jellyfish fishing grounds in Southeast Asia; the fishing boats bring in moon jellyfish (Aurelia aurita) and rhizostome jellyfish by the basket, and the curing yards along the coast process them overnight in layers of salt and alum before they reach the morning market.\n\nThe broth is deceptively simple: pork bones and dried shrimp simmered until clear, seasoned with fish sauce and a small amount of rock sugar for the southern sweetness that marks Kh·nh HÚa province cooking. What makes it different from every other clear broth noodle soup in Vietnam is the jellyfish ó cured, rinsed, and served cold alongside the hot soup, providing a texture that has no equivalent in any other cuisine. Properly cured jellyfish is firm, faintly crunchy, slightly slippery, and almost entirely flavourless on its own. It absorbs the broth, the dipping sauce, and the lime squeezed over it. The texture is the point.\n\nB˙n s?a is eaten at breakfast in Nha Trang, at small shops along Nguy?n Thi?n Thu?t street that open at 5am and close when the jellyfish runs out ó usually by 9am. Outside Kh·nh HÚa province it is almost unknown. Outside Vietnam it is entirely undocumented in English food writing.`,
     ingredientSections: [
         {
-            title: `Cured jellyfish (s·ª©a mu·ªëi)`,
+            title: `Cured jellyfish (s?a mu?i)`,
             items: [
-                { amount: 400, unit: 'g', name: `cured jellyfish (s·ª©a mu·ªëi)`, note: `sold vacuum-packed or in brine at Vietnamese/Asian grocers ‚Äî rinse thoroughly before use` },
-                { amount: 2, unit: 'L', name: `cold water`, note: `for soaking and desalting ‚Äî change water 3 times over 1 hour` },
+                { amount: 400, unit: 'g', name: `cured jellyfish (s?a mu?i)`, note: `sold vacuum-packed or in brine at Vietnamese/Asian grocers ó rinse thoroughly before use` },
+                { amount: 2, unit: 'L', name: `cold water`, note: `for soaking and desalting ó change water 3 times over 1 hour` },
                 { amount: 1, unit: 'tbsp', name: `rice vinegar`, note: `added to final soak to firm the texture` },
             ],
         },
         {
-            title: `Clear broth (n∆∞·ªõc l√®o)`,
+            title: `Clear broth (nu?c lËo)`,
             items: [
-                { amount: 800, unit: 'g', name: `pork bones (x∆∞∆°ng heo)`, note: `blanched and rinsed` },
-                { amount: 100, unit: 'g', name: `dried shrimp (t√¥m kh√¥)`, note: `soaked 15 min` },
+                { amount: 800, unit: 'g', name: `pork bones (xuong heo)`, note: `blanched and rinsed` },
+                { amount: 100, unit: 'g', name: `dried shrimp (tÙm khÙ)`, note: `soaked 15 min` },
                 { amount: 2, name: `medium onions, halved and charred` },
-                { amount: 20, unit: 'g', name: `rock sugar (ƒë∆∞·ªùng ph√®n)` },
-                { amount: 2, unit: 'tbsp', name: `fish sauce (n∆∞·ªõc m·∫Øm)` },
+                { amount: 20, unit: 'g', name: `rock sugar (du?ng phËn)` },
+                { amount: 2, unit: 'tbsp', name: `fish sauce (nu?c m?m)` },
                 { amount: 1, unit: 'tsp', name: `salt` },
                 { amount: 2.5, unit: 'L', name: `water` },
             ],
@@ -37,60 +37,60 @@ const recipe: RecipeData = {
         {
             title: `Toppings`,
             items: [
-                { amount: 200, unit: 'g', name: `pork shoulder (th·ªãt heo)`, note: `simmered whole 25 min, cooled and sliced thin` },
-                { amount: 200, unit: 'g', name: `medium shrimp (t√¥m)`, note: `poached in broth 2 min, peeled` },
+                { amount: 200, unit: 'g', name: `pork shoulder (th?t heo)`, note: `simmered whole 25 min, cooled and sliced thin` },
+                { amount: 200, unit: 'g', name: `medium shrimp (tÙm)`, note: `poached in broth 2 min, peeled` },
                 { amount: 3, name: `spring onions, sliced thin` },
-                { amount: 2, unit: 'tbsp', name: `fried shallots (h√†nh phi)` },
+                { amount: 2, unit: 'tbsp', name: `fried shallots (h‡nh phi)` },
                 { amount: 1, unit: 'tbsp', name: `pork lard or neutral oil` },
             ],
         },
         {
             title: `Noodles`,
             items: [
-                { amount: 500, unit: 'g', name: `fresh rice vermicelli (b√∫n t∆∞∆°i)`, note: `or 250g dried, soaked and blanched 30 seconds` },
+                { amount: 500, unit: 'g', name: `fresh rice vermicelli (b˙n tuoi)`, note: `or 250g dried, soaked and blanched 30 seconds` },
             ],
         },
         {
             title: `Herb plate and condiments`,
             items: [
-                { amount: 150, unit: 'g', name: `bean sprouts (gi√° ƒë·ªó)`, note: `raw` },
-                { amount: 1, name: `bunch Vietnamese coriander (rau rƒÉm)` },
-                { amount: 1, name: `bunch perilla (t√≠a t√¥)` },
-                { amount: 1, name: `bunch mint (h√∫ng l·ªßi)` },
+                { amount: 150, unit: 'g', name: `bean sprouts (gi· d?)`, note: `raw` },
+                { amount: 1, name: `bunch Vietnamese coriander (rau ram)` },
+                { amount: 1, name: `bunch perilla (tÌa tÙ)` },
+                { amount: 1, name: `bunch mint (h˙ng l?i)` },
                 { amount: 1, name: `cucumber, sliced into batons` },
                 { amount: 2, name: `limes, wedged` },
-                { amount: 3, name: `bird's eye chili (·ªõt hi·ªÉm), sliced` },
-                { amount: 2, unit: 'tbsp', name: `chili sauce or sa t·∫ø`, note: `served on the side` },
+                { amount: 3, name: `bird's eye chili (?t hi?m), sliced` },
+                { amount: 2, unit: 'tbsp', name: `chili sauce or sa t?`, note: `served on the side` },
             ],
         },
     ],
     steps: [
         {
             title: `Desalt and prepare the jellyfish`,
-            description: `Cured jellyfish is packed in heavy salt ‚Äî it must be desalted before eating. Place jellyfish in a large bowl of cold water and soak for 20 minutes. Drain, add fresh cold water, soak again 20 minutes. Drain again and repeat once more with fresh water ‚Äî three soaks total. On the third soak, add 1 tbsp rice vinegar to the water. The vinegar firms the jellyfish texture and removes any residual metallic taste from the alum curing. After the final soak, drain and taste a small piece ‚Äî it should be mildly salty, clean, and slightly firm. If still very salty, soak one more time in plain cold water.`,
-            tip: `Properly desalted jellyfish has a firm, faintly crunchy texture and is almost transparent. It should not be rubbery (under-soaked and still too salty) or completely soft (over-soaked). The vinegar soak is the step most home recipes skip ‚Äî do not skip it. It is what gives the jellyfish the slight resistance that makes the texture interesting.`,
+            description: `Cured jellyfish is packed in heavy salt ó it must be desalted before eating. Place jellyfish in a large bowl of cold water and soak for 20 minutes. Drain, add fresh cold water, soak again 20 minutes. Drain again and repeat once more with fresh water ó three soaks total. On the third soak, add 1 tbsp rice vinegar to the water. The vinegar firms the jellyfish texture and removes any residual metallic taste from the alum curing. After the final soak, drain and taste a small piece ó it should be mildly salty, clean, and slightly firm. If still very salty, soak one more time in plain cold water.`,
+            tip: `Properly desalted jellyfish has a firm, faintly crunchy texture and is almost transparent. It should not be rubbery (under-soaked and still too salty) or completely soft (over-soaked). The vinegar soak is the step most home recipes skip ó do not skip it. It is what gives the jellyfish the slight resistance that makes the texture interesting.`,
         },
         {
             title: `Slice the jellyfish`,
-            description: `Cut desalted jellyfish into strips 1 cm wide and 5‚Äì6 cm long using a sharp knife. Some pieces will have the bell (softer, more translucent) and some will have the oral arms (denser, more opaque) ‚Äî both are used. Keep at room temperature while preparing the broth. Jellyfish is served at room temperature or slightly cool, never hot ‚Äî heat makes it rubbery and unpleasant.`,
+            description: `Cut desalted jellyfish into strips 1 cm wide and 5ñ6 cm long using a sharp knife. Some pieces will have the bell (softer, more translucent) and some will have the oral arms (denser, more opaque) ó both are used. Keep at room temperature while preparing the broth. Jellyfish is served at room temperature or slightly cool, never hot ó heat makes it rubbery and unpleasant.`,
         },
         {
             title: `Blanch the bones and build the broth`,
-            description: `Boil pork bones in water for 5 minutes, drain, and rinse each bone under cold water until clean. Char onion halves cut-side down directly over a gas flame until deeply blackened on the flat surface, about 4 minutes. In a clean stockpot, combine blanched bones, soaked dried shrimp, charred onions, and 2.5 L cold water. Bring to a boil then immediately reduce to the gentlest possible simmer ‚Äî barely moving at the surface. Skim foam for the first 15 minutes. Simmer uncovered for 1.5 to 2 hours until broth is pale gold and clear.`,
-            tip: `The clarity of the broth is important in b√∫n s·ª©a because the jellyfish is nearly transparent ‚Äî a murky broth makes the entire bowl look dull. Maintain the lowest possible heat throughout. Never let the broth boil after the initial skim.`,
+            description: `Boil pork bones in water for 5 minutes, drain, and rinse each bone under cold water until clean. Char onion halves cut-side down directly over a gas flame until deeply blackened on the flat surface, about 4 minutes. In a clean stockpot, combine blanched bones, soaked dried shrimp, charred onions, and 2.5 L cold water. Bring to a boil then immediately reduce to the gentlest possible simmer ó barely moving at the surface. Skim foam for the first 15 minutes. Simmer uncovered for 1.5 to 2 hours until broth is pale gold and clear.`,
+            tip: `The clarity of the broth is important in b˙n s?a because the jellyfish is nearly transparent ó a murky broth makes the entire bowl look dull. Maintain the lowest possible heat throughout. Never let the broth boil after the initial skim.`,
         },
         {
             title: `Cook the toppings`,
-            description: `Poach whole pork shoulder in lightly salted water for 25 minutes. Remove, cool completely, then slice thin across the grain. Poach shrimp directly in the simmering broth for 2 minutes until just pink, remove with a slotted spoon and peel. Strain the finished broth through a fine mesh sieve. Season with rock sugar, fish sauce, and salt ‚Äî taste for the Kh√°nh H√≤a balance: clean, lightly sweet, savoury, with dried shrimp depth underneath.`,
+            description: `Poach whole pork shoulder in lightly salted water for 25 minutes. Remove, cool completely, then slice thin across the grain. Poach shrimp directly in the simmering broth for 2 minutes until just pink, remove with a slotted spoon and peel. Strain the finished broth through a fine mesh sieve. Season with rock sugar, fish sauce, and salt ó taste for the Kh·nh HÚa balance: clean, lightly sweet, savoury, with dried shrimp depth underneath.`,
         },
         {
             title: `Blanch the noodles`,
-            description: `If using dried b√∫n, soak in cold water 30 minutes until pliable, then blanch in boiling water 30 seconds ‚Äî drain immediately. If using fresh b√∫n, blanch 10 seconds only. Divide noodles between 4 bowls. Add ¬Ω tsp pork lard or oil to each bowl before ladling broth ‚Äî it melts invisibly and rounds the flavour.`,
+            description: `If using dried b˙n, soak in cold water 30 minutes until pliable, then blanch in boiling water 30 seconds ó drain immediately. If using fresh b˙n, blanch 10 seconds only. Divide noodles between 4 bowls. Add Ω tsp pork lard or oil to each bowl before ladling broth ó it melts invisibly and rounds the flavour.`,
         },
         {
             title: `Assemble and serve`,
-            description: `Layer pork slices and shrimp over the noodles. Place a generous portion of jellyfish strips alongside ‚Äî not submerged in the broth, but resting on top or to the side where they remain at room temperature. Ladle hot broth over the pork and noodles. Finish with spring onion, fried shallots. Serve immediately with the full herb plate alongside. In Nha Trang, the jellyfish is lifted into the broth piece by piece as you eat, never pre-immersed ‚Äî this controls the temperature and texture of each bite.`,
-            tip: `The correct eating sequence in Nha Trang: squeeze lime into the broth first, add chili. Eat a few bites of noodle and pork in broth. Then take a strip of jellyfish, dip briefly in the broth to warm slightly, eat with a leaf of rau rƒÉm. The jellyfish should be warm-cool, not hot ‚Äî it takes about 10 seconds submerged in hot broth to reach the ideal temperature before it begins to toughen.`,
+            description: `Layer pork slices and shrimp over the noodles. Place a generous portion of jellyfish strips alongside ó not submerged in the broth, but resting on top or to the side where they remain at room temperature. Ladle hot broth over the pork and noodles. Finish with spring onion, fried shallots. Serve immediately with the full herb plate alongside. In Nha Trang, the jellyfish is lifted into the broth piece by piece as you eat, never pre-immersed ó this controls the temperature and texture of each bite.`,
+            tip: `The correct eating sequence in Nha Trang: squeeze lime into the broth first, add chili. Eat a few bites of noodle and pork in broth. Then take a strip of jellyfish, dip briefly in the broth to warm slightly, eat with a leaf of rau ram. The jellyfish should be warm-cool, not hot ó it takes about 10 seconds submerged in hot broth to reach the ideal temperature before it begins to toughen.`,
         },
     ],
 };

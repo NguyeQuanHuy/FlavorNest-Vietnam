@@ -1,26 +1,26 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-bo-bap-phu-yen',
-    title: 'G·ªèi B√≤ B·∫Øp Ph√∫ Y√™n (Ph√∫ Y√™n Beef Shank Salad)',
-    subtitle: 'Beef shank simmered until the collagen renders and the meat becomes dense and yielding, sliced thin and tossed with Vietnamese coriander, ginger, lemongrass, roasted peanuts, and a lime-fish sauce dressing ‚Äî served with sesame rice crackers and the mu·ªëi l√° √© that appears throughout Ph√∫ Y√™n cooking.',
+    title: 'G?i BÚ B?p Ph˙ YÍn (Ph˙ YÍn Beef Shank Salad)',
+    subtitle: 'Beef shank simmered until the collagen renders and the meat becomes dense and yielding, sliced thin and tossed with Vietnamese coriander, ginger, lemongrass, roasted peanuts, and a lime-fish sauce dressing ó served with sesame rice crackers and the mu?i l· È that appears throughout Ph˙ YÍn cooking.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '2 hr 30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/goi-bo-bap-phu-yen.jpg',
-    intro: `G·ªèi b√≤ b·∫Øp Ph√∫ Y√™n is the beef salad built around b√≤ b·∫Øp ‚Äî beef shank, the cut that contains the highest concentration of collagen-rich connective tissue in the animal, and that when properly cooked becomes one of the most satisfying textures in Vietnamese cooking. B·∫Øp means the shank or leg, and the appeal of this cut is specific: the meat itself is lean and firm, with a slightly chewy texture that holds up to the acidic dressing without becoming soft, but the connective tissue between muscle groups melts during the long simmer into a gelatinous richness that coats the meat and the dressing together. When sliced thin and tossed with the sharp, peppery character of rau rƒÉm, the warm heat of fresh ginger julienned in quantity, the citrus of lemongrass, and the bright lime-fish sauce dressing ‚Äî the result is a salad of unusual textural complexity where the beef is simultaneously lean and rich, the herbs are simultaneously sharp and fragrant, and the crackers alongside provide the crunch that completes the bowl. In Ph√∫ Y√™n, g·ªèi b√≤ b·∫Øp is eaten as a nh·∫≠u dish ‚Äî a beer food, shared at the center of a table with cold Saigon Beer and the specific sesame crackers of Tuy An district. It is also the salad that appears at family gatherings as a cold starter, prepared the night before because the beef slices more cleanly and takes the dressing more completely when fully cold. The mu·ªëi l√° √© alongside ‚Äî the pounded litsea leaf salt that appears throughout Ph√∫ Y√™n cooking ‚Äî provides the aromatic dimension that distinguishes this from the same salad made anywhere else in Vietnam.`,
+    intro: `G?i bÚ b?p Ph˙ YÍn is the beef salad built around bÚ b?p ó beef shank, the cut that contains the highest concentration of collagen-rich connective tissue in the animal, and that when properly cooked becomes one of the most satisfying textures in Vietnamese cooking. B?p means the shank or leg, and the appeal of this cut is specific: the meat itself is lean and firm, with a slightly chewy texture that holds up to the acidic dressing without becoming soft, but the connective tissue between muscle groups melts during the long simmer into a gelatinous richness that coats the meat and the dressing together. When sliced thin and tossed with the sharp, peppery character of rau ram, the warm heat of fresh ginger julienned in quantity, the citrus of lemongrass, and the bright lime-fish sauce dressing ó the result is a salad of unusual textural complexity where the beef is simultaneously lean and rich, the herbs are simultaneously sharp and fragrant, and the crackers alongside provide the crunch that completes the bowl. In Ph˙ YÍn, g?i bÚ b?p is eaten as a nh?u dish ó a beer food, shared at the center of a table with cold Saigon Beer and the specific sesame crackers of Tuy An district. It is also the salad that appears at family gatherings as a cold starter, prepared the night before because the beef slices more cleanly and takes the dressing more completely when fully cold. The mu?i l· È alongside ó the pounded litsea leaf salt that appears throughout Ph˙ YÍn cooking ó provides the aromatic dimension that distinguishes this from the same salad made anywhere else in Vietnam.`,
     ingredientSections: [
         {
             title: 'Beef shank',
             items: [
-                { amount: 700, unit: 'g', name: 'beef shank (th·ªãt b√≤ b·∫Øp)', note: 'whole piece ‚Äî not pre-cut. The whole shank holds together during the long simmer and slices more cleanly when cooled.' },
+                { amount: 700, unit: 'g', name: 'beef shank (th?t bÚ b?p)', note: 'whole piece ó not pre-cut. The whole shank holds together during the long simmer and slices more cleanly when cooled.' },
                 { amount: 1.5, unit: 'L', name: 'water' },
-                { amount: 2, name: 'lemongrass stalks', note: 'bruised ‚Äî for the poaching liquid' },
-                { amount: 20, unit: 'g', name: 'fresh ginger', note: '2 slices, smashed ‚Äî for the poaching liquid' },
-                { amount: 3, name: 'shallots', note: 'halved ‚Äî for the poaching liquid' },
+                { amount: 2, name: 'lemongrass stalks', note: 'bruised ó for the poaching liquid' },
+                { amount: 20, unit: 'g', name: 'fresh ginger', note: '2 slices, smashed ó for the poaching liquid' },
+                { amount: 3, name: 'shallots', note: 'halved ó for the poaching liquid' },
                 { amount: 1.5, unit: 'tbsp', name: 'salt' },
                 { amount: 1, unit: 'tsp', name: 'sugar' },
             ],
@@ -40,19 +40,19 @@ const recipe: RecipeData = {
         {
             title: 'Salad components',
             items: [
-                { amount: 40, unit: 'g', name: 'fresh ginger', note: 'peeled and finely julienned ‚Äî used in larger quantity than most salads, a structural element not a garnish' },
-                { amount: 2, name: 'lemongrass stalks', note: 'inner stalk only, very finely sliced into rings ‚Äî paper thin' },
-                { amount: 1, name: 'large bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî the essential herb, used generously' },
+                { amount: 40, unit: 'g', name: 'fresh ginger', note: 'peeled and finely julienned ó used in larger quantity than most salads, a structural element not a garnish' },
+                { amount: 2, name: 'lemongrass stalks', note: 'inner stalk only, very finely sliced into rings ó paper thin' },
+                { amount: 1, name: 'large bunch Vietnamese coriander (rau ram)', note: 'leaves only ó the essential herb, used generously' },
                 { amount: 3, name: 'shallots', note: 'thinly sliced, soaked in ice water 10 minutes and drained' },
                 { amount: 60, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed' },
-                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h√†nh phi)' },
+                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h‡nh phi)' },
                 { amount: 2, unit: 'tbsp', name: 'toasted sesame seeds' },
             ],
         },
         {
-            title: 'Mu·ªëi l√° √© (Ph√∫ Y√™n litsea leaf salt)',
+            title: 'Mu?i l· È (Ph˙ YÍn litsea leaf salt)',
             items: [
-                { amount: 15, unit: 'g', name: 'fresh l√° √© leaves', note: 'or substitute: 5 kaffir lime leaves + 5 rau rƒÉm leaves' },
+                { amount: 15, unit: 'g', name: 'fresh l· È leaves', note: 'or substitute: 5 kaffir lime leaves + 5 rau ram leaves' },
                 { amount: 1.5, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -62,43 +62,43 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'sesame rice crackers (b√°nh tr√°ng m√® Tuy An)', note: 'Ph√∫ Y√™n sesame crackers ‚Äî or any sesame rice crackers' },
+                { amount: 16, name: 'sesame rice crackers (b·nh tr·ng mË Tuy An)', note: 'Ph˙ YÍn sesame crackers ó or any sesame rice crackers' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
-                { amount: 1, name: 'bunch extra rau rƒÉm', note: 'served fresh alongside' },
+                { amount: 1, name: 'bunch extra rau ram', note: 'served fresh alongside' },
             ],
         },
     ],
     steps: [
         {
-            title: 'Simmer the beef shank ‚Äî low and long',
-            description: 'Place the whole beef shank in a pot. Cover with cold water. Bring to a boil and blanch 5 minutes ‚Äî drain and rinse the shank and the pot. Return to the clean pot with 1.5L cold water, bruised lemongrass, ginger, halved shallots, salt, and sugar. Bring to a boil, reduce to the lowest possible simmer. Cook uncovered for 1.5-2 hours until completely tender ‚Äî a chopstick passes through the thickest part without resistance and the collagen surrounding the muscle groups has fully melted.',
-            tip: 'The shank must be genuinely tender ‚Äî not just cooked through. Under-cooked b√≤ b·∫Øp is tough and the collagen is still rubbery. The test: try to pull the muscle groups apart with two forks. They should separate easily when the shank is ready. If resistance, simmer 20 more minutes.',
+            title: 'Simmer the beef shank ó low and long',
+            description: 'Place the whole beef shank in a pot. Cover with cold water. Bring to a boil and blanch 5 minutes ó drain and rinse the shank and the pot. Return to the clean pot with 1.5L cold water, bruised lemongrass, ginger, halved shallots, salt, and sugar. Bring to a boil, reduce to the lowest possible simmer. Cook uncovered for 1.5-2 hours until completely tender ó a chopstick passes through the thickest part without resistance and the collagen surrounding the muscle groups has fully melted.',
+            tip: 'The shank must be genuinely tender ó not just cooked through. Under-cooked bÚ b?p is tough and the collagen is still rubbery. The test: try to pull the muscle groups apart with two forks. They should separate easily when the shank is ready. If resistance, simmer 20 more minutes.',
         },
         {
             title: 'Cool completely before slicing',
-            description: 'Remove the cooked shank from the broth and cool to room temperature ‚Äî then refrigerate for minimum 2 hours, ideally overnight. Cold b√≤ b·∫Øp slices cleanly and precisely; warm b√≤ b·∫Øp shreds and tears. The collagen surrounding the meat sets in the refrigerator into a firmer, more stable matrix that allows the thin, clean slices the salad requires. Slice against the grain into rounds 3-4mm thick when fully cold.',
-            tip: 'The overnight refrigeration is the step that separates a properly prepared g·ªèi b√≤ b·∫Øp from a rushed one. Cold b√≤ b·∫Øp sliced at 3mm is distinctly different from warm b√≤ b·∫Øp torn apart ‚Äî the texture in the final salad is firmer, the presentation is cleaner, and the dressing absorption is more controlled.',
+            description: 'Remove the cooked shank from the broth and cool to room temperature ó then refrigerate for minimum 2 hours, ideally overnight. Cold bÚ b?p slices cleanly and precisely; warm bÚ b?p shreds and tears. The collagen surrounding the meat sets in the refrigerator into a firmer, more stable matrix that allows the thin, clean slices the salad requires. Slice against the grain into rounds 3-4mm thick when fully cold.',
+            tip: 'The overnight refrigeration is the step that separates a properly prepared g?i bÚ b?p from a rushed one. Cold bÚ b?p sliced at 3mm is distinctly different from warm bÚ b?p torn apart ó the texture in the final salad is firmer, the presentation is cleaner, and the dressing absorption is more controlled.',
         },
         {
             title: 'Prepare the lemongrass and ginger',
-            description: 'Slice the lemongrass inner stalks into rings no thicker than 1mm ‚Äî use a sharp knife or mandoline. The lemongrass rings must be paper-thin to be edible; thick lemongrass is fibrous and unpleasant. Julienne the ginger into the finest possible strips ‚Äî thinner than a matchstick. Both lemongrass and ginger in this salad are present in quantity as structural flavor elements, not as light aromatics. They will be in every bite.',
-            tip: 'If the lemongrass rings are thicker than 1mm they will be tough and spiky in the salad. Run a test piece between your teeth ‚Äî if you feel fiber resistance, slice thinner. The lemongrass should be barely detectable as a texture and intensely detectable as a flavor.',
+            description: 'Slice the lemongrass inner stalks into rings no thicker than 1mm ó use a sharp knife or mandoline. The lemongrass rings must be paper-thin to be edible; thick lemongrass is fibrous and unpleasant. Julienne the ginger into the finest possible strips ó thinner than a matchstick. Both lemongrass and ginger in this salad are present in quantity as structural flavor elements, not as light aromatics. They will be in every bite.',
+            tip: 'If the lemongrass rings are thicker than 1mm they will be tough and spiky in the salad. Run a test piece between your teeth ó if you feel fiber resistance, slice thinner. The lemongrass should be barely detectable as a texture and intensely detectable as a flavor.',
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, lime juice, sugar, water, garlic, chili, and sesame oil. Stir until sugar dissolves. Taste alongside a slice of the cold beef ‚Äî the dressing should be bright and balanced, with the lime clearly present and the sesame oil adding a warm background note. For g·ªèi b√≤ b·∫Øp specifically, the dressing should have slightly more acid than for seafood salads ‚Äî the dense beef absorbs it and the lime note needs to persist through the protein.',
-            tip: 'The sesame oil in g·ªèi b√≤ b·∫Øp dressing is more important than in seafood g·ªèi. The warm nuttiness of sesame bridges the bold beef and the sharp rau rƒÉm in a way that a purely fish sauce-lime dressing cannot.',
+            description: 'Combine fish sauce, lime juice, sugar, water, garlic, chili, and sesame oil. Stir until sugar dissolves. Taste alongside a slice of the cold beef ó the dressing should be bright and balanced, with the lime clearly present and the sesame oil adding a warm background note. For g?i bÚ b?p specifically, the dressing should have slightly more acid than for seafood salads ó the dense beef absorbs it and the lime note needs to persist through the protein.',
+            tip: 'The sesame oil in g?i bÚ b?p dressing is more important than in seafood g?i. The warm nuttiness of sesame bridges the bold beef and the sharp rau ram in a way that a purely fish sauce-lime dressing cannot.',
         },
         {
-            title: 'Assemble ‚Äî the b√≥p method',
-            description: 'Combine the cold beef slices, finely sliced lemongrass, julienned ginger, soaked-and-drained shallots, and rau rƒÉm leaves in a wide bowl. Pour the dressing over. Using your hands, gently knead and fold the salad ‚Äî the b√≥p technique used throughout Ph√∫ Y√™n salads ‚Äî so the dressing penetrates the beef slices and the herbs bruise slightly and release their oils. Work for about 1 minute. Taste and adjust.',
-            tip: 'The b√≥p technique on beef is gentler than on chicken ‚Äî b√≤ b·∫Øp slices are firm but can break if handled too aggressively. Fold and press rather than squeeze. The goal is to drive the dressing into the surfaces of each slice, not to compress the meat.',
+            title: 'Assemble ó the bÛp method',
+            description: 'Combine the cold beef slices, finely sliced lemongrass, julienned ginger, soaked-and-drained shallots, and rau ram leaves in a wide bowl. Pour the dressing over. Using your hands, gently knead and fold the salad ó the bÛp technique used throughout Ph˙ YÍn salads ó so the dressing penetrates the beef slices and the herbs bruise slightly and release their oils. Work for about 1 minute. Taste and adjust.',
+            tip: 'The bÛp technique on beef is gentler than on chicken ó bÚ b?p slices are firm but can break if handled too aggressively. Fold and press rather than squeeze. The goal is to drive the dressing into the surfaces of each slice, not to compress the meat.',
         },
         {
-            title: 'Plate and serve the Ph√∫ Y√™n way',
-            description: 'Transfer to a serving plate. Top with crushed peanuts, crispy fried shallots, and toasted sesame seeds ‚Äî all added last to preserve crunch. Make the mu·ªëi l√° √©: pound l√° √© leaves with salt and pepper until the salt turns fragrant and green. Add sugar. Squeeze lime at the table. Arrange sesame crackers around the plate. To eat: lay a piece of beef on a sesame cracker with rau rƒÉm, dip in the lime-squeezed mu·ªëi l√° √©, eat immediately.',
-            tip: 'The mu·ªëi l√° √© is not interchangeable with plain salt or n∆∞·ªõc ch·∫•m for this dish. The litsea leaf in the salt provides the aromatic counterpoint to the dense beef that is specifically Ph√∫ Y√™n ‚Äî it is the same herb that appears in g√† h·∫•p l√° √© and g√† n∆∞·ªõng m·ªçi. The province uses it throughout its cooking as a signature flavor that ties its dishes together.',
+            title: 'Plate and serve the Ph˙ YÍn way',
+            description: 'Transfer to a serving plate. Top with crushed peanuts, crispy fried shallots, and toasted sesame seeds ó all added last to preserve crunch. Make the mu?i l· È: pound l· È leaves with salt and pepper until the salt turns fragrant and green. Add sugar. Squeeze lime at the table. Arrange sesame crackers around the plate. To eat: lay a piece of beef on a sesame cracker with rau ram, dip in the lime-squeezed mu?i l· È, eat immediately.',
+            tip: 'The mu?i l· È is not interchangeable with plain salt or nu?c ch?m for this dish. The litsea leaf in the salt provides the aromatic counterpoint to the dense beef that is specifically Ph˙ YÍn ó it is the same herb that appears in g‡ h?p l· È and g‡ nu?ng m?i. The province uses it throughout its cooking as a signature flavor that ties its dishes together.',
         },
     ],
 };

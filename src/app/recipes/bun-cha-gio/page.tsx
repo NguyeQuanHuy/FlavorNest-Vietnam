@@ -1,12 +1,12 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-cha-gio',
-    title: 'Crispy Spring Roll Vermicelli (Bún Chả Giò)',
+    title: 'Crispy Spring Roll Vermicelli (B�n Ch? Gi�)',
     subtitle:
-        'Bún Chả Giò — a satisfying bowl of crispy, golden-fried spring rolls layered over cool rice vermicelli, fresh herbs, and a classic sweet and tangy dipping sauce.',
+        'B�n Ch? Gi� � a satisfying bowl of crispy, golden-fried spring rolls layered over cool rice vermicelli, fresh herbs, and a classic sweet and tangy dipping sauce.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
@@ -14,10 +14,10 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/bun-cha-gio.jpg',
     intro:
-        'Bún Chả Giò is the perfect harmony of temperatures and textures. It brings together the hot, shattering crunch of deep-fried spring rolls with the refreshing coolness of rice noodles and raw vegetables. Unlike many noodle soups, this is a "dry" noodle dish, where the soul lies in the Nước Chấm—the iconic Vietnamese dressing that ties the savory pork filling and the garden-fresh herbs into one vibrant, addictive meal.',
+        'B�n Ch? Gi� is the perfect harmony of temperatures and textures. It brings together the hot, shattering crunch of deep-fried spring rolls with the refreshing coolness of rice noodles and raw vegetables. Unlike many noodle soups, this is a "dry" noodle dish, where the soul lies in the Nu?c Ch?m�the iconic Vietnamese dressing that ties the savory pork filling and the garden-fresh herbs into one vibrant, addictive meal.',
     ingredientSections: [
         {
-            title: 'Crispy Spring Rolls (Chả Giò)',
+            title: 'Crispy Spring Rolls (Ch? Gi�)',
             items: [
                 { amount: 300, unit: 'g', name: 'ground pork', note: 'or minced shrimp' },
                 { amount: 50, unit: 'g', name: 'wood ear mushrooms', note: 'soaked and minced' },
@@ -39,7 +39,7 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Dressing (Nước Chấm)',
+            title: 'Dressing (Nu?c Ch?m)',
             items: [
                 { amount: 4, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 4, unit: 'tbsp', name: 'sugar' },
@@ -61,7 +61,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Fry until golden',
-            description: 'Heat oil over medium-high heat. Fry the rolls in batches for 8–10 minutes until the skin is blistered and golden brown.',
+            description: 'Heat oil over medium-high heat. Fry the rolls in batches for 8�10 minutes until the skin is blistered and golden brown.',
             tip: 'For maximum crunch, double-fry the rolls: fry once at a lower heat to cook through, and a second time at high heat to crisp the skin.',
         },
         {

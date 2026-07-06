@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/banh-xeo.jpg',
-    intro: `Banh xeo â€” the name is onomatopoeia for the sound the batter makes hitting the hot pan. A giant turmeric-yellow crepe, crispy at the edges and stuffed with shrimp, pork belly, and bean sprouts. You do not eat it with a fork. You break it apart with your hands, wrap each piece in a mustard leaf with fresh herbs, and dip into nuoc cham. The eating is as important as the cooking.`,
+    intro: `Banh xeo — the name is onomatopoeia for the sound the batter makes hitting the hot pan. A giant turmeric-yellow crepe, crispy at the edges and stuffed with shrimp, pork belly, and bean sprouts. You do not eat it with a fork. You break it apart with your hands, wrap each piece in a mustard leaf with fresh herbs, and dip into nuoc cham. The eating is as important as the cooking.`,
     ingredientSections: [
         {
             title: 'Crepe batter',
@@ -56,7 +56,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cook the crepe',
-            description: `Heat a 30cm non-stick pan over high heat until smoking. Add 2 tablespoons oil. Add 3 to 4 pork slices and 4 to 5 prawns. Cook 1 minute. Add bean sprouts and shallots. Pour in enough batter to coat the pan thinly â€” swirl immediately. Cover with lid for 3 minutes.`,
+            description: `Heat a 30cm non-stick pan over high heat until smoking. Add 2 tablespoons oil. Add 3 to 4 pork slices and 4 to 5 prawns. Cook 1 minute. Add bean sprouts and shallots. Pour in enough batter to coat the pan thinly — swirl immediately. Cover with lid for 3 minutes.`,
             tip: `The pan must be very hot and the batter poured in one confident swirl. Hesitation produces uneven thickness and soft spots.`,
         },
         {

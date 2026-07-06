@@ -1,4 +1,4 @@
-Ôªø'use client'
+'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -28,27 +28,27 @@ const RECIPES: Recipe[] = [
     {
         slug: 'pho-bo',
         title: 'Hanoi Beef Pho',
-        subtitle: 'Ph·ªü B√≤ H√† N·ªôi',
+        subtitle: 'Ph? BÚ H‡ N?i',
         image: '/images/recipes/pho-bo-ha-noi.jpg',
         region: 'Northern', difficulty: 'Medium', time: '3 hrs',
         rating: '4.9', reviews: 248, cal: 420, tag: 'Popular', tagColor: '#D97706',
-        description: "Slow-simmered bone broth, silky rice noodles, paper-thin slices of beef ‚Äî the dish that defines Hanoi mornings. The secret is in the charred ginger and onion, the star anise and cinnamon that perfume the broth for hours. Served with a plate of fresh herbs, bean sprouts and lime, it is Vietnam's most beloved bowl.",
+        description: "Slow-simmered bone broth, silky rice noodles, paper-thin slices of beef ó the dish that defines Hanoi mornings. The secret is in the charred ginger and onion, the star anise and cinnamon that perfume the broth for hours. Served with a plate of fresh herbs, bean sprouts and lime, it is Vietnam's most beloved bowl.",
         tags: ['Beef', 'Noodles', 'Slow Cook', 'Heritage'],
     },
     {
         slug: 'banh-mi-trung',
         title: 'Egg Banh Mi',
-        subtitle: 'B√°nh M√¨ ·ªêp La',
+        subtitle: 'B·nh MÏ ?p La',
         image: '/images/recipes/banh-mi-op-la.jpg',
         region: 'Southern', difficulty: 'Easy', time: '15 min',
         rating: '4.7', reviews: 189, cal: 310, tag: 'Quick & Easy', tagColor: '#059669',
-        description: "A crusty French baguette split open and loaded with a sunny-side-up egg, chicken p√¢t√©, pickled daikon and carrots, fresh cucumber, cilantro and a generous drizzle of Maggi seasoning sauce. Saigon's answer to the breakfast sandwich ‚Äî done in ten minutes, eaten on the go, impossible to improve.",
+        description: "A crusty French baguette split open and loaded with a sunny-side-up egg, chicken p‚tÈ, pickled daikon and carrots, fresh cucumber, cilantro and a generous drizzle of Maggi seasoning sauce. Saigon's answer to the breakfast sandwich ó done in ten minutes, eaten on the go, impossible to improve.",
         tags: ['Bread', 'Eggs', 'Quick', 'Street Food'],
     },
     {
         slug: 'xoi-xeo',
         title: 'Mung Bean Sticky Rice',
-        subtitle: 'X√¥i X√©o',
+        subtitle: 'XÙi XÈo',
         image: '/images/recipes/xoi-xeo.jpg',
         region: 'Northern', difficulty: 'Easy', time: '1 hr',
         rating: '4.8', reviews: 134, cal: 380, tag: 'Popular', tagColor: '#D97706',
@@ -58,27 +58,27 @@ const RECIPES: Recipe[] = [
     {
         slug: 'banh-cuon',
         title: 'Steamed Rice Rolls',
-        subtitle: 'B√°nh Cu·ªën',
+        subtitle: 'B·nh Cu?n',
         image: '/images/recipes/banh-cuon.jpg',
         region: 'Northern', difficulty: 'Medium', time: '45 min',
         rating: '4.8', reviews: 167, cal: 290, tag: 'Popular', tagColor: '#D97706',
-        description: "Translucent sheets of steamed rice batter, almost impossibly thin, rolled around a filling of seasoned minced pork and wood ear mushrooms. Finished with crispy fried shallots, a scattering of fresh herbs and a bowl of nem chua dipping sauce. Each sheet is made to order on a cloth stretched over boiling water ‚Äî breakfast as performance.",
+        description: "Translucent sheets of steamed rice batter, almost impossibly thin, rolled around a filling of seasoned minced pork and wood ear mushrooms. Finished with crispy fried shallots, a scattering of fresh herbs and a bowl of nem chua dipping sauce. Each sheet is made to order on a cloth stretched over boiling water ó breakfast as performance.",
         tags: ['Rice Flour', 'Pork', 'Steamed', 'Heritage'],
     },
     {
         slug: 'chao-long',
         title: 'Pork Congee',
-        subtitle: 'Ch√°o L√≤ng',
+        subtitle: 'Ch·o LÚng',
         image: '/images/recipes/chao-long.jpg',
         region: 'Southern', difficulty: 'Easy', time: '1.5 hrs',
         rating: '4.6', reviews: 98, cal: 340, tag: 'Comfort Food', tagColor: '#7C3AED',
-        description: "Silky, slow-cooked rice porridge enriched with pork offal ‚Äî intestines, liver and heart ‚Äî gently simmered in a ginger-scented broth until the grains dissolve into pure comfort. Finished with fried garlic, fresh ginger, a drizzle of sesame oil and a crack of white pepper. Saigon's ultimate restorative breakfast.",
+        description: "Silky, slow-cooked rice porridge enriched with pork offal ó intestines, liver and heart ó gently simmered in a ginger-scented broth until the grains dissolve into pure comfort. Finished with fried garlic, fresh ginger, a drizzle of sesame oil and a crack of white pepper. Saigon's ultimate restorative breakfast.",
         tags: ['Rice', 'Pork', 'Slow Cook', 'Comfort'],
     },
     {
         slug: 'banh-trang-tron',
         title: 'Rice Paper Salad',
-        subtitle: 'B√°nh Tr√°ng Tr·ªôn',
+        subtitle: 'B·nh Tr·ng Tr?n',
         image: '/images/recipes/banh-trang-tron.jpg',
         region: 'Southern', difficulty: 'Easy', time: '20 min',
         rating: '4.7', reviews: 212, cal: 220, tag: 'Street Snack', tagColor: '#BE185D',
@@ -96,7 +96,7 @@ const RECIPES: Recipe[] = [
         reviews: 94,
         region: 'Central',
         cal: 460,
-        description: "Feather-light woven mats of rice vermicelli served with silky pork congee, offal and fresh herbs ‚Äî the dawn breakfast of Ph√∫ Y√™n.",
+        description: "Feather-light woven mats of rice vermicelli served with silky pork congee, offal and fresh herbs ó the dawn breakfast of Ph˙ YÍn.",
         tag: 'Breakfast',
         tagColor: '#EA580C',
         tags: ['Hearty', 'Pork', 'Comforting'],
@@ -104,21 +104,21 @@ const RECIPES: Recipe[] = [
     {
         slug: 'hu-tieu',
         title: 'Southern Pork Noodle Soup',
-        subtitle: 'H·ªß Ti·∫øu',
+        subtitle: 'H? Ti?u',
         image: '/images/recipes/hu-tieu.jpg',
         region: 'Southern', difficulty: 'Medium', time: '2 hrs',
         rating: '4.8', reviews: 234, cal: 480, tag: 'Saigon Morning', tagColor: '#D97706',
-        description: "Clear pork-and-dried-squid broth crowned with shrimp, sliced pork, quail eggs and a tangle of springy rice noodles, finished with crispy garlic and chives. The Southern answer to ph·ªü ‚Äî eaten 'kh√¥' (dry, broth on the side) or 'n∆∞·ªõc' (in soup), the choice defines you. Each Mekong town has its own version: M·ªπ Tho with crab, Sa ƒê√©c with offal, S√†i G√≤n richest of all.",
+        description: "Clear pork-and-dried-squid broth crowned with shrimp, sliced pork, quail eggs and a tangle of springy rice noodles, finished with crispy garlic and chives. The Southern answer to ph? ó eaten 'khÙ' (dry, broth on the side) or 'nu?c' (in soup), the choice defines you. Each Mekong town has its own version: M? Tho with crab, Sa –Èc with offal, S‡i GÚn richest of all.",
         tags: ['Pork', 'Noodles', 'Saigon', 'Mekong'],
     },
     {
         slug: 'chao-ga',
         title: 'Vietnamese Chicken Congee',
-        subtitle: 'Ch√°o G√†',
+        subtitle: 'Ch·o G‡',
         image: '/images/recipes/chao-ga.jpg',
         region: 'Northern', difficulty: 'Easy', time: '1 hr 30 min',
         rating: '4.7', reviews: 178, cal: 320, tag: 'Sick Day Cure', tagColor: '#0284C7',
-        description: "Silky rice porridge built on a whole chicken simmered with charred ginger and onion, then shredded back into the pot at the end. Finished with fried shallots, spring onion and a violent crack of black pepper, alongside a saucer of fish sauce with fresh chilli. The soup every Vietnamese mother makes when someone has a cold ‚Äî and the soup that proves she was right.",
+        description: "Silky rice porridge built on a whole chicken simmered with charred ginger and onion, then shredded back into the pot at the end. Finished with fried shallots, spring onion and a violent crack of black pepper, alongside a saucer of fish sauce with fresh chilli. The soup every Vietnamese mother makes when someone has a cold ó and the soup that proves she was right.",
         tags: ['Chicken', 'Congee', 'Comfort', 'Healing'],
     },
     {
@@ -148,7 +148,7 @@ const RECIPES: Recipe[] = [
         reviews: 142,
         region: 'Southern',
         cal: 460,
-        description: 'Steamed glutinous rice piled high with Chinese sausage, shredded chicken, dried shrimp, fried shallots and a drizzle of soy ‚Äî Saigon street breakfast in a banana leaf.',
+        description: 'Steamed glutinous rice piled high with Chinese sausage, shredded chicken, dried shrimp, fried shallots and a drizzle of soy ó Saigon street breakfast in a banana leaf.',
         tag: 'Breakfast',
         tagColor: '#EA580C',
         tags: ['Sticky Rice', 'Hearty', 'Saigon'],
@@ -164,7 +164,7 @@ const RECIPES: Recipe[] = [
         reviews: 124,
         region: 'Northern',
         cal: 380,
-        description: 'A bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli ‚Äî Hai Phong style. Lighter than pho, and the favourite of those who want fish, not beef, before noon.',
+        description: 'A bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli ó Hai Phong style. Lighter than pho, and the favourite of those who want fish, not beef, before noon.',
         tag: 'Breakfast',
         tagColor: '#EA580C',
         tags: ['Fish', 'Noodle Soup', 'Northern'],
@@ -180,7 +180,7 @@ const RECIPES: Recipe[] = [
         reviews: 189,
         region: 'Southern',
         cal: 520,
-        description: 'Springy rice noodles tossed with sweet soy, fried garlic oil and a small mountain of toppings ‚Äî shrimp, pork, ground pork, quail eggs ‚Äî with a steaming bowl of pork broth on the side. Saigon mornings prefer this format.',
+        description: 'Springy rice noodles tossed with sweet soy, fried garlic oil and a small mountain of toppings ó shrimp, pork, ground pork, quail eggs ó with a steaming bowl of pork broth on the side. Saigon mornings prefer this format.',
         tag: 'Breakfast',
         tagColor: '#EA580C',
         tags: ['Pork', 'Saigon', 'Dry Noodles'],
@@ -196,7 +196,7 @@ const RECIPES: Recipe[] = [
         reviews: 267,
         region: 'Southern',
         cal: 540,
-        description: 'Tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth stained red with annatto ‚Äî eaten with a crusty banh mi for dipping or over rice noodles. Saigon family Sunday in a pot.',
+        description: 'Tender chunks of beef shank slow-braised in a fragrant lemongrass-and-star-anise broth stained red with annatto ó eaten with a crusty banh mi for dipping or over rice noodles. Saigon family Sunday in a pot.',
         tag: 'Breakfast',
         tagColor: '#EA580C',
         tags: ['Beef', 'Stew', 'Hearty'],
@@ -229,7 +229,7 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
                         style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
-                        {toast === 'added' ? '‚ô• Saved' : '‚úï Removed'}
+                        {toast === 'added' ? '? Saved' : '? Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -287,14 +287,14 @@ export default function BreakfastPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
             `}</style>
 
-            {/* ‚îÄ‚îÄ HERO ‚îÄ‚îÄ */}
+            {/* -- HERO -- */}
             <section className="bf-hero" style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Breakfast', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>‚Ä∫</span>}
+                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>õ</span>}
                                 {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
                                     : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
                             </span>
@@ -327,7 +327,7 @@ export default function BreakfastPage() {
                             margin: 0,
                             paddingLeft: 18,
                         }}>
-                            Start your day the Vietnamese way ‚Äî from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of ph·ªü</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy b√°nh m√¨</span>, these are the morning meals that fuel a nation.
+                            Start your day the Vietnamese way ó from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of ph?</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy b·nh mÏ</span>, these are the morning meals that fuel a nation.
                         </p>
                     </div>
                     <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
@@ -347,7 +347,7 @@ export default function BreakfastPage() {
                 </div>
             </section>
 
-            {/* ‚îÄ‚îÄ FILTER BAR ‚îÄ‚îÄ */}
+            {/* -- FILTER BAR -- */}
             <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '10px 12px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
@@ -359,7 +359,7 @@ export default function BreakfastPage() {
                 </div>
             </div>
 
-            {/* ‚îÄ‚îÄ GRID ‚îÄ‚îÄ */}
+            {/* -- GRID -- */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 12px 60px' }}>
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`}
@@ -372,7 +372,7 @@ export default function BreakfastPage() {
                                         <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
                                         <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px 5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)', textShadow: '0 1px 3px rgba(0,0,0,0.2)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>‚è± {recipe.time}</div>
+                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>? {recipe.time}</div>
                                         <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
                                             <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
                                             <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
@@ -400,14 +400,14 @@ export default function BreakfastPage() {
 
                 {filtered.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}>
-                        <div style={{ fontSize: 44, marginBottom: 12 }}>üåÖ</div>
+                        <div style={{ fontSize: 44, marginBottom: 12 }}>??</div>
                         <p style={{ fontSize: 16, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>No recipes match this filter.</p>
                     </div>
                 )}
             </section>
 
-            {/* ‚îÄ‚îÄ OTHER CATEGORIES ‚îÄ‚îÄ */}
-            {/* ‚îÄ‚îÄ OTHER CATEGORIES ‚îÄ‚îÄ */}
+            {/* -- OTHER CATEGORIES -- */}
+            {/* -- OTHER CATEGORIES -- */}
             <section style={{ borderTop: '1px solid rgba(75,46,26,0.08)', padding: '64px 32px 88px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, marginBottom: 12 }}>

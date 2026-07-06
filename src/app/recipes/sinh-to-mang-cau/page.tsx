@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'sinh-to-mang-cau',
-    title: 'Soursop Smoothie (Sinh tá»‘ mÃ£ng cáº§u)',
-    subtitle: 'Creamy, tropical, and naturally sweet â€” a Vietnamese fruit smoothie with a tangy custard-like flavor.',
+    title: 'Soursop Smoothie (Sinh t? mãng c?u)',
+    subtitle: 'Creamy, tropical, and naturally sweet — a Vietnamese fruit smoothie with a tangy custard-like flavor.',
     category: 'DESSERT',
     difficulty: 'Easy',
     totalTime: '10 min',
@@ -12,15 +12,15 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/sinh-to-mang-cau.jpg',
 
-    intro: `Sinh tá»‘ mÃ£ng cáº§u is one of Vietnamâ€™s most beloved tropical smoothies. Made from ripe soursop (mÃ£ng cáº§u), it has a unique flavor that blends banana-like sweetness with a light citrus tang and creamy custard texture.
+    intro: `Sinh t? mãng c?u is one of Vietnam’s most beloved tropical smoothies. Made from ripe soursop (mãng c?u), it has a unique flavor that blends banana-like sweetness with a light citrus tang and creamy custard texture.
 
-Blended with condensed milk and ice, this drink becomes rich, smooth, and naturally refreshing â€” a perfect balance between dessert and beverage. It is commonly sold in Vietnamese fruit juice shops and street cafÃ©s.`,
+Blended with condensed milk and ice, this drink becomes rich, smooth, and naturally refreshing — a perfect balance between dessert and beverage. It is commonly sold in Vietnamese fruit juice shops and street cafés.`,
 
     ingredientSections: [
         {
             title: 'Main ingredients',
             items: [
-                { amount: 300, unit: 'g', name: 'ripe soursop (mÃ£ng cáº§u)', note: 'seed removed' },
+                { amount: 300, unit: 'g', name: 'ripe soursop (mãng c?u)', note: 'seed removed' },
                 { amount: 150, unit: 'ml', name: 'milk', note: 'or fresh milk' },
                 { amount: 2, unit: 'tbsp', name: 'condensed milk' },
                 { amount: 1, unit: 'cup', name: 'ice cubes' },
@@ -39,7 +39,7 @@ Blended with condensed milk and ice, this drink becomes rich, smooth, and natura
         {
             title: 'Prepare the fruit',
             description: 'Peel the soursop and remove all black seeds. Keep only the soft white flesh.',
-            tip: 'Make sure all seeds are removed â€” they are not edible.',
+            tip: 'Make sure all seeds are removed — they are not edible.',
         },
         {
             title: 'Blend',

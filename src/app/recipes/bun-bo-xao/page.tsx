@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-bo-xao',
     title: 'Stir-fried Beef with Rice Noodles (Bun Bo Xao)',
-    subtitle: 'Fragrant stir-fried beef with rice noodles, herbs, and sweet-savory sauce â€” a popular Vietnamese street dish.',
+    subtitle: 'Fragrant stir-fried beef with rice noodles, herbs, and sweet-savory sauce — a popular Vietnamese street dish.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '30 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/bun-bo-xao.jpg',
 
-    intro: `BÃºn bÃ² xÃ o is a popular Vietnamese street food dish made with stir-fried beef, rice noodles, fresh herbs, and a sweet-salty dressing.
+    intro: `Bún bò xào is a popular Vietnamese street food dish made with stir-fried beef, rice noodles, fresh herbs, and a sweet-salty dressing.
 
 Unlike soup-based noodles, this dish is served dry but very flavorful, combining tender beef, aromatic garlic, and fresh vegetables over soft rice noodles.`,
 
@@ -20,7 +20,7 @@ Unlike soup-based noodles, this dish is served dry but very flavorful, combining
         {
             title: 'Main ingredients',
             items: [
-                { amount: 200, unit: 'g', name: 'rice noodles (bÃºn)' },
+                { amount: 200, unit: 'g', name: 'rice noodles (bún)' },
                 { amount: 250, unit: 'g', name: 'beef sirloin', note: 'thinly sliced' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'carrot', note: 'julienned' },
@@ -63,7 +63,7 @@ Unlike soup-based noodles, this dish is served dry but very flavorful, combining
         },
         {
             title: 'Prepare vegetables',
-            description: 'Quickly sautÃ© carrots or keep them raw for crunchiness.',
+            description: 'Quickly sauté carrots or keep them raw for crunchiness.',
         },
         {
             title: 'Assemble bowl',

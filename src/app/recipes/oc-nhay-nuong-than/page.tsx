@@ -1,34 +1,34 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'oc-nhay-nuong-than',
-    title: '·ªêc Nh·∫£y N∆∞·ªõng Than Ph√∫ Y√™n (Ph√∫ Y√™n Grilled Jumping Snails)',
-    subtitle: 'The jumping snails of Ph√∫ Y√™n\'s rocky coast ‚Äî named for the way they leap using their sharp operculum when disturbed ‚Äî grilled directly on hardwood charcoal until the shells char and the flesh inside cooks in its own briny liquid, served with mu·ªëi l√° √© and the sesame crackers that accompany every Ph√∫ Y√™n grilled seafood.',
+    title: '?c Nh?y Nu?ng Than Ph˙ YÍn (Ph˙ YÍn Grilled Jumping Snails)',
+    subtitle: 'The jumping snails of Ph˙ YÍn\'s rocky coast ó named for the way they leap using their sharp operculum when disturbed ó grilled directly on hardwood charcoal until the shells char and the flesh inside cooks in its own briny liquid, served with mu?i l· È and the sesame crackers that accompany every Ph˙ YÍn grilled seafood.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/oc-nhay-nuong-than.jpg',
-    intro: `·ªêc nh·∫£y ‚Äî jumping snails, Strombus canarium and related species ‚Äî are the snail that is most identified with the rocky coastline of Ph√∫ Y√™n and B√¨nh ƒê·ªãnh, the two central provinces where the combination of clean, oxygenated reef water, rocky substrate, and specific water temperature produces jumping snails of exceptional quality. The name comes from their defense mechanism: unlike most snails that rely on their shell for protection, the jumping snail uses its sharp, claw-shaped operculum as a lever, pushing it against the surface and vaulting the shell away from danger in a movement that is startlingly rapid for an animal that otherwise moves at snail pace. Market vendors handling large quantities of live jumping snails keep them in shallow trays where this jumping behavior is dramatically visible ‚Äî and where keeping them contained is a continuous effort. The flavor of ·ªëc nh·∫£y is among the finest of any Vietnamese snail species: cleaner than the mud-dwelling freshwater snails, more complex than the estuarine periwinkles, with a specific sweetness that comes from the reef water they inhabit and a firm, slightly chewy texture that holds up to charcoal grilling without toughening. The n∆∞·ªõng than preparation ‚Äî direct charcoal grilling with nothing added ‚Äî is the specific Ph√∫ Y√™n approach to ·ªëc nh·∫£y. The shells are placed directly on the glowing coals and the snail cooks in the small amount of seawater retained in the shell from its live state, which concentrates during the grilling into an intensely briny, slightly caramelized liquid that is the most flavorful element of the entire preparation. Mu·ªëi l√° √© ‚Äî appearing here in its ninth and most natural application ‚Äî is the condiment that exists for exactly this kind of preparation: pure fire-cooked seafood that needs aromatic complexity without sweetness or pungency.`,
+    intro: `?c nh?y ó jumping snails, Strombus canarium and related species ó are the snail that is most identified with the rocky coastline of Ph˙ YÍn and BÏnh –?nh, the two central provinces where the combination of clean, oxygenated reef water, rocky substrate, and specific water temperature produces jumping snails of exceptional quality. The name comes from their defense mechanism: unlike most snails that rely on their shell for protection, the jumping snail uses its sharp, claw-shaped operculum as a lever, pushing it against the surface and vaulting the shell away from danger in a movement that is startlingly rapid for an animal that otherwise moves at snail pace. Market vendors handling large quantities of live jumping snails keep them in shallow trays where this jumping behavior is dramatically visible ó and where keeping them contained is a continuous effort. The flavor of ?c nh?y is among the finest of any Vietnamese snail species: cleaner than the mud-dwelling freshwater snails, more complex than the estuarine periwinkles, with a specific sweetness that comes from the reef water they inhabit and a firm, slightly chewy texture that holds up to charcoal grilling without toughening. The nu?ng than preparation ó direct charcoal grilling with nothing added ó is the specific Ph˙ YÍn approach to ?c nh?y. The shells are placed directly on the glowing coals and the snail cooks in the small amount of seawater retained in the shell from its live state, which concentrates during the grilling into an intensely briny, slightly caramelized liquid that is the most flavorful element of the entire preparation. Mu?i l· È ó appearing here in its ninth and most natural application ó is the condiment that exists for exactly this kind of preparation: pure fire-cooked seafood that needs aromatic complexity without sweetness or pungency.`,
     ingredientSections: [
         {
             title: 'Jumping snails',
             items: [
-                { amount: 1.2, unit: 'kg', name: 'live ·ªëc nh·∫£y (jumping snails / Strombus canarium)', note: 'alive and active ‚Äî the jumping behavior is the proof of freshness. Available at Ph√∫ Y√™n and B√¨nh ƒê·ªãnh coastal markets, and some Vietnamese specialty seafood suppliers. Substitute: any live Strombus species, or large whelks.' },
+                { amount: 1.2, unit: 'kg', name: 'live ?c nh?y (jumping snails / Strombus canarium)', note: 'alive and active ó the jumping behavior is the proof of freshness. Available at Ph˙ YÍn and BÏnh –?nh coastal markets, and some Vietnamese specialty seafood suppliers. Substitute: any live Strombus species, or large whelks.' },
             ],
         },
         {
             title: 'Charcoal fire',
             items: [
-                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ‚Äî the same temperature as for other direct coal preparations in the Ph√∫ Y√™n series' },
+                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ó the same temperature as for other direct coal preparations in the Ph˙ YÍn series' },
             ],
         },
         {
-            title: 'Mu·ªëi l√° √© Ph√∫ Y√™n ‚Äî ninth application',
+            title: 'Mu?i l· È Ph˙ YÍn ó ninth application',
             items: [
-                { amount: 25, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)' },
+                { amount: 25, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -39,9 +39,9 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)', note: 'the Ph√∫ Y√™n accompaniment that appears with every grilled seafood in the province' },
-                { amount: 1, name: 'bunch fresh l√° √© leaves', note: 'for eating raw alongside' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)' },
+                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)', note: 'the Ph˙ YÍn accompaniment that appears with every grilled seafood in the province' },
+                { amount: 1, name: 'bunch fresh l· È leaves', note: 'for eating raw alongside' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
                 { amount: 4, name: 'curved snail picks', note: 'for extracting the meat from the shell' },
@@ -52,33 +52,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Handle and rinse the jumping snails',
-            description: 'Handle ·ªëc nh·∫£y with care ‚Äî their operculum is sharp enough to puncture skin when the snail jumps against your hand. Rinse under cold running water, scrubbing the exterior shells briefly. Do not purge in salt water ‚Äî jumping snails from clean reef water need only rinsing. The seawater naturally retained inside each live shell is part of the preparation: it will concentrate during grilling into the intensely briny cooking liquid that is the most flavorful element of ·ªëc nh·∫£y n∆∞·ªõng.',
-            tip: 'The seawater inside the live jumping snail is the "sauce" for this dish ‚Äî it is not added, it is retained. This is why ·ªëc nh·∫£y n∆∞·ªõng uses no marinade, no seasoning, and no added liquid. The snail cooks in the concentrated seawater of its own shell. This is the Ph√∫ Y√™n m·ªçi philosophy applied to shellfish: fire and the ingredient itself, nothing between them.',
+            description: 'Handle ?c nh?y with care ó their operculum is sharp enough to puncture skin when the snail jumps against your hand. Rinse under cold running water, scrubbing the exterior shells briefly. Do not purge in salt water ó jumping snails from clean reef water need only rinsing. The seawater naturally retained inside each live shell is part of the preparation: it will concentrate during grilling into the intensely briny cooking liquid that is the most flavorful element of ?c nh?y nu?ng.',
+            tip: 'The seawater inside the live jumping snail is the "sauce" for this dish ó it is not added, it is retained. This is why ?c nh?y nu?ng uses no marinade, no seasoning, and no added liquid. The snail cooks in the concentrated seawater of its own shell. This is the Ph˙ YÍn m?i philosophy applied to shellfish: fire and the ingredient itself, nothing between them.',
         },
         {
             title: 'Build the charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over. For ·ªëc nh·∫£y specifically, the fire should be medium-hot ‚Äî more intense than for ·ªëc gi√°c h·∫•p but slightly less than for the most aggressive preparations. The shells of jumping snails are thinner than turban snails and conduct heat more rapidly. Hold your hand 15cm above the coals ‚Äî 3-4 seconds before the heat is too intense is the correct temperature.',
+            description: 'Light hardwood charcoal and wait until fully ashed over. For ?c nh?y specifically, the fire should be medium-hot ó more intense than for ?c gi·c h?p but slightly less than for the most aggressive preparations. The shells of jumping snails are thinner than turban snails and conduct heat more rapidly. Hold your hand 15cm above the coals ó 3-4 seconds before the heat is too intense is the correct temperature.',
             tip: 'Jumping snail shells crack and open when the fire is too hot, releasing the concentrated seawater cooking liquid onto the coals before the snail meat has fully cooked. The medium-hot fire produces enough heat to char the shell and cook the snail in 6-8 minutes without cracking the shell before it is done.',
         },
         {
             title: 'Grill shell-opening-up directly on coals',
-            description: 'Place the jumping snails shell-opening-up directly on the glowing charcoal ‚Äî the opposite orientation from turban snails. The opening faces up specifically to retain the seawater inside the shell during grilling. As the shell heats, the seawater inside will begin to bubble visibly at the shell opening ‚Äî this is the signal the snail is cooking. Grill for 6-8 minutes, moving slightly if any individual shells are charring too aggressively.',
-            tip: 'The bubbling seawater at the shell opening is the visual cooking indicator specific to ·ªëc nh·∫£y n∆∞·ªõng. At 3-4 minutes: the bubbling begins. At 6-7 minutes: the bubbling slows as the liquid reduces and concentrates. At 8 minutes: the bubbling has almost stopped ‚Äî the concentrated liquid has caramelized slightly and the snail is done. Pull immediately.',
+            description: 'Place the jumping snails shell-opening-up directly on the glowing charcoal ó the opposite orientation from turban snails. The opening faces up specifically to retain the seawater inside the shell during grilling. As the shell heats, the seawater inside will begin to bubble visibly at the shell opening ó this is the signal the snail is cooking. Grill for 6-8 minutes, moving slightly if any individual shells are charring too aggressively.',
+            tip: 'The bubbling seawater at the shell opening is the visual cooking indicator specific to ?c nh?y nu?ng. At 3-4 minutes: the bubbling begins. At 6-7 minutes: the bubbling slows as the liquid reduces and concentrates. At 8 minutes: the bubbling has almost stopped ó the concentrated liquid has caramelized slightly and the snail is done. Pull immediately.',
         },
         {
-            title: 'Pound the mu·ªëi l√° √©',
-            description: 'Pound l√° √© leaves with salt, pepper, sugar, and chili in a mortar for 2-3 minutes until completely broken down and the salt is intensely fragrant green. For ·ªëc nh·∫£y the mu·ªëi l√° √© should be slightly saltier than for other preparations ‚Äî the concentrated seawater cooking liquid inside the shell provides some seasoning, but the snail meat itself is neutral and needs assertive salt contact from the dipping preparation.',
-            tip: 'This is the ninth application of mu·ªëi l√° √© in the Ph√∫ Y√™n series ‚Äî across seafood, meat, poultry, and now shellfish. The consistency of the condiment across all proteins is the province\'s most defining culinary characteristic. The same pounded salt that completes a flower crab or a goat salad completes a jumping snail.',
+            title: 'Pound the mu?i l· È',
+            description: 'Pound l· È leaves with salt, pepper, sugar, and chili in a mortar for 2-3 minutes until completely broken down and the salt is intensely fragrant green. For ?c nh?y the mu?i l· È should be slightly saltier than for other preparations ó the concentrated seawater cooking liquid inside the shell provides some seasoning, but the snail meat itself is neutral and needs assertive salt contact from the dipping preparation.',
+            tip: 'This is the ninth application of mu?i l· È in the Ph˙ YÍn series ó across seafood, meat, poultry, and now shellfish. The consistency of the condiment across all proteins is the province\'s most defining culinary characteristic. The same pounded salt that completes a flower crab or a goat salad completes a jumping snail.',
         },
         {
-            title: 'Extract and eat ‚Äî the Ph√∫ Y√™n coastal rhythm',
-            description: 'Remove the snails from the coals. The shells are extremely hot ‚Äî use tongs and allow 2 minutes to cool slightly. The operculum will have detached during cooking ‚Äî remove it first with a pick. Inside, the small amount of concentrated seawater cooking liquid should be visible ‚Äî a dark, intensely briny caramelized drop. Tilt the shell to let this liquid touch the lips before extracting the meat with the curved pick. Dip the extracted meat in the lime-squeezed mu·ªëi l√° √©. Place on a sesame cracker with a raw l√° √© leaf. Eat in one bite.',
-            tip: 'The concentrated cooking liquid inside the grilled shell ‚Äî the few drops of caramelized seawater ‚Äî should be tasted before the meat is extracted. It is the most intensely flavored element of the entire preparation: the sea reduced to its essence by fire. In Ph√∫ Y√™n, coastal diners tip each shell to their lips for this liquid before the pick goes in. This sequence is the correct way to eat ·ªëc nh·∫£y n∆∞·ªõng.',
+            title: 'Extract and eat ó the Ph˙ YÍn coastal rhythm',
+            description: 'Remove the snails from the coals. The shells are extremely hot ó use tongs and allow 2 minutes to cool slightly. The operculum will have detached during cooking ó remove it first with a pick. Inside, the small amount of concentrated seawater cooking liquid should be visible ó a dark, intensely briny caramelized drop. Tilt the shell to let this liquid touch the lips before extracting the meat with the curved pick. Dip the extracted meat in the lime-squeezed mu?i l· È. Place on a sesame cracker with a raw l· È leaf. Eat in one bite.',
+            tip: 'The concentrated cooking liquid inside the grilled shell ó the few drops of caramelized seawater ó should be tasted before the meat is extracted. It is the most intensely flavored element of the entire preparation: the sea reduced to its essence by fire. In Ph˙ YÍn, coastal diners tip each shell to their lips for this liquid before the pick goes in. This sequence is the correct way to eat ?c nh?y nu?ng.',
         },
         {
-            title: 'The complete Ph√∫ Y√™n coastal experience',
-            description: '·ªêc nh·∫£y n∆∞·ªõng than Ph√∫ Y√™n is eaten at rocky-shore restaurants on the coast between Tuy H√≤a and S√¥ng C·∫ßu ‚Äî open-sided structures built above the water line where the smell of the sea and the smell of the charcoal are indistinguishable, and where the jumping snails arrive at the table still smoking from the coals. The sesame crackers from Tuy An, the raw l√° √© leaves, the mu·ªëi l√° √©, and the cold beer are the complete context. At home: the charcoal fire on a balcony or garden, the same condiments, the same sequence. The experience travels if the ingredients do.',
-            tip: '·ªêc nh·∫£y n∆∞·ªõng eaten immediately from the coals ‚Äî when the shells are still too hot to hold comfortably ‚Äî is fundamentally different from ·ªëc nh·∫£y that has cooled on a plate. The concentrated cooking liquid inside the shell is at its most intensely flavored when the shell is still hot. The heat is part of the experience, not an obstacle to it.',
+            title: 'The complete Ph˙ YÍn coastal experience',
+            description: '?c nh?y nu?ng than Ph˙ YÍn is eaten at rocky-shore restaurants on the coast between Tuy HÚa and SÙng C?u ó open-sided structures built above the water line where the smell of the sea and the smell of the charcoal are indistinguishable, and where the jumping snails arrive at the table still smoking from the coals. The sesame crackers from Tuy An, the raw l· È leaves, the mu?i l· È, and the cold beer are the complete context. At home: the charcoal fire on a balcony or garden, the same condiments, the same sequence. The experience travels if the ingredients do.',
+            tip: '?c nh?y nu?ng eaten immediately from the coals ó when the shells are still too hot to hold comfortably ó is fundamentally different from ?c nh?y that has cooled on a plate. The concentrated cooking liquid inside the shell is at its most intensely flavored when the shell is still hot. The heat is part of the experience, not an obstacle to it.',
         },
     ],
 };

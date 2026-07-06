@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'sam-bo-luong',
     title: 'Mixed Sweet Soup',
-    subtitle: 'Sam bo luong â€” a Cantonese-Vietnamese cooling tonic of lotus seeds, longan, white fungus and sea coconut.',
+    subtitle: 'Sam bo luong — a Cantonese-Vietnamese cooling tonic of lotus seeds, longan, white fungus and sea coconut.',
     category: 'DESSERT',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/sam-bo-luong.jpg',
-    intro: 'Sam bo luong is the drink Vietnamese families turn to when the body "runs hot" â€” too much sun, too much spicy food, too many fried things at a wedding. A medicinal Cantonese-Vietnamese tonic, it combines lotus seeds, dried longan, white wood ear fungus, dried jujube, pearl barley, sea coconut and seaweed in a faintly sweet rock-sugar broth, served chilled with shaved ice. Each ingredient has a traditional cooling property; together they make a drink that is genuinely refreshing, surprisingly herbal, and unlike anything in Western beverage culture.',
+    intro: 'Sam bo luong is the drink Vietnamese families turn to when the body "runs hot" — too much sun, too much spicy food, too many fried things at a wedding. A medicinal Cantonese-Vietnamese tonic, it combines lotus seeds, dried longan, white wood ear fungus, dried jujube, pearl barley, sea coconut and seaweed in a faintly sweet rock-sugar broth, served chilled with shaved ice. Each ingredient has a traditional cooling property; together they make a drink that is genuinely refreshing, surprisingly herbal, and unlike anything in Western beverage culture.',
     ingredientSections: [
         {
             title: 'Soak overnight',
@@ -62,11 +62,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Cool and chill',
-            description: 'Remove pandan leaves. Stir in the sliced sea coconut and any fresh or canned longan. Cool to room temperature, then refrigerate at least 2 hours â€” sam bo luong must be served properly cold.',
+            description: 'Remove pandan leaves. Stir in the sliced sea coconut and any fresh or canned longan. Cool to room temperature, then refrigerate at least 2 hours — sam bo luong must be served properly cold.',
         },
         {
             title: 'Serve over shaved ice',
-            description: 'Ladle into tall glasses. Top each with a generous mound of shaved ice or crushed ice. Serve with a long spoon for chasing the lotus seeds and longan around the glass. The drink should taste cold, faintly sweet, gently herbal â€” and leave you genuinely cooler than when you started.',
+            description: 'Ladle into tall glasses. Top each with a generous mound of shaved ice or crushed ice. Serve with a long spoon for chasing the lotus seeds and longan around the glass. The drink should taste cold, faintly sweet, gently herbal — and leave you genuinely cooler than when you started.',
             tip: 'Best on day two, when the flavours have deepened in the fridge. Keeps 4 days refrigerated.',
         },
     ],

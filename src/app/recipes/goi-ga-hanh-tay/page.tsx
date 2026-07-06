@@ -1,34 +1,34 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-ga-hanh-tay',
     title: 'Vietnamese Chicken & Onion Salad',
-    subtitle: 'G·ªèi g√† h√†nh t√¢y ‚Äî gi√≤n s·∫ßn s·∫≠t, chua cay, thanh m√°t.',
+    subtitle: 'G?i g‡ h‡nh t‚y ó giÚn s?n s?t, chua cay, thanh m·t.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '35 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-ga-hanh-tay.jpgs',
-    intro: `Goi ga hanh tay is Vietnam's answer to the question of what to do with a perfectly poached chicken ‚Äî shred it, dress it, and turn it into something more alive than the sum of its parts. Thin ribbons of white onion, soaked just long enough to lose their aggression but keep their crunch. Shredded chicken, still warm or just cooled, pulling apart into soft fibres. A dressing that is the Vietnamese holy trinity: fish sauce, lime, sugar ‚Äî sharp, savoury, bright.
+    intro: `Goi ga hanh tay is Vietnam's answer to the question of what to do with a perfectly poached chicken ó shred it, dress it, and turn it into something more alive than the sum of its parts. Thin ribbons of white onion, soaked just long enough to lose their aggression but keep their crunch. Shredded chicken, still warm or just cooled, pulling apart into soft fibres. A dressing that is the Vietnamese holy trinity: fish sauce, lime, sugar ó sharp, savoury, bright.
 
-What makes this salad distinct from every other shredded chicken dish is texture layering. The onion gives snap. The chicken gives tenderness. Shredded kaffir lime leaf or Vietnamese coriander ‚Äî rau ram ‚Äî gives a perfumed bitterness that lifts the whole bowl. Crushed peanuts and fried shallots land on top like punctuation. It is a salad that feels substantial, refreshing, and deeply Vietnamese all at once ‚Äî equally at home as a starter at a family feast or a quick weeknight meal with a bowl of steamed rice.`,
+What makes this salad distinct from every other shredded chicken dish is texture layering. The onion gives snap. The chicken gives tenderness. Shredded kaffir lime leaf or Vietnamese coriander ó rau ram ó gives a perfumed bitterness that lifts the whole bowl. Crushed peanuts and fried shallots land on top like punctuation. It is a salad that feels substantial, refreshing, and deeply Vietnamese all at once ó equally at home as a starter at a family feast or a quick weeknight meal with a bowl of steamed rice.`,
     ingredientSections: [
         {
             title: 'Salad',
             items: [
-                { amount: 500, unit: 'g', name: 'chicken breast or thigh', note: 'bone-in poached whole, then shredded by hand ‚Äî never sliced' },
+                { amount: 500, unit: 'g', name: 'chicken breast or thigh', note: 'bone-in poached whole, then shredded by hand ó never sliced' },
                 { amount: 1, name: 'large white onion', note: 'halved, sliced paper-thin against the grain' },
                 { amount: 1, unit: 'tsp', name: 'salt', note: 'for soaking the onion' },
                 { amount: 1, unit: 'tsp', name: 'white vinegar', note: 'for soaking the onion' },
-                { amount: 20, unit: 'g', name: 'Vietnamese coriander (rau rƒÉm)', note: 'leaves only; substitute with Thai basil if unavailable' },
+                { amount: 20, unit: 'g', name: 'Vietnamese coriander (rau ram)', note: 'leaves only; substitute with Thai basil if unavailable' },
                 { amount: 10, unit: 'g', name: 'fresh mint leaves' },
                 { amount: 3, name: 'kaffir lime leaves', note: 'centre vein removed, rolled tight and sliced extremely thin' },
             ],
         },
         {
-            title: 'N∆∞·ªõc ch·∫•m dressing',
+            title: 'Nu?c ch?m dressing',
             items: [
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
                 { amount: 3, unit: 'tbsp', name: 'fresh lime juice', note: 'about 2 limes' },
@@ -41,7 +41,7 @@ What makes this salad distinct from every other shredded chicken dish is texture
         {
             title: 'To finish',
             items: [
-                { amount: 40, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed in a mortar ‚Äî not blended' },
+                { amount: 40, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed in a mortar ó not blended' },
                 { amount: 2, unit: 'tbsp', name: 'fried shallots', note: 'store-bought or homemade' },
                 { amount: 1, name: 'fresh red chilli', note: 'sliced thin, for garnish' },
                 { amount: 4, name: 'prawn crackers', note: 'optional, for serving alongside' },
@@ -52,24 +52,24 @@ What makes this salad distinct from every other shredded chicken dish is texture
         {
             title: 'Poach the chicken',
             description: 'Place chicken in a pot with enough cold water to cover by 3cm. Add 2 smashed garlic cloves, 3 slices ginger, 1 tsp salt, and 2 spring onion stalks. Bring to a gentle boil, then immediately reduce to the lowest simmer. Cook breast for 18 minutes, thigh for 22 minutes. Turn off heat and rest in the hot water for 10 minutes. Remove and cool slightly before shredding.',
-            tip: 'Never boil hard ‚Äî a gentle simmer keeps the meat tender and the poaching liquid clear enough to use as a light soup alongside.',
+            tip: 'Never boil hard ó a gentle simmer keeps the meat tender and the poaching liquid clear enough to use as a light soup alongside.',
         },
         {
             title: 'Soak the onion',
-            description: 'Place sliced onion in a bowl with 1 tsp salt, 1 tsp white vinegar, and enough cold water to cover. Soak for 15 minutes ‚Äî this draws out the harsh sulphur compounds without killing the crunch. Drain, rinse under cold water, and squeeze gently dry in a clean cloth.',
+            description: 'Place sliced onion in a bowl with 1 tsp salt, 1 tsp white vinegar, and enough cold water to cover. Soak for 15 minutes ó this draws out the harsh sulphur compounds without killing the crunch. Drain, rinse under cold water, and squeeze gently dry in a clean cloth.',
             tip: 'Under-soaked onion overpowers everything. Over-soaked onion goes limp. 15 minutes is the exact window.',
         },
         {
             title: 'Make the dressing',
-            description: 'Combine fish sauce, lime juice, sugar, and water in a small bowl. Stir until sugar fully dissolves. Add minced garlic and sliced chilli. Taste ‚Äî it should be a clear balance of salty, sour, and sweet with heat at the back. Adjust with more lime or fish sauce as needed.',
+            description: 'Combine fish sauce, lime juice, sugar, and water in a small bowl. Stir until sugar fully dissolves. Add minced garlic and sliced chilli. Taste ó it should be a clear balance of salty, sour, and sweet with heat at the back. Adjust with more lime or fish sauce as needed.',
         },
         {
             title: 'Shred the chicken',
-            description: 'Use two forks or your fingers to pull the chicken apart along the grain into thin, long fibres. Avoid cutting ‚Äî shredding gives a more natural texture that holds the dressing better. Season lightly with a pinch of salt and white pepper while still warm.',
+            description: 'Use two forks or your fingers to pull the chicken apart along the grain into thin, long fibres. Avoid cutting ó shredding gives a more natural texture that holds the dressing better. Season lightly with a pinch of salt and white pepper while still warm.',
         },
         {
             title: 'Assemble the salad',
-            description: 'In a large mixing bowl, combine shredded chicken, drained onion, rau ram, mint, and kaffir lime leaf. Pour two-thirds of the dressing over and toss well with clean hands or tongs, coating everything evenly. Taste and add more dressing as needed ‚Äî the salad should be well-seasoned, not drowning.',
+            description: 'In a large mixing bowl, combine shredded chicken, drained onion, rau ram, mint, and kaffir lime leaf. Pour two-thirds of the dressing over and toss well with clean hands or tongs, coating everything evenly. Taste and add more dressing as needed ó the salad should be well-seasoned, not drowning.',
             tip: 'Dress just before serving. Vietnamese salads dressed too early go limp and lose their freshness.',
         },
         {

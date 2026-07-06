@@ -1,37 +1,37 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'muc-nuong-muoi-la-e',
-    title: 'M·ª±c N∆∞·ªõng Mu·ªëi L√° √â Ph√∫ Y√™n (Ph√∫ Y√™n Charcoal Squid with Litsea Leaf Salt)',
-    subtitle: 'Fresh whole squid rubbed with coarse salt and grilled directly over hardwood charcoal until the skin chars and blisters ‚Äî the m·ªçi philosophy applied to squid, where the fire does what marinades attempt, and the mu·ªëi l√° √© provides everything the unseasoned exterior lacks.',
+    title: 'M?c Nu?ng Mu?i L· … Ph˙ YÍn (Ph˙ YÍn Charcoal Squid with Litsea Leaf Salt)',
+    subtitle: 'Fresh whole squid rubbed with coarse salt and grilled directly over hardwood charcoal until the skin chars and blisters ó the m?i philosophy applied to squid, where the fire does what marinades attempt, and the mu?i l· È provides everything the unseasoned exterior lacks.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '30 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/muc-nuong-muoi-la-e.jpg',
-    intro: `M·ª±c n∆∞·ªõng mu·ªëi l√° √© Ph√∫ Y√™n is the charcoal squid preparation that applies the n∆∞·ªõng m·ªçi philosophy ‚Äî fire and salt only, no marinade ‚Äî to m·ª±c t∆∞∆°i, the fresh squid of the Ph√∫ Y√™n coast. The m·ªçi technique has appeared throughout the Ph√∫ Y√™n series across multiple proteins: g√† n∆∞·ªõng m·ªçi for chicken, cua ƒë√° n∆∞·ªõng for rock crab, d√™ thui Ninh B√¨nh for goat, ·∫øch n∆∞·ªõng m·ªçi for frog. Applied to squid, it produces the most transparently honest expression of fresh squid that Vietnamese charcoal cooking achieves ‚Äî the fire caramelizes the natural sugars in the squid skin, the charcoal smoke perfumes the flesh from without, and the mu·ªëi l√° √© provides the aromatic dimension that the deliberately minimal preparation excludes from the cooking itself. Fresh squid from the Ph√∫ Y√™n coast ‚Äî particularly the squid from the waters around M≈©i ƒêi·ªán and the offshore fishing grounds that the province's boat fleet works ‚Äî is considered by coastal Vietnamese to be among the finest available on the central coast, with a specific sweetness attributed to the particular plankton and food sources of the upwelling cold water that flows along this coastline. This sweetness is most clearly perceptible when the squid is cooked with minimum intervention ‚Äî salt, fire, and nothing else ‚Äî which is precisely what m·ªçi philosophy requires and what mu·ªëi l√° √©, rather than a complex marinade, allows to remain at the centre of the eating experience. The mu·ªëi l√° √© with fresh grilled squid is a pairing of particular harmony: the wild citrus-pepper-camphor character of litsea cubeba and the clean marine sweetness of charcoal-grilled fresh squid are two flavors that amplify each other more than most condiment-protein combinations in the collection.`,
+    intro: `M?c nu?ng mu?i l· È Ph˙ YÍn is the charcoal squid preparation that applies the nu?ng m?i philosophy ó fire and salt only, no marinade ó to m?c tuoi, the fresh squid of the Ph˙ YÍn coast. The m?i technique has appeared throughout the Ph˙ YÍn series across multiple proteins: g‡ nu?ng m?i for chicken, cua d· nu?ng for rock crab, dÍ thui Ninh BÏnh for goat, ?ch nu?ng m?i for frog. Applied to squid, it produces the most transparently honest expression of fresh squid that Vietnamese charcoal cooking achieves ó the fire caramelizes the natural sugars in the squid skin, the charcoal smoke perfumes the flesh from without, and the mu?i l· È provides the aromatic dimension that the deliberately minimal preparation excludes from the cooking itself. Fresh squid from the Ph˙ YÍn coast ó particularly the squid from the waters around Mui –i?n and the offshore fishing grounds that the province's boat fleet works ó is considered by coastal Vietnamese to be among the finest available on the central coast, with a specific sweetness attributed to the particular plankton and food sources of the upwelling cold water that flows along this coastline. This sweetness is most clearly perceptible when the squid is cooked with minimum intervention ó salt, fire, and nothing else ó which is precisely what m?i philosophy requires and what mu?i l· È, rather than a complex marinade, allows to remain at the centre of the eating experience. The mu?i l· È with fresh grilled squid is a pairing of particular harmony: the wild citrus-pepper-camphor character of litsea cubeba and the clean marine sweetness of charcoal-grilled fresh squid are two flavors that amplify each other more than most condiment-protein combinations in the collection.`,
     ingredientSections: [
         {
             title: 'Squid',
             items: [
-                { amount: 600, unit: 'g', name: 'fresh whole squid (m·ª±c t∆∞∆°i), medium size', note: '12-15cm body length ‚Äî cleaned but left whole. The whole squid on the grill is the m·ªçi presentation.' },
-                { amount: 1, unit: 'tsp', name: 'coarse sea salt', note: 'the only seasoning ‚Äî rubbed over every surface' },
+                { amount: 600, unit: 'g', name: 'fresh whole squid (m?c tuoi), medium size', note: '12-15cm body length ó cleaned but left whole. The whole squid on the grill is the m?i presentation.' },
+                { amount: 1, unit: 'tsp', name: 'coarse sea salt', note: 'the only seasoning ó rubbed over every surface' },
                 { amount: 0.5, unit: 'tsp', name: 'white pepper', note: 'rubbed inside the body cavity' },
-                { amount: 1, unit: 'tbsp', name: 'neutral oil', note: 'brushed over the salted squid ‚Äî prevents sticking and helps the salt caramelize' },
+                { amount: 1, unit: 'tbsp', name: 'neutral oil', note: 'brushed over the salted squid ó prevents sticking and helps the salt caramelize' },
             ],
         },
         {
             title: 'Hardwood charcoal',
             items: [
-                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ‚Äî slightly less intense than for chicken m·ªçi because squid cooks faster' },
+                { amount: 0.5, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ó slightly less intense than for chicken m?i because squid cooks faster' },
             ],
         },
         {
-            title: 'Mu·ªëi l√° √© Ph√∫ Y√™n',
+            title: 'Mu?i l· È Ph˙ YÍn',
             items: [
-                { amount: 25, unit: 'g', name: 'fresh l√° √© leaves (litsea cubeba)' },
+                { amount: 25, unit: 'g', name: 'fresh l· È leaves (litsea cubeba)' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
@@ -42,9 +42,9 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 16, name: 'b√°nh tr√°ng m√® Tuy An (sesame rice crackers)' },
-                { amount: 1, name: 'bunch fresh l√° √© leaves' },
-                { amount: 1, name: 'bunch rau rƒÉm' },
+                { amount: 16, name: 'b·nh tr·ng mË Tuy An (sesame rice crackers)' },
+                { amount: 1, name: 'bunch fresh l· È leaves' },
+                { amount: 1, name: 'bunch rau ram' },
                 { amount: 1, name: 'green mango', note: 'julienned' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 4, unit: 'portions', name: 'steamed jasmine rice' },
@@ -53,29 +53,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Salt the squid ‚Äî 20 minutes',
-            description: 'Pat the cleaned whole squid completely dry. Rub coarse salt firmly over the exterior of the body tube, around the tentacle base, and over the fins. Rub white pepper inside the body cavity. Brush lightly with oil over the salted exterior. Leave at room temperature for 20 minutes. The salt draws surface moisture then reabsorbs ‚Äî seasoning the squid flesh from the surface inward rather than simply coating the exterior. The oil helps the salt caramelize against the charcoal heat.',
-            tip: 'The 20-minute salt rest for m·ª±c n∆∞·ªõng mu·ªëi l√° √© is shorter than for the chicken or goat versions of m·ªçi because squid\'s thinner flesh requires less time for the salt to penetrate effectively. At 20 minutes the salt has seasoned the outermost layer of the flesh ‚Äî sufficient for squid, where the flesh depth is measured in millimetres rather than centimetres.',
+            title: 'Salt the squid ó 20 minutes',
+            description: 'Pat the cleaned whole squid completely dry. Rub coarse salt firmly over the exterior of the body tube, around the tentacle base, and over the fins. Rub white pepper inside the body cavity. Brush lightly with oil over the salted exterior. Leave at room temperature for 20 minutes. The salt draws surface moisture then reabsorbs ó seasoning the squid flesh from the surface inward rather than simply coating the exterior. The oil helps the salt caramelize against the charcoal heat.',
+            tip: 'The 20-minute salt rest for m?c nu?ng mu?i l· È is shorter than for the chicken or goat versions of m?i because squid\'s thinner flesh requires less time for the salt to penetrate effectively. At 20 minutes the salt has seasoned the outermost layer of the flesh ó sufficient for squid, where the flesh depth is measured in millimetres rather than centimetres.',
         },
         {
             title: 'Build the medium-hot charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over. For m·ª±c n∆∞·ªõng m·ªçi, the fire should be medium-hot ‚Äî not the very moderate fire used for g√† ri n∆∞·ªõng m·ªçi (bantam chicken), but slightly cooler than the aggressive heat used for cua ƒë√°. Squid cooks through in 3-4 minutes per side at medium-hot charcoal and the fire calibration must match this cooking time to the charring time. Hold your hand 15cm above the coals: 3-4 seconds before the heat is too intense is the correct temperature.',
-            tip: 'Medium-hot charcoal for squid produces the best result because the surface chars and caramelizes in the same time as the interior cooks through. Very high heat chars the exterior while the interior is still raw; very moderate heat cooks the interior while the exterior fails to develop the char that makes m·ªçi cooking what it is.',
+            description: 'Light hardwood charcoal and wait until fully ashed over. For m?c nu?ng m?i, the fire should be medium-hot ó not the very moderate fire used for g‡ ri nu?ng m?i (bantam chicken), but slightly cooler than the aggressive heat used for cua d·. Squid cooks through in 3-4 minutes per side at medium-hot charcoal and the fire calibration must match this cooking time to the charring time. Hold your hand 15cm above the coals: 3-4 seconds before the heat is too intense is the correct temperature.',
+            tip: 'Medium-hot charcoal for squid produces the best result because the surface chars and caramelizes in the same time as the interior cooks through. Very high heat chars the exterior while the interior is still raw; very moderate heat cooks the interior while the exterior fails to develop the char that makes m?i cooking what it is.',
         },
         {
-            title: 'Grill whole squid directly on charcoal ‚Äî 3-4 minutes per side',
-            description: 'Place the salted whole squid directly on the grill grate over the medium-hot charcoal. Grill without moving for 3-4 minutes ‚Äî the skin will immediately begin to blister and char, and the body tube will begin to firm from the heat. The fat inside the mantle will render slightly, dripping onto the coals and producing brief flare-ups that add the specific smoke character of m·ªçi cooking. Flip carefully and grill the other side 3-4 minutes. Total: 6-8 minutes.',
-            tip: 'The brief flare-ups from the rendering squid fat during m·ªçi grilling are the smoke source that perfumes the exterior. Move the squid briefly to a cooler area of the grill if flare-ups become sustained, then return to the direct heat zone. Brief flame contact on the skin is the goal ‚Äî it adds the specific char note that makes m·ª±c n∆∞·ªõng m·ªçi different from m·ª±c n∆∞·ªõng over gas.',
+            title: 'Grill whole squid directly on charcoal ó 3-4 minutes per side',
+            description: 'Place the salted whole squid directly on the grill grate over the medium-hot charcoal. Grill without moving for 3-4 minutes ó the skin will immediately begin to blister and char, and the body tube will begin to firm from the heat. The fat inside the mantle will render slightly, dripping onto the coals and producing brief flare-ups that add the specific smoke character of m?i cooking. Flip carefully and grill the other side 3-4 minutes. Total: 6-8 minutes.',
+            tip: 'The brief flare-ups from the rendering squid fat during m?i grilling are the smoke source that perfumes the exterior. Move the squid briefly to a cooler area of the grill if flare-ups become sustained, then return to the direct heat zone. Brief flame contact on the skin is the goal ó it adds the specific char note that makes m?c nu?ng m?i different from m?c nu?ng over gas.',
         },
         {
             title: 'Test doneness and rest',
-            description: 'At 6-8 minutes total, press the thickest part of the body tube ‚Äî it should feel firm throughout with no soft or yielding center. The skin should be visibly charred in patches with golden areas between, and the squid should have curled slightly from the heat contraction. Rest on a rack for 2 minutes ‚Äî the carry-over heat finishes the last fraction of cooking without additional charcoal heat.',
+            description: 'At 6-8 minutes total, press the thickest part of the body tube ó it should feel firm throughout with no soft or yielding center. The skin should be visibly charred in patches with golden areas between, and the squid should have curled slightly from the heat contraction. Rest on a rack for 2 minutes ó the carry-over heat finishes the last fraction of cooking without additional charcoal heat.',
             tip: 'The firmness test for grilled whole squid is more reliable than a timer because squid size varies significantly and the cooking time adjusts accordingly. A 12cm squid may be done at 5 minutes; a 15cm squid may need 8 minutes. Press at 5 minutes: if firm throughout, rest and serve. If yielding at the center, grill 2 more minutes and test again.',
         },
         {
-            title: 'Pound mu·ªëi l√° √© and serve the Ph√∫ Y√™n way',
-            description: 'Pound l√° √© leaves with salt, pepper, sugar, and chili until intensely green and fragrant. Transfer to individual plates. Squeeze lime at the table. Slice the grilled squid into 2cm pieces on the diagonal. Arrange on a plate with tentacle clusters alongside. Serve with mu·ªëi l√° √©, sesame crackers, fresh l√° √© leaves, green mango julienne, and rau rƒÉm. The Ph√∫ Y√™n ritual: squid piece on cracker, raw l√° √© leaf under the squid, edge-dipped in lime-squeezed mu·ªëi l√° √©, eaten in one bite. The same assembly that has appeared throughout the Ph√∫ Y√™n series reaches its fullest expression here ‚Äî the wild l√° √© character against the clean marine sweetness of charcoal-grilled fresh squid is the pairing that most clearly demonstrates why this condiment exists.',
-            tip: 'The raw l√° √© leaf placed under the squid piece on the cracker ‚Äî not over it ‚Äî is the detail from the Ph√∫ Y√™n serving tradition that appears throughout the series. The squid\'s heat wilts the leaf slightly and releases its aromatic oils upward into the squid. On top, the leaf remains separate and cool. Under the squid, it becomes part of the bite. This positioning matters.',
+            title: 'Pound mu?i l· È and serve the Ph˙ YÍn way',
+            description: 'Pound l· È leaves with salt, pepper, sugar, and chili until intensely green and fragrant. Transfer to individual plates. Squeeze lime at the table. Slice the grilled squid into 2cm pieces on the diagonal. Arrange on a plate with tentacle clusters alongside. Serve with mu?i l· È, sesame crackers, fresh l· È leaves, green mango julienne, and rau ram. The Ph˙ YÍn ritual: squid piece on cracker, raw l· È leaf under the squid, edge-dipped in lime-squeezed mu?i l· È, eaten in one bite. The same assembly that has appeared throughout the Ph˙ YÍn series reaches its fullest expression here ó the wild l· È character against the clean marine sweetness of charcoal-grilled fresh squid is the pairing that most clearly demonstrates why this condiment exists.',
+            tip: 'The raw l· È leaf placed under the squid piece on the cracker ó not over it ó is the detail from the Ph˙ YÍn serving tradition that appears throughout the series. The squid\'s heat wilts the leaf slightly and releases its aromatic oils upward into the squid. On top, the leaf remains separate and cool. Under the squid, it becomes part of the bite. This positioning matters.',
         },
     ],
 };

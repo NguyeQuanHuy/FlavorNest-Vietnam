@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'rau-muong-xao-toi',
     title: 'Stir-Fried Water Spinach with Garlic',
     subtitle:
-        'Rau Muống Xào Tỏi — water spinach flashed in a screaming wok with smashed garlic and a splash of fish sauce. Three ingredients, ten minutes, national icon.',
+        'Rau Mu?ng X�o T?i � water spinach flashed in a screaming wok with smashed garlic and a splash of fish sauce. Three ingredients, ten minutes, national icon.',
     category: 'VEGETARIAN',
     difficulty: 'Easy',
     totalTime: '10 min',
@@ -14,12 +14,12 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/rau-muong-xao-toi.jpg',
     intro:
-        'If Vietnam had a national vegetable, it would be rau muống. The trick with this stir-fry is not the ingredient list — it is the heat. A cold wok gives you soggy, grey-green stems; a screaming wok gives you what you want: stems that still snap, leaves that are just wilted, and the unmistakable smell of garlic meeting fish sauce over fire.',
+        'If Vietnam had a national vegetable, it would be rau mu?ng. The trick with this stir-fry is not the ingredient list � it is the heat. A cold wok gives you soggy, grey-green stems; a screaming wok gives you what you want: stems that still snap, leaves that are just wilted, and the unmistakable smell of garlic meeting fish sauce over fire.',
     ingredientSections: [
         {
             title: 'Water spinach',
             items: [
-                { amount: 600, unit: 'g', name: 'water spinach (rau muống)', note: 'tough ends trimmed, cut in 8cm lengths' },
+                { amount: 600, unit: 'g', name: 'water spinach (rau mu?ng)', note: 'tough ends trimmed, cut in 8cm lengths' },
                 { amount: 1, unit: 'tbsp', name: 'sea salt', note: 'for blanching water' },
             ],
         },

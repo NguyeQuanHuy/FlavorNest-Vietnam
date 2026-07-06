@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'ga-kho-gung',
     title: 'Ginger Braised Chicken',
     subtitle:
-        'GÃ  Kho Gá»«ng â€” bone-in chicken simmered in fish sauce, palm sugar and a generous fistful of young ginger until the sauce reduces to a sticky, fragrant glaze.',
+        'Gà Kho G?ng — bone-in chicken simmered in fish sauce, palm sugar and a generous fistful of young ginger until the sauce reduces to a sticky, fragrant glaze.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '40 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/ga-kho-gung.jpg',
     intro:
-        'Every Vietnamese mother has a ginger chicken in her repertoire â€” cheap, fast, and built entirely from ingredients already in the cupboard. In the North the ginger is more assertive; in the South a splash of coconut water rounds it out. Either way, it is the dish that turns a plain bowl of rice into dinner.',
+        'Every Vietnamese mother has a ginger chicken in her repertoire — cheap, fast, and built entirely from ingredients already in the cupboard. In the North the ginger is more assertive; in the South a splash of coconut water rounds it out. Either way, it is the dish that turns a plain bowl of rice into dinner.',
     ingredientSections: [
         {
             title: 'Chicken and marinade',
@@ -53,11 +53,11 @@ const recipe: RecipeData = {
         {
             title: 'Build a light caramel',
             description: 'Heat a tablespoon of oil and a tablespoon of palm sugar in a pot over medium heat. Stir continuously until the sugar melts and transforms into a deep amber color, being careful to remove it from the heat if it starts to smoke to avoid a bitter taste.',
-            tip: 'If you are new to making Vietnamese caramel (nÆ°á»›c mÃ u), keep a small cup of warm water nearby. If the sugar darkens too fast, add a teaspoon of water to stop the cooking process instantly.',
+            tip: 'If you are new to making Vietnamese caramel (nu?c màu), keep a small cup of warm water nearby. If the sugar darkens too fast, add a teaspoon of water to stop the cooking process instantly.',
         },
         {
             title: 'Bloom the aromatics',
-            description: 'Once the caramel is ready, toss in the minced shallots, garlic, and the remaining half of the ginger. SautÃ© them quickly until they turn golden and the kitchen is filled with a spicy, fragrant aroma.',
+            description: 'Once the caramel is ready, toss in the minced shallots, garlic, and the remaining half of the ginger. Sauté them quickly until they turn golden and the kitchen is filled with a spicy, fragrant aroma.',
         },
         {
             title: 'Sear the chicken skin',

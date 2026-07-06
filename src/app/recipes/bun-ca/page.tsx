@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'bun-ca',
     title: 'Vietnamese Fish Noodle Soup',
-    subtitle: 'Bun ca â€” a bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli. Hai Phong style.',
+    subtitle: 'Bun ca — a bright, dill-perfumed broth with crispy pan-fried fish, fish cakes and rice vermicelli. Hai Phong style.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '1 hr 30 min',
     rating: 4.7,
     baseServings: 4,
     heroImage: '/images/recipes/bun-ca.jpg',
-    intro: 'Bun ca is the coastal Northern answer to pho â€” lighter, brighter, with the sharp clean flavour of the sea. Hai Phong, the port city east of Hanoi, makes the most celebrated version: a clear fish-bone broth perfumed with dill and tomato, topped with chunks of fish that have been pan-fried until shattering-crisp. The contrast of the crackling skin against the gentle broth is the whole point. A favourite breakfast for people who want fish, not beef, before noon.',
+    intro: 'Bun ca is the coastal Northern answer to pho — lighter, brighter, with the sharp clean flavour of the sea. Hai Phong, the port city east of Hanoi, makes the most celebrated version: a clear fish-bone broth perfumed with dill and tomato, topped with chunks of fish that have been pan-fried until shattering-crisp. The contrast of the crackling skin against the gentle broth is the whole point. A favourite breakfast for people who want fish, not beef, before noon.',
     ingredientSections: [
         {
             title: 'Broth',
@@ -56,7 +56,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Build the fish broth',
-            description: 'Rinse the fish bones thoroughly to remove any blood. Place in a pot with 2L cold water, charred onion and ginger. Bring to a gentle simmer. Skim foam aggressively for the first 10 minutes â€” fish broth foams more than meat broth and skimming is everything for clarity.',
+            description: 'Rinse the fish bones thoroughly to remove any blood. Place in a pot with 2L cold water, charred onion and ginger. Bring to a gentle simmer. Skim foam aggressively for the first 10 minutes — fish broth foams more than meat broth and skimming is everything for clarity.',
             tip: 'Never let fish broth boil hard. It turns muddy and bitter in seconds.',
         },
         {
@@ -65,12 +65,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Prep the fish',
-            description: 'Pat the fish chunks completely dry with paper towel. Toss with turmeric and salt â€” let sit 10 minutes. Heat oil in a non-stick pan until shimmering. Fry fish in a single layer 3 minutes per side until shattering-crisp and deep gold. Drain on paper.',
+            description: 'Pat the fish chunks completely dry with paper towel. Toss with turmeric and salt — let sit 10 minutes. Heat oil in a non-stick pan until shimmering. Fry fish in a single layer 3 minutes per side until shattering-crisp and deep gold. Drain on paper.',
             tip: 'Wet fish will not crisp. Dry it twice. The pan must be hot enough that the fish sizzles immediately.',
         },
         {
             title: 'Strain and finish the broth',
-            description: 'Strain broth through a fine sieve into a clean pot. Discard solids. Season with fish sauce, rock sugar and salt. Taste â€” it should be light, clean, faintly sweet from tomato and deeply savoury from the fish bones. Add sliced fish cake and warm through for 2 minutes.',
+            description: 'Strain broth through a fine sieve into a clean pot. Discard solids. Season with fish sauce, rock sugar and salt. Taste — it should be light, clean, faintly sweet from tomato and deeply savoury from the fish bones. Add sliced fish cake and warm through for 2 minutes.',
         },
         {
             title: 'Assemble and serve',

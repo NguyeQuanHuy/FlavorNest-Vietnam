@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-com',
     title: 'Hanoi Green Sticky Rice Cake',
-    subtitle: 'Banh com â€” pale jade squares of young glutinous rice wrapped around sweet mung bean, perfumed with pomelo flower water.',
+    subtitle: 'Banh com — pale jade squares of young glutinous rice wrapped around sweet mung bean, perfumed with pomelo flower water.',
     category: 'DESSERT',
     difficulty: 'Hard',
     totalTime: '2 hrs',
     rating: 4.8,
     baseServings: 12,
     heroImage: '/images/recipes/banh-com.jpg',
-    intro: 'Banh com is a Hanoi autumn ritual. When the new harvest of com â€” young glutinous rice grains, beaten flat in mortars, dyed pale green from a wild jungle leaf â€” arrives from Vong village in the suburbs, the city celebrates with banh com. Each one is the size of a matchbox: a delicate green wrapper of fresh com pressed around a sweet mung bean filling perfumed with pomelo flower water, then bound in banana leaves the colour of a deeper green. Traditionally given as wedding gifts and offered at engagement ceremonies, banh com is more memory than dessert.',
+    intro: 'Banh com is a Hanoi autumn ritual. When the new harvest of com — young glutinous rice grains, beaten flat in mortars, dyed pale green from a wild jungle leaf — arrives from Vong village in the suburbs, the city celebrates with banh com. Each one is the size of a matchbox: a delicate green wrapper of fresh com pressed around a sweet mung bean filling perfumed with pomelo flower water, then bound in banana leaves the colour of a deeper green. Traditionally given as wedding gifts and offered at engagement ceremonies, banh com is more memory than dessert.',
     ingredientSections: [
         {
             title: 'Com wrapper',
@@ -53,7 +53,7 @@ const recipe: RecipeData = {
         },
         {
             title: 'Soften the com',
-            description: 'In a heavy bowl, combine fresh com with coconut milk and sugar. Knead gently with your hands for 5 minutes â€” the rice should soften and bind into a slightly sticky dough that holds together but does not stick aggressively to your fingers. If using dried com, soak in coconut milk for 30 minutes first.',
+            description: 'In a heavy bowl, combine fresh com with coconut milk and sugar. Knead gently with your hands for 5 minutes — the rice should soften and bind into a slightly sticky dough that holds together but does not stick aggressively to your fingers. If using dried com, soak in coconut milk for 30 minutes first.',
             tip: 'Add coconut milk a tablespoon at a time. Too wet and the wrappers will fall apart.',
         },
         {
@@ -63,11 +63,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Wrap in banana leaves',
-            description: 'Place a second banana leaf square underneath each cake at a 45-degree angle. Fold the leaves over to fully enclose the cake â€” first the top and bottom corners, then left and right. Tie crosswise with cotton string. The finished parcel should be a neat square showing two shades of green leaf.',
+            description: 'Place a second banana leaf square underneath each cake at a 45-degree angle. Fold the leaves over to fully enclose the cake — first the top and bottom corners, then left and right. Tie crosswise with cotton string. The finished parcel should be a neat square showing two shades of green leaf.',
         },
         {
             title: 'Rest and serve',
-            description: 'Banh com does not need cooking â€” the com is already cooked. Rest the parcels at room temperature for 1 hour to let the flavours marry. Serve at room temperature, untied at the table so each guest can unwrap their own. Eat within 24 hours; the com hardens by day two.',
+            description: 'Banh com does not need cooking — the com is already cooked. Rest the parcels at room temperature for 1 hour to let the flavours marry. Serve at room temperature, untied at the table so each guest can unwrap their own. Eat within 24 hours; the com hardens by day two.',
             tip: 'Banh com is traditionally given in pairs as engagement gifts. The pair symbolises a couple.',
         },
     ],

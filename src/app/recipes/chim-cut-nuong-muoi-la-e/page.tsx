@@ -1,23 +1,23 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'chim-cut-nuong-muoi-la-e',
-    title: 'Chim CÃºt NÆ°á»›ng Muá»‘i LÃ¡ Ã‰ (PhÃº YÃªn Charcoal Quail with Litsea Leaf Salt)',
-    subtitle: 'Spatchcocked quail marinated in lemongrass and fish sauce then grilled over charcoal until the skin chars and crisps â€” served not with the standard muá»‘i tiÃªu chanh but with pounded lÃ¡ Ã© salt, the PhÃº YÃªn condiment that turns a good grilled quail into something specific to one province.',
+    title: 'Chim Cút Nu?ng Mu?i Lá É (Phú Yên Charcoal Quail with Litsea Leaf Salt)',
+    subtitle: 'Spatchcocked quail marinated in lemongrass and fish sauce then grilled over charcoal until the skin chars and crisps — served not with the standard mu?i tiêu chanh but with pounded lá é salt, the Phú Yên condiment that turns a good grilled quail into something specific to one province.',
     category: 'APPETIZER',
     difficulty: 'Easy',
     totalTime: '50 min',
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/chim-cut-nuong-muoi-la-e.jpg',
-    intro: `Chim cÃºt nÆ°á»›ng muá»‘i lÃ¡ Ã© is the PhÃº YÃªn version of grilled quail â€” a preparation that differs from the standard southern Vietnamese chim cÃºt nÆ°á»›ng in one specific and defining way: the dipping condiment. Where the rest of Vietnam eats grilled quail with muá»‘i tiÃªu chanh (coarse salt, black pepper, fresh lime) or with a sweet-sour nÆ°á»›c cháº¥m, PhÃº YÃªn eats it with muá»‘i lÃ¡ Ã© â€” the pounded litsea cubeba leaf salt that appears alongside every significant grilled and steamed protein in the province. The difference this single condiment substitution makes is not subtle. Muá»‘i tiÃªu chanh brings saltiness, pepper heat, and lime brightness to the quail â€” a clean, familiar combination. Muá»‘i lÃ¡ Ã© brings all of that plus the specific wild, citrus-camphor-pepper character of litsea cubeba that has no equivalent anywhere else in Vietnamese cuisine â€” an aromatic dimension that the standard salt cannot provide and that, once tasted alongside grilled quail, makes the standard condiment seem incomplete. The quail itself in the PhÃº YÃªn version is marinated with a slightly stronger lemongrass presence than the southern standard â€” four stalks for eight quail, where the southern version uses three â€” reflecting the four-stalk lemongrass proportion that appears throughout PhÃº YÃªn seafood and meat cooking as the province's signature aromatic quantity. The grilling is the same: charcoal, medium-hot, the quail placed flat to cook evenly, the skin allowed to char in the specific way that charcoal produces and gas cannot replicate. The result is a quail that is familiar in technique and specific in finishing â€” the PhÃº YÃªn identity established entirely through the condiment and the lemongrass proportion rather than through an unusual preparation method.`,
+    intro: `Chim cút nu?ng mu?i lá é is the Phú Yên version of grilled quail — a preparation that differs from the standard southern Vietnamese chim cút nu?ng in one specific and defining way: the dipping condiment. Where the rest of Vietnam eats grilled quail with mu?i tiêu chanh (coarse salt, black pepper, fresh lime) or with a sweet-sour nu?c ch?m, Phú Yên eats it with mu?i lá é — the pounded litsea cubeba leaf salt that appears alongside every significant grilled and steamed protein in the province. The difference this single condiment substitution makes is not subtle. Mu?i tiêu chanh brings saltiness, pepper heat, and lime brightness to the quail — a clean, familiar combination. Mu?i lá é brings all of that plus the specific wild, citrus-camphor-pepper character of litsea cubeba that has no equivalent anywhere else in Vietnamese cuisine — an aromatic dimension that the standard salt cannot provide and that, once tasted alongside grilled quail, makes the standard condiment seem incomplete. The quail itself in the Phú Yên version is marinated with a slightly stronger lemongrass presence than the southern standard — four stalks for eight quail, where the southern version uses three — reflecting the four-stalk lemongrass proportion that appears throughout Phú Yên seafood and meat cooking as the province's signature aromatic quantity. The grilling is the same: charcoal, medium-hot, the quail placed flat to cook evenly, the skin allowed to char in the specific way that charcoal produces and gas cannot replicate. The result is a quail that is familiar in technique and specific in finishing — the Phú Yên identity established entirely through the condiment and the lemongrass proportion rather than through an unusual preparation method.`,
     ingredientSections: [
         {
             title: 'Quail',
             items: [
-                { amount: 8, name: 'whole quail (chim cÃºt)', note: 'spatchcocked â€” backbone removed, flattened. Or leave whole for a rustier presentation.' },
-                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, finely minced â€” four stalks is the PhÃº YÃªn quantity' },
+                { amount: 8, name: 'whole quail (chim cút)', note: 'spatchcocked — backbone removed, flattened. Or leave whole for a rustier presentation.' },
+                { amount: 4, name: 'lemongrass stalks', note: 'inner stalk, finely minced — four stalks is the Phú Yên quantity' },
                 { amount: 4, name: 'garlic cloves', note: 'minced' },
                 { amount: 3, name: 'shallots', note: 'minced' },
                 { amount: 3, unit: 'tbsp', name: 'fish sauce' },
@@ -29,22 +29,22 @@ const recipe: RecipeData = {
             ],
         },
         {
-            title: 'Muá»‘i lÃ¡ Ã© PhÃº YÃªn â€” the defining condiment',
+            title: 'Mu?i lá é Phú Yên — the defining condiment',
             items: [
-                { amount: 30, unit: 'g', name: 'fresh lÃ¡ Ã© leaves (litsea cubeba)', note: 'more generous than usual â€” the primary condiment for this dish, not a secondary option. Substitute: 10 kaffir lime leaves + 10 rau rÄƒm leaves pounded together â€” different but closest approximation.' },
+                { amount: 30, unit: 'g', name: 'fresh lá é leaves (litsea cubeba)', note: 'more generous than usual — the primary condiment for this dish, not a secondary option. Substitute: 10 kaffir lime leaves + 10 rau ram leaves pounded together — different but closest approximation.' },
                 { amount: 2, unit: 'tsp', name: 'coarse sea salt' },
                 { amount: 1, unit: 'tsp', name: 'black pepper', note: 'coarsely ground' },
                 { amount: 0.5, unit: 'tsp', name: 'sugar' },
-                { amount: 2, name: 'bird\'s eye chilies', note: 'pounded with the leaves â€” more chili than usual for quail' },
+                { amount: 2, name: 'bird\'s eye chilies', note: 'pounded with the leaves — more chili than usual for quail' },
                 { amount: 3, name: 'limes', note: 'squeezed at the table' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 1, name: 'bunch fresh lÃ¡ Ã© leaves', note: 'for eating raw alongside each quail piece â€” the raw leaf amplifies the muá»‘i lÃ¡ Ã© character' },
-                { amount: 1, name: 'bunch rau rÄƒm' },
-                { amount: 16, name: 'bÃ¡nh trÃ¡ng mÃ¨ Tuy An (sesame rice crackers)', note: 'the PhÃº YÃªn accompaniment â€” for making mini wraps with the quail' },
+                { amount: 1, name: 'bunch fresh lá é leaves', note: 'for eating raw alongside each quail piece — the raw leaf amplifies the mu?i lá é character' },
+                { amount: 1, name: 'bunch rau ram' },
+                { amount: 16, name: 'bánh tráng mè Tuy An (sesame rice crackers)', note: 'the Phú Yên accompaniment — for making mini wraps with the quail' },
                 { amount: 2, name: 'extra limes' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
                 { amount: 1, name: 'cucumber', note: 'sliced into batons' },
@@ -53,29 +53,29 @@ const recipe: RecipeData = {
     ],
     steps: [
         {
-            title: 'Marinate with four-stalk lemongrass â€” 2 hours',
+            title: 'Marinate with four-stalk lemongrass — 2 hours',
             description: 'Spatchcock the quail: cut along both sides of the backbone with scissors and remove it. Press flat with the heel of your hand. Combine the four-stalk lemongrass paste with garlic, shallots, fish sauce, oyster sauce, sugar, turmeric, black pepper, and oil. The lemongrass quantity should be noticeably more fragrant and greenish than a standard quail marinade. Coat every surface of each quail thoroughly. Marinate for 2 hours at room temperature or overnight refrigerated.',
-            tip: 'The four-stalk lemongrass in the PhÃº YÃªn version versus three stalks elsewhere produces a marinade that is visibly greener and more aromatic. This difference carries through to the finished quail â€” the lemongrass character is more present in the flesh and more compatible with the lÃ¡ Ã© dipping salt, which also has strong lemongrass-adjacent citrus notes.',
+            tip: 'The four-stalk lemongrass in the Phú Yên version versus three stalks elsewhere produces a marinade that is visibly greener and more aromatic. This difference carries through to the finished quail — the lemongrass character is more present in the flesh and more compatible with the lá é dipping salt, which also has strong lemongrass-adjacent citrus notes.',
         },
         {
             title: 'Build the charcoal fire',
-            description: 'Light hardwood charcoal and wait until fully ashed over â€” 25-30 minutes. Medium-hot fire for quail: hold your hand 15cm above the grill for 4 seconds before the heat is too intense. This temperature produces the char-without-burning timing that quail requires â€” small enough to cook through fast, fat-rich enough to produce flare-ups that require management.',
-            tip: 'For chim cÃºt nÆ°á»›ng muá»‘i lÃ¡ Ã© specifically, the fire should be very slightly cooler than for the honey-glazed version â€” the muá»‘i lÃ¡ Ã© condiment is more delicate than the sweet glaze and the quail should carry clean charcoal char rather than caramelized sweetness. The condiment provides all the complexity; the quail provides the charcoal foundation.',
+            description: 'Light hardwood charcoal and wait until fully ashed over — 25-30 minutes. Medium-hot fire for quail: hold your hand 15cm above the grill for 4 seconds before the heat is too intense. This temperature produces the char-without-burning timing that quail requires — small enough to cook through fast, fat-rich enough to produce flare-ups that require management.',
+            tip: 'For chim cút nu?ng mu?i lá é specifically, the fire should be very slightly cooler than for the honey-glazed version — the mu?i lá é condiment is more delicate than the sweet glaze and the quail should carry clean charcoal char rather than caramelized sweetness. The condiment provides all the complexity; the quail provides the charcoal foundation.',
         },
         {
-            title: 'Grill until charred â€” both sides',
-            description: 'Place the spatchcocked quail skin-side down on the grill. Grill without moving for 5-6 minutes until the skin is deeply charred with black spots and the quail fat renders and drips. Flip and grill the bone side for 4 minutes. For the PhÃº YÃªn version, the char level should be slightly more aggressive than for the honey-glazed quail â€” the muá»‘i lÃ¡ Ã© salt works best against a clearly charred, slightly smoky surface rather than a glossy glazed one.',
-            tip: 'The level of char that pairs best with muá»‘i lÃ¡ Ã© is deeper than the char that pairs best with sweet sauces. The wild, aromatic character of lÃ¡ Ã© needs a robust charcoal note to work against â€” a pale, barely-charred quail skin makes the muá»‘i lÃ¡ Ã© taste sharp and disconnected rather than integrated.',
+            title: 'Grill until charred — both sides',
+            description: 'Place the spatchcocked quail skin-side down on the grill. Grill without moving for 5-6 minutes until the skin is deeply charred with black spots and the quail fat renders and drips. Flip and grill the bone side for 4 minutes. For the Phú Yên version, the char level should be slightly more aggressive than for the honey-glazed quail — the mu?i lá é salt works best against a clearly charred, slightly smoky surface rather than a glossy glazed one.',
+            tip: 'The level of char that pairs best with mu?i lá é is deeper than the char that pairs best with sweet sauces. The wild, aromatic character of lá é needs a robust charcoal note to work against — a pale, barely-charred quail skin makes the mu?i lá é taste sharp and disconnected rather than integrated.',
         },
         {
-            title: 'Pound the muá»‘i lÃ¡ Ã© â€” generous quantity',
-            description: 'Pound 30g of lÃ¡ Ã© leaves with coarse salt, black pepper, sugar, and two bird\'s eye chilies in a mortar. Pound for 3 full minutes until the leaves are completely broken down and the salt is intensely green and fragrant â€” more vigorously pounded than for seafood because quail has a richer fat character that needs a more fully extracted lÃ¡ Ã© oil to penetrate. Transfer to individual plates â€” more generous quantities per diner than usual. Squeeze lime at the table.',
-            tip: 'The 30g of lÃ¡ Ã© for eight quail is a more generous quantity than for any single protein in the PhÃº YÃªn lÃ¡ Ã© series. Quail fat is rich and abundant and requires more of the aromatic condiment to balance it. A small muá»‘i lÃ¡ Ã© plate for chim cÃºt nÆ°á»›ng makes the condiment taste insufficient against the fatty grilled quail.',
+            title: 'Pound the mu?i lá é — generous quantity',
+            description: 'Pound 30g of lá é leaves with coarse salt, black pepper, sugar, and two bird\'s eye chilies in a mortar. Pound for 3 full minutes until the leaves are completely broken down and the salt is intensely green and fragrant — more vigorously pounded than for seafood because quail has a richer fat character that needs a more fully extracted lá é oil to penetrate. Transfer to individual plates — more generous quantities per diner than usual. Squeeze lime at the table.',
+            tip: 'The 30g of lá é for eight quail is a more generous quantity than for any single protein in the Phú Yên lá é series. Quail fat is rich and abundant and requires more of the aromatic condiment to balance it. A small mu?i lá é plate for chim cút nu?ng makes the condiment taste insufficient against the fatty grilled quail.',
         },
         {
-            title: 'Serve and eat the PhÃº YÃªn way',
-            description: 'Arrange the charred quail on a plate. Scatter raw lÃ¡ Ã© leaves and rau rÄƒm generously over the surface. Serve with the muá»‘i lÃ¡ Ã©, sesame crackers, cucumber, and lime wedges. The PhÃº YÃªn eating ritual: pick up a quail piece, place it on a sesame cracker with a raw lÃ¡ Ã© leaf, dip the assembled cracker edge into the lime-squeezed muá»‘i lÃ¡ Ã© salt, eat in one motion. The cracker crunch, the charred quail skin and meat, and the wild litsea character from both the salt and the raw leaf simultaneously â€” this is chim cÃºt nÆ°á»›ng muá»‘i lÃ¡ Ã© as PhÃº YÃªn people eat it.',
-            tip: 'The raw lÃ¡ Ã© leaf placed on the cracker under the quail â€” not on top â€” is the detail that most clearly marks this as a practiced PhÃº YÃªn preparation. The leaf under the meat means it wilts slightly from the heat of the just-grilled quail and releases its aromatic oils directly up into the meat above. On top, it remains raw and separate. Under the meat, it becomes part of the bite.',
+            title: 'Serve and eat the Phú Yên way',
+            description: 'Arrange the charred quail on a plate. Scatter raw lá é leaves and rau ram generously over the surface. Serve with the mu?i lá é, sesame crackers, cucumber, and lime wedges. The Phú Yên eating ritual: pick up a quail piece, place it on a sesame cracker with a raw lá é leaf, dip the assembled cracker edge into the lime-squeezed mu?i lá é salt, eat in one motion. The cracker crunch, the charred quail skin and meat, and the wild litsea character from both the salt and the raw leaf simultaneously — this is chim cút nu?ng mu?i lá é as Phú Yên people eat it.',
+            tip: 'The raw lá é leaf placed on the cracker under the quail — not on top — is the detail that most clearly marks this as a practiced Phú Yên preparation. The leaf under the meat means it wilts slightly from the heat of the just-grilled quail and releases its aromatic oils directly up into the meat above. On top, it remains raw and separate. Under the meat, it becomes part of the bite.',
         },
     ],
 };

@@ -1,29 +1,29 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'tom-hum-nuong-bo-toi',
-    title: 'T√¥m H√πm N∆∞·ªõng B∆° T·ªèi (Ph√∫ Y√™n Grilled Lobster with Garlic Butter)',
-    subtitle: 'Live spiny lobster from the waters off H√≤n Y·∫øn island, halved and grilled over charcoal with a compound butter of garlic, lemongrass, and kaffir lime leaf until the shell chars and the butter bastes the flesh from above. The premium seafood of Ph√∫ Y√™n ‚Äî the dish that the island boats bring in at dawn and the restaurants serve by noon.',
+    title: 'TÙm H˘m Nu?ng Bo T?i (Ph˙ YÍn Grilled Lobster with Garlic Butter)',
+    subtitle: 'Live spiny lobster from the waters off HÚn Y?n island, halved and grilled over charcoal with a compound butter of garlic, lemongrass, and kaffir lime leaf until the shell chars and the butter bastes the flesh from above. The premium seafood of Ph˙ YÍn ó the dish that the island boats bring in at dawn and the restaurants serve by noon.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/tom-hum-nuong-bo-toi.jpg',
-    intro: `T√¥m h√πm n∆∞·ªõng b∆° t·ªèi is the premium seafood preparation of Ph√∫ Y√™n ‚Äî the dish that defines the province's identity as one of the great lobster-producing regions of Vietnam. The spiny lobsters of the waters around H√≤n Y·∫øn island and the Ph√∫ Y√™n coast are a specific variety: Panulirus ornatus, the ornate spiny lobster, which grows large (1-3kg adults), has firm, sweet white flesh, and carries a flavor that reef-caught wild lobster in warm tropical waters produces and that no farmed or cold-water lobster can replicate. The Ph√∫ Y√™n coast produces the majority of Vietnam's spiny lobster harvest, and the lobster restaurants along the beachfront in Tuy H√≤a and the seafood villages of S√¥ng C·∫ßu serve it in preparations that range from simple to elaborate ‚Äî but the n∆∞·ªõng b∆° t·ªèi version, grilled over charcoal with a compound butter that is simultaneously Vietnamese and French in its ingredients, is the one that represents both the quality of the lobster and the cooking tradition of the central coast most clearly. The butter compound used in Ph√∫ Y√™n t√¥m h√πm n∆∞·ªõng is not the plain garlic butter of a Western preparation: it contains garlic and butter as the base, but also finely minced lemongrass, shredded kaffir lime leaf, and a small amount of fish sauce that adds umami depth without adding fishiness. Applied to the cut surface of the halved lobster before and during grilling, the butter melts over the flesh, carries the aromatic compounds of the lemongrass and kaffir lime into the meat, and caramelizes at the edges in the charcoal heat. The result is a lobster that tastes simultaneously of the sea it came from and the specific aromatic character of the central Vietnamese coast.`,
+    intro: `TÙm h˘m nu?ng bo t?i is the premium seafood preparation of Ph˙ YÍn ó the dish that defines the province's identity as one of the great lobster-producing regions of Vietnam. The spiny lobsters of the waters around HÚn Y?n island and the Ph˙ YÍn coast are a specific variety: Panulirus ornatus, the ornate spiny lobster, which grows large (1-3kg adults), has firm, sweet white flesh, and carries a flavor that reef-caught wild lobster in warm tropical waters produces and that no farmed or cold-water lobster can replicate. The Ph˙ YÍn coast produces the majority of Vietnam's spiny lobster harvest, and the lobster restaurants along the beachfront in Tuy HÚa and the seafood villages of SÙng C?u serve it in preparations that range from simple to elaborate ó but the nu?ng bo t?i version, grilled over charcoal with a compound butter that is simultaneously Vietnamese and French in its ingredients, is the one that represents both the quality of the lobster and the cooking tradition of the central coast most clearly. The butter compound used in Ph˙ YÍn tÙm h˘m nu?ng is not the plain garlic butter of a Western preparation: it contains garlic and butter as the base, but also finely minced lemongrass, shredded kaffir lime leaf, and a small amount of fish sauce that adds umami depth without adding fishiness. Applied to the cut surface of the halved lobster before and during grilling, the butter melts over the flesh, carries the aromatic compounds of the lemongrass and kaffir lime into the meat, and caramelizes at the edges in the charcoal heat. The result is a lobster that tastes simultaneously of the sea it came from and the specific aromatic character of the central Vietnamese coast.`,
     ingredientSections: [
         {
             title: 'Lobster',
             items: [
-                { amount: 2, name: 'live spiny lobsters (t√¥m h√πm), 600-800g each', note: 'Ph√∫ Y√™n ornate spiny lobster preferred ‚Äî Panulirus ornatus. If unavailable: any live spiny lobster or large rock lobster. The dish can also be made with very large prawns (300g+) using the same technique.' },
+                { amount: 2, name: 'live spiny lobsters (tÙm h˘m), 600-800g each', note: 'Ph˙ YÍn ornate spiny lobster preferred ó Panulirus ornatus. If unavailable: any live spiny lobster or large rock lobster. The dish can also be made with very large prawns (300g+) using the same technique.' },
             ],
         },
         {
-            title: 'Vietnamese garlic butter (b∆° t·ªèi ki·ªÉu Vi·ªát)',
+            title: 'Vietnamese garlic butter (bo t?i ki?u Vi?t)',
             items: [
                 { amount: 150, unit: 'g', name: 'unsalted butter', note: 'softened to room temperature' },
-                { amount: 8, name: 'garlic cloves', note: 'very finely minced ‚Äî almost a paste' },
+                { amount: 8, name: 'garlic cloves', note: 'very finely minced ó almost a paste' },
                 { amount: 2, name: 'lemongrass stalks', note: 'inner stalk only, minced to a paste' },
                 { amount: 4, name: 'kaffir lime leaves', note: 'central rib removed, shredded into the finest possible strips' },
                 { amount: 1, unit: 'tbsp', name: 'fish sauce', note: 'the Vietnamese element that adds umami without fishiness' },
@@ -35,20 +35,20 @@ const recipe: RecipeData = {
         {
             title: 'Charcoal fire',
             items: [
-                { amount: 1, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ‚Äî lobster grills better at slightly lower temperature than fish or shrimp' },
+                { amount: 1, unit: 'kg', name: 'hardwood charcoal', note: 'built to medium-hot ó lobster grills better at slightly lower temperature than fish or shrimp' },
             ],
         },
         {
             title: 'Dipping sauces',
             items: [
-                { amount: 3, unit: 'tbsp', name: 'mu·ªëi ti√™u chanh', note: 'salt, coarse pepper, lime squeezed at the table ‚Äî the primary dipping sauce for Ph√∫ Y√™n lobster' },
-                { amount: 3, unit: 'tbsp', name: 'soy sauce with ginger', note: '3 tbsp soy sauce + 1 tbsp fresh ginger julienned + 1 tsp sesame oil ‚Äî the secondary sauce' },
+                { amount: 3, unit: 'tbsp', name: 'mu?i tiÍu chanh', note: 'salt, coarse pepper, lime squeezed at the table ó the primary dipping sauce for Ph˙ YÍn lobster' },
+                { amount: 3, unit: 'tbsp', name: 'soy sauce with ginger', note: '3 tbsp soy sauce + 1 tbsp fresh ginger julienned + 1 tsp sesame oil ó the secondary sauce' },
             ],
         },
         {
             title: 'To serve',
             items: [
-                { amount: 4, name: 'kaffir lime leaves, extra', note: 'finely shredded ‚Äî scattered over the finished lobster' },
+                { amount: 4, name: 'kaffir lime leaves, extra', note: 'finely shredded ó scattered over the finished lobster' },
                 { amount: 3, name: 'spring onions, sliced' },
                 { amount: 2, name: 'limes, cut in wedges' },
                 { amount: 2, name: 'fresh red chilies, sliced' },
@@ -59,33 +59,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Make the Vietnamese garlic butter',
-            description: 'Combine softened butter with very finely minced garlic, lemongrass paste, shredded kaffir lime leaves, fish sauce, sugar, white pepper, and spring onion. Beat together until completely incorporated. The butter should smell intensely of lemongrass and kaffir lime with the garlic as a background note. Taste ‚Äî it should be fragrant, slightly salty, and aromatic. Roll into a cylinder in plastic wrap and refrigerate for 30 minutes to firm slightly ‚Äî this makes it easier to apply to the lobster. Or use immediately at room temperature.',
-            tip: 'The fish sauce in the compound butter is the single ingredient that makes this preparation Vietnamese rather than French. It adds an invisible layer of umami depth that makes the butter taste more complex than its components suggest. Use only 1 tablespoon ‚Äî enough to add depth, not enough to taste of fish sauce.',
+            description: 'Combine softened butter with very finely minced garlic, lemongrass paste, shredded kaffir lime leaves, fish sauce, sugar, white pepper, and spring onion. Beat together until completely incorporated. The butter should smell intensely of lemongrass and kaffir lime with the garlic as a background note. Taste ó it should be fragrant, slightly salty, and aromatic. Roll into a cylinder in plastic wrap and refrigerate for 30 minutes to firm slightly ó this makes it easier to apply to the lobster. Or use immediately at room temperature.',
+            tip: 'The fish sauce in the compound butter is the single ingredient that makes this preparation Vietnamese rather than French. It adds an invisible layer of umami depth that makes the butter taste more complex than its components suggest. Use only 1 tablespoon ó enough to add depth, not enough to taste of fish sauce.',
         },
         {
             title: 'Dispatch and halve the lobster',
-            description: 'Place the live lobster in the freezer for 15 minutes to sedate. Place on a cutting board. Insert a sharp, heavy knife at the center of the head and cut forward through the head in one decisive motion ‚Äî this dispatches the lobster instantly. Then cut backward through the tail to halve the lobster completely. Remove the stomach sac (the small gravel-filled organ behind the eyes) and the intestinal tract running through the tail. Keep the green tomalley ‚Äî it is delicious and will absorb the butter during grilling.',
-            tip: 'The freezer sedation followed by a decisive single cut is the most humane home dispatch method. Work quickly and confidently ‚Äî hesitation produces a messier cut. A sharp, heavy chef\'s knife or cleaver is essential; a thin or dull knife requires multiple strokes.',
+            description: 'Place the live lobster in the freezer for 15 minutes to sedate. Place on a cutting board. Insert a sharp, heavy knife at the center of the head and cut forward through the head in one decisive motion ó this dispatches the lobster instantly. Then cut backward through the tail to halve the lobster completely. Remove the stomach sac (the small gravel-filled organ behind the eyes) and the intestinal tract running through the tail. Keep the green tomalley ó it is delicious and will absorb the butter during grilling.',
+            tip: 'The freezer sedation followed by a decisive single cut is the most humane home dispatch method. Work quickly and confidently ó hesitation produces a messier cut. A sharp, heavy chef\'s knife or cleaver is essential; a thin or dull knife requires multiple strokes.',
         },
         {
             title: 'Apply the compound butter generously',
-            description: 'Place the halved lobsters cut-side up. Apply a generous amount of the compound butter to the exposed flesh of each half ‚Äî spread it into the crevices between the flesh and shell, over the tomalley, and into the leg cavities. Reserve half the butter for basting during grilling. The butter at this stage should be thick enough to stay on the flesh surface rather than running off ‚Äî if too liquid, refrigerate the butter-applied lobster for 10 minutes before grilling.',
+            description: 'Place the halved lobsters cut-side up. Apply a generous amount of the compound butter to the exposed flesh of each half ó spread it into the crevices between the flesh and shell, over the tomalley, and into the leg cavities. Reserve half the butter for basting during grilling. The butter at this stage should be thick enough to stay on the flesh surface rather than running off ó if too liquid, refrigerate the butter-applied lobster for 10 minutes before grilling.',
             tip: 'Generous butter application is the technique that produces the caramelized, deeply aromatic result. Insufficient butter produces a grilled lobster that is good but not extraordinary. The butter should be visibly piled onto the flesh, not thinly spread.',
         },
         {
             title: 'Grill shell-side down first over charcoal',
-            description: 'Build the charcoal fire to medium-hot ‚Äî slightly less intense than for shrimp or fish. Place the lobster halves shell-side down over the coals. The shell protects the flesh and conducts heat gently. Grill shell-side down for 8-10 minutes for 600g lobster, 10-12 minutes for 800g. The shells will turn bright orange-red. The flesh should become opaque white at the edges while remaining slightly translucent in the center.',
-            tip: 'Shell-side down first is the technique ‚Äî the shell conducts heat to the flesh gradually and prevents the delicate lobster meat from tightening and drying before the shell heats through. Flesh-side down first produces a grey, rubbery result from the rapid heat application.',
+            description: 'Build the charcoal fire to medium-hot ó slightly less intense than for shrimp or fish. Place the lobster halves shell-side down over the coals. The shell protects the flesh and conducts heat gently. Grill shell-side down for 8-10 minutes for 600g lobster, 10-12 minutes for 800g. The shells will turn bright orange-red. The flesh should become opaque white at the edges while remaining slightly translucent in the center.',
+            tip: 'Shell-side down first is the technique ó the shell conducts heat to the flesh gradually and prevents the delicate lobster meat from tightening and drying before the shell heats through. Flesh-side down first produces a grey, rubbery result from the rapid heat application.',
         },
         {
-            title: 'Flip and baste ‚Äî the final caramelization',
-            description: 'When the shell is completely orange and the flesh is mostly cooked, flip to flesh-side down for 2-3 minutes. Apply the remaining compound butter generously to the shell side as it faces up ‚Äî it will melt and run down over the flesh below. The flesh in direct contact with the grill caramelizes in these final minutes. The lobster is done when the flesh is completely opaque, pulls away from the shell with gentle pressure, and the compound butter on the surface has caramelized to a golden glaze.',
-            tip: 'The final 2-3 minutes flesh-side down is the caramelization stage that produces the golden, slightly charred surface on the flesh that makes grilled lobster visually and texturally different from steamed. The specific char marks from the grill are the visual signature of t√¥m h√πm n∆∞·ªõng.',
+            title: 'Flip and baste ó the final caramelization',
+            description: 'When the shell is completely orange and the flesh is mostly cooked, flip to flesh-side down for 2-3 minutes. Apply the remaining compound butter generously to the shell side as it faces up ó it will melt and run down over the flesh below. The flesh in direct contact with the grill caramelizes in these final minutes. The lobster is done when the flesh is completely opaque, pulls away from the shell with gentle pressure, and the compound butter on the surface has caramelized to a golden glaze.',
+            tip: 'The final 2-3 minutes flesh-side down is the caramelization stage that produces the golden, slightly charred surface on the flesh that makes grilled lobster visually and texturally different from steamed. The specific char marks from the grill are the visual signature of tÙm h˘m nu?ng.',
         },
         {
             title: 'Plate and serve with both dipping sauces',
-            description: 'Transfer the grilled lobster halves to a plate, shell-side down, flesh facing up. Scatter finely shredded kaffir lime leaves, sliced spring onion, and fresh chili over the flesh. Serve immediately with both dipping sauces ‚Äî the mu·ªëi ti√™u chanh and the ginger soy ‚Äî in individual small bowls, rice or baguette alongside, and lime wedges. The butter that has pooled in the shell cavity is the best element: spoon it over rice or soak up with bread.',
-            tip: 'The pooled compound butter in the shell cavity after grilling ‚Äî caramelized, fragrant with lemongrass and kaffir lime, mixed with the lobster juices ‚Äî is the most intensely flavored element of the entire dish. Ph√∫ Y√™n diners spoon it over rice before eating the lobster. Do not discard it.',
+            description: 'Transfer the grilled lobster halves to a plate, shell-side down, flesh facing up. Scatter finely shredded kaffir lime leaves, sliced spring onion, and fresh chili over the flesh. Serve immediately with both dipping sauces ó the mu?i tiÍu chanh and the ginger soy ó in individual small bowls, rice or baguette alongside, and lime wedges. The butter that has pooled in the shell cavity is the best element: spoon it over rice or soak up with bread.',
+            tip: 'The pooled compound butter in the shell cavity after grilling ó caramelized, fragrant with lemongrass and kaffir lime, mixed with the lobster juices ó is the most intensely flavored element of the entire dish. Ph˙ YÍn diners spoon it over rice before eating the lobster. Do not discard it.',
         },
     ],
 };

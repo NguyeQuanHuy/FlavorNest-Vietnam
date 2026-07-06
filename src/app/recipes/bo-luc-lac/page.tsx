@@ -1,4 +1,4 @@
-ï»¿
+
 'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/bo-luc-lac.jpg',
-    intro: `Bo luc lac â€” shaking beef â€” gets its name from the tossing motion used to cook it: the wok is shaken vigorously over high heat to tumble the beef cubes, building a crust on all sides without overcooking the centre. The technique is Chinese; the flavours are Vietnamese with a French accent. Butter, oyster sauce, and garlic. The beef is served on a bed of watercress dressed with lime juice and thinly sliced onion, with a small dish of lime and black pepper salt for dipping. It is one of the fastest impressive meals in Vietnamese cooking.`,
+    intro: `Bo luc lac — shaking beef — gets its name from the tossing motion used to cook it: the wok is shaken vigorously over high heat to tumble the beef cubes, building a crust on all sides without overcooking the centre. The technique is Chinese; the flavours are Vietnamese with a French accent. Butter, oyster sauce, and garlic. The beef is served on a bed of watercress dressed with lime juice and thinly sliced onion, with a small dish of lime and black pepper salt for dipping. It is one of the fastest impressive meals in Vietnamese cooking.`,
     ingredientSections: [
         {
             title: 'Beef and marinade',
@@ -57,7 +57,7 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Marinate the beef',
-            description: 'Combine oyster sauce, soy sauce, fish sauce, sugar, sesame oil, and pepper. Toss beef cubes to coat evenly. Marinate 15 minutes at room temperature. Pat dry before cooking â€” moisture is the enemy of crust.',
+            description: 'Combine oyster sauce, soy sauce, fish sauce, sugar, sesame oil, and pepper. Toss beef cubes to coat evenly. Marinate 15 minutes at room temperature. Pat dry before cooking — moisture is the enemy of crust.',
             tip: 'Dry the beef cubes with paper towel before they go into the wok. Any surface moisture causes steaming instead of searing.',
         },
         {
@@ -66,11 +66,11 @@ const recipe: RecipeData = {
         },
         {
             title: 'Mix the dipping salt',
-            description: 'Combine salt, black pepper, and lime juice in a small bowl. It should be intensely seasoned â€” a dipping salt, not a sauce.',
+            description: 'Combine salt, black pepper, and lime juice in a small bowl. It should be intensely seasoned — a dipping salt, not a sauce.',
         },
         {
             title: 'Shake the beef',
-            description: 'Heat wok over the highest possible heat until smoking. Add vegetable oil and swirl to coat. Add beef cubes in a single layer without crowding â€” cook in batches if needed. Leave untouched for 60 seconds to build a crust. Then shake the wok vigorously to tumble the beef, or toss with tongs. Cook 2 to 3 minutes total for medium-rare.',
+            description: 'Heat wok over the highest possible heat until smoking. Add vegetable oil and swirl to coat. Add beef cubes in a single layer without crowding — cook in batches if needed. Leave untouched for 60 seconds to build a crust. Then shake the wok vigorously to tumble the beef, or toss with tongs. Cook 2 to 3 minutes total for medium-rare.',
             tip: 'Wok temperature is everything. A crowded or insufficiently hot wok steams the beef grey instead of searing it brown. Work in batches if your wok is smaller than 32cm.',
         },
         {

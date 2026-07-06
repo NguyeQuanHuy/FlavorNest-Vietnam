@@ -1,34 +1,34 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'goi-ca-linh',
-    title: 'G·ªèi C√° Linh (Mekong Anchovy Salad)',
-    subtitle: 'The seasonal salad that the Mekong Delta makes only when the c√° linh run ‚Äî tiny silver fish caught in the flood season, eaten raw in a salad of fresh herbs, roasted peanuts, green mango, and a lime-fish sauce dressing that makes the bones invisible.',
+    title: 'G?i C· Linh (Mekong Anchovy Salad)',
+    subtitle: 'The seasonal salad that the Mekong Delta makes only when the c· linh run ó tiny silver fish caught in the flood season, eaten raw in a salad of fresh herbs, roasted peanuts, green mango, and a lime-fish sauce dressing that makes the bones invisible.',
     category: 'APPETIZER',
     difficulty: 'Medium',
     totalTime: '45 min',
     rating: 4.8,
     baseServings: 4,
     heroImage: '/images/recipes/goi-ca-linh.jpg',
-    intro: `G·ªèi c√° linh is one of the most seasonal and place-specific dishes in Vietnamese cooking. C√° linh ‚Äî a small freshwater fish related to the anchovy family ‚Äî appears in the Mekong Delta only during the flood season (roughly August to November) when the Mekong overflows its banks and the fish ride the floodwaters upstream. For a few weeks, c√° linh is everywhere in the delta ‚Äî piled high in markets, cooked every way imaginable, eaten at every meal. G·ªèi c√° linh is the raw preparation: the tiny fish marinated in lime juice until the acid partially cooks the flesh, then tossed with a combination of fresh herbs, green mango, roasted peanuts, fried shallots, and a dressing of fish sauce and chili. The lime acid softens the bones of the small fish to the point where they are barely perceptible ‚Äî eaten whole, bones and all. Outside the Mekong Delta, c√° linh is difficult to find. This recipe uses fresh small anchovies or whitebait as a substitute ‚Äî fish of similar size and fat content that behave the same way in the acid marinade.`,
+    intro: `G?i c· linh is one of the most seasonal and place-specific dishes in Vietnamese cooking. C· linh ó a small freshwater fish related to the anchovy family ó appears in the Mekong Delta only during the flood season (roughly August to November) when the Mekong overflows its banks and the fish ride the floodwaters upstream. For a few weeks, c· linh is everywhere in the delta ó piled high in markets, cooked every way imaginable, eaten at every meal. G?i c· linh is the raw preparation: the tiny fish marinated in lime juice until the acid partially cooks the flesh, then tossed with a combination of fresh herbs, green mango, roasted peanuts, fried shallots, and a dressing of fish sauce and chili. The lime acid softens the bones of the small fish to the point where they are barely perceptible ó eaten whole, bones and all. Outside the Mekong Delta, c· linh is difficult to find. This recipe uses fresh small anchovies or whitebait as a substitute ó fish of similar size and fat content that behave the same way in the acid marinade.`,
     ingredientSections: [
         {
             title: 'Fish and marinade',
             items: [
-                { amount: 400, unit: 'g', name: 'fresh c√° linh or small anchovies / whitebait', note: 'extremely fresh ‚Äî this is a raw preparation. If fresh c√° linh unavailable, use very fresh small anchovies or whitebait (same size).' },
-                { amount: 120, unit: 'ml', name: 'fresh lime juice', note: 'about 6-8 limes ‚Äî must be fresh, not bottled' },
+                { amount: 400, unit: 'g', name: 'fresh c· linh or small anchovies / whitebait', note: 'extremely fresh ó this is a raw preparation. If fresh c· linh unavailable, use very fresh small anchovies or whitebait (same size).' },
+                { amount: 120, unit: 'ml', name: 'fresh lime juice', note: 'about 6-8 limes ó must be fresh, not bottled' },
                 { amount: 1, unit: 'tsp', name: 'salt' },
             ],
         },
         {
             title: 'Salad',
             items: [
-                { amount: 1, name: 'small green mango (xo√†i xanh)', note: 'peeled and finely julienned ‚Äî must be unripe, sour, and firm. About 150g julienned.' },
-                { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ‚Äî not powder' },
-                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h√†nh phi)' },
-                { amount: 1, name: 'bunch Vietnamese coriander (rau rƒÉm)', note: 'leaves only ‚Äî the essential herb for this salad' },
-                { amount: 1, name: 'bunch mint (h√∫ng l·ªßi)', note: 'leaves only' },
+                { amount: 1, name: 'small green mango (xo‡i xanh)', note: 'peeled and finely julienned ó must be unripe, sour, and firm. About 150g julienned.' },
+                { amount: 50, unit: 'g', name: 'roasted peanuts', note: 'roughly crushed ó not powder' },
+                { amount: 3, unit: 'tbsp', name: 'crispy fried shallots (h‡nh phi)' },
+                { amount: 1, name: 'bunch Vietnamese coriander (rau ram)', note: 'leaves only ó the essential herb for this salad' },
+                { amount: 1, name: 'bunch mint (h˙ng l?i)', note: 'leaves only' },
                 { amount: 2, name: 'bird\'s eye chilies', note: 'thinly sliced' },
                 { amount: 3, name: 'spring onions', note: 'thinly sliced' },
             ],
@@ -46,7 +46,7 @@ const recipe: RecipeData = {
         {
             title: 'To serve',
             items: [
-                { amount: 8, name: 'b√°nh tr√°ng (rice crackers)', note: 'for scooping ‚Äî lightly toasted or plain' },
+                { amount: 8, name: 'b·nh tr·ng (rice crackers)', note: 'for scooping ó lightly toasted or plain' },
                 { amount: 1, name: 'head butter lettuce', note: 'for wrapping' },
             ],
         },
@@ -54,33 +54,33 @@ const recipe: RecipeData = {
     steps: [
         {
             title: 'Source and inspect the fish',
-            description: 'This is a raw fish preparation ‚Äî freshness is the only non-negotiable. The fish must smell of the sea, not of fish. The eyes should be clear and bright. The flesh should be firm. If there is any doubt about freshness, do not make this dish. Buy from a trusted fishmonger and tell them explicitly that you are eating the fish raw.',
-            tip: 'If fresh c√° linh is unavailable, fresh small anchovies (3-5cm) are the closest substitute. Whitebait works but has a slightly different texture. Frozen fish is not suitable for this preparation.',
+            description: 'This is a raw fish preparation ó freshness is the only non-negotiable. The fish must smell of the sea, not of fish. The eyes should be clear and bright. The flesh should be firm. If there is any doubt about freshness, do not make this dish. Buy from a trusted fishmonger and tell them explicitly that you are eating the fish raw.',
+            tip: 'If fresh c· linh is unavailable, fresh small anchovies (3-5cm) are the closest substitute. Whitebait works but has a slightly different texture. Frozen fish is not suitable for this preparation.',
         },
         {
             title: 'Clean and marinate in lime',
-            description: 'Rinse the fish under cold water. Remove heads if desired (traditionalists leave them on for small c√° linh). Place in a non-reactive bowl (glass or ceramic ‚Äî not metal). Pour lime juice over the fish, add salt, and toss to coat. The lime juice should just cover the fish. Leave to marinate at room temperature for 20-30 minutes. The flesh will turn from translucent to white-opaque as the acid denatures the proteins ‚Äî this is the lime "cooking" the fish.',
-            tip: 'The marinating time determines the texture. 20 minutes: slightly translucent center, very soft texture. 30 minutes: fully opaque, firmer texture. Do not over-marinate ‚Äî beyond 45 minutes the texture becomes grainy.',
+            description: 'Rinse the fish under cold water. Remove heads if desired (traditionalists leave them on for small c· linh). Place in a non-reactive bowl (glass or ceramic ó not metal). Pour lime juice over the fish, add salt, and toss to coat. The lime juice should just cover the fish. Leave to marinate at room temperature for 20-30 minutes. The flesh will turn from translucent to white-opaque as the acid denatures the proteins ó this is the lime "cooking" the fish.',
+            tip: 'The marinating time determines the texture. 20 minutes: slightly translucent center, very soft texture. 30 minutes: fully opaque, firmer texture. Do not over-marinate ó beyond 45 minutes the texture becomes grainy.',
         },
         {
             title: 'Make the dressing',
-            description: 'Whisk together fish sauce, lime juice, sugar, minced garlic, and chili until the sugar dissolves completely. Taste: it should be a balanced sweet-sour-salty combination with a clean chili heat. Adjust any element ‚Äî more lime if it needs brightness, more sugar if too sharp, more fish sauce if too flat.',
+            description: 'Whisk together fish sauce, lime juice, sugar, minced garlic, and chili until the sugar dissolves completely. Taste: it should be a balanced sweet-sour-salty combination with a clean chili heat. Adjust any element ó more lime if it needs brightness, more sugar if too sharp, more fish sauce if too flat.',
             tip: 'Make the dressing before assembling the salad so it is ready to add immediately after draining the fish.',
         },
         {
             title: 'Julienne the green mango',
-            description: 'Peel the unripe mango and cut into very fine julienne strips ‚Äî 2mm thick, 5-6cm long. The mango must be genuinely unripe: hard, pale green-white inside, and sour when tasted. Ripe mango is too sweet and soft and changes the character of the salad completely.',
+            description: 'Peel the unripe mango and cut into very fine julienne strips ó 2mm thick, 5-6cm long. The mango must be genuinely unripe: hard, pale green-white inside, and sour when tasted. Ripe mango is too sweet and soft and changes the character of the salad completely.',
             tip: 'A mandoline or julienne peeler produces the most even strips. Uniform thin strips dress more evenly and have better texture than uneven chunks.',
         },
         {
             title: 'Drain the fish and assemble',
             description: 'Drain the marinated fish through a fine strainer, discarding the lime juice. The fish has taken on all the acid flavor it needs. In a large bowl, combine drained fish, julienned green mango, Vietnamese coriander leaves, mint leaves, sliced spring onion, and half the fried shallots. Pour the dressing over and toss gently. Taste and adjust seasoning.',
-            tip: 'Toss gently ‚Äî the marinated fish is delicate and aggressive tossing breaks it apart. Fold rather than stir.',
+            tip: 'Toss gently ó the marinated fish is delicate and aggressive tossing breaks it apart. Fold rather than stir.',
         },
         {
             title: 'Plate and serve immediately',
-            description: 'Arrange the salad on a serving plate. Top with remaining fried shallots, crushed peanuts, and sliced chili. Serve with rice crackers for scooping and lettuce leaves for wrapping. G·ªèi c√° linh must be eaten immediately after assembling ‚Äî it softens quickly as the dressing continues working on the fish.',
-            tip: 'The rice cracker scoop is the traditional serving method ‚Äî place a spoonful of salad on a cracker and eat in one bite. The crunch of the cracker against the soft fish is essential to the dish.',
+            description: 'Arrange the salad on a serving plate. Top with remaining fried shallots, crushed peanuts, and sliced chili. Serve with rice crackers for scooping and lettuce leaves for wrapping. G?i c· linh must be eaten immediately after assembling ó it softens quickly as the dressing continues working on the fish.',
+            tip: 'The rice cracker scoop is the traditional serving method ó place a spoonful of salad on a cracker and eat in one bite. The crunch of the cracker against the soft fish is essential to the dish.',
         },
     ],
 };

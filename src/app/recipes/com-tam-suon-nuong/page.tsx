@@ -1,17 +1,17 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'com-tam-suon-nuong',
     title: 'Broken Rice with Grilled Pork Ribs',
-    subtitle: `Saigon's most beloved breakfast â€” smoky chargrilled pork ribs over fragrant broken rice.`,
+    subtitle: `Saigon's most beloved breakfast — smoky chargrilled pork ribs over fragrant broken rice.`,
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '55 min',
     rating: 4.9,
     baseServings: 2,
     heroImage: '/images/recipes/com-tam-suon-nuong.jpg',
-    intro: `Com tam suon nuong is the rib version of Saigon's iconic broken rice plate â€” pork ribs marinated in lemongrass and fish sauce, grilled until lacquered and charred, served over broken jasmine rice with scallion oil, pickled vegetables, and a generous pour of nuoc cham. The ribs are the star.`,
+    intro: `Com tam suon nuong is the rib version of Saigon's iconic broken rice plate — pork ribs marinated in lemongrass and fish sauce, grilled until lacquered and charred, served over broken jasmine rice with scallion oil, pickled vegetables, and a generous pour of nuoc cham. The ribs are the star.`,
     ingredientSections: [
         {
             title: 'Grilled pork ribs',

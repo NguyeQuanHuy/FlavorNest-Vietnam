@@ -1,10 +1,10 @@
-ï»¿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'vietnamese-chicken-pho',
     title: 'Vietnamese Chicken Pho',
-    subtitle: 'Everything pho bo promises â€” lighter, faster, equally soul-warming.',
+    subtitle: 'Everything pho bo promises — lighter, faster, equally soul-warming.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '2 hrs 15 min',
@@ -46,7 +46,7 @@ const recipe: RecipeData = {
         {
             title: 'Simmer the broth',
             description: 'Place whole chicken in a pot with cold water. Bring to a boil, skim foam, add charred aromatics and spices. Reduce to a gentle simmer for 1.5 hours. Remove chicken when cooked through.',
-            tip: 'Never let the broth boil vigorously â€” it will turn cloudy. A gentle simmer keeps it golden and clear.',
+            tip: 'Never let the broth boil vigorously — it will turn cloudy. A gentle simmer keeps it golden and clear.',
         },
         {
             title: 'Shred the chicken',

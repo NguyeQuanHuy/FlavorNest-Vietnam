@@ -1,10 +1,10 @@
-Ôªø'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
     slug: 'banh-pho-xao-thit-heo',
     title: 'Stir-fried Rice Noodles with Pork (Banh Pho Xao Thit Heo)',
-    subtitle: 'Soft rice noodles stir-fried with pork, garlic, and soy-based sauce ‚Äî smoky, savory, and comforting.',
+    subtitle: 'Soft rice noodles stir-fried with pork, garlic, and soy-based sauce ó smoky, savory, and comforting.',
     category: 'MAIN COURSE',
     difficulty: 'Medium',
     totalTime: '25 min',
@@ -12,7 +12,7 @@ const recipe: RecipeData = {
     baseServings: 2,
     heroImage: '/images/recipes/banh-pho-xao-thit-heo.jpg',
 
-    intro: `B√°nh ph·ªü x√†o th·ªãt heo is a simple Vietnamese stir-fried noodle dish made with flat rice noodles, pork, and a savory sauce.
+    intro: `B·nh ph? x‡o th?t heo is a simple Vietnamese stir-fried noodle dish made with flat rice noodles, pork, and a savory sauce.
 
 The dish is known for its smoky wok aroma, soft noodles, and juicy pork slices coated in a rich, slightly sweet-savory sauce.`,
 
@@ -20,7 +20,7 @@ The dish is known for its smoky wok aroma, soft noodles, and juicy pork slices c
         {
             title: 'Main ingredients',
             items: [
-                { amount: 250, unit: 'g', name: 'flat rice noodles (b√°nh ph·ªü)' },
+                { amount: 250, unit: 'g', name: 'flat rice noodles (b·nh ph?)' },
                 { amount: 200, unit: 'g', name: 'pork shoulder or loin', note: 'thinly sliced' },
                 { amount: 2, name: 'garlic cloves', note: 'minced' },
                 { amount: 1, name: 'onion', note: 'sliced' },
@@ -64,7 +64,7 @@ The dish is known for its smoky wok aroma, soft noodles, and juicy pork slices c
         {
             title: 'Stir-fry noodles',
             description: 'Add noodles and toss with sauce until evenly coated.',
-            tip: 'High heat creates the signature smoky ‚Äúwok aroma‚Äù.',
+            tip: 'High heat creates the signature smoky ìwok aromaî.',
         },
         {
             title: 'Finish',

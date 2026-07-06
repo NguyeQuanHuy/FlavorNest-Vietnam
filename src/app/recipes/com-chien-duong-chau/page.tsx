@@ -1,4 +1,4 @@
-ï»¿'use client';
+'use client';
 
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
@@ -6,7 +6,7 @@ const recipe: RecipeData = {
     slug: 'com-chien-duong-chau',
     title: 'Yangzhou Fried Rice',
     subtitle:
-        'Yangzhou Fried Rice (CÆ¡m ChiÃªn DÆ°Æ¡ng ChÃ¢u) â€” a vibrant, colorful medley of fluffy golden rice, savory lap cheong, and tender shrimp, flash-fried for that perfect smoky wok-hei.',
+        'Yangzhou Fried Rice (Com Chiên Duong Châu) — a vibrant, colorful medley of fluffy golden rice, savory lap cheong, and tender shrimp, flash-fried for that perfect smoky wok-hei.',
     category: 'MAIN COURSE',
     difficulty: 'Easy',
     totalTime: '25 min',
@@ -14,7 +14,7 @@ const recipe: RecipeData = {
     baseServings: 4,
     heroImage: '/images/recipes/com-chien-duong-chau.jpg',
     intro:
-        'Yangzhou Fried Rice is perhaps the most famous fried rice in the world, and for good reason. It is a masterclass in balanceâ€”the sweetness of Chinese sausage, the snap of fresh shrimp, and the earthy pop of green peas, all held together by individual grains of rice coated in egg. While it originated in China, it has become a beloved staple in Vietnamese cuisine, often served as the centerpiece of family gatherings and festive banquets.',
+        'Yangzhou Fried Rice is perhaps the most famous fried rice in the world, and for good reason. It is a masterclass in balance—the sweetness of Chinese sausage, the snap of fresh shrimp, and the earthy pop of green peas, all held together by individual grains of rice coated in egg. While it originated in China, it has become a beloved staple in Vietnamese cuisine, often served as the centerpiece of family gatherings and festive banquets.',
     ingredientSections: [
         {
             title: 'The Rice and Protein',
@@ -63,12 +63,12 @@ const recipe: RecipeData = {
         },
         {
             title: 'Fry the aromatics and rice',
-            description: 'Add the remaining oil to the hot wok. SautÃ© the garlic and the white parts of the scallions until fragrant. Add the rice and toss vigorously over high heat.',
+            description: 'Add the remaining oil to the hot wok. Sauté the garlic and the white parts of the scallions until fragrant. Add the rice and toss vigorously over high heat.',
         },
         {
             title: 'Season and combine',
             description: 'Add the peas, carrots, and the cooked protein mixture back into the wok. Pour in the soy sauce, oyster sauce, sugar, white pepper, and sesame oil.',
-            tip: 'Use a high flame and keep the rice moving to develop "wok hei"â€”the signature smoky charred flavor.',
+            tip: 'Use a high flame and keep the rice moving to develop "wok hei"—the signature smoky charred flavor.',
         },
         {
             title: 'Final garnish',

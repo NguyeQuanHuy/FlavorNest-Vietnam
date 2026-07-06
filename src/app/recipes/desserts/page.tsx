@@ -1,10 +1,10 @@
-Ôªø'use client'
+'use client'
 
 /**
- * FlavorNest Vietnam ‚Äî Desserts Page
+ * FlavorNest Vietnam ó Desserts Page
  * app/recipes/desserts/page.tsx
  *
- * Design: Warm cream + rose gold editorial ‚Äî "sweet magazine spread"
+ * Design: Warm cream + rose gold editorial ó "sweet magazine spread"
  * Motion: Framer Motion staggered grid, hero parallax, card lifts
  * SEO: generateMetadata exported at bottom
  */
@@ -16,7 +16,7 @@ import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
 // --- Types --------------------------------------------------------------------
-type DessertType = 'All' | 'Traditional' | 'Ch√®' | 'B√°nh' | 'Frozen' | 'Fusion'
+type DessertType = 'All' | 'Traditional' | 'ChË' | 'B·nh' | 'Frozen' | 'Fusion'
 
 interface Dessert {
     slug: string
@@ -41,11 +41,11 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-ba-mau',
         name: 'Three-Colour Dessert',
-        viet: 'Ch√® ba m√†u',
-        type: 'Ch√®',
+        viet: 'ChË ba m‡u',
+        type: 'ChË',
         image: '/images/recipes/che-ba-mau.jpg',
-        description: 'Saigon\'s most photogenic glass ‚Äî layers of mung bean, red jelly, and pandan jelly over crushed ice, crowned with coconut cream.',
-        story: 'Order one at any Ch·ª£ B·∫øn Th√†nh stall and the world slows down to the pace of slowly melting ice.',
+        description: 'Saigon\'s most photogenic glass ó layers of mung bean, red jelly, and pandan jelly over crushed ice, crowned with coconut cream.',
+        story: 'Order one at any Ch? B?n Th‡nh stall and the world slows down to the pace of slowly melting ice.',
         prepTime: '30 min',
         cookTime: '20 min',
         totalTime: '50 min',
@@ -58,10 +58,10 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-flan',
         name: 'Vietnamese Caramel Flan',
-        viet: 'b√°nh Flan',
+        viet: 'b·nh Flan',
         type: 'Fusion',
         image: '/images/recipes/banh-flan.jpg',
-        description: 'Silky, trembling custard with a pool of dark caramel ‚Äî a French inheritance that Vietnam made its own, often served over crushed ice.',
+        description: 'Silky, trembling custard with a pool of dark caramel ó a French inheritance that Vietnam made its own, often served over crushed ice.',
         story: 'The French left behind their language and their flan. Vietnam kept the flan and improved it.',
         prepTime: '15 min',
         cookTime: '40 min',
@@ -75,11 +75,11 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-thai',
         name: 'Thai-Style Fruit Dessert',
-        viet: 'Ch√® Th√°i',
-        type: 'Ch√®',
+        viet: 'ChË Th·i',
+        type: 'ChË',
         image: '/images/recipes/che-thai.jpg',
-        description: 'A tropical abundance ‚Äî jackfruit, lychee, toddy palm seeds, grass jelly, and water chestnuts swimming in sweetened coconut milk over ice.',
-        story: 'It tastes like a Saigon summer afternoon feels ‚Äî sweet, abundant, a little chaotic, completely wonderful.',
+        description: 'A tropical abundance ó jackfruit, lychee, toddy palm seeds, grass jelly, and water chestnuts swimming in sweetened coconut milk over ice.',
+        story: 'It tastes like a Saigon summer afternoon feels ó sweet, abundant, a little chaotic, completely wonderful.',
         prepTime: '20 min',
         cookTime: '10 min',
         totalTime: '30 min',
@@ -91,10 +91,10 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-chuoi-nuong',
         name: 'Baked Banana Cake',
-        viet: 'B√°nh Chu·ªëi N∆∞·ªõng',
-        type: 'B√°nh',
+        viet: 'B·nh Chu?i Nu?ng',
+        type: 'B·nh',
         image: '/images/recipes/banh-chuoi-nuong.jpg',
-        description: 'Ripe bananas baked into a dense, aromatic coconut-milk custard until the top caramelises to a deep amber ‚Äî the smell alone is worth making it.',
+        description: 'Ripe bananas baked into a dense, aromatic coconut-milk custard until the top caramelises to a deep amber ó the smell alone is worth making it.',
         story: 'Every Vietnamese grandmother has a version. None of them ever wrote it down. This is our best attempt to preserve it.',
         prepTime: '15 min',
         cookTime: '45 min',
@@ -111,7 +111,7 @@ const DESSERTS: Dessert[] = [
         viet: 'Sua chua nep cam',
         type: 'Traditional',
         image: '/images/recipes/sua-chua-nep-cam.jpg',
-        description: 'Tangy Vietnamese yoghurt layered with sweetened purple sticky rice ‚Äî a textural contrast of creamy and chewy that has no equal.',
+        description: 'Tangy Vietnamese yoghurt layered with sweetened purple sticky rice ó a textural contrast of creamy and chewy that has no equal.',
         story: 'The purple of the rice bleeds into the white yoghurt in slow, beautiful swirls. It\'s almost too pretty to eat. Almost.',
         prepTime: '20 min',
         cookTime: '30 min',
@@ -124,11 +124,11 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'kem-chuoi',
         name: 'Frozen Banana Coconut Bar',
-        viet: 'Kem Chu·ªëi',
+        viet: 'Kem Chu?i',
         type: 'Frozen',
         image: '/images/recipes/kem-chuoi.jpg',
-        description: 'A Vietnamese street-corner classic ‚Äî banana and sticky rice wrapped in coconut cream, frozen on a stick, rolled in toasted peanuts.',
-        story: 'In H·ªôi An\'s Nguy·ªÖn Th·ªã Minh Khai street, a single cart has sold these since 1978. The recipe has not changed once.',
+        description: 'A Vietnamese street-corner classic ó banana and sticky rice wrapped in coconut cream, frozen on a stick, rolled in toasted peanuts.',
+        story: 'In H?i An\'s Nguy?n Th? Minh Khai street, a single cart has sold these since 1978. The recipe has not changed once.',
         prepTime: '20 min',
         cookTime: '10 min',
         totalTime: '3 hrs',
@@ -140,10 +140,10 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-buoi',
         name: 'Pomelo Dessert Soup',
-        viet: 'Ch√® b∆∞·ªüi Mi·ªÅn Nam',
-        type: 'Ch√®',
+        viet: 'ChË bu?i Mi?n Nam',
+        type: 'ChË',
         image: '/images/recipes/che-buoi.jpg',
-        description: 'Translucent pomelo pith pearls, soft mung bean, and tapioca in warm pandan-scented coconut broth ‚Äî delicate and profoundly comforting.',
+        description: 'Translucent pomelo pith pearls, soft mung bean, and tapioca in warm pandan-scented coconut broth ó delicate and profoundly comforting.',
         story: 'The pomelo pith takes patience to prepare. It rewards that patience with a texture unlike anything else in dessert.',
         prepTime: '40 min',
         cookTime: '30 min',
@@ -157,8 +157,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-cam',
         name: 'Sesame Fried Dough Balls',
-        viet: 'b√°nh Cam',
-        type: 'B√°nh',
+        viet: 'b·nh Cam',
+        type: 'B·nh',
         image: '/images/recipes/banh-cam.jpg',
         description: 'Crispy golden spheres of glutinous rice, hollow inside with a heart of sweetened mung bean paste, rolled in sesame seeds and fried to order.',
         story: 'Bite through the sesame crust, through the crisp shell, and the mung bean filling releases like a warm secret.',
@@ -173,7 +173,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau',
         name: 'Sweet Mung Bean Soup',
-        viet: 'Ch√® ƒê·∫≠u Xanh',
+        viet: 'ChË –?u Xanh',
         type: 'Traditional',
         image: '/images/recipes/che-dau-xanh.jpg',
         description: 'Split mung beans simmered until soft, sweetened with rock sugar, perfumed with pandan, and finished with salted coconut cream.',
@@ -189,10 +189,10 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-troi-nuoc',
         name: 'Floating Rice Dumplings',
-        viet: 'B√°nh Tr√¥i N∆∞·ªõc',
+        viet: 'B·nh TrÙi Nu?c',
         type: 'Traditional',
         image: '/images/recipes/banh-troi-nuoc.jpg',
-        description: 'Soft white glutinous rice balls with a core of brown sugar and ginger ‚Äî served in warm ginger syrup. They float when they\'re ready.',
+        description: 'Soft white glutinous rice balls with a core of brown sugar and ginger ó served in warm ginger syrup. They float when they\'re ready.',
         story: 'On the 3rd day of the 3rd lunar month, Vietnamese families make these together. The act of making them is as meaningful as eating them.',
         prepTime: '30 min',
         cookTime: '20 min',
@@ -206,7 +206,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-buoi-mien-nam',
         name: 'Pomelo Peel Dessert',
-        viet: 'Ch√® b∆∞·ªüi Mi·ªÅn Nam',
+        viet: 'ChË bu?i Mi?n Nam',
         type: 'Traditional',
         image: '/images/recipes/che-buoi-mien-nam.jpg',
         description: 'Crunchy, glass-like pomelo pith paired with soft mung beans in a thick, fragrant sweet soup.',
@@ -223,8 +223,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-khoai-mon',
         name: 'Taro & Sticky Rice Soup',
-        viet: 'Ch√® Khoai M√¥n',
-        type: 'Ch√®',
+        viet: 'ChË Khoai MÙn',
+        type: 'ChË',
         image: '/images/recipes/che-khoai-mon.jpg',
         description: 'Creamy taro chunks cooked with fragrant sticky rice and pandan leaves, served with thick coconut cream.',
         story: 'A comforting Southern staple where the earthiness of taro meets the velvety richness of coconut.',
@@ -240,8 +240,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-dau-xanh',
         name: 'Mung Bean Sweet Soup',
-        viet: 'Ch√® ƒê·∫≠u Xanh',
-        type: 'Ch√®',
+        viet: 'ChË –?u Xanh',
+        type: 'ChË',
         image: '/images/recipes/che-dau-xanh.jpg',
         description: 'A light and cooling dessert made from peeled mung beans, prized for its refreshing and detoxifying properties.',
         story: 'The most honest dessert in any Vietnamese home, often prepared by grandmothers to beat the summer heat.',
@@ -257,8 +257,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-do-den',
         name: 'Black Bean Dessert',
-        viet: 'Ch√® ƒê·ªó ƒêen',
-        type: 'Ch√®',
+        viet: 'ChË –? –en',
+        type: 'ChË',
         image: '/images/recipes/che-do-den.jpg',
         description: 'Soft black beans in a dark, sweet syrup scented with jasmine, often topped with crunchy coconut shreds.',
         story: 'The quintessential summer treat of Northern Vietnam, simple yet deeply rooted in every childhood memory.',
@@ -274,8 +274,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-chuoi',
         name: 'Banana with Sago Pearls',
-        viet: 'Ch√® Chu·ªëi',
-        type: 'Ch√®',
+        viet: 'ChË Chu?i',
+        type: 'ChË',
         image: '/images/recipes/che-chuoi.jpg',
         description: 'Sliced bananas simmered in rich coconut milk with chewy sago pearls and crushed peanuts.',
         story: 'A rustic dessert that celebrates the humble banana, turning it into a creamy, tropical delight.',
@@ -291,8 +291,8 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-long-nhan',
         name: 'Longan & Lotus Seed Soup',
-        viet: 'Ch√® Long Nh√£n',
-        type: 'Ch√®',
+        viet: 'ChË Long Nh„n',
+        type: 'ChË',
         image: '/images/recipes/che-long-nhan.jpg',
         description: 'Delicate longan fruits stuffed with powdery lotus seeds in a clear, refined rock-sugar syrup.',
         story: 'Once a tribute to kings, this elegant dessert symbolizes grace and is believed to bring peaceful sleep.',
@@ -308,11 +308,11 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'che-sen',
         name: 'Lotus Seed Sweet Soup',
-        viet: 'Ch√® Sen',
-        type: 'Ch√®',
+        viet: 'ChË Sen',
+        type: 'ChË',
         image: '/images/recipes/che-sen.jpg',
         description: 'Pure, steamed lotus seeds in a crystal clear syrup, highlighting the natural earthy flavor of the seed.',
-        story: 'A zen-like experience in a bowl, capturing the essence of the lotus ‚Äî Vietnams national flower.',
+        story: 'A zen-like experience in a bowl, capturing the essence of the lotus ó Vietnams national flower.',
         prepTime: '20 min',
         cookTime: '40 min',
         totalTime: '1 hr',
@@ -325,7 +325,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-da-lon',
         name: 'Steamed Layer Cake',
-        viet: 'B√°nh Da L·ª£n',
+        viet: 'B·nh Da L?n',
         type: 'Traditional',
         image: '/images/recipes/banh-da-lon.jpg',
         description: 'Chewy, pandan-scented layers alternating with sweet mung bean paste in a glossy, steamed cake.',
@@ -342,7 +342,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'kem-bo-sai-gon',
         name: 'Saigon Avocado Ice Cream',
-        viet: 'Kem B∆° S√†i G√≤n',
+        viet: 'Kem Bo S‡i GÚn',
         type: 'Frozen',
         image: '/images/recipes/kem-bo-sai-gon.jpg',
         description: 'Buttery avocado mash topped with a scoop of coconut ice cream and crunchy dried coconut flakes.',
@@ -359,7 +359,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'sua-chua',
         name: 'Vietnamese Yogurt',
-        viet: 'S·ªØa Chua',
+        viet: 'S?a Chua',
         type: 'Fusion',
         image: '/images/recipes/sua-chua.jpg',
         description: 'Sweet, tangy yogurt made with condensed milk, often enjoyed frozen in small plastic bags.',
@@ -376,7 +376,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'xoai-lac-dua-nuoc',
         name: 'Shaken Mango with Nipa Palm',
-        viet: 'Xo√†i L·∫Øc D·ª´a N∆∞·ªõc',
+        viet: 'Xo‡i L?c D?a Nu?c',
         type: 'Frozen',
         image: '/images/recipes/xoai-lac-dua-nuoc.jpg',
         description: 'Tart mango cubes and chewy nipa palm fruit shaken with chili salt and sweet coconut nectar.',
@@ -393,7 +393,7 @@ const DESSERTS: Dessert[] = [
     {
         slug: 'banh-troi-nuoc-nhan-dau-xanh',
         name: 'Sticky Rice Balls in Ginger',
-        viet: 'B√°nh Tr√¥i N∆∞·ªõc Nh√¢n ƒê·∫≠u Xanh',
+        viet: 'B·nh TrÙi Nu?c Nh‚n –?u Xanh',
         type: 'Traditional',
         image: '/images/recipes/banh-troi-nuoc-nhan-dau-xanh.jpg',
         description: 'Glutinous rice balls filled with mung bean floating in a warm, spicy ginger and rock sugar syrup.',
@@ -410,7 +410,7 @@ const DESSERTS: Dessert[] = [
     {
         slug:'banh-khoai-mi-nuong',
         name:'Baked Cassava Cake',
-        viet:'B√°nh Khoai M√¨ N∆∞·ªõng',
+        viet:'B·nh Khoai MÏ Nu?ng',
         type:'Traditional',
         image:'/images/recipes/banh-khoai-mi-nuong.jpg',
         description:'A chewy baked cassava cake infused with coconut milk, creating a golden crust outside and a soft, slightly elastic center inside.',
@@ -427,8 +427,8 @@ const DESSERTS: Dessert[] = [
     {
         slug:'chuoi-chien',
         name:'Deep Fried Banana',
-        viet:'Chu·ªëi Chi√™n',
-        type:'B√°nh',
+        viet:'Chu?i ChiÍn',
+        type:'B·nh',
         image:'/images/recipes/chuoi-chien.jpg',
         description:'Ripe bananas coated in a light rice batter and deep-fried until golden and crisp outside, soft and sweet inside.',
         story:'A familiar street snack where the sound of sizzling oil signals childhood afternoons and simple joys.',
@@ -444,8 +444,8 @@ const DESSERTS: Dessert[] = [
     {
         slug:'che-troi-nuoc',
         name:'Ginger Sweet Rice Dumplings',
-        viet:'Ch√® Tr√¥i N∆∞·ªõc',
-        type:'Ch√®',
+        viet:'ChË TrÙi Nu?c',
+        type:'ChË',
         image:'/images/recipes/che-troi-nuoc.jpg',
         description:'Glutinous rice balls filled with mung bean, floating in warm ginger syrup with a gentle sweetness.',
         story:'A symbolic dessert of reunion and completeness, often enjoyed during festivals and family gatherings.',
@@ -461,8 +461,8 @@ const DESSERTS: Dessert[] = [
     {
         slug:'che-bap',
         name:'Sweet Corn Pudding',
-        viet:'Ch√® B·∫Øp',
-        type:'Ch√®',
+        viet:'ChË B?p',
+        type:'ChË',
         image:'/images/recipes/che-bap.jpg',
         description:'Soft sweet corn simmered with sugar and tapioca, finished with creamy coconut milk on top.',
         story:'A humble countryside dessert that captures the natural sweetness of fresh corn in every spoonful.',
@@ -478,7 +478,7 @@ const DESSERTS: Dessert[] = [
     {
         slug:'rau-ma-dau-xanh-nuoc-dua',
         name:'Pennywort Mung Bean Coconut Drink',
-        viet:'Rau M√° ƒê·∫≠u Xanh N∆∞·ªõc D·ª´a',
+        viet:'Rau M· –?u Xanh Nu?c D?a',
         type:'Frozen',
         image:'/images/recipes/rau-ma-dau-xanh-nuoc-dua.jpg',
         description:'A blended chilled drink of pennywort and mung bean mixed with coconut water, smooth, green, and refreshing.',
@@ -495,8 +495,8 @@ const DESSERTS: Dessert[] = [
     {
         slug:'banh-tieu',
         name:'Vietnamese Sesame Doughnut',
-        viet:'B√°nh Ti√™u',
-        type:'B√°nh',
+        viet:'B·nh TiÍu',
+        type:'B·nh',
         image:'/images/recipes/banh-tieu.jpg',
         description:'A hollow fried dough pastry coated with sesame seeds, airy inside and crisp outside, often enjoyed warm as a street snack.',
         story:'A nostalgic roadside treat where the dough puffs up like a small edible balloon, simple but addictive.',
@@ -506,14 +506,14 @@ const DESSERTS: Dessert[] = [
         servings:4,
         difficulty:'Easy',
         cal:300,
-        tags:['Fried','Sesame','Street Food','B√°nh'],
+        tags:['Fried','Sesame','Street Food','B·nh'],
         isSignature:false,
     },
     {
         slug:'banh-chuoi-hap',
         name:'Steamed Banana Cake',
-        viet:'B√°nh Chu·ªëi H·∫•p',
-        type:'B√°nh',
+        viet:'B·nh Chu?i H?p',
+        type:'B·nh',
         image:'/images/recipes/banh-chuoi-hap.jpg',
         description:'Soft steamed banana cake made with coconut milk, tapioca, and ripe bananas, topped with creamy coconut sauce and sesame.',
         story:'A gentle, home-style dessert that carries the natural sweetness of ripe bananas in every bite.',
@@ -523,14 +523,14 @@ const DESSERTS: Dessert[] = [
         servings:4,
         difficulty:'Easy',
         cal:340,
-        tags:['Banana','Coconut','Steamed','B√°nh'],
+        tags:['Banana','Coconut','Steamed','B·nh'],
         isSignature:false,
     },
     {
         slug:'che-thai',
         name:'Thai-Inspired Fruit Dessert',
-        viet:'Ch√® Th√°i',
-        type:'Ch√®',
+        viet:'ChË Th·i',
+        type:'ChË',
         image:'/images/recipes/che-thai.jpg',
         description:'A colorful chilled dessert mix of jackfruit, lychee, nata de coco, and jelly in sweet coconut milk.',
         story:'A modern dessert inspired by Thai flavors, popular for its refreshing tropical sweetness and vibrant colors.',
@@ -540,14 +540,14 @@ const DESSERTS: Dessert[] = [
         servings:4,
         difficulty:'Easy',
         cal:420,
-        tags:['Cold','Coconut','Fruit','Ch√®'],
+        tags:['Cold','Coconut','Fruit','ChË'],
         isSignature:false,
     },
     {
         slug:'banh-da-lon',
         name:'Layered Pandan Steamed Cake',
-        viet:'B√°nh Da L·ª£n',
-        type:'B√°nh',
+        viet:'B·nh Da L?n',
+        type:'B·nh',
         image:'/images/recipes/banh-da-lon.jpg',
         description:'Soft, chewy layered cake made from rice flour, mung bean, and pandan, with alternating green and yellow layers.',
         story:'A childhood favorite often seen in festive trays, admired for its smooth layers and subtle aroma.',
@@ -557,14 +557,14 @@ const DESSERTS: Dessert[] = [
         servings:6,
         difficulty:'Medium',
         cal:310,
-        tags:['Pandan','Steamed','Layered','B√°nh'],
+        tags:['Pandan','Steamed','Layered','B·nh'],
         isSignature:false,
     },
     {
         slug:'banh-ran',
         name:'Glutinous Fried Sesame Balls',
-        viet:'B√°nh R√°n',
-        type:'B√°nh',
+        viet:'B·nh R·n',
+        type:'B·nh',
         image:'/images/recipes/banh-ran.jpg',
         description:'Crispy golden glutinous rice balls filled with sweet mung bean paste, coated in sesame seeds.',
         story:'A street snack that puffs up beautifully in hot oil, crunchy outside and soft, sweet inside.',
@@ -574,14 +574,14 @@ const DESSERTS: Dessert[] = [
         servings:4,
         difficulty:'Medium',
         cal:360,
-        tags:['Fried','Sesame','Mung Bean','B√°nh'],
+        tags:['Fried','Sesame','Mung Bean','B·nh'],
         isSignature:false,
     },
     {
         slug:'xoi-gac',
         name:'Red Sticky Rice',
-        viet:'X√¥i G·∫•c',
-        type:'B√°nh',
+        viet:'XÙi G?c',
+        type:'B·nh',
         image:'/images/recipes/xoi-gac.jpg',
         description:'Fragrant sticky rice colored naturally with gac fruit, often mixed with coconut milk and topped with mung bean paste.',
         story:'A traditional festive dish symbolizing luck, prosperity, and celebration in Vietnamese culture.',
@@ -591,13 +591,13 @@ const DESSERTS: Dessert[] = [
         servings:6,
         difficulty:'Medium',
         cal:450,
-        tags:['Sticky Rice','Gac','Traditional','B√°nh'],
+        tags:['Sticky Rice','Gac','Traditional','B·nh'],
         isSignature:true,
     },
     {
         slug:'mut-dua',
         name:'Candied Coconut Strips',
-        viet:'M·ª©t D·ª´a',
+        viet:'M?t D?a',
         type:'Traditional',
         image:'/images/recipes/mut-dua.jpg',
         description:'Thin coconut strips cooked slowly with sugar until chewy, glossy, and delicately sweet.',
@@ -616,7 +616,7 @@ const DESSERTS: Dessert[] = [
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const REGIONS = ['All Regions', 'Northern', 'Central', 'Southern']
 
-const TYPES: DessertType[] = ['All', 'Traditional', 'Ch√®', 'B√°nh', 'Frozen', 'Fusion']
+const TYPES: DessertType[] = ['All', 'Traditional', 'ChË', 'B·nh', 'Frozen', 'Fusion']
 
 const DIFF_COLOR: Record<string, string> = {
     Easy: '#059669',
@@ -626,8 +626,8 @@ const DIFF_COLOR: Record<string, string> = {
 
 const TYPE_COLOR: Record<string, string> = {
     Traditional: '#7C3AED',
-    'Ch√®': '#0284C7',
-    'B√°nh': '#D97706',
+    'ChË': '#0284C7',
+    'B·nh': '#D97706',
     Frozen: '#0891B2',
     Fusion: '#BE185D',
 }
@@ -681,7 +681,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                 <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#f5ede3' }}>
                     <Image
                         src={item.image}
-                        alt={`${item.name} (${item.viet}) ‚Äî Vietnamese dessert recipe`}
+                        alt={`${item.name} (${item.viet}) ó Vietnamese dessert recipe`}
                         fill
                         sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
                         style={{
@@ -702,7 +702,7 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
                     {/* Signature badge */}
                     {item.isSignature && (
                         <div style={{ position: 'absolute', top: 14, left: 14, background: '#D97706', color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100 }}>
-                            ‚Äî Signature
+                            ó Signature
                         </div>
                     )}
 
@@ -896,7 +896,7 @@ export default function DessertsPage() {
                             margin: 0,
                             paddingLeft: 18,
                         }}>
-                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky ch√®</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>caramel-kissed b√°nh flan</span> ‚Äî Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
+                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky chË</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>caramel-kissed b·nh flan</span> ó Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
                         </p>
                     </div>
 
@@ -953,7 +953,7 @@ export default function DessertsPage() {
                     >
                         <div style={{ fontSize: 48, marginBottom: 14 }}>??</div>
                         <p style={{ fontSize: 17, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
-                            No desserts match your search ‚Äî yet.
+                            No desserts match your search ó yet.
                         </p>
                         <button
                             onClick={() => { setQuery(''); setActiveType('All') }}
@@ -1008,9 +1008,9 @@ export default function DessertsPage() {
 
 // --- SEO Metadata (use in layout or as generateMetadata) ---------------------
 export const dessertPageMetadata = {
-    title: 'Vietnamese Desserts ‚Äî Ch√®, B√°nh & Sweet Traditions | FlavorNest Vietnam',
+    title: 'Vietnamese Desserts ó ChË, B·nh & Sweet Traditions | FlavorNest Vietnam',
     description:
-        'Discover 10+ authentic Vietnamese dessert recipes ‚Äî from silky B√°nh Flan and colourful Che ba mau to baked banana cake and sesame dough balls. Sweet traditions worth making at home.',
+        'Discover 10+ authentic Vietnamese dessert recipes ó from silky B·nh Flan and colourful Che ba mau to baked banana cake and sesame dough balls. Sweet traditions worth making at home.',
     keywords: [
         'vietnamese desserts', 'che ba mau', 'banh flan recipe', 'che thai', 'banh chuoi nuong',
         'sua chua nep cam', 'kem chuoi', 'che buoi', 'banh cam', 'vietnamese sweets',
@@ -1018,11 +1018,11 @@ export const dessertPageMetadata = {
     ],
     openGraph: {
         title: 'Vietnamese Desserts | FlavorNest Vietnam',
-        description: '10+ authentic Vietnamese dessert recipes ‚Äî Ch√®, B√°nh, frozen treats and fusion sweets.',
+        description: '10+ authentic Vietnamese dessert recipes ó ChË, B·nh, frozen treats and fusion sweets.',
         images: [{
             url: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&h=630&q=85',
             width: 1200, height: 630,
-            alt: 'Vietnamese desserts ‚Äî colourful ch√® and sweet treats',
+            alt: 'Vietnamese desserts ó colourful chË and sweet treats',
         }],
     },
 }

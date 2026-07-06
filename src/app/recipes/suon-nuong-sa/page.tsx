@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -12,11 +12,11 @@ const recipe: RecipeData = {
     baseServings: 3,
     heroImage: '/images/recipes/suon-nuong-sa.jpg',
 
-    intro: `Sườn nướng sả is a popular Vietnamese grilled dish known for its bold aroma and deep, smoky flavor.
+    intro: `Su?n nu?ng s? is a popular Vietnamese grilled dish known for its bold aroma and deep, smoky flavor.
 
 Pork ribs are marinated with crushed lemongrass, garlic, fish sauce, and a touch of sweetness, then grilled over charcoal until the edges are caramelized and slightly charred.
 
-The result is tender meat infused with citrusy lemongrass fragrance and smoky depth — perfect with rice, vermicelli, or eaten straight off the grill.`,
+The result is tender meat infused with citrusy lemongrass fragrance and smoky depth � perfect with rice, vermicelli, or eaten straight off the grill.`,
 
     ingredientSections: [
         {
@@ -50,7 +50,7 @@ The result is tender meat infused with citrusy lemongrass fragrance and smoky de
         {
             title: 'Make marinade',
             description: 'Mix lemongrass, garlic, shallots, fish sauce, sugar, soy sauce, oyster sauce, oil, and black pepper.',
-            tip: 'Crushed lemongrass releases essential oils that define the dish’s aroma.',
+            tip: 'Crushed lemongrass releases essential oils that define the dish�s aroma.',
         },
         {
             title: 'Marinate',

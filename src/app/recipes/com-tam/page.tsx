@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import RecipeLayout, { RecipeData } from '../_components/RecipeLayout';
 
 const recipe: RecipeData = {
@@ -11,7 +11,7 @@ const recipe: RecipeData = {
     rating: 4.9,
     baseServings: 4,
     heroImage: '/images/recipes/com-tam.jpg',
-    intro: `Com tam means broken rice — the fractured grains left over after milling that were sold cheaply and became Saigon's most iconic dish. The plate arrives loaded: a char-grilled pork chop, a fried egg, scallion oil, and a pool of nuoc cham. The taste of Saigon at 7am.`,
+    intro: `Com tam means broken rice � the fractured grains left over after milling that were sold cheaply and became Saigon's most iconic dish. The plate arrives loaded: a char-grilled pork chop, a fried egg, scallion oil, and a pool of nuoc cham. The taste of Saigon at 7am.`,
     ingredientSections: [
         {
             title: 'Grilled pork chop',
