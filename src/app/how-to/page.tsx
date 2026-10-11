@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, ChevronRight, Flame, Soup, ScrollText, Coffee, Wheat, Wrench, UtensilsCrossed } from 'lucide-react';
+import { Clock, ArrowRight, Flame, Soup, ScrollText, Coffee, Wheat, Wrench, UtensilsCrossed } from 'lucide-react';
 
 const GUIDES = [
     {
@@ -157,32 +157,45 @@ export default function HowToPage() {
             </div>
 
             {/* Category filter tabs */}
-            <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 40px', overflowX: 'auto' }}>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'nowrap', justifyContent: 'center' }}>
-                    {categories.map(cat => {
-                        const guide = GUIDES.find(g => g.category === cat);
-                        const isActive = active === cat;
-                        return (
-                            <button
-                                key={cat}
-                                onClick={() => setActive(cat)}
-                                style={{
-                                    display: 'inline-flex', alignItems: 'center', gap: 6,
-                                    padding: '8px 16px', borderRadius: 100,
-                                    fontSize: 13, fontWeight: isActive ? 700 : 500,
-                                    cursor: 'pointer', whiteSpace: 'nowrap',
-                                    border: isActive ? 'none' : '1.5px solid rgba(75,46,26,0.12)',
-                                    background: isActive ? (guide?.color ?? '#D97706') : '#fff',
-                                    color: isActive ? '#fff' : 'rgba(75,46,26,0.7)',
-                                    transition: 'all 0.18s',
-                                    fontFamily: "'DM Sans', sans-serif",
-                                }}
-                            >
-                                {guide?.icon && <span style={{ display: 'flex', color: guide.color ?? '#D97706' }} dangerouslySetInnerHTML={{ __html: guide.icon }} />}
-                                {cat}
-                            </button>
-                        );
-                    })}
+            <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 44px' }}>
+                <div
+                    className="[scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    style={{ overflowX: 'auto', boxShadow: 'inset 0 -1px 0 rgba(75,46,26,0.1)' }}
+                >
+                    <div style={{ display: 'flex', gap: 30, width: 'max-content', margin: '0 auto' }}>
+                        {categories.map(cat => {
+                            const isActive = active === cat;
+                            return (
+                                <button
+                                    key={cat}
+                                    aria-pressed={isActive}
+                                    onClick={e => {
+                                        setActive(cat);
+                                        e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                                    }}
+                                    className={isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}
+                                    style={{
+                                        position: 'relative',
+                                        padding: '14px 0',
+                                        fontSize: 14, fontWeight: 500, letterSpacing: '0.01em',
+                                        cursor: 'pointer', whiteSpace: 'nowrap',
+                                        background: 'none', border: 'none',
+                                        transition: 'color 0.2s',
+                                        fontFamily: "'DM Sans', sans-serif",
+                                    }}
+                                >
+                                    {cat}
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="howto-tab-underline"
+                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+                                            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
+                                        />
+                                    )}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 
@@ -210,7 +223,7 @@ export default function HowToPage() {
                             </div>
 
                             {/* Cards */}
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 14 }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 18 }}>
                                 {group.items.map((item, i) => (
                                     <motion.div
                                         key={item.title}
@@ -220,61 +233,40 @@ export default function HowToPage() {
                                     >
                                         <Link
                                             href={item.isHowTo ? `/how-to/${item.slug}` : `/recipes/${item.slug}`}
+                                            className="group howto-card"
                                             style={{ textDecoration: 'none', display: 'block', height: '100%' }}
                                         >
                                             <div
+                                                className="border border-[rgba(75,46,26,0.09)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-[rgba(75,46,26,0.24)] group-hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
                                                 style={{
                                                     background: '#fff',
-                                                    border: '1px solid rgba(75,46,26,0.07)',
-                                                    borderRadius: 16,
-                                                    padding: '20px',
+                                                    borderRadius: 14,
+                                                    padding: '22px 24px 18px',
                                                     height: '100%',
                                                     display: 'flex', flexDirection: 'column',
-                                                    transition: 'all 0.2s',
-                                                    position: 'relative',
-                                                    overflow: 'hidden',
-                                                }}
-                                                onMouseEnter={e => {
-                                                    const el = e.currentTarget as HTMLDivElement;
-                                                    el.style.boxShadow = '0 8px 32px rgba(75,46,26,0.12)';
-                                                    el.style.transform = 'translateY(-3px)';
-                                                    el.style.borderColor = group.color + '40';
-                                                }}
-                                                onMouseLeave={e => {
-                                                    const el = e.currentTarget as HTMLDivElement;
-                                                    el.style.boxShadow = 'none';
-                                                    el.style.transform = 'translateY(0)';
-                                                    el.style.borderColor = 'rgba(75,46,26,0.07)';
                                                 }}
                                             >
-                                                {/* Color accent top bar */}
-                                                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: group.color, borderRadius: '16px 16px 0 0' }} />
-
-                                                {/* Level badge */}
-                                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, marginTop: 4 }}>
-                                                    <span style={{
-                                                        fontSize: 10, fontWeight: 700,
-                                                        color: LEVEL_COLOR[item.level],
-                                                        background: LEVEL_COLOR[item.level] + '15',
-                                                        padding: '3px 10px', borderRadius: 100,
-                                                        textTransform: 'uppercase', letterSpacing: '0.08em'
-                                                    }}>
-                                                        {item.level}
-                                                    </span>
-                                                    <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.4)', display: 'flex', alignItems: 'center', gap: 4 }}>
-                                                        ⏱ {item.time}
-                                                    </span>
+                                                {/* Meta: level + time */}
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14, fontSize: 11, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>
+                                                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: LEVEL_COLOR[item.level], flexShrink: 0 }} />
+                                                    <span style={{ color: 'rgba(75,46,26,0.75)' }}>{item.level}</span>
+                                                    <span aria-hidden>·</span>
+                                                    <span>{item.time}</span>
                                                 </div>
 
-                                                <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 15, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.35, flex: 1, letterSpacing: '-0.01em' }}>
+                                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.3 }}>
                                                     {item.title}
                                                 </h3>
-                                                <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.55)', lineHeight: 1.6, margin: '0 0 14px' }}>
+                                                <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 18px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                                                     {item.desc}
                                                 </p>
 
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 12, fontWeight: 600, color: group.color, marginTop: 'auto' }}>
-                                                    Read guide <ChevronRight size={13} />
+                                                <div
+                                                    className="text-[#2D1A0E] transition-colors duration-200 group-hover:text-[#D97706]"
+                                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', paddingTop: 14, borderTop: '1px solid rgba(75,46,26,0.07)', fontSize: 13, fontWeight: 600 }}
+                                                >
+                                                    Read guide
+                                                    <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
                                                 </div>
                                             </div>
                                         </Link>
