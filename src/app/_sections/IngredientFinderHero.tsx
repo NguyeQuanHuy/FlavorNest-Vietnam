@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -54,7 +54,6 @@ const INGREDIENT_IMAGES: Record<string, string> = {
   'Vermicelli': 'https://images.unsplash.com/photo-1620641856311-a64e917104ef?auto=format&fit=crop&w=400&h=400&q=80',
   'Oyster Sauce': 'https://images.unsplash.com/photo-1737199391604-f0098d42ba7a?auto=format&fit=crop&w=400&h=400&q=80',
   'Morning Glory': 'https://images.unsplash.com/photo-1766375884263-016cd780fa1e?auto=format&fit=crop&w=400&h=400&q=80',
-  'Shrimp Paste': '/images/ingredients/shrimp-paste.jpg',
   'Galangal': '/images/ingredients/galangal.jpg',
   'Glass Noodles': 'https://images.unsplash.com/photo-1774717530911-2ceb99449f7a?auto=format&fit=crop&w=400&h=400&q=80',
   'Bread': 'https://images.unsplash.com/photo-1568471173242-461f0a730452?auto=format&fit=crop&w=400&h=400&q=80',
@@ -96,6 +95,14 @@ export default function IngredientFinderHero() {
   const [showResults, setShowResults] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
+  const [preload, setPreload] = useState(false);
+  const [failed, setFailed] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    if (!window.matchMedia('(hover: hover)').matches) return;
+    const t = setTimeout(() => setPreload(true), 1200);
+    return () => clearTimeout(t);
+  }, []);
 
   function toggleIngredient(item: string) {
     setSelected(prev =>
@@ -234,9 +241,9 @@ export default function IngredientFinderHero() {
                             }}
                           >
                             <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', aspectRatio: '1 / 1', borderRadius: 12, overflow: 'hidden', background: 'rgba(245,237,227,0.06)', fontSize: 44 }}>
-                              {group.emoji}
-                              {INGREDIENT_IMAGES[item] && (
-                                <Image src={INGREDIENT_IMAGES[item]} alt={item} fill sizes="128px" style={{ objectFit: 'cover' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
+                              {(!INGREDIENT_IMAGES[item] || failed[item]) && group.emoji}
+                              {INGREDIENT_IMAGES[item] && !failed[item] && (
+                                <Image src={INGREDIENT_IMAGES[item]} alt={item} fill sizes="128px" style={{ objectFit: 'cover' }} onError={() => setFailed(f => ({ ...f, [item]: true }))} />
                               )}
                             </span>
                             <span style={{ display: 'block', textAlign: 'center', padding: '6px 2px 2px', fontSize: 12, fontWeight: 600, color: '#F5EDE3', fontFamily: "'DM Sans', sans-serif" }}>
@@ -364,6 +371,16 @@ export default function IngredientFinderHero() {
           </Link>
         </div>
       </div>
+
+      {preload && (
+        <div aria-hidden style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+          {Object.entries(INGREDIENT_IMAGES).map(([name, src]) => (
+            <span key={name} style={{ position: 'relative', display: 'block', width: 128, height: 128 }}>
+              <Image src={src} alt="" fill sizes="128px" loading="eager" onError={() => setFailed(f => ({ ...f, [name]: true }))} />
+            </span>
+          ))}
+        </div>
+      )}
 
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </section>
