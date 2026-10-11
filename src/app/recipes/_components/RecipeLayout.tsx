@@ -102,121 +102,72 @@ const schema = {
             />
             <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
                 {/* Sticky Top Bar */}
-            <div style={{
-                position: 'sticky',
-                top: 0,
-                zIndex: 50,
-                background: 'rgba(245,237,227,0.97)',
-                backdropFilter: 'blur(16px)',
-                borderBottom: '2px solid #D97706',
-            }}>
-                <div style={{
-                    maxWidth: '1280px',
-                    margin: '0 auto',
-                    padding: '12px 24px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: 16,
-                }}>
-                    {/* Left: breadcrumb */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
-                        <Link href="/recipes" style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 6,
-                            fontFamily: 'DM Sans, sans-serif',
-                            fontSize: 13,
-                            fontWeight: 500,
-                            color: '#D97706',
-                            textDecoration: 'none',
-                            flexShrink: 0,
-                        }}>
-                            ← Recipes
-                        </Link>
-                        <span style={{ color: '#D97706', opacity: 0.4 }}>›</span>
-                        <span style={{
-                            fontFamily: 'DM Sans, sans-serif',
-                            fontSize: 13,
-                            fontWeight: 600,
-                            color: '#D97706',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.06em',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                        }}>
-                            {recipe.title}
-                        </span>
-                    </div>
+            <div style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(245,237,227,0.97)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.1)' }}>
+                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, fontFamily: 'DM Sans, sans-serif', fontSize: 13 }}>
+                    <Link href="/recipes" className="text-[rgba(75,46,26,0.55)] transition-colors duration-200 hover:text-[#D97706]" style={{ fontWeight: 500, textDecoration: 'none', flexShrink: 0 }}>
+                        ← Recipes
+                    </Link>
+                    <span style={{ color: 'rgba(75,46,26,0.25)' }}>/</span>
+                    <span style={{ fontWeight: 500, color: '#2D1A0E', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {recipe.title}
+                    </span>
                 </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero */}
             <motion.div
                 initial={false}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                style={{
-                    maxWidth: '1280px',
-                    margin: '32px auto 0',
-                    padding: '0 24px',
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '48px',
-                    alignItems: 'center',
-                }}
+                className="recipe-hero grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14"
+                style={{ maxWidth: '1280px', margin: '32px auto 0', padding: '0 24px', alignItems: 'center' }}
             >
-                {/* Text bên trái */}
-                <div>
-                <div style={{ paddingRight: 24 }}>
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.08, marginBottom: 16, letterSpacing: '-0.01em' }}>{recipe.title}</h1>
-                    <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', color: '#D97706', fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', lineHeight: 1.65, marginBottom: 32, opacity: 0.9 }}>{recipe.subtitle}</p>
-                    <div style={{ display: 'flex', gap: 0, borderTop: '1px solid rgba(75,46,26,0.1)', borderBottom: '1px solid rgba(75,46,26,0.1)', padding: '20px 0' }}>
+                {/* Text */}
+                <div className="order-2 lg:order-1">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16, fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
+                        <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D97706', flexShrink: 0 }} />
+                        {recipe.category}
+                    </div>
+                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.1rem, 4.2vw, 3.4rem)', fontWeight: 700, color: '#2D1A0E', lineHeight: 1.08, margin: '0 0 18px', letterSpacing: '-0.01em' }}>{recipe.title}</h1>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(1rem, 1.25vw, 1.125rem)', color: 'rgba(75,46,26,0.65)', lineHeight: 1.7, margin: '0 0 30px', maxWidth: 560 }}>{recipe.subtitle}</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '18px 44px', paddingTop: 22, borderTop: '1px solid rgba(75,46,26,0.12)' }}>
                         {[
-                            { icon: '⏱', val: recipe.totalTime, lbl: 'Total Time' },
-                            { icon: '◎', val: recipe.baseServings + ' servings', lbl: 'Serves' },
-                        ].map((s,i) => (
-                            <div key={s.lbl} style={{ flex: 1, textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(75,46,26,0.1)' : 'none', padding: '0 16px' }}>
-                                <div style={{ fontSize: 22, marginBottom: 6, color: '#D97706' }}>{s.icon}</div>
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', fontWeight: 700, color: '#2D1A0E', marginBottom: 2 }}>{s.val}</div>
-                                <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: 'rgba(75,46,26,0.45)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{s.lbl}</div>
+                            { lbl: 'Total time', val: recipe.totalTime, dot: '' },
+                            { lbl: 'Serves', val: recipe.baseServings + ' servings', dot: '' },
+                            { lbl: 'Difficulty', val: recipe.difficulty, dot: difficultyColor },
+                        ].map(s => (
+                            <div key={s.lbl}>
+                                <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10.5, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)', marginBottom: 5 }}>{s.lbl}</div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: 7, fontFamily: "'DM Sans', sans-serif", fontSize: 17, fontWeight: 600, color: '#2D1A0E' }}>
+                                    {s.dot && <span style={{ width: 7, height: 7, borderRadius: '50%', background: s.dot, flexShrink: 0 }} />}
+                                    {s.val}
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
 
-
-            
-                {/* Ảnh bên phải */}
-                <div style={{ position: 'relative', height: 'clamp(280px, 35vw, 460px)', borderRadius: '2px 24px 2px 24px', overflow: 'hidden', boxShadow: '0 24px 64px rgba(45,26,14,0.18)' }}>
-                    <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> 
+                {/* Image */}
+                <div className="order-1 lg:order-2" style={{ position: 'relative', height: 'clamp(240px, 35vw, 460px)', borderRadius: 16, overflow: 'hidden', boxShadow: '0 20px 48px rgba(45,26,14,0.12)' }}>
+                    <img src={recipe.heroImage} alt={recipe.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
             </motion.div>
 
             {/* Intro paragraph */}
-            <div style={{ maxWidth: '1000px', margin: '40px auto', padding: '0 24px' }}>
-                <div style={{
-                    position: 'relative',
-                    padding: '36px 44px',
-                    background: '#fff',
-                    border: '2px solid #D97706',
-                    borderRadius: '4px 20px 4px 20px',
-                }}>
-                    {/* Góc trang trí */}
-                    <div style={{ position: 'absolute', top: -10, left: -10, width: 20, height: 20, background: '#D97706', borderRadius: '50%' }} />
-                    <div style={{ position: 'absolute', bottom: -10, right: -10, width: 20, height: 20, background: '#D97706', borderRadius: '50%' }} />
-                    <div style={{ position: 'absolute', top: -6, left: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
-                    <div style={{ position: 'absolute', bottom: -6, right: -6, width: 12, height: 12, background: '#fff', borderRadius: '50%', border: '2px solid #D97706' }} />
-            
-                    <div style={{ overflow: 'hidden', maxHeight: introOpen ? 2000 : 80, transition: 'max-height 0.4s ease' }}>
-                    <p style={{ fontFamily: 'Playfair Display, serif', fontStyle: 'italic', color: '#4B2E1A', fontSize: '1.15rem', lineHeight: 1.85, textAlign: 'center', margin: 0 }}>
-                        {recipe.intro}
-                    </p>
+            <div style={{ maxWidth: '860px', margin: '44px auto 40px', padding: '0 24px' }}>
+                <div className="border border-[rgba(75,46,26,0.09)]" style={{ background: '#fff', borderRadius: 14, padding: '26px 30px 20px' }}>
+                    <div style={{ overflow: 'hidden', maxHeight: introOpen ? 2000 : 90, transition: 'max-height 0.4s ease' }}>
+                        <p style={{ fontFamily: "'DM Sans', sans-serif", color: 'rgba(75,46,26,0.8)', fontSize: 16.5, lineHeight: '30px', margin: 0 }}>
+                            {recipe.intro}
+                        </p>
                     </div>
-                    <button onClick={() => setIntroOpen(o => !o)} style={{ display: 'block', margin: '8px auto 0', fontSize: 12, color: '#D97706', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', letterSpacing: '0.08em' }}>{introOpen ? '▲ Show less' : '▼ Read more'}</button>
-                    <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 72, color: '#D97706', lineHeight: 0.5, marginTop: 16, textAlign: 'right', opacity: 0.3 }}>"</div>
+                    <button
+                        onClick={() => setIntroOpen(o => !o)}
+                        className="text-[#2D1A0E] transition-colors duration-200 hover:text-[#D97706]"
+                        style={{ display: 'block', marginTop: 12, padding: 0, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer' }}
+                    >
+                        {introOpen ? 'Show less' : 'Read more'}
+                    </button>
                 </div>
             </div>
             {/* Mobile Tab Switcher */}
