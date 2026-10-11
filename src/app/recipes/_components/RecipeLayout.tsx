@@ -171,7 +171,7 @@ const schema = {
                 </div>
             </div>
             {/* Mobile Tab Switcher */}
-            <div className='lg:hidden' style={{ display: 'flex', borderBottom: '2px solid rgba(217,119,6,0.2)', margin: '0 16px 0', position: 'sticky', top: 56, zIndex: 30, background: '#F5EDE3' }}>
+            <div className='flex min-[769px]:hidden' style={{ borderBottom: '2px solid rgba(217,119,6,0.2)', margin: '0 16px 0', position: 'sticky', top: 56, zIndex: 30, background: '#F5EDE3' }}>
                 <button onClick={() => setActiveTab('ingredients')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'ingredients' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'ingredients' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>🥘 Ingredients</button>
                 <button onClick={() => setActiveTab('instructions')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'instructions' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'instructions' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>📋 Instructions</button>
             </div>
