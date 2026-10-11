@@ -268,14 +268,29 @@ export default function TravelPage() {
                         From the mountain villages of the north to the river delta of the south — 2,000 kilometers of coastline, three distinct food cultures, and the most diverse street food in the world.
                     </p>
 
-                    {/* Region pills */}
-                    <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                        {REGIONS.map(r => (
-                            <button key={r.id} onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}
-                                style={{ padding: '10px 20px', borderRadius: '100px', border: `2px solid ${activeRegion === r.id ? r.color : 'rgba(245,237,227,0.2)'}`, background: activeRegion === r.id ? r.color : 'rgba(245,237,227,0.05)', color: activeRegion === r.id ? 'white' : 'rgba(245,237,227,0.8)', fontSize: '13px', fontWeight: 600, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.2s', backdropFilter: 'blur(8px)' }}>
-                                {r.icon} {r.name}
-                            </button>
-                        ))}
+                    {/* Region tabs */}
+                    <div style={{ display: 'inline-flex', gap: '32px', maxWidth: '100%', boxShadow: 'inset 0 -1px 0 rgba(245,237,227,0.16)' }}>
+                        {REGIONS.map(r => {
+                            const isActive = activeRegion === r.id;
+                            return (
+                                <button
+                                    key={r.id}
+                                    aria-pressed={isActive}
+                                    onClick={() => { setActiveRegion(isActive ? null : r.id); setActiveCity(null); }}
+                                    className={isActive ? 'text-[#F5EDE3]' : 'text-[rgba(245,237,227,0.6)] hover:text-[#F5EDE3]'}
+                                    style={{ position: 'relative', padding: '12px 0', fontSize: '15px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
+                                >
+                                    {r.name}
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="travel-region-underline"
+                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+                                            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
+                                        />
+                                    )}
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
@@ -362,72 +377,88 @@ export default function TravelPage() {
                                 <motion.div key={activeRegion} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
 
                                     {/* Region header */}
-                                    <div style={{ marginBottom: '32px', paddingBottom: '24px', borderBottom: `2px solid ${currentRegion.color}20` }}>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
-                                            <span style={{ fontSize: '2rem' }}>{currentRegion.icon}</span>
-                                            <div>
-                                                <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.2rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{currentRegion.name}</h2>
-                                                <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: currentRegion.color, fontWeight: 600 }}>{currentRegion.nameVi} · Best season: {currentRegion.season}</span>
-                                            </div>
+                                    <div style={{ marginBottom: '28px' }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
+                                            <span style={{ width: 6, height: 6, borderRadius: '50%', background: currentRegion.color, flexShrink: 0 }} />
+                                            {currentRegion.nameVi}
                                         </div>
-                                        <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.1rem', color: 'rgba(75,46,26,0.6)', marginBottom: '16px', lineHeight: 1.6 }}>{currentRegion.tagline}</p>
-                                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', background: `${currentRegion.color}15`, borderRadius: '100px' }}>
-                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: currentRegion.color, letterSpacing: '1px' }}>MUST EAT:</span>
-                                            <span style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: '#4B2E1A' }}>{currentRegion.mustEat}</span>
+                                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.4rem', fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.1 }}>{currentRegion.name}</h2>
+                                        <p style={{ fontSize: '16px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 20px', maxWidth: '620px' }}>{currentRegion.tagline}</p>
+                                        <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: '20px', rowGap: '8px', alignItems: 'baseline' }}>
+                                            <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Best season</span>
+                                            <span style={{ fontSize: '14px', color: '#2D1A0E', lineHeight: 1.55 }}>{currentRegion.season}</span>
+                                            <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Must eat</span>
+                                            <span style={{ fontSize: '14px', color: '#2D1A0E', lineHeight: 1.55 }}>{currentRegion.mustEat}</span>
                                         </div>
                                     </div>
 
-                                    {/* City list */}
-                                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                                        {currentRegion.cities.map(city => (
-                                            <button key={city.name}
-                                                onClick={() => setActiveCity(activeCity === city.name ? null : city.name)}
-                                                style={{ padding: '7px 16px', borderRadius: '100px', border: `1.5px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.15)'}`, background: activeCity === city.name ? currentRegion.color : 'transparent', color: activeCity === city.name ? 'white' : 'rgba(75,46,26,0.6)', fontSize: '12px', fontWeight: 600, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.2s' }}>
-                                                {city.name}
-                                                <span style={{ fontSize: '10px', opacity: 0.7, marginLeft: '4px' }}>({city.type})</span>
-                                            </button>
-                                        ))}
+                                    {/* City tabs */}
+                                    <div
+                                        className="[scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                                        style={{ overflowX: 'auto', boxShadow: 'inset 0 -1px 0 rgba(75,46,26,0.1)', marginBottom: '24px' }}
+                                    >
+                                        <div style={{ display: 'flex', gap: '28px', width: 'max-content' }}>
+                                            {[null, ...currentRegion.cities.map(c => c.name)].map(name => {
+                                                const isActive = activeCity === name;
+                                                return (
+                                                    <button
+                                                        key={name ?? 'all'}
+                                                        aria-pressed={isActive}
+                                                        onClick={() => setActiveCity(isActive ? null : name)}
+                                                        className={isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}
+                                                        style={{ position: 'relative', padding: '14px 0', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
+                                                    >
+                                                        {name ?? 'All destinations'}
+                                                        {isActive && (
+                                                            <motion.span
+                                                                layoutId="travel-city-underline"
+                                                                transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+                                                                style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
+                                                            />
+                                                        )}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
 
                                     {/* City cards */}
-                                    <div style={{ display: 'grid', gap: '20px' }}>
+                                    <div style={{ display: 'grid', gap: '18px' }}>
                                         {currentRegion.cities.filter(c => !activeCity || c.name === activeCity).map(city => (
                                             <motion.div key={city.name} layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
-                                                style={{ background: '#fff', border: `1px solid ${activeCity === city.name ? currentRegion.color : 'rgba(75,46,26,0.08)'}`, borderRadius: '8px', overflow: 'hidden', borderLeft: `5px solid ${currentRegion.color}` }}>
-                                                <div style={{ padding: '20px 24px', background: activeCity === city.name ? `${currentRegion.color}08` : '#FDFAF7', borderBottom: '1px solid rgba(75,46,26,0.07)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
-                                                    <div>
-                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{city.name}</h3>
-                                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 600, color: '#fff', background: currentRegion.color, padding: '2px 8px', borderRadius: '100px' }}>{city.type}</span>
+                                                className="border border-[rgba(75,46,26,0.09)]"
+                                                style={{ background: '#fff', borderRadius: '14px', padding: '26px 28px 20px' }}>
+                                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
+                                                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: currentRegion.color, flexShrink: 0 }} />
+                                                    {city.type}
+                                                </div>
+                                                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap', marginBottom: '12px' }}>
+                                                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.2 }}>{city.name}</h3>
+                                                    <span style={{ fontSize: '14px', fontStyle: 'italic', color: 'rgba(75,46,26,0.5)' }}>{city.nameVi}</span>
+                                                </div>
+                                                <p style={{ fontSize: '14.5px', lineHeight: 1.75, color: 'rgba(75,46,26,0.8)', margin: '0 0 22px', maxWidth: '680px' }}>{city.desc}</p>
+
+                                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '18px 32px', padding: '20px 0', borderTop: '1px solid rgba(75,46,26,0.07)' }}>
+                                                    {[
+                                                        { label: 'Best time', value: city.bestTime },
+                                                        { label: 'Highlight', value: city.highlight },
+                                                        { label: 'Where to stay', value: city.stay },
+                                                        { label: 'Food streets', value: city.foodStreet },
+                                                        { label: 'Avoid', value: city.avoid },
+                                                    ].map(item => (
+                                                        <div key={item.label}>
+                                                            <div style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)', marginBottom: '4px' }}>{item.label}</div>
+                                                            <p style={{ fontSize: '13.5px', color: '#2D1A0E', margin: 0, lineHeight: 1.6 }}>{item.value}</p>
                                                         </div>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: 'rgba(75,46,26,0.45)', fontStyle: 'italic' }}>{city.nameVi}</span>
-                                                    </div>
-                                                    <div style={{ display: 'flex', gap: '8px' }}>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#166534', background: 'rgba(22,101,52,0.08)', padding: '3px 10px', borderRadius: '100px' }}>✓ {city.bestTime}</span>
-                                                    </div>
+                                                    ))}
                                                 </div>
-                                                <div style={{ padding: '20px 24px' }}>
-                                                    <p style={{ fontFamily: 'Georgia, serif', fontSize: '14px', lineHeight: 1.75, color: '#4B2E1A', marginBottom: '20px' }}>{city.desc}</p>
 
-                                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '10px', marginBottom: '16px' }}>
-                                                        {[
-                                                            { label: 'HIGHLIGHT', value: city.highlight, color: currentRegion.color },
-                                                            { label: 'WHERE TO STAY', value: city.stay, color: '#0369A1' },
-                                                            { label: 'FOOD STREETS', value: city.foodStreet, color: '#166534' },
-                                                            { label: 'AVOID', value: city.avoid, color: '#DC2626' },
-                                                        ].map(item => (
-                                                            <div key={item.label} style={{ background: '#FDFAF7', padding: '10px 14px', borderRadius: '4px', borderLeft: `3px solid ${item.color}` }}>
-                                                                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: item.color, letterSpacing: '1px', marginBottom: '5px' }}>{item.label}</div>
-                                                                <p style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#6B5544', margin: 0, lineHeight: 1.5 }}>{item.value}</p>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-
-                                                    <Link href={`/recipes/${city.bestDishSlug}`}
-                                                        style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', background: currentRegion.color, color: 'white', borderRadius: '4px', textDecoration: 'none', fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 600 }}>
-                                                        Recipe: {city.bestDish} →
-                                                    </Link>
-                                                </div>
+                                                <Link href={`/recipes/${city.bestDishSlug}`}
+                                                    className="group text-[#2D1A0E] transition-colors duration-200 hover:text-[#D97706]"
+                                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '14px', borderTop: '1px solid rgba(75,46,26,0.07)', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
+                                                    Recipe: {city.bestDish}
+                                                    <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
+                                                </Link>
                                             </motion.div>
                                         ))}
                                     </div>
