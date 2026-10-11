@@ -36,6 +36,48 @@ const INGREDIENT_GROUPS = [
   },
 ];
 
+// -- Hinh minh hoa khi hover (thieu hinh -> hien emoji cua nhom) --
+const INGREDIENT_IMAGES: Record<string, string> = {
+  // Proteins
+  'Pork': 'https://images.unsplash.com/photo-1752555535777-0aed7bc93f98?auto=format&fit=crop&w=400&h=400&q=80',
+  'Chicken': 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=400&h=400&q=80',
+  'Beef': 'https://images.unsplash.com/photo-1690983330536-3b0089d07cf9?auto=format&fit=crop&w=400&h=400&q=80',
+  'Shrimp': 'https://images.unsplash.com/photo-1756364084889-9a8d9ece6112?auto=format&fit=crop&w=400&h=400&q=80',
+  'Fish': 'https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=400&h=400&q=80',
+  'Tofu': 'https://images.unsplash.com/photo-1722635940350-d1b2e5129379?auto=format&fit=crop&w=400&h=400&q=80',
+  'Eggs': 'https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=400&h=400&q=80',
+  'Crab': 'https://images.unsplash.com/photo-1536266740131-2aadb9f77705?auto=format&fit=crop&w=400&h=400&q=80',
+  // Noodles & Rice
+  'Rice': 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&h=400&q=80',
+  'Rice Noodles': '/images/ingredients/rice-noodles.jpg',
+  'Egg Noodles': 'https://images.unsplash.com/photo-1633352615955-f0c99e8b7e5a?auto=format&fit=crop&w=400&h=400&q=80',
+  'Vermicelli': 'https://images.unsplash.com/photo-1620641856311-a64e917104ef?auto=format&fit=crop&w=400&h=400&q=80',
+  'Oyster Sauce': 'https://images.unsplash.com/photo-1737199391604-f0098d42ba7a?auto=format&fit=crop&w=400&h=400&q=80',
+  'Morning Glory': 'https://images.unsplash.com/photo-1766375884263-016cd780fa1e?auto=format&fit=crop&w=400&h=400&q=80',
+  'Shrimp Paste': '/images/ingredients/shrimp-paste.jpg',
+  'Galangal': '/images/ingredients/galangal.jpg',
+  'Glass Noodles': 'https://images.unsplash.com/photo-1774717530911-2ceb99449f7a?auto=format&fit=crop&w=400&h=400&q=80',
+  'Bread': 'https://images.unsplash.com/photo-1568471173242-461f0a730452?auto=format&fit=crop&w=400&h=400&q=80',
+  // Vegetables
+  'Bean Sprouts': '/images/ingredients/bean-sprouts.jpg',
+  'Cabbage': 'https://images.unsplash.com/photo-1697346327617-c333613a349a?auto=format&fit=crop&w=400&h=400&q=80',
+  'Eggplant': 'https://images.unsplash.com/photo-1683543122945-513029986574?auto=format&fit=crop&w=400&h=400&q=80',
+  'Tomato': 'https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=400&h=400&q=80',
+  'Green Onion': 'https://images.unsplash.com/photo-1654722346666-fc814e4457a5?auto=format&fit=crop&w=400&h=400&q=80',
+  'Mushroom': 'https://images.unsplash.com/photo-1504545102780-26774c1bb073?auto=format&fit=crop&w=400&h=400&q=80',
+  // Aromatics
+  'Garlic': 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=400&h=400&q=80',
+  'Shallots': 'https://images.unsplash.com/photo-1600807644626-fb3c8c8ba40d?auto=format&fit=crop&w=400&h=400&q=80',
+  'Lemongrass': '/images/ingredients/lemongrass.jpg',
+  'Ginger': '/images/ingredients/ginger.jpg',
+  'Chilli': 'https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?auto=format&fit=crop&w=400&h=400&q=80',
+  // Pantry
+  'Fish Sauce': '/images/ingredients/fish-sauce.jpg',
+  'Soy Sauce': 'https://images.unsplash.com/photo-1499126167718-c87f5c1387e8?auto=format&fit=crop&w=400&h=400&q=80',
+  'Coconut Milk': '/images/ingredients/coconut-milk.jpg',
+  'Palm Sugar': 'https://images.unsplash.com/photo-1788238025855-55581a2ed354?auto=format&fit=crop&w=400&h=400&q=80',
+};
+
 interface RecipeSuggestion {
   slug: string;
   title: string;
@@ -53,6 +95,7 @@ export default function IngredientFinderHero() {
   const [loading, setLoading] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const [hovered, setHovered] = useState<string | null>(null);
 
   function toggleIngredient(item: string) {
     setSelected(prev =>
@@ -150,26 +193,59 @@ export default function IngredientFinderHero() {
                 {group.items.map(item => {
                   const active = selected.includes(item);
                   return (
-                    <motion.button
+                    <span
                       key={item}
-                      whileTap={{ scale: 0.92 }}
-                      onClick={() => toggleIngredient(item)}
-                      style={{
-                        padding: '7px 16px',
-                        borderRadius: 100,
-                        fontSize: 13,
-                        fontWeight: active ? 700 : 500,
-                        cursor: 'pointer',
-                        transition: 'all 0.18s',
-                        background: active ? '#D97706' : 'rgba(255,255,255,0.08)',
-                        color: active ? '#fff' : 'rgba(245,237,227,0.75)',
-                        border: active ? '1.5px solid #D97706' : '1.5px solid rgba(255,255,255,0.12)',
-                        fontFamily: "'DM Sans', sans-serif",
-                      }}
+                      onPointerEnter={e => { if (e.pointerType === 'mouse') setHovered(item); }}
+                      onPointerLeave={() => setHovered(h => (h === item ? null : h))}
+                      style={{ position: 'relative', display: 'inline-flex', zIndex: hovered === item ? 30 : 'auto' }}
                     >
-                      {active && <span style={{ marginRight: 4 }}>✓</span>}
-                      {item}
-                    </motion.button>
+                      <motion.button
+                        whileTap={{ scale: 0.92 }}
+                        onClick={() => toggleIngredient(item)}
+                        style={{
+                          padding: '7px 16px',
+                          borderRadius: 100,
+                          fontSize: 13,
+                          fontWeight: active ? 700 : 500,
+                          cursor: 'pointer',
+                          transition: 'all 0.18s',
+                          background: active ? '#D97706' : 'rgba(255,255,255,0.08)',
+                          color: active ? '#fff' : 'rgba(245,237,227,0.75)',
+                          border: active ? '1.5px solid #D97706' : '1.5px solid rgba(255,255,255,0.12)',
+                          fontFamily: "'DM Sans', sans-serif",
+                        }}
+                      >
+                        {active && <span style={{ marginRight: 4 }}>✓</span>}
+                        {item}
+                      </motion.button>
+                      <AnimatePresence>
+                        {hovered === item && (
+                          <motion.span
+                            aria-hidden
+                            initial={{ opacity: 0, y: 8, x: '-50%', scale: 0.92 }}
+                            animate={{ opacity: 1, y: 0, x: '-50%', scale: 1 }}
+                            exit={{ opacity: 0, y: 6, x: '-50%', scale: 0.95 }}
+                            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                            style={{
+                              position: 'absolute', bottom: 'calc(100% + 10px)', left: '50%',
+                              display: 'block', width: 136, padding: 6, borderRadius: 18,
+                              background: '#2D1A0E', border: '1px solid rgba(217,119,6,0.45)',
+                              boxShadow: '0 16px 40px rgba(0,0,0,0.5)', pointerEvents: 'none',
+                            }}
+                          >
+                            <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', aspectRatio: '1 / 1', borderRadius: 12, overflow: 'hidden', background: 'rgba(245,237,227,0.06)', fontSize: 44 }}>
+                              {group.emoji}
+                              {INGREDIENT_IMAGES[item] && (
+                                <Image src={INGREDIENT_IMAGES[item]} alt={item} fill sizes="128px" style={{ objectFit: 'cover' }} onError={e => { e.currentTarget.style.display = 'none'; }} />
+                              )}
+                            </span>
+                            <span style={{ display: 'block', textAlign: 'center', padding: '6px 2px 2px', fontSize: 12, fontWeight: 600, color: '#F5EDE3', fontFamily: "'DM Sans', sans-serif" }}>
+                              {item}
+                            </span>
+                          </motion.span>
+                        )}
+                      </AnimatePresence>
+                    </span>
                   );
                 })}
               </div>
