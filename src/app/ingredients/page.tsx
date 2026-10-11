@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -722,14 +723,34 @@ export default function IngredientsPage() {
             </div>
 
             {/* Filter bar */}
-            <div style={{ background: '#fff', borderBottom: '1px solid rgba(75,46,26,0.1)', padding: '12px 24px', position: 'sticky', top: '72px', zIndex: 40 }}>
-                <div style={{ maxWidth: '1100px', margin: '0 auto', overflowX: 'auto', display: 'flex', gap: '8px', paddingBottom: '2px' }}>
-                    {CATEGORIES.map(cat => (
-                        <button key={cat} onClick={() => setActiveCategory(cat)}
-                            style={{ padding: '6px 16px', borderRadius: '100px', border: `1.5px solid ${activeCategory === cat ? '#D97706' : 'rgba(75,46,26,0.15)'}`, background: activeCategory === cat ? '#D97706' : 'transparent', color: activeCategory === cat ? '#fff' : 'rgba(75,46,26,0.6)', fontSize: '12px', fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap', fontFamily: 'DM Sans, sans-serif', transition: 'all 0.15s' }}>
-                            {cat}
-                        </button>
-                    ))}
+            <div style={{ background: '#fff', borderBottom: '1px solid rgba(75,46,26,0.1)', padding: '0 24px', position: 'sticky', top: '72px', zIndex: 40 }}>
+                <div className="[scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style={{ maxWidth: '1240px', margin: '0 auto', overflowX: 'auto' }}>
+                    <div style={{ display: 'flex', gap: '26px', width: 'max-content', margin: '0 auto' }}>
+                        {CATEGORIES.map(cat => {
+                            const isActive = activeCategory === cat;
+                            return (
+                                <button
+                                    key={cat}
+                                    aria-pressed={isActive}
+                                    onClick={e => {
+                                        setActiveCategory(cat);
+                                        e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                                    }}
+                                    className={isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}
+                                    style={{ position: 'relative', padding: '15px 0', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
+                                >
+                                    {cat}
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="ingredients-tab-underline"
+                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+                                            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
+                                        />
+                                    )}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 
@@ -743,42 +764,43 @@ export default function IngredientsPage() {
 
             {/* Ingredients grid */}
             <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '8px 24px 80px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '18px' }}>
                     {filtered.map((ing) => {
                         const isOpen = expanded === ing.name;
-                        const color = CATEGORY_COLORS[ing.category] || '#D97706';
+                        const label = { fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)', marginBottom: '4px' } as const;
+                        const body = { fontSize: '13px', color: '#4B2E1A', lineHeight: 1.6, margin: 0 } as const;
                         return (
                             <motion.div key={ing.name} layout
-                                style={{ background: '#fff', border: `1px solid rgba(75,46,26,0.08)`, borderRadius: '8px', overflow: 'hidden', borderLeft: `4px solid ${color}`, cursor: 'pointer' }}
+                                className="border border-[rgba(75,46,26,0.09)] transition-[border-color,box-shadow] duration-200 hover:border-[rgba(75,46,26,0.24)] hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
+                                style={{ background: '#fff', borderRadius: '14px', overflow: 'hidden', cursor: 'pointer' }}
                                 onClick={() => setExpanded(isOpen ? null : ing.name)}>
                                 {/* Header */}
-                                <div style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
+                                <div style={{ padding: '22px 24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px' }}>
                                     <div style={{ flex: 1, minWidth: 0 }}>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '4px' }}>
-                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1rem', fontWeight: 700, color: '#2D1A0E', margin: 0, display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                                <span style={{ fontSize: '14px' }}>
-                                                    {CATEGORY_ICONS[ing.category] || '🌿'}
-                                                </span>
-                                                {ing.name}
-                                            </h3>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>
                                             {ing.essential && (
-                                                <span style={{ fontSize: '9px', fontWeight: 700, color: '#166534', background: 'rgba(22,101,52,0.1)', padding: '2px 7px', borderRadius: '100px', letterSpacing: '0.5px', textTransform: 'uppercase', flexShrink: 0 }}>Essential</span>
+                                                <>
+                                                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#D97706', flexShrink: 0 }} />
+                                                    <span style={{ color: 'rgba(75,46,26,0.75)' }}>Essential</span>
+                                                    <span aria-hidden>·</span>
+                                                </>
                                             )}
+                                            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{ing.category}</span>
                                         </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                            <span style={{ fontSize: '11px', color: color, fontWeight: 600, fontStyle: 'italic' }}>{ing.nameVi}</span>
-                                            <span style={{ fontSize: '10px', color: 'rgba(75,46,26,0.35)', background: 'rgba(75,46,26,0.05)', padding: '2px 8px', borderRadius: '100px' }}>{ing.category}</span>
-                                        </div>
+                                        <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '19px', fontWeight: 700, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3 }}>
+                                            {ing.name}
+                                        </h3>
+                                        <div style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)' }}>{ing.nameVi}</div>
                                     </div>
                                     <motion.span animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}
-                                        style={{ color: 'rgba(75,46,26,0.35)', fontSize: '16px', flexShrink: 0, marginTop: '2px' }}>
-                                        ↓
+                                        style={{ display: 'flex', color: 'rgba(75,46,26,0.35)', flexShrink: 0, marginTop: '2px' }}>
+                                        <ChevronDown size={18} />
                                     </motion.span>
                                 </div>
 
-                                {/* Flavor tag */}
-                                <div style={{ padding: '0 16px 12px' }}>
-                                    <p style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: '#6B5544', fontStyle: 'italic', margin: 0, lineHeight: 1.5 }}>{ing.flavor}</p>
+                                {/* Flavor */}
+                                <div style={{ padding: '12px 24px 22px' }}>
+                                    <p style={{ fontSize: '13.5px', color: 'rgba(75,46,26,0.6)', margin: 0, lineHeight: 1.65 }}>{ing.flavor}</p>
                                 </div>
 
                                 {/* Expanded details */}
@@ -786,36 +808,36 @@ export default function IngredientsPage() {
                                     {isOpen && (
                                         <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }}
                                             style={{ overflow: 'hidden' }}>
-                                            <div style={{ padding: '0 16px 16px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '14px' }}>
-                                                    {INGREDIENT_IMAGES[ing.name] && (
-                                                        <div style={{ marginBottom: '14px', borderRadius: '8px', overflow: 'hidden', height: '140px', background: '#FDFAF7' }}>
-                                                            <img src={INGREDIENT_IMAGES[ing.name]} alt={ing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                                                        </div>
-                                                    )}
-                                                <div style={{ marginBottom: '10px' }}>
-                                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 700, color: color, letterSpacing: '1px', textTransform: 'uppercase' }}>USED IN: </span>
-                                                    <span style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: '#4B2E1A' }}>{ing.usedIn}</span>
-                                                </div>
-                                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: ing.substitute || ing.note ? '10px' : '0' }}>
-                                                    <div style={{ background: '#FDFAF7', padding: '10px 12px', borderRadius: '4px' }}>
-                                                        <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: '#D97706', letterSpacing: '1px', marginBottom: '4px' }}>BUYING</div>
-                                                        <p style={{ fontFamily: 'Georgia, serif', fontSize: '11.5px', color: '#6B5544', margin: 0, lineHeight: 1.5 }}>{ing.buying}</p>
+                                            <div style={{ padding: '18px 24px 22px', borderTop: '1px solid rgba(75,46,26,0.07)' }}>
+                                                {INGREDIENT_IMAGES[ing.name] && (
+                                                    <div style={{ marginBottom: '16px', borderRadius: '10px', overflow: 'hidden', height: '150px', background: '#FAF6F0' }}>
+                                                        <img src={INGREDIENT_IMAGES[ing.name]} alt={ing.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                                                     </div>
-                                                    <div style={{ background: '#FDFAF7', padding: '10px 12px', borderRadius: '4px' }}>
-                                                        <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: '#0369A1', letterSpacing: '1px', marginBottom: '4px' }}>STORING</div>
-                                                        <p style={{ fontFamily: 'Georgia, serif', fontSize: '11.5px', color: '#6B5544', margin: 0, lineHeight: 1.5 }}>{ing.storing}</p>
+                                                )}
+                                                <div style={{ marginBottom: '14px' }}>
+                                                    <div style={label}>Used in</div>
+                                                    <p style={body}>{ing.usedIn}</p>
+                                                </div>
+                                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: ing.substitute || ing.note ? '14px' : '0' }}>
+                                                    <div>
+                                                        <div style={label}>Buying</div>
+                                                        <p style={body}>{ing.buying}</p>
+                                                    </div>
+                                                    <div>
+                                                        <div style={label}>Storing</div>
+                                                        <p style={body}>{ing.storing}</p>
                                                     </div>
                                                 </div>
                                                 {ing.substitute && (
-                                                    <div style={{ padding: '8px 12px', background: '#FFF8E8', borderRadius: '4px', marginBottom: '8px', borderLeft: '3px solid #D97706' }}>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: '#D97706', letterSpacing: '1px' }}>SUBSTITUTE: </span>
-                                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '11.5px', color: '#6B5544', fontStyle: 'italic' }}>{ing.substitute}</span>
+                                                    <div style={{ marginBottom: ing.note ? '14px' : '0' }}>
+                                                        <div style={label}>Substitute</div>
+                                                        <p style={body}>{ing.substitute}</p>
                                                     </div>
                                                 )}
                                                 {ing.note && (
-                                                    <div style={{ padding: '8px 12px', background: '#F0F7FF', borderRadius: '4px', borderLeft: '3px solid #0369A1' }}>
-                                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '9px', fontWeight: 700, color: '#0369A1', letterSpacing: '1px' }}>NOTE: </span>
-                                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '11.5px', color: '#6B5544', fontStyle: 'italic' }}>{ing.note}</span>
+                                                    <div style={{ padding: '12px 14px', background: '#FAF6F0', borderRadius: '10px' }}>
+                                                        <div style={label}>Note</div>
+                                                        <p style={body}>{ing.note}</p>
                                                     </div>
                                                 )}
                                             </div>

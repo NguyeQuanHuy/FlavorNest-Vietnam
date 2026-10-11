@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import VietnamMap from './VietnamMap';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -321,20 +322,35 @@ export default function TravelPage() {
                                 </p>
 
                                 {/* All regions overview */}
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '18px' }}>
                                     {REGIONS.map(r => (
-                                        <motion.div key={r.id} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}
+                                        <motion.div key={r.id} whileHover={{ y: -2 }} transition={{ duration: 0.2 }}
                                             onClick={() => setActiveRegion(r.id)}
-                                            style={{ background: '#fff', border: `1px solid rgba(75,46,26,0.08)`, borderRadius: '8px', padding: '24px', cursor: 'pointer', borderTop: `4px solid ${r.color}` }}>
-                                            <div style={{ fontSize: '2rem', marginBottom: '12px' }}>{r.icon}</div>
-                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.3rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '4px' }}>{r.name}</h3>
-                                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: r.color, marginBottom: '10px', letterSpacing: '0.5px' }}>{r.nameVi} · Best: {r.season}</p>
-                                            <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, marginBottom: '14px' }}>{r.tagline}</p>
-                                            <div style={{ padding: '8px 12px', background: `${r.color}10`, borderRadius: '4px' }}>
-                                                <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '10px', fontWeight: 700, color: r.color, letterSpacing: '1px' }}>MUST EAT: </span>
-                                                <span style={{ fontFamily: 'Georgia, serif', fontSize: '12px', color: '#4B2E1A' }}>{r.mustEat}</span>
+                                            className="group region-card border border-[rgba(75,46,26,0.09)] transition-[border-color,box-shadow] duration-200 hover:border-[rgba(75,46,26,0.24)] hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
+                                            style={{ background: '#fff', borderRadius: '14px', padding: '24px 24px 18px', cursor: 'pointer', display: 'flex', flexDirection: 'column' }}>
+                                            {/* Meta: Vietnamese name */}
+                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
+                                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: r.color, flexShrink: 0 }} />
+                                                {r.nameVi}
                                             </div>
-                                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: r.color, fontWeight: 600, marginTop: '14px' }}>{r.cities.length} destinations →</p>
+
+                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', fontWeight: 700, color: '#2D1A0E', margin: '0 0 8px', lineHeight: 1.2 }}>{r.name}</h3>
+                                            <p style={{ fontSize: '14px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 18px' }}>{r.tagline}</p>
+
+                                            <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: '16px', rowGap: '8px', alignItems: 'baseline', marginBottom: '18px' }}>
+                                                <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Best season</span>
+                                                <span style={{ fontSize: '13.5px', color: '#2D1A0E', lineHeight: 1.55 }}>{r.season}</span>
+                                                <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Must eat</span>
+                                                <span style={{ fontSize: '13.5px', color: '#2D1A0E', lineHeight: 1.55 }}>{r.mustEat}</span>
+                                            </div>
+
+                                            <div
+                                                className="text-[#2D1A0E] transition-colors duration-200 group-hover:text-[#D97706]"
+                                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', paddingTop: '14px', borderTop: '1px solid rgba(75,46,26,0.07)', fontSize: '13px', fontWeight: 600 }}
+                                            >
+                                                {r.cities.length} destinations
+                                                <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
+                                            </div>
                                         </motion.div>
                                     ))}
                                 </div>
