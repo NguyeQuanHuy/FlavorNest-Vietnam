@@ -261,3 +261,81 @@ body {
         font-size: 16px !important;
     }
 }
+
+/* ── Homepage mobile: simple & modern (<=640px, desktop untouched) ── */
+@media (max-width: 640px) {
+    /* 1 · Ingredient finder: flat panel, one swipeable row per group, full-width button */
+    section[aria-label="Ingredient Finder"] .mb-10 { margin-bottom: 22px !important; }
+    .fn-finder-badge { background: none !important; border: none !important; padding: 0 !important; margin-bottom: 12px !important; }
+    .fn-finder-panel { background: none !important; border: none !important; border-radius: 0 !important; padding: 0 !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+    .fn-finder-group { margin-bottom: 14px !important; }
+    .fn-finder-label { font-size: 11px !important; margin-bottom: 8px !important; }
+    .fn-finder-emoji { display: none; }
+    .fn-finder-row { flex-wrap: nowrap !important; overflow-x: auto; margin: 0 -16px; padding: 0 16px 2px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .fn-finder-row::-webkit-scrollbar { display: none; }
+    .fn-finder-row > span { flex-shrink: 0; }
+    .fn-finder-row > span > button { white-space: nowrap; padding: 8px 15px !important; }
+    .fn-finder-cta-row { flex-direction: column; align-items: stretch !important; gap: 10px !important; margin-top: 18px !important; }
+    .fn-finder-cta-row > div { text-align: center; }
+    .fn-finder-cta { width: 100%; justify-content: center; border-radius: 14px !important; padding: 15px 20px !important; }
+
+    /* 2 · Featured: text tabs, swipeable cards instead of a long stack */
+    section[aria-label="Featured recipes and stories"] { padding: 48px 20px 40px !important; }
+    section[aria-label="Featured recipes and stories"] > div:first-child { display: none; }
+    section[aria-label="Featured recipes and stories"] h2 { font-size: 28px !important; }
+    section[aria-label="Featured recipes and stories"] div[style*="flex-end"] { margin-bottom: 14px !important; }
+    section[aria-label="Featured recipes and stories"] a[href="/recipes"],
+    section[aria-label="Featured recipes and stories"] a[href="/stories"] { background: none !important; border: none !important; padding: 0 !important; margin-right: 8px; color: #2D1A0E !important; font-size: 13px !important; }
+    section[aria-label="Featured recipes and stories"] [role="tablist"] { gap: 24px !important; margin-bottom: 18px !important; box-shadow: inset 0 -1px 0 rgba(75,46,26,0.1); }
+    section[aria-label="Featured recipes and stories"] [role="tab"] { background: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 12px 0 !important; font-size: 14px !important; font-weight: 500 !important; color: rgba(75,46,26,0.5) !important; }
+    section[aria-label="Featured recipes and stories"] [role="tab"][aria-selected="true"] { color: #2D1A0E !important; }
+    section[aria-label="Featured recipes and stories"] [role="tab"] > span:first-child:not(:last-child) { top: auto !important; height: 2px !important; border-radius: 0 !important; background: #D97706 !important; box-shadow: none !important; }
+    section[aria-label="Featured recipes and stories"] [role="tab"] span span { display: none !important; }
+    .bento-grid { display: flex !important; gap: 12px !important; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 20px; margin: 0 -20px !important; padding: 0 20px 6px !important; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .bento-grid::-webkit-scrollbar { display: none; }
+    .bento-grid > * { flex: 0 0 74% !important; scroll-snap-align: start; }
+    .bento-grid > *:has(.story-card) { flex-basis: 86% !important; }
+    .bento-grid .bento-card { height: 230px !important; min-height: 0 !important; border-radius: 16px !important; }
+    .bento-grid .bento-card h3 { font-size: 17px !important; line-height: 1.25 !important; }
+    .bento-grid .bento-card > div[style*="text-transform:uppercase"],
+    .bento-grid .bento-card > div[style*="text-transform: uppercase"],
+    .bento-grid .bento-card > div[style*="right:16px"],
+    .bento-grid .bento-card > div[style*="right: 16px"] { display: none !important; }
+    .bento-grid .bento-card p[style*="max-width:560px"],
+    .bento-grid .bento-card p[style*="max-width: 560px"] { display: none !important; }
+
+    /* 3 · Categories: compact 4-column icon grid, no tiles */
+    section[aria-labelledby="categories-heading"] { padding-top: 52px !important; padding-bottom: 52px !important; }
+    section[aria-labelledby="categories-heading"] > .absolute { display: none; }
+    section[aria-labelledby="categories-heading"] .mb-14 { margin-bottom: 26px !important; }
+    section[aria-labelledby="categories-heading"] h2 { font-size: 28px !important; }
+    section[aria-labelledby="categories-heading"] .grid { grid-template-columns: repeat(4, 1fr) !important; gap: 22px 4px !important; }
+    section[aria-labelledby="categories-heading"] .grid a { background: none !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0 !important; }
+    section[aria-labelledby="categories-heading"] .grid a img { width: 46px !important; height: 46px !important; }
+    section[aria-labelledby="categories-heading"] .grid a > div:nth-child(1) { margin-bottom: 8px !important; }
+    section[aria-labelledby="categories-heading"] .grid a > div:nth-child(2) { font-size: 12px !important; font-weight: 600 !important; }
+    section[aria-labelledby="categories-heading"] .grid a > div:nth-child(3),
+    section[aria-labelledby="categories-heading"] .grid a > div:nth-child(4) { display: none !important; }
+    section[aria-labelledby="categories-heading"] .mt-10 { margin-top: 30px !important; }
+
+    /* 4 · Why FlavorNest: plain list with hairlines instead of four cards */
+    .fn-why { padding-top: 48px !important; }
+    .fn-why > div:first-child > div:first-child { margin-bottom: 22px !important; }
+    .fn-why-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
+    .fn-why-grid > div { background: none !important; box-shadow: none !important; border: none !important; border-top: 1px solid rgba(75,46,26,0.1) !important; border-radius: 0 !important; padding: 16px 0 !important; }
+    .fn-why-grid > div > div:first-child { display: none !important; }
+    .fn-why-grid > div > div:nth-child(2) { font-size: 15px !important; }
+    .fn-why-stats { margin-top: 36px !important; }
+    .fn-why-stats > div > div { padding: 20px 4px !important; }
+    .fn-why-stats > div > div > div:first-child { font-size: 26px !important; }
+    .fn-why-stats > div > div > div:last-child { font-size: 10px !important; letter-spacing: 0.06em !important; }
+
+    /* 5 · Newsletter: no rings, emoji or avatar pill */
+    section[aria-labelledby="newsletter-heading"] { padding-top: 52px !important; padding-bottom: 52px !important; }
+    section[aria-labelledby="newsletter-heading"] > div.absolute:not(.inset-0) { display: none; }
+    section[aria-labelledby="newsletter-heading"] .text-5xl { display: none; }
+    section[aria-labelledby="newsletter-heading"] .inline-flex.rounded-full { background: none !important; border: none !important; padding: 0 !important; margin-bottom: 14px !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+    section[aria-labelledby="newsletter-heading"] .inline-flex.rounded-full > span { display: none; }
+    section[aria-labelledby="newsletter-heading"] h2 { font-size: 30px !important; }
+    section[aria-labelledby="newsletter-heading"] p.text-lg { font-size: 15px !important; margin-bottom: 22px !important; }
+}

@@ -169,7 +169,7 @@ export default function IngredientFinderHero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-10"
         >
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.15)', border: '1px solid rgba(217,119,6,0.3)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
+          <div className="fn-finder-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.15)', border: '1px solid rgba(217,119,6,0.3)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
             <ChefHat size={14} color="#D97706" />
             <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               What is in your kitchen?
@@ -189,14 +189,14 @@ export default function IngredientFinderHero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '16px 20px' }}
+          className="fn-finder-panel" style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '16px 20px' }}
         >
           {INGREDIENT_GROUPS.map((group, gi) => (
-            <div key={group.label} style={{ marginBottom: gi < INGREDIENT_GROUPS.length - 1 ? 12 : 0 }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>
-                {group.emoji} {group.label}
+            <div key={group.label} className="fn-finder-group" style={{ marginBottom: gi < INGREDIENT_GROUPS.length - 1 ? 12 : 0 }}>
+              <div className="fn-finder-label" style={{ fontSize: 12, fontWeight: 700, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>
+                <span className="fn-finder-emoji">{group.emoji} </span>{group.label}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div className="fn-finder-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {group.items.map(item => {
                   const active = selected.includes(item);
                   return (
@@ -260,7 +260,7 @@ export default function IngredientFinderHero() {
           ))}
 
           {/* Selected count + CTA */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 14, flexWrap: 'wrap', gap: 12 }}>
+          <div className="fn-finder-cta-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 14, flexWrap: 'wrap', gap: 12 }}>
             <div style={{ fontSize: 13, color: 'rgba(245,237,227,0.45)' }}>
               {selected.length === 0
                 ? 'Select at least 1 ingredient'
@@ -277,7 +277,7 @@ export default function IngredientFinderHero() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              onClick={findRecipes}
+              onClick={findRecipes} className="fn-finder-cta"
               disabled={selected.length === 0 || loading}
               style={{
                 display: 'flex', alignItems: 'center', gap: 8,

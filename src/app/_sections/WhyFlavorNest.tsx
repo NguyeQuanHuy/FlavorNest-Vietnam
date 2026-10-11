@@ -25,7 +25,7 @@ const STATS = [
 
 export default function WhyFlavorNest() {
     return (
-        <section style={{ background: '#F5EDE3', padding: '64px 0 0' }}>
+        <section className="fn-why" style={{ background: '#F5EDE3', padding: '64px 0 0' }}>
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px' }}>
                 {/* Label */}
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ export default function WhyFlavorNest() {
                 </motion.div>
 
                 {/* Pillars grid — 2x2 on mobile, 4 col on desktop */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 0 }}>
+                <div className="fn-why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 0 }}>
                     {PILLARS.map((p, i) => (
                         <motion.div key={p.title}
                             initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
@@ -62,7 +62,7 @@ export default function WhyFlavorNest() {
             </div>
 
             {/* Stats bar */}
-            <div style={{ background: '#2D1A0E', marginTop: 48 }}>
+            <div className="fn-why-stats" style={{ background: '#2D1A0E', marginTop: 48 }}>
                 <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
                     {STATS.map((s, i) => (
                         <motion.div key={s.label}
