@@ -515,11 +515,9 @@ const schema = {
             {/* Comments Section */}
             <div style={{ maxWidth: 900, margin: '0 auto 60px', padding: '0 24px' }}>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 700, color: '#2D1A0E', marginBottom: 24, paddingBottom: 12, borderBottom: '2px solid #D97706' }}>Comments</h3>
-                <div style={{ marginBottom: 24 }}>
-                    <textarea placeholder='Share your thoughts or tips about this recipe...' rows={4} style={{ width: '100%', padding: '14px 16px', fontFamily: "'DM Sans', sans-serif", fontSize: 14, color: '#2D1A0E', background: '#fff', border: '1.5px solid rgba(75,46,26,0.15)', borderRadius: 12, resize: 'vertical', outline: 'none', boxSizing: 'border-box' }} />
-                    <button style={{ marginTop: 10, padding: '10px 28px', background: '#D97706', color: 'white', border: 'none', borderRadius: 100, fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, cursor: 'pointer', letterSpacing: '0.04em' }}>Post Comment</button>
-                </div>
-                <p style={{ fontSize: 13, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', marginTop: 8 }}>No comments yet. Be the first to share your experience!</p>
+                                <p style={{ fontSize: 14, color: 'rgba(75,46,26,0.55)', margin: 0, lineHeight: 1.6 }}>
+                    Comments are coming soon. Cooked this recipe? We would love to hear how it went once they open.
+                </p>
             </div>
         </div>
         </>
