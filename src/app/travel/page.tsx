@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import VietnamMap from './VietnamMap';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -242,6 +243,12 @@ const FOOD_ROUTES = [
     { name: 'The Full Country', cities: 'Hanoi → Hội An → HCMC', days: 14, desc: 'The classic north-to-south route. Vietnam in its entirety — every region, every climate, every major food culture.' },
 ];
 
+const REGION_COVERS: Record<string, string> = {
+    north: '/images/recipes/pho-bo-ha-noi.webp',
+    central: '/images/travel/travel-centre.jpg',
+    south: '/images/recipes/banh-xeo-mekong.jpg',
+};
+
 export default function TravelPage() {
     const [activeRegion, setActiveRegion] = useState<string | null>(null);
     const [activeCity, setActiveCity] = useState<string | null>(null);
@@ -253,9 +260,10 @@ export default function TravelPage() {
         <div style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: 'DM Sans, sans-serif' }}>
 
             {/* Hero */}
-            <div style={{ background: 'linear-gradient(160deg, #2D1A0E 0%, #4B2E1A 60%, #1E3A5F 100%)', padding: '120px 24px 72px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 70% 50%, rgba(217,119,6,0.15) 0%, transparent 60%), radial-gradient(circle at 20% 80%, rgba(30,64,175,0.2) 0%, transparent 50%)' }} />
-                <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+            <div style={{ background: '#1C1009', padding: '170px 24px 88px', position: 'relative', overflow: 'hidden', minHeight: '78vh', display: 'flex', alignItems: 'flex-end' }}>
+                <Image src="/images/travel/travel-hero.jpg" alt="Boats on the river in Hội An at sunset" fill priority sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center 60%' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(20,11,5,0.9) 0%, rgba(20,11,5,0.6) 50%, rgba(20,11,5,0.2) 100%), linear-gradient(0deg, rgba(20,11,5,0.75) 0%, transparent 45%)' }} />
+                <div style={{ maxWidth: '1200px', width: '100%', margin: '0 auto', position: 'relative' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
                         <div style={{ width: '32px', height: '2px', background: '#D97706' }} />
                         <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '2.5px', color: '#D97706', textTransform: 'uppercase' }}>Food Travel Guide</span>
@@ -264,7 +272,7 @@ export default function TravelPage() {
                         Eat Your Way<br />
                         <span style={{ color: '#D97706', fontStyle: 'italic' }}>Through Vietnam</span>
                     </h1>
-                    <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.25rem', color: 'rgba(245,237,227,0.7)', maxWidth: '600px', lineHeight: 1.65, marginBottom: '48px' }}>
+                    <p style={{ fontSize: '1.15rem', color: 'rgba(245,237,227,0.82)', maxWidth: '560px', lineHeight: 1.7, marginBottom: '40px' }}>
                         From the mountain villages of the north to the river delta of the south — 2,000 kilometers of coastline, three distinct food cultures, and the most diverse street food in the world.
                     </p>
 
@@ -276,7 +284,7 @@ export default function TravelPage() {
                                 <button
                                     key={r.id}
                                     aria-pressed={isActive}
-                                    onClick={() => { setActiveRegion(isActive ? null : r.id); setActiveCity(null); }}
+                                    onClick={() => { setActiveRegion(isActive ? null : r.id); setActiveCity(null); if (!isActive) setTimeout(() => document.getElementById('travel-explore')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60); }}
                                     className={isActive ? 'text-[#F5EDE3]' : 'text-[rgba(245,237,227,0.6)] hover:text-[#F5EDE3]'}
                                     style={{ position: 'relative', padding: '12px 0', fontSize: '15px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
                                 >
@@ -298,7 +306,7 @@ export default function TravelPage() {
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
                 {/* Map + Region Overview */}
-                <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '48px', margin: '64px 0' }}>
+                <div id="travel-explore" className="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-12" style={{ margin: '64px 0', scrollMarginTop: '100px' }}>
 
                         {/* SVG Vietnam Map */}
                         <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
@@ -342,7 +350,10 @@ export default function TravelPage() {
                                         <motion.div key={r.id} whileHover={{ y: -2 }} transition={{ duration: 0.2 }}
                                             onClick={() => setActiveRegion(r.id)}
                                             className="group region-card border border-[rgba(75,46,26,0.09)] transition-[border-color,box-shadow] duration-200 hover:border-[rgba(75,46,26,0.24)] hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
-                                            style={{ background: '#fff', borderRadius: '14px', padding: '24px 24px 18px', cursor: 'pointer', display: 'flex', flexDirection: 'column' }}>
+                                            style={{ background: '#fff', borderRadius: '14px', padding: '24px 24px 18px', cursor: 'pointer', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                                            <div style={{ position: 'relative', aspectRatio: '16 / 10', overflow: 'hidden', margin: '-24px -24px 20px', background: '#EFE7DC' }}>
+                                                <Image src={REGION_COVERS[r.id]} alt={r.name} fill sizes="(max-width: 1024px) 100vw, 320px" className="transition-transform duration-500 group-hover:scale-105" style={{ objectFit: 'cover' }} />
+                                            </div>
                                             {/* Meta: Vietnamese name */}
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
                                                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: r.color, flexShrink: 0 }} />
@@ -378,6 +389,9 @@ export default function TravelPage() {
 
                                     {/* Region header */}
                                     <div style={{ marginBottom: '28px' }}>
+                                        <div style={{ position: 'relative', height: '240px', borderRadius: '16px', overflow: 'hidden', marginBottom: '24px', background: '#EFE7DC' }}>
+                                            <Image src={REGION_COVERS[currentRegion.id]} alt={currentRegion.name} fill sizes="(max-width: 1024px) 100vw, 860px" style={{ objectFit: 'cover' }} />
+                                        </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
                                             <span style={{ width: 6, height: 6, borderRadius: '50%', background: currentRegion.color, flexShrink: 0 }} />
                                             {currentRegion.nameVi}
