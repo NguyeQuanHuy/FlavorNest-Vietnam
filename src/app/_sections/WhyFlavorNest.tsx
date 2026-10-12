@@ -17,7 +17,7 @@ const PILLARS = [
 
 const STATS = [
     { value: `${recipeCount}+`, label: 'Recipes' },
-    { value: avgRating, label: 'Avg Rating' },
+    { value: '100%', label: 'Free' },
     { value: '3', label: 'Regions' },
     { value: '1', label: 'Kitchen' },
 ];
