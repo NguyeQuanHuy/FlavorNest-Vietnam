@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { RECIPE_CATEGORIES, RECIPE_REGIONS, type NavItem } from "@/lib/nav-data";
 
 type Props = {
@@ -8,45 +9,23 @@ type Props = {
   onClose: () => void;
 };
 
+const COLUMNS: { title: string; items: NavItem[] }[] = [
+  { title: "By meal", items: RECIPE_CATEGORIES },
+  { title: "By region", items: RECIPE_REGIONS },
+];
+
 function NavItemRow({ item }: { item: NavItem }) {
   return (
     <Link
       href={item.href}
-      className="nav-row group flex items-center px-6 py-3.5 transition-colors duration-150"
-      style={{
-        textDecoration: "none",
-        borderBottom: "1px solid rgba(75,46,26,0.06)",
-        position: "relative",
-      }}
+      className="group block rounded-[10px] px-3 py-2.5 transition-colors duration-150 hover:bg-[#FAF6F0]"
+      style={{ textDecoration: "none" }}
     >
-      <span
-        className="accent-stripe"
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: 3,
-          background: "#D97706",
-          transform: "scaleY(0)",
-          transformOrigin: "center",
-          transition: "transform 0.18s ease",
-        }}
-      />
-      <span
-        className="nav-label"
-        style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: 13,
-          fontWeight: 700,
-          letterSpacing: "1.4px",
-          color: "#2D1A0E",
-          textTransform: "uppercase",
-          position: "relative",
-          display: "inline-block",
-        }}
-      >
+      <span className="block text-[14.5px] font-semibold text-[#2D1A0E] transition-colors duration-150 group-hover:text-[#D97706]">
         {item.name}
+      </span>
+      <span className="mt-0.5 block text-[12.5px] leading-snug text-[rgba(75,46,26,0.55)]">
+        {item.description}
       </span>
     </Link>
   );
@@ -56,97 +35,38 @@ export default function RecipesDropdown({ isOpen, onClose }: Props) {
   if (!isOpen) return null;
 
   return (
-    <>
-     <style>{`
-        .nav-label {
-          border-bottom: 2px solid transparent;
-          padding-bottom: 2px;
-          transition: border-color 0.2s ease, color 0.2s ease;
-        }
-        .nav-row:hover .nav-label {
-          color: #D97706;
-          border-bottom-color: #D97706;
-        }
-      `}</style>
-      <div
-        className="absolute left-1/2 -translate-x-1/2 z-50"
-        style={{
-          top: "calc(100% + 0px)",
-          marginTop: 0,
-          width: 560,
-          borderRadius: 0,
-          overflow: "hidden",
-          background: "#FFFCF8",
-          border: "1px solid rgba(75,46,26,0.12)",
-          boxShadow: "0 10px 30px rgba(45,26,14,0.14)",
-        }}
-        onMouseLeave={onClose}
+    <div className="absolute left-1/2 z-50 -translate-x-1/2 pt-3" style={{ top: "100%", width: 540 }} onMouseLeave={onClose}>
+      <motion.div
+        initial={{ opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
+        className="rounded-2xl border border-[rgba(75,46,26,0.1)] bg-white px-3 pb-3 pt-4"
+        style={{ boxShadow: "0 18px 48px rgba(45,26,14,0.18)", fontFamily: "var(--font-dm-sans), sans-serif" }}
       >
-        <div className="grid grid-cols-2">
-          <div style={{ borderRight: "1px solid rgba(75,46,26,0.08)" }}>
-            <div
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: 10,
-                fontWeight: 700,
-                letterSpacing: "2px",
-                color: "#D97706",
-                textTransform: "uppercase",
-                padding: "16px 24px 12px",
-                borderBottom: "1px solid rgba(75,46,26,0.08)",
-              }}
-            >
-              Categories
+        <div className="grid grid-cols-2 gap-2">
+          {COLUMNS.map((col) => (
+            <div key={col.title}>
+              <div className="px-3 pb-1.5 text-[10.5px] font-bold uppercase tracking-[0.1em] text-[rgba(75,46,26,0.45)]">
+                {col.title}
+              </div>
+              {col.items.map((item) => (
+                <NavItemRow key={item.href} item={item} />
+              ))}
             </div>
-            {RECIPE_CATEGORIES.map((item) => (
-              <NavItemRow key={item.href} item={item} />
-            ))}
-          </div>
-
-          <div>
-            <div
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: 10,
-                fontWeight: 700,
-                letterSpacing: "2px",
-                color: "#D97706",
-                textTransform: "uppercase",
-                padding: "16px 24px 12px",
-                borderBottom: "1px solid rgba(75,46,26,0.08)",
-              }}
-            >
-              Regions
-            </div>
-            {RECIPE_REGIONS.map((item) => (
-              <NavItemRow key={item.href} item={item} />
-            ))}
-          </div>
+          ))}
         </div>
 
-        <Link
-          href="/recipes"
-          className="flex items-center justify-center gap-1.5 transition-colors duration-150"
-          style={{
-            padding: "14px",
-            background: "#D97706",
-            color: "#F5EDE3",
-            fontSize: 11,
-            fontWeight: 700,
-            letterSpacing: "1.5px",
-            textDecoration: "none",
-            textTransform: "uppercase",
-          }}
-            onMouseEnter={(e) => {
-            e.currentTarget.style.background = "#B45309";
-          }}
-            onMouseLeave={(e) => {
-            e.currentTarget.style.background = "#D97706";
-          }}
-        >
-          Explore all recipes →
-        </Link>
-      </div>
-    </>
+        <div className="mx-3 mt-2 flex items-center justify-between border-t border-[rgba(75,46,26,0.08)] pt-3">
+          <span className="text-[12.5px] text-[rgba(75,46,26,0.5)]">Authentic recipes from every region</span>
+          <Link
+            href="/recipes"
+            className="text-[13px] font-semibold text-[#D97706] transition-colors hover:text-[#B45309]"
+            style={{ textDecoration: "none" }}
+          >
+            All recipes →
+          </Link>
+        </div>
+      </motion.div>
+    </div>
   );
 }
