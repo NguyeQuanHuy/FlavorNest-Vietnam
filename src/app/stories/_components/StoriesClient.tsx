@@ -340,7 +340,7 @@ function NewsletterBanner() {
                     New stories, every week.
                 </h2>
                 <p className="text-white/55 text-lg mb-8 max-w-sm mx-auto">
-                    Join 15,000 food lovers who read FlavorNest Kitchen Stories every Tuesday.
+                    Get FlavorNest Kitchen Stories in your inbox.
                 </p>
                 <form
                     onSubmit={e => e.preventDefault()}
