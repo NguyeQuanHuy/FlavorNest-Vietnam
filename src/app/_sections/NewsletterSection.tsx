@@ -48,7 +48,7 @@ export default function NewsletterSection() {
                             <span key={l} className="w-5 h-5 rounded-full bg-[#D97706]/70 border border-white/30 flex items-center justify-center text-[8px] font-bold text-white">{l}</span>
                         ))}
                     </span>
-                    15,000+ food lovers already in the nest
+                    Free Vietnamese recipes, straight to your inbox
                 </div>
 
                 <div className="text-5xl mb-4">🪺</div>
