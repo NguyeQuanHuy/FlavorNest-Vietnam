@@ -1,88 +1,56 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
+import { CATEGORY_MAP } from './categories/_data/categoryMap'
 
 const BASE_URL = 'https://flavor-nest-vietnam.vercel.app'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const recipes = [
-        // Desserts
-        'che-ba-mau', 'banh-flan', 'che-thai', 'banh-chuoi-nuong',
-        'sua-chua-nep-cam', 'kem-chuoi', 'che-buoi', 'banh-cam',
-        'che-dau', 'banh-troi-nuoc',
-        // Drinks
-        'ca-phe-trung', 'ca-phe-sua-da', 'tra-da', 'sinh-to-bo',
-        'nuoc-mia', 'ca-phe-muoi', 'tra-thai', 'nuoc-sam',
-        // Northern
-        'hanoi-beef-pho', 'bun-cha-hanoi', 'banh-cuon', 'xoi-xeo',
-        'cha-ca-la-vong', 'bun-thang',
-        // Central
-        'bun-bo-hue', 'cao-lau', 'mi-quang', 'banh-beo',
-        'com-hen', 'banh-xeo-mien-trung', 'banh-nam',
-        'phu-yen-chives-noodle-soup', 'ga-la-e-phu-yen',
-        // Southern
-        'thit-kho-tau', 'com-tam-saigon', 'bun-thit-nuong',
-        'banh-xeo-mien-tay', 'hu-tieu-nam-vang', 'ca-kho-to',
-        'lau-thai', 'bo-luc-lac', 'lau-mam', 'banh-mi-saigon',
-        // Street food
-        'banh-mi-thit-nuong', 'banh-trang-nuong', 'goi-cuon',
-        'banh-xeo', 'banh-trang-tron',
-    ]
+// Every folder directly under src/app/<section> that has its own page.tsx becomes a URL.
+// New recipes, how-to guides and stories are picked up automatically - no list to maintain.
+function pagesIn(section: string): string[] {
+    const dir = path.join(process.cwd(), 'src/app', section)
+    try {
+        return fs.readdirSync(dir).filter(name =>
+            !name.startsWith('_') &&
+            !name.startsWith('[') &&
+            fs.existsSync(path.join(dir, name, 'page.tsx'))
+        )
+    } catch {
+        return []
+    }
+}
 
-    const recipeUrls = recipes.map((slug) => ({
-        url: `${BASE_URL}/recipes/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.8,
-    }))
+export default function sitemap(): MetadataRoute.Sitemap {
+    const now = new Date()
+    const entry = (url: string, priority: number, changeFrequency: 'weekly' | 'monthly' | 'yearly' = 'monthly') => ({
+        url: `${BASE_URL}${url}`,
+        lastModified: now,
+        changeFrequency,
+        priority,
+    })
+
+    const listingPages = ['desserts', 'drinks', 'north', 'central', 'south', 'street-food', 'breakfast', 'main-dishes']
+    const recipeFolders = pagesIn('recipes')
 
     return [
-        {
-            url: BASE_URL,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 1,
-        },
-        {
-            url: `${BASE_URL}/recipes`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/desserts`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/drinks`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/north`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/central`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/south`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/recipes/street-food`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        ...recipeUrls,
+        // Main pages
+        entry('', 1, 'weekly'),
+        entry('/recipes', 0.9, 'weekly'),
+        entry('/how-to', 0.8, 'weekly'),
+        entry('/stories', 0.8, 'weekly'),
+        entry('/ingredients', 0.8),
+        entry('/travel', 0.7),
+        entry('/about', 0.5, 'yearly'),
+
+        // Recipe listing pages (north, desserts, ...)
+        ...recipeFolders.filter(s => listingPages.includes(s)).map(s => entry(`/recipes/${s}`, 0.8, 'weekly')),
+
+        // Category pages (pho, bun, banhmi, ...)
+        ...Object.keys(CATEGORY_MAP).map(s => entry(`/categories/${s}`, 0.7, 'weekly')),
+
+        // Individual recipes, how-to guides and stories
+        ...recipeFolders.filter(s => !listingPages.includes(s)).map(s => entry(`/recipes/${s}`, 0.8)),
+        ...pagesIn('how-to').map(s => entry(`/how-to/${s}`, 0.7)),
+        ...pagesIn('stories').map(s => entry(`/stories/${s}`, 0.6)),
     ]
 }
