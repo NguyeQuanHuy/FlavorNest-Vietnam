@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import { motion } from 'framer-motion' // <--- THÊM DÒNG NÀY ĐỂ HẾT LỖI 'motion is not defined'
+import { motion } from 'framer-motion'
 
 export default function NewsletterSection() {
     const [email, setEmail] = useState('')
@@ -17,88 +17,70 @@ export default function NewsletterSection() {
         }
         setLoading(true)
         setError('')
-        // Giả lập gọi API
-        await new Promise(r => setTimeout(r, 900))
+        // TODO (step 4): send the email to /api/newsletter once Resend + domain are set up
+        await new Promise(r => setTimeout(r, 600))
         setLoading(false)
         setDone(true)
     }
 
     return (
-        <section className="py-24 px-5 lg:px-8 relative overflow-hidden" aria-labelledby="newsletter-heading">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#166534] via-[#1a5c35] to-[#4B2E1A]" />
-
-            {/* Decorative rings */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-white/4 rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] border border-white/6 rounded-full pointer-events-none" />
-            <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#D97706]/18 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-white/4 rounded-full blur-3xl pointer-events-none" />
-
+        <section className="bg-[#F5EDE3] px-5 py-16 sm:py-20 lg:px-8" aria-labelledby="newsletter-heading">
             <motion.div
-                initial={{ opacity: 0, y: 22 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative z-10 max-w-2xl mx-auto text-center"
+                transition={{ duration: 0.5 }}
+                className="mx-auto max-w-4xl rounded-[20px] border border-[rgba(75,46,26,0.09)] bg-white px-6 py-10 sm:px-12 sm:py-12"
             >
-                {/* Social proof avatars */}
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/18 text-white/80 text-xs px-4 py-2 rounded-full mb-6">
-                    <span className="flex -space-x-1.5">
-                        {['S', 'L', 'M', 'A'].map(l => (
-                            <span key={l} className="w-5 h-5 rounded-full bg-[#D97706]/70 border border-white/30 flex items-center justify-center text-[8px] font-bold text-white">{l}</span>
-                        ))}
-                    </span>
-                    Free Vietnamese recipes, straight to your inbox
-                </div>
-
-                <div className="text-5xl mb-4">🪺</div>
-
-                <h2 id="newsletter-heading" className="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold leading-tight mb-4">
-                    Get <em className="text-[#F59E0B]">10 Free</em><br />Vietnamese Recipes
-                </h2>
-                <p className="text-white/60 text-lg mb-8 max-w-sm mx-auto">
-                    Join the nest. New recipes every Tuesday. Zero spam — just authentic flavors.
-                </p>
-
-                {/* Form */}
-                {done ? (
-                    <motion.p
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="text-green-300 font-bold text-lg"
-                    >
-                        ✓ Welcome to the nest! Your 10 recipes are on their way.
-                    </motion.p>
-                ) : (
-                    <form onSubmit={handleSubmit} noValidate>
-                        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                            <label htmlFor="nl-email" className="sr-only">Email address</label>
-                            <input
-                                id="nl-email"
-                                type="email"
-                                value={email}
-                                onChange={e => { setEmail(e.target.value); setError('') }}
-                                placeholder="your@email.com"
-                                autoComplete="email"
-                                className="flex-1 bg-white/12 backdrop-blur-sm border border-white/20 text-white placeholder-white/42 px-5 py-4 rounded-2xl text-sm focus:outline-none focus:border-[#D97706] focus:bg-white/18 transition-all"
-                            />
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className="bg-[#D97706] hover:bg-[#B45309] disabled:opacity-60 text-white font-bold px-7 py-4 rounded-2xl text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(217,119,6,.4)] whitespace-nowrap"
-                            >
-                                {loading ? 'Joining…' : 'Join the Nest →'}
-                            </button>
+                <div className="grid gap-8 md:grid-cols-[1.1fr_1fr] md:items-center">
+                    {/* Text */}
+                    <div>
+                        <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#D97706]">
+                            <span className="h-px w-6 bg-[#D97706]" />
+                            Newsletter
                         </div>
-                        {error && (
-                            <p className="text-red-300 text-xs mt-2">{error}</p>
-                        )}
-                    </form>
-                )}
+                        <h2 id="newsletter-heading" className="font-display text-3xl font-bold leading-tight text-[#2D1A0E] sm:text-4xl">
+                            New recipes, straight to <em className="text-[#D97706]">your inbox</em>
+                        </h2>
+                        <p className="mt-3 text-[15px] leading-relaxed text-[rgba(75,46,26,0.65)]">
+                            Authentic Vietnamese recipes and kitchen stories. No spam, unsubscribe anytime.
+                        </p>
+                    </div>
 
-                <p className="text-white/28 text-xs mt-5">
-                    ✓ 10 exclusive recipes &nbsp;·&nbsp; ✓ Weekly newsletter &nbsp;·&nbsp; ✓ Unsubscribe anytime
-                </p>
+                    {/* Form */}
+                    <div>
+                        {done ? (
+                            <motion.p
+                                initial={{ opacity: 0, y: 6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="rounded-xl bg-[#FAF6F0] px-5 py-4 text-sm font-medium leading-relaxed text-[#4B2E1A]"
+                            >
+                                Thanks for your interest! Our newsletter is launching soon. Check back here in a few weeks.
+                            </motion.p>
+                        ) : (
+                            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
+                                <label htmlFor="nl-email" className="sr-only">Email address</label>
+                                <input
+                                    id="nl-email"
+                                    type="email"
+                                    value={email}
+                                    onChange={e => { setEmail(e.target.value); setError('') }}
+                                    placeholder="your@email.com"
+                                    autoComplete="email"
+                                    className="w-full rounded-xl border border-[rgba(75,46,26,0.15)] bg-[#FAFAF7] px-4 py-3.5 text-sm text-[#2D1A0E] outline-none transition placeholder:text-[rgba(75,46,26,0.4)] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/15"
+                                />
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full rounded-xl bg-[#2D1A0E] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#D97706] disabled:opacity-60"
+                                >
+                                    {loading ? 'Subscribing…' : 'Subscribe'}
+                                </button>
+                                {error && <p className="text-xs text-red-600">{error}</p>}
+                            </form>
+                        )}
+                    </div>
+                </div>
             </motion.div>
         </section>
     )
