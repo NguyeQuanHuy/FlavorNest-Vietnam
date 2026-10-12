@@ -127,7 +127,7 @@ export default function Navbar() {
 
           {/* ── Desktop nav links ── */}
           <div className="hidden lg:flex items-center gap-1 relative">
-            {NAV_LINKS.map((link) => {
+            {NAV_LINKS.filter((link) => link.label !== "Home").map((link) => {
               const isRecipes = link.label === "Recipes";
               const isStories = link.label === "Stories";
               const isActive =
@@ -514,7 +514,7 @@ export default function Navbar() {
 
               {/* Nav links */}
               <div className="flex-1 overflow-y-auto px-6 py-5">
-                {NAV_LINKS.map((link) => {
+                {NAV_LINKS.filter((link) => link.label !== "Home").map((link) => {
                   const isRecipes = link.label === "Recipes";
                   const expanded = mobileExpanded === link.label;
 
