@@ -3,23 +3,23 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Tọa độ % chính xác dựa trên ảnh vietnam-map.png (top/left)
-// Đã hiệu chỉnh theo bản đồ thực tế
+// Pin positions (% of vietnam-map.png) projected from GPS coordinates (Mercator, fitted to the map's
+// north/south/east/west extremes, error < 0.5%). Phú Quốc is offshore: the island is not drawn on the image.
 const CITY_PINS: Record<string, { top: string; left: string; region: string }> = {
-    'Hanoi': { top: '27%', left: '55%', region: 'north' },
-    'Sapa': { top: '20%', left: '38%', region: 'north' },
-    'Hạ Long Bay': { top: '24%', left: '65%', region: 'north' },
-    'Ninh Bình': { top: '31%', left: '52%', region: 'north' },
-    'Huế': { top: '46%', left: '58%', region: 'central' },
-    'Đà Nẵng': { top: '49%', left: '60%', region: 'central' },
-    'Hội An': { top: '51%', left: '59%', region: 'central' },
-    'Quy Nhơn': { top: '58%', left: '61%', region: 'central' },
-    'Phú Yên': { top: '61%', left: '61%', region: 'central' },
-    'Ho Chi Minh City': { top: '76%', left: '50%', region: 'south' },
-    'Mekong Delta': { top: '81%', left: '44%', region: 'south' },
-    'Phú Quốc': { top: '86%', left: '27%', region: 'south' },
-    'Đà Lạt': { top: '70%', left: '53%', region: 'south' },
-    'Vũng Tàu': { top: '78%', left: '55%', region: 'south' },
+    'Hanoi': { top: '16.2%', left: '31.3%', region: 'north' },
+    'Sapa': { top: '7.1%', left: '14.2%', region: 'north' },
+    'Hạ Long Bay': { top: '16.7%', left: '41.7%', region: 'north' },
+    'Ninh Bình': { top: '21.5%', left: '32.3%', region: 'north' },
+    'Huế': { top: '47.3%', left: '46.0%', region: 'central' },
+    'Đà Nẵng': { top: '50.1%', left: '51.2%', region: 'central' },
+    'Hội An': { top: '51.2%', left: '52.3%', region: 'central' },
+    'Quy Nhơn': { top: '65.2%', left: '59.8%', region: 'central' },
+    'Phú Yên': { top: '69.8%', left: '60.6%', region: 'central' },
+    'Ho Chi Minh City': { top: '85.1%', left: '38.4%', region: 'south' },
+    'Mekong Delta': { top: '89.9%', left: '30.4%', region: 'south' },
+    'Phú Quốc': { top: '88.7%', left: '15.3%', region: 'south' },
+    'Đà Lạt': { top: '77.4%', left: '53.3%', region: 'south' },
+    'Vũng Tàu': { top: '87.9%', left: '41.7%', region: 'south' },
 };
 
 const REGION_COLORS: Record<string, string> = {
