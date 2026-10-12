@@ -128,11 +128,6 @@ const recipeSchema = {
         carbohydrateContent: '48g',
         fatContent: '12g',
     },
-    aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '248',
-    },
     recipeIngredient: [
         '2 kg beef bones (marrow & knuckle)',
         '500 g beef brisket',
@@ -248,7 +243,7 @@ export default function PhoBoRecipePage() {
                                 {[
                                     ['⏱', '10 hr', 'Total time'],
                                     ['📊', 'Medium', 'Difficulty'],
-                                    ['⭐', '4.9', '248 reviews'],
+                                    ['🍜', '4', 'Servings'],
                                     ['🔥', '420', 'kcal'],
                                 ].map(([icon, val, lbl]) => (
                                     <div key={String(lbl)} style={{ textAlign: 'center' }}>
