@@ -149,7 +149,7 @@ export default function Footer() {
                             New recipes, every week.
                         </h3>
                         <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', margin: 0, lineHeight: 1.7 }}>
-                            Join 50,000+ home cooks who get our best Vietnamese recipes delivered before they go live.
+                            Get our best Vietnamese recipes delivered before they go live.
                         </p>
                     </div>
                     <div className="footer-newsletter-inputs">
