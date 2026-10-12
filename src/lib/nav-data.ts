@@ -8,32 +8,34 @@ export type NavItem = {
   icon?: string;
 };
 
+// Recipes dropdown — column 1: by meal
 export const RECIPE_CATEGORIES: NavItem[] = [
-  { name: "Breakfast", description: "Light & energizing start", href: "/recipes/breakfast", image: "/images/recipes/xoi-xeo.jpg", icon: "bowl" },
-  { name: "Main Dishes", description: "Balanced everyday meals", href: "/recipes/main-dishes", image: "/images/recipes/ca-kho-to.jpg", icon: "recipe" },
-  { name: "Desserts", description: "Sweet finishing treats", href: "/recipes/desserts", image: "/images/recipes/tiramisu-caphe.jpg", icon: "star" },
-  { name: "Specialty Drinks", description: "Creative refreshing drinks", href: "/recipes/drinks", image: "/images/recipes/ca-phe-muoi.jpg", icon: "leaf" },
+  { name: "Breakfast", description: "Phở, xôi and bánh mì to start the day", href: "/recipes/breakfast", image: "/images/recipes/xoi-xeo.jpg", icon: "bowl" },
+  { name: "Main Dishes", description: "Everyday rice, braise and soup meals", href: "/recipes/main-dishes", image: "/images/recipes/ca-kho-to.jpg", icon: "recipe" },
+  { name: "Street Food", description: "Quick bites from the sidewalk stalls", href: "/recipes/street-food", image: "/images/recipes/street-foods.jpg", icon: "bowl" },
+  { name: "Desserts", description: "Chè, flan and sweet treats", href: "/recipes/desserts", image: "/images/recipes/tiramisu-caphe.jpg", icon: "star" },
+  { name: "Drinks", description: "Coffee, teas and fresh juices", href: "/recipes/drinks", image: "/images/recipes/ca-phe-muoi.jpg", icon: "leaf" },
 ];
 
+// Recipes dropdown — column 2: by region
 export const RECIPE_REGIONS: NavItem[] = [
-  { name: "Northern Cuisine", description: "Balanced, subtle flavors", href: "/recipes/north", image: "/images/recipes/pho-bo-ha-noi.jpg", icon: "chopsticks" },
-  { name: "Central Cuisine", description: "Bold & spicy dishes", href: "/recipes/central", image: "/images/recipes/bun-bo-hue.webp", icon: "fire" },
-  { name: "Southern Cuisine", description: "Sweet tropical richness", href: "/recipes/south", image: "/images/recipes/banh-xeo-mekong.jpg", icon: "leaf" },
-  { name: "Street Food", description: "Quick street bites", href: "/recipes/street-food", image: "/images/recipes/street-foods.jpg", icon: "bowl" },
+  { name: "Northern", description: "Clean, balanced flavours of Hà Nội", href: "/recipes/north", image: "/images/recipes/pho-bo-ha-noi.jpg", icon: "chopsticks" },
+  { name: "Central", description: "Bold, spicy cooking of Huế and Hội An", href: "/recipes/central", image: "/images/recipes/bun-bo-hue.webp", icon: "fire" },
+  { name: "Southern", description: "Sweet, herb-rich food of the Mekong", href: "/recipes/south", image: "/images/recipes/banh-xeo-mekong.jpg", icon: "leaf" },
 ];
 
+// Stories dropdown — column 1: topics
 export const STORY_TOPICS: NavItem[] = [
-  { name: "Chef Secrets", description: "Voices from the kitchen", href: "/stories/chef-secrets", image: "/images/recipes/cung-dinh-hue.jpg", icon: "recipe" },
-  { name: "Culture", description: "Heritage behind the dishes", href: "/stories/culture", image: "/images/recipes/nguoi-hoi-an.jpg", icon: "leaf" },
-  { name: "Travel", description: "Journey through flavors", href: "/stories/travel", image: "/images/recipes/hoi-an.jpg", icon: "bookmark" },
-  { name: "About Stories", description: "Our storytelling ethos", href: "/stories/about", image: "/images/recipes/ricefield.jpeg", icon: "star" },
+  { name: "Culture", description: "The heritage behind the dishes", href: "/stories/culture", image: "/images/recipes/nguoi-hoi-an.jpg", icon: "leaf" },
+  { name: "Chef Secrets", description: "Techniques from Vietnamese kitchens", href: "/stories/chef-secrets", image: "/images/recipes/cung-dinh-hue.jpg", icon: "recipe" },
+  { name: "Travel", description: "Eating your way through Vietnam", href: "/stories/travel", image: "/images/recipes/hoi-an.jpg", icon: "bookmark" },
 ];
 
+// Stories dropdown — column 2: featured stories
 export const STORY_REGIONS: NavItem[] = [
-  { name: "Hanoi's Dawn", description: "Symphony of the North", href: "/stories/symphony-of-hanois-dawn", image: "/images/recipes/phohanoi.jpg", icon: "bowl" },
-  { name: "Southern Banh Xeo", description: "Secrets of the South", href: "/stories/secrets-of-the-south-banh-xeo", image: "/images/recipes/banh-xeo-mien-tay.jpg", icon: "fire" },
-  { name: "All Chef Stories", description: "Behind the kitchen doors", href: "/stories/chef-secrets", image: "/images/recipes/hue.jpg", icon: "recipe" },
-  { name: "Travel Tales", description: "From every region", href: "/stories/travel", image: "/images/recipes/hoi-an (2).jpg", icon: "arrow" },
+  { name: "The Symphony of Hanoi's Dawn", description: "A broth ten hours in the making", href: "/stories/symphony-of-hanois-dawn", image: "/images/recipes/phohanoi.jpg", icon: "bowl" },
+  { name: "Secrets of the South: Bánh Xèo", description: "The South's crispiest pancake", href: "/stories/secrets-of-the-south-banh-xeo", image: "/images/recipes/banh-xeo-mien-tay.jpg", icon: "fire" },
+  { name: "Hanoi's Egg Coffee", description: "How a milk shortage created a classic", href: "/stories/cafe-trung-hanoi-egg-coffee", image: "/images/stories/egg-coffee-hero.jpg", icon: "star" },
 ];
 
 export const NAV_LINKS = [
