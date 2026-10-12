@@ -77,12 +77,6 @@ const schema = {
         recipeCategory: recipe.category,
         recipeYield: `${recipe.baseServings} servings`,
         author: { '@type': 'Organization', name: 'FlavorNest Vietnam' },
-        aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: recipe.rating,
-            ratingCount: 100,
-            bestRating: '5',
-        },
         recipeIngredient: recipe.ingredientSections.flatMap(s =>
             s.items.map(i => `${i.amount} ${i.unit ?? ''} ${i.name}`.trim())
         ),
