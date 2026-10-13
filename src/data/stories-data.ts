@@ -19,7 +19,7 @@ export interface Story {
 export const STORIES: Story[] = [
     {
         slug: 'symphony-of-hanois-dawn',
-        category: 'c',
+        category: 'Heritage',
         categoryColor: 'amber',
         title: "The Symphony of Hanoi's Dawn",
         subtitle: 'Traditional Beef Pho',

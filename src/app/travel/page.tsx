@@ -244,7 +244,7 @@ const FOOD_ROUTES = [
 ];
 
 const REGION_COVERS: Record<string, string> = {
-    north: '/images/recipes/pho-bo-ha-noi.webp',
+    north: '/images/recipes/pho-bo-ha-noi.jpg',
     central: '/images/travel/travel-centre.jpg',
     south: '/images/recipes/banh-xeo-mekong.jpg',
 };
@@ -308,30 +308,30 @@ export default function TravelPage() {
                 {/* Map + Region Overview */}
                 <div id="travel-explore" className="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-12" style={{ margin: '64px 0', scrollMarginTop: '100px' }}>
 
-                        {/* SVG Vietnam Map */}
-                        <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
-                            <div style={{ background: '#fff', borderRadius: '16px', padding: '20px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
-                                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '12px', textAlign: 'center' }}>VIETNAM</p>
-                                <VietnamMap
-                                    cities={REGIONS.flatMap(r => r.cities.map(c => ({ ...c, region: r.id })))}
-                                    activeCity={activeCity}
-                                    activeRegion={activeRegion}
-                                    onCityClick={(cityName, regionId) => { setActiveRegion(regionId); setActiveCity(activeCity === cityName ? null : cityName); }}
-                                    onRegionClick={(regionId) => { setActiveRegion(activeRegion === regionId ? null : regionId); setActiveCity(null); }}
-                                />
-                                {/* Legend */}
-                                <div style={{ marginTop: '12px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '10px' }}>
-                                    {REGIONS.map(r => (
-                                        <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px', cursor: 'pointer' }}
-                                            onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
-                                            <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
-                                            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
-                                            <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
-                                        </div>
-                                    ))}
-                                </div>
+                    {/* SVG Vietnam Map */}
+                    <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
+                        <div style={{ background: '#fff', borderRadius: '16px', padding: '20px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
+                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '12px', textAlign: 'center' }}>VIETNAM</p>
+                            <VietnamMap
+                                cities={REGIONS.flatMap(r => r.cities.map(c => ({ ...c, region: r.id })))}
+                                activeCity={activeCity}
+                                activeRegion={activeRegion}
+                                onCityClick={(cityName, regionId) => { setActiveRegion(regionId); setActiveCity(activeCity === cityName ? null : cityName); }}
+                                onRegionClick={(regionId) => { setActiveRegion(activeRegion === regionId ? null : regionId); setActiveCity(null); }}
+                            />
+                            {/* Legend */}
+                            <div style={{ marginTop: '12px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '10px' }}>
+                                {REGIONS.map(r => (
+                                    <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px', cursor: 'pointer' }}
+                                        onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
+                                        <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
+                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
+                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
+                    </div>
 
                     {/* Region + City Content */}
                     <div>

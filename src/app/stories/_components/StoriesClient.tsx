@@ -7,132 +7,104 @@ import { useState, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import type { Story } from '../page'
 
 // ── CategoryColor defined here (single source of truth) ───────────────────
 export type CategoryColor = 'amber' | 'forest' | 'brown'
 
-// ── Category filter config ─────────────────────────────────────────────────
-const CATEGORIES = ['All', 'Heritage', 'Traditional', 'Street Food', 'Fusion'] as const
-type Category = (typeof CATEGORIES)[number]
-
-// ── Color maps (Tailwind JIT-safe: full class strings only) ───────────────
-const TAG_COLOR: Record<CategoryColor, { bg: string; text: string; dot: string }> = {
-    amber: {
-        bg: 'bg-[#D97706]/12',
-        text: 'text-[#D97706]',
-        dot: 'bg-[#D97706]',
-    },
-    forest: {
-        bg: 'bg-[#166534]/10',
-        text: 'text-[#166534]',
-        dot: 'bg-[#166534]',
-    },
-    brown: {
-        bg: 'bg-[#4B2E1A]/10',
-        text: 'text-[#4B2E1A] dark:text-[#F5EDE3]',
-        dot: 'bg-[#4B2E1A]',
-    },
+const DOT: Record<CategoryColor, string> = {
+    amber: '#D97706',
+    forest: '#166534',
+    brown: '#4B2E1A',
 }
 
-// ── Animation variants ─────────────────────────────────────────────────────
-const fadeUp: any = {
-    hidden: { opacity: 1, y: 0 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0 } },
-}
+const ALL = 'All'
 
-const filterVariant: any = {
-    hidden: { opacity: 1, scale: 1 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0 } },
-    exit: { opacity: 1, scale: 1, transition: { duration: 0 } },
-}
-
-// ── Props ──────────────────────────────────────────────────────────────────
 interface Props {
     stories: Story[]
 }
 
+// Image with a soft placeholder (title initial) when the file is missing
+function Cover({ story, sizes, priority = false }: { story: Story; sizes: string; priority?: boolean }) {
+    const [failed, setFailed] = useState(false)
+    return (
+        <>
+            <span aria-hidden className="absolute inset-0 flex items-center justify-center font-display text-5xl font-bold text-[rgba(75,46,26,0.16)]">
+                {story.title.charAt(0)}
+            </span>
+            {!failed && (
+                <Image
+                    src={story.image}
+                    alt={story.imageAlt}
+                    fill
+                    priority={priority}
+                    sizes={sizes}
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    onError={() => setFailed(true)}
+                />
+            )}
+        </>
+    )
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 export default function StoriesClient({ stories }: Props) {
-    const [activeCategory, setActiveCategory] = useState<Category>('All')
+    // Tabs: every category with at least 2 stories, most common first
+    const categories = useMemo(() => {
+        const count = new Map<string, number>()
+        stories.forEach(s => count.set(s.category, (count.get(s.category) ?? 0) + 1))
+        return [ALL, ...[...count.entries()].filter(([, n]) => n >= 2).sort((a, b) => b[1] - a[1]).map(([c]) => c)]
+    }, [stories])
+
+    const [active, setActive] = useState(ALL)
 
     const filtered = useMemo(
-        () =>
-            activeCategory === 'All'
-                ? stories
-                : stories.filter(s => s.category === activeCategory),
-        [stories, activeCategory],
+        () => (active === ALL ? stories : stories.filter(s => s.category === active)),
+        [stories, active],
     )
-
     const featured = filtered.find(s => s.featured) ?? filtered[0]
     const rest = filtered.filter(s => s.slug !== featured?.slug)
 
     return (
         <>
-            {/* ═══ HERO / PAGE HEADER ═══════════════════════════════════════ */}
-            <section className="relative pt-24 pb-8 px-5 overflow-hidden">
-                <div className="absolute -top-32 -right-32 w-[520px] h-[520px] bg-[#D97706]/8 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute top-0 -left-24 w-80 h-80 bg-[#166534]/6 rounded-full blur-3xl pointer-events-none" />
-
-                <div className="max-w-5xl mx-auto relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="flex items-center gap-2 mb-4"
-                    >
-                        <div className="w-8 h-px bg-[#D97706]" />
-                        <span className="text-[#D97706] text-[11px] font-bold uppercase tracking-[.2em]">
-                            FlavorNest Vietnam
-                        </span>
-                    </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 18 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-[#4B2E1A] dark:text-[#F5EDE3] leading-[1.02] mb-5"
-                    >
-                        Kitchen{' '}
-                        <em className="text-[#D97706] not-italic">Stories</em>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 14 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-[#4B2E1A]/60 dark:text-[#F5EDE3]/55 text-base max-w-xl leading-relaxed"
-                    >
-                        Every great dish carries a story. Discover the history, culture and
-                        people behind authentic Vietnamese cuisine.
-                    </motion.p>
+            {/* ═══ HEADER ═══ */}
+            <section className="px-5 pb-10 pt-32">
+                <div className="mx-auto max-w-6xl">
+                    <div className="mb-4 flex items-center gap-2">
+                        <div className="h-px w-8 bg-[#D97706]" />
+                        <span className="text-[11px] font-bold uppercase tracking-[.18em] text-[#D97706]">FlavorNest Vietnam</span>
+                    </div>
+                    <div className="flex flex-wrap items-end justify-between gap-6">
+                        <h1 className="font-display text-5xl font-bold leading-[1.02] text-[#2D1A0E] sm:text-6xl">
+                            Kitchen <em className="text-[#D97706]">Stories</em>
+                        </h1>
+                        <p className="max-w-md text-[15px] leading-relaxed text-[rgba(75,46,26,0.65)]">
+                            Every great dish carries a story. The history, culture and people behind authentic Vietnamese cuisine.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            {/* ═══ CATEGORY FILTER BAR ══════════════════════════════════════ */}
-            <section className="sticky top-[72px] z-40 bg-[#F5EDE3]/94 dark:bg-[#1C1009]/94 backdrop-blur-xl border-b border-[#D97706]/12 py-3">
-                <div className="max-w-5xl mx-auto px-5 overflow-x-auto">
-                    <div className="flex gap-2 w-max">
-                        {CATEGORIES.map(cat => {
-                            const active = cat === activeCategory
+            {/* ═══ FILTER TABS ═══ */}
+            <section className="sticky top-[61px] z-40 min-[641px]:top-[85px] border-b border-[rgba(75,46,26,0.1)] bg-[#F5EDE3]/95 px-5 backdrop-blur-xl">
+                <div className="mx-auto max-w-6xl overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    <div className="flex w-max gap-7">
+                        {categories.map(cat => {
+                            const isActive = cat === active
                             return (
                                 <button
                                     key={cat}
-                                    onClick={() => setActiveCategory(cat)}
-                                    className={`
-                    relative text-[13px] font-semibold px-5 py-2 rounded-full
-                    transition-all duration-250
-                    ${active
-                                            ? 'bg-[#D97706] text-white shadow-[0_4px_16px_rgba(217,119,6,.3)]'
-                                            : 'bg-white dark:bg-[#2a150a] text-[#4B2E1A]/65 dark:text-[#F5EDE3]/55 hover:text-[#D97706] border border-[#D97706]/18 hover:border-[#D97706]/45'
-                                        }
-                  `}
+                                    aria-pressed={isActive}
+                                    onClick={() => setActive(cat)}
+                                    className={`relative whitespace-nowrap py-4 text-[14px] font-medium transition-colors ${isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}`}
                                 >
                                     {cat}
-                                    {active && (
+                                    {isActive && (
                                         <motion.span
-                                            layoutId="active-filter"
-                                            className="absolute inset-0 rounded-full bg-[#D97706] -z-10"
+                                            layoutId="stories-tab-underline"
+                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+                                            className="absolute inset-x-0 bottom-0 h-0.5 bg-[#D97706]"
                                         />
                                     )}
                                 </button>
@@ -142,105 +114,54 @@ export default function StoriesClient({ stories }: Props) {
                 </div>
             </section>
 
-            {/* ═══ MAIN CONTENT ═════════════════════════════════════════════ */}
-            <div className="max-w-5xl mx-auto px-5 py-10 space-y-16">
+            {/* ═══ CONTENT ═══ */}
+            <div className="px-5 py-10">
+                <div className="mx-auto max-w-6xl">
                 <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeCategory}
-                        variants={filterVariant}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                    >
-                        {/* Featured story */}
+                    <motion.div key={active} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                        {/* Featured: magazine cover */}
                         {featured && (
-                            <motion.article
-                                custom={0}
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate="visible"
-                                className="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-12"
-                            >
-                                <div className="relative">
-                                    <div className="relative rounded-lg overflow-hidden aspect-[3/1] shadow-[0_24px_64px_rgba(75,46,26,.18)] group-hover:shadow-[0_32px_80px_rgba(75,46,26,.24)] transition-shadow duration-500">
-                                        <Image
-                                            src={featured.image}
-                                            alt={featured.imageAlt}
-                                            fill
-                                            priority
-                                            sizes="(max-width:1024px) 100vw, 50vw"
-                                            className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
-                                            quality={85}
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1009]/30 via-transparent to-transparent" />
-                                    </div>
-                                    <div className="absolute -bottom-4 right-6 lg:right-4">
-                                        <span className="inline-flex items-center gap-1.5 bg-[#D97706] text-white text-xs font-bold px-4 py-2.5 rounded-full shadow-[0_6px_24px_rgba(217,119,6,.4)]">
-                                            {featured.tag}
-                                        </span>
-                                    </div>
+                            <Link href={`/stories/${featured.slug}`} className="group relative mb-14 block overflow-hidden rounded-[20px] bg-[#EFE7DC]" style={{ textDecoration: 'none' }}>
+                                <div className="relative aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9]">
+                                    <Cover story={featured} sizes="(max-width: 1200px) 100vw, 1200px" priority />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(20,11,5,0.88)] via-[rgba(20,11,5,0.5)] to-transparent" />
                                 </div>
-
-                                <div className="pt-4 lg:pt-0">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <div className={`w-1.5 h-1.5 rounded-full ${TAG_COLOR[featured.categoryColor].dot}`} />
-                                        <span className={`text-xs font-bold uppercase tracking-[.18em] ${TAG_COLOR[featured.categoryColor].text}`}>
-                                            {featured.subtitle}
-                                        </span>
+                                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:max-w-3xl">
+                                    <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[rgba(245,237,227,0.85)]">
+                                        <span className="h-1.5 w-1.5 rounded-full bg-[#D97706]" />
+                                        Featured · {featured.category}
                                     </div>
-                                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-5 group-hover:text-[#D97706] transition-colors duration-300">
+                                    <h2 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                                         {featured.title}
                                     </h2>
-                                    <blockquote className="border-l-[3px] border-[#D97706] pl-4 mb-7">
-                                        <p className="text-[#4B2E1A]/65 dark:text-[#F5EDE3]/58 text-[15px] leading-relaxed italic">
-                                            {featured.excerpt}
-                                        </p>
-                                    </blockquote>
-                                    <div className="flex items-center gap-4 text-xs text-[#4B2E1A]/45 dark:text-[#F5EDE3]/38 mb-7">
-                                        <span>{featured.publishedAt}</span>
-                                        <span className="w-1 h-1 rounded-full bg-[#D97706]/40" />
-                                        <span>{featured.readTime}</span>
+                                    <p className="mt-3 line-clamp-2 max-w-2xl text-[15px] leading-relaxed text-[rgba(245,237,227,0.8)] sm:text-base">
+                                        {featured.excerpt}
+                                    </p>
+                                    <div className="mt-5 flex items-center gap-4 text-[13px] font-semibold text-white">
+                                        <span className="inline-flex items-center gap-2 transition-colors group-hover:text-[#F59E0B]">
+                                            Read the story <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                                        </span>
+                                        <span className="font-normal text-[rgba(245,237,227,0.6)]">{featured.readTime}</span>
                                     </div>
-                                    <Link
-                                        href={`/stories/${featured.slug}`}
-                                        className="group/link inline-flex items-center gap-2 text-[#4B2E1A] dark:text-[#F5EDE3] font-semibold text-sm border-b-2 border-[#4B2E1A]/25 dark:border-[#F5EDE3]/25 pb-0.5 hover:text-[#D97706] hover:border-[#D97706] transition-all duration-250"
-                                    >
-                                        Read full story
-                                        <span className="group-hover/link:translate-x-1.5 transition-transform duration-250">→</span>
-                                    </Link>
                                 </div>
-                            </motion.article>
+                            </Link>
                         )}
 
+                        {/* Grid */}
                         {rest.length > 0 && (
-                            <div className="flex items-center gap-4 mb-16">
-                                <div className="flex-1 h-px bg-[#D97706]/15" />
-                                <span className="text-[10px] text-[#D97706] font-bold uppercase tracking-[.2em]">
-                                    More Stories
-                                </span>
-                                <div className="flex-1 h-px bg-[#D97706]/15" />
+                            <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                                {rest.map(story => (
+                                    <StoryCard key={story.slug} story={story} />
+                                ))}
                             </div>
                         )}
-
-                        <div className="space-y-14">
-                            {rest.map((story, i) => (
-                                <StoryCard key={story.slug} story={story} index={i + 1} flip={i % 2 !== 0} />
-                            ))}
-                        </div>
 
                         {filtered.length === 0 && (
-                            <div className="flex flex-col items-center justify-center py-32 text-center">
-                                <div className="text-5xl mb-4">🍜</div>
-                                <h3 className="font-display text-2xl text-[#4B2E1A] dark:text-[#F5EDE3] mb-2">
-                                    No stories yet
-                                </h3>
-                                <p className="text-[#4B2E1A]/50 text-sm">
-                                    Stories in this category are coming soon.
-                                </p>
-                            </div>
+                            <p className="py-24 text-center text-[15px] text-[rgba(75,46,26,0.5)]">Stories in this category are coming soon.</p>
                         )}
                     </motion.div>
                 </AnimatePresence>
+                </div>
             </div>
 
             <NewsletterBanner />
@@ -251,116 +172,59 @@ export default function StoriesClient({ stories }: Props) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  StoryCard
 // ─────────────────────────────────────────────────────────────────────────────
-function StoryCard({
-    story,
-    index,
-    flip,
-}: {
-    story: Story
-    index: number
-    flip: boolean
-}) {
-    const colors = TAG_COLOR[story.tagColor]
-
+function StoryCard({ story }: { story: Story }) {
     return (
-        <motion.article
-            custom={index}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className={`
-        group grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center
-        ${flip ? 'lg:[&>:first-child]:order-2 lg:[&>:last-child]:order-1' : ''}
-      `}
-        >
-            <div className="relative rounded-lg overflow-hidden aspect-[3/1] shadow-[0_12px_40px_rgba(75,46,26,.12)] group-hover:shadow-[0_20px_56px_rgba(75,46,26,.2)] transition-shadow duration-500">
-                <Image
-                    src={story.image}
-                    alt={story.imageAlt}
-                    fill
-                    sizes="(max-width:1024px) 100vw, 50vw"
-                    className="object-cover group-hover:scale-[1.04] transition-transform duration-700 ease-out"
-                    quality={80}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1C1009]/25 via-transparent to-transparent" />
-                <div className="absolute bottom-4 right-4">
-                    <span className={`inline-flex items-center gap-1.5 ${colors.bg} ${colors.text} text-[10px] font-bold px-3 py-1.5 rounded-full backdrop-blur-sm`}>
-                        {story.tag}
-                    </span>
-                </div>
+        <Link href={`/stories/${story.slug}`} className="group block" style={{ textDecoration: 'none' }}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-[#EFE7DC]">
+                <Cover story={story} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px" />
             </div>
-
-            <div>
-                <div className="flex items-center gap-2 mb-3">
-                    <div className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
-                    <span className={`text-[11px] font-bold uppercase tracking-[.18em] ${colors.text}`}>
-                        {story.subtitle}
-                    </span>
-                </div>
-                <h2 className="font-display text-xl sm:text-2xl font-bold text-[#4B2E1A] dark:text-[#F5EDE3] leading-tight mb-4 group-hover:text-[#D97706] transition-colors duration-300">
-                    {story.title}
-                </h2>
-                <blockquote className="border-l-[3px] border-[#D97706]/40 pl-4 mb-5">
-                    <p className="text-[#4B2E1A]/62 dark:text-[#F5EDE3]/55 text-sm leading-relaxed italic line-clamp-3">
-                        {story.excerpt}
-                    </p>
-                </blockquote>
-                <div className="flex items-center gap-3 text-xs text-[#4B2E1A]/40 dark:text-[#F5EDE3]/35 mb-5">
-                    <span>{story.publishedAt}</span>
-                    <span className="w-1 h-1 rounded-full bg-[#D97706]/35" />
-                    <span>{story.readTime}</span>
-                </div>
-                <Link
-                    href={`/stories/${story.slug}`}
-                    className="group/link inline-flex items-center gap-2 text-[#4B2E1A] dark:text-[#F5EDE3] font-semibold text-sm border-b-2 border-[#4B2E1A]/20 dark:border-[#F5EDE3]/20 pb-0.5 hover:text-[#D97706] hover:border-[#D97706] transition-all duration-250"
-                >
-                    Read full story
-                    <span className="group-hover/link:translate-x-1.5 transition-transform duration-250">→</span>
-                </Link>
+            <div className="mt-4 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.09em] text-[rgba(75,46,26,0.5)]">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full" style={{ background: DOT[story.categoryColor] ?? '#D97706' }} />
+                <span className="text-[rgba(75,46,26,0.75)]">{story.category}</span>
+                <span aria-hidden>·</span>
+                <span>{story.readTime}</span>
             </div>
-        </motion.article>
+            <h2 className="mt-2 font-display text-[21px] font-bold leading-snug text-[#2D1A0E] transition-colors duration-200 group-hover:text-[#D97706]">
+                {story.title}
+            </h2>
+            <p className="mt-2 line-clamp-2 text-[14px] leading-relaxed text-[rgba(75,46,26,0.62)]">
+                {story.excerpt}
+            </p>
+        </Link>
     )
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-//  NewsletterBanner
+//  NewsletterBanner (form is wired up in step 4, once Resend + a domain exist)
 // ─────────────────────────────────────────────────────────────────────────────
 function NewsletterBanner() {
+    const [done, setDone] = useState(false)
     return (
-        <section className="relative py-24 px-5 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#4B2E1A] via-[#3a2010] to-[#166534]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] border border-white/4 rounded-full pointer-events-none" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] border border-white/6 rounded-full pointer-events-none" />
-            <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#D97706]/18 rounded-full blur-3xl" />
-
-            <div className="relative z-10 max-w-2xl mx-auto text-center">
-                <div className="text-4xl mb-4">🪺</div>
-                <h2 className="font-display text-4xl sm:text-5xl text-white font-bold mb-3">
-                    New stories, every week.
-                </h2>
-                <p className="text-white/55 text-lg mb-8 max-w-sm mx-auto">
-                    Get FlavorNest Kitchen Stories in your inbox.
-                </p>
-                <form
-                    onSubmit={e => e.preventDefault()}
-                    className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-                >
-                    <input
-                        type="email"
-                        placeholder="your@email.com"
-                        className="flex-1 bg-white/12 backdrop-blur-sm border border-white/20 text-white placeholder-white/42 px-5 py-4 rounded-2xl text-sm focus:outline-none focus:border-[#D97706] focus:bg-white/18 transition-all"
-                    />
-                    <button
-                        type="submit"
-                        className="bg-[#D97706] hover:bg-[#B45309] text-white font-bold px-7 py-4 rounded-2xl text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(217,119,6,.4)] whitespace-nowrap"
-                    >
-                        Subscribe Free →
-                    </button>
-                </form>
-                <p className="text-white/28 text-xs mt-4">
-                    ✓ New stories every Tuesday &nbsp;·&nbsp; ✓ No spam &nbsp;·&nbsp; ✓ Unsubscribe anytime
-                </p>
+        <section className="px-5 pb-20 pt-6">
+            <div className="mx-auto grid max-w-6xl gap-6 rounded-[20px] border border-[rgba(75,46,26,0.09)] bg-white px-6 py-10 sm:px-12 md:grid-cols-[1.2fr_1fr] md:items-center">
+                <div>
+                    <h2 className="font-display text-3xl font-bold text-[#2D1A0E]">New stories in your inbox</h2>
+                    <p className="mt-2 text-[15px] text-[rgba(75,46,26,0.65)]">The people and places behind Vietnamese food. No spam, unsubscribe anytime.</p>
+                </div>
+                {done ? (
+                    <p className="rounded-xl bg-[#FAF6F0] px-5 py-4 text-sm font-medium text-[#4B2E1A]">
+                        Thanks for your interest! Our newsletter is launching soon. Check back here in a few weeks.
+                    </p>
+                ) : (
+                    <form onSubmit={e => { e.preventDefault(); setDone(true) }} className="flex flex-col gap-3 sm:flex-row">
+                        <label htmlFor="stories-email" className="sr-only">Email address</label>
+                        <input
+                            id="stories-email"
+                            type="email"
+                            required
+                            placeholder="your@email.com"
+                            className="min-w-0 flex-1 rounded-xl border border-[rgba(75,46,26,0.15)] bg-[#FAFAF7] px-4 py-3.5 text-sm text-[#2D1A0E] outline-none transition placeholder:text-[rgba(75,46,26,0.4)] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/15"
+                        />
+                        <button type="submit" className="rounded-xl bg-[#2D1A0E] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#D97706]">
+                            Subscribe
+                        </button>
+                    </form>
+                )}
             </div>
         </section>
     )

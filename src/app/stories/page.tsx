@@ -3,6 +3,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata } from 'next'
+import fs from 'fs'
+import path from 'path'
 import StoriesClient from './_components/StoriesClient'
 import { STORIES } from '@/data/stories-data'
 
@@ -31,10 +33,14 @@ export interface Story {
     featured: boolean
 }
 
+// Only list stories that have their own page (others would open an empty template)
+const hasPage = (slug: string) => fs.existsSync(path.join(process.cwd(), 'src/app/stories', slug, 'page.tsx'))
+
 export default function StoriesPage() {
+    const stories = STORIES.filter(s => hasPage(s.slug))
     return (
         <div className="min-h-screen bg-[#F5EDE3] dark:bg-[#1C1009]">
-            <StoriesClient stories={STORIES} />
+            <StoriesClient stories={stories} />
         </div>
     )
 }
