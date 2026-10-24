@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Bún Bò Giò Heo Quảng Trị",
   subtitle: "Quảng Trị Beef & Pork Trotter Vermicelli — The Ancestor Bowl That Huế Refined Away",
   servings: 6,

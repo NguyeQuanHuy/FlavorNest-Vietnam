@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const recipeData = {
+import RecipeLayout from '../_components/RecipeLayout';const recipeData = {
   title: "Bún Nước Lèo Sóc Trăng",
   subtitle: "Khmer-Vietnamese Fermented Fish Noodle Soup — Where Two Civilisations Meet in One Bowl",
   servings: 4,

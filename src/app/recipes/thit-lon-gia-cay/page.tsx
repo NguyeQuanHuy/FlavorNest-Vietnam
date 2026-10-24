@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Thịt Lợn Giả Cầy",
   subtitle: "Central Vietnamese Mock Dog-Meat Stew — The Flavour Forgery That Became More Famous Than the Original",
   servings: 4,

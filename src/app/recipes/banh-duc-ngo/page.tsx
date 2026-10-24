@@ -1,6 +1,6 @@
 'use client';
 
-import RecipeLayout from '@/components/RecipeLayout';
+import RecipeLayout from '../_components/RecipeLayout';
 
 const recipeData = {
   title: 'Bánh Đúc Ngô',

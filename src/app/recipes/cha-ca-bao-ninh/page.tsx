@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Chả Cá Bảo Ninh",
   subtitle: "Bảo Ninh Pounded Fish Cake — The Two-Bounce Test and the Physics of Surimi Without a Factory",
   servings: 4,

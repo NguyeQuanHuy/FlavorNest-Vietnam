@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Cơm Hến Quảng Trị",
   subtitle: "Quảng Trị Baby Clam Rice — The Cold Rice That Proved Poverty Could Be Delicious",
   servings: 4,

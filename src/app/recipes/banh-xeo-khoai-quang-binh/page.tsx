@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Bánh Xèo Khoai Quảng Bình",
   subtitle: "Sweet Potato Sizzling Pancake — The Famine Pancake That Outsmarted Rice Flour",
   servings: 4,

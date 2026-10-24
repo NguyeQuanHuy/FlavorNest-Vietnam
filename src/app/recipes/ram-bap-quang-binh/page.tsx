@@ -1,8 +1,6 @@
 'use client'
 
-import RecipeLayout from '@/components/RecipeLayout'
-
-const RECIPE_DATA = {
+import RecipeLayout from '../_components/RecipeLayout';const RECIPE_DATA = {
   title: "Ram Bắp Quảng Bình",
   subtitle: "Quảng Bình Cabbage Spring Rolls — The Vegetable That Won the Filling War",
   servings: 4,
