@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     default: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
     template: '%s | FlavorNest Vietnam', // ⬅️ Quan trọng! Cho phép từng page set title riêng
   },
-  description: 'Your nest of authentic Vietnamese flavors. 180+ tested recipes from Hanoi, Hue and Saigon — made simple for every home kitchen.',
+  description: 'Your nest of authentic Vietnamese flavors. 880+ tested recipes from Hanoi, Hue and Saigon — made simple for every home kitchen.',
   alternates: {
     canonical: '/', // ⬅️ Trỏ về chính nó, không phải domain khác
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: 'https://flavor-nest-vietnam.vercel.app',
     siteName: 'FlavorNest Vietnam',
     title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
-    description: 'Your nest of authentic Vietnamese flavors. 180+ tested recipes made simple at home.',
+    description: 'Your nest of authentic Vietnamese flavors. 880+ tested recipes made simple at home.',
     images: [
       {
         url: '/og-image.png', // Host trên domain của bạn, không Unsplash
