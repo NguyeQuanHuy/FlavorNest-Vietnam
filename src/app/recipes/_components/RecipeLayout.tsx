@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import RelatedRecipes from './RelatedRecipes';
 
 export type IngredientSection = {
     title: string;
@@ -545,6 +546,9 @@ const schema = {
           }
         }
       `}</style>
+            {/* Related Recipes */}
+            <RelatedRecipes currentSlug={recipe.slug} category={recipe.category} />
+
             {/* Comments Section */}
             <div style={{ maxWidth: 900, margin: '0 auto 60px', padding: '0 24px' }}>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 700, color: '#2D1A0E', marginBottom: 24, paddingBottom: 12, borderBottom: '2px solid #D97706' }}>Comments</h3>
