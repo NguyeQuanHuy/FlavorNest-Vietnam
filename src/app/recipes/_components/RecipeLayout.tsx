@@ -122,25 +122,48 @@ const schema = {
         })),
     }
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://flavor-nest-vietnam.vercel.app/' },
+            { '@type': 'ListItem', position: 2, name: 'Recipes', item: 'https://flavor-nest-vietnam.vercel.app/recipes' },
+            { '@type': 'ListItem', position: 3, name: recipe.category, item: `https://flavor-nest-vietnam.vercel.app/recipes?category=${encodeURIComponent(recipe.category)}` },
+            { '@type': 'ListItem', position: 4, name: recipe.title },
+        ],
+    };
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
             />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
-                {/* Sticky Top Bar */}
-            <div style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(245,237,227,0.97)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.1)' }}>
-                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, fontFamily: 'DM Sans, sans-serif', fontSize: 13 }}>
-                    <Link href="/recipes" className="text-[rgba(75,46,26,0.55)] transition-colors duration-200 hover:text-[#D97706]" style={{ fontWeight: 500, textDecoration: 'none', flexShrink: 0 }}>
-                        ← Recipes
-                    </Link>
-                    <span style={{ color: 'rgba(75,46,26,0.25)' }}>/</span>
-                    <span style={{ fontWeight: 500, color: '#2D1A0E', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(245,237,227,0.97)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.1)' }}>
+                <ol style={{ maxWidth: '1280px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 8, minWidth: 0, fontFamily: 'DM Sans, sans-serif', fontSize: 13, listStyle: 'none' }}>
+                    <li style={{ flexShrink: 0 }}>
+                        <Link href="/" className="text-[rgba(75,46,26,0.55)] transition-colors duration-200 hover:text-[#D97706]" style={{ fontWeight: 500, textDecoration: 'none' }}>
+                            Home
+                        </Link>
+                    </li>
+                    <li style={{ color: 'rgba(75,46,26,0.25)', flexShrink: 0 }} aria-hidden="true">/</li>
+                    <li style={{ flexShrink: 0 }}>
+                        <Link href="/recipes" className="text-[rgba(75,46,26,0.55)] transition-colors duration-200 hover:text-[#D97706]" style={{ fontWeight: 500, textDecoration: 'none' }}>
+                            Recipes
+                        </Link>
+                    </li>
+                    <li style={{ color: 'rgba(75,46,26,0.25)', flexShrink: 0 }} aria-hidden="true">/</li>
+                    <li style={{ fontWeight: 500, color: '#2D1A0E', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} aria-current="page">
                         {recipe.title}
-                    </span>
-                </div>
-            </div>
+                    </li>
+                </ol>
+            </nav>
 
             {/* Hero */}
             <motion.div
