@@ -30,7 +30,40 @@ export type RecipeData = {
     steps: Step[];
 };
 
-export default function RecipeLayout({ recipe }: { recipe: RecipeData }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function normalizeRecipe(raw: any): RecipeData {
+  if (raw.ingredientSections) return raw as RecipeData;
+  return {
+    slug: raw.slug || '',
+    title: raw.title || '',
+    subtitle: raw.subtitle || '',
+    category: raw.category || 'MAIN COURSE',
+    difficulty: raw.difficulty || 'Medium',
+    totalTime: raw.totalTime || '',
+    rating: raw.rating || 0,
+    baseServings: raw.baseServings ?? raw.servings ?? 4,
+    heroImage: raw.heroImage || '',
+    intro: raw.intro || (raw.introduction?.paragraphs ? raw.introduction.paragraphs.join('\n\n') : ''),
+    ingredientSections: raw.ingredients ? raw.ingredients.map((g) => ({
+      title: g.group || g.title || '',
+      items: (g.items || []).map((item) => ({
+        amount: typeof item.amount === 'number' ? item.amount : parseFloat(item.amount) || 1,
+        unit: item.unit,
+        name: item.name || '',
+        note: item.note,
+      })),
+    })) : [],
+    steps: raw.steps || (raw.instructions ? raw.instructions.map((inst) => ({
+      title: inst.title || '',
+      description: inst.description || inst.details || '',
+      tip: inst.tip,
+    })) : []),
+  };
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function RecipeLayout({ recipe: rawRecipe }: { recipe: any }) {
+    const recipe = normalizeRecipe(rawRecipe);
     const [servings, setServings] = useState(recipe.baseServings);
     const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(new Set());
     const [doneSteps, setDoneSteps] = useState<Set<number>>(new Set());
