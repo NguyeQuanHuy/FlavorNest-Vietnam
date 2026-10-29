@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import VietnamMap from './VietnamMap';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CalendarDays, Sparkles, BedDouble, MapPin, AlertTriangle, Map as MapIcon, ChevronDown, Clock, UtensilsCrossed, Banknote, Users, Leaf, Snowflake, Sunrise } from 'lucide-react';
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -249,284 +249,290 @@ const REGION_COVERS: Record<string, string> = {
     south: '/images/recipes/banh-xeo-mekong.jpg',
 };
 
-export default function TravelPage() {
-    const [activeRegion, setActiveRegion] = useState<string | null>(null);
-    const [activeCity, setActiveCity] = useState<string | null>(null);
+const serif = { fontFamily: "'Playfair Display', Georgia, serif" };
+const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
+const RULES = [
+    { Icon: Sunrise, rule: 'Eat early', detail: 'The best street food is gone by 9am. Phở, bánh cuốn and xôi are morning dishes.' },
+    { Icon: Users, rule: 'Follow the queue', detail: 'A queue at one stall and none next door? Join the queue. Every time.' },
+    { Icon: UtensilsCrossed, rule: 'Sit on the stool', detail: 'The best food is served on plastic stools. Tablecloths usually mean higher prices, not better food.' },
+    { Icon: Banknote, rule: 'Bring cash', detail: 'Street food is cash only. Carry small VND notes; asking the price is normal.' },
+    { Icon: Leaf, rule: 'Use the herb plate', detail: 'The basket of greens is not garnish — it is half the dish. Add generously.' },
+    { Icon: Snowflake, rule: 'Ice is fine', detail: 'In cities, the tube-shaped machine ice is made from filtered water.' },
+];
 
-    const currentRegion = REGIONS.find(r => r.id === activeRegion);
-    const currentCity = currentRegion?.cities.find(c => c.name === activeCity);
+export default function TravelPage() {
+    const [activeRegion, setActiveRegion] = useState<string>(REGIONS[0].id);
+    const [activeCity, setActiveCity] = useState<string | null>(null);
+    const [mapOpen, setMapOpen] = useState(false);
+
+    const region = REGIONS.find(r => r.id === activeRegion) ?? REGIONS[0];
+    const cities = region.cities.filter(c => !activeCity || c.name === activeCity);
+
+    const pickRegion = (id: string, scroll = true) => {
+        setActiveRegion(id);
+        setActiveCity(null);
+        if (scroll) setTimeout(() => document.getElementById('travel-region')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+    };
+
+    const map = (
+        <VietnamMap
+            cities={REGIONS.flatMap(r => r.cities.map(c => ({ ...c, region: r.id })))}
+            activeCity={activeCity}
+            activeRegion={activeRegion}
+            onCityClick={(cityName, regionId) => { setActiveRegion(regionId); setActiveCity(activeCity === cityName ? null : cityName); }}
+            onRegionClick={regionId => pickRegion(regionId, false)}
+        />
+    );
 
     return (
-        <div style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: 'DM Sans, sans-serif' }}>
+        <main className="min-h-screen" style={{ background: '#FBF8F4', fontFamily: "'DM Sans', sans-serif" }}>
 
-            {/* Hero */}
-            <div style={{ background: '#1C1009', padding: '170px 24px 88px', position: 'relative', overflow: 'hidden', minHeight: '78vh', display: 'flex', alignItems: 'flex-end' }}>
-                <Image src="/images/travel/travel-hero.jpg" alt="Boats on the river in Hội An at sunset" fill priority sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center 60%' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(20,11,5,0.9) 0%, rgba(20,11,5,0.6) 50%, rgba(20,11,5,0.2) 100%), linear-gradient(0deg, rgba(20,11,5,0.75) 0%, transparent 45%)' }} />
-                <div style={{ maxWidth: '1200px', width: '100%', margin: '0 auto', position: 'relative' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-                        <div style={{ width: '32px', height: '2px', background: '#D97706' }} />
-                        <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '2.5px', color: '#D97706', textTransform: 'uppercase' }}>Food Travel Guide</span>
-                    </div>
-                    <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 700, color: '#F5EDE3', lineHeight: 1.0, marginBottom: '24px', letterSpacing: '-0.02em' }}>
-                        Eat Your Way<br />
-                        <span style={{ color: '#D97706', fontStyle: 'italic' }}>Through Vietnam</span>
-                    </h1>
-                    <p style={{ fontSize: '1.15rem', color: 'rgba(245,237,227,0.82)', maxWidth: '560px', lineHeight: 1.7, marginBottom: '40px' }}>
-                        From the mountain villages of the north to the river delta of the south — 2,000 kilometers of coastline, three distinct food cultures, and the most diverse street food in the world.
-                    </p>
-
-                    {/* Region tabs */}
-                    <div style={{ display: 'inline-flex', gap: '32px', maxWidth: '100%', boxShadow: 'inset 0 -1px 0 rgba(245,237,227,0.16)' }}>
-                        {REGIONS.map(r => {
-                            const isActive = activeRegion === r.id;
-                            return (
+            {/* ═══ HERO ═══ */}
+            <section className="relative flex min-h-[72vh] items-end overflow-hidden sm:min-h-[78vh]" style={{ background: '#1C1009' }}>
+                <Image src="/images/travel/travel-hero.jpg" alt="Boats on the river in Hội An at sunset" fill priority sizes="100vw" className="object-cover" style={{ objectPosition: 'center 60%' }} />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(20,11,5,0.92) 0%, rgba(20,11,5,0.5) 50%, rgba(20,11,5,0.2) 100%)' }} />
+                <div className="relative mx-auto w-full max-w-[1200px] px-5 pb-12 pt-32 sm:px-6 sm:pb-20">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }}>
+                        <div className="mb-4 flex items-center gap-2">
+                            <span className="h-px w-8" style={{ background: '#F59E0B' }} />
+                            <span className="text-[11px] font-bold uppercase" style={{ color: '#F59E0B', letterSpacing: '0.18em' }}>Food travel guide</span>
+                        </div>
+                        <h1 className="max-w-3xl font-bold leading-[1.02]" style={{ ...serif, color: '#F5EDE3', fontSize: 'clamp(2.5rem, 8vw, 5.5rem)' }}>
+                            Eat your way <em style={{ color: '#F59E0B' }}>through Vietnam</em>
+                        </h1>
+                        <p className="mt-5 max-w-xl text-[16px] leading-[1.7] sm:text-[18px]" style={{ color: 'rgba(245,237,227,0.8)' }}>
+                            2,000 km of coastline, three food cultures and the best street food in the world — city by city.
+                        </p>
+                        <div className="mt-8 flex flex-wrap gap-2">
+                            {REGIONS.map(r => (
                                 <button
                                     key={r.id}
-                                    aria-pressed={isActive}
-                                    onClick={() => { setActiveRegion(isActive ? null : r.id); setActiveCity(null); if (!isActive) setTimeout(() => document.getElementById('travel-explore')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60); }}
-                                    className={isActive ? 'text-[#F5EDE3]' : 'text-[rgba(245,237,227,0.6)] hover:text-[#F5EDE3]'}
-                                    style={{ position: 'relative', padding: '12px 0', fontSize: '15px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
+                                    onClick={() => pickRegion(r.id)}
+                                    className="rounded-full px-4 py-2.5 text-[14px] font-semibold backdrop-blur-md transition-colors hover:bg-white/20"
+                                    style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', color: '#F5EDE3' }}
                                 >
-                                    {r.name}
-                                    {isActive && (
-                                        <motion.span
-                                            layoutId="travel-region-underline"
-                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
-                                            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
-                                        />
-                                    )}
+                                    {r.name} <span className="ml-1 opacity-60">· {r.cities.length}</span>
                                 </button>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* ═══ REGION PICKER ═══ */}
+            <section className="mx-auto max-w-[1200px] px-5 pt-14 sm:px-6 sm:pt-20" aria-labelledby="regions-heading">
+                <h2 id="regions-heading" className="mb-6 font-bold leading-tight" style={{ ...serif, fontSize: 'clamp(1.7rem, 3.6vw, 2.4rem)', color: '#2D1A0E' }}>
+                    Choose a region
+                </h2>
+                <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
+                    {REGIONS.map(r => {
+                        const on = r.id === activeRegion;
+                        return (
+                            <button
+                                key={r.id}
+                                onClick={() => pickRegion(r.id)}
+                                aria-pressed={on}
+                                className="group relative w-[78%] flex-shrink-0 snap-start overflow-hidden rounded-[22px] text-left outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-[#D97706] sm:w-auto"
+                                style={{ boxShadow: on ? `0 0 0 3px ${r.color}, 0 18px 40px -20px rgba(45,26,14,0.5)` : '0 0 0 1px rgba(75,46,26,0.08)' }}
+                            >
+                                <div className="relative aspect-[4/3]">
+                                    <Image src={REGION_COVERS[r.id]} alt="" fill sizes="(max-width:640px) 80vw, 380px" className="object-cover transition-transform duration-700 group-hover:scale-[1.05]" />
+                                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(20,11,5,0.88) 0%, rgba(20,11,5,0.2) 55%, transparent 80%)' }} />
+                                    <div className="absolute inset-x-0 bottom-0 p-5">
+                                        <p className="text-[12px] italic" style={{ ...serif, color: 'rgba(245,237,227,0.75)' }}>{r.nameVi}</p>
+                                        <h3 className="text-[24px] font-bold leading-tight text-white" style={serif}>{r.name}</h3>
+                                        <p className="mt-1 line-clamp-2 text-[13px] leading-snug" style={{ color: 'rgba(245,237,227,0.75)' }}>{r.tagline}</p>
+                                    </div>
+                                    {on && (
+                                        <span className="absolute right-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-bold text-white" style={{ background: r.color }}>Selected</span>
+                                    )}
+                                </div>
+                            </button>
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* ═══ REGION DETAIL ═══ */}
+            <section id="travel-region" className="mx-auto max-w-[1200px] scroll-mt-24 px-5 py-14 sm:px-6 sm:py-20">
+                <div className="grid gap-10 lg:grid-cols-[300px_1fr] lg:gap-14">
+
+                    {/* Map — sticky sidebar on desktop, collapsible card on mobile */}
+                    <aside className="min-w-0 lg:sticky lg:top-28 lg:self-start">
+                        <div className="hidden rounded-3xl border border-[rgba(75,46,26,0.08)] bg-white p-5 lg:block">
+                            <p className="mb-3 text-center text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.14em' }}>Tap a city</p>
+                            {map}
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-[rgba(75,46,26,0.1)] bg-white lg:hidden">
+                            <button
+                                onClick={() => setMapOpen(o => !o)}
+                                aria-expanded={mapOpen}
+                                className="flex w-full items-center justify-between px-4 py-3.5 text-[14px] font-semibold"
+                                style={{ color: '#2D1A0E' }}
+                            >
+                                <span className="flex items-center gap-2"><MapIcon size={17} color="#D97706" /> {mapOpen ? 'Hide map' : 'Show on map'}</span>
+                                <ChevronDown size={18} className="transition-transform" style={{ transform: mapOpen ? 'rotate(180deg)' : undefined, color: '#8A6E58' }} />
+                            </button>
+                            <AnimatePresence initial={false}>
+                                {mapOpen && (
+                                    <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} transition={{ duration: 0.3, ease: EASE }} className="overflow-hidden">
+                                        <div className="mx-auto max-w-[280px] px-4 pb-4">{map}</div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+                    </aside>
+
+                    {/* Content */}
+                    <AnimatePresence mode="wait">
+                        <motion.div key={region.id} className="min-w-0" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.35, ease: EASE }}>
+                            <div className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase" style={{ color: region.color, letterSpacing: '0.12em' }}>
+                                <span className="h-1.5 w-1.5 rounded-full" style={{ background: region.color }} /> {region.nameVi}
+                            </div>
+                            <h2 className="font-bold leading-[1.08]" style={{ ...serif, fontSize: 'clamp(2rem, 4.4vw, 3rem)', color: '#2D1A0E' }}>{region.name}</h2>
+                            <p className="mt-3 max-w-2xl text-[16px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.65)' }}>{region.tagline}</p>
+
+                            {/* quick facts */}
+                            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                                <div className="flex items-start gap-3 rounded-2xl bg-white p-4" style={{ border: '1px solid rgba(75,46,26,0.08)' }}>
+                                    <CalendarDays size={19} color="#D97706" className="mt-0.5 flex-shrink-0" />
+                                    <div><p className="text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.08em' }}>Best season</p><p className="text-[15px] font-semibold" style={{ color: '#2D1A0E' }}>{region.season}</p></div>
+                                </div>
+                                <div className="flex items-start gap-3 rounded-2xl bg-white p-4" style={{ border: '1px solid rgba(75,46,26,0.08)' }}>
+                                    <UtensilsCrossed size={19} color="#D97706" className="mt-0.5 flex-shrink-0" />
+                                    <div><p className="text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.08em' }}>Must eat</p><p className="text-[15px] font-semibold" style={{ color: '#2D1A0E' }}>{region.mustEat}</p></div>
+                                </div>
+                            </div>
+
+                            {/* city chips */}
+                            <div className="-mx-5 mt-8 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 [&::-webkit-scrollbar]:hidden">
+                                {[null, ...region.cities.map(c => c.name)].map(name => {
+                                    const on = activeCity === name;
+                                    return (
+                                        <button
+                                            key={name ?? 'all'}
+                                            aria-pressed={on}
+                                            onClick={() => setActiveCity(name)}
+                                            className="relative flex-shrink-0 rounded-full px-4 py-2 text-[13.5px] font-medium transition-colors"
+                                            style={{ color: on ? '#fff' : '#4B2E1A' }}
+                                        >
+                                            {on && <motion.span layoutId="travel-city-chip" className="absolute inset-0 rounded-full" style={{ background: '#2D1A0E' }} transition={{ type: 'spring', stiffness: 420, damping: 36 }} />}
+                                            {!on && <span className="absolute inset-0 rounded-full border border-[rgba(75,46,26,0.14)] bg-white" />}
+                                            <span className="relative">{name ?? 'All cities'}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+
+                            {/* city cards */}
+                            <div className="mt-6 space-y-4">
+                                {cities.map((city, i) => (
+                                    <motion.article
+                                        key={city.name}
+                                        initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 5) * 0.05, duration: 0.3 }}
+                                        className="overflow-hidden rounded-3xl bg-white"
+                                        style={{ border: '1px solid rgba(75,46,26,0.08)' }}
+                                    >
+                                        <div className="p-5 sm:p-7">
+                                            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                                                <h3 className="text-[26px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>{city.name}</h3>
+                                                <span className="text-[15px] italic" style={{ ...serif, color: 'rgba(75,46,26,0.5)' }}>{city.nameVi}</span>
+                                                <span className="ml-auto rounded-full px-2.5 py-1 text-[11px] font-semibold" style={{ background: `${region.color}14`, color: region.color }}>{city.type}</span>
+                                            </div>
+                                            <p className="mt-3 text-[15px] leading-[1.75]" style={{ color: 'rgba(45,26,14,0.78)' }}>{city.desc}</p>
+
+                                            <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+                                                {[
+                                                    { Icon: CalendarDays, label: 'Best time', value: city.bestTime },
+                                                    { Icon: Sparkles, label: 'Highlights', value: city.highlight },
+                                                    { Icon: BedDouble, label: 'Where to stay', value: city.stay },
+                                                    { Icon: MapPin, label: 'Food streets', value: city.foodStreet },
+                                                ].map(({ Icon, label, value }) => (
+                                                    <div key={label} className="flex gap-3">
+                                                        <Icon size={17} className="mt-0.5 flex-shrink-0" color="#B45309" aria-hidden />
+                                                        <div>
+                                                            <dt className="text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.08em' }}>{label}</dt>
+                                                            <dd className="text-[14px] leading-relaxed" style={{ color: '#2D1A0E' }}>{value}</dd>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </dl>
+
+                                            {city.avoid && (
+                                                <p className="mt-4 flex items-start gap-2 rounded-xl px-3.5 py-2.5 text-[13px] leading-snug" style={{ background: '#FEF3C7', color: '#92400E' }}>
+                                                    <AlertTriangle size={15} className="mt-0.5 flex-shrink-0" /> <span><strong>Avoid:</strong> {city.avoid}</span>
+                                                </p>
+                                            )}
+                                        </div>
+                                        <Link
+                                            href={city.bestDishSlug === 'recipes' ? '/recipes' : `/recipes/${city.bestDishSlug}`}
+                                            className="group flex items-center justify-between border-t px-5 py-4 text-[14px] font-semibold transition-colors hover:bg-[#FBF8F4] sm:px-7"
+                                            style={{ borderColor: 'rgba(75,46,26,0.07)', color: '#2D1A0E', textDecoration: 'none' }}
+                                        >
+                                            <span className="flex items-center gap-2"><UtensilsCrossed size={16} color="#D97706" /> Cook the local dish: {city.bestDish}</span>
+                                            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                                        </Link>
+                                    </motion.article>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </section>
+
+            {/* ═══ FOOD ROUTES ═══ */}
+            <section className="border-t px-5 py-16 sm:px-6 sm:py-20" style={{ borderColor: 'rgba(75,46,26,0.08)' }}>
+                <div className="mx-auto max-w-[1200px]">
+                    <h2 className="font-bold leading-tight" style={{ ...serif, fontSize: 'clamp(1.7rem, 3.6vw, 2.4rem)', color: '#2D1A0E' }}>Suggested food routes</h2>
+                    <p className="mt-2 text-[15px]" style={{ color: 'rgba(75,46,26,0.6)' }}>Itineraries built around eating, not sightseeing.</p>
+                    <div className="-mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
+                        {FOOD_ROUTES.map((route, i) => {
+                            const stops = route.cities.split('→').map(s => s.trim());
+                            return (
+                                <motion.div
+                                    key={route.name}
+                                    initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
+                                    className="flex w-[78%] flex-shrink-0 snap-start flex-col rounded-3xl bg-white p-6 sm:w-auto"
+                                    style={{ border: '1px solid rgba(75,46,26,0.08)' }}
+                                >
+                                    <span className="mb-4 flex w-fit items-center gap-1.5 rounded-full px-3 py-1 text-[12px] font-bold" style={{ background: '#FEF3C7', color: '#B45309' }}>
+                                        <Clock size={13} /> {route.days} days
+                                    </span>
+                                    <h3 className="text-[20px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>{route.name}</h3>
+                                    <ol className="my-4 space-y-2 border-l-2 pl-4" style={{ borderColor: 'rgba(217,119,6,0.3)' }}>
+                                        {stops.map((s, si) => (
+                                            <li key={s} className="relative text-[14px] font-medium" style={{ color: '#4B2E1A' }}>
+                                                <span className="absolute -left-[21.5px] top-1.5 h-2.5 w-2.5 rounded-full" style={{ background: si === 0 || si === stops.length - 1 ? '#D97706' : '#FBF8F4', border: '2px solid #D97706' }} />
+                                                {s}
+                                            </li>
+                                        ))}
+                                    </ol>
+                                    <p className="mt-auto text-[13.5px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.6)' }}>{route.desc}</p>
+                                </motion.div>
                             );
                         })}
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
-
-                {/* Map + Region Overview */}
-                <div id="travel-explore" className="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-12" style={{ margin: '64px 0', scrollMarginTop: '100px' }}>
-
-                    {/* SVG Vietnam Map */}
-                    <div style={{ position: 'sticky', top: '100px', alignSelf: 'start' }}>
-                        <div style={{ background: '#fff', borderRadius: '16px', padding: '20px', border: '1px solid rgba(75,46,26,0.08)', boxShadow: '0 4px 24px rgba(75,46,26,0.06)' }}>
-                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', color: '#D97706', textTransform: 'uppercase', marginBottom: '12px', textAlign: 'center' }}>VIETNAM</p>
-                            <VietnamMap
-                                cities={REGIONS.flatMap(r => r.cities.map(c => ({ ...c, region: r.id })))}
-                                activeCity={activeCity}
-                                activeRegion={activeRegion}
-                                onCityClick={(cityName, regionId) => { setActiveRegion(regionId); setActiveCity(activeCity === cityName ? null : cityName); }}
-                                onRegionClick={(regionId) => { setActiveRegion(activeRegion === regionId ? null : regionId); setActiveCity(null); }}
-                            />
-                            {/* Legend */}
-                            <div style={{ marginTop: '12px', borderTop: '1px solid rgba(75,46,26,0.07)', paddingTop: '10px' }}>
-                                {REGIONS.map(r => (
-                                    <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '5px', cursor: 'pointer' }}
-                                        onClick={() => { setActiveRegion(activeRegion === r.id ? null : r.id); setActiveCity(null); }}>
-                                        <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: r.color, flexShrink: 0 }} />
-                                        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', color: activeRegion === r.id ? r.color : 'rgba(75,46,26,0.6)', fontWeight: activeRegion === r.id ? 700 : 400 }}>{r.name}</span>
-                                        <span style={{ fontFamily: 'Georgia, serif', fontSize: '10px', color: 'rgba(75,46,26,0.35)', fontStyle: 'italic', marginLeft: 'auto' }}>{r.season}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Region + City Content */}
-                    <div>
-                        {!activeRegion && (
-                            <div>
-                                <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem', fontWeight: 700, color: '#2D1A0E', marginBottom: '8px' }}>
-                                    Select a Region to Explore
-                                </h2>
-                                <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '48px', lineHeight: 1.6 }}>
-                                    Click a region on the map or use the buttons above. Each region has a completely distinct food culture, climate, and travel character.
-                                </p>
-
-                                {/* All regions overview */}
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '18px' }}>
-                                    {REGIONS.map(r => (
-                                        <motion.div key={r.id} whileHover={{ y: -2 }} transition={{ duration: 0.2 }}
-                                            onClick={() => setActiveRegion(r.id)}
-                                            className="group region-card border border-[rgba(75,46,26,0.09)] transition-[border-color,box-shadow] duration-200 hover:border-[rgba(75,46,26,0.24)] hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
-                                            style={{ background: '#fff', borderRadius: '14px', padding: '24px 24px 18px', cursor: 'pointer', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                                            <div style={{ position: 'relative', aspectRatio: '16 / 10', overflow: 'hidden', margin: '-24px -24px 20px', background: '#EFE7DC' }}>
-                                                <Image src={REGION_COVERS[r.id]} alt={r.name} fill sizes="(max-width: 1024px) 100vw, 320px" className="transition-transform duration-500 group-hover:scale-105" style={{ objectFit: 'cover' }} />
-                                            </div>
-                                            {/* Meta: Vietnamese name */}
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
-                                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: r.color, flexShrink: 0 }} />
-                                                {r.nameVi}
-                                            </div>
-
-                                            <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '24px', fontWeight: 700, color: '#2D1A0E', margin: '0 0 8px', lineHeight: 1.2 }}>{r.name}</h3>
-                                            <p style={{ fontSize: '14px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 18px' }}>{r.tagline}</p>
-
-                                            <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: '16px', rowGap: '8px', alignItems: 'baseline', marginBottom: '18px' }}>
-                                                <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Best season</span>
-                                                <span style={{ fontSize: '13.5px', color: '#2D1A0E', lineHeight: 1.55 }}>{r.season}</span>
-                                                <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Must eat</span>
-                                                <span style={{ fontSize: '13.5px', color: '#2D1A0E', lineHeight: 1.55 }}>{r.mustEat}</span>
-                                            </div>
-
-                                            <div
-                                                className="text-[#2D1A0E] transition-colors duration-200 group-hover:text-[#D97706]"
-                                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', paddingTop: '14px', borderTop: '1px solid rgba(75,46,26,0.07)', fontSize: '13px', fontWeight: 600 }}
-                                            >
-                                                {r.cities.length} destinations
-                                                <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
-                                            </div>
-                                        </motion.div>
-                                    ))}
+            {/* ═══ RULES ═══ */}
+            <section className="px-5 pb-20 sm:px-6">
+                <div className="mx-auto max-w-[1200px] rounded-[28px] px-6 py-10 sm:px-10 sm:py-12" style={{ background: '#2D1A0E' }}>
+                    <h2 className="font-bold leading-tight" style={{ ...serif, fontSize: 'clamp(1.7rem, 3.6vw, 2.3rem)', color: '#F5EDE3' }}>Eating in Vietnam: <em style={{ color: '#F59E0B' }}>the rules</em></h2>
+                    <p className="mt-2 text-[15px]" style={{ color: 'rgba(245,237,227,0.6)' }}>What every first-time food traveller should know.</p>
+                    <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        {RULES.map(({ Icon, rule, detail }) => (
+                            <div key={rule} className="flex gap-4 rounded-2xl p-4" style={{ background: 'rgba(245,237,227,0.05)', border: '1px solid rgba(245,237,227,0.08)' }}>
+                                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl" style={{ background: 'rgba(217,119,6,0.16)', color: '#F59E0B' }}><Icon size={19} /></span>
+                                <div>
+                                    <h3 className="text-[15px] font-semibold" style={{ color: '#F5EDE3' }}>{rule}</h3>
+                                    <p className="mt-1 text-[13.5px] leading-relaxed" style={{ color: 'rgba(245,237,227,0.6)' }}>{detail}</p>
                                 </div>
                             </div>
-                        )}
-
-                        {activeRegion && currentRegion && (
-                            <AnimatePresence mode="wait">
-                                <motion.div key={activeRegion} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-
-                                    {/* Region header */}
-                                    <div style={{ marginBottom: '28px' }}>
-                                        <div style={{ position: 'relative', height: '240px', borderRadius: '16px', overflow: 'hidden', marginBottom: '24px', background: '#EFE7DC' }}>
-                                            <Image src={REGION_COVERS[currentRegion.id]} alt={currentRegion.name} fill sizes="(max-width: 1024px) 100vw, 860px" style={{ objectFit: 'cover' }} />
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
-                                            <span style={{ width: 6, height: 6, borderRadius: '50%', background: currentRegion.color, flexShrink: 0 }} />
-                                            {currentRegion.nameVi}
-                                        </div>
-                                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.4rem', fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.1 }}>{currentRegion.name}</h2>
-                                        <p style={{ fontSize: '16px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 20px', maxWidth: '620px' }}>{currentRegion.tagline}</p>
-                                        <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: '20px', rowGap: '8px', alignItems: 'baseline' }}>
-                                            <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Best season</span>
-                                            <span style={{ fontSize: '14px', color: '#2D1A0E', lineHeight: 1.55 }}>{currentRegion.season}</span>
-                                            <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>Must eat</span>
-                                            <span style={{ fontSize: '14px', color: '#2D1A0E', lineHeight: 1.55 }}>{currentRegion.mustEat}</span>
-                                        </div>
-                                    </div>
-
-                                    {/* City tabs */}
-                                    <div
-                                        className="[scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                                        style={{ overflowX: 'auto', boxShadow: 'inset 0 -1px 0 rgba(75,46,26,0.1)', marginBottom: '24px' }}
-                                    >
-                                        <div style={{ display: 'flex', gap: '28px', width: 'max-content' }}>
-                                            {[null, ...currentRegion.cities.map(c => c.name)].map(name => {
-                                                const isActive = activeCity === name;
-                                                return (
-                                                    <button
-                                                        key={name ?? 'all'}
-                                                        aria-pressed={isActive}
-                                                        onClick={() => setActiveCity(isActive ? null : name)}
-                                                        className={isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}
-                                                        style={{ position: 'relative', padding: '14px 0', fontSize: '14px', fontWeight: 500, letterSpacing: '0.01em', cursor: 'pointer', whiteSpace: 'nowrap', background: 'none', border: 'none', transition: 'color 0.2s', fontFamily: 'DM Sans, sans-serif' }}
-                                                    >
-                                                        {name ?? 'All destinations'}
-                                                        {isActive && (
-                                                            <motion.span
-                                                                layoutId="travel-city-underline"
-                                                                transition={{ type: 'spring', stiffness: 420, damping: 36 }}
-                                                                style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
-                                                            />
-                                                        )}
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* City cards */}
-                                    <div style={{ display: 'grid', gap: '18px' }}>
-                                        {currentRegion.cities.filter(c => !activeCity || c.name === activeCity).map(city => (
-                                            <motion.div key={city.name} layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}
-                                                className="border border-[rgba(75,46,26,0.09)]"
-                                                style={{ background: '#fff', borderRadius: '14px', padding: '26px 28px 20px' }}>
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px', fontSize: '11px', fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.75)' }}>
-                                                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: currentRegion.color, flexShrink: 0 }} />
-                                                    {city.type}
-                                                </div>
-                                                <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap', marginBottom: '12px' }}>
-                                                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '26px', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.2 }}>{city.name}</h3>
-                                                    <span style={{ fontSize: '14px', fontStyle: 'italic', color: 'rgba(75,46,26,0.5)' }}>{city.nameVi}</span>
-                                                </div>
-                                                <p style={{ fontSize: '14.5px', lineHeight: 1.75, color: 'rgba(75,46,26,0.8)', margin: '0 0 22px', maxWidth: '680px' }}>{city.desc}</p>
-
-                                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '18px 32px', padding: '20px 0', borderTop: '1px solid rgba(75,46,26,0.07)' }}>
-                                                    {[
-                                                        { label: 'Best time', value: city.bestTime },
-                                                        { label: 'Highlight', value: city.highlight },
-                                                        { label: 'Where to stay', value: city.stay },
-                                                        { label: 'Food streets', value: city.foodStreet },
-                                                        { label: 'Avoid', value: city.avoid },
-                                                    ].map(item => (
-                                                        <div key={item.label}>
-                                                            <div style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)', marginBottom: '4px' }}>{item.label}</div>
-                                                            <p style={{ fontSize: '13.5px', color: '#2D1A0E', margin: 0, lineHeight: 1.6 }}>{item.value}</p>
-                                                        </div>
-                                                    ))}
-                                                </div>
-
-                                                <Link href={`/recipes/${city.bestDishSlug}`}
-                                                    className="group text-[#2D1A0E] transition-colors duration-200 hover:text-[#D97706]"
-                                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '14px', borderTop: '1px solid rgba(75,46,26,0.07)', textDecoration: 'none', fontSize: '13px', fontWeight: 600 }}>
-                                                    Recipe: {city.bestDish}
-                                                    <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
-                                                </Link>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        )}
-                    </div>
-                </div>
-
-                {/* Food Routes */}
-                <div style={{ margin: '0 0 80px', padding: '48px 0', borderTop: '1px solid rgba(75,46,26,0.08)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
-                        <div style={{ width: '28px', height: '2px', background: '#D97706' }} />
-                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>Suggested Food Routes</h2>
-                    </div>
-                    <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(75,46,26,0.55)', marginBottom: '32px' }}>Itineraries built around eating, not sightseeing.</p>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
-                        {FOOD_ROUTES.map((route, i) => (
-                            <motion.div key={route.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
-                                style={{ background: '#fff', border: '1px solid rgba(75,46,26,0.08)', borderRadius: '8px', padding: '20px', borderTop: '4px solid #D97706' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
-                                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{route.name}</h3>
-                                    <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 700, color: '#D97706', background: 'rgba(217,119,6,0.1)', padding: '3px 8px', borderRadius: '100px', flexShrink: 0, marginLeft: '8px' }}>{route.days} days</span>
-                                </div>
-                                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', fontWeight: 600, color: '#8B6F5A', marginBottom: '10px', letterSpacing: '0.5px' }}>{route.cities}</p>
-                                <p style={{ fontFamily: 'Georgia, serif', fontSize: '13px', color: 'rgba(75,46,26,0.6)', lineHeight: 1.6, margin: 0 }}>{route.desc}</p>
-                            </motion.div>
                         ))}
                     </div>
                 </div>
-
-                {/* Quick tips */}
-                <div style={{ margin: '0 0 80px', background: '#2D1A0E', borderRadius: '12px', padding: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '24px' }}>
-                    <div style={{ gridColumn: '1 / -1', marginBottom: '8px' }}>
-                        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.8rem', fontWeight: 700, color: '#F5EDE3', margin: '0 0 4px' }}>Eating in Vietnam: The Rules</h2>
-                        <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: 'rgba(245,237,227,0.5)', fontSize: '14px' }}>What every first-time food traveler needs to know.</p>
-                    </div>
-                    {[
-                        { icon: '🕐', rule: 'Eat early', detail: 'The best street food disappears by 9am. Phở, bánh cuốn, xôi — these are morning dishes. Miss the morning and you miss the point.' },
-                        { icon: '🪑', rule: 'Sit down', detail: 'The best food in Vietnam is served at plastic stools on the sidewalk. A proper building and tablecloth means higher prices and usually worse food.' },
-                        { icon: '👆', rule: 'Follow the queue', detail: 'If there is a queue at a stall and nothing at the one next to it, join the queue. Every time.' },
-                        { icon: '💵', rule: 'Cash only', detail: 'Street food is cash. Carry small denominations of VND. Prices are usually written; if not, asking is expected.' },
-                        { icon: '🌿', rule: 'Use the herb plate', detail: 'The plate of green that arrives with your bowl is not garnish. It is half the dish. Add generously.' },
-                        { icon: '🧊', rule: 'Ice is fine', detail: 'In urban Vietnam, ice in drinks is safe. The cylindrical machine-made ice found everywhere is filtered water.' },
-                    ].map(item => (
-                        <div key={item.rule} style={{ padding: '16px', background: 'rgba(245,237,227,0.05)', borderRadius: '8px', border: '1px solid rgba(245,237,227,0.08)' }}>
-                            <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>{item.icon}</div>
-                            <h4 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 700, color: '#D97706', marginBottom: '6px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.rule}</h4>
-                            <p style={{ fontFamily: 'Georgia, serif', fontSize: '12.5px', color: 'rgba(245,237,227,0.6)', lineHeight: 1.6, margin: 0 }}>{item.detail}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div >
+            </section>
+        </main>
     );
 }
