@@ -12,6 +12,7 @@ import path from 'path'
 import RecipesClient from './_components/RecipesClient'
 import { getAllRecipes } from '@/data/index'
 import { STORIES } from '@/data/stories-data'
+import { getSiteStats } from '@/lib/site-stats'
 
 export const metadata: Metadata = {
     title: 'Vietnamese Recipes — Phở, Bánh Mì, Bún & More',
@@ -33,7 +34,7 @@ export default function RecipesPage() {
     const withImage = slugsWithImage()
     return (
         <Suspense fallback={<div className="min-h-screen" style={{ background: '#FBF8F4' }} />}>
-            <RecipesClient withImage={withImage} />
+            <RecipesClient withImage={withImage} recipeCount={getSiteStats().recipes} />
         </Suspense>
     )
 }

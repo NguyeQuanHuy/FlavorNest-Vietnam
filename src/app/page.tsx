@@ -49,6 +49,7 @@ import { recipes } from "@/data/recipes";
 import { STORIES as ALL_STORIES } from "@/data/stories-data";
 import Image from "next/image";
 import TrendingSection, { type TrendingItem } from './_sections/TrendingSection'
+import { getSiteStats } from '@/lib/site-stats'
 import { getAllRecipes } from '@/data/index'
 
 // ── Trending this week: best-rated + most-reviewed recipes, rotated weekly ──
@@ -118,7 +119,7 @@ const featuredStories = ALL_STORIES.slice(0, 3).map(s => ({
 export const metadata: Metadata = {
   title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes Made Simple at Home',
   description:
-    "Your nest of authentic Vietnamese flavors. 100+ tested recipes — from Hanoi's dawn pho to Saigon's vibrant street food — made simple for every home kitchen.",
+    "Your nest of authentic Vietnamese flavors. 800+ tested recipes — from Hanoi's dawn pho to Saigon's vibrant street food — made simple for every home kitchen.",
   keywords: [
     'Vietnamese recipes', 'Pho recipe', 'Banh Mi', 'Bun Cha',
     'authentic Vietnamese cooking', 'Vietnamese food blog',
@@ -127,7 +128,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://flavor-nest-vietnam.vercel.app',
     title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
-    description: "Your nest of authentic Vietnamese flavors. 100+ tested recipes made simple at home.",
+    description: "Your nest of authentic Vietnamese flavors. 800+ tested recipes made simple at home.",
     siteName: 'FlavorNest Vietnam',
     images: [{
       url: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80',
@@ -175,11 +176,12 @@ const websiteSchema = {
 export default function HomePage() {
   const recipeCount = countRecipePages()
   const trending = getTrending(8)
+  const site = getSiteStats()
   const stats = [
-    { value: recipeCount, label: 'Tested recipes', suffix: '+' },
-    { value: countDirs('src/app/stories', ['culture', 'travel', 'about']), label: 'Food stories' },
-    { value: countDirs('src/app/how-to'), label: 'Technique guides' },
-    { value: 3, label: 'Regions, north to south' },
+    { value: site.recipes, label: 'Tested recipes' },
+    { value: site.stories, label: 'Food stories' },
+    { value: site.guides, label: 'Technique guides' },
+    { value: site.regions, label: 'Regions, north to south' },
   ]
   const week = `Week ${isoWeek()}`
   return (

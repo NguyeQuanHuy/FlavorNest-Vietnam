@@ -116,7 +116,7 @@ function NoPhoto({ title, subtitle }: { title: string; subtitle: string }) {
     );
 }
 
-export default function RecipesClient({ withImage }: { withImage: string[] }) {
+export default function RecipesClient({ withImage, recipeCount }: { withImage: string[]; recipeCount: number }) {
     const hasImg = useMemo(() => new Set(withImage), [withImage]);
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -248,7 +248,7 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                                     : <>Cook Vietnam, <em style={{ color: '#D97706' }}>one bowl at a time</em></>}
                             </h1>
                             <p className="mt-4 hidden text-[16px] leading-relaxed sm:block" style={{ color: 'rgba(75,46,26,0.65)' }}>
-                                {RECIPES.length} tested recipes — from Hà Nội’s misty mornings to Sài Gòn’s street corners.
+                                {recipeCount} tested recipes — from Hà Nội’s misty mornings to Sài Gòn’s street corners.
                             </p>
                         </div>
 

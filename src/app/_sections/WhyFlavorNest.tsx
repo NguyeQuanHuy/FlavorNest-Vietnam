@@ -3,10 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { getAllRecipes } from '@/data/index';
-
-const recipes = getAllRecipes();
-const recipeCount = recipes.length;
 
 const PILLARS = [
     { icon: '🏡', title: 'Truly Authentic', body: 'Every recipe sourced from Vietnamese home cooks and street vendors — not fusion restaurant menus.' },
@@ -15,16 +11,10 @@ const PILLARS = [
     { icon: '🔬', title: 'Kitchen-Tested', body: 'Every recipe tested in a real home kitchen in Germany — no specialist equipment, no commercial wok burners.' },
 ];
 
-const STATS = [
-    { value: `${recipeCount}+`, label: 'Recipes' },
-    { value: '100%', label: 'Free' },
-    { value: '3', label: 'Regions' },
-    { value: '1', label: 'Kitchen' },
-];
 
 export default function WhyFlavorNest() {
     return (
-        <section className="fn-why" style={{ background: '#F5EDE3', padding: '64px 0 0' }}>
+        <section className="fn-why" style={{ background: '#F5EDE3', padding: '64px 0 72px' }}>
             <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px' }}>
                 {/* Label */}
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
@@ -54,25 +44,12 @@ export default function WhyFlavorNest() {
                 </div>
 
                 <div style={{ textAlign: 'center', padding: '24px 0 0' }}>
-                    <Link href="/stories/about" style={{ fontSize: 14, fontWeight: 600, color: '#D97706', textDecoration: 'none' }}>
+                    <Link href="/about" style={{ fontSize: 14, fontWeight: 600, color: '#D97706', textDecoration: 'none' }}>
                         Our full story →
                     </Link>
                 </div>
             </div>
 
-            {/* Stats bar */}
-            <div className="fn-why-stats" style={{ background: '#2D1A0E', marginTop: 48 }}>
-                <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
-                    {STATS.map((s, i) => (
-                        <motion.div key={s.label}
-                            initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                            style={{ padding: '28px 16px', textAlign: 'center', borderRight: i < STATS.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none' }}>
-                            <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 800, color: '#D97706', lineHeight: 1 }}>{s.value}</div>
-                            <div style={{ fontSize: 11, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 6 }}>{s.label}</div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
         </section>
     );
 }

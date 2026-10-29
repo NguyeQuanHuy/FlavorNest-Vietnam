@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Home, BookOpen, Sprout, ShieldCheck, ArrowRight, MapPin } from 'lucide-react'
+import type { SiteStats } from '@/lib/site-stats'
 
 const serif = { fontFamily: "'Playfair Display', Georgia, serif" }
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
@@ -18,11 +19,11 @@ const reveal = (d = 0) => ({
     transition: { duration: 0.65, delay: d, ease: EASE },
 })
 
-const STATS = [
-    { value: '800+', label: 'Recipes, tested at home' },
-    { value: '3', label: 'Regions, north to south' },
-    { value: '1', label: 'Small kitchen in Germany' },
-    { value: '∞', label: 'Phone calls to Mum' },
+const statsFrom = (s: SiteStats) => [
+    { value: String(s.recipes), label: 'Tested recipes' },
+    { value: String(s.stories), label: 'Food stories' },
+    { value: String(s.guides), label: 'Technique guides' },
+    { value: String(s.regions), label: 'Regions, north to south' },
 ]
 
 const HOME_DISHES = [
@@ -66,7 +67,8 @@ function Credit({ children }: { children: React.ReactNode }) {
     return <p className="mt-2 text-[11px]" style={{ color: 'rgba(75,46,26,0.45)' }}>{children}</p>
 }
 
-export default function AboutClient() {
+export default function AboutClient({ stats }: { stats: SiteStats }) {
+    const STATS = statsFrom(stats)
     return (
         <main style={{ background: '#FBF8F4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
 

@@ -12,6 +12,7 @@ import { SOUTHERN_RECIPES } from './recipes-southern'
 import { CENTRAL_RECIPES } from './recipes-central'
 import { DRINKS_RECIPES } from './recipes-drinks'
 import { getDetailedAsLegacy, RECIPES_DETAILED } from './recipes-detailed'
+import { RECIPES as CATALOGUE } from './recipes'
 
 export interface UnifiedRecipe {
   slug: string
@@ -69,7 +70,28 @@ export function getAllRecipes(): UnifiedRecipe[] {
     return true
   })
 
-  return [...detailed, ...uniqueCategory]
+  // Master catalogue (recipes.ts): add every recipe not already listed above,
+  // so all recipe pages are discoverable on /recipes
+  const known = new Set([...detailed.map(r => r.slug), ...uniqueCategory.map(r => r.slug)])
+  const fromCatalogue: UnifiedRecipe[] = CATALOGUE
+    .filter(r => !known.has(r.slug) && (known.add(r.slug), true))
+    .map(r => ({
+      slug: r.slug,
+      title: r.title,
+      subtitle: r.subtitle,
+      image: r.image,
+      region: inferRegion(`${r.slug} ${r.title} ${r.subtitle} ${r.tags.join(' ')}`),
+      difficulty: r.difficulty,
+      time: r.totalTime,
+      rating: r.rating.toFixed(1),
+      reviews: r.ratingCount,
+      cal: r.calories,
+      description: r.shortDescription,
+      tags: r.tags.slice(0, 4),
+      category: r.category,
+    }))
+
+  return [...detailed, ...uniqueCategory, ...fromCatalogue]
 }
 
 // ── Ingredients preview map (slug → top 4 tên nguyên liệu chính) ──
@@ -83,4 +105,14 @@ export function getIngredientPreviewMap(): Record<string, string[]> {
     }
   }
   return map
+}
+// ── Region from place names in slug/title/tags (catalogue entries have no region field) ──
+const REGION_HINTS: [string, RegExp][] = [
+  ['Northern', /ha[- ]?noi|hanoi|hà nội|hai[- ]?phong|hải phòng|nam[- ]?dinh|ninh[- ]?binh|bac[- ]?ninh|ha[- ]?giang|cao[- ]?bang|lang[- ]?son|son[- ]?la|sapa|lao[- ]?cai|thai[- ]?binh|hung[- ]?yen|vinh[- ]?phuc|tam[- ]?dao|ha[- ]?long|quang[- ]?ninh|tu[- ]?lam|dien[- ]?bien|yen[- ]?bai|northern|north/i],
+  ['Central', /hue|huế|da[- ]?nang|đà nẵng|hoi[- ]?an|quang[- ]?nam|quang[- ]?ngai|quang[- ]?binh|quang[- ]?tri|binh[- ]?dinh|quy[- ]?nhon|phu[- ]?yen|tuy[- ]?hoa|nha[- ]?trang|khanh[- ]?hoa|phan[- ]?rang|phan[- ]?thiet|nghe[- ]?an|ha[- ]?tinh|thanh[- ]?hoa|kon[- ]?tum|gia[- ]?lai|dak[- ]?lak|buon[- ]?ma|da[- ]?lat|đà lạt|tay[- ]?nguyen|central/i],
+  ['Southern', /sai[- ]?gon|saigon|sài gòn|mekong|mien[- ]?tay|can[- ]?tho|ben[- ]?tre|an[- ]?giang|chau[- ]?doc|soc[- ]?trang|tra[- ]?vinh|bac[- ]?lieu|ca[- ]?mau|dong[- ]?thap|vinh[- ]?long|tay[- ]?ninh|phu[- ]?quoc|kien[- ]?giang|long[- ]?xuyen|southern|south/i],
+]
+function inferRegion(text: string): string {
+  for (const [region, re] of REGION_HINTS) if (re.test(text)) return region
+  return 'All'
 }

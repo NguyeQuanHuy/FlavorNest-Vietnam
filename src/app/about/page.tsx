@@ -4,6 +4,7 @@
 
 import type { Metadata } from 'next'
 import AboutClient from './_components/AboutClient'
+import { getSiteStats } from '@/lib/site-stats'
 
 export const metadata: Metadata = {
     title: 'About — A Phú Yên Kitchen in Germany',
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
-    return <AboutClient />
+    return <AboutClient stats={getSiteStats()} />
 }
