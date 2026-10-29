@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useMemo, useCallback, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, Star, Clock, ChevronLeft, ChevronRight, ChevronDown, RotateCcw, MapPin } from "lucide-react";
+import { Search, X, Star, Clock, ChevronLeft, ChevronRight, ChevronDown, RotateCcw, MapPin, SlidersHorizontal, Check } from "lucide-react";
 import { useFavorites } from "@/hooks/useFavorites";
 import { STORIES } from '@/data/stories-data'
 import { getAllRecipes } from "@/data/index"
@@ -126,8 +126,21 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
     const [localQuery, setLocalQuery] = useState(urlSearch);
     const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
     const [page, setPage] = useState(1);
+    const [isMobile, setIsMobile] = useState(false);
+    const [shown, setShown] = useState(PER_PAGE);      // mobile: "show more" instead of pages
+    const [sheetOpen, setSheetOpen] = useState(false); // mobile: region + sort bottom sheet
 
     useEffect(() => { setLocalQuery(urlSearch); }, [urlSearch]);
+    useEffect(() => {
+        const mq = window.matchMedia('(max-width: 639px)');
+        const on = () => setIsMobile(mq.matches);
+        on(); mq.addEventListener('change', on);
+        return () => mq.removeEventListener('change', on);
+    }, []);
+    useEffect(() => {
+        document.body.style.overflow = sheetOpen ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [sheetOpen]);
 
     const filtered = useMemo(() => {
         const normalize = (str: string) =>
@@ -194,13 +207,15 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
             return b.reviews - a.reviews;
         });
     }, [activeCategory, activeRegion, localQuery, sortBy, hasImg]);
+    useEffect(() => { setPage(1); setShown(PER_PAGE); }, [activeCategory, activeRegion, localQuery, sortBy]);
 
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };
     const resetAll = () => { clearSearch(); setActiveCategory("All"); setActiveRegion("All Regions"); setSortBy('popular'); };
     const filtersOn = activeCategory !== "All" || activeRegion !== "All Regions" || !!localQuery;
 
     const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
-    const pageItems = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+    const pageItems = isMobile ? filtered.slice(0, shown) : filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+    const extraFilters = (activeRegion !== 'All Regions' ? 1 : 0) + (sortBy !== 'popular' ? 1 : 0);
     const goTo = (n: number) => {
         setPage(n);
         document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -219,21 +234,21 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
         <main className="min-h-screen" style={{ background: '#FBF8F4', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
 
             {/* ═══ HERO + SEARCH ═══ */}
-            <header className="px-5 pb-10 pt-28 sm:px-6 sm:pt-36" style={{ background: '#F5EDE3' }}>
+            <header className="px-5 pb-6 pt-[84px] sm:px-6 sm:pb-10 sm:pt-36" style={{ background: '#F5EDE3' }}>
                 <div className="mx-auto max-w-[1200px]">
-                    <div className="mb-4 flex items-center gap-2">
+                    <div className="mb-4 hidden items-center gap-2 sm:flex">
                         <span className="h-px w-8" style={{ background: '#D97706' }} />
                         <span className="text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.18em' }}>Recipes</span>
                     </div>
-                    <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+                    <div className="flex flex-col gap-4 sm:gap-8 lg:flex-row lg:items-end lg:justify-between">
                         <div className="max-w-2xl">
-                            <h1 className="font-bold leading-[1.04]" style={{ ...serif, fontSize: 'clamp(2.2rem, 5.2vw, 3.8rem)', color: '#2D1A0E' }}>
+                            <h1 className="font-bold leading-[1.04]" style={{ ...serif, fontSize: 'clamp(1.75rem, 5.2vw, 3.8rem)', color: '#2D1A0E' }}>
                                 {localQuery
                                     ? <>Results for <em style={{ color: '#D97706' }}>“{localQuery}”</em></>
                                     : <>Cook Vietnam, <em style={{ color: '#D97706' }}>one bowl at a time</em></>}
                             </h1>
-                            <p className="mt-4 text-[16px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.65)' }}>
-                                {RECIPES.length}+ tested recipes — from Hà Nội’s misty mornings to Sài Gòn’s street corners.
+                            <p className="mt-4 hidden text-[16px] leading-relaxed sm:block" style={{ color: 'rgba(75,46,26,0.65)' }}>
+                                {RECIPES.length} tested recipes — from Hà Nội’s misty mornings to Sài Gòn’s street corners.
                             </p>
                         </div>
 
@@ -247,7 +262,7 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                                 value={localQuery}
                                 onChange={e => setLocalQuery(e.target.value)}
                                 placeholder="Search phở, bánh mì, chicken…"
-                                className="w-full rounded-full border border-[#E8D9C8] bg-white py-4 pl-12 pr-12 text-[15px] text-[#2D1A0E] shadow-[0_10px_30px_-16px_rgba(75,46,26,0.35)] outline-none transition placeholder:text-[#B8A08A] focus:border-[#D97706] focus:ring-4 focus:ring-[#D97706]/10 [&::-webkit-search-cancel-button]:hidden"
+                                className="w-full rounded-full border border-[#E8D9C8] bg-white py-3.5 pl-12 pr-12 text-[16px] sm:py-4 sm:text-[15px] text-[#2D1A0E] shadow-[0_10px_30px_-16px_rgba(75,46,26,0.35)] outline-none transition placeholder:text-[#B8A08A] focus:border-[#D97706] focus:ring-4 focus:ring-[#D97706]/10 [&::-webkit-search-cancel-button]:hidden"
                             />
                             {localQuery && (
                                 <button type="button" onClick={clearSearch} aria-label="Clear search" className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[#F5EDE3]" style={{ color: '#8A6E58' }}>
@@ -287,7 +302,7 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                         { id: 'region', icon: <MapPin size={14} aria-hidden />, value: activeRegion, set: (v: string) => setActiveRegion(v), opts: REGIONS.map(r => ({ id: r, label: r })), label: 'Filter by region' },
                         { id: 'sort', icon: null, value: sortBy, set: (v: string) => setSortBy(v as typeof sortBy), opts: SORTS.map(s => ({ id: s.id, label: s.label })), label: 'Sort recipes' },
                     ].map(sel => (
-                        <div key={sel.id} className={`relative flex-shrink-0 ${sel.id === 'sort' ? 'hidden sm:block' : ''}`}>
+                        <div key={sel.id} className="relative hidden flex-shrink-0 sm:block">
                             <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2" style={{ color: '#8A6E58' }}>{sel.icon}</span>
                             <select
                                 aria-label={sel.label}
@@ -300,15 +315,96 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                             <ChevronDown size={15} className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" style={{ color: '#8A6E58' }} aria-hidden />
                         </div>
                     ))}
+
+                    {/* Mobile: one Filters button → bottom sheet */}
+                    <button
+                        type="button"
+                        onClick={() => setSheetOpen(true)}
+                        aria-label="Region and sorting"
+                        className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-[rgba(75,46,26,0.12)] bg-white sm:hidden"
+                        style={{ color: '#2D1A0E' }}
+                    >
+                        <SlidersHorizontal size={17} />
+                        {extraFilters > 0 && (
+                            <span className="absolute -right-1 -top-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] font-bold text-white" style={{ background: '#D97706' }}>{extraFilters}</span>
+                        )}
+                    </button>
                 </div>
             </div>
 
+            {/* ═══ MOBILE FILTER SHEET ═══ */}
+            <AnimatePresence>
+                {sheetOpen && (
+                    <>
+                        <motion.div
+                            className="fixed inset-0 z-[60] sm:hidden"
+                            style={{ background: 'rgba(20,11,5,0.45)' }}
+                            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                            onClick={() => setSheetOpen(false)}
+                        />
+                        <motion.div
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Region and sorting"
+                            className="fixed inset-x-0 bottom-0 z-[61] rounded-t-[28px] bg-white px-5 pb-[calc(20px+env(safe-area-inset-bottom))] pt-3 sm:hidden"
+                            initial={{ y: '100%' }} animate={{ y: 0 }} exit={{ y: '100%' }}
+                            transition={{ type: 'spring', stiffness: 380, damping: 38 }}
+                            drag="y" dragConstraints={{ top: 0, bottom: 0 }} dragElastic={{ top: 0, bottom: 0.6 }}
+                            onDragEnd={(_, info) => { if (info.offset.y > 90) setSheetOpen(false); }}
+                        >
+                            <div className="mx-auto mb-5 h-1.5 w-10 rounded-full" style={{ background: 'rgba(75,46,26,0.15)' }} />
+                            {[
+                                { title: 'Region', value: activeRegion as string, set: (v: string) => setActiveRegion(v), opts: REGIONS.map(r => ({ id: r, label: r === 'All Regions' ? 'All' : r })) },
+                                { title: 'Sort by', value: sortBy as string, set: (v: string) => setSortBy(v as typeof sortBy), opts: SORTS.map(s => ({ id: s.id as string, label: s.label as string })) },
+                            ].map(group => (
+                                <div key={group.title} className="mb-6">
+                                    <p className="mb-3 text-[12px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.1em' }}>{group.title}</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {group.opts.map(o => {
+                                            const on = group.value === o.id;
+                                            return (
+                                                <button
+                                                    key={o.id}
+                                                    onClick={() => group.set(o.id)}
+                                                    aria-pressed={on}
+                                                    className="flex h-11 items-center gap-1.5 rounded-full border px-4 text-[14px] font-medium transition-colors"
+                                                    style={on ? { background: '#2D1A0E', borderColor: '#2D1A0E', color: '#fff' } : { borderColor: 'rgba(75,46,26,0.15)', color: '#4B2E1A' }}
+                                                >
+                                                    {on && <Check size={15} />}{o.label}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            ))}
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => { setActiveRegion('All Regions'); setSortBy('popular'); }}
+                                    className="h-12 rounded-full border border-[rgba(75,46,26,0.15)] px-5 text-[14px] font-semibold"
+                                    style={{ color: '#4B2E1A' }}
+                                >
+                                    Reset
+                                </button>
+                                <button
+                                    onClick={() => setSheetOpen(false)}
+                                    className="h-12 flex-1 rounded-full text-[15px] font-semibold text-white"
+                                    style={{ background: '#D97706' }}
+                                >
+                                    Show {filtered.length} recipes
+                                </button>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+
             {/* ═══ GRID ═══ */}
+
             <section id="recipes-grid" className="mx-auto max-w-[1200px] scroll-mt-40 px-5 pb-24 pt-8 sm:px-6">
                 <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
                     <p className="text-[14px]" style={{ color: 'rgba(75,46,26,0.6)' }} aria-live="polite">
                         <strong style={{ color: '#2D1A0E' }}>{filtered.length}</strong> {filtered.length === 1 ? 'recipe' : 'recipes'}
-                        {filtered.length > PER_PAGE && <> · page {page} of {totalPages}</>}
+                        {filtered.length > PER_PAGE && !isMobile && <> · page {page} of {totalPages}</>}
                     </p>
                     {filtersOn && (
                         <button onClick={resetAll} className="flex items-center gap-1.5 text-[13px] font-semibold transition-colors hover:text-[#D97706]" style={{ color: '#4B2E1A' }}>
@@ -336,7 +432,7 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                                     className="group block rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-4"
                                     style={{ textDecoration: 'none' }}
                                 >
-                                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl sm:aspect-[4/3]" style={{ background: '#EFE7DC' }}>
+                                    <div className="relative aspect-square overflow-hidden rounded-2xl sm:aspect-[4/3]" style={{ background: '#EFE7DC' }}>
                                         {photo ? (
                                             <Image src={recipe.image} alt={recipe.title} fill sizes="(max-width:768px) 50vw, (max-width:1024px) 33vw, 290px" quality={80} className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]" />
                                         ) : (
@@ -391,8 +487,25 @@ export default function RecipesClient({ withImage }: { withImage: string[] }) {
                 )}
 
                 {/* Pagination */}
-                {totalPages > 1 && (
-                    <nav aria-label="Pagination" className="mt-14 flex items-center justify-center gap-1.5">
+                {isMobile && shown < filtered.length && (
+                    <div className="mt-10 flex flex-col items-center gap-3">
+                        <div className="h-1 w-40 overflow-hidden rounded-full" style={{ background: 'rgba(75,46,26,0.1)' }}>
+                            <div className="h-full rounded-full" style={{ width: `${(shown / filtered.length) * 100}%`, background: '#D97706' }} />
+                        </div>
+                        <p className="text-[13px]" style={{ color: 'rgba(75,46,26,0.55)' }}>Showing {shown} of {filtered.length}</p>
+                        <button
+                            onClick={() => setShown(n => n + PER_PAGE)}
+                            className="h-12 w-full rounded-full text-[15px] font-semibold text-white"
+                            style={{ background: '#2D1A0E' }}
+                        >
+                            Show more recipes
+                        </button>
+                    </div>
+                )}
+
+                {!isMobile && totalPages > 1 && (
+                    <nav aria-label="Pagination"
+ className="mt-14 flex items-center justify-center gap-1.5">
                         <button
                             onClick={() => goTo(Math.max(1, page - 1))}
                             disabled={page === 1}
