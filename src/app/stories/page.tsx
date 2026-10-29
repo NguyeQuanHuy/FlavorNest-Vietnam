@@ -39,7 +39,7 @@ const hasPage = (slug: string) => fs.existsSync(path.join(process.cwd(), 'src/ap
 export default function StoriesPage() {
     const stories = STORIES.filter(s => hasPage(s.slug))
     return (
-        <div className="min-h-screen bg-[#F5EDE3] dark:bg-[#1C1009]">
+        <div className="min-h-screen bg-[#F5EDE3]">
             <StoriesClient stories={stories} />
         </div>
     )
