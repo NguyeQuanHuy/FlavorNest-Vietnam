@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowRight, Clock } from 'lucide-react'
 
 // ── Recipe data ───────────────────────────────────────────────────────────────
 interface RecipeItem {
@@ -148,80 +149,103 @@ const FALLBACK_STORIES: StoryItem[] = [
   },
 ]
 
-// ── Animation variants ─────────────────────────────────────────────────────────
-const fadeUp = (delay = 0) => ({
-  initial: false,
+// ── Shared ─────────────────────────────────────────────────────────────────────
+const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
+const reveal = (i = 0) => ({
+  initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  viewport: { once: true, margin: '-40px' },
+  transition: { duration: 0.5, delay: i * 0.05, ease: EASE },
 })
+const serif = { fontFamily: "'Playfair Display', Georgia, serif" }
+const cardBase =
+  'group relative block h-full overflow-hidden rounded-2xl outline-none transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:shadow-[0_22px_48px_-20px_rgba(45,26,14,0.45)] focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-4 focus-visible:ring-offset-[#F5EDE3]'
+const imgZoom = 'object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]'
+const Shade = ({ strong = false }: { strong?: boolean }) => (
+  <div
+    aria-hidden
+    className="absolute inset-0"
+    style={{ background: `linear-gradient(to top, rgba(20,11,5,${strong ? 0.88 : 0.8}) 0%, rgba(20,11,5,0.25) ${strong ? 50 : 45}%, transparent 75%)` }}
+  />
+)
+const Pill = ({ children }: { children: React.ReactNode }) => (
+  <span
+    className="absolute left-3.5 top-3.5 rounded-full px-3 py-1 text-[10.5px] font-semibold uppercase text-white backdrop-blur-md"
+    style={{ background: 'rgba(20,11,5,0.38)', letterSpacing: '0.08em', border: '1px solid rgba(255,255,255,0.18)' }}
+  >
+    {children}
+  </span>
+)
 
-// ── Sub-components ─────────────────────────────────────────────────────────────
-
-/** Large recipe hero card — top-left, spans 2 rows */
-function RecipeHero({ r }: { r: RecipeItem }) {
+// ── Recipe cards ───────────────────────────────────────────────────────────────
+function RecipeCard({ r, big = false, i }: { r: RecipeItem; big?: boolean; i: number }) {
   return (
-    <motion.div {...fadeUp(0)} style={{ gridColumn: 'span 5', gridRow: 'span 2' }}>
-      <Link href={`/recipes/${r.slug}`}
-        style={{ display: 'block', position: 'relative', height: '100%', minHeight: 360, borderRadius: 20, overflow: 'hidden', textDecoration: 'none' }}
-        className="bento-card">
-        <Image src={r.image} alt={r.title} fill sizes="(max-width:768px) 100vw, 42vw"
-          style={{ objectFit: 'cover' }} quality={85} className="bento-img" />
-        {/* gradient */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.88) 0%, rgba(0,0,0,0.15) 60%)' }} />
-        {/* tag */}
-        <div style={{ position: 'absolute', top: 16, left: 16, background: r.tagColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.07em', textTransform: 'uppercase', padding: '5px 13px', borderRadius: 100 }}>{r.tag}</div>
-        {/* difficulty */}
-        <div style={{ position: 'absolute', top: 16, right: 16, background: DIFF_COLOR[r.difficulty], color: 'white', fontSize: 10, fontWeight: 700, padding: '5px 11px', borderRadius: 100 }}>{r.difficulty}</div>
-        {/* bottom info */}
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '20px 20px 22px' }}>
-          <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, fontWeight: 500, margin: '0 0 6px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.subtitle}</p>
-          <h3 style={{ color: 'white', fontSize: 26, fontWeight: 700, margin: '0 0 8px', lineHeight: 1.15, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time}</p>
+    <motion.div {...reveal(i)} className={big ? 'col-span-2 row-span-2 lg:col-span-6' : 'col-span-1 lg:col-span-3'}>
+      <Link href={`/recipes/${r.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
+        <div className={big ? 'relative h-full min-h-[340px] lg:min-h-[460px]' : 'relative aspect-[4/5] h-full sm:aspect-auto sm:min-h-[220px]'}>
+          <Image src={r.image} alt={r.title} fill sizes={big ? '(max-width:1024px) 100vw, 600px' : '(max-width:1024px) 50vw, 300px'} quality={82} className={imgZoom} />
+          <Shade strong={big} />
+          <Pill>{r.tag}</Pill>
+          <div className={`absolute inset-x-0 bottom-0 ${big ? 'p-6 sm:p-8' : 'p-4'}`}>
+            <p className="mb-1 truncate text-[12px] italic" style={{ ...serif, color: 'rgba(245,237,227,0.75)' }}>{r.subtitle}</p>
+            <h3 className={`font-bold leading-tight text-white ${big ? 'text-[28px] sm:text-[34px]' : 'line-clamp-2 text-[17px]'}`} style={serif}>
+              {r.title}
+            </h3>
+            <p className={`flex items-center gap-1.5 ${big ? 'mt-3 text-[13px]' : 'mt-1.5 text-[12px]'}`} style={{ color: 'rgba(245,237,227,0.7)' }}>
+              <Clock size={big ? 14 : 12} aria-hidden /> {r.time}
+              <span aria-hidden>·</span> {r.difficulty}
+            </p>
+            {big && (
+              <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-[13px] font-semibold transition-colors group-hover:bg-[#D97706] group-hover:text-white" style={{ color: '#2D1A0E' }}>
+                Cook this <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+              </span>
+            )}
+          </div>
         </div>
       </Link>
     </motion.div>
   )
 }
 
-/** Small recipe card */
-function RecipeSmall({ r, delay, style }: { r: RecipeItem; delay: number; style?: React.CSSProperties }) {
+// ── Story cards ────────────────────────────────────────────────────────────────
+function StoryHero({ s }: { s: StoryItem }) {
   return (
-    <motion.div {...fadeUp(delay)} style={style}>
-      <Link href={`/recipes/${r.slug}`}
-        style={{ display: 'block', position: 'relative', height: '100%', minHeight: 168, borderRadius: 16, overflow: 'hidden', textDecoration: 'none' }}
-        className="bento-card">
-        <Image src={r.image} alt={r.title} fill sizes="(max-width:768px) 50vw, 20vw"
-          style={{ objectFit: 'cover' }} quality={80} className="bento-img" />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.82) 0%, transparent 60%)' }} />
-        <div style={{ position: 'absolute', top: 10, left: 10, background: r.tagColor, color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '3px 9px', borderRadius: 100 }}>{r.tag}</div>
-        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 14px 14px' }}>
-          <h3 style={{ color: 'white', fontSize: 14, fontWeight: 700, margin: '0 0 3px', lineHeight: 1.2, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 11, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
+    <motion.div {...reveal(0)} className="lg:col-span-7 lg:row-span-2">
+      <Link href={`/stories/${s.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
+        <div className="relative h-full min-h-[380px] lg:min-h-[520px]">
+          <Image src={s.image} alt={s.title} fill sizes="(max-width:1024px) 100vw, 700px" quality={85} className={imgZoom} />
+          <Shade strong />
+          <Pill>{s.category}</Pill>
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-9">
+            <h3 className="max-w-xl text-[28px] font-bold leading-[1.1] text-white sm:text-[38px]" style={serif}>{s.title}</h3>
+            <p className="mt-3 line-clamp-2 max-w-lg text-[15px] leading-relaxed" style={{ color: 'rgba(245,237,227,0.78)' }}>{s.excerpt}</p>
+            <span className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold text-white">
+              Read the story · {s.readTime}
+              <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+            </span>
+          </div>
         </div>
       </Link>
     </motion.div>
   )
 }
 
-/** Story card — wide horizontal */
-function StoryWide({ s, delay, style }: { s: StoryItem; delay: number; style?: React.CSSProperties }) {
+function StorySide({ s, i }: { s: StoryItem; i: number }) {
   return (
-    <motion.div {...fadeUp(delay)} style={style}>
-      <Link href={`/stories/${s.slug}`}
-        style={{ display: 'flex', gap: 0, height: '100%', borderRadius: 16, overflow: 'hidden', textDecoration: 'none', background: '#2D1A0E' }}
-        className="bento-card story-card">
-        {/* image strip — clipped clean, no gradient overlay */}
-        <div style={{ position: 'relative', width: 140, flexShrink: 0 }}>
-          <Image src={s.image} alt={s.title} fill sizes="140px"
-            style={{ objectFit: 'cover' }} quality={75} className="bento-img" />
+    <motion.div {...reveal(i)} className="lg:col-span-5">
+      <Link
+        href={`/stories/${s.slug}`}
+        className="group flex h-full gap-5 rounded-2xl border border-[rgba(75,46,26,0.08)] bg-white p-3 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-[0_18px_40px_-20px_rgba(45,26,14,0.4)] focus-visible:ring-2 focus-visible:ring-[#D97706]"
+        style={{ textDecoration: 'none' }}
+      >
+        <div className="relative w-[38%] min-w-[120px] flex-shrink-0 overflow-hidden rounded-xl" style={{ background: '#EFE7DC' }}>
+          <Image src={s.image} alt={s.title} fill sizes="200px" quality={75} className={imgZoom} />
         </div>
-        {/* text */}
-        <div style={{ flex: 1, padding: '18px 20px 18px 16px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 6 }}>
-          <span style={{ fontSize: 10, fontWeight: 800, color: s.categoryColor, textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{s.category}</span>
-          <h3 style={{ color: '#F5EDE3', fontSize: 15, fontWeight: 700, margin: 0, lineHeight: 1.3, fontFamily: "'Manrope', sans-serif" }}>{s.title}</h3>
-          <p style={{ color: 'rgba(245,237,227,0.45)', fontSize: 12, margin: 0, lineHeight: 1.5, fontFamily: "'Manrope', 'DM Sans', sans-serif", display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{s.excerpt}</p>
-          <p style={{ color: s.categoryColor, fontSize: 11, fontWeight: 700, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{s.readTime} →</p>
+        <div className="flex min-w-0 flex-col justify-center py-3 pr-3">
+          <span className="text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.1em' }}>{s.category}</span>
+          <h3 className="mt-1.5 line-clamp-2 text-[19px] font-bold leading-snug transition-colors group-hover:text-[#B45309]" style={{ ...serif, color: '#2D1A0E' }}>{s.title}</h3>
+          <p className="mt-1.5 line-clamp-2 text-[13.5px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.6)' }}>{s.excerpt}</p>
+          <span className="mt-3 text-[12px] font-medium" style={{ color: 'rgba(75,46,26,0.5)' }}>{s.readTime}</span>
         </div>
       </Link>
     </motion.div>
@@ -239,218 +263,112 @@ export default function BentoGrid({
   const RECIPES = recipesProp && recipesProp.length >= 8 ? recipesProp.slice(0, 8) : FALLBACK_RECIPES
   const STORIES = storiesProp && storiesProp.length >= 3 ? storiesProp.slice(0, 3) : FALLBACK_STORIES
 
-  const [activeTab, setActiveTab] = useState<'recipes' | 'stories' | 'trending'>('recipes')
-
+  const [tab, setTab] = useState<'recipes' | 'stories'>('recipes')
   const TABS = [
-    { id: 'recipes' as const, label: 'Recipes', count: 8 },
-    { id: 'stories' as const, label: 'Stories', count: 3 },
-    { id: 'trending' as const, label: 'Trending', count: 6 },
+    { id: 'recipes' as const, label: 'Recipes' },
+    { id: 'stories' as const, label: 'Stories' },
   ]
 
   return (
-    <section style={{ background: '#F5EDE3', padding: '80px 24px 96px', fontFamily: "'DM Sans', system-ui, sans-serif", position: 'relative' }}
-      aria-label="Featured recipes and stories">
-      {/* Grid pattern overlay */}
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%234B2E1A' stroke-width='0.4' stroke-opacity='0.12'/%3E%3C/svg%3E")`,
-        backgroundSize: '40px 40px',
-      }} />
-      <style>{`
-        .bento-card { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
-        .bento-card:hover { box-shadow: 0 20px 56px rgba(45,26,14,0.22); }
-        .bento-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 3px solid transparent; pointer-events: none; z-index: 5; transition: border-color 0.25s ease; } .bento-card:hover::after { border-color: #D97706; }
-        .bento-img { transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94) !important; }
+    <section aria-labelledby="featured-heading" className="px-5 py-20 sm:px-6 lg:py-28" style={{ background: '#F5EDE3', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+      <div className="mx-auto max-w-[1200px]">
 
-        /* Story card — minimal hover (lift + subtle image zoom) */
-        .story-card {
-          transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
-                      box-shadow 0.3s ease !important;
-        }
-        .story-card:hover {
-          
-          box-shadow: 0 16px 40px rgba(13,6,2,0.32) !important;
-        }
-        .story-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 3px solid transparent; pointer-events: none; z-index: 5; transition: border-color 0.25s ease; } .story-card:hover::after { border-color: #D97706; }
-        @media (max-width: 768px) {
-          .bento-grid > div,
-          .bento-grid > [class*="motion"] {
-            grid-column: span 12 !important;
-            grid-row: span 1 !important;
-          }
-          .bento-grid .bento-hero {
-            grid-column: span 12 !important;
-            grid-row: span 1 !important;
-            min-height: 280px !important;
-          }
-        }
-        @media (min-width: 481px) and (max-width: 768px) {
-          .bento-grid > div:not(.bento-hero) {
-            grid-column: span 6 !important;
-          }
-        }
-      `}</style>
-
-      <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-
-        {/* ── Section header ── */}
-        <motion.div {...fadeUp(0)} style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>
+        {/* ── Header ── */}
+        <motion.div {...reveal(0)} className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-              <div style={{ width: 40, height: 1, background: '#D97706' }} />
-              <span style={{ color: '#D97706', fontSize: 10, fontWeight: 700, letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: "'DM Sans', sans-serif" }}>Editor's Picks</span>
-              <div style={{ width: 40, height: 1, background: '#D97706' }} />
+            <div className="mb-4 flex items-center gap-2">
+              <span className="h-px w-8" style={{ background: '#D97706' }} />
+              <span className="text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.18em' }}>Editor&apos;s picks</span>
             </div>
-            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(36px, 4vw, 52px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.05, letterSpacing: '-0.01em' }}>
-              Featured <em style={{ color: '#D97706', fontStyle: 'italic', position: 'relative' }}>Recipes</em> <span style={{ color: '#4B2E1A' }}>&amp; Stories</span>
+            <h2 id="featured-heading" className="font-bold leading-[1.04]" style={{ ...serif, fontSize: 'clamp(2.1rem, 4.6vw, 3.4rem)', color: '#2D1A0E' }}>
+              Cooked, tested &amp; <em style={{ color: '#D97706' }}>loved</em>
             </h2>
           </div>
-          <div style={{ display: 'flex', gap: 12 }}>
-            <Link href="/recipes" style={{ fontSize: 13, fontWeight: 600, color: '#4B2E1A', border: '1.5px solid rgba(75,46,26,0.18)', borderRadius: 100, padding: '9px 20px', textDecoration: 'none', transition: 'all 0.2s' }}>All Recipes →</Link>
-            <Link href="/stories" style={{ fontSize: 13, fontWeight: 600, color: 'white', background: '#D97706', border: '1.5px solid #D97706', borderRadius: 100, padding: '9px 20px', textDecoration: 'none', transition: 'all 0.2s' }}>All Stories →</Link>
+
+          {/* Segmented control */}
+          <div role="tablist" aria-label="Show" className="flex rounded-full bg-white p-1 shadow-[0_2px_10px_-4px_rgba(75,46,26,0.2)]">
+            {TABS.map(t => {
+              const on = t.id === tab
+              return (
+                <button
+                  key={t.id}
+                  role="tab"
+                  aria-selected={on}
+                  onClick={() => setTab(t.id)}
+                  className="relative rounded-full px-6 py-2.5 text-[14px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#D97706]"
+                  style={{ color: on ? '#fff' : '#4B2E1A' }}
+                >
+                  {on && (
+                    <motion.span layoutId="bento-seg" className="absolute inset-0 rounded-full" style={{ background: '#2D1A0E' }} transition={{ type: 'spring', stiffness: 420, damping: 34 }} />
+                  )}
+                  <span className="relative">{t.label}</span>
+                </button>
+              )
+            })}
           </div>
         </motion.div>
 
-        <div role="tablist" style={{ display: 'flex', gap: 8, marginBottom: 32, overflowX: 'auto', scrollbarWidth: 'none' }}>
-          {TABS.map(tab => {
-            const isActive = tab.id === activeTab
-            return (
-              <button
-                key={tab.id}
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setActiveTab(tab.id)}
-                style={{
-                  position: 'relative',
-                  padding: '10px 20px',
-                  fontSize: 13,
-                  fontWeight: 700,
-                  borderRadius: 100,
-                  border: 'none',
-                  background: isActive ? 'transparent' : 'white',
-                  color: isActive ? 'white' : '#4B2E1A',
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                  fontFamily: 'inherit',
-                  boxShadow: isActive ? 'none' : '0 1px 3px rgba(75,46,26,0.08)',
-                  transition: 'color 0.25s',
-                }}
-              >
-                {isActive && (
-                  <motion.span
-                    layoutId="bento-tab-pill"
-                    style={{ position: 'absolute', inset: 0, borderRadius: 100, background: 'linear-gradient(135deg, #D97706, #B45309)', boxShadow: '0 4px 16px rgba(217,119,6,0.35)', zIndex: 0 }}
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-                <span style={{ position: 'relative', zIndex: 1, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                  {tab.label}
-                  <span style={{ fontSize: 10, fontWeight: 800, padding: '2px 7px', borderRadius: 100, background: isActive ? 'rgba(255,255,255,0.25)' : 'rgba(217,119,6,0.1)', color: isActive ? 'white' : '#D97706' }}>
-                    {tab.count}
-                  </span>
-                </span>
-              </button>
-            )
-          })}
-        </div>
-
-        {/* ── Bento grid (animated by tab) ── */}
+        {/* ── Content ── */}
         <AnimatePresence mode="wait">
-          {activeTab === 'recipes' && (
+          {tab === 'recipes' ? (
             <motion.div
               key="recipes"
-              initial={false}
+              role="tabpanel"
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="bento-grid"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gridTemplateRows: 'auto', gap: 14 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12"
             >
-              <div className="bento-hero" style={{ gridColumn: 'span 6', gridRow: 'span 2' }}>
-                <RecipeHero r={RECIPES[0]} />
-              </div>
-              <RecipeSmall r={RECIPES[1]} delay={0.06} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[2]} delay={0.09} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[3]} delay={0.12} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[4]} delay={0.15} style={{ gridColumn: 'span 3', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[5]} delay={0.18} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[6]} delay={0.21} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-              <RecipeSmall r={RECIPES[7]} delay={0.24} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
+              {RECIPES.slice(0, 5).map((r, i) => (
+                <RecipeCard key={r.slug} r={r} big={i === 0} i={i} />
+              ))}
+              {RECIPES.slice(5, 8).map((r, i) => (
+                <motion.div key={r.slug} {...reveal(i + 5)} className={`col-span-1 lg:col-span-4 ${i === 2 ? 'col-span-2 lg:col-span-4' : ''}`}>
+                  <Link href={`/recipes/${r.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
+                    <div className="relative aspect-[4/5] sm:aspect-[16/10]">
+                      <Image src={r.image} alt={r.title} fill sizes="(max-width:1024px) 50vw, 400px" quality={80} className={imgZoom} />
+                      <Shade />
+                      <Pill>{r.tag}</Pill>
+                      <div className="absolute inset-x-0 bottom-0 p-4">
+                        <h3 className="line-clamp-2 text-[17px] font-bold leading-tight text-white" style={serif}>{r.title}</h3>
+                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px]" style={{ color: 'rgba(245,237,227,0.7)' }}>
+                          <Clock size={12} aria-hidden /> {r.time} <span aria-hidden>·</span> {r.difficulty}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
             </motion.div>
-          )}
-
-          {activeTab === 'stories' && (
+          ) : (
             <motion.div
               key="stories"
-              initial={false}
+              role="tabpanel"
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="bento-grid"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gridTemplateRows: 'auto', gap: 14 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:grid-rows-2"
             >
-              {/* Hero story (8 cols × 2 rows) */}
-              <motion.div {...fadeUp(0)} className="bento-hero" style={{ gridColumn: 'span 8', gridRow: 'span 2' }}>
-                <Link href={`/stories/${STORIES[0].slug}`}
-                  style={{ display: 'block', position: 'relative', height: '100%', minHeight: 420, borderRadius: 20, overflow: 'hidden', textDecoration: 'none' }}
-                  className="bento-card">
-                  <Image src={STORIES[0].image} alt={STORIES[0].title} fill sizes="(max-width:768px) 100vw, 65vw"
-                    style={{ objectFit: 'cover' }} quality={88} className="bento-img" />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.92) 0%, rgba(0,0,0,0.2) 55%)' }} />
-                  <div style={{ position: 'absolute', top: 20, left: 20, background: STORIES[0].categoryColor, color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '6px 14px', borderRadius: 100 }}>{STORIES[0].category}</div>
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px 28px 28px' }}>
-                    <h3 style={{ color: 'white', fontSize: 32, fontWeight: 700, margin: '0 0 12px', lineHeight: 1.1, fontFamily: "'Manrope', sans-serif", maxWidth: 600 }}>{STORIES[0].title}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, margin: '0 0 14px', lineHeight: 1.55, maxWidth: 560, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{STORIES[0].excerpt}</p>
-                    <p style={{ color: STORIES[0].categoryColor, fontSize: 12, fontWeight: 700, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif", letterSpacing: '0.05em' }}>{STORIES[0].readTime} →</p>
-                  </div>
-                </Link>
-              </motion.div>
-
-              {/* 2 stories side-by-side, stacked vertically */}
-              <StoryWide s={STORIES[1]} delay={0.1} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-              <StoryWide s={STORIES[2]} delay={0.15} style={{ gridColumn: 'span 4', gridRow: 'span 1' }} />
-            </motion.div>
-          )}
-
-          {activeTab === 'trending' && (
-            <motion.div
-              key="trending"
-              initial={false}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="bento-grid"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: 14 }}
-            >
-              {RECIPES.slice(0, 6).map((r, i) => (
-                <div key={r.slug} className="bento-small" style={{ gridColumn: 'span 4', gridRow: 'span 1' }}>
-                  <motion.div {...fadeUp(i * 0.06)} style={{ position: 'relative', height: '100%' }}>
-                    <Link href={`/recipes/${r.slug}`}
-                      style={{ display: 'block', position: 'relative', height: '100%', minHeight: 220, borderRadius: 18, overflow: 'hidden', textDecoration: 'none' }}
-                      className="bento-card">
-                      <Image src={r.image} alt={r.title} fill sizes="(max-width:768px) 50vw, 30vw"
-                        style={{ objectFit: 'cover' }} quality={82} className="bento-img" />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,6,2,0.85) 0%, transparent 55%)' }} />
-
-                      {/* Trending rank badge */}
-                      <div style={{ position: 'absolute', top: 12, left: 12, background: 'rgba(255,255,255,0.95)', color: '#D97706', fontSize: 11, fontWeight: 800, padding: '5px 11px', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 5 }}>
-                        <span style={{ fontSize: 13 }}>🔥</span> #{i + 1}
-                      </div>
-
-                      <div style={{ position: 'absolute', top: 12, right: 12, background: r.tagColor, color: 'white', fontSize: 9, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: 100 }}>{r.tag}</div>
-
-                      <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 16px 16px' }}>
-                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 11, margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.subtitle}</p>
-                        <h3 style={{ color: 'white', fontSize: 17, fontWeight: 700, margin: '0 0 4px', lineHeight: 1.2, fontFamily: "'Manrope', sans-serif" }}>{r.title}</h3>
-                        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, margin: 0, fontFamily: "'Manrope', 'DM Sans', sans-serif" }}>{r.time} · {r.difficulty}</p>
-                      </div>
-                    </Link>
-                  </motion.div>
-                </div>
-              ))}
+              <StoryHero s={STORIES[0]} />
+              <StorySide s={STORIES[1]} i={1} />
+              <StorySide s={STORIES[2]} i={2} />
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* ── Footer link ── */}
+        <div className="mt-10 flex justify-center">
+          <Link
+            href={tab === 'recipes' ? '/recipes' : '/stories'}
+            className="group inline-flex items-center gap-2 rounded-full border border-[rgba(75,46,26,0.18)] bg-white px-7 py-3.5 text-[14px] font-semibold transition-all hover:border-[#2D1A0E] hover:bg-[#2D1A0E] hover:text-white"
+            style={{ color: '#2D1A0E', textDecoration: 'none' }}
+          >
+            {tab === 'recipes' ? 'Browse all recipes' : 'Read all stories'}
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
     </section>
   )
