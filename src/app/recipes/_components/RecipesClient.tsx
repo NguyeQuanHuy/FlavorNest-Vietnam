@@ -9,6 +9,7 @@ import { Search, X, Star, Clock, ChevronLeft, ChevronRight, ChevronDown, RotateC
 import { useFavorites } from "@/hooks/useFavorites";
 import { STORIES } from '@/data/stories-data'
 import { getAllRecipes } from "@/data/index"
+import IngredientPeek, { LongPress, type PeekRecipe } from "./IngredientPeek";
 
 const RECIPES = getAllRecipes();
 
@@ -129,6 +130,18 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
     const [isMobile, setIsMobile] = useState(false);
     const [shown, setShown] = useState(PER_PAGE);      // mobile: "show more" instead of pages
     const [sheetOpen, setSheetOpen] = useState(false); // mobile: region + sort bottom sheet
+    const [peek, setPeek] = useState<PeekRecipe | null>(null); // long-press ingredient preview
+    const [hint, setHint] = useState(false);
+    const closePeek = useCallback(() => setPeek(null), []);
+
+    // one-time hint so people discover press & hold (touch screens only)
+    useEffect(() => {
+        if (!window.matchMedia('(hover: none)').matches) return;
+        try { if (localStorage.getItem('fn_peek_hint')) return; } catch { return; }
+        const t = setTimeout(() => setHint(true), 1500);
+        return () => clearTimeout(t);
+    }, []);
+    const dismissHint = () => { setHint(false); try { localStorage.setItem('fn_peek_hint', '1'); } catch { /* private mode */ } };
 
     useEffect(() => { setLocalQuery(urlSearch); }, [urlSearch]);
     useEffect(() => {
@@ -426,8 +439,15 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
                             const isStory = recipe.slug.startsWith('stories/');
                             const photo = hasImg.has(recipe.slug);
                             return (
-                                <Link
+                                <LongPress
                                     key={recipe.slug}
+                                    onLongPress={() => {
+                                        if (isStory) return;
+                                        dismissHint();
+                                        setPeek({ slug: recipe.slug, title: recipe.title, subtitle: recipe.subtitle, image: recipe.image, time: recipe.time, rating: recipe.rating, hasPhoto: photo });
+                                    }}
+                                >
+                                <Link
                                     href={isStory ? `/${recipe.slug}` : `/recipes/${recipe.slug}`}
                                     className="group block rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-4"
                                     style={{ textDecoration: 'none' }}
@@ -470,6 +490,7 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
                                         </div>
                                     </div>
                                 </Link>
+                                </LongPress>
                             );
                         })}
                     </motion.div>
@@ -538,6 +559,24 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
                     </nav>
                 )}
             </section>
+
+            <IngredientPeek recipe={peek} onClose={closePeek} />
+
+            {/* one-time discoverability hint (touch only) */}
+            <AnimatePresence>
+                {hint && (
+                    <motion.div
+                        role="status"
+                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }}
+                        className="fixed inset-x-4 z-[90] flex items-center gap-3 rounded-2xl px-4 py-3.5 text-[13.5px] text-white shadow-[0_16px_40px_-12px_rgba(20,11,5,0.6)]"
+                        style={{ bottom: 'calc(84px + env(safe-area-inset-bottom))', background: '#2D1A0E' }}
+                    >
+                        <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-[17px]" style={{ background: 'rgba(245,158,11,0.18)' }} aria-hidden>👆</span>
+                        <span className="flex-1 leading-snug"><strong>Press &amp; hold</strong> any dish to see its ingredients.</span>
+                        <button onClick={dismissHint} className="rounded-full px-3 py-1.5 text-[12.5px] font-semibold" style={{ background: 'rgba(255,255,255,0.12)' }}>Got it</button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </main>
     );
 }
