@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ChefHat, ArrowRight, X, Loader2 } from 'lucide-react';
-import { getAllRecipes } from '@/data/index';
+import { Sparkles, ArrowRight, X, Loader2, Search, Check } from 'lucide-react';
 
 // ── Danh sach nguyen lieu pho bien ──
 const INGREDIENT_GROUPS = [
@@ -86,9 +86,20 @@ interface RecipeSuggestion {
   matchScore: number;
 }
 
-const ALL_RECIPES = getAllRecipes();
+
+const POPULAR = [
+  { label: 'Phở', q: 'pho' },
+  { label: 'Bánh mì', q: 'banh mi' },
+  { label: 'Bún chả', q: 'bun cha' },
+  { label: 'Cơm tấm', q: 'com tam' },
+];
+const serif = { fontFamily: "'Playfair Display', Georgia, serif" };
+const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function IngredientFinderHero() {
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [tab, setTab] = useState(0);
   const [selected, setSelected] = useState<string[]>([]);
   const [results, setResults] = useState<RecipeSuggestion[]>([]);
   const [loading, setLoading] = useState(false);
@@ -105,33 +116,25 @@ export default function IngredientFinderHero() {
   }, []);
 
   function toggleIngredient(item: string) {
-    setSelected(prev =>
-      prev.includes(item) ? prev.filter(i => i !== item) : [...prev, item]
-    );
+    setSelected(prev => (prev.includes(item) ? prev.filter(i => i !== item) : [...prev, item]));
     setShowResults(false);
+  }
+
+  function search(q: string) {
+    const v = q.trim();
+    router.push(v ? `/recipes?search=${encodeURIComponent(v)}` : '/recipes');
   }
 
   async function findRecipes() {
     if (selected.length === 0) return;
     setLoading(true);
     setShowResults(false);
-
-    const recipeList = ALL_RECIPES.slice(0, 60).map(r => ({
-      slug: r.slug,
-      title: r.title,
-      subtitle: r.subtitle,
-      image: r.image,
-      tags: r.tags,
-      description: r.description,
-    }));
-
     try {
       const res = await fetch('/api/ingredient-finder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ingredients: selected }),
       });
-
       const parsed = await res.json();
       setResults(parsed.suggestions ?? []);
       setShowResults(true);
@@ -144,211 +147,243 @@ export default function IngredientFinderHero() {
     }
   }
 
+  const group = INGREDIENT_GROUPS[tab];
+  const countIn = (g: (typeof INGREDIENT_GROUPS)[number]) => g.items.filter(i => selected.includes(i)).length;
+
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden" aria-label="Ingredient Finder">
+    <section className="relative overflow-hidden" aria-label="Find a Vietnamese recipe" style={{ fontFamily: "'DM Sans', sans-serif" }}>
       {/* Background */}
-      <div className="absolute inset-0 scale-110">
-        <Image
-          src="/hero-bg.jpg"
-          alt="Vietnamese food background"
-          fill priority fetchPriority="high" quality={82} sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AL+AAAAAA//Z"
-          className="object-cover"
-        />
+      <div className="absolute inset-0">
+        <Image src="/hero-bg.jpg" alt="" fill priority fetchPriority="high" quality={80} sizes="100vw" className="object-cover" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1C1009]/90 via-[#2D1A0E]/85 to-[#1C1009]/95" />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(28,16,9,0.78) 0%, rgba(28,16,9,0.88) 45%, rgba(28,16,9,0.97) 100%)' }} />
 
-      {/* Content */}
-      <div className="relative flex-1 flex flex-col justify-center px-4 pt-24 pb-4 max-w-5xl mx-auto w-full">
+      <div className="relative mx-auto w-full max-w-3xl px-5 pb-14 pt-[92px] sm:px-6 sm:pb-20 sm:pt-36">
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-10"
-        >
-          <div className="fn-finder-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(217,119,6,0.15)', border: '1px solid rgba(217,119,6,0.3)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
-            <ChefHat size={14} color="#D97706" />
-            <span style={{ fontSize: 12, fontWeight: 600, color: '#D97706', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-              What is in your kitchen?
-            </span>
-          </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, margin: 0 }}>
-            Pick your ingredients,<br />
-            <span style={{ color: '#D97706', fontStyle: 'italic' }}>we find your dish.</span>
+        {/* ── Headline ── */}
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE }} className="text-center">
+          <p className="mb-3 text-[11px] font-bold uppercase sm:mb-4" style={{ color: '#F59E0B', letterSpacing: '0.2em' }}>
+            Authentic Vietnamese recipes
+          </p>
+          <h1 className="font-bold leading-[1.05] text-white" style={{ ...serif, fontSize: 'clamp(2.1rem, 6.4vw, 4rem)' }}>
+            What will you <em style={{ color: '#F59E0B' }}>cook today?</em>
           </h1>
+          <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed sm:mt-4 sm:text-[17px]" style={{ color: 'rgba(245,237,227,0.72)' }}>
+            Search a dish — or tell us what is in your fridge.
+          </p>
         </motion.div>
 
-        {/* Ingredient Picker */}
-        <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="fn-finder-panel" style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '16px 20px' }}
+        {/* ── Search ── */}
+        <motion.form
+          initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+          onSubmit={e => { e.preventDefault(); search(query); }}
+          role="search"
+          className="relative mx-auto mt-7 max-w-xl"
         >
-          {INGREDIENT_GROUPS.map((group, gi) => (
-            <div key={group.label} className="fn-finder-group" style={{ marginBottom: gi < INGREDIENT_GROUPS.length - 1 ? 12 : 0 }}>
-              <div className="fn-finder-label" style={{ fontSize: 12, fontWeight: 700, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>
-                <span className="fn-finder-emoji">{group.emoji} </span>{group.label}
-              </div>
-              <div className="fn-finder-row" style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {group.items.map(item => {
-                  const active = selected.includes(item);
-                  return (
-                    <span
-                      key={item}
-                      onPointerEnter={e => { if (e.pointerType === 'mouse') setHovered(item); }}
-                      onPointerLeave={() => setHovered(h => (h === item ? null : h))}
-                      style={{ position: 'relative', display: 'inline-flex', zIndex: hovered === item ? 30 : 'auto' }}
-                    >
-                      <motion.button
-                        whileTap={{ scale: 0.92 }}
-                        onClick={() => toggleIngredient(item)}
-                        style={{
-                          padding: '7px 16px',
-                          borderRadius: 100,
-                          fontSize: 13,
-                          fontWeight: active ? 700 : 500,
-                          cursor: 'pointer',
-                          transition: 'all 0.18s',
-                          background: active ? '#D97706' : 'rgba(255,255,255,0.08)',
-                          color: active ? '#fff' : 'rgba(245,237,227,0.75)',
-                          border: active ? '1.5px solid #D97706' : '1.5px solid rgba(255,255,255,0.12)',
-                          fontFamily: "'DM Sans', sans-serif",
-                        }}
-                      >
-                        {active && <span style={{ marginRight: 4 }}>✓</span>}
-                        {item}
-                      </motion.button>
-                      <AnimatePresence>
-                        {hovered === item && (
-                          <motion.span
-                            aria-hidden
-                            initial={{ opacity: 0, y: 8, x: '-50%', scale: 0.92 }}
-                            animate={{ opacity: 1, y: 0, x: '-50%', scale: 1 }}
-                            exit={{ opacity: 0, y: 6, x: '-50%', scale: 0.95 }}
-                            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                            style={{
-                              position: 'absolute', bottom: 'calc(100% + 10px)', left: '50%',
-                              display: 'block', width: 136, padding: 6, borderRadius: 18,
-                              background: '#2D1A0E', border: '1px solid rgba(217,119,6,0.45)',
-                              boxShadow: '0 16px 40px rgba(0,0,0,0.5)', pointerEvents: 'none',
-                            }}
-                          >
-                            <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', aspectRatio: '1 / 1', borderRadius: 12, overflow: 'hidden', background: 'rgba(245,237,227,0.06)', fontSize: 44 }}>
-                              {(!INGREDIENT_IMAGES[item] || failed[item]) && group.emoji}
-                              {INGREDIENT_IMAGES[item] && !failed[item] && (
-                                <Image src={INGREDIENT_IMAGES[item]} alt={item} fill sizes="128px" style={{ objectFit: 'cover' }} onError={() => setFailed(f => ({ ...f, [item]: true }))} />
-                              )}
-                            </span>
-                            <span style={{ display: 'block', textAlign: 'center', padding: '6px 2px 2px', fontSize: 12, fontWeight: 600, color: '#F5EDE3', fontFamily: "'DM Sans', sans-serif" }}>
-                              {item}
-                            </span>
-                          </motion.span>
-                        )}
-                      </AnimatePresence>
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+          <label htmlFor="home-search" className="sr-only">Search recipes</label>
+          <Search size={19} className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2" style={{ color: '#B8A08A' }} aria-hidden />
+          <input
+            id="home-search"
+            type="search"
+            enterKeyHint="search"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Phở, bánh mì, chicken…"
+            className="h-14 w-full rounded-full border-0 bg-white pl-[52px] pr-[120px] text-[16px] text-[#2D1A0E] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
+          />
+          <button type="submit" className="absolute right-1.5 top-1/2 h-11 -translate-y-1/2 rounded-full px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#B45309]" style={{ background: '#D97706' }}>
+            Search
+          </button>
+        </motion.form>
 
-          {/* Selected count + CTA */}
-          <div className="fn-finder-cta-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 14, flexWrap: 'wrap', gap: 12 }}>
-            <div style={{ fontSize: 13, color: 'rgba(245,237,227,0.45)' }}>
-              {selected.length === 0
-                ? 'Select at least 1 ingredient'
-                : `${selected.length} ingredient${selected.length > 1 ? 's' : ''} selected`}
-              {selected.length > 0 && (
-                <button
-                  onClick={() => { setSelected([]); setShowResults(false); }}
-                  style={{ marginLeft: 12, color: '#D97706', background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, textDecoration: 'underline', fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Clear all
-                </button>
-              )}
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              onClick={findRecipes} className="fn-finder-cta"
-              disabled={selected.length === 0 || loading}
-              style={{
-                display: 'flex', alignItems: 'center', gap: 8,
-                padding: '12px 28px', borderRadius: 100,
-                background: selected.length === 0 ? 'rgba(217,119,6,0.3)' : '#D97706',
-                color: 'white', fontWeight: 700, fontSize: 15,
-                border: 'none', cursor: selected.length === 0 ? 'not-allowed' : 'pointer',
-                fontFamily: "'DM Sans', sans-serif",
-                transition: 'all 0.2s',
-              }}
+        {/* Popular */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }} className="-mx-5 mt-4 flex items-center gap-2 overflow-x-auto px-5 text-[13px] [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:justify-center sm:px-0 [&::-webkit-scrollbar]:hidden">
+          <span className="flex-shrink-0" style={{ color: 'rgba(245,237,227,0.5)' }}>Popular:</span>
+          {POPULAR.map(p => (
+            <button
+              key={p.q}
+              onClick={() => search(p.q)}
+              className="flex-shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 font-medium transition-colors hover:bg-white/15"
+              style={{ color: '#F5EDE3', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}
             >
-              {loading ? <Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /> : <Sparkles size={16} />}
-              {loading ? 'Finding recipes...' : 'Find My Recipe'}
+              {p.label}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* ── Ingredient finder card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
+          className="mt-10 rounded-[28px] p-4 sm:mt-12 sm:p-6"
+          style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)' }}
+        >
+          <div className="mb-4 flex items-baseline justify-between gap-3 px-1">
+            <h2 className="text-[19px] font-bold text-white sm:text-[21px]" style={serif}>
+              Cook with what you have
+            </h2>
+            <span className="hidden flex-shrink-0 text-[12px] sm:inline" style={{ color: 'rgba(245,237,227,0.5)' }}>Pick 1 or more</span>
+          </div>
+
+          {/* Category tabs */}
+          <div role="tablist" aria-label="Ingredient groups" className="-mx-4 mb-4 flex gap-1.5 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
+            {INGREDIENT_GROUPS.map((g, i) => {
+              const on = i === tab;
+              const n = countIn(g);
+              return (
+                <button
+                  key={g.label}
+                  role="tab"
+                  aria-selected={on}
+                  onClick={() => setTab(i)}
+                  className="relative flex flex-shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
+                  style={{ color: on ? '#2D1A0E' : 'rgba(245,237,227,0.75)' }}
+                >
+                  {on && <motion.span layoutId="finder-tab" className="absolute inset-0 rounded-full bg-[#F5EDE3]" transition={{ type: 'spring', stiffness: 420, damping: 36 }} />}
+                  <span className="relative" aria-hidden>{g.emoji}</span>
+                  <span className="relative">{g.label}</span>
+                  {n > 0 && (
+                    <span className="relative flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] font-bold text-white" style={{ background: '#D97706' }}>{n}</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Chips of the active group */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={group.label}
+              role="tabpanel"
+              initial={{ opacity: 0, x: 8 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -8 }}
+              transition={{ duration: 0.18 }}
+              className="flex min-h-[92px] flex-wrap content-start gap-2"
+            >
+              {group.items.map(item => {
+                const active = selected.includes(item);
+                return (
+                  <span
+                    key={item}
+                    onPointerEnter={e => { if (e.pointerType === 'mouse') setHovered(item); }}
+                    onPointerLeave={() => setHovered(h => (h === item ? null : h))}
+                    className="relative inline-flex"
+                    style={{ zIndex: hovered === item ? 30 : 'auto' }}
+                  >
+                    <motion.button
+                      whileTap={{ scale: 0.94 }}
+                      onClick={() => toggleIngredient(item)}
+                      aria-pressed={active}
+                      className="flex h-10 items-center gap-1.5 rounded-full px-4 text-[14px] font-medium transition-colors"
+                      style={active
+                        ? { background: '#D97706', color: '#fff', border: '1px solid #D97706' }
+                        : { background: 'rgba(255,255,255,0.08)', color: 'rgba(245,237,227,0.88)', border: '1px solid rgba(255,255,255,0.14)' }}
+                    >
+                      {active && <Check size={14} strokeWidth={3} />}
+                      {item}
+                    </motion.button>
+                    {/* desktop hover preview */}
+                    <AnimatePresence>
+                      {hovered === item && (
+                        <motion.span
+                          aria-hidden
+                          initial={{ opacity: 0, y: 8, x: '-50%', scale: 0.92 }}
+                          animate={{ opacity: 1, y: 0, x: '-50%', scale: 1 }}
+                          exit={{ opacity: 0, y: 6, x: '-50%', scale: 0.95 }}
+                          transition={{ duration: 0.18, ease: EASE }}
+                          className="pointer-events-none absolute left-1/2 block w-[132px] rounded-[18px] p-1.5"
+                          style={{ bottom: 'calc(100% + 10px)', background: '#2D1A0E', border: '1px solid rgba(217,119,6,0.45)', boxShadow: '0 16px 40px rgba(0,0,0,0.5)' }}
+                        >
+                          <span className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl text-[40px]" style={{ background: 'rgba(245,237,227,0.06)' }}>
+                            {(!INGREDIENT_IMAGES[item] || failed[item]) && group.emoji}
+                            {INGREDIENT_IMAGES[item] && !failed[item] && (
+                              <Image src={INGREDIENT_IMAGES[item]} alt={item} fill sizes="128px" className="object-cover" onError={() => setFailed(f => ({ ...f, [item]: true }))} />
+                            )}
+                          </span>
+                          <span className="block px-0.5 pb-0.5 pt-1.5 text-center text-[12px] font-semibold" style={{ color: '#F5EDE3' }}>{item}</span>
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </span>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Selected tray + CTA */}
+          <div className="mt-5 border-t pt-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
+            <AnimatePresence initial={false}>
+              {selected.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}
+                  className="mb-3 flex flex-wrap items-center gap-1.5 overflow-hidden"
+                >
+                  {selected.map(s => (
+                    <button
+                      key={s}
+                      onClick={() => toggleIngredient(s)}
+                      aria-label={`Remove ${s}`}
+                      className="flex items-center gap-1 rounded-full py-1 pl-3 pr-2 text-[12.5px] font-medium"
+                      style={{ background: 'rgba(217,119,6,0.18)', color: '#FCD9A5', border: '1px solid rgba(217,119,6,0.35)' }}
+                    >
+                      {s} <X size={13} />
+                    </button>
+                  ))}
+                  <button onClick={() => { setSelected([]); setShowResults(false); }} className="ml-1 text-[12.5px] underline" style={{ color: 'rgba(245,237,227,0.55)' }}>
+                    Clear
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <motion.button
+              whileTap={selected.length ? { scale: 0.98 } : undefined}
+              onClick={findRecipes}
+              disabled={selected.length === 0 || loading}
+              className="flex h-[52px] w-full items-center justify-center gap-2 rounded-full text-[15px] font-semibold transition-colors"
+              style={selected.length === 0
+                ? { background: 'rgba(255,255,255,0.08)', color: 'rgba(245,237,227,0.45)', cursor: 'not-allowed' }
+                : { background: '#D97706', color: '#fff', boxShadow: '0 12px 28px -12px rgba(217,119,6,0.8)' }}
+            >
+              {loading ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}
+              {loading
+                ? 'Finding dishes…'
+                : selected.length === 0
+                  ? 'Select ingredients to start'
+                  : `Find dishes with ${selected.length} ingredient${selected.length > 1 ? 's' : ''}`}
             </motion.button>
           </div>
         </motion.div>
 
-        {/* Results */}
-        <div ref={resultsRef}>
+        {/* ── Results ── */}
+        <div ref={resultsRef} className="scroll-mt-24">
           <AnimatePresence>
             {showResults && (
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 12 }}
-                transition={{ duration: 0.5 }}
-                style={{ marginTop: 32 }}
-              >
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }} transition={{ duration: 0.45 }} className="mt-8">
                 {results.length === 0 ? (
-                  <div style={{ textAlign: 'center', color: 'rgba(245,237,227,0.5)', fontSize: 15, padding: '32px 0' }}>
-                    No matches found. Try adding more ingredients.
-                  </div>
+                  <p className="py-8 text-center text-[15px]" style={{ color: 'rgba(245,237,227,0.6)' }}>No matches yet — try adding another ingredient.</p>
                 ) : (
                   <>
-                    <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(245,237,227,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16, textAlign: 'center' }}>
-                      <Sparkles size={12} style={{ display: 'inline', marginRight: 6, color: '#D97706' }} />
-                      AI found {results.length} dishes for you
-                    </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+                    <p className="mb-4 flex items-center justify-center gap-1.5 text-[12px] font-semibold uppercase" style={{ color: 'rgba(245,237,227,0.55)', letterSpacing: '0.1em' }}>
+                      <Sparkles size={13} color="#F59E0B" /> {results.length} dishes for you
+                    </p>
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {results.map((r, i) => (
-                        <motion.div
-                          key={r.slug}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.1 }}
-                        >
-                          <Link href={`/recipes/${r.slug}`} style={{ textDecoration: 'none' }}>
-                            <div style={{
-                              background: 'rgba(255,255,255,0.07)',
-                              backdropFilter: 'blur(12px)',
-                              border: '1px solid rgba(255,255,255,0.12)',
-                              borderRadius: 20,
-                              overflow: 'hidden',
-                              transition: 'all 0.2s',
-                              cursor: 'pointer',
-                            }}
-                              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.border = '1px solid rgba(217,119,6,0.5)'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)'; }}
-                              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.border = '1px solid rgba(255,255,255,0.12)'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
-                            >
-                              <div style={{ position: 'relative', height: 160 }}>
-                                <Image src={r.image} alt={r.title} fill style={{ objectFit: 'cover' }} sizes="320px" />
-                                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(13,8,4,0.7) 0%, transparent 60%)' }} />
-                                <div style={{ position: 'absolute', top: 10, right: 10, background: '#D97706', borderRadius: 100, padding: '3px 10px', fontSize: 11, fontWeight: 700, color: '#fff' }}>
-                                  {r.matchScore}% match
-                                </div>
-                              </div>
-                              <div style={{ padding: '14px 16px 16px' }}>
-                                <div style={{ fontSize: 11, color: 'rgba(217,119,6,0.8)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{r.subtitle}</div>
-                                <div style={{ fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 6, fontFamily: "'Playfair Display', serif" }}>{r.title}</div>
-                                <div style={{ fontSize: 12, color: 'rgba(245,237,227,0.55)', lineHeight: 1.5 }}>{r.reason}</div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginTop: 10, color: '#D97706', fontSize: 12, fontWeight: 600 }}>
-                                  Cook this recipe <ArrowRight size={12} />
-                                </div>
-                              </div>
+                        <motion.div key={r.slug} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}>
+                          <Link
+                            href={`/recipes/${r.slug}`}
+                            className="group flex gap-3 overflow-hidden rounded-2xl p-2.5 transition-colors hover:bg-white/10"
+                            style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}
+                          >
+                            <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-xl">
+                              <Image src={r.image} alt={r.title} fill sizes="96px" className="object-cover" />
+                              <span className="absolute left-1.5 top-1.5 rounded-full px-1.5 py-0.5 text-[10px] font-bold text-white" style={{ background: '#D97706' }}>{r.matchScore}%</span>
+                            </div>
+                            <div className="flex min-w-0 flex-col justify-center pr-1">
+                              <p className="truncate text-[12px] italic" style={{ ...serif, color: '#F59E0B' }}>{r.subtitle}</p>
+                              <p className="line-clamp-1 text-[16px] font-bold text-white" style={serif}>{r.title}</p>
+                              <p className="mt-0.5 line-clamp-2 text-[12.5px] leading-snug" style={{ color: 'rgba(245,237,227,0.6)' }}>{r.reason}</p>
+                              <span className="mt-1.5 flex items-center gap-1 text-[12px] font-semibold" style={{ color: '#F59E0B' }}>
+                                Cook this <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+                              </span>
                             </div>
                           </Link>
                         </motion.div>
@@ -359,13 +394,6 @@ export default function IngredientFinderHero() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-
-        {/* Skip link */}
-        <div style={{ textAlign: 'center', marginTop: 14 }}>
-          <Link href="/recipes" style={{ fontSize: 13, color: 'rgba(245,237,227,0.35)', textDecoration: 'none' }}>
-            Browse all recipes instead →
-          </Link>
         </div>
       </div>
 
@@ -378,8 +406,6 @@ export default function IngredientFinderHero() {
           ))}
         </div>
       )}
-
-      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </section>
   );
 }
