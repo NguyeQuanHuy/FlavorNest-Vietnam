@@ -180,7 +180,7 @@ const Pill = ({ children }: { children: React.ReactNode }) => (
 // ── Recipe cards ───────────────────────────────────────────────────────────────
 function RecipeCard({ r, big = false, i }: { r: RecipeItem; big?: boolean; i: number }) {
   return (
-    <motion.div {...reveal(i)} className={big ? 'col-span-2 row-span-2 lg:col-span-6' : 'col-span-1 lg:col-span-3'}>
+    <motion.div {...reveal(i)} className={big ? 'col-span-2 lg:col-span-6 lg:row-span-2' : 'col-span-1 lg:col-span-3'}>
       <Link href={`/recipes/${r.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
         <div className={big ? 'relative h-full min-h-[340px] lg:min-h-[460px]' : 'relative aspect-[4/5] h-full sm:aspect-auto sm:min-h-[220px]'}>
           <Image src={r.image} alt={r.title} fill sizes={big ? '(max-width:1024px) 100vw, 600px' : '(max-width:1024px) 50vw, 300px'} quality={82} className={imgZoom} />
@@ -191,7 +191,7 @@ function RecipeCard({ r, big = false, i }: { r: RecipeItem; big?: boolean; i: nu
             <h3 className={`font-bold leading-tight text-white ${big ? 'text-[28px] sm:text-[34px]' : 'line-clamp-2 text-[17px]'}`} style={serif}>
               {r.title}
             </h3>
-            <p className={`flex items-center gap-1.5 ${big ? 'mt-3 text-[13px]' : 'mt-1.5 text-[12px]'}`} style={{ color: 'rgba(245,237,227,0.7)' }}>
+            <p className={`flex items-center gap-1.5 whitespace-nowrap ${big ? 'mt-3 text-[13px]' : 'mt-1.5 text-[12px]'}`} style={{ color: 'rgba(245,237,227,0.7)' }}>
               <Clock size={big ? 14 : 12} aria-hidden /> {r.time}
               <span aria-hidden>·</span> {r.difficulty}
             </p>
@@ -238,7 +238,7 @@ function StorySide({ s, i }: { s: StoryItem; i: number }) {
         className="group flex h-full gap-5 rounded-2xl border border-[rgba(75,46,26,0.08)] bg-white p-3 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-[0_18px_40px_-20px_rgba(45,26,14,0.4)] focus-visible:ring-2 focus-visible:ring-[#D97706]"
         style={{ textDecoration: 'none' }}
       >
-        <div className="relative w-[38%] min-w-[120px] flex-shrink-0 overflow-hidden rounded-xl" style={{ background: '#EFE7DC' }}>
+        <div className="relative min-h-[140px] w-[38%] min-w-[120px] flex-shrink-0 overflow-hidden rounded-xl" style={{ background: '#EFE7DC' }}>
           <Image src={s.image} alt={s.title} fill sizes="200px" quality={75} className={imgZoom} />
         </div>
         <div className="flex min-w-0 flex-col justify-center py-3 pr-3">
@@ -318,28 +318,58 @@ export default function BentoGrid({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: EASE }}
-              className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-12"
             >
-              {RECIPES.slice(0, 5).map((r, i) => (
-                <RecipeCard key={r.slug} r={r} big={i === 0} i={i} />
-              ))}
-              {RECIPES.slice(5, 8).map((r, i) => (
-                <motion.div key={r.slug} {...reveal(i + 5)} className={`col-span-1 lg:col-span-4 ${i === 2 ? 'col-span-2 lg:col-span-4' : ''}`}>
-                  <Link href={`/recipes/${r.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
-                    <div className="relative aspect-[4/5] sm:aspect-[16/10]">
-                      <Image src={r.image} alt={r.title} fill sizes="(max-width:1024px) 50vw, 400px" quality={80} className={imgZoom} />
-                      <Shade />
-                      <Pill>{r.tag}</Pill>
-                      <div className="absolute inset-x-0 bottom-0 p-4">
-                        <h3 className="line-clamp-2 text-[17px] font-bold leading-tight text-white" style={serif}>{r.title}</h3>
-                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px]" style={{ color: 'rgba(245,237,227,0.7)' }}>
-                          <Clock size={12} aria-hidden /> {r.time} <span aria-hidden>·</span> {r.difficulty}
-                        </p>
-                      </div>
+              {/* Mobile & tablet: clean swipeable cards, text below the photo */}
+              <div className="-mx-5 flex snap-x snap-mandatory scroll-pl-5 gap-3 overflow-x-auto px-5 pb-3 sm:scroll-pl-6 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:hidden [&::-webkit-scrollbar]:hidden">
+                {RECIPES.map((r, i) => (
+                  <Link
+                    key={r.slug}
+                    href={`/recipes/${r.slug}`}
+                    className="group w-[68%] flex-shrink-0 snap-start sm:w-[42%]"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-[22px]" style={{ background: '#EFE7DC' }}>
+                      <Image src={r.image} alt={r.title} fill sizes="(max-width:640px) 70vw, 45vw" quality={80} className="object-cover" priority={i < 2} />
+                      <span
+                        className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[10.5px] font-semibold uppercase text-white backdrop-blur-md"
+                        style={{ background: 'rgba(20,11,5,0.38)', letterSpacing: '0.08em', border: '1px solid rgba(255,255,255,0.18)' }}
+                      >
+                        {r.tag}
+                      </span>
                     </div>
+                    <p className="mt-3 truncate text-[12.5px] italic" style={{ ...serif, color: '#B45309' }}>{r.subtitle}</p>
+                    <h3 className="mt-0.5 line-clamp-2 text-[18px] font-bold leading-snug" style={{ ...serif, color: '#2D1A0E' }}>{r.title}</h3>
+                    <p className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap text-[12.5px]" style={{ color: 'rgba(75,46,26,0.6)' }}>
+                      <Clock size={12.5} aria-hidden /> {r.time}
+                      <span aria-hidden>·</span> {r.difficulty}
+                    </p>
                   </Link>
-                </motion.div>
-              ))}
+                ))}
+              </div>
+
+              {/* Desktop: editorial bento */}
+              <div className="hidden gap-4 lg:grid lg:grid-cols-12">
+                {RECIPES.slice(0, 5).map((r, i) => (
+                  <RecipeCard key={r.slug} r={r} big={i === 0} i={i} />
+                ))}
+                {RECIPES.slice(5, 8).map((r, i) => (
+                  <motion.div key={r.slug} {...reveal(i + 5)} className="lg:col-span-4">
+                    <Link href={`/recipes/${r.slug}`} className={cardBase} style={{ textDecoration: 'none', background: '#EFE7DC' }}>
+                      <div className="relative aspect-[16/10]">
+                        <Image src={r.image} alt={r.title} fill sizes="400px" quality={80} className={imgZoom} />
+                        <Shade />
+                        <Pill>{r.tag}</Pill>
+                        <div className="absolute inset-x-0 bottom-0 p-4">
+                          <h3 className="line-clamp-2 text-[17px] font-bold leading-tight text-white" style={serif}>{r.title}</h3>
+                          <p className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap text-[12px]" style={{ color: 'rgba(245,237,227,0.7)' }}>
+                            <Clock size={12} aria-hidden /> {r.time} <span aria-hidden>·</span> {r.difficulty}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           ) : (
             <motion.div

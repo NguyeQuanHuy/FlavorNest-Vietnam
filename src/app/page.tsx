@@ -90,17 +90,52 @@ function countDirs(rel: string, skip: string[] = []): number {
 }
 
 // ── Map recipes → BentoGrid format ──
+// Pick 8 popular dishes that (1) have a real photo on disk, (2) whose photo
+// actually matches the dish (file name shares a word with the slug),
+// (3) are not duplicates, and (4) mix dish families (max 1 per first word).
 const TAG_COLORS = ['#D97706', '#166534', '#7C3AED', '#059669', '#EA580C', '#BE185D', '#DC2626', '#0284C7']
-const featuredRecipes = recipes.slice(0, 8).map((r: any, i: number) => ({
-  slug: r.slug,
-  title: r.title,
-  subtitle: r.subtitle ?? '',
-  image: r.image,
-  tag: r.tags?.[0] ?? r.category ?? 'Featured',
-  tagColor: TAG_COLORS[i % TAG_COLORS.length],
-  time: r.totalTime ?? r.time ?? '30 min',
-  difficulty: (r.difficulty ?? 'Medium') as 'Easy' | 'Medium' | 'Hard',
-}))
+function pickFeatured(count = 8) {
+  const pub = path.join(process.cwd(), 'public')
+  const words = (s: string) => new Set(s.toLowerCase().replace(/\.[a-z]+$/, '').split(/[^a-z0-9]+/).filter(w => w.length > 1))
+  const seenImg = new Set<string>(), seenTitle = new Set<string>(), seenFamily = new Map<string, number>()
+  const out: ReturnType<typeof getAllRecipes> = []
+  // Signature dishes first, then the most loved ones
+  const PINNED = ['pho-bo-ha-noi', 'banh-mi', 'bun-cha-hanoi', 'bun-bo-hue', 'com-tam', 'banh-xeo', 'goi-cuon', 'ca-phe-sua-da']
+  const all = getAllRecipes()
+  const score = (r: (typeof all)[number]) => (r.reviews || 0) * parseFloat(r.rating || '0')
+  const pool = [
+    ...PINNED.map(s => all.find(r => r.slug === s)).filter((r): r is (typeof all)[number] => !!r),
+    ...[...all].sort((a, b) => score(b) - score(a)),
+  ]
+  // prefer a photo named after the dish itself (/images/recipes/<slug>.jpg|webp|png)
+  const ownPhoto = (slug: string) => ['.jpg', '.webp', '.png'].map(e => `/images/recipes/${slug}${e}`).find(p => fs.existsSync(path.join(pub, p)))
+  for (const r0 of pool) {
+    if (out.length === count) break
+    const own = ownPhoto(r0.slug)
+    const r = own ? { ...r0, image: own } : r0
+    if (!r.image?.startsWith('/') || !fs.existsSync(path.join(pub, r.image))) continue
+    const file = path.basename(r.image)
+    const slugW = words(r.slug)
+    if (![...words(file)].some(w => slugW.has(w))) continue          // photo of a different dish
+    const t = r.title.toLowerCase()
+    if (seenImg.has(file) || seenTitle.has(t)) continue
+    const family = r.slug.split('-')[0]
+    if (!PINNED.includes(r.slug) && (seenFamily.get(family) ?? 0) >= 1) continue
+    seenImg.add(file); seenTitle.add(t); seenFamily.set(family, (seenFamily.get(family) ?? 0) + 1)
+    out.push(r)
+  }
+  return out.map((r, i) => ({
+    slug: r.slug,
+    title: r.title,
+    subtitle: r.subtitle ?? '',
+    image: r.image,
+    tag: r.region && r.region !== 'All' ? r.region : (r.category || 'Featured'),
+    tagColor: TAG_COLORS[i % TAG_COLORS.length],
+    time: r.time ?? '30 min',
+    difficulty: (r.difficulty ?? 'Medium') as 'Easy' | 'Medium' | 'Hard',
+  }))
+}
+const featuredRecipes = pickFeatured(8)
 
 // ── Map stories → BentoGrid format ──
 const COLOR_MAP: Record<string, string> = { amber: '#D97706', forest: '#166534', brown: '#4B2E1A' }

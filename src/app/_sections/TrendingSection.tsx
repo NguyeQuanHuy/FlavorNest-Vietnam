@@ -74,7 +74,7 @@ export default function TrendingSection({ items, stats, week }: { items: Trendin
                 </div>
 
                 {/* ── Cards: snap-scroll on mobile, grid on desktop ── */}
-                <ol className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
+                <ol className="-mx-5 flex snap-x snap-mandatory scroll-pl-5 gap-4 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden">
                     {items.map((r, i) => (
                         <motion.li
                             key={r.slug}
