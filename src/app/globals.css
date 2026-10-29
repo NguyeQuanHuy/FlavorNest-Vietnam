@@ -100,8 +100,10 @@ body {
     }
 }
 
-/* ── Mobile performance: disable all animations ── */
-@media (max-width: 768px) {
+/* ── Reduced motion: only for people who ask their OS for it ──
+   (previously ALL transforms/animations were disabled on every phone,
+    which froze Framer Motion and broke progress bars, sheets and tabs) */
+@media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
@@ -112,15 +114,9 @@ body {
         animation-delay: 0ms !important;
         scroll-behavior: auto !important;
     }
-    /* Disable Framer Motion transforms on mobile */
-    [style*="transform"] {
-        transform: none !important;
-    }
-    /* Disable hover effects (touch devices don't need them) */
-    *:hover {
-        transform: none !important;
-    }
 }
+
+/* Tailwind v4 hover: variants only fire on hover-capable devices, so no touch override is needed */
 /* ── Filter pills (recipes category pages) ── */
 .pill {
     border: 1px solid rgba(75, 46, 26, 0.15);
