@@ -48,6 +48,45 @@ const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
 import { STORIES as ALL_STORIES } from "@/data/stories-data";
 import Image from "next/image";
+import TrendingSection, { type TrendingItem } from './_sections/TrendingSection'
+import { getAllRecipes } from '@/data/index'
+
+// ── Trending this week: best-rated + most-reviewed recipes, rotated weekly ──
+function isoWeek(d = new Date()): number {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()))
+  const day = t.getUTCDay() || 7
+  t.setUTCDate(t.getUTCDate() + 4 - day)
+  const y0 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1))
+  return Math.ceil(((t.getTime() - y0.getTime()) / 86400000 + 1) / 7)
+}
+
+function getTrending(count = 8): TrendingItem[] {
+  const pub = path.join(process.cwd(), 'public')
+  const recipesDir = path.join(process.cwd(), 'src/app/recipes')
+  const pool = getAllRecipes()
+    .filter(r => r.image?.startsWith('/') && fs.existsSync(path.join(pub, r.image)))
+    .filter(r => fs.existsSync(path.join(recipesDir, r.slug)))
+    .map(r => ({ r, score: parseFloat(r.rating || '0') * Math.log10((r.reviews || 0) + 10) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 40)
+  // deterministic weekly shuffle → list changes every week, stable within a week
+  let seed = isoWeek() * 9301 + new Date().getFullYear()
+  const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280)
+  const picked = [...pool].sort(() => rnd() - 0.5).slice(0, count)
+  return picked
+    .sort((a, b) => b.score - a.score)
+    .map(({ r }) => ({
+      slug: r.slug, title: r.title, subtitle: r.subtitle, image: r.image,
+      rating: r.rating, reviews: r.reviews, time: r.time, region: r.region,
+    }))
+}
+
+function countDirs(rel: string, skip: string[] = []): number {
+  try {
+    const dir = path.join(process.cwd(), rel)
+    return fs.readdirSync(dir).filter(f => !f.startsWith('_') && !f.startsWith('[') && !skip.includes(f) && fs.statSync(path.join(dir, f)).isDirectory()).length
+  } catch { return 0 }
+}
 
 // ── Map recipes → BentoGrid format ──
 const TAG_COLORS = ['#D97706', '#166534', '#7C3AED', '#059669', '#EA580C', '#BE185D', '#DC2626', '#0284C7']
@@ -135,6 +174,14 @@ const websiteSchema = {
 // ── Page (Server Component) ───────────────────────────────────────────────────
 export default function HomePage() {
   const recipeCount = countRecipePages()
+  const trending = getTrending(8)
+  const stats = [
+    { value: recipeCount, label: 'Tested recipes', suffix: '+' },
+    { value: countDirs('src/app/stories', ['culture', 'travel', 'about']), label: 'Food stories' },
+    { value: countDirs('src/app/how-to'), label: 'Technique guides' },
+    { value: 3, label: 'Regions, north to south' },
+  ]
+  const week = `Week ${isoWeek()}`
   return (
     <>
       <Script
@@ -148,6 +195,7 @@ export default function HomePage() {
       <main className="overflow-x-hidden">
         <IngredientFinderHero />
         <BentoGrid recipes={featuredRecipes} stories={featuredStories} />
+        <TrendingSection items={trending} stats={stats} week={week} />
         <CategoriesSection />
         <WhyFlavorNest />
         <NewsletterSection />

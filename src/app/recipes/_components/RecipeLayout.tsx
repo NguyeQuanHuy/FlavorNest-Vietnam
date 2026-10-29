@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import RelatedRecipes from './RelatedRecipes';
+import ShareButtons from '@/components/ShareButtons';
 
 export type IngredientSection = {
     title: string;
@@ -195,6 +196,9 @@ const schema = {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div style={{ marginTop: 26 }}>
+                        <ShareButtons path={`/recipes/${recipe.slug}`} title={recipe.title} image={recipe.heroImage} />
                     </div>
                 </div>
 
