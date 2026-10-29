@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Clock, ArrowRight, Flame, Soup, ScrollText, Coffee, Wheat, Wrench, UtensilsCrossed } from 'lucide-react';
+import { ArrowRight, Search, X, Clock } from 'lucide-react';
 
 const GUIDES = [
     {
@@ -132,161 +132,257 @@ const LEVEL_COLOR: Record<string, string> = {
 
 const ALL = 'All';
 
+const PREVIEW = 6;
+const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase();
+const href = (item: { slug: string; isHowTo?: boolean }) => (item.isHowTo ? `/how-to/${item.slug}` : `/recipes/${item.slug}`);
+
 export default function HowToPage() {
     const [active, setActive] = useState(ALL);
+    const [query, setQuery] = useState('');
 
-    const categories = [ALL, ...GUIDES.map(g => g.category)];
-    const filtered = active === ALL ? GUIDES : GUIDES.filter(g => g.category === active);
+    const total = useMemo(() => GUIDES.reduce((n, g) => n + g.items.length, 0), []);
+    const q = norm(query.trim());
+
+    const groups = useMemo(() => {
+        const base = active === ALL || q ? GUIDES : GUIDES.filter(g => g.category === active);
+        if (!q) return base;
+        return base
+            .map(g => ({ ...g, items: g.items.filter(it => norm(`${it.title} ${it.desc}`).includes(q)) }))
+            .filter(g => g.items.length > 0);
+    }, [active, q]);
+
+    const found = groups.reduce((n, g) => n + g.items.length, 0);
 
     return (
-        <div style={{ minHeight: '100vh', background: '#FAFAF7', paddingTop: 88, fontFamily: "'DM Sans', sans-serif" }}>
+        <div style={{ minHeight: '100vh', background: '#FBF8F4', paddingTop: 88, fontFamily: "'DM Sans', sans-serif" }}>
 
-            {/* Hero */}
-            <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 40px', textAlign: 'center' }}>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-                    <div style={{ width: 32, height: 2, background: '#D97706' }} />
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.15em', color: '#D97706', textTransform: 'uppercase' }}>Technique Guides</span>
-                    <div style={{ width: 32, height: 2, background: '#D97706' }} />
-                </div>
-                <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 800, color: '#2D1A0E', lineHeight: 1.1, marginBottom: 16 }}>
-                    How To Cook Vietnamese Food
-                </h1>
-                <p style={{ fontSize: 16, color: 'rgba(75,46,26,0.6)', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
-                    The techniques behind the recipes. Learn the building blocks of Vietnamese cooking and every recipe becomes easier.
-                </p>
-            </div>
+            {/* ═══ HERO ═══ */}
+            <header className="mx-auto max-w-[1100px] px-5 pb-10 pt-12 sm:px-6 sm:pt-16">
+                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+                    <div className="mb-4 flex items-center gap-2">
+                        <span className="h-px w-8" style={{ background: '#D97706' }} />
+                        <span className="text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.18em' }}>Technique Guides</span>
+                    </div>
+                    <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                        <h1 className="max-w-xl font-bold leading-[1.04]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.4rem, 6vw, 4rem)', color: '#2D1A0E' }}>
+                            Learn the <em style={{ color: '#D97706' }}>techniques</em>, cook any recipe.
+                        </h1>
+                        <p className="max-w-sm text-[15px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.62)' }}>
+                            {total} short, practical guides to the building blocks of Vietnamese cooking — from clear broths to crispy shallots.
+                        </p>
+                    </div>
 
-            {/* Category filter tabs */}
-            <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 44px' }}>
-                <div
-                    className="[scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                    style={{ overflowX: 'auto', boxShadow: 'inset 0 -1px 0 rgba(75,46,26,0.1)' }}
-                >
-                    <div style={{ display: 'flex', gap: 30, width: 'max-content', margin: '0 auto' }}>
-                        {categories.map(cat => {
-                            const isActive = active === cat;
+                    {/* Search */}
+                    <div className="relative mt-9 max-w-xl">
+                        <Search size={18} className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2" style={{ color: '#B8A08A' }} aria-hidden />
+                        <label htmlFor="howto-search" className="sr-only">Search guides</label>
+                        <input
+                            id="howto-search"
+                            type="search"
+                            value={query}
+                            onChange={e => setQuery(e.target.value)}
+                            placeholder="Search a technique — broth, rice paper, wok…"
+                            className="w-full rounded-full border border-[#E8D9C8] bg-white py-4 pl-12 pr-12 text-[15px] text-[#2D1A0E] shadow-[0_6px_24px_-12px_rgba(75,46,26,0.25)] outline-none transition placeholder:text-[#B8A08A] focus:border-[#D97706] focus:ring-4 focus:ring-[#D97706]/10 [&::-webkit-search-cancel-button]:hidden"
+                        />
+                        {query && (
+                            <button
+                                type="button"
+                                onClick={() => setQuery('')}
+                                aria-label="Clear search"
+                                className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[#F5EDE3]"
+                                style={{ color: '#8A6E58' }}
+                            >
+                                <X size={16} />
+                            </button>
+                        )}
+                    </div>
+                </motion.div>
+            </header>
+
+            {/* ═══ CATEGORY CHIPS (sticky) ═══ */}
+            <nav
+                aria-label="Guide categories"
+                className="sticky top-[61px] z-30 border-y border-[rgba(75,46,26,0.08)] backdrop-blur-xl min-[641px]:top-[85px]"
+                style={{ background: 'rgba(251,248,244,0.92)' }}
+            >
+                <div className="mx-auto max-w-[1100px] overflow-x-auto px-5 py-3 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden">
+                    <div className="flex w-max gap-2">
+                        {[ALL, ...GUIDES.map(g => g.category)].map(cat => {
+                            const isActive = active === cat && !q;
+                            const count = cat === ALL ? total : GUIDES.find(g => g.category === cat)!.items.length;
                             return (
                                 <button
                                     key={cat}
                                     aria-pressed={isActive}
                                     onClick={e => {
                                         setActive(cat);
+                                        setQuery('');
                                         e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                                     }}
-                                    className={isActive ? 'text-[#2D1A0E]' : 'text-[rgba(75,46,26,0.5)] hover:text-[#2D1A0E]'}
-                                    style={{
-                                        position: 'relative',
-                                        padding: '14px 0',
-                                        fontSize: 14, fontWeight: 500, letterSpacing: '0.01em',
-                                        cursor: 'pointer', whiteSpace: 'nowrap',
-                                        background: 'none', border: 'none',
-                                        transition: 'color 0.2s',
-                                        fontFamily: "'DM Sans', sans-serif",
-                                    }}
+                                    className="relative whitespace-nowrap rounded-full px-4 py-2 text-[13.5px] font-medium transition-colors"
+                                    style={{ color: isActive ? '#fff' : '#4B2E1A' }}
                                 >
-                                    {cat}
                                     {isActive && (
                                         <motion.span
-                                            layoutId="howto-tab-underline"
+                                            layoutId="howto-chip"
                                             transition={{ type: 'spring', stiffness: 420, damping: 36 }}
-                                            style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 2, background: '#D97706' }}
+                                            className="absolute inset-0 rounded-full"
+                                            style={{ background: '#2D1A0E' }}
                                         />
                                     )}
+                                    {!isActive && <span className="absolute inset-0 rounded-full border border-[rgba(75,46,26,0.12)] bg-white transition-colors hover:border-[rgba(75,46,26,0.3)]" />}
+                                    <span className="relative flex items-center gap-1.5">
+                                        {cat}
+                                        <span className="text-[11px] tabular-nums" style={{ opacity: 0.55 }}>{count}</span>
+                                    </span>
                                 </button>
                             );
                         })}
                     </div>
                 </div>
-            </div>
+            </nav>
 
-            {/* Guides */}
-            <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px 80px' }}>
+            {/* ═══ GUIDES ═══ */}
+            <main className="mx-auto max-w-[1100px] px-5 pb-24 pt-10 sm:px-6">
+                {q && (
+                    <p className="mb-8 text-[14px]" style={{ color: 'rgba(75,46,26,0.6)' }} aria-live="polite">
+                        {found} {found === 1 ? 'guide' : 'guides'} for “<span style={{ color: '#2D1A0E', fontWeight: 600 }}>{query.trim()}</span>”
+                    </p>
+                )}
+
                 <AnimatePresence mode="wait">
-                    {filtered.map((group) => (
-                        <motion.div
-                            key={group.category}
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.35 }}
-                            style={{ marginBottom: 52 }}
-                        >
-                            {/* Category header */}
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-                                <div style={{ width: 44, height: 44, borderRadius: 14, background: group.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22 }}>
-                                    <span style={{ display: 'flex', color: group.color }} dangerouslySetInnerHTML={{ __html: group.icon }} />
-                                </div>
-                                <div>
-                                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#2D1A0E', margin: 0 }}>{group.category}</h2>
-                                    <div style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', marginTop: 2 }}>{group.items.length} guides</div>
-                                </div>
-                            </div>
-
-                            {/* Cards */}
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 18 }}>
-                                {group.items.map((item, i) => (
-                                    <motion.div
-                                        key={item.title}
-                                        initial={{ opacity: 0, y: 12 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: i * 0.06 }}
-                                    >
-                                        <Link
-                                            href={item.isHowTo ? `/how-to/${item.slug}` : `/recipes/${item.slug}`}
-                                            className="group howto-card"
-                                            style={{ textDecoration: 'none', display: 'block', height: '100%' }}
-                                        >
-                                            <div
-                                                className="border border-[rgba(75,46,26,0.09)] transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-[rgba(75,46,26,0.24)] group-hover:shadow-[0_12px_32px_rgba(75,46,26,0.08)]"
-                                                style={{
-                                                    background: '#fff',
-                                                    borderRadius: 14,
-                                                    padding: '22px 24px 18px',
-                                                    height: '100%',
-                                                    display: 'flex', flexDirection: 'column',
-                                                }}
-                                            >
-                                                {/* Meta: level + time */}
-                                                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14, fontSize: 11, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'rgba(75,46,26,0.45)' }}>
-                                                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: LEVEL_COLOR[item.level], flexShrink: 0 }} />
-                                                    <span style={{ color: 'rgba(75,46,26,0.75)' }}>{item.level}</span>
-                                                    <span aria-hidden>·</span>
-                                                    <span>{item.time}</span>
-                                                </div>
-
-                                                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 19, fontWeight: 700, color: '#2D1A0E', margin: '0 0 10px', lineHeight: 1.3 }}>
-                                                    {item.title}
-                                                </h3>
-                                                <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.6)', lineHeight: 1.65, margin: '0 0 18px', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                                                    {item.desc}
+                    <motion.div key={`${active}|${q}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                        {groups.map(group => {
+                            const collapsed = active === ALL && !q && group.items.length > PREVIEW;
+                            const items = collapsed ? group.items.slice(0, PREVIEW) : group.items;
+                            return (
+                                <section key={group.category} className="mb-16 last:mb-0" aria-labelledby={`cat-${group.category}`}>
+                                    {/* Section header */}
+                                    <div className="mb-6 flex items-end justify-between gap-4">
+                                        <div className="flex items-center gap-3.5">
+                                            <span
+                                                className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl"
+                                                style={{ background: group.bg, color: group.color }}
+                                                dangerouslySetInnerHTML={{ __html: group.icon.replace(/width="28" height="28"/, 'width="24" height="24"') }}
+                                            />
+                                            <div>
+                                                <h2 id={`cat-${group.category}`} className="text-[24px] font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>
+                                                    {group.category}
+                                                </h2>
+                                                <p className="text-[13px]" style={{ color: 'rgba(75,46,26,0.5)' }}>
+                                                    {group.items.length} {group.items.length === 1 ? 'guide' : 'guides'}
                                                 </p>
-
-                                                <div
-                                                    className="text-[#2D1A0E] transition-colors duration-200 group-hover:text-[#D97706]"
-                                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 'auto', paddingTop: 14, borderTop: '1px solid rgba(75,46,26,0.07)', fontSize: 13, fontWeight: 600 }}
-                                                >
-                                                    Read guide
-                                                    <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
-                                                </div>
                                             </div>
-                                        </Link>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
-            </div>
+                                        </div>
+                                        {collapsed && (
+                                            <button
+                                                onClick={() => { setActive(group.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                                className="group hidden items-center gap-1.5 text-[13.5px] font-semibold transition-colors hover:text-[#D97706] sm:flex"
+                                                style={{ color: '#4B2E1A' }}
+                                            >
+                                                View all {group.items.length}
+                                                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                                            </button>
+                                        )}
+                                    </div>
 
-            {/* Bottom CTA */}
-            <div style={{ background: '#2D1A0E', padding: '56px 24px', textAlign: 'center' }}>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="28" r="28" fill="#D97706" /><path d="M14 34 Q28 42 42 34" stroke="white" strokeWidth="2.5" strokeLinecap="round" /><line x1="14" y1="34" x2="16" y2="25" stroke="white" strokeWidth="2" strokeLinecap="round" /><line x1="42" y1="34" x2="40" y2="25" stroke="white" strokeWidth="2" strokeLinecap="round" /><path d="M16 25 Q28 21 40 25" stroke="white" strokeWidth="2" strokeLinecap="round" /><path d="M22 25 Q25 20 28 23 Q31 20 34 25" stroke="rgba(255,255,255,0.7)" strokeWidth="1.8" strokeLinecap="round" /><path d="M24 21 Q23 17 25 14" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" /><path d="M28 20 Q27 16 29 13" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" /><path d="M32 21 Q31 17 33 14" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" /></svg></div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#fff', margin: '0 0 8px' }}>Ready to cook?</h3>
-                <p style={{ fontSize: 15, color: 'rgba(245,237,227,0.5)', marginBottom: 24 }}>Browse the full recipe collection.</p>
-                <Link href="/recipes" style={{ display: 'inline-block', background: '#D97706', color: 'white', fontWeight: 600, fontSize: 14, padding: '14px 32px', borderRadius: 100, textDecoration: 'none' }}>
-                    Browse All Recipes →
-                </Link>
-            </div>
+                                    {/* Cards */}
+                                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                        {items.map((item, i) => (
+                                            <motion.div
+                                                key={`${item.slug}-${i}`}
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: Math.min(i, 8) * 0.04, duration: 0.3 }}
+                                            >
+                                                <Link
+                                                    href={href(item)}
+                                                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[rgba(75,46,26,0.08)] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-[0_18px_40px_-18px_rgba(75,46,26,0.35)]"
+                                                    style={{ textDecoration: 'none' }}
+                                                >
+                                                    {/* accent bar */}
+                                                    <span
+                                                        aria-hidden
+                                                        className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
+                                                        style={{ background: group.color }}
+                                                    />
+                                                    <div className="mb-4 flex items-center gap-2">
+                                                        <span
+                                                            className="rounded-full px-2.5 py-1 text-[11px] font-semibold"
+                                                            style={{ background: `${LEVEL_COLOR[item.level] ?? '#D97706'}14`, color: LEVEL_COLOR[item.level] ?? '#D97706' }}
+                                                        >
+                                                            {item.level}
+                                                        </span>
+                                                        <span className="flex items-center gap-1 text-[12px]" style={{ color: 'rgba(75,46,26,0.5)' }}>
+                                                            <Clock size={13} aria-hidden /> {item.time}
+                                                        </span>
+                                                    </div>
+                                                    <h3 className="text-[18px] font-bold leading-snug transition-colors group-hover:text-[#B45309]" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className="mt-2.5 line-clamp-2 text-[14px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.6)' }}>
+                                                        {item.desc}
+                                                    </p>
+                                                    <span className="mt-auto flex items-center gap-1.5 pt-5 text-[13px] font-semibold" style={{ color: '#D97706' }}>
+                                                        Read guide
+                                                        <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                                                    </span>
+                                                </Link>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+
+                                    {collapsed && (
+                                        <button
+                                            onClick={() => { setActive(group.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                                            className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl border border-[rgba(75,46,26,0.12)] bg-white py-3.5 text-[14px] font-semibold sm:hidden"
+                                            style={{ color: '#4B2E1A' }}
+                                        >
+                                            View all {group.items.length} guides <ArrowRight size={15} />
+                                        </button>
+                                    )}
+                                </section>
+                            );
+                        })}
+
+                        {groups.length === 0 && (
+                            <div className="py-20 text-center">
+                                <p className="text-[22px] font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>No guides found</p>
+                                <p className="mt-2 text-[15px]" style={{ color: 'rgba(75,46,26,0.6)' }}>Try another word, like “broth”, “rice” or “grill”.</p>
+                                <button
+                                    onClick={() => setQuery('')}
+                                    className="mt-6 rounded-full px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#D97706]"
+                                    style={{ background: '#2D1A0E' }}
+                                >
+                                    Clear search
+                                </button>
+                            </div>
+                        )}
+                    </motion.div>
+                </AnimatePresence>
+            </main>
+
+            {/* ═══ CTA ═══ */}
+            <section className="px-5 pb-20 sm:px-6">
+                <div
+                    className="mx-auto flex max-w-[1100px] flex-col items-start gap-6 rounded-[28px] px-8 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-12"
+                    style={{ background: '#2D1A0E' }}
+                >
+                    <div>
+                        <h2 className="text-[28px] font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: '#fff' }}>
+                            Ready to put it into practice?
+                        </h2>
+                        <p className="mt-2 text-[15px]" style={{ color: 'rgba(245,237,227,0.65)' }}>Hundreds of authentic recipes are waiting for you.</p>
+                    </div>
+                    <Link
+                        href="/recipes"
+                        className="group flex flex-shrink-0 items-center gap-2 rounded-full px-7 py-4 text-[14px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+                        style={{ background: '#D97706', textDecoration: 'none' }}
+                    >
+                        Browse recipes <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </div>
+            </section>
         </div>
     );
 }
