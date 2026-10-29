@@ -175,13 +175,10 @@ export default function IngredientFinderHero() {
               What is in your kitchen?
             </span>
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, margin: '0 0 4px' }}>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: '#fff', lineHeight: 1.1, margin: 0 }}>
             Pick your ingredients,<br />
             <span style={{ color: '#D97706', fontStyle: 'italic' }}>we find your dish.</span>
           </h1>
-          <p style={{ fontSize: 14, color: 'rgba(245,237,227,0.65)', maxWidth: 480, margin: '0 auto' }}>
-            Select what you have at home and our AI will suggest the perfect Vietnamese recipe to cook tonight.
-          </p>
         </motion.div>
 
         {/* Ingredient Picker */}
