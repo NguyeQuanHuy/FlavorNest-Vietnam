@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import RelatedRecipes from './RelatedRecipes';
 import ShareButtons from '@/components/ShareButtons';
+import CookingSteps from './CookingSteps';
 
 export type IngredientSection = {
     title: string;
@@ -446,144 +447,14 @@ const schema = {
 
                 {/* RIGHT: Instructions */}
                 <main className={activeTab === 'instructions' ? '' : 'hide-on-mobile'}>
-                    <div
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'baseline',
-                            marginBottom: '12px',
-                        }}
-                    >
-                        <h2
-                            style={{
-                                fontFamily: 'Playfair Display, serif',
-                                color: '#2D1A0E',
-                                fontSize: '1.75rem',
-                                fontWeight: 700,
-                            }}
-                        >
-                            Instructions
-                        </h2>
-                        <span
-                            style={{
-                                fontFamily: 'DM Sans, sans-serif',
-                                color: '#8B6F5A',
-                                fontSize: '14px',
-                            }}
-                        >
-                            {doneSteps.size}/{recipe.steps.length} done
-                        </span>
-                    </div>
-                    <div
-                        style={{
-                            height: '2px',
-                            backgroundColor: '#EDE0D0',
-                            borderRadius: '2px',
-                            marginBottom: '28px',
-                            position: 'relative',
-                            overflow: 'hidden',
-                        }}
-                    >
-                        <motion.div
-                            animate={{
-                                width: `${(doneSteps.size / recipe.steps.length) * 100}%`,
-                            }}
-                            transition={{ duration: 0.4 }}
-                            style={{
-                                position: 'absolute',
-                                inset: 0,
-                                backgroundColor: '#D97706',
-                                borderRadius: '2px',
-                            }}
-                        />
-                    </div>
-
-                    <ol style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                        {recipe.steps.map((step, i) => {
-                            const isDone = doneSteps.has(i);
-                            return (
-                                <motion.li
-                                    key={i}
-                                    initial={false}
-
-
-                                    transition={{ delay: i * 0.05 }}
-                                    style={{
-                                        display: 'flex',
-                                        gap: '20px',
-                                        padding: '24px 0',
-                                        borderBottom:
-                                            i < recipe.steps.length - 1 ? '1px solid #EDE0D0' : 'none',
-                                    }}
-                                >
-                                    <button
-                                        onClick={() => toggleStep(i)}
-                                        aria-label={`Mark step ${i + 1} as done`}
-                                        style={{
-                                            flexShrink: 0,
-                                            width: '40px',
-                                            height: '40px',
-                                            borderRadius: '50%',
-                                            border: `2px solid ${isDone ? '#D97706' : '#E5D6C5'}`,
-                                            backgroundColor: isDone ? '#D97706' : 'transparent',
-                                            color: isDone ? '#FFF' : '#D97706',
-                                            fontFamily: 'Playfair Display, serif',
-                                            fontSize: '0.9rem',
-                                            fontWeight: 700,
-                                            cursor: 'pointer',
-                                            transition: 'all 0.2s',
-                                        }}
-                                    >
-                                        {isDone ? '✓' : i + 1}
-                                    </button>
-                                    <div style={{ flex: 1 }}>
-                                        <h3
-                                            style={{
-                                                fontFamily: 'Playfair Display, serif',
-                                                color: '#2D1A0E',
-                                                fontSize: '1.2rem',
-                                                fontWeight: 700,
-                                                marginBottom: '8px',
-                                                textDecoration: isDone ? 'line-through' : 'none',
-                                                opacity: isDone ? 0.5 : 1,
-                                                transition: 'all 0.2s',
-                                            }}
-                                        >
-                                            {step.title}
-                                        </h3>
-                                        <p
-                                            style={{
-                                                fontFamily: 'DM Sans, sans-serif',
-                                                color: '#4B2E1A',
-                                                fontSize: '1rem',
-                                                lineHeight: 1.75,
-                                                opacity: isDone ? 0.5 : 1,
-                                            }}
-                                        >
-                                            {step.description}
-                                        </p>
-                                        {step.tip && (
-                                            <div
-                                                style={{
-                                                    marginTop: '14px',
-                                                    padding: '14px 16px',
-                                                    backgroundColor: '#FAF0DC',
-                                                    borderLeft: '4px solid #D97706',
-                                                    borderRadius: '8px',
-                                                    fontFamily: 'DM Sans, sans-serif',
-                                                    fontSize: '14.5px',
-                                                    color: '#6B4A1F',
-                                                    lineHeight: 1.6,
-                                                }}
-                                            >
-                                                <strong style={{ color: '#B54708' }}>💡 Tip:</strong> {step.tip}
-                                            </div>
-                                        )}
-                                    </div>
-                                </motion.li>
-                            );
-                        })}
-                    </ol>
+                    <CookingSteps
+                        slug={recipe.slug}
+                        steps={recipe.steps}
+                        ingredients={recipe.ingredientSections.map(sec => ({
+                            title: sec.title,
+                            items: sec.items.map(it => ({ qty: `${formatAmount(it.amount)}${it.unit ? ' ' + it.unit : ''}`, name: it.name })),
+                        }))}
+                    />
                 </main>
             </div>
 
