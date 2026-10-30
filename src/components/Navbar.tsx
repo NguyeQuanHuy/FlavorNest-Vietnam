@@ -166,16 +166,12 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="navbar-link flex items-center gap-1.5 transition-all duration-200"
+                    className={`navbar-link flex items-center gap-1.5 whitespace-nowrap py-2 text-[13.5px] xl:text-[14px] transition-all duration-200 ${link.hasDropdown ? "pl-3 pr-2.5 xl:pl-4 xl:pr-3.5" : "px-3 xl:px-4"}`}
                     style={{
-                      padding: link.hasDropdown
-                        ? "8px 14px 8px 16px"
-                        : "8px 16px",
                       background: "transparent",
                       color: forceScrolled
                         ? "rgba(45,26,14,0.85)"
                         : "rgba(245,237,227,0.85)",
-                      fontSize: 14,
                       fontWeight: isActive ? 600 : 500,
                       borderRadius: 8,
                       textDecoration: "none",
@@ -346,6 +342,8 @@ export default function Navbar() {
                   />
                 </div>
                 <span
+                  translate="no"
+                  className="notranslate hidden whitespace-nowrap xl:inline"
                   style={{
                     fontSize: 13,
                     fontWeight: 600,
@@ -358,6 +356,7 @@ export default function Navbar() {
                 {isAdmin(session.user.email) && (
                   <Link
                     href="/admin/users"
+                    className="hidden whitespace-nowrap xl:inline-block"
                     style={{
                       padding: "6px 14px",
                       borderRadius: 999,
@@ -376,6 +375,7 @@ export default function Navbar() {
 
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
+                  className="whitespace-nowrap"
                   style={{
                     padding: "6px 14px",
                     borderRadius: 999,
@@ -396,7 +396,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/auth/signin"
-                className="hidden sm:inline-flex transition-all duration-200"
+                className="hidden sm:inline-flex whitespace-nowrap transition-all duration-200"
                 style={{
                   padding: "8px 18px",
                   borderRadius: 999,

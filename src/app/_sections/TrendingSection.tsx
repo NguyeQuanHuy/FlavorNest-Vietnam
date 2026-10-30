@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { motion, useInView, animate } from 'framer-motion'
 import { Clock, Flame, ArrowRight } from 'lucide-react'
 import ShareButtons from '@/components/ShareButtons'
+import { currentSiteLang } from '@/lib/site-translate'
 
 export type TrendingItem = {
     slug: string
@@ -30,10 +31,13 @@ function CountUp({ value, suffix = '' }: { value: number; suffix?: string }) {
     const [n, setN] = useState(0)
     useEffect(() => {
         if (!inView) return
+        // Page machine-translated? Show the final number at once — the translator
+        // would otherwise freeze the text half-way through the count-up.
+        if (currentSiteLang() !== 'en') { setN(value); return }
         const c = animate(0, value, { duration: 1.4, ease: [0.22, 1, 0.36, 1], onUpdate: v => setN(Math.round(v)) })
         return () => c.stop()
     }, [inView, value])
-    return <span ref={ref} className="tabular-nums">{n.toLocaleString('en-US')}{suffix}</span>
+    return <span ref={ref} translate="no" className="notranslate tabular-nums">{n.toLocaleString('en-US')}{suffix}</span>
 }
 
 
