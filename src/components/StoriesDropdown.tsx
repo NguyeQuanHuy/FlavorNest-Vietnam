@@ -32,13 +32,19 @@ function NavItemRow({ item }: { item: NavItem }) {
 }
 
 export default function StoriesDropdown({ isOpen, onClose }: Props) {
-  if (!isOpen) return null;
-
+  // Always in the DOM (just hidden when closed) so the site translator
+  // (Google Translate) translates it together with the page.
   return (
-    <div className="absolute left-1/2 z-50 -translate-x-1/2 pt-3" style={{ top: "100%", width: 540 }} onMouseLeave={onClose}>
+    <div
+      className="absolute left-1/2 z-50 -translate-x-1/2 pt-3"
+      style={{ top: "100%", width: 540, pointerEvents: isOpen ? "auto" : "none" }}
+      onMouseLeave={onClose}
+      aria-hidden={!isOpen}
+      inert={!isOpen}
+    >
       <motion.div
-        initial={{ opacity: 0, y: 6 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={false}
+        animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
         transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
         className="rounded-2xl border border-[rgba(75,46,26,0.1)] bg-white px-3 pb-3 pt-4"
         style={{ boxShadow: "0 18px 48px rgba(45,26,14,0.18)", fontFamily: "var(--font-dm-sans), sans-serif" }}
