@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useInView, animate } from 'framer-motion'
-import { Star, Clock, Flame, ArrowRight } from 'lucide-react'
+import { Clock, Flame, ArrowRight } from 'lucide-react'
 import ShareButtons from '@/components/ShareButtons'
 
 export type TrendingItem = {
@@ -36,7 +36,6 @@ function CountUp({ value, suffix = '' }: { value: number; suffix?: string }) {
     return <span ref={ref} className="tabular-nums">{n.toLocaleString('en-US')}{suffix}</span>
 }
 
-const fmt = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1).replace('.0', '')}k` : String(n))
 
 export default function TrendingSection({ items, stats, week }: { items: TrendingItem[]; stats: Stat[]; week: string }) {
     return (
@@ -62,10 +61,10 @@ export default function TrendingSection({ items, stats, week }: { items: Trendin
                 <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
                     <div>
                         <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-bold uppercase" style={{ background: '#FEF3C7', color: '#B45309', letterSpacing: '0.12em' }}>
-                            <Flame size={13} /> Trending · {week}
+                            <Flame size={13} /> This week’s picks · {week}
                         </div>
                         <h2 id="trending-heading" className="font-bold leading-[1.05]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 4.5vw, 3rem)', color: '#2D1A0E' }}>
-                            What everyone is <em style={{ color: '#D97706' }}>cooking</em> this week
+                            Worth <em style={{ color: '#D97706' }}>cooking</em> this week
                         </h2>
                     </div>
                     <Link href="/recipes" className="group flex items-center gap-1.5 text-[14px] font-semibold transition-colors hover:text-[#D97706]" style={{ color: '#4B2E1A' }}>
@@ -95,11 +94,6 @@ export default function TrendingSection({ items, stats, week }: { items: Trendin
                                     />
                                     <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(20,11,5,0.85) 0%, rgba(20,11,5,0.15) 45%, transparent 70%)' }} />
 
-                                    {i === 0 && (
-                                        <span className="absolute left-3 top-3 flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold text-white" style={{ background: '#DC2626' }}>
-                                            <Flame size={12} /> #1 this week
-                                        </span>
-                                    )}
                                     <div className="absolute right-3 top-3">
                                         <ShareButtons variant="icon" path={`/recipes/${r.slug}`} title={r.title} image={r.image} />
                                     </div>
@@ -115,11 +109,8 @@ export default function TrendingSection({ items, stats, week }: { items: Trendin
                                     </div>
                                 </div>
                                 <div className="mt-3 flex items-center gap-3 px-1 text-[12.5px]" style={{ color: 'rgba(75,46,26,0.6)' }}>
-                                    <span className="flex items-center gap-1 font-semibold" style={{ color: '#2D1A0E' }}>
-                                        <Star size={13} fill="#F59E0B" color="#F59E0B" /> {r.rating}
-                                    </span>
-                                    <span>{fmt(r.reviews)} reviews</span>
-                                    <span className="ml-auto flex items-center gap-1"><Clock size={12} /> {r.time}</span>
+                                    <span className="flex items-center gap-1"><Clock size={12} /> {r.time}</span>
+                                    {r.region && r.region !== 'All' && <span className="ml-auto">{r.region}</span>}
                                 </div>
                             </Link>
                         </motion.li>

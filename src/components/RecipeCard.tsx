@@ -82,10 +82,7 @@ export default function RecipeCard({ title, image, description, id, category, di
           {description}
         </p>
         <div className="flex justify-between items-center pt-4 border-t border-gray-50">
-          <div className="flex items-center gap-1">
-            <span className="text-orange-400 text-sm">★★★★★</span>
-            <span className="text-gray-400 text-xs font-medium">{rating || "4.8"}</span>
-          </div>
+          <span />
           <Link href={`/recipes/${id}`}>
             <button className="text-[#D97706] font-bold text-sm hover:translate-x-1 transition-transform cursor-pointer">
               Cook it →

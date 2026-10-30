@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Clock, Star, X } from 'lucide-react'
+import { ArrowRight, Clock, X } from 'lucide-react'
 
 type Item = { qty: string; name: string; note?: string }
 type Section = { title: string; items: Item[] }
@@ -113,7 +113,6 @@ export default function IngredientPeek({ recipe, onClose }: { recipe: PeekRecipe
                                 <p className="truncate text-[12px] italic" style={{ ...serif, color: '#B45309' }}>{recipe.subtitle}</p>
                                 <h2 className="line-clamp-2 text-[19px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>{recipe.title}</h2>
                                 <p className="mt-1 flex items-center gap-3 text-[12px]" style={{ color: 'rgba(75,46,26,0.6)' }}>
-                                    <span className="flex items-center gap-1"><Star size={12} fill="#F59E0B" color="#F59E0B" /> {recipe.rating}</span>
                                     <span className="flex items-center gap-1"><Clock size={12} /> {recipe.time}</span>
                                     {count > 0 && <span>{count} ingredients</span>}
                                 </p>

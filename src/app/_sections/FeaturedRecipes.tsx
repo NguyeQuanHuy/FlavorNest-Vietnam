@@ -55,10 +55,6 @@ function RecipeCard({ recipe, large = false, index = 0 }: { recipe: any; large?:
                                 {recipe.tag}
                             </div>
                         )}
-                        {/* Rating */}
-                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(8px)', color: '#fff', fontSize: 12, fontWeight: 600, padding: '4px 10px', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 4 }}>
-                            <Star size={11} fill="#F59E0B" color="#F59E0B" /> {recipe.rating}
-                        </div>
                         {/* Subtitle over image bottom */}
                         <div style={{ position: 'absolute', bottom: 14, left: 16, right: 16 }}>
                             <div style={{ fontSize: large ? 11 : 10, fontWeight: 700, color: 'rgba(253,230,138,0.9)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>

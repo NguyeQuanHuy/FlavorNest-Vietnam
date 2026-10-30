@@ -6,9 +6,6 @@ import { BookOpen, Sparkles } from 'lucide-react'
 import { useRef } from 'react'
 import { recipes } from '@/data/recipes'
 
-const avgRating = (
-    recipes.reduce((sum, r) => sum + r.rating, 0) / recipes.length
-).toFixed(1)
 
 const container = {
     hidden: {},
@@ -26,8 +23,7 @@ export default function HeroSection({ recipeCount }: { recipeCount?: number }) {
 
     const STATS = [
         { value: `${count}+`, label: 'Recipes', delay: 0.8 },
-        { value: `${avgRating}★`, label: 'Avg. Rating', delay: 1.0 },
-        { value: '15K+', label: 'Home Cooks', delay: 1.15 },
+        { value: '3', label: 'Regions', delay: 1.0 },
     ]
 
     return (

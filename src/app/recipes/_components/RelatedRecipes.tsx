@@ -173,9 +173,6 @@ export default function RelatedRecipes({ currentSlug, category }: RelatedRecipes
                                         {r.shortDescription}
                                     </p>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-                                        <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: '#D97706', fontWeight: 600 }}>
-                                            ⭐ {r.rating.toFixed(1)}
-                                        </span>
                                         <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'rgba(75,46,26,0.5)' }}>
                                             ⏱ {r.totalTime}
                                         </span>

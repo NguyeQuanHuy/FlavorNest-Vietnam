@@ -28,13 +28,6 @@ export function RecipeSchema({ recipe }: { recipe: UnifiedRecipe }) {
       '@type': 'NutritionInformation',
       calories: `${recipe.cal} calories`,
     } : undefined,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: recipe.rating,
-      ratingCount: recipe.reviews,
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (

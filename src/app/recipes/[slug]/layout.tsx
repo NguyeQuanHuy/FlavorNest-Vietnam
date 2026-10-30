@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const title = `${recipe.title} — Authentic Vietnamese Recipe | FlavorNest Vietnam`;
     const description = recipe.shortDescription
-        ? `${recipe.shortDescription.slice(0, 150)}. ${recipe.totalTime} · ${recipe.difficulty} · Rating ${recipe.rating}/5`
-        : `Learn how to make ${recipe.title}. ${recipe.totalTime} · ${recipe.difficulty} · Rating ${recipe.rating}/5 | FlavorNest Vietnam`;
+        ? `${recipe.shortDescription.slice(0, 150)}. ${recipe.totalTime} · ${recipe.difficulty}`
+        : `Learn how to make ${recipe.title}. ${recipe.totalTime} · ${recipe.difficulty} | FlavorNest Vietnam`;
 
     return {
         title,

@@ -110,7 +110,7 @@ export default async function CategoryPage(
                                     <p style={{ fontSize: 11, color: 'rgba(75,46,26,0.5)', margin: '0 0 4px', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600 }}>{r.subtitle}</p>
                                     <h3 style={{ fontSize: 18, fontWeight: 700, color: '#2D1A0E', margin: '0 0 8px', lineHeight: 1.25 }}>{r.title}</h3>
                                     <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.6)', margin: 0 }}>
-                                        {r.totalTime} · {r.difficulty} · ⭐ {r.rating}
+                                        {r.totalTime} · {r.difficulty}
                                     </p>
                                 </div>
                             </Link>

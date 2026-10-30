@@ -111,12 +111,6 @@ export default function RecipeCard({ recipe, index = 0 }: RecipeCardProps) {
           <div style={{ padding: '18px 20px 20px' }}>
             {/* Rating + difficulty */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                <span style={{ color: '#D97706', fontSize: 12, letterSpacing: 1 }}>★★★★★</span>
-                <span style={{ fontSize: 12, color: '#9b8c7e', fontFamily: 'var(--font-dm-sans)' }}>
-                  {recipe.rating} ({recipe.reviewCount.toLocaleString()})
-                </span>
-              </div>
               <span
                 style={{
                   fontSize: 11,

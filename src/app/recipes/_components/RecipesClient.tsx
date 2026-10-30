@@ -96,8 +96,8 @@ function Highlight({ text, query }: { text: string; query: string }) {
 const PER_PAGE = 12;
 const serif = { fontFamily: "'Playfair Display', Georgia, serif" };
 const SORTS = [
-    { id: 'popular', label: 'Most popular' },
-    { id: 'rating', label: 'Highest rated' },
+    { id: 'popular', label: 'Recommended' },
+    { id: 'az', label: 'A – Z' },
     { id: 'quickest', label: 'Quickest' },
 ] as const;
 
@@ -125,7 +125,7 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
     const [activeCategory, setActiveCategory] = useState("All");
     const [activeRegion, setActiveRegion] = useState("All Regions");
     const [localQuery, setLocalQuery] = useState(urlSearch);
-    const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'quickest'>('popular');
+    const [sortBy, setSortBy] = useState<'popular' | 'az' | 'quickest'>('popular');
     const [page, setPage] = useState(1);
     const [isMobile, setIsMobile] = useState(false);
     const [shown, setShown] = useState(PER_PAGE);      // mobile: "show more" instead of pages
@@ -215,9 +215,9 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
             // recipes with a real photo first, so the grid never opens on blank tiles
             const ia = hasImg.has(a.slug) ? 0 : 1, ib = hasImg.has(b.slug) ? 0 : 1;
             if (ia !== ib) return ia - ib;
-            if (sortBy === 'rating') return parseFloat(b.rating) - parseFloat(a.rating);
+            if (sortBy === 'az') return a.title.localeCompare(b.title);
             if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
-            return b.reviews - a.reviews;
+            return 0; // keep the curated catalogue order
         });
     }, [activeCategory, activeRegion, localQuery, sortBy, hasImg]);
     useEffect(() => { setPage(1); setShown(PER_PAGE); }, [activeCategory, activeRegion, localQuery, sortBy]);
@@ -476,11 +476,6 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
                                             <Highlight text={recipe.subtitle} query={localQuery} />
                                         </p>
                                         <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px]" style={{ color: 'rgba(75,46,26,0.6)' }}>
-                                            {!isStory && (
-                                                <span className="flex items-center gap-1 font-semibold" style={{ color: '#2D1A0E' }}>
-                                                    <Star size={12.5} fill="#F59E0B" color="#F59E0B" aria-hidden /> {recipe.rating}
-                                                </span>
-                                            )}
                                             <span className="flex items-center gap-1"><Clock size={12} aria-hidden /> {recipe.time}</span>
                                             {!isStory && (
                                                 <span className="hidden items-center gap-1.5 sm:flex">

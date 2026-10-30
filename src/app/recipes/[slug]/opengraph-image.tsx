@@ -83,7 +83,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
                             {recipe.category}
                         </span>
                         <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 16 }}>
-                            ⭐ {recipe.rating.toFixed(1)}  ·  ⏱ {recipe.totalTime}  ·  📊 {recipe.difficulty}
+                            ⏱ {recipe.totalTime}  ·  📊 {recipe.difficulty}
                         </span>
                     </div>
 

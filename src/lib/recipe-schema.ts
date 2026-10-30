@@ -161,15 +161,6 @@ export function generateRecipeSchema(recipe: RecipeDetailed) {
             difficulty: mapDifficulty(recipe.difficulty),
         }),
 
-        // Ratings (important for Rich Results)
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: recipe.rating.toFixed(1),
-            reviewCount: recipe.ratingCount,
-            bestRating: "5",
-            worstRating: "1",
-        },
-
         // Ingredients (flat string array, Google requirement)
         recipeIngredient: flattenIngredients(recipe),
 
