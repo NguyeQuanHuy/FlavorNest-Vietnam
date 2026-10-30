@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import type { Story } from '../page'
+import NewsletterForm from '@/components/NewsletterForm'
 
 // ── CategoryColor defined here (single source of truth) ───────────────────
 export type CategoryColor = 'amber' | 'forest' | 'brown'
@@ -198,7 +199,6 @@ function StoryCard({ story }: { story: Story }) {
 //  NewsletterBanner (form is wired up in step 4, once Resend + a domain exist)
 // ─────────────────────────────────────────────────────────────────────────────
 function NewsletterBanner() {
-    const [done, setDone] = useState(false)
     return (
         <section className="px-5 pb-20 pt-6">
             <div className="mx-auto grid max-w-6xl gap-6 rounded-[20px] border border-[rgba(75,46,26,0.09)] bg-white px-6 py-10 sm:px-12 md:grid-cols-[1.2fr_1fr] md:items-center">
@@ -206,25 +206,7 @@ function NewsletterBanner() {
                     <h2 className="font-display text-3xl font-bold text-[#2D1A0E]">New stories in your inbox</h2>
                     <p className="mt-2 text-[15px] text-[rgba(75,46,26,0.65)]">The people and places behind Vietnamese food. No spam, unsubscribe anytime.</p>
                 </div>
-                {done ? (
-                    <p className="rounded-xl bg-[#FAF6F0] px-5 py-4 text-sm font-medium text-[#4B2E1A]">
-                        Thanks for your interest! Our newsletter is launching soon. Check back here in a few weeks.
-                    </p>
-                ) : (
-                    <form onSubmit={e => { e.preventDefault(); setDone(true) }} className="flex flex-col gap-3 sm:flex-row">
-                        <label htmlFor="stories-email" className="sr-only">Email address</label>
-                        <input
-                            id="stories-email"
-                            type="email"
-                            required
-                            placeholder="your@email.com"
-                            className="min-w-0 flex-1 rounded-xl border border-[rgba(75,46,26,0.15)] bg-[#FAFAF7] px-4 py-3.5 text-sm text-[#2D1A0E] outline-none transition placeholder:text-[rgba(75,46,26,0.4)] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/15"
-                        />
-                        <button type="submit" className="rounded-xl bg-[#2D1A0E] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#D97706]">
-                            Subscribe
-                        </button>
-                    </form>
-                )}
+                <NewsletterForm source="stories" />
             </div>
         </section>
     )

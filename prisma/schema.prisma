@@ -83,3 +83,29 @@ model Favorite {
   @@index([userId])
   @@map("favorites")
 }
+
+// ── FlavorNest: Newsletter ───────────────────────────────────
+// Double opt-in (DSGVO): a signup stays PENDING until the person clicks the
+// confirmation link. No newsletter is ever sent to PENDING addresses.
+enum SubscriberStatus {
+  PENDING
+  CONFIRMED
+  UNSUBSCRIBED
+}
+
+model Subscriber {
+  id           String           @id @default(cuid())
+  email        String           @unique
+  status       SubscriberStatus @default(PENDING)
+  source       String?          // where the form was: home, footer, stories
+  consentText  String           // exact wording the person agreed to
+  consentAt    DateTime         @default(now())
+  confirmToken String           @unique
+  unsubToken   String           @unique
+  confirmedAt  DateTime?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  @@index([status])
+  @@map("subscribers")
+}

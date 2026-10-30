@@ -1,28 +1,9 @@
 "use client"
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export default function NewsletterSection() {
-    const [email, setEmail] = useState('')
-    const [done, setDone] = useState(false)
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState('')
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        if (!email.includes('@')) {
-            setError('Please enter a valid email address.')
-            return
-        }
-        setLoading(true)
-        setError('')
-        // TODO (step 4): send the email to /api/newsletter once Resend + domain are set up
-        await new Promise(r => setTimeout(r, 600))
-        setLoading(false)
-        setDone(true)
-    }
-
     return (
         <section className="bg-[#F5EDE3] px-5 py-16 sm:py-20 lg:px-8" aria-labelledby="newsletter-heading">
             <motion.div
@@ -49,36 +30,7 @@ export default function NewsletterSection() {
 
                     {/* Form */}
                     <div>
-                        {done ? (
-                            <motion.p
-                                initial={{ opacity: 0, y: 6 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="rounded-xl bg-[#FAF6F0] px-5 py-4 text-sm font-medium leading-relaxed text-[#4B2E1A]"
-                            >
-                                Thanks for your interest! Our newsletter is launching soon. Check back here in a few weeks.
-                            </motion.p>
-                        ) : (
-                            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
-                                <label htmlFor="nl-email" className="sr-only">Email address</label>
-                                <input
-                                    id="nl-email"
-                                    type="email"
-                                    value={email}
-                                    onChange={e => { setEmail(e.target.value); setError('') }}
-                                    placeholder="your@email.com"
-                                    autoComplete="email"
-                                    className="w-full rounded-xl border border-[rgba(75,46,26,0.15)] bg-[#FAFAF7] px-4 py-3.5 text-sm text-[#2D1A0E] outline-none transition placeholder:text-[rgba(75,46,26,0.4)] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/15"
-                                />
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className="w-full rounded-xl bg-[#2D1A0E] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#D97706] disabled:opacity-60"
-                                >
-                                    {loading ? 'Subscribing…' : 'Subscribe'}
-                                </button>
-                                {error && <p className="text-xs text-red-600">{error}</p>}
-                            </form>
-                        )}
+                        <NewsletterForm source="home" />
                     </div>
                 </div>
             </motion.div>

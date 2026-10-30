@@ -4,6 +4,7 @@
  */
 'use client'
 import Link from 'next/link'
+import NewsletterForm from '@/components/NewsletterForm'
 
 const RECIPE_LINKS = [
     { label: 'Breakfast', href: '/recipes/breakfast' },
@@ -152,15 +153,8 @@ export default function Footer() {
                             Get our best Vietnamese recipes delivered before they go live.
                         </p>
                     </div>
-                    <div className="footer-newsletter-inputs">
-                        <input
-                            type="email"
-                            placeholder="your@email.com"
-                            style={{ padding: '12px 18px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.06)', color: 'white', fontSize: 14, fontFamily: 'inherit', outline: 'none' }}
-                        />
-                        <button style={{ padding: '12px 24px', borderRadius: 100, background: '#D97706', color: 'white', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer', fontFamily: 'inherit', whiteSpace: 'nowrap' }}>
-                            Subscribe →
-                        </button>
+                    <div className="w-full md:max-w-[440px]">
+                        <NewsletterForm source="footer" tone="dark" layout="row" />
                     </div>
                 </div>
             </div>
