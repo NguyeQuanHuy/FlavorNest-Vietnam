@@ -17,6 +17,7 @@ import { useSession, signOut } from "next-auth/react";
 import { isAdmin } from "@/lib/admin";
 import SearchModal from "./SearchModal";
 import LanguagePicker from "./LanguagePicker";
+import LanguageMenu from "./LanguageMenu";
 import { useFavorites } from "@/hooks/useFavorites";
 
 // Các trang có background sáng — navbar luôn dùng dark mode
@@ -250,6 +251,9 @@ export default function Navbar() {
             >
               <FNIcon name="search" size={16} />
             </button>
+
+            {/* ── Language (desktop) ── */}
+            <LanguageMenu />
 
             {/* ── Favorites heart icon ── */}
             <Link
