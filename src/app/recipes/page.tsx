@@ -10,6 +10,7 @@ import { Suspense } from 'react'
 import fs from 'fs'
 import path from 'path'
 import RecipesClient from './_components/RecipesClient'
+import { isSharp } from '@/lib/image-quality'
 import { getAllRecipes } from '@/data/index'
 import { STORIES } from '@/data/stories-data'
 import { getSiteStats } from '@/lib/site-stats'
@@ -30,11 +31,19 @@ function slugsWithImage(): string[] {
     ]
 }
 
+function slugsWithSharpImage(): string[] {
+    return [
+        ...getAllRecipes().filter(r => isSharp(r.image)).map(r => r.slug),
+        ...STORIES.filter(s => isSharp(s.image)).map(s => `stories/${s.slug}`),
+    ]
+}
+
 export default function RecipesPage() {
     const withImage = slugsWithImage()
+    const sharpImage = slugsWithSharpImage()
     return (
         <Suspense fallback={<div className="min-h-screen" style={{ background: '#FBF8F4' }} />}>
-            <RecipesClient withImage={withImage} recipeCount={getSiteStats().recipes} />
+            <RecipesClient withImage={withImage} sharpImage={sharpImage} recipeCount={getSiteStats().recipes} />
         </Suspense>
     )
 }

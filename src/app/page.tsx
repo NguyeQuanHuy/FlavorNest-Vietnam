@@ -51,6 +51,7 @@ import Image from "next/image";
 import TrendingSection, { type TrendingItem } from './_sections/TrendingSection'
 import { getSiteStats } from '@/lib/site-stats'
 import { getAllRecipes } from '@/data/index'
+import { isSharp } from '@/lib/image-quality'
 
 // ── Trending this week: best-rated + most-reviewed recipes, rotated weekly ──
 function isoWeek(d = new Date()): number {
@@ -67,6 +68,7 @@ function getTrending(count = 8): TrendingItem[] {
   const pool = getAllRecipes()
     .filter(r => r.image?.startsWith('/') && fs.existsSync(path.join(pub, r.image)))
     .filter(r => fs.existsSync(path.join(recipesDir, r.slug)))
+    .filter(r => isSharp(r.image)) // big cards: only high-resolution photos
     .map(r => ({ r, score: parseFloat(r.rating || '0') * Math.log10((r.reviews || 0) + 10) }))
     .sort((a, b) => b.score - a.score)
     .slice(0, 40)
@@ -114,6 +116,7 @@ function pickFeatured(count = 8) {
     const own = ownPhoto(r0.slug)
     const r = own ? { ...r0, image: own } : r0
     if (!r.image?.startsWith('/') || !fs.existsSync(path.join(pub, r.image))) continue
+    if (!isSharp(r.image)) continue // never blow up a small photo on the homepage
     const file = path.basename(r.image)
     const slugW = words(r.slug)
     if (![...words(file)].some(w => slugW.has(w))) continue          // photo of a different dish

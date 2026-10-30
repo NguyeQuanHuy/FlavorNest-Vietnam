@@ -117,8 +117,11 @@ function NoPhoto({ title, subtitle }: { title: string; subtitle: string }) {
     );
 }
 
-export default function RecipesClient({ withImage, recipeCount }: { withImage: string[]; recipeCount: number }) {
+export default function RecipesClient({ withImage, sharpImage = [], recipeCount }: { withImage: string[]; sharpImage?: string[]; recipeCount: number }) {
     const hasImg = useMemo(() => new Set(withImage), [withImage]);
+    const sharp = useMemo(() => new Set(sharpImage), [sharpImage]);
+    // 0 = crisp photo, 1 = small photo, 2 = no photo yet
+    const tier = useCallback((slug: string) => (sharp.has(slug) ? 0 : hasImg.has(slug) ? 1 : 2), [sharp, hasImg]);
     const searchParams = useSearchParams();
     const router = useRouter();
     const urlSearch = searchParams.get("search") ?? "";
@@ -213,13 +216,13 @@ export default function RecipesClient({ withImage, recipeCount }: { withImage: s
             return catMatch && regionMatch && searchMatch;
         }).sort((a, b) => {
             // recipes with a real photo first, so the grid never opens on blank tiles
-            const ia = hasImg.has(a.slug) ? 0 : 1, ib = hasImg.has(b.slug) ? 0 : 1;
+            const ia = tier(a.slug), ib = tier(b.slug);
             if (ia !== ib) return ia - ib;
             if (sortBy === 'az') return a.title.localeCompare(b.title);
             if (sortBy === 'quickest') return parseInt(a.time) - parseInt(b.time);
             return 0; // keep the curated catalogue order
         });
-    }, [activeCategory, activeRegion, localQuery, sortBy, hasImg]);
+    }, [activeCategory, activeRegion, localQuery, sortBy, tier]);
     useEffect(() => { setPage(1); setShown(PER_PAGE); }, [activeCategory, activeRegion, localQuery, sortBy]);
 
     const clearSearch = () => { setLocalQuery(""); router.replace("/recipes"); };

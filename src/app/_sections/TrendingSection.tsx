@@ -89,7 +89,8 @@ export default function TrendingSection({ items, stats, week }: { items: Trendin
                                         src={r.image}
                                         alt={r.title}
                                         fill
-                                        sizes="(max-width: 640px) 72vw, (max-width: 1024px) 50vw, 300px"
+                                        sizes="(max-width: 640px) 72vw, (max-width: 1024px) 50vw, 360px"
+                                        quality={85}
                                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                                     />
                                     <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(20,11,5,0.85) 0%, rgba(20,11,5,0.15) 45%, transparent 70%)' }} />
