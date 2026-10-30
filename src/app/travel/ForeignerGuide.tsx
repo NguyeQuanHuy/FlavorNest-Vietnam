@@ -7,6 +7,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
     MessageCircle, ShieldAlert, Wallet, Bike, Plane, Volume2, X, Phone, Droplets,
@@ -100,6 +101,9 @@ export default function ForeignerGuide() {
                 <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.65)' }}>
                     Ten words that get you fed, cards to show when you have an allergy, and the practical things nobody tells you before you land.
                 </p>
+                <Link href="/menu-decoder" className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[14px] font-semibold shadow-[0_8px_20px_-12px_rgba(45,26,14,0.4)] transition-transform hover:-translate-y-0.5" style={{ color: '#2D1A0E', textDecoration: 'none' }}>
+                    🍜 Can’t read the menu? Try the <span style={{ color: '#D97706' }}>Menu Decoder →</span>
+                </Link>
 
                 {/* tabs */}
                 <div role="tablist" aria-label="Survival kit topics" className="-mx-5 mt-8 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0 [&::-webkit-scrollbar]:hidden">

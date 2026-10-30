@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         entry('/how-to', 0.8, 'weekly'),
         entry('/stories', 0.8, 'weekly'),
         entry('/ingredients', 0.8),
+        entry('/menu-decoder', 0.8),
         entry('/travel', 0.7),
         entry('/about', 0.5, 'yearly'),
 

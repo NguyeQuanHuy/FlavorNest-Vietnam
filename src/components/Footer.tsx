@@ -245,6 +245,7 @@ export default function Footer() {
                             {[
                                 { label: 'About FlavorNest', href: '/stories/about' },
                                 { label: 'All Recipes', href: '/recipes' },
+                                { label: 'Menu Decoder', href: '/menu-decoder' },
                                 { label: 'Travel Guide', href: '/stories/travel' },
                                 { label: 'My Account', href: '/account' },
                                 { label: 'Privacy Policy', href: '/privacy' },
