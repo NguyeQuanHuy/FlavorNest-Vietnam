@@ -7,6 +7,7 @@ import { Playfair_Display, DM_Sans, Manrope } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
 import { FavoritesProvider } from "@/context/FavoritesContext";
+import SiteTranslate from "@/components/SiteTranslate";
 
 // ── Display font — editorial serif for headings ──
 const playfair = Playfair_Display({
@@ -122,6 +123,7 @@ export default function RootLayout({
             <Footer />
           </FavoritesProvider>
         </AuthProvider>
+        <SiteTranslate />
         <GoogleAnalytics gaId="G-C13NDX0TWN" />
       </body>
     </html>

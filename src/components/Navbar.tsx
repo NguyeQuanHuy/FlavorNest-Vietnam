@@ -16,6 +16,7 @@ import StoriesDropdown from "./StoriesDropdown";
 import { useSession, signOut } from "next-auth/react";
 import { isAdmin } from "@/lib/admin";
 import SearchModal from "./SearchModal";
+import LanguagePicker from "./LanguagePicker";
 import { useFavorites } from "@/hooks/useFavorites";
 
 // Các trang có background sáng — navbar luôn dùng dark mode
@@ -83,7 +84,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 lg:px-8">
           {/* ── Logo ── */}
           <Link href="/" aria-label="FlavorNest Vietnam – Home"
-            className="flex items-center gap-1 group"
+            translate="no"
+            className="notranslate flex items-center gap-1 group"
             style={{ textDecoration: "none" }}
           >
             <img
@@ -739,6 +741,9 @@ export default function Navbar() {
                     style={{ height: 1, background: "rgba(75,46,26,0.06)" }}
                   />
                 </div>
+
+                {/* ── Language (machine translation) ── */}
+                <LanguagePicker />
               </div>
 
               {/* Bottom auth section */}
