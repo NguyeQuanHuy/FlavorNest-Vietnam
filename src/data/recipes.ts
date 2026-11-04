@@ -24,6 +24,7 @@ export type Category =
     | 'Vegetarian'
     | 'Chinese'
     | 'Japanese'
+    | 'Korean'
 
 export interface Recipe {
     slug: string
@@ -49,7 +50,7 @@ export interface Recipe {
 // ── Categories (for filter chips) ────────────────────────────────────────
 export const CATEGORIES: Category[] = [
     'All', 'Soup', 'Noodles', 'Street Food',
-    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian', 'Chinese', 'Japanese',
+    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian', 'Chinese', 'Japanese', 'Korean',
 ]
 
 // ── Recipe data ────────────────────────────────────────────────────────────
@@ -10440,6 +10441,220 @@ export const RECIPES: Recipe[] = [
         servings: 2, difficulty: 'Medium', category: 'Japanese',
         rating: 4.8, ratingCount: 213, tags: ['Rice Bowl', 'Pork', 'Crispy', 'Comfort'],
         isNew: true, calories: 620,
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    //  KOREAN CUISINE — Popular dishes in European restaurants
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // ── 925. Korean BBQ Bulgogi ────────────────────────────────────────────
+    {
+        slug: 'bulgogi',
+        title: 'Korean BBQ Bulgogi',
+        subtitle: '불고기 (Bulgogi)',
+        shortDescription: 'Paper-thin slices of beef marinated in a sweet soy-pear-sesame sauce and grilled until caramelized — the smoky, tender Korean BBQ dish that started it all in Europe.',
+        image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&auto=format&fit=crop',
+        imageAlt: 'Korean bulgogi beef being grilled with vegetables',
+        prepTime: '20 min', cookTime: '10 min', totalTime: '4 hrs',
+        servings: 4, difficulty: 'Easy', category: 'Korean',
+        rating: 4.9, ratingCount: 312, tags: ['BBQ', 'Beef', 'Grilled', 'Classic'],
+        isNew: true, calories: 420,
+    },
+
+    // ── 926. Bibimbap ─────────────────────────────────────────────────────
+    {
+        slug: 'bibimbap',
+        title: 'Dolsot Bibimbap',
+        subtitle: '돌솥비빔밥 (Dolsot Bibimbap)',
+        shortDescription: 'A sizzling stone bowl of rice topped with seasoned vegetables, gochujang, a fried egg and crispy rice crust — the colorful Korean rice bowl that looks as good as it tastes.',
+        image: 'https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=800&auto=format&fit=crop',
+        imageAlt: 'Bibimbap in a hot stone bowl with vegetables and egg',
+        prepTime: '30 min', cookTime: '15 min', totalTime: '45 min',
+        servings: 2, difficulty: 'Medium', category: 'Korean',
+        rating: 4.9, ratingCount: 287, tags: ['Rice Bowl', 'Vegetables', 'Spicy', 'Colorful'],
+        isNew: true, calories: 490,
+    },
+
+    // ── 927. Korean Fried Chicken ─────────────────────────────────────────
+    {
+        slug: 'korean-fried-chicken',
+        title: 'Korean Fried Chicken',
+        subtitle: '양념치킨 (Yangnyeom Chikin)',
+        shortDescription: 'Double-fried chicken wings coated in a sticky, sweet-spicy gochujang glaze — the ultra-crispy Korean fried chicken that took European cities by storm.',
+        image: 'https://images.unsplash.com/photo-1575932444877-5106bee2a599?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy Korean fried chicken wings with spicy glaze',
+        prepTime: '20 min', cookTime: '25 min', totalTime: '45 min',
+        servings: 4, difficulty: 'Medium', category: 'Korean',
+        rating: 4.9, ratingCount: 334, tags: ['Chicken', 'Crispy', 'Spicy', 'Popular'],
+        isNew: true, calories: 520,
+    },
+
+    // ── 928. Kimchi Jjigae ────────────────────────────────────────────────
+    {
+        slug: 'kimchi-jjigae',
+        title: 'Kimchi Stew',
+        subtitle: '김치찌개 (Kimchi Jjigae)',
+        shortDescription: 'A bubbling pot of fermented kimchi, pork belly and soft tofu in a fiery red broth — the ultimate Korean comfort stew that warms you from the inside out.',
+        image: 'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&auto=format&fit=crop',
+        imageAlt: 'Bubbling kimchi jjigae stew with tofu and pork',
+        prepTime: '10 min', cookTime: '25 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Easy', category: 'Korean',
+        rating: 4.8, ratingCount: 245, tags: ['Stew', 'Kimchi', 'Spicy', 'Comfort'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 929. Japchae ──────────────────────────────────────────────────────
+    {
+        slug: 'japchae',
+        title: 'Japchae Glass Noodles',
+        subtitle: '잡채 (Japchae)',
+        shortDescription: 'Chewy sweet potato glass noodles stir-fried with colorful vegetables, beef and sesame oil — the elegant Korean celebration dish served at every festive table.',
+        image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&auto=format&fit=crop',
+        imageAlt: 'Japchae glass noodles with vegetables and sesame seeds',
+        prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Medium', category: 'Korean',
+        rating: 4.7, ratingCount: 198, tags: ['Noodles', 'Glass Noodles', 'Festive', 'Sesame'],
+        isNew: true, calories: 360,
+    },
+
+    // ── 930. Tteokbokki ───────────────────────────────────────────────────
+    {
+        slug: 'tteokbokki',
+        title: 'Spicy Rice Cakes',
+        subtitle: '떡볶이 (Tteokbokki)',
+        shortDescription: 'Chewy cylinder rice cakes smothered in a sweet-spicy gochujang sauce with fish cakes and scallions — the addictive Korean street food snack.',
+        image: 'https://images.unsplash.com/photo-1635363638580-c2809d049eee?w=800&auto=format&fit=crop',
+        imageAlt: 'Tteokbokki spicy rice cakes in red gochujang sauce',
+        prepTime: '10 min', cookTime: '15 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Korean',
+        rating: 4.7, ratingCount: 267, tags: ['Street Food', 'Spicy', 'Rice Cake', 'Snack'],
+        isNew: true, calories: 350,
+    },
+
+    // ── 931. Samgyeopsal ──────────────────────────────────────────────────
+    {
+        slug: 'samgyeopsal',
+        title: 'Grilled Pork Belly BBQ',
+        subtitle: '삼겹살 (Samgyeopsal)',
+        shortDescription: 'Thick-cut pork belly grilled tableside and wrapped in lettuce with garlic, ssamjang and kimchi — the interactive Korean BBQ experience Europeans love.',
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop',
+        imageAlt: 'Samgyeopsal grilled pork belly with lettuce wraps',
+        prepTime: '10 min', cookTime: '15 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Korean',
+        rating: 4.8, ratingCount: 234, tags: ['BBQ', 'Pork Belly', 'Grilled', 'Interactive'],
+        isNew: true, calories: 550,
+    },
+
+    // ── 932. Sundubu Jjigae ───────────────────────────────────────────────
+    {
+        slug: 'sundubu-jjigae',
+        title: 'Soft Tofu Stew',
+        subtitle: '순두부찌개 (Sundubu Jjigae)',
+        shortDescription: 'A fiery stew of silky uncurdled tofu, seafood and vegetables in a spicy broth, crowned with a raw egg that cooks at the table — Korean soul food.',
+        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop',
+        imageAlt: 'Bubbling sundubu jjigae soft tofu stew with egg',
+        prepTime: '10 min', cookTime: '20 min', totalTime: '30 min',
+        servings: 2, difficulty: 'Easy', category: 'Korean',
+        rating: 4.7, ratingCount: 178, tags: ['Stew', 'Tofu', 'Spicy', 'Seafood'],
+        isNew: true, calories: 310,
+    },
+
+    // ── 933. Kimbap ───────────────────────────────────────────────────────
+    {
+        slug: 'kimbap',
+        title: 'Korean Seaweed Rice Rolls',
+        subtitle: '김밥 (Kimbap)',
+        shortDescription: 'Sesame-oil-seasoned rice rolled with pickled radish, spinach, egg and bulgogi in crispy seaweed — the Korean picnic staple that rivals sushi in European grab-and-go.',
+        image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&auto=format&fit=crop',
+        imageAlt: 'Sliced kimbap Korean seaweed rice rolls on a plate',
+        prepTime: '30 min', cookTime: '15 min', totalTime: '45 min',
+        servings: 4, difficulty: 'Medium', category: 'Korean',
+        rating: 4.7, ratingCount: 213, tags: ['Rice', 'Seaweed', 'Rolls', 'Portable'],
+        isNew: true, calories: 340,
+    },
+
+    // ── 934. Kimchi Fried Rice ─────────────────────────────────────────────
+    {
+        slug: 'kimchi-fried-rice',
+        title: 'Kimchi Fried Rice',
+        subtitle: '김치볶음밥 (Kimchi Bokkeumbap)',
+        shortDescription: 'Day-old rice wok-fried with chopped aged kimchi, gochujang and topped with a sunny-side-up egg — the quick, punchy Korean weeknight meal everyone craves.',
+        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&auto=format&fit=crop',
+        imageAlt: 'Kimchi fried rice topped with a fried egg',
+        prepTime: '5 min', cookTime: '10 min', totalTime: '15 min',
+        servings: 2, difficulty: 'Easy', category: 'Korean',
+        rating: 4.8, ratingCount: 256, tags: ['Rice', 'Kimchi', 'Quick', 'Egg'],
+        isNew: true, calories: 430,
+    },
+
+    // ── 935. Haemul Pajeon ────────────────────────────────────────────────
+    {
+        slug: 'haemul-pajeon',
+        title: 'Seafood Scallion Pancake',
+        subtitle: '해물파전 (Haemul Pajeon)',
+        shortDescription: 'A crispy-edged savory pancake loaded with shrimp, squid and long scallions, served with a tangy soy dipping sauce — the rainy-day Korean classic.',
+        image: 'https://images.unsplash.com/photo-1582452919408-8bbee8e76f44?w=800&auto=format&fit=crop',
+        imageAlt: 'Haemul pajeon seafood scallion pancake with dipping sauce',
+        prepTime: '15 min', cookTime: '10 min', totalTime: '25 min',
+        servings: 2, difficulty: 'Medium', category: 'Korean',
+        rating: 4.7, ratingCount: 189, tags: ['Pancake', 'Seafood', 'Crispy', 'Appetizer'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 936. Dakgalbi ─────────────────────────────────────────────────────
+    {
+        slug: 'dakgalbi',
+        title: 'Spicy Stir-Fried Chicken',
+        subtitle: '닭갈비 (Dakgalbi)',
+        shortDescription: 'Chunky chicken, sweet potato and cabbage stir-fried in a fiery gochujang sauce on a hot plate, finished with melted cheese — the Chuncheon specialty Europeans adore.',
+        image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&auto=format&fit=crop',
+        imageAlt: 'Dakgalbi spicy stir-fried chicken with cheese and vegetables',
+        prepTime: '15 min', cookTime: '20 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Easy', category: 'Korean',
+        rating: 4.8, ratingCount: 201, tags: ['Chicken', 'Spicy', 'Cheese', 'Hot Plate'],
+        isNew: true, calories: 460,
+    },
+
+    // ── 937. Bossam ───────────────────────────────────────────────────────
+    {
+        slug: 'bossam',
+        title: 'Boiled Pork Belly Wraps',
+        subtitle: '보쌈 (Bossam)',
+        shortDescription: 'Tender slow-boiled pork belly sliced and wrapped in napa cabbage or perilla leaves with fresh oyster kimchi and ssamjang — Korean sharing food at its finest.',
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop',
+        imageAlt: 'Bossam boiled pork belly with wrapping leaves and condiments',
+        prepTime: '15 min', cookTime: '1 hr 30 min', totalTime: '1 hr 45 min',
+        servings: 6, difficulty: 'Medium', category: 'Korean',
+        rating: 4.8, ratingCount: 176, tags: ['Pork Belly', 'Wraps', 'Sharing', 'Festive'],
+        isNew: true, calories: 480,
+    },
+
+    // ── 938. Korean Corn Dog ───────────────────────────────────────────────
+    {
+        slug: 'korean-corn-dog',
+        title: 'Korean Cheese Corn Dog',
+        subtitle: '핫도그 (Hatdogeu)',
+        shortDescription: 'Mozzarella and sausage on a stick coated in a sweet, crispy batter and rolled in sugar — the viral Korean street food that took European social media by storm.',
+        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        imageAlt: 'Korean cheese corn dog with stretchy mozzarella',
+        prepTime: '20 min', cookTime: '10 min', totalTime: '30 min',
+        servings: 4, difficulty: 'Medium', category: 'Korean',
+        rating: 4.6, ratingCount: 289, tags: ['Street Food', 'Cheese', 'Crispy', 'Viral'],
+        isNew: true, calories: 410,
+    },
+
+    // ── 939. Jjajangmyeon ─────────────────────────────────────────────────
+    {
+        slug: 'jjajangmyeon',
+        title: 'Black Bean Sauce Noodles',
+        subtitle: '짜장면 (Jjajangmyeon)',
+        shortDescription: 'Chewy hand-pulled noodles drenched in a glossy, savory-sweet black bean sauce with diced pork and vegetables — Korea\'s beloved comfort noodle dish.',
+        image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop',
+        imageAlt: 'Jjajangmyeon noodles in black bean sauce with cucumber',
+        prepTime: '15 min', cookTime: '20 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Medium', category: 'Korean',
+        rating: 4.7, ratingCount: 198, tags: ['Noodles', 'Black Bean', 'Comfort', 'Pork'],
+        isNew: true, calories: 490,
     },
 
 ]
