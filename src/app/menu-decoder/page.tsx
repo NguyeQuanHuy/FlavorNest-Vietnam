@@ -3,6 +3,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata } from 'next'
+import fs from 'fs'
+import path from 'path'
+import PHOTO_CREDITS from '@/data/menu-photo-credits.json'
 import MenuDecoderClient, { type DishLinks } from './_components/MenuDecoderClient'
 import { DISHES } from '@/data/menu-decoder'
 import { getAllRecipes } from '@/data'
@@ -13,7 +16,7 @@ const URL = 'https://flavor-nest-vietnam.vercel.app/menu-decoder'
 export const metadata: Metadata = {
     title: 'Vietnamese Menu Decoder — What Every Dish Means (Phở, Bún, Cơm…)',
     description:
-        'Sitting in a Vietnamese restaurant? Type any dish name — Vietnamese, English or German — and see what it is, how it tastes, how to eat it, its usual allergens and how to order it.',
+        'Sitting in a Vietnamese restaurant? Scan the menu with your phone or type any dish name — Vietnamese, English or German — and see what it is, how it tastes, how to eat it, its usual allergens and how to order it.',
     alternates: { canonical: '/menu-decoder' },
     openGraph: {
         title: 'Vietnamese Menu Decoder',
@@ -23,18 +26,29 @@ export const metadata: Metadata = {
     },
 }
 
+const CREDITS = PHOTO_CREDITS as Record<string, { artist: string; license: string; source: string }>
+
 function buildLinks(): DishLinks {
     const recipes = new Map(getAllRecipes().map(r => [r.slug, r]))
+    const menuDir = path.join(process.cwd(), 'public/images/menu')
     const out: DishLinks = {}
     for (const d of DISHES) {
         const r = d.recipes.map(s => recipes.get(s)).find(Boolean)
-        if (!r) continue
-        const w = imageWidth(r.image)
-        out[d.id] = {
-            href: `/recipes/${r.slug}`,
-            image: w >= 160 ? r.image : undefined, // thumbnails
-            sharp: w >= 600,                       // sheet header
+        const link: DishLinks[string] = {}
+        if (r) {
+            const w = imageWidth(r.image)
+            link.href = `/recipes/${r.slug}`
+            link.image = w >= 160 ? r.image : undefined // thumbnails
+            link.sharp = w >= 600                       // sheet header
         }
+        // curated, sharp dish photo (scripts/fetch-menu-photos.mjs) wins over the recipe photo
+        if (fs.existsSync(path.join(menuDir, `${d.id}.webp`))) {
+            link.image = `/images/menu/${d.id}.webp`
+            link.sharp = true
+            const c = CREDITS[d.id]
+            if (c) link.credit = { ...c, artist: c.artist.replace(/\s*\((thảo luận|talk)\)/i, '') }
+        }
+        if (link.href || link.image) out[d.id] = link
     }
     return out
 }

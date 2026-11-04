@@ -11,13 +11,14 @@ import { useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, X, ArrowRight, ChevronRight, Volume2, UtensilsCrossed, Sparkles, MessageCircle, AlertTriangle, Flame } from 'lucide-react'
+import { Search, X, ArrowRight, ChevronRight, Volume2, UtensilsCrossed, Sparkles, MessageCircle, AlertTriangle, Flame, Camera } from 'lucide-react'
+import MenuScanner from './MenuScanner'
 import {
     DISHES, SECTIONS, ALLERGEN_INFO, MENU_WORDS, WORD_GROUPS,
     scoreDish, decodeWords, type Dish, type Section,
 } from '@/data/menu-decoder'
 
-export type DishLinks = Record<string, { href?: string; image?: string; sharp?: boolean }>
+export type DishLinks = Record<string, { href?: string; image?: string; sharp?: boolean; credit?: { artist: string; license: string; source: string } }>
 
 const serif = { fontFamily: "'Playfair Display', Georgia, serif" }
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
@@ -99,6 +100,7 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
     const [section, setSection] = useState<Section | 'All'>('All')
     const [filter, setFilter] = useState<Filter>('all')
     const [open, setOpen] = useState<Dish | null>(null)
+    const [scanOpen, setScanOpen] = useState(false)
     const { canSpeak, speak } = useVietnameseVoice()
 
     // Deep link: /menu-decoder?q=pho%20tai
@@ -155,7 +157,7 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
                         Menu <em style={{ color: '#F59E0B' }}>Decoder</em>
                     </h1>
                     <p className="mt-4 max-w-[560px] text-[16px] leading-relaxed" style={{ color: 'rgba(245,237,227,0.72)' }}>
-                        Type any dish from the menu — in Vietnamese, English or German. We tell you what it is, how it tastes, how to eat it and what it usually contains.
+                        Type a dish — or snap a photo of the whole menu. In Vietnamese, English or German, we tell you what each dish is, how it tastes, how to eat it and what it usually contains.
                     </p>
 
                     <div className="relative mt-7">
@@ -167,10 +169,26 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
                             autoComplete="off" autoCapitalize="off" spellCheck={false} enterKeyHint="search"
                             className="h-[60px] w-full rounded-2xl border-0 bg-white pl-[52px] pr-12 text-[17px] text-[#2D1A0E] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
                         />
-                        {query && (
+                        {query ? (
                             <button onClick={() => setQuery('')} aria-label="Clear" className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full hover:bg-[#F5EDE3]" style={{ color: '#8A6E58' }}><X size={17} /></button>
+                        ) : (
+                            <button onClick={() => setScanOpen(true)} aria-label="Scan a menu with your camera" title="Scan a menu" className="absolute right-2.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-xl transition-colors hover:bg-[#FEF3C7]" style={{ color: '#B45309' }}><Camera size={21} /></button>
                         )}
                     </div>
+
+                    {/* ── Scan a menu (photo → dishes) ── */}
+                    <button
+                        onClick={() => setScanOpen(true)}
+                        className="group mt-3 flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left transition-colors hover:bg-white/15"
+                        style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(245,158,11,0.35)' }}
+                    >
+                        <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full" style={{ background: '#D97706', boxShadow: '0 8px 20px -8px rgba(217,119,6,0.8)' }}><Camera size={19} color="#fff" /></span>
+                        <span className="min-w-0 flex-1">
+                            <span className="block text-[15px] font-bold text-white">Scan the whole menu</span>
+                            <span className="block text-[12.5px]" style={{ color: 'rgba(245,237,227,0.65)' }}>Take a photo — we explain every dish, with pictures</span>
+                        </span>
+                        <ChevronRight size={18} className="flex-shrink-0 transition-transform group-hover:translate-x-0.5" style={{ color: '#F59E0B' }} />
+                    </button>
 
                     {!query && (
                         <div className="mt-4 flex flex-wrap gap-2">
@@ -358,16 +376,20 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
                 </div>
             </section>
 
+            {/* ═══ MENU SCANNER ═══ */}
+            <MenuScanner open={scanOpen} onClose={() => setScanOpen(false)} onOpenDish={setOpen} links={links} />
+
             {/* ═══ DISH SHEET ═══ */}
             <AnimatePresence>
                 {open && (() => {
                     const link = links[open.id]
                     return (
                         <>
-                            <motion.div className="fixed inset-0 z-[120]" style={{ background: 'rgba(20,11,5,0.5)', backdropFilter: 'blur(3px)' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setOpen(null)} />
+                            <motion.div className="fixed inset-0 z-[130]" style={{ background: 'rgba(20,11,5,0.5)', backdropFilter: 'blur(3px)' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setOpen(null)} />
                             <motion.div
                                 role="dialog" aria-modal="true" aria-label={open.vi}
-                                className="fixed inset-x-0 bottom-0 z-[121] flex max-h-[92vh] flex-col overflow-hidden rounded-t-[28px] bg-[#FBF8F4] sm:inset-auto sm:left-1/2 sm:top-1/2 sm:max-h-[88vh] sm:w-[580px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[28px]"
+                                data-dish-sheet
+                                className="fixed inset-x-0 bottom-0 z-[131] flex max-h-[92vh] flex-col overflow-hidden rounded-t-[28px] bg-[#FBF8F4] sm:inset-auto sm:left-1/2 sm:top-1/2 sm:max-h-[88vh] sm:w-[580px] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-[28px]"
                                 initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 40, opacity: 0 }} transition={{ duration: 0.3, ease: EASE }}
                                 style={{ fontFamily: "'DM Sans', sans-serif" }}
                             >
@@ -376,6 +398,11 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
                                         ? <Image src={link.image} alt={open.vi} fill sizes="(max-width:640px) 100vw, 580px" className="object-cover" />
                                         : <span className="absolute right-6 top-5 text-[88px] opacity-90" aria-hidden>{open.emoji}</span>}
                                     <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(20,11,5,0.8), transparent 65%)' }} />
+                                    {link?.credit && link.sharp && (
+                                        <a href={link.credit.source} target="_blank" rel="noopener noreferrer" className="absolute left-3 top-3 max-w-[60%] truncate rounded-full bg-black/35 px-2.5 py-1 text-[10.5px] text-white/85 backdrop-blur hover:text-white">
+                                            Photo: {link.credit.artist} · {link.credit.license}
+                                        </a>
+                                    )}
                                     <button onClick={() => setOpen(null)} aria-label="Close" className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 backdrop-blur" style={{ color: '#2D1A0E' }}><X size={18} /></button>
                                     <div className="absolute inset-x-0 bottom-0 flex items-end gap-3 p-5">
                                         <div className="min-w-0 flex-1">
