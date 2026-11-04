@@ -22,6 +22,7 @@ export type Category =
     | 'Rolls'
     | 'Dessert'
     | 'Vegetarian'
+    | 'Chinese'
 
 export interface Recipe {
     slug: string
@@ -47,7 +48,7 @@ export interface Recipe {
 // ── Categories (for filter chips) ────────────────────────────────────────
 export const CATEGORIES: Category[] = [
     'All', 'Soup', 'Noodles', 'Street Food',
-    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian',
+    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian', 'Chinese',
 ]
 
 // ── Recipe data ────────────────────────────────────────────────────────────
@@ -10010,6 +10011,220 @@ export const RECIPES: Recipe[] = [
         servings: 4, difficulty: 'Easy', category: 'Soup',
         rating: 4.7, ratingCount: 167, tags: ['Southern', 'Duck', 'Porridge', 'Comfort Food'],
         isNew: true, calories: 390,
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    //  CHINESE CUISINE — Popular dishes in European restaurants
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // ── 895. Kung Pao Chicken ──────────────────────────────────────────────
+    {
+        slug: 'kung-pao-chicken',
+        title: 'Kung Pao Chicken',
+        subtitle: '宫保鸡丁 (Gōng Bǎo Jī Dīng)',
+        shortDescription: 'Tender diced chicken stir-fried with roasted peanuts, dried chilies and Sichuan peppercorns in a sweet-savory-spicy sauce — the iconic Sichuan classic loved worldwide.',
+        image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop',
+        imageAlt: 'Kung Pao chicken with peanuts and dried chilies in a wok',
+        prepTime: '20 min', cookTime: '10 min', totalTime: '30 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.8, ratingCount: 312, tags: ['Sichuan', 'Spicy', 'Chicken', 'Wok'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 896. Sweet and Sour Pork ──────────────────────────────────────────
+    {
+        slug: 'sweet-and-sour-pork',
+        title: 'Sweet and Sour Pork',
+        subtitle: '糖醋里脊 (Táng Cù Lǐ Jǐ)',
+        shortDescription: 'Crispy battered pork pieces tossed in a glossy tangy sauce with bell peppers and pineapple — the most ordered Chinese dish in European restaurants.',
+        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy sweet and sour pork with peppers and pineapple',
+        prepTime: '25 min', cookTime: '15 min', totalTime: '40 min',
+        servings: 4, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.7, ratingCount: 287, tags: ['Cantonese', 'Crispy', 'Pork', 'Classic'],
+        isNew: true, calories: 450,
+    },
+
+    // ── 897. Peking Duck ──────────────────────────────────────────────────
+    {
+        slug: 'peking-duck',
+        title: 'Peking Duck',
+        subtitle: '北京烤鸭 (Běijīng Kǎo Yā)',
+        shortDescription: 'Lacquered roast duck with impossibly crispy skin, carved tableside and wrapped in thin pancakes with hoisin sauce and scallion — the crown jewel of Chinese cuisine.',
+        image: 'https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=800&auto=format&fit=crop',
+        imageAlt: 'Peking duck with crispy skin served with pancakes and hoisin sauce',
+        prepTime: '24 hrs', cookTime: '1 hr', totalTime: '25 hrs',
+        servings: 6, difficulty: 'Hard', category: 'Chinese',
+        rating: 4.9, ratingCount: 245, tags: ['Beijing', 'Duck', 'Festive', 'Heritage'],
+        isNew: true, calories: 520,
+    },
+
+    // ── 898. Mapo Tofu ────────────────────────────────────────────────────
+    {
+        slug: 'mapo-tofu',
+        title: 'Mapo Tofu',
+        subtitle: '麻婆豆腐 (Má Pó Dòu Fǔ)',
+        shortDescription: 'Silken tofu cubes swimming in a fiery chili-bean sauce with ground pork, Sichuan peppercorn and fermented black beans — the numbing-spicy masterpiece of Sichuan.',
+        image: 'https://images.unsplash.com/photo-1582452919408-8bbee8e76f44?w=800&auto=format&fit=crop',
+        imageAlt: 'Mapo tofu in spicy red chili bean sauce with ground pork',
+        prepTime: '10 min', cookTime: '15 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.8, ratingCount: 198, tags: ['Sichuan', 'Spicy', 'Tofu', 'Quick'],
+        isNew: true, calories: 280,
+    },
+
+    // ── 899. Char Siu (BBQ Pork) ──────────────────────────────────────────
+    {
+        slug: 'char-siu',
+        title: 'Cantonese BBQ Pork',
+        subtitle: '叉烧 (Chā Shāo)',
+        shortDescription: 'Honey-glazed roasted pork with a deep mahogany char and melt-in-your-mouth tenderness — the Cantonese barbecue classic that anchors rice plates across Europe.',
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop',
+        imageAlt: 'Glistening char siu Cantonese BBQ pork sliced on a plate',
+        prepTime: '30 min', cookTime: '40 min', totalTime: '4 hrs',
+        servings: 6, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.9, ratingCount: 234, tags: ['Cantonese', 'BBQ', 'Pork', 'Glazed'],
+        isNew: true, calories: 410,
+    },
+
+    // ── 900. Chow Mein ────────────────────────────────────────────────────
+    {
+        slug: 'chow-mein',
+        title: 'Chow Mein Stir-Fried Noodles',
+        subtitle: '炒面 (Chǎo Miàn)',
+        shortDescription: 'Crispy egg noodles stir-fried with vegetables, chicken and soy sauce at screaming-hot wok heat — the smoky charred noodle dish that defines Chinese takeaway.',
+        image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&auto=format&fit=crop',
+        imageAlt: 'Chow mein stir-fried noodles with vegetables and chicken',
+        prepTime: '15 min', cookTime: '10 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.7, ratingCount: 276, tags: ['Noodles', 'Wok', 'Quick', 'Chicken'],
+        isNew: true, calories: 420,
+    },
+
+    // ── 901. Xiao Long Bao ────────────────────────────────────────────────
+    {
+        slug: 'xiao-long-bao',
+        title: 'Shanghai Soup Dumplings',
+        subtitle: '小笼包 (Xiǎo Lóng Bāo)',
+        shortDescription: 'Delicate pleated dumplings hiding a burst of hot pork broth inside a paper-thin wrapper — the Shanghai dumpling art that has conquered fine dining worldwide.',
+        image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&auto=format&fit=crop',
+        imageAlt: 'Xiao long bao soup dumplings in a bamboo steamer',
+        prepTime: '1 hr', cookTime: '10 min', totalTime: '3 hrs',
+        servings: 4, difficulty: 'Hard', category: 'Chinese',
+        rating: 4.9, ratingCount: 203, tags: ['Shanghai', 'Dumplings', 'Dim Sum', 'Steamed'],
+        isNew: true, calories: 350,
+    },
+
+    // ── 902. Dan Dan Noodles ──────────────────────────────────────────────
+    {
+        slug: 'dan-dan-noodles',
+        title: 'Dan Dan Noodles',
+        subtitle: '担担面 (Dàn Dàn Miàn)',
+        shortDescription: 'Thin wheat noodles drenched in a creamy sesame-chili sauce with savory pork mince and pickled mustard greens — Sichuan street food at its addictive best.',
+        image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop',
+        imageAlt: 'Dan dan noodles with chili oil sesame sauce and minced pork',
+        prepTime: '15 min', cookTime: '15 min', totalTime: '30 min',
+        servings: 4, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.8, ratingCount: 178, tags: ['Sichuan', 'Noodles', 'Spicy', 'Street Food'],
+        isNew: true, calories: 460,
+    },
+
+    // ── 903. Wonton Soup ──────────────────────────────────────────────────
+    {
+        slug: 'wonton-soup',
+        title: 'Cantonese Wonton Soup',
+        subtitle: '云吞汤 (Yún Tūn Tāng)',
+        shortDescription: 'Silky shrimp-and-pork wontons floating in a clear chicken broth with bok choy and a drizzle of sesame oil — the elegant Cantonese comfort soup.',
+        image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of wonton soup with shrimp dumplings and bok choy',
+        prepTime: '30 min', cookTime: '10 min', totalTime: '40 min',
+        servings: 4, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.7, ratingCount: 189, tags: ['Cantonese', 'Soup', 'Dumplings', 'Comfort'],
+        isNew: true, calories: 290,
+    },
+
+    // ── 904. Lemon Chicken ────────────────────────────────────────────────
+    {
+        slug: 'chinese-lemon-chicken',
+        title: 'Chinese Lemon Chicken',
+        subtitle: '柠檬鸡 (Níng Méng Jī)',
+        shortDescription: 'Crispy golden-battered chicken pieces glazed in a bright tangy lemon sauce — the European Chinese restaurant staple that never fails to satisfy.',
+        image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy Chinese lemon chicken with glossy lemon glaze',
+        prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.6, ratingCount: 215, tags: ['Cantonese', 'Crispy', 'Chicken', 'Tangy'],
+        isNew: true, calories: 400,
+    },
+
+    // ── 905. Beef with Broccoli ───────────────────────────────────────────
+    {
+        slug: 'beef-broccoli',
+        title: 'Beef with Broccoli',
+        subtitle: '西兰花牛肉 (Xī Lán Huā Niú Ròu)',
+        shortDescription: 'Tender sliced beef and crisp-tender broccoli tossed in a savory oyster-soy glaze — the simple wok classic that outsells everything on European Chinese menus.',
+        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&auto=format&fit=crop',
+        imageAlt: 'Beef and broccoli stir fry with oyster sauce glaze',
+        prepTime: '15 min', cookTime: '10 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.7, ratingCount: 256, tags: ['Wok', 'Beef', 'Quick', 'Classic'],
+        isNew: true, calories: 360,
+    },
+
+    // ── 906. Fried Rice (Cantonese) ───────────────────────────────────────
+    {
+        slug: 'cantonese-fried-rice',
+        title: 'Cantonese Egg Fried Rice',
+        subtitle: '蛋炒饭 (Dàn Chǎo Fàn)',
+        shortDescription: 'Day-old rice wok-tossed at blistering heat with eggs, char siu, shrimp and scallions — the deceptively simple dish that separates good cooks from great ones.',
+        image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&auto=format&fit=crop',
+        imageAlt: 'Cantonese egg fried rice with char siu and shrimp',
+        prepTime: '10 min', cookTime: '5 min', totalTime: '15 min',
+        servings: 4, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.8, ratingCount: 298, tags: ['Cantonese', 'Rice', 'Wok', 'Quick'],
+        isNew: true, calories: 430,
+    },
+
+    // ── 907. Hot and Sour Soup ────────────────────────────────────────────
+    {
+        slug: 'hot-and-sour-soup',
+        title: 'Hot and Sour Soup',
+        subtitle: '酸辣汤 (Suān Là Tāng)',
+        shortDescription: 'A warming silky soup with tofu, mushrooms, bamboo shoots and egg ribbons in a tangy vinegar-pepper broth — the starter that opens every Chinese banquet in Europe.',
+        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop',
+        imageAlt: 'Hot and sour soup with tofu mushrooms and egg ribbons',
+        prepTime: '15 min', cookTime: '15 min', totalTime: '30 min',
+        servings: 4, difficulty: 'Easy', category: 'Chinese',
+        rating: 4.6, ratingCount: 176, tags: ['Sichuan', 'Soup', 'Spicy', 'Starter'],
+        isNew: true, calories: 180,
+    },
+
+    // ── 908. Crispy Aromatic Duck ─────────────────────────────────────────
+    {
+        slug: 'crispy-aromatic-duck',
+        title: 'Crispy Aromatic Duck',
+        subtitle: '香酥鸭 (Xiāng Sū Yā)',
+        shortDescription: 'Five-spice marinated duck slow-steamed then deep-fried until shatteringly crispy, shredded and served with pancakes, hoisin and cucumber — the European Chinese restaurant showstopper.',
+        image: 'https://images.unsplash.com/photo-1432139509613-5c4255a1d197?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy aromatic duck with pancakes hoisin sauce and cucumber',
+        prepTime: '30 min', cookTime: '2 hrs', totalTime: '8 hrs',
+        servings: 4, difficulty: 'Hard', category: 'Chinese',
+        rating: 4.9, ratingCount: 221, tags: ['Duck', 'Crispy', 'Five-Spice', 'Festive'],
+        isNew: true, calories: 550,
+    },
+
+    // ── 909. General Tso Chicken ──────────────────────────────────────────
+    {
+        slug: 'general-tso-chicken',
+        title: 'General Tso Chicken',
+        subtitle: '左宗棠鸡 (Zuǒ Zōng Táng Jī)',
+        shortDescription: 'Crispy deep-fried chicken chunks tossed in a sticky sweet-spicy-tangy sauce with dried chilies and broccoli — the Chinese-American invention that conquered Europe.',
+        image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop',
+        imageAlt: 'General Tso chicken with crispy coating and sweet spicy sauce',
+        prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Medium', category: 'Chinese',
+        rating: 4.7, ratingCount: 243, tags: ['Crispy', 'Chicken', 'Sweet-Spicy', 'Popular'],
+        isNew: true, calories: 480,
     },
 
 ]
