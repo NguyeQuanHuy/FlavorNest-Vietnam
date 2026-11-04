@@ -23,6 +23,7 @@ export type Category =
     | 'Dessert'
     | 'Vegetarian'
     | 'Chinese'
+    | 'Japanese'
 
 export interface Recipe {
     slug: string
@@ -48,7 +49,7 @@ export interface Recipe {
 // ── Categories (for filter chips) ────────────────────────────────────────
 export const CATEGORIES: Category[] = [
     'All', 'Soup', 'Noodles', 'Street Food',
-    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian', 'Chinese',
+    'Rice', 'Grilled', 'Rolls', 'Dessert', 'Vegetarian', 'Chinese', 'Japanese',
 ]
 
 // ── Recipe data ────────────────────────────────────────────────────────────
@@ -10225,6 +10226,220 @@ export const RECIPES: Recipe[] = [
         servings: 4, difficulty: 'Medium', category: 'Chinese',
         rating: 4.7, ratingCount: 243, tags: ['Crispy', 'Chicken', 'Sweet-Spicy', 'Popular'],
         isNew: true, calories: 480,
+    },
+
+    // ═══════════════════════════════════════════════════════════════════════
+    //  JAPANESE CUISINE — Popular dishes in European restaurants
+    // ═══════════════════════════════════════════════════════════════════════
+
+    // ── 910. Salmon Sushi & Nigiri ─────────────────────────────────────────
+    {
+        slug: 'salmon-sushi-nigiri',
+        title: 'Salmon Sushi & Nigiri',
+        subtitle: 'サーモン寿司 (Sāmon Sushi)',
+        shortDescription: 'Buttery slices of fresh salmon draped over seasoned sushi rice — the single most popular sushi item across every European city from Berlin to Barcelona.',
+        image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&auto=format&fit=crop',
+        imageAlt: 'Fresh salmon nigiri sushi on a wooden board',
+        prepTime: '30 min', cookTime: '20 min', totalTime: '50 min',
+        servings: 4, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.9, ratingCount: 345, tags: ['Sushi', 'Salmon', 'Raw Fish', 'Classic'],
+        isNew: true, calories: 320,
+    },
+
+    // ── 911. Chicken Katsu Curry ───────────────────────────────────────────
+    {
+        slug: 'chicken-katsu-curry',
+        title: 'Chicken Katsu Curry',
+        subtitle: 'チキンカツカレー (Chikin Katsu Karē)',
+        shortDescription: 'Golden panko-crusted chicken cutlet served over fluffy rice with a rich, mildly sweet Japanese curry sauce — the comfort food that dominates European Japanese chains.',
+        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800&auto=format&fit=crop',
+        imageAlt: 'Chicken katsu curry with rice and golden cutlet',
+        prepTime: '20 min', cookTime: '30 min', totalTime: '50 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.8, ratingCount: 298, tags: ['Curry', 'Chicken', 'Crispy', 'Comfort'],
+        isNew: true, calories: 580,
+    },
+
+    // ── 912. Tonkotsu Ramen ───────────────────────────────────────────────
+    {
+        slug: 'tonkotsu-ramen',
+        title: 'Tonkotsu Pork Bone Ramen',
+        subtitle: '豚骨ラーメン (Tonkotsu Rāmen)',
+        shortDescription: 'A milky, collagen-rich pork bone broth simmered for 12 hours, poured over springy noodles and topped with chashu, soft egg and nori — ramen at its most luxurious.',
+        image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of tonkotsu ramen with chashu pork and soft boiled egg',
+        prepTime: '30 min', cookTime: '12 hrs', totalTime: '12 hrs 30 min',
+        servings: 4, difficulty: 'Hard', category: 'Japanese',
+        rating: 4.9, ratingCount: 267, tags: ['Ramen', 'Pork', 'Noodles', 'Slow-Cook'],
+        isNew: true, calories: 520,
+    },
+
+    // ── 913. Gyoza ────────────────────────────────────────────────────────
+    {
+        slug: 'gyoza',
+        title: 'Pan-Fried Gyoza Dumplings',
+        subtitle: '餃子 (Gyōza)',
+        shortDescription: 'Crispy-bottomed, juicy pork and cabbage dumplings with a golden crust and tender wrapper — the irresistible Japanese appetizer found on every izakaya menu in Europe.',
+        image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&auto=format&fit=crop',
+        imageAlt: 'Pan-fried gyoza dumplings with crispy golden bottoms',
+        prepTime: '40 min', cookTime: '10 min', totalTime: '50 min',
+        servings: 4, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.8, ratingCount: 289, tags: ['Dumplings', 'Pork', 'Crispy', 'Appetizer'],
+        isNew: true, calories: 340,
+    },
+
+    // ── 914. Teriyaki Chicken ─────────────────────────────────────────────
+    {
+        slug: 'teriyaki-chicken',
+        title: 'Teriyaki Chicken',
+        subtitle: '照り焼きチキン (Teriyaki Chikin)',
+        shortDescription: 'Juicy chicken thighs glazed in a glossy sweet soy-mirin-sake sauce until caramelized — the universal Japanese flavor that Europeans can not get enough of.',
+        image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&auto=format&fit=crop',
+        imageAlt: 'Teriyaki chicken with glossy glaze and sesame seeds',
+        prepTime: '10 min', cookTime: '20 min', totalTime: '30 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.7, ratingCount: 312, tags: ['Chicken', 'Sweet', 'Glazed', 'Quick'],
+        isNew: true, calories: 420,
+    },
+
+    // ── 915. Miso Soup ────────────────────────────────────────────────────
+    {
+        slug: 'miso-soup',
+        title: 'Traditional Miso Soup',
+        subtitle: '味噌汁 (Misoshiru)',
+        shortDescription: 'A delicate dashi broth enriched with fermented miso paste, silken tofu and wakame seaweed — the essential Japanese soup that starts every meal.',
+        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of miso soup with tofu and wakame seaweed',
+        prepTime: '5 min', cookTime: '10 min', totalTime: '15 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.6, ratingCount: 234, tags: ['Soup', 'Miso', 'Tofu', 'Quick'],
+        isNew: true, calories: 80,
+    },
+
+    // ── 916. Tempura ──────────────────────────────────────────────────────
+    {
+        slug: 'tempura',
+        title: 'Shrimp & Vegetable Tempura',
+        subtitle: '天ぷら (Tenpura)',
+        shortDescription: 'Shrimp, sweet potato and seasonal vegetables in a light, shatteringly crispy batter served with tentsuyu dipping sauce — Japanese frying elevated to an art form.',
+        image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy shrimp and vegetable tempura on a plate',
+        prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.8, ratingCount: 256, tags: ['Shrimp', 'Crispy', 'Fried', 'Classic'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 917. Edamame ──────────────────────────────────────────────────────
+    {
+        slug: 'edamame',
+        title: 'Salted Edamame',
+        subtitle: '枝豆 (Edamame)',
+        shortDescription: 'Young soybeans steamed in the pod and tossed with flaky sea salt — the addictive, protein-packed Japanese bar snack that has become a European staple.',
+        image: 'https://images.unsplash.com/photo-1564894809611-1742fc40ed80?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of steamed edamame with sea salt',
+        prepTime: '2 min', cookTime: '5 min', totalTime: '7 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.5, ratingCount: 198, tags: ['Snack', 'Healthy', 'Vegan', 'Quick'],
+        isNew: true, calories: 120,
+    },
+
+    // ── 918. Yakitori ─────────────────────────────────────────────────────
+    {
+        slug: 'yakitori',
+        title: 'Yakitori Chicken Skewers',
+        subtitle: '焼き鳥 (Yakitori)',
+        shortDescription: 'Bite-sized chicken pieces grilled over charcoal and basted with sweet tare sauce until caramelized and smoky — the soul of the Japanese izakaya.',
+        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        imageAlt: 'Yakitori chicken skewers with tare glaze on a grill',
+        prepTime: '15 min', cookTime: '10 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.7, ratingCount: 223, tags: ['Grilled', 'Chicken', 'Skewers', 'Izakaya'],
+        isNew: true, calories: 290,
+    },
+
+    // ── 919. Sashimi Platter ──────────────────────────────────────────────
+    {
+        slug: 'sashimi-platter',
+        title: 'Mixed Sashimi Platter',
+        subtitle: '刺身盛り合わせ (Sashimi Moriawase)',
+        shortDescription: 'Pristine slices of salmon, tuna and yellowtail arranged on ice with shiso leaf, daikon and fresh wasabi — the purest expression of Japanese culinary art.',
+        image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&auto=format&fit=crop',
+        imageAlt: 'Elegant sashimi platter with salmon tuna and yellowtail',
+        prepTime: '20 min', cookTime: '0 min', totalTime: '20 min',
+        servings: 4, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.9, ratingCount: 187, tags: ['Raw Fish', 'Premium', 'Healthy', 'Elegant'],
+        isNew: true, calories: 220,
+    },
+
+    // ── 920. Udon Noodles ─────────────────────────────────────────────────
+    {
+        slug: 'kitsune-udon',
+        title: 'Kitsune Udon Noodle Soup',
+        subtitle: 'きつねうどん (Kitsune Udon)',
+        shortDescription: 'Thick, chewy udon noodles in a fragrant dashi-soy broth topped with sweet fried tofu pouches and scallions — hearty Japanese comfort at its simplest.',
+        image: 'https://images.unsplash.com/photo-1618841557871-b4664fbf0cb3?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of kitsune udon with fried tofu and green onions',
+        prepTime: '10 min', cookTime: '15 min', totalTime: '25 min',
+        servings: 4, difficulty: 'Easy', category: 'Japanese',
+        rating: 4.7, ratingCount: 201, tags: ['Noodles', 'Udon', 'Soup', 'Comfort'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 921. Okonomiyaki ──────────────────────────────────────────────────
+    {
+        slug: 'okonomiyaki',
+        title: 'Osaka-Style Okonomiyaki',
+        subtitle: 'お好み焼き (Okonomiyaki)',
+        shortDescription: 'A savory Japanese pancake loaded with cabbage, pork belly and topped with okonomiyaki sauce, mayo, bonito flakes and aonori — street food theater on a hot plate.',
+        image: 'https://images.unsplash.com/photo-1582452919408-8bbee8e76f44?w=800&auto=format&fit=crop',
+        imageAlt: 'Okonomiyaki topped with sauce mayo and bonito flakes',
+        prepTime: '15 min', cookTime: '15 min', totalTime: '30 min',
+        servings: 2, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.8, ratingCount: 176, tags: ['Pancake', 'Street Food', 'Osaka', 'Pork'],
+        isNew: true, calories: 450,
+    },
+
+    // ── 922. Matcha Tiramisu ──────────────────────────────────────────────
+    {
+        slug: 'matcha-tiramisu',
+        title: 'Matcha Tiramisu',
+        subtitle: '抹茶ティラミス (Matcha Tiramisu)',
+        shortDescription: 'A Japanese twist on the Italian classic — layers of mascarpone cream and matcha-soaked ladyfingers dusted with vibrant green tea powder.',
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop',
+        imageAlt: 'Matcha tiramisu with green tea powder dusting',
+        prepTime: '30 min', cookTime: '0 min', totalTime: '4 hrs',
+        servings: 6, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.8, ratingCount: 189, tags: ['Dessert', 'Matcha', 'Fusion', 'No-Bake'],
+        isNew: true, calories: 340,
+    },
+
+    // ── 923. Takoyaki ─────────────────────────────────────────────────────
+    {
+        slug: 'takoyaki',
+        title: 'Takoyaki Octopus Balls',
+        subtitle: 'たこ焼き (Takoyaki)',
+        shortDescription: 'Crispy-outside, molten-inside batter balls filled with tender octopus, pickled ginger and green onion — the iconic Osaka street snack now beloved in Europe.',
+        image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop',
+        imageAlt: 'Takoyaki octopus balls with sauce and bonito flakes',
+        prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
+        servings: 4, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.7, ratingCount: 167, tags: ['Street Food', 'Octopus', 'Osaka', 'Snack'],
+        isNew: true, calories: 310,
+    },
+
+    // ── 924. Katsu Don ────────────────────────────────────────────────────
+    {
+        slug: 'katsudon',
+        title: 'Katsudon Pork Cutlet Rice Bowl',
+        subtitle: 'カツ丼 (Katsudon)',
+        shortDescription: 'A crispy tonkatsu pork cutlet simmered with onion and egg in a sweet dashi sauce, served over steaming rice — the ultimate Japanese one-bowl meal.',
+        image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800&auto=format&fit=crop',
+        imageAlt: 'Katsudon pork cutlet rice bowl with egg and onion',
+        prepTime: '15 min', cookTime: '20 min', totalTime: '35 min',
+        servings: 2, difficulty: 'Medium', category: 'Japanese',
+        rating: 4.8, ratingCount: 213, tags: ['Rice Bowl', 'Pork', 'Crispy', 'Comfort'],
+        isNew: true, calories: 620,
     },
 
 ]
