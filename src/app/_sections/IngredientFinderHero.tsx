@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowRight, X, Loader2, Search, Check } from 'lucide-react';
+import HeroMapEmblem from './HeroMapEmblem';
 
 // ── Danh sach nguyen lieu pho bien ──
 const INGREDIENT_GROUPS = [
@@ -162,6 +163,7 @@ export default function IngredientFinderHero() {
 
         {/* ── Headline ── */}
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE }} className="text-center">
+          <HeroMapEmblem />
           <p className="mb-3 text-[11px] font-bold uppercase sm:mb-4" style={{ color: '#F59E0B', letterSpacing: '0.2em' }}>
             Authentic Vietnamese recipes
           </p>
