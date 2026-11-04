@@ -363,12 +363,11 @@ export default function TravelPage() {
 
             {/* ═══ REGION DETAIL ═══ */}
             <section id="travel-region" className="mx-auto max-w-[1200px] scroll-mt-24 px-5 py-14 sm:px-6 sm:py-20">
-                <div className="grid gap-10 lg:grid-cols-[300px_1fr] lg:gap-14">
+                <div className="grid gap-10 lg:grid-cols-[400px_1fr] lg:gap-12 xl:grid-cols-[440px_1fr]">
 
                     {/* Map — sticky sidebar on desktop, collapsible card on mobile */}
                     <aside className="min-w-0 lg:sticky lg:top-28 lg:self-start">
                         <div className="hidden rounded-3xl border border-[rgba(75,46,26,0.08)] bg-white p-5 lg:block">
-                            <p className="mb-3 text-center text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.14em' }}>Tap a city</p>
                             {map}
                         </div>
                         <div className="overflow-hidden rounded-2xl border border-[rgba(75,46,26,0.1)] bg-white lg:hidden">
@@ -384,7 +383,7 @@ export default function TravelPage() {
                             <AnimatePresence initial={false}>
                                 {mapOpen && (
                                     <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} transition={{ duration: 0.3, ease: EASE }} className="overflow-hidden">
-                                        <div className="mx-auto max-w-[280px] px-4 pb-4">{map}</div>
+                                        <div className="mx-auto max-w-[460px] px-4 pb-4">{map}</div>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
