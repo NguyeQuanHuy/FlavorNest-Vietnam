@@ -9872,6 +9872,146 @@ export const RECIPES: Recipe[] = [
         rating: 4.8, ratingCount: 99, tags: ['Northern Vietnam'],
     },
 
+    // ── 885. Bánh Khọt ─────────────────────────────────────────────────────
+    {
+        slug: 'banh-khot',
+        title: 'Crispy Mini Savory Pancakes',
+        subtitle: 'Bánh Khọt',
+        shortDescription: 'Bite-sized crispy turmeric coconut pancakes topped with shrimp, served with fresh lettuce wraps and tangy fish sauce — a beloved street food from Vung Tau.',
+        image: 'https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&auto=format&fit=crop',
+        imageAlt: 'Golden crispy banh khot mini pancakes topped with shrimp on a plate',
+        prepTime: '20 min', cookTime: '25 min', totalTime: '45 min',
+        servings: 4, difficulty: 'Medium', category: 'Street Food',
+        rating: 4.8, ratingCount: 187, tags: ['Vung Tau Classic', 'Street Food', 'Crispy', 'Shrimp'],
+        isNew: true, calories: 320,
+    },
+
+    // ── 886. Cơm Niêu ─────────────────────────────────────────────────────
+    {
+        slug: 'com-nieu',
+        title: 'Clay Pot Crusted Rice',
+        subtitle: 'Cơm Niêu',
+        shortDescription: 'Fragrant jasmine rice slow-cooked in a traditional clay pot until a golden crispy crust forms at the bottom — the original Vietnamese rice experience.',
+        image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=800&auto=format&fit=crop',
+        imageAlt: 'Clay pot crusted rice com nieu with golden crispy bottom layer',
+        prepTime: '10 min', cookTime: '40 min', totalTime: '50 min',
+        servings: 4, difficulty: 'Medium', category: 'Rice',
+        rating: 4.7, ratingCount: 156, tags: ['Traditional', 'Clay Pot', 'Comfort Food', 'Crispy Rice'],
+        isNew: true, calories: 380,
+    },
+
+    // ── 887. Bánh Trung Thu ────────────────────────────────────────────────
+    {
+        slug: 'banh-trung-thu',
+        title: 'Vietnamese Mooncake',
+        subtitle: 'Bánh Trung Thu',
+        shortDescription: 'Traditional Mid-Autumn Festival mooncakes with rich mung bean and salted egg yolk filling wrapped in a tender golden crust — a seasonal treasure of Vietnamese baking.',
+        image: 'https://images.unsplash.com/photo-1632394675123-0aa0b4b83c41?w=800&auto=format&fit=crop',
+        imageAlt: 'Traditional Vietnamese mooncakes banh trung thu with ornate patterns',
+        prepTime: '1 hr', cookTime: '25 min', totalTime: '3 hrs',
+        servings: 8, difficulty: 'Hard', category: 'Dessert',
+        rating: 4.9, ratingCount: 203, tags: ['Mid-Autumn', 'Festive', 'Baking', 'Heritage'],
+        isNew: true, calories: 450,
+    },
+
+    // ── 888. Cơm Cháy Chả Chìa Ninh Bình ─────────────────────────────────
+    {
+        slug: 'com-chay-cha-chia-ninh-binh',
+        title: 'Ninh Binh Crispy Rice with Grilled Pork Skewers',
+        subtitle: 'Cơm Cháy Chả Chìa Ninh Bình',
+        shortDescription: 'Deep-fried golden rice crust paired with juicy lemongrass pork skewers and tangy dipping sauce — the iconic specialty of Ninh Binh province.',
+        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop',
+        imageAlt: 'Crispy golden rice crust com chay with grilled pork skewers from Ninh Binh',
+        prepTime: '30 min', cookTime: '20 min', totalTime: '50 min',
+        servings: 4, difficulty: 'Medium', category: 'Rice',
+        rating: 4.8, ratingCount: 178, tags: ['Ninh Binh', 'Crispy', 'Grilled Pork', 'Heritage'],
+        isNew: true, calories: 520,
+    },
+
+    // ── 889. Bánh Đậu Xanh Hải Dương ──────────────────────────────────────
+    {
+        slug: 'banh-dau-xanh-hai-duong',
+        title: 'Hai Duong Mung Bean Cake',
+        subtitle: 'Bánh Đậu Xanh Hải Dương',
+        shortDescription: 'Delicate pressed mung bean cakes with a melt-in-your-mouth texture and subtle sweetness — the centuries-old confection that made Hai Duong famous across Vietnam.',
+        image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&auto=format&fit=crop',
+        imageAlt: 'Traditional Hai Duong mung bean cakes banh dau xanh wrapped in paper',
+        prepTime: '20 min', cookTime: '30 min', totalTime: '1 hr 30 min',
+        servings: 12, difficulty: 'Medium', category: 'Dessert',
+        rating: 4.7, ratingCount: 145, tags: ['Hai Duong', 'Heritage', 'Sweet', 'Gift'],
+        isNew: true, calories: 180,
+    },
+
+    // ── 890. Hủ Tiếu Mỹ Tho ──────────────────────────────────────────────
+    {
+        slug: 'hu-tieu-my-tho',
+        title: 'My Tho Pork & Shrimp Noodle Soup',
+        subtitle: 'Hủ Tiếu Mỹ Tho',
+        shortDescription: 'A clear pork bone broth with springy tapioca noodles, sliced pork, shrimp and quail eggs — the original hủ tiếu from the Mekong Delta town of Mỹ Tho.',
+        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of hu tieu My Tho noodle soup with pork and shrimp',
+        prepTime: '20 min', cookTime: '2 hrs', totalTime: '2 hrs 20 min',
+        servings: 4, difficulty: 'Medium', category: 'Noodles',
+        rating: 4.8, ratingCount: 192, tags: ['Mekong Delta', 'Noodle Soup', 'Pork', 'Shrimp'],
+        isNew: true, calories: 480,
+    },
+
+    // ── 891. Rau Câu Dừa ──────────────────────────────────────────────────
+    {
+        slug: 'rau-cau-dua',
+        title: 'Coconut Pandan Jelly',
+        subtitle: 'Rau Câu Dừa',
+        shortDescription: 'A two-layer coconut jelly dessert — silky pandan green on the bottom, creamy coconut white on top — cool, refreshing and effortlessly elegant.',
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop',
+        imageAlt: 'Two-layer green and white coconut pandan jelly rau cau dua',
+        prepTime: '15 min', cookTime: '10 min', totalTime: '3 hrs',
+        servings: 8, difficulty: 'Easy', category: 'Dessert',
+        rating: 4.6, ratingCount: 134, tags: ['Refreshing', 'Coconut', 'No-Bake', 'Party'],
+        isNew: true, calories: 150,
+    },
+
+    // ── 892. Cá Lóc Kho Tộ ────────────────────────────────────────────────
+    {
+        slug: 'ca-loc-kho-to',
+        title: 'Caramelized Snakehead Fish in Clay Pot',
+        subtitle: 'Cá Lóc Kho Tộ',
+        shortDescription: 'Thick snakehead fish steaks braised in caramel sauce with cracked black pepper in a sizzling clay pot — the quintessential southern Vietnamese home-cooked dish.',
+        image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&auto=format&fit=crop',
+        imageAlt: 'Caramelized snakehead fish ca loc kho to in a clay pot',
+        prepTime: '15 min', cookTime: '30 min', totalTime: '45 min',
+        servings: 4, difficulty: 'Medium', category: 'Rice',
+        rating: 4.9, ratingCount: 215, tags: ['Southern Classic', 'Clay Pot', 'Caramel', 'Fish'],
+        isNew: true, calories: 350,
+    },
+
+    // ── 893. Bò Tái Lăn ───────────────────────────────────────────────────
+    {
+        slug: 'bo-tai-lan',
+        title: 'Seared Beef with Garlic & Pepper',
+        subtitle: 'Bò Tái Lăn',
+        shortDescription: 'Thin-sliced beef seared at blazing heat with garlic, butter and cracked pepper — a 90-second wok technique that delivers restaurant-quality results at home.',
+        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop',
+        imageAlt: 'Seared beef bo tai lan with garlic and pepper on a hot plate',
+        prepTime: '10 min', cookTime: '5 min', totalTime: '15 min',
+        servings: 2, difficulty: 'Easy', category: 'Grilled',
+        rating: 4.8, ratingCount: 198, tags: ['Quick', 'Beef', 'Wok', 'Beer Pairing'],
+        isNew: true, calories: 420,
+    },
+
+    // ── 894. Cháo Vịt ─────────────────────────────────────────────────────
+    {
+        slug: 'chao-vit',
+        title: 'Vietnamese Duck Rice Porridge',
+        subtitle: 'Cháo Vịt',
+        shortDescription: 'Silky broken-rice porridge simmered with duck bones, topped with shredded duck, crispy shallots and a shower of fresh herbs — southern comfort in a bowl.',
+        image: 'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&auto=format&fit=crop',
+        imageAlt: 'Bowl of chao vit duck rice porridge with herbs and crispy shallots',
+        prepTime: '15 min', cookTime: '1 hr', totalTime: '1 hr 15 min',
+        servings: 4, difficulty: 'Easy', category: 'Soup',
+        rating: 4.7, ratingCount: 167, tags: ['Southern', 'Duck', 'Porridge', 'Comfort Food'],
+        isNew: true, calories: 390,
+    },
+
 ]
 
 // ── Helper utilities ───────────────────────────────────────────────────────
