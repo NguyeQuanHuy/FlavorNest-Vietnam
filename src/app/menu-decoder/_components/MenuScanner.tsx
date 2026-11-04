@@ -14,8 +14,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Camera, X, RotateCcw, ShieldCheck, ChevronRight, Flame, Lightbulb, ImageUp } from 'lucide-react'
 import { ALLERGEN_INFO, decodeWords, type Dish } from '@/data/menu-decoder'
 import type { DishLinks } from './MenuDecoderClient'
-import { explainLine, composeDish, type ComposedDish } from '@/data/menu-compose'
-import ComposedDishCard from './ComposedDishCard'
+import { explainLine, composeDish, describeSection, type ComposedDish } from '@/data/menu-compose'
+import ComposedDishCard, { cleanMenuLine } from './ComposedDishCard'
 
 type Phase = 'idle' | 'loading' | 'reading' | 'done' | 'error'
 interface Found { dish: Dish; line: string; note?: string }
@@ -27,8 +27,12 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number]
 // Minimal shape of the Tesseract worker we use (keeps the heavy lib out of the main bundle)
 interface OcrWorker { recognize: (img: HTMLCanvasElement) => Promise<{ data: { text: string } }>; terminate: () => Promise<unknown> }
 
-/** Downscale big phone photos + grayscale — faster and usually more accurate OCR. */
-async function prepare(file: File): Promise<{ canvas: HTMLCanvasElement; preview: string }> {
+/**
+ * Prepare the photo for OCR: scale to a size Tesseract likes (small images are enlarged),
+ * grayscale + a bit of contrast, and split two-column menus into two images —
+ * otherwise the left and right column get read across as one line.
+ */
+async function prepare(file: File): Promise<{ parts: HTMLCanvasElement[]; preview: string }> {
     const url = URL.createObjectURL(file)
     try {
         const img = await new Promise<HTMLImageElement>((res, rej) => {
@@ -36,26 +40,67 @@ async function prepare(file: File): Promise<{ canvas: HTMLCanvasElement; preview
             i.onload = () => res(i); i.onerror = () => rej(new Error('Could not open this image'))
             i.src = url
         })
-        const max = 2200
-        const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight))
+        const target = 2400
+        const s = Math.min(2.5, target / Math.max(img.naturalWidth, img.naturalHeight))
         const canvas = document.createElement('canvas')
         canvas.width = Math.round(img.naturalWidth * s)
         canvas.height = Math.round(img.naturalHeight * s)
-        const ctx = canvas.getContext('2d')!
-        ctx.filter = 'grayscale(1) contrast(1.25)'
+        const ctx = canvas.getContext('2d', { willReadFrequently: true })!
+        ctx.imageSmoothingQuality = 'high'
+        ctx.filter = 'grayscale(1) contrast(1.3)'
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+
         // small preview for the UI (colour)
         const pv = document.createElement('canvas')
         const ps = Math.min(1, 480 / Math.max(img.naturalWidth, img.naturalHeight))
         pv.width = Math.round(img.naturalWidth * ps); pv.height = Math.round(img.naturalHeight * ps)
         pv.getContext('2d')!.drawImage(img, 0, 0, pv.width, pv.height)
-        return { canvas, preview: pv.toDataURL('image/jpeg', 0.8) }
+
+        return { parts: splitColumns(canvas), preview: pv.toDataURL('image/jpeg', 0.8) }
     } finally {
         URL.revokeObjectURL(url)
     }
 }
 
-/** Turn OCR text into: dishes from our guide, dishes explained from their words, and lines we could only partly read. */
+/** Find a vertical gutter between 30% and 70% of the width (a thin divider line is allowed) and cut there. */
+function splitColumns(canvas: HTMLCanvasElement): HTMLCanvasElement[] {
+    const { width: w, height: h } = canvas
+    if (w < h * 0.45) return [canvas] // narrow strip: single column
+    const data = canvas.getContext('2d')!.getImageData(0, 0, w, h).data
+    const top = Math.round(h * 0.12) // skip the page title, which usually spans both columns
+    const ink = new Float32Array(w)
+    for (let y = top; y < h; y += 2) for (let x = 0; x < w; x++) if (data[(y * w + x) * 4] < 140) ink[x]++
+    const rows = (h - top) / 2
+    const win = Math.max(6, Math.round(w * 0.012))
+    let best = -1, bestScore = Infinity
+    for (let x = Math.round(w * 0.3); x < w * 0.7; x++) {
+        // ignore the 2 inkiest columns in the window: a printed divider line is fine
+        const col: number[] = []
+        for (let k = x - win; k <= x + win; k++) col.push(ink[k] / rows)
+        col.sort((a, b) => a - b)
+        const score = col.slice(0, -2).reduce((a, b) => a + b, 0) / (col.length - 2)
+        if (score < bestScore) { bestScore = score; best = x }
+    }
+    const leftInk = ink.slice(0, best).reduce((a, b) => a + b, 0)
+    const rightInk = ink.slice(best).reduce((a, b) => a + b, 0)
+    if (best < 0 || bestScore > 0.01 || Math.min(leftInk, rightInk) < Math.max(leftInk, rightInk) * 0.25) return [canvas]
+    const cut = (x0: number, x1: number) => {
+        const c = document.createElement('canvas')
+        c.width = x1 - x0; c.height = h
+        c.getContext('2d')!.drawImage(canvas, x0, 0, x1 - x0, h, 0, 0, x1 - x0, h)
+        return c
+    }
+    const pad = Math.round(w * 0.006)
+    return [cut(0, best - pad), cut(best + pad, w)]
+}
+
+/**
+ * Turn OCR text into: dishes from our guide, dishes explained from their words, and lines we could only partly read.
+ * Understands the usual menu layout abroad:
+ *   - numbered + priced dish lines, with a translation line underneath (merged as a note)
+ *   - sections: "90. UNAGI-SOSSE mit Gemüse. Wahlweise mit:" followed by options "92. Tofu 14,90"
+ *     → each option is explained together with its section (sauce, vegetables…)
+ */
 function analyse(text: string): { found: Found[]; composed: ComposedDish[]; partial: Partial[] } {
     const lines = text.split(/\n+/)
         .map(l => l.replace(/[|_~*•·]+/g, ' ').replace(/\s+/g, ' ').trim())
@@ -65,12 +110,35 @@ function analyse(text: string): { found: Found[]; composed: ComposedDish[]; part
     const partial: Partial[] = []
     const composed: ComposedDish[] = []
     const seenTitles = new Set<string>()
-    // Menus abroad often print a translation under each dish ("M2. Cơm gà xối mỡ 12,90 €" / "Knuspriges Hähnchen mit Reis").
-    // A line without number or price right after a numbered / priced line is treated as that dish's description.
-    const isHead = (l: string) => /^\s*[A-Za-z]?\d{1,3}[.)]?\s/.test(l) || /\d+[.,]\d{2}/.test(l)
+
+    const hasPrice = (l: string) => /\d+[.,]\d{2}/.test(l)
+    const hasNumber = (l: string) => /^\s*[A-Za-z]?\d{1,3}[a-z]?[.)]?\s/.test(l)
+    const isHead = (l: string) => hasNumber(l) || hasPrice(l)
     const numbered = lines.filter(isHead).length >= 2
+
+    let section: string | null = null   // current section text (header + its description)
+    let collecting = false              // still reading the section description?
     let last: { kind: 'found'; i: number } | { kind: 'composed'; i: number } | null = null
+
+    const addComposed = (c: ComposedDish) => {
+        const key = `${c.section ?? ''}|${c.title}`
+        if (seenTitles.has(key) || composed.length >= 60) return
+        seenTitles.add(key); composed.push(c); last = { kind: 'composed', i: composed.length - 1 }
+    }
+
     for (const line of lines) {
+        // ── section header: numbered, no price ("300. SPEZIAL HAUSGEMACHTE DUNKEL-SOSSE")
+        if (numbered && hasNumber(line) && !hasPrice(line)) {
+            const { dish } = explainLine(line)
+            if (dish && !seen.has(dish.id)) { seen.add(dish.id); found.push({ dish, line }); last = { kind: 'found', i: found.length - 1 }; continue }
+            section = line; collecting = true; last = null
+            continue
+        }
+        // ── section description ("mit gegrilltem Saisongemüse. Wahlweise mit:" + its translation)
+        if (collecting && !hasPrice(line)) { section += ' ' + line; continue }
+        if (hasPrice(line)) collecting = false
+
+        // ── translation / description under a dish
         if (numbered && last && !isHead(line)) {
             const extra = composeDish(line)
             if (last.kind === 'found') found[last.i].note ??= line
@@ -87,19 +155,90 @@ function analyse(text: string): { found: Found[]; composed: ComposedDish[]; part
             continue
         }
         last = null
-        const { dish, composed: c } = explainLine(line)
+
+        // ── in a numbered menu, an unnumbered, unpriced line is general info ("Mit verschiedenen Soßen…"), not a dish
+        if (numbered && !isHead(line)) {
+            const words = decodeWords(line).filter(w => w.word).map(w => ({ text: w.text, en: w.word!.en }))
+            if (words.length >= 2 && partial.length < 10) partial.push({ line, words })
+            continue
+        }
+
+        // ── a dish line (inside a section only guide dishes that are really named count)
+        const { dish, composed: c } = explainLine(line, !!section)
         if (dish) {
             if (!seen.has(dish.id)) { seen.add(dish.id); found.push({ dish, line }); last = { kind: 'found', i: found.length - 1 } }
             continue
         }
-        if (c) {
-            if (!seenTitles.has(c.title) && composed.length < 25) { seenTitles.add(c.title); composed.push(c); last = { kind: 'composed', i: composed.length - 1 } }
-            continue
-        }
+        const inSection = section && hasPrice(line) ? composeDish(line, section) : null
+        if (inSection) { addComposed(inSection); continue }
+        if (c) { addComposed(c); continue }
         const words = decodeWords(line).filter(w => w.word).map(w => ({ text: w.text, en: w.word!.en }))
         if (words.length >= 2 && partial.length < 10) partial.push({ line, words })
     }
     return { found, composed, partial }
+}
+
+function groupBySection(items: ComposedDish[]) {
+    const groups: { section?: string; items: ComposedDish[] }[] = []
+    for (const c of items) {
+        const g = groups[groups.length - 1]
+        if (g && g.section === c.section) g.items.push(c)
+        else groups.push({ section: c.section, items: [c] })
+    }
+    return groups
+}
+
+/** "90. SPEZIAL HAUSGEMACHTE UNAGI-SOSSE 6,9 mit … Wahlweise mit: Special homemade…" → "Spezial hausgemachte Unagi-Sosse mit gegrilltem Saisongemüse" */
+function sectionName(section: string) {
+    const head = cleanMenuLine(section).split(/wahlweise|optionally|nach wahl|choice of/i)[0]
+    const t = head.replace(/\s\d+(,\d+)*(?=\s|$)/g, ' ').replace(/[.:]\s*$/, '').replace(/\s+/g, ' ').trim()
+    // tame ALL-CAPS words: "UNAGI-SOSSE" → "Unagi-sosse"
+    return t.replace(/(^|\s)(\p{Lu}[\p{Lu}-]+)(?=\s|$)/gu, (_, sp: string, w: string) => sp + w[0] + w.slice(1).toLowerCase())
+}
+
+function SectionGroup({ section, items, links, onOpenDish }: { section: string; items: ComposedDish[]; links: DishLinks; onOpenDish: (d: Dish) => void }) {
+    const [openIdx, setOpenIdx] = useState<number | null>(null)
+    const info = describeSection(section)
+    const name = sectionName(section)
+    return (
+        <div className="overflow-hidden rounded-2xl bg-white" style={{ border: '1px solid rgba(75,46,26,0.08)' }}>
+            <div className="px-4 pb-3 pt-3.5" style={{ background: 'linear-gradient(135deg,#FDF4E7,#FBF8F4)' }}>
+                <p className="text-[10.5px] font-bold uppercase" style={{ color: '#B45309', letterSpacing: '0.08em' }}>Pick a main · {items.length} options</p>
+                <p className="mt-0.5 text-[16.5px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>{name}</p>
+                {info && <p className="mt-0.5 text-[13px] font-semibold" style={{ color: '#4B2E1A' }}>{info.title.replace(/ — vegetarian$/, '')}</p>}
+                {info && info.allergens.length > 0 && (
+                    <p className="mt-1.5 flex flex-wrap gap-1">
+                        <span className="text-[11.5px]" style={{ color: 'rgba(75,46,26,0.6)' }}>Sauce may contain:</span>
+                        {info.allergens.map(a => (
+                            <span key={a} className="rounded-full px-1.5 py-px text-[11px] font-semibold" style={{ background: '#FEF3C7', color: '#92400E' }}>{ALLERGEN_INFO[a].emoji} {ALLERGEN_INFO[a].label}</span>
+                        ))}
+                    </p>
+                )}
+            </div>
+            <ul>
+                {items.map((c, i) => {
+                    const on = openIdx === i
+                    const short = c.title.split(/ with |, /)[0].replace(/ — vegetarian$/, '')
+                    return (
+                        <li key={i} style={{ borderTop: '1px solid rgba(75,46,26,0.07)' }}>
+                            <button onClick={() => setOpenIdx(on ? null : i)} aria-expanded={on} className="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-[#FDFAF6]">
+                                <span className="min-w-0 flex-1">
+                                    <span className="block truncate text-[14px] font-semibold" style={{ color: '#2D1A0E' }}>{cleanMenuLine(c.line)}</span>
+                                    <span className="block truncate text-[12px]" style={{ color: 'rgba(75,46,26,0.6)' }}>{short}{c.vegetarian ? ' · 🌱 vegetarian' : ''}</span>
+                                </span>
+                                {c.spice > 0 && <span className="flex flex-shrink-0">{[1, 2, 3].map(n => <Flame key={n} size={12} fill={n <= c.spice ? '#DC2626' : 'none'} color={n <= c.spice ? '#DC2626' : 'rgba(185,28,28,0.25)'} />)}</span>}
+                                <span className="flex flex-shrink-0 gap-0.5 text-[13px]" aria-label={c.allergens.map(a => ALLERGEN_INFO[a].label).join(', ')}>
+                                    {c.allergens.filter(a => !info?.allergens.includes(a)).slice(0, 3).map(a => <span key={a} title={ALLERGEN_INFO[a].label}>{ALLERGEN_INFO[a].emoji}</span>)}
+                                </span>
+                                <ChevronRight size={16} className="flex-shrink-0 transition-transform" style={{ color: 'rgba(75,46,26,0.35)', transform: on ? 'rotate(90deg)' : undefined }} />
+                            </button>
+                            {on && <div className="px-3 pb-3"><ComposedDishCard dish={c} links={links} onOpenDish={onOpenDish} /></div>}
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
+    )
 }
 
 export default function MenuScanner({ open, onClose, onOpenDish, links }: {
@@ -137,7 +276,7 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
     const run = async (file: File) => {
         setError(''); setFound([]); setPartial([]); setComposed([]); setRawText(''); setProgress(0)
         try {
-            const { canvas, preview } = await prepare(file)
+            const { parts, preview } = await prepare(file)
             setPreview(preview)
             if (!workerRef.current) {
                 setPhase('loading')
@@ -149,7 +288,9 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                 })) as unknown as OcrWorker
             }
             setPhase('reading')
-            const { data } = await workerRef.current.recognize(canvas)
+            const texts: string[] = []
+            for (const part of parts) texts.push((await workerRef.current.recognize(part)).data.text)
+            const data = { text: texts.join('\n') }
             const res = analyse(data.text)
             setFound(res.found); setPartial(res.partial); setComposed(res.composed); setRawText(data.text.trim())
             setPhase('done')
@@ -304,17 +445,21 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                                     )}
 
                                     {composed.length > 0 && (
-                                        <div className="mt-6">
-                                            <p className="mb-2 text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.1em' }}>
+                                        <div className="mt-6 space-y-5">
+                                            <p className="text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.1em' }}>
                                                 {found.length ? 'More dishes on your menu' : 'Dishes on your menu'}
                                             </p>
-                                            <ul className="space-y-2.5">
-                                                {composed.map((c, i) => (
-                                                    <motion.li key={c.title + i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 8) * 0.04, ease: EASE }}>
-                                                        <ComposedDishCard dish={c} links={links} onOpenDish={onOpenDish} />
-                                                    </motion.li>
-                                                ))}
-                                            </ul>
+                                            {groupBySection(composed).map((g, gi) => g.section && g.items.length > 1 ? (
+                                                <SectionGroup key={gi} section={g.section} items={g.items} links={links} onOpenDish={onOpenDish} />
+                                            ) : (
+                                                <ul key={gi} className="space-y-2.5">
+                                                    {g.items.map((c, i) => (
+                                                        <motion.li key={c.title + i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 8) * 0.04, ease: EASE }}>
+                                                            <ComposedDishCard dish={c} links={links} onOpenDish={onOpenDish} />
+                                                        </motion.li>
+                                                    ))}
+                                                </ul>
+                                            ))}
                                         </div>
                                     )}
 

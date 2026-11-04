@@ -18,7 +18,10 @@ const SPICE_LABEL = ['Mild', 'A little heat', 'Spicy', 'Very spicy'] as const
 
 /** "12. Bún bò xào 13,90 €" → "Bún bò xào" */
 export const cleanMenuLine = (line: string) =>
-    line.replace(/^\s*[\dA-Za-z]{1,3}[.)]\s+/, '').replace(/\d+[.,]\d{2}\s*(€|eur)?/gi, '').replace(/\s{2,}/g, ' ').trim()
+    line.replace(/^\s*[\dA-Za-z]{1,4}[.)]\s+/, '').replace(/\d+[.,]\d{2}\s*(€|eur)?/gi, '')
+        .replace(/[«»©®™~'’“”|]+/g, '')                                   // OCR debris
+        .replace(/(\p{Lu})0(?=\p{Lu})/gu, '$1O').replace(/(\p{L})0(?=\p{L})/gu, '$1o') // "S0SSE" → "SOSSE"
+        .replace(/\s+[:;,.]+(\s|$)/g, '$1').replace(/\s{2,}/g, ' ').trim()
 
 export default function ComposedDishCard({ dish, links, onOpenDish, dark = false }: {
     dish: ComposedDish
@@ -83,8 +86,8 @@ export default function ComposedDishCard({ dish, links, onOpenDish, dark = false
                         </span>
                     ))}
                     {dish.fishSauceLikely && (
-                        <span className="rounded-full px-2 py-0.5 text-[11.5px] font-semibold" style={{ background: '#FEF3C7', color: '#92400E' }} title="Fish sauce is in almost every savoury Vietnamese dish">
-                            🐟 Fish sauce (almost always) <span style={{ opacity: 0.6 }}>· Fisch</span>
+                        <span className="rounded-full px-2 py-0.5 text-[11.5px] font-semibold" style={{ background: '#FEF3C7', color: '#92400E' }} title="Fish sauce is in most savoury Vietnamese dishes — ask if you avoid fish">
+                            🐟 Fish sauce (very common) <span style={{ opacity: 0.6 }}>· Fisch</span>
                         </span>
                     )}
                 </div>
