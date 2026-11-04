@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowRight, X, Loader2, Search, Check } from 'lucide-react';
+import { Sparkles, ArrowRight, X, Loader2, Search, Check, Camera } from 'lucide-react';
 import HeroMapEmblem from './HeroMapEmblem';
 
 // ── Danh sach nguyen lieu pho bien ──
@@ -191,8 +191,18 @@ export default function IngredientFinderHero() {
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Phở, bánh mì, chicken…"
-            className="h-14 w-full rounded-full border-0 bg-white pl-[52px] pr-[120px] text-[16px] text-[#2D1A0E] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
+            className="h-14 w-full rounded-full border-0 bg-white pl-[52px] pr-[168px] text-[16px] text-[#2D1A0E] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
           />
+          {/* scan a restaurant menu with the camera */}
+          <Link
+            href="/menu-decoder?scan=1"
+            aria-label="Scan a restaurant menu with your camera"
+            title="Scan a menu"
+            className="absolute right-[104px] top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[#FEF3C7]"
+            style={{ color: '#B45309' }}
+          >
+            <Camera size={20} />
+          </Link>
           <button type="submit" className="absolute right-1.5 top-1/2 h-11 -translate-y-1/2 rounded-full px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#B45309]" style={{ background: '#D97706' }}>
             Search
           </button>
@@ -211,6 +221,19 @@ export default function IngredientFinderHero() {
               {p.label}
             </button>
           ))}
+        </motion.div>
+
+        {/* ── Eating out? → menu scanner ── */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }} className="mt-4 flex justify-center">
+          <Link
+            href="/menu-decoder?scan=1"
+            className="group inline-flex items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-4 text-[13.5px] font-semibold transition-colors hover:bg-white/15"
+            style={{ color: '#F5EDE3', background: 'rgba(217,119,6,0.16)', border: '1px solid rgba(245,158,11,0.45)', textDecoration: 'none' }}
+          >
+            <span className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: '#D97706' }}><Camera size={15} color="#fff" /></span>
+            Eating out? Scan the menu — every dish explained
+            <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" style={{ color: '#F59E0B' }} />
+          </Link>
         </motion.div>
 
         {/* ── Ingredient finder card ── */}

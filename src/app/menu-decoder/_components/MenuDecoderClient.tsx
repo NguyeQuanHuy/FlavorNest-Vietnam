@@ -105,8 +105,11 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
 
     // Deep link: /menu-decoder?q=pho%20tai
     useEffect(() => {
-        const q = new URLSearchParams(window.location.search).get('q')
+        const params = new URLSearchParams(window.location.search)
+        const q = params.get('q')
         if (q) setQuery(q)
+        // /menu-decoder?scan=1 (e.g. from the home page) opens the scanner straight away
+        if (params.get('scan') === '1') setScanOpen(true)
     }, [])
     useEffect(() => {
         const t = setTimeout(() => {
@@ -377,7 +380,16 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
             </section>
 
             {/* ═══ MENU SCANNER ═══ */}
-            <MenuScanner open={scanOpen} onClose={() => setScanOpen(false)} onOpenDish={setOpen} links={links} />
+            <MenuScanner
+                open={scanOpen}
+                onClose={() => {
+                    setScanOpen(false)
+                    const url = new URL(window.location.href)
+                    if (url.searchParams.has('scan')) { url.searchParams.delete('scan'); window.history.replaceState(null, '', url) }
+                }}
+                onOpenDish={setOpen}
+                links={links}
+            />
 
             {/* ═══ DISH SHEET ═══ */}
             <AnimatePresence>
