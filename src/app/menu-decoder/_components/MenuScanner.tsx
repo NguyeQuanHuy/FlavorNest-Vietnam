@@ -12,11 +12,13 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Camera, X, RotateCcw, ShieldCheck, ChevronRight, Flame, Lightbulb, ImageUp } from 'lucide-react'
-import { DISHES, ALLERGEN_INFO, scoreDish, decodeWords, type Dish } from '@/data/menu-decoder'
+import { ALLERGEN_INFO, decodeWords, type Dish } from '@/data/menu-decoder'
 import type { DishLinks } from './MenuDecoderClient'
+import { explainLine, composeDish, type ComposedDish } from '@/data/menu-compose'
+import ComposedDishCard from './ComposedDishCard'
 
 type Phase = 'idle' | 'loading' | 'reading' | 'done' | 'error'
-interface Found { dish: Dish; line: string }
+interface Found { dish: Dish; line: string; note?: string }
 interface Partial { line: string; words: { text: string; en: string }[] }
 
 const serif = { fontFamily: "'Playfair Display', Georgia, serif" }
@@ -53,24 +55,51 @@ async function prepare(file: File): Promise<{ canvas: HTMLCanvasElement; preview
     }
 }
 
-/** Turn OCR text into found dishes (deduplicated) + lines we could only partly read. */
-function analyse(text: string): { found: Found[]; partial: Partial[] } {
+/** Turn OCR text into: dishes from our guide, dishes explained from their words, and lines we could only partly read. */
+function analyse(text: string): { found: Found[]; composed: ComposedDish[]; partial: Partial[] } {
     const lines = text.split(/\n+/)
         .map(l => l.replace(/[|_~*•·]+/g, ' ').replace(/\s+/g, ' ').trim())
         .filter(l => l.replace(/[^\p{L}]/gu, '').length >= 3)
     const found: Found[] = []
     const seen = new Set<string>()
     const partial: Partial[] = []
+    const composed: ComposedDish[] = []
+    const seenTitles = new Set<string>()
+    // Menus abroad often print a translation under each dish ("M2. Cơm gà xối mỡ 12,90 €" / "Knuspriges Hähnchen mit Reis").
+    // A line without number or price right after a numbered / priced line is treated as that dish's description.
+    const isHead = (l: string) => /^\s*[A-Za-z]?\d{1,3}[.)]?\s/.test(l) || /\d+[.,]\d{2}/.test(l)
+    const numbered = lines.filter(isHead).length >= 2
+    let last: { kind: 'found'; i: number } | { kind: 'composed'; i: number } | null = null
     for (const line of lines) {
-        const best = DISHES.map(d => ({ d, s: scoreDish(d, line) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s)[0]
-        if (best) {
-            if (!seen.has(best.d.id)) { seen.add(best.d.id); found.push({ dish: best.d, line }) }
+        if (numbered && last && !isHead(line)) {
+            const extra = composeDish(line)
+            if (last.kind === 'found') found[last.i].note ??= line
+            else {
+                const prev = composed[last.i]
+                prev.note ??= line
+                if (extra) {
+                    prev.allergens = [...new Set([...prev.allergens, ...extra.allergens])]
+                    prev.spice = Math.max(prev.spice, extra.spice) as 0 | 1 | 2 | 3
+                    prev.madeWith = [...new Set([...prev.madeWith, ...extra.madeWith])]
+                    if (!prev.desc && extra.desc) prev.desc = extra.desc
+                }
+            }
+            continue
+        }
+        last = null
+        const { dish, composed: c } = explainLine(line)
+        if (dish) {
+            if (!seen.has(dish.id)) { seen.add(dish.id); found.push({ dish, line }); last = { kind: 'found', i: found.length - 1 } }
+            continue
+        }
+        if (c) {
+            if (!seenTitles.has(c.title) && composed.length < 25) { seenTitles.add(c.title); composed.push(c); last = { kind: 'composed', i: composed.length - 1 } }
             continue
         }
         const words = decodeWords(line).filter(w => w.word).map(w => ({ text: w.text, en: w.word!.en }))
         if (words.length >= 2 && partial.length < 10) partial.push({ line, words })
     }
-    return { found, partial }
+    return { found, composed, partial }
 }
 
 export default function MenuScanner({ open, onClose, onOpenDish, links }: {
@@ -84,6 +113,8 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
     const [preview, setPreview] = useState<string | null>(null)
     const [found, setFound] = useState<Found[]>([])
     const [partial, setPartial] = useState<Partial[]>([])
+    const [composed, setComposed] = useState<ComposedDish[]>([])
+    const [rawText, setRawText] = useState('')
     const [error, setError] = useState('')
     const fileRef = useRef<HTMLInputElement>(null)
     const workerRef = useRef<OcrWorker | null>(null)
@@ -101,10 +132,10 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
         return () => { document.body.style.overflow = prev; window.removeEventListener('keydown', onKey) }
     }, [open, onClose])
 
-    const reset = () => { setPhase('idle'); setPreview(null); setFound([]); setPartial([]); setProgress(0); setError('') }
+    const reset = () => { setPhase('idle'); setPreview(null); setFound([]); setPartial([]); setComposed([]); setRawText(''); setProgress(0); setError('') }
 
     const run = async (file: File) => {
-        setError(''); setFound([]); setPartial([]); setProgress(0)
+        setError(''); setFound([]); setPartial([]); setComposed([]); setRawText(''); setProgress(0)
         try {
             const { canvas, preview } = await prepare(file)
             setPreview(preview)
@@ -120,7 +151,7 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
             setPhase('reading')
             const { data } = await workerRef.current.recognize(canvas)
             const res = analyse(data.text)
-            setFound(res.found); setPartial(res.partial)
+            setFound(res.found); setPartial(res.partial); setComposed(res.composed); setRawText(data.text.trim())
             setPhase('done')
         } catch (e) {
             setError(e instanceof Error ? e.message : 'Something went wrong')
@@ -129,6 +160,7 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
     }
 
     const pick = () => fileRef.current?.click()
+    const total = found.length + composed.length
 
     return (
         <AnimatePresence>
@@ -225,15 +257,19 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                                         )}
                                         <div className="min-w-0 flex-1">
                                             <p className="text-[18px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>
-                                                {found.length ? `${found.length} ${found.length === 1 ? 'dish' : 'dishes'} found on your menu` : 'No known dishes found'}
+                                                {total ? `${total} ${total === 1 ? 'dish' : 'dishes'} explained` : 'We couldn’t recognise any dishes'}
                                             </p>
-                                            <p className="text-[12.5px]" style={{ color: 'rgba(75,46,26,0.55)' }}>Tap a dish for how to eat it, allergens and how to order.</p>
+                                            <p className="text-[12.5px]" style={{ color: 'rgba(75,46,26,0.55)' }}>
+                                                {total
+                                                    ? [found.length && `${found.length} from our guide`, composed.length && `${composed.length} explained from the menu words`].filter(Boolean).join(' · ')
+                                                    : 'See below what we could read from your photo.'}
+                                            </p>
                                         </div>
                                     </div>
 
                                     {found.length > 0 && (
                                         <ul className="space-y-2.5">
-                                            {found.map(({ dish, line }, i) => {
+                                            {found.map(({ dish, line, note }, i) => {
                                                 const link = links[dish.id]
                                                 return (
                                                     <motion.li key={dish.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 8) * 0.05, ease: EASE }}>
@@ -244,7 +280,7 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                                                                     : <span className="text-[34px]" aria-hidden>{dish.emoji}</span>}
                                                             </span>
                                                             <span className="min-w-0 flex-1">
-                                                                <span className="block truncate text-[11px]" style={{ color: 'rgba(75,46,26,0.45)' }}>On your menu: “{line.length > 46 ? line.slice(0, 46) + '…' : line}”</span>
+                                                                <span className="block truncate text-[11px]" style={{ color: 'rgba(75,46,26,0.45)' }}>On your menu: “{line.length > 46 ? line.slice(0, 46) + '…' : line}”{note ? ` · ${note}` : ''}</span>
                                                                 <span className="block text-[17px] font-bold leading-tight" style={{ ...serif, color: '#2D1A0E' }}>{dish.vi}</span>
                                                                 <span className="block text-[13px] font-semibold" style={{ color: '#4B2E1A' }}>{dish.en}</span>
                                                                 <span className="mt-1 line-clamp-2 text-[12.5px] leading-snug" style={{ color: 'rgba(75,46,26,0.65)' }}>{dish.what}</span>
@@ -267,6 +303,21 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                                         </ul>
                                     )}
 
+                                    {composed.length > 0 && (
+                                        <div className="mt-6">
+                                            <p className="mb-2 text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.1em' }}>
+                                                {found.length ? 'More dishes on your menu' : 'Dishes on your menu'}
+                                            </p>
+                                            <ul className="space-y-2.5">
+                                                {composed.map((c, i) => (
+                                                    <motion.li key={c.title + i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 8) * 0.04, ease: EASE }}>
+                                                        <ComposedDishCard dish={c} links={links} onOpenDish={onOpenDish} />
+                                                    </motion.li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+
                                     {partial.length > 0 && (
                                         <div className="mt-6">
                                             <p className="mb-2 text-[11px] font-bold uppercase" style={{ color: 'rgba(75,46,26,0.5)', letterSpacing: '0.1em' }}>Other lines — word by word</p>
@@ -285,8 +336,15 @@ export default function MenuScanner({ open, onClose, onOpenDish, links }: {
                                         </div>
                                     )}
 
-                                    {found.length === 0 && (
-                                        <div className="rounded-2xl px-4 py-3.5 text-[13.5px] leading-relaxed" style={{ background: '#FEF3C7', color: '#78350F' }}>
+                                    {rawText && (
+                                        <details className="mt-6 rounded-2xl bg-white px-4 py-3" style={{ border: '1px solid rgba(75,46,26,0.08)' }} open={total === 0}>
+                                            <summary className="cursor-pointer text-[12.5px] font-semibold" style={{ color: '#4B2E1A' }}>What we read from your photo</summary>
+                                            <pre className="mt-2 max-h-60 overflow-auto whitespace-pre-wrap text-[12px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.7)', fontFamily: 'inherit' }}>{rawText}</pre>
+                                        </details>
+                                    )}
+
+                                    {total === 0 && (
+                                        <div className="mt-4 rounded-2xl px-4 py-3.5 text-[13.5px] leading-relaxed" style={{ background: '#FEF3C7', color: '#78350F' }}>
                                             Try again with good light and the phone held flat over the dish names — or type a dish name into the search box instead.
                                         </div>
                                     )}

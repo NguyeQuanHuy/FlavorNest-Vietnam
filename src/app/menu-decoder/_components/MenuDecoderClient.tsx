@@ -13,6 +13,8 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, X, ArrowRight, ChevronRight, Volume2, UtensilsCrossed, Sparkles, MessageCircle, AlertTriangle, Flame, Camera } from 'lucide-react'
 import MenuScanner from './MenuScanner'
+import ComposedDishCard from './ComposedDishCard'
+import { explainLine } from '@/data/menu-compose'
 import {
     DISHES, SECTIONS, ALLERGEN_INFO, MENU_WORDS, WORD_GROUPS,
     scoreDish, decodeWords, type Dish, type Section,
@@ -134,6 +136,9 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
         return DISHES.map(d => ({ d, s: scoreDish(d, query) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 3).map(x => x.d)
     }, [query])
     const words = useMemo(() => (query.trim() ? decodeWords(query) : []), [query])
+    // not in our guide? explain it from its words
+    const explained = useMemo(() => (query.trim() ? explainLine(query) : {}), [query])
+    const composed = explained.composed ?? null
     const known = words.filter(w => w.word).length
 
     const list = DISHES.filter(d =>
@@ -142,8 +147,8 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
         (filter !== 'noPork' || !d.protein.includes('pork')) &&
         (filter !== 'mild' || d.spice === 0))
 
-    const best = matches[0]
-    const others = matches.slice(1)
+    const best = composed ? undefined : matches[0]
+    const others = composed ? matches.slice(0, 2) : matches.slice(1)
 
     return (
         <main className="min-h-screen" style={{ background: '#FBF8F4', fontFamily: "'DM Sans', sans-serif" }}>
@@ -218,6 +223,8 @@ export default function MenuDecoderClient({ links }: { links: DishLinks }) {
                                                 <span className="mt-2 flex items-center gap-1 text-[13px] font-semibold" style={{ color: '#D97706' }}>How to eat it, allergens & more <ChevronRight size={15} className="transition-transform group-hover:translate-x-0.5" /></span>
                                             </span>
                                         </button>
+                                    ) : composed ? (
+                                        <ComposedDishCard dish={composed} links={links} onOpenDish={setOpen} />
                                     ) : (
                                         <p className="rounded-2xl px-4 py-3 text-[14.5px]" style={{ background: 'rgba(255,255,255,0.08)', color: '#F5EDE3' }}>
                                             No dish match yet — {known ? 'but here is what the words mean:' : 'try typing just the dish name, e.g. “phở” or “bún”.'}
