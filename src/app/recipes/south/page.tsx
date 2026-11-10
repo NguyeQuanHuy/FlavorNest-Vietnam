@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map, BookOpen } from 'lucide-react'
+import { Utensils, Clock, Globe, Star, Castle, Palmtree, Soup, IceCream, Map, BookOpen, ChefHat, Timer } from 'lucide-react'
 import { useFavorites } from '@/hooks/useFavorites'
 import VietnamMap from '@/components/VietnamMap'
 
@@ -152,6 +152,24 @@ const RECIPES: Recipe[] = [
     },
 ]
 
+// ── Real stats, computed from RECIPES (no hard-coded numbers) ──
+const toMin = (t: string) => {
+    const h = t.match(/([\d.]+)\s*hrs?/)
+    const m = t.match(/(\d+)\s*min/)
+    return (h ? parseFloat(h[1]) * 60 : 0) + (m ? parseInt(m[1], 10) : 0)
+}
+const fmtMin = (n: number) => {
+    if (n < 60) return `${Math.round(n / 5) * 5} min`
+    const h = Math.round(n / 30) / 2
+    return `${h} ${h === 1 ? 'hr' : 'hrs'}`
+}
+const STATS = {
+    quickest: fmtMin(Math.min(...RECIPES.map(r => toMin(r.time)))),
+    easy: RECIPES.filter(r => r.difficulty === 'Easy').length,
+    // median — one 12-hour dish shouldn't distort the typical time
+    typicalTime: fmtMin([...RECIPES.map(r => toMin(r.time))].sort((a, b) => a - b)[Math.floor(RECIPES.length / 2)]),
+}
+
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
 
@@ -212,8 +230,8 @@ export default function SouthernCuisinePage() {
             `}</style>
 
             {/* ── HERO ── */}
-            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 24px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }}>
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '108px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div className="fn-region-hero" style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div>
                         {/* Breadcrumb */}
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
@@ -267,9 +285,9 @@ export default function SouthernCuisinePage() {
                         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                             {[
                                 { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                                { Icon: Clock, val: '20 min', lbl: 'Quickest' },
-                                { Icon: Globe, val: '1', lbl: 'Region' },
-                                { Icon: Star, val: '4.9', lbl: 'Avg Rating' },
+                                { Icon: Clock, val: STATS.quickest, lbl: 'Quickest' },
+                                { Icon: ChefHat, val: `${STATS.easy}`, lbl: 'Easy Recipes' },
+                                { Icon: Timer, val: STATS.typicalTime, lbl: 'Typical Time' },
                             ].map(({ Icon, val, lbl }) => (
                                 <div key={lbl}>
                                     <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
@@ -279,8 +297,8 @@ export default function SouthernCuisinePage() {
                             ))}
                         </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <VietnamMap region="south" size={200} />
+                    <div className="fn-region-hero-map" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="south" size={380} />
                     </div>
                 </div>
             </section>
@@ -336,7 +354,7 @@ export default function SouthernCuisinePage() {
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
                             { label: 'Northern Cuisine', sub: 'Hanoi & The North', Icon: Castle, href: '/recipes/north' },
-                            { label: 'Southern Cuisine', sub: 'Saigon & The Mekong', Icon: Palmtree, href: '/recipes/south' },
+                            { label: 'Central Cuisine', sub: 'Huế, Hội An & The Coast', Icon: Palmtree, href: '/recipes/central' },
                             { label: 'Street Food', sub: 'on streets everywhere', Icon: Soup, href: '/recipes/street-food' },
                             { label: 'All Recipes', sub: 'Browse everything', Icon: BookOpen, href: '/recipes' },
                         ].map(({ label, sub, Icon, href }) => (

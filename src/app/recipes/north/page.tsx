@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useMemo, useCallback } from 'react'
-import { Utensils, Clock, Globe, Star, Flame, Soup, BookOpen } from 'lucide-react'
+import { Utensils, Clock, Globe, Star, Flame, Soup, BookOpen, ChefHat, Timer } from 'lucide-react'
 // BookOpen, Flame, Soup used in footer
 import { motion, AnimatePresence } from 'framer-motion'
 import { useFavorites } from '@/hooks/useFavorites'
@@ -138,6 +138,24 @@ const RECIPES: Recipe[] = [
     },
 ]
 
+// ── Real stats, computed from RECIPES (no hard-coded numbers) ──
+const toMin = (t: string) => {
+    const h = t.match(/([\d.]+)\s*hrs?/)
+    const m = t.match(/(\d+)\s*min/)
+    return (h ? parseFloat(h[1]) * 60 : 0) + (m ? parseInt(m[1], 10) : 0)
+}
+const fmtMin = (n: number) => {
+    if (n < 60) return `${Math.round(n / 5) * 5} min`
+    const h = Math.round(n / 30) / 2
+    return `${h} ${h === 1 ? 'hr' : 'hrs'}`
+}
+const STATS = {
+    quickest: fmtMin(Math.min(...RECIPES.map(r => toMin(r.time)))),
+    easy: RECIPES.filter(r => r.difficulty === 'Easy').length,
+    // median — one 12-hour dish shouldn't distort the typical time
+    typicalTime: fmtMin([...RECIPES.map(r => toMin(r.time))].sort((a, b) => a - b)[Math.floor(RECIPES.length / 2)]),
+}
+
 const FILTERS = ['All', 'Easy', 'Medium', 'Hard']
 const DIFF_COLOR: Record<string, string> = { Easy: '#10b981', Medium: '#f59e0b', Hard: '#ef4444' }
 
@@ -197,8 +215,8 @@ export default function NorthernCuisinePage() {
             `}</style>
 
             {/* ── HERO ── */}
-            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }}>
+            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '108px 24px 72px', position: 'relative', overflow: 'hidden' }}>
+                <div className="fn-region-hero" style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div>
                         <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
                             {[['Home', '/'], ['Recipes', '/recipes'], ['Northern', '']].map(([label, href], i) => (
@@ -242,9 +260,9 @@ export default function NorthernCuisinePage() {
                         <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
                             {[
                                 { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                                { Icon: Clock, val: '40 min', lbl: 'Quickest' },
-                                { Icon: Globe, val: '1', lbl: 'Region' },
-                                { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
+                                { Icon: Clock, val: STATS.quickest, lbl: 'Quickest' },
+                                { Icon: ChefHat, val: `${STATS.easy}`, lbl: 'Easy Recipes' },
+                                { Icon: Timer, val: STATS.typicalTime, lbl: 'Typical Time' },
                             ].map(({ Icon, val, lbl }) => (
                                 <div key={lbl}>
                                     <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
@@ -254,8 +272,8 @@ export default function NorthernCuisinePage() {
                             ))}
                         </div>
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <VietnamMap region="north" size={220} />
+                    <div className="fn-region-hero-map" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <VietnamMap region="north" size={380} />
                     </div>
                 </div>
             </section>
@@ -328,7 +346,7 @@ export default function NorthernCuisinePage() {
                     <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                         {[
                             { label: 'Central Cuisine', sub: 'Thanh Hoa to Binh Thuan', Icon: Flame, href: '/recipes/central' },
-                            { label: 'Southern Cuisine', sub: 'Ninh Thuan to Ca Mau', Icon: Soup, href: '/recipes/southern' },
+                            { label: 'Southern Cuisine', sub: 'Ninh Thuan to Ca Mau', Icon: Soup, href: '/recipes/south' },
                             { label: 'Street Food', sub: 'On streets everywhere', Icon: Utensils, href: '/recipes/street-food' },
                             { label: 'All Recipes', sub: 'Browse everything', Icon: BookOpen, href: '/recipes' },
                         ].map(({ label, sub, Icon, href }) => (
@@ -343,7 +361,7 @@ export default function NorthernCuisinePage() {
                         ))}
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 48 }}>
-                        <VietnamMap region="north" size={200} />
+                        <VietnamMap region="north" size={150} variant="compact" />
                     </div>
                 </div>
             </section>
