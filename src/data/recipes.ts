@@ -9951,7 +9951,7 @@ const ALL_RECIPES: Recipe[] = [
         title: 'My Tho Pork & Shrimp Noodle Soup',
         subtitle: 'Hủ Tiếu Mỹ Tho',
         shortDescription: 'A clear pork bone broth with springy tapioca noodles, sliced pork, shrimp and quail eggs — the original hủ tiếu from the Mekong Delta town of Mỹ Tho.',
-        image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&auto=format&fit=crop',
+        image: '/images/recipes/hu-tieu-my-tho.jpg',
         imageAlt: 'Bowl of hu tieu My Tho noodle soup with pork and shrimp',
         prepTime: '20 min', cookTime: '2 hrs', totalTime: '2 hrs 20 min',
         servings: 4, difficulty: 'Medium', category: 'Noodles',
