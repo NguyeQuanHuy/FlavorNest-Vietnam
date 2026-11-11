@@ -9881,7 +9881,7 @@ const ALL_RECIPES: Recipe[] = [
         title: 'Crispy Mini Savory Pancakes',
         subtitle: 'Bánh Khọt',
         shortDescription: 'Bite-sized crispy turmeric coconut pancakes topped with shrimp, served with fresh lettuce wraps and tangy fish sauce — a beloved street food from Vung Tau.',
-        image: 'https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800&auto=format&fit=crop',
+        image: '/images/recipes/banh-khot.jpg',
         imageAlt: 'Golden crispy banh khot mini pancakes topped with shrimp on a plate',
         prepTime: '20 min', cookTime: '25 min', totalTime: '45 min',
         servings: 4, difficulty: 'Medium', category: 'Street Food',

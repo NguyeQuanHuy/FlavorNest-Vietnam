@@ -334,6 +334,11 @@
   "description": "Chewy Vietnamese cassava cake baked with coconut milk — golden, fragrant, and naturally sweet.",
   "image": "/images/recipes/banh-khoai-mi-nuong.jpg"
  },
+ "banh-khot": {
+  "title": "Bánh Khọt (Vũng Tàu Crispy Mini Pancakes with Shrimp) Recipe",
+  "description": "Bánh Khọt — Vũng Tàu's bite-sized turmeric rice pancakes, fried crisp in a cast-iron well pan, crowned with a whole shrimp and wrapped in mustard greens.",
+  "image": "/images/recipes/banh-khot.jpg"
+ },
  "banh-khuc-lang-diem": {
   "title": "Bánh Khúc Làng Diềm (Cudweed Sticky Rice Balls with Mung Bean and Pork Fat) Recipe",
   "description": "A wild cudweed leaf — picked in winter from the edges of the rice fields — boiled, pounded into glutinous rice dough until it turns the colour of moss…",
