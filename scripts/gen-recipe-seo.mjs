@@ -75,4 +75,6 @@ for (const slug of fs.readdirSync(RECIPES_DIR).sort()) {
 }
 
 fs.writeFileSync(OUT, JSON.stringify(seo, null, 1) + '\n')
+// slugs that have a real page → recipes.ts hides cards of recipes without one
+fs.writeFileSync(path.join(ROOT, 'src/data/recipe-pages.generated.json'), JSON.stringify(Object.keys(seo)) + '\n')
 console.log(`[recipe-seo] ${Object.keys(seo).length} recipes → ${path.relative(ROOT, OUT)} · ${created} layout(s) created`)

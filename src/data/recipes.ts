@@ -54,7 +54,7 @@ export const CATEGORIES: Category[] = [
 ]
 
 // ── Recipe data ────────────────────────────────────────────────────────────
-export const RECIPES: Recipe[] = [
+const ALL_RECIPES: Recipe[] = [
 
     // ── 1. Hanoi Beef Pho ───────────────────────────────────────────────────
     {
@@ -10039,7 +10039,7 @@ export const RECIPES: Recipe[] = [
         title: 'Sweet and Sour Pork',
         subtitle: '糖醋里脊 (Táng Cù Lǐ Jǐ)',
         shortDescription: 'Crispy battered pork pieces tossed in a glossy tangy sauce with bell peppers and pineapple — the most ordered Chinese dish in European restaurants.',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&auto=format&fit=crop',
         imageAlt: 'Crispy sweet and sour pork with peppers and pineapple',
         prepTime: '25 min', cookTime: '15 min', totalTime: '40 min',
         servings: 4, difficulty: 'Medium', category: 'Chinese',
@@ -10067,7 +10067,7 @@ export const RECIPES: Recipe[] = [
         title: 'Mapo Tofu',
         subtitle: '麻婆豆腐 (Má Pó Dòu Fǔ)',
         shortDescription: 'Silken tofu cubes swimming in a fiery chili-bean sauce with ground pork, Sichuan peppercorn and fermented black beans — the numbing-spicy masterpiece of Sichuan.',
-        image: 'https://images.unsplash.com/photo-1582452919408-8bbee8e76f44?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1583032015879-e5022cb87c3b?w=800&auto=format&fit=crop',
         imageAlt: 'Mapo tofu in spicy red chili bean sauce with ground pork',
         prepTime: '10 min', cookTime: '15 min', totalTime: '25 min',
         servings: 4, difficulty: 'Easy', category: 'Chinese',
@@ -10207,7 +10207,7 @@ export const RECIPES: Recipe[] = [
         title: 'Crispy Aromatic Duck',
         subtitle: '香酥鸭 (Xiāng Sū Yā)',
         shortDescription: 'Five-spice marinated duck slow-steamed then deep-fried until shatteringly crispy, shredded and served with pancakes, hoisin and cucumber — the European Chinese restaurant showstopper.',
-        image: 'https://images.unsplash.com/photo-1432139509613-5c4255a1d197?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop',
         imageAlt: 'Crispy aromatic duck with pancakes hoisin sauce and cucumber',
         prepTime: '30 min', cookTime: '2 hrs', totalTime: '8 hrs',
         servings: 4, difficulty: 'Hard', category: 'Chinese',
@@ -10221,7 +10221,7 @@ export const RECIPES: Recipe[] = [
         title: 'General Tso Chicken',
         subtitle: '左宗棠鸡 (Zuǒ Zōng Táng Jī)',
         shortDescription: 'Crispy deep-fried chicken chunks tossed in a sticky sweet-spicy-tangy sauce with dried chilies and broccoli — the Chinese-American invention that conquered Europe.',
-        image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&auto=format&fit=crop',
         imageAlt: 'General Tso chicken with crispy coating and sweet spicy sauce',
         prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
         servings: 4, difficulty: 'Medium', category: 'Chinese',
@@ -10351,7 +10351,7 @@ export const RECIPES: Recipe[] = [
         title: 'Yakitori Chicken Skewers',
         subtitle: '焼き鳥 (Yakitori)',
         shortDescription: 'Bite-sized chicken pieces grilled over charcoal and basted with sweet tare sauce until caramelized and smoky — the soul of the Japanese izakaya.',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop',
         imageAlt: 'Yakitori chicken skewers with tare glaze on a grill',
         prepTime: '15 min', cookTime: '10 min', totalTime: '25 min',
         servings: 4, difficulty: 'Easy', category: 'Japanese',
@@ -10393,7 +10393,7 @@ export const RECIPES: Recipe[] = [
         title: 'Osaka-Style Okonomiyaki',
         subtitle: 'お好み焼き (Okonomiyaki)',
         shortDescription: 'A savory Japanese pancake loaded with cabbage, pork belly and topped with okonomiyaki sauce, mayo, bonito flakes and aonori — street food theater on a hot plate.',
-        image: 'https://images.unsplash.com/photo-1582452919408-8bbee8e76f44?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&auto=format&fit=crop',
         imageAlt: 'Okonomiyaki topped with sauce mayo and bonito flakes',
         prepTime: '15 min', cookTime: '15 min', totalTime: '30 min',
         servings: 2, difficulty: 'Medium', category: 'Japanese',
@@ -10421,7 +10421,7 @@ export const RECIPES: Recipe[] = [
         title: 'Takoyaki Octopus Balls',
         subtitle: 'たこ焼き (Takoyaki)',
         shortDescription: 'Crispy-outside, molten-inside batter balls filled with tender octopus, pickled ginger and green onion — the iconic Osaka street snack now beloved in Europe.',
-        image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&auto=format&fit=crop',
         imageAlt: 'Takoyaki octopus balls with sauce and bonito flakes',
         prepTime: '20 min', cookTime: '15 min', totalTime: '35 min',
         servings: 4, difficulty: 'Medium', category: 'Japanese',
@@ -10635,7 +10635,7 @@ export const RECIPES: Recipe[] = [
         title: 'Korean Cheese Corn Dog',
         subtitle: '핫도그 (Hatdogeu)',
         shortDescription: 'Mozzarella and sausage on a stick coated in a sweet, crispy batter and rolled in sugar — the viral Korean street food that took European social media by storm.',
-        image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&auto=format&fit=crop',
         imageAlt: 'Korean cheese corn dog with stretchy mozzarella',
         prepTime: '20 min', cookTime: '10 min', totalTime: '30 min',
         servings: 4, difficulty: 'Medium', category: 'Korean',
@@ -10658,6 +10658,12 @@ export const RECIPES: Recipe[] = [
     },
 
 ]
+
+// Only recipes that have a page (src/app/recipes/<slug>/page.tsx) are listed — no cards leading to 404.
+// List generated by scripts/gen-recipe-seo.mjs (runs before every build). Add the page → the card appears.
+import PAGE_SLUGS from './recipe-pages.generated.json'
+const _hasPage = new Set<string>(PAGE_SLUGS)
+export const RECIPES: Recipe[] = ALL_RECIPES.filter(r => _hasPage.has(r.slug))
 
 // ── Helper utilities ───────────────────────────────────────────────────────
 

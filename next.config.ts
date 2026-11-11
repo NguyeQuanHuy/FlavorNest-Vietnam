@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // Old / mistyped recipe URLs → the real page (301)
+  async redirects() {
+    return [
+      { source: '/recipes/bun-cha-ha-noi', destination: '/recipes/bun-cha-hanoi', permanent: true },
+      { source: '/recipes/canh-chua-ca', destination: '/recipes/canh-chua-ca-tre', permanent: true },
+      { source: '/recipes/suon-nuong-a', destination: '/recipes/suon-nuong-sa', permanent: true },
+    ];
+  },
   images: {
     qualities: [75, 80, 85],
     formats: ['image/avif', 'image/webp'],

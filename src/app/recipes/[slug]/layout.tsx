@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { recipes } from '@/data/recipes';
 
 type Props = {
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!recipe) {
         return {
-            title: 'Recipe Not Found | FlavorNest Vietnam',
+            title: 'Recipe Not Found',
             description: 'Explore 880+ authentic Vietnamese recipes on FlavorNest Vietnam.',
         };
     }
@@ -52,6 +53,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function RecipeSlugLayout({ children }: Props) {
-    return <>{children}</>;
+// Every real recipe has its own folder (static routes win over [slug]),
+// so any URL that reaches this route does not exist → real 404 instead of a duplicate page.
+export default function RecipeSlugLayout(): never {
+    notFound();
 }
