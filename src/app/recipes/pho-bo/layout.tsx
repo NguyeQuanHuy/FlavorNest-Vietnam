@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Authentic Hanoi Beef Pho Recipe (Phở Bò) | FlavorNest Vietnam',
+    title: 'Authentic Hanoi Beef Pho Recipe (Phở Bò)',
     description:
         'The complete traditional Hanoi-style beef pho recipe. 10-hour clear bone broth scented with star anise, charred ginger, and cinnamon. Tested in a real home kitchen. Step-by-step with pro tips and FAQ.',
     keywords: [

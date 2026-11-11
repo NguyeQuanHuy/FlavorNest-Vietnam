@@ -53,9 +53,7 @@ export const metadata: Metadata = {
     template: '%s | FlavorNest Vietnam', // ⬅️ Quan trọng! Cho phép từng page set title riêng
   },
   description: 'Your nest of authentic Vietnamese flavors. 880+ tested recipes from Hanoi, Hue and Saigon — made simple for every home kitchen.',
-  alternates: {
-    canonical: '/', // ⬅️ Trỏ về chính nó, không phải domain khác
-  },
+  // canonical is set per page (homepage: src/app/page.tsx, recipes: recipes/_lib/recipe-seo.ts) — never globally
   openGraph: {
     type: 'website',
     locale: 'en_US',
