@@ -325,7 +325,7 @@ export default function VietnameseHerbPlateGuidePage() {
                     <InlineImage
                         src="/images/stories/cho-rau-ha-noi.jpg"
                         alt="A Vietnamese market vendor selling fresh herbs"
-                        caption="A morning herb market in Hanoi: rau răm in one basket, tía tô in another, ngò gai bundled with rubber bands. The vendors expect customers to buy by the handful, not the sprig."
+                        caption="A morning greens market on a Hanoi pavement: herbs and vegetables sold by the bundle and weighed on a hand scale. Vendors expect customers to buy by the handful, not the sprig. Photo: P. Hughes, CC BY 4.0, via Wikimedia Commons."
                     />
 
                     <SectionDivider />
