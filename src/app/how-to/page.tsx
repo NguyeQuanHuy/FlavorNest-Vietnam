@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 import HowToClient from './_components/HowToClient'
 
 export const metadata: Metadata = {
-    title: 'How to Cook Vietnamese Food: Technique Guides | FlavorNest Vietnam',
+    title: 'How to Cook Vietnamese Food: Technique Guides',
     description:
         'Practical guides to Vietnamese cooking techniques: crystal-clear broth, rolling rice paper, caramel sauce, kho braising, phin coffee, wok care and more.',
     alternates: { canonical: '/how-to' },

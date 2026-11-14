@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Vietnamese Fish Sauce (Nước Mắm): A Complete Guide | FlavorNest',
+    title: 'Vietnamese Fish Sauce (Nước Mắm): A Complete Guide',
     description:
         'Everything you need to know about Vietnamese fish sauce — how it\'s made, how to choose a good one, what degrees N means, the difference between Phú Quốc and Phan Thiết, and what to substitute when you can\'t find it.',
     keywords: [

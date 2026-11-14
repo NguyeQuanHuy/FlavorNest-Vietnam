@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Vietnamese Egg Coffee (Cà Phê Trứng): The Hanoi Story | FlavorNest',
+    title: 'Vietnamese Egg Coffee (Cà Phê Trứng): The Hanoi Story',
     description:
         'The full story of Vietnamese egg coffee — how a bartender at the Hanoi Metropole invented it in 1946 during a milk shortage, and how to make the real thing at home. Includes Café Giảng history and recipe.',
     keywords: [

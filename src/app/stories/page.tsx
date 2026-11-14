@@ -9,8 +9,9 @@ import StoriesClient from './_components/StoriesClient'
 import { STORIES } from '@/data/stories-data'
 
 export const metadata: Metadata = {
-    title: 'Kitchen Stories | FlavorNest Vietnam',
+    title: 'Vietnamese Food Stories: History, Culture & Travel',
     description: 'Discover the history, culture and people behind authentic Vietnamese cuisine.',
+    alternates: { canonical: '/stories' },
 }
 
 // Định nghĩa kiểu dữ liệu (Types)

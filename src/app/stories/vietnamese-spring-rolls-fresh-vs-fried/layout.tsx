@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Vietnamese Spring Rolls: Fresh (Gỏi Cuốn) vs Fried (Chả Giò) | FlavorNest',
+    title: 'Vietnamese Spring Rolls: Fresh (Gỏi Cuốn) vs Fried (Chả Giò)',
     description:
         'Everything you need to know about Vietnamese spring rolls — the difference between gỏi cuốn and chả giò, the regional names (nem cuốn, nem rán), the history from China to Vietnam, and how to make both at home including the rice paper rolling technique.',
     keywords: [

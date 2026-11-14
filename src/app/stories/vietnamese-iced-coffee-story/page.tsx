@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Cà Phê Sữa Đá: The Slow Genius of Vietnamese Iced Coffee | FlavorNest',
+    title: 'Cà Phê Sữa Đá: The Slow Genius of Vietnamese Iced Coffee',
     description:
         'How Vietnam took French colonial coffee culture, paired it with Robusta beans and condensed milk, and created one of the world\'s most beloved cold drinks. A long-form essay on Vietnamese coffee history, the phin filter, and why patience is the secret ingredient.',
     keywords: [

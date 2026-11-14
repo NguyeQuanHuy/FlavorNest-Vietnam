@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Bún Bò Huế: The Spicy Imperial Noodle Soup of Vietnam | FlavorNest',
+    title: 'Bún Bò Huế: The Spicy Imperial Noodle Soup of Vietnam',
     description:
         'The full history, technique, and cultural depth of Bún Bò Huế — Vietnam\'s royal-court spicy beef noodle soup. From the kitchens of the Nguyễn emperors to the global food spotlight. Why most chefs think it\'s better than phở.',
     keywords: [

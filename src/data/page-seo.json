@@ -1,0 +1,406 @@
+{
+ "/admin/users": {
+  "title": "Admin",
+  "noindex": true
+ },
+ "/auth/register": {
+  "title": "Create your account",
+  "noindex": true
+ },
+ "/auth/signin": {
+  "title": "Sign in",
+  "noindex": true
+ },
+ "/auth/signup": {
+  "title": "Create your account",
+  "noindex": true
+ },
+ "/recipes/drinks": {
+  "title": "Vietnamese Drinks & Coffee Recipes",
+  "description": "From the dark, sweet ceremony of cà phê sữa đá to the silky elegance of egg coffee — Vietnamese drinks are an art of patience, balance, and bold contrasts."
+ },
+ "/recipes/main-dishes": {
+  "title": "Vietnamese Main Dish Recipes",
+  "description": "From slow-braised clay pots to fiery wok dishes — these are the recipes that define the Vietnamese dining table. Passed down through generations…"
+ },
+ "/recipes/breakfast": {
+  "title": "Vietnamese Breakfast Recipes",
+  "description": "Start your day the Vietnamese way — from steaming bowls of phở to crispy bánh mì, these are the morning meals that fuel a nation."
+ },
+ "/recipes/street-food": {
+  "title": "Vietnamese Street Food Recipes",
+  "description": "The best food in Vietnam has never been served in restaurants. It lives on plastic stools, steaming carts, and narrow laneways where the recipes are older…"
+ },
+ "/recipes/central": {
+  "title": "Central Vietnamese Recipes: Huế, Hội An & the Coast",
+  "description": "Imperial courts in Huế, lantern-lit alleys in Hội An, fishing villages along the South China Sea — Central Vietnamese cuisine is bold, spicy, and…"
+ },
+ "/recipes/south": {
+  "title": "Southern Vietnamese Recipes: Saigon & the Mekong Delta",
+  "description": "From Saigon's neon-lit street stalls to the floating markets of the Mekong Delta — Southern Vietnamese cuisine is sweet, vibrant, and gloriously generous."
+ },
+ "/recipes/desserts": {
+  "title": "Vietnamese Dessert Recipes: Chè, Flan & Sweet Cakes",
+  "description": "From silky chè to caramel-kissed bánh flan — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul."
+ },
+ "/stories/vietnamese-herb-plate-guide": {
+  "title": "The Vietnamese Herb Plate: A Complete Guide to Rau Sống",
+  "description": "A complete field guide to the herbs Vietnam eats — what they are, how they taste, how to use them, and what to substitute when you can't find them."
+ },
+ "/stories/saigon-street-food-guide": {
+  "title": "Saigon Street Food Guide: What to Eat in Ho Chi Minh City",
+  "description": "Saigon eats differently from Hanoi. Sweeter, richer, more abundant, more chaotic — and available at every hour of the day and night. This is the guide to…"
+ },
+ "/stories/culture": {
+  "title": "Vietnamese Food Culture & History Stories",
+  "description": "From the imperial courts of Huế to the floating markets of the Mekong — the culture, history, and quiet wisdom behind Vietnamese food."
+ },
+ "/stories/culture/hue-royal-cuisine": {
+  "title": "The Lost Art of Hue's Royal Cuisine",
+  "description": "When the Nguyen emperors moved the capital to Hue in 1802, they brought their chefs with them — and demanded that every meal be both beautiful and…"
+ },
+ "/stories/culture/fermentation-culture": {
+  "title": "Vietnam's Secret Ingredient: Fermentation",
+  "description": "The smell hits you before you see it — a deep, oceanic, almost aggressive fermented funk that Vietnamese cooks consider essential and first-time visitors…"
+ },
+ "/stories/culture/rice-civilization": {
+  "title": "Rice: The Architecture of Vietnamese Civilisation",
+  "description": "The Vietnamese word for \"to eat\" is an com — literally, \"to eat rice.\" Not to eat food. To eat rice. For two thousand years, rice has not just fed Vietnam…"
+ },
+ "/stories/culture/street-food-culture": {
+  "title": "Why the Best Meals Are Eaten on the Street",
+  "description": "In Vietnam, the street is not where you eat because you have no other option. The street is where you eat because it is the best option. The vendor who…"
+ },
+ "/stories/culture/origins-of-vietnamese-ingredients": {
+  "title": "Where Vietnamese Ingredients Come From: Origins & Trade Routes",
+  "description": "The origins of the ingredients that built Vietnamese cuisine — from ancient trade routes to a grandmother's kitchen in Phú Yên"
+ },
+ "/stories/culture/five-flavours": {
+  "title": "The Five Flavours of Vietnamese Cooking",
+  "description": "Vietnamese cooking is governed by ngu vi — the five flavours: sour, bitter, sweet, spicy and salty. Every great dish holds them in tension, never letting…"
+ },
+ "/stories/culture/pho-history": {
+  "title": "The 100-Year History of Pho",
+  "description": "Nobody agrees on where pho came from. Some say it evolved from the French pot-au-feu. Others trace it to the Chinese noodle soups that arrived with…"
+ },
+ "/stories/secrets-of-the-south-banh-xeo": {
+  "title": "Secrets of the South: Bánh Xèo",
+  "description": "The name itself is the recipe. Xèo — that violent, joyful sizzle as rice batter meets a white-hot pan. This is the sound of southern Vietnam."
+ },
+ "/stories/vietnamese-ingredients-guide": {
+  "title": "The Essential Vietnamese Pantry: 15 Ingredients That Unlock Every Recipe",
+  "description": "You do not need 50 ingredients to cook Vietnamese food. You need these 15 — find them once, and every recipe opens up."
+ },
+ "/stories/vietnamese-coffee-culture": {
+  "title": "Vietnamese Coffee Culture: Why the World's Second-Largest Coffee Producer Drinks It Differently",
+  "description": "Vietnam produces more coffee than almost anyone on earth. It drinks it slower than anyone on earth. The two facts are connected."
+ },
+ "/stories/vietnamese-death-anniversary-food": {
+  "title": "The Feast for the Dead: Food, Memory, and the Vietnamese Death Anniversary",
+  "description": "In Vietnam, the dead are fed before the living. And the food that feeds them — the boiled chicken, the sticky rice, the deceased's favorite dish — carries…"
+ },
+ "/stories/phu-yen-cuisine": {
+  "title": "The Province Nobody Talks About Has the Best Food in Vietnam",
+  "description": "Phú Yên sits between the fame of Hội An and the chaos of Nha Trang, quietly feeding people some of the most honest food on the coast. Most tourists drive…"
+ },
+ "/stories/hanoi-street-food-guide": {
+  "title": "The Honest Hanoi Street Food Guide: What to Eat, Where, and When",
+  "description": "Not a list of tourist traps. A guide to how Hanoians actually eat — what they order at 6am, where they go after work, and why the best meals have no…"
+ },
+ "/stories/the-art-of-banh-mi": {
+  "title": "The Art of Bánh Mì: How a Baguette Became Vietnamese",
+  "description": "How a French baguette traveled to Saigon, met fish sauce and pâté, and became — in less than a century — the world's most celebrated street sandwich."
+ },
+ "/stories/why-vietnamese-food-is-famous": {
+  "title": "Why Vietnamese Food Conquered the World",
+  "description": "It is not an accident. It is geography, history, and two thousand years of stubbornly refusing to let anyone else's cuisine replace your own."
+ },
+ "/stories/instant-noodles-street-story": {
+  "title": "Instant Noodles: Vietnam’s Quiet National Dish",
+  "description": "Vietnam eats more instant noodles per person than almost any country on Earth. The food writers don't talk about it. Everyone else does."
+ },
+ "/stories/vietnamese-menu-decoder": {
+  "title": "Every Vietnamese Dish Name Explained: What the Words Actually Mean",
+  "description": "\"Phở\" means nothing to most visitors. \"Bánh\" is on half the menu. \"Bún\" keeps appearing but nobody explains what it is. This guide decodes Vietnamese dish…"
+ },
+ "/stories/obama-bun-cha-hanoi": {
+  "title": "The $6 Dinner That Put Vietnamese Food on the World Stage",
+  "description": "On May 23, 2016, Barack Obama — the sitting President of the United States — sat down on a blue plastic stool in a narrow Hanoi restaurant and ate bún chả…"
+ },
+ "/stories/is-vietnamese-food-healthy": {
+  "title": "Is Vietnamese Food Actually Healthy? A Nutritionist's Honest Answer",
+  "description": "Vietnam has one of the lowest obesity rates in the world. The food is the reason. Here's the science behind why."
+ },
+ "/stories/vietnamese-family-meal-traditions": {
+  "title": "The Vietnamese Family Dinner Table: What Changed, What Was Lost, and What Quietly Survived",
+  "description": "The round wooden tray on the floor. The grandmother who cooked since 4pm. The rule that you eat together or you do not eat. These things are still…"
+ },
+ "/stories/vietnamese-meat-guide": {
+  "title": "The Vietnamese Meat Guide: Every Cut, Every Cooking Method, Every Dish",
+  "description": "Vietnamese cooking uses every part of every animal — and has a specific reason for each choice. This is not accident. It is one of the most thoughtful…"
+ },
+ "/stories/symphony-of-hanois-dawn": {
+  "title": "The Symphony of Hanoi’s Dawn: Phở at 4 AM",
+  "description": "On the secret rhythm of pho — and why the soul of a city still wakes up at four in the morning to skim a pot of broth."
+ },
+ "/stories/tet-food-traditions": {
+  "title": "What Vietnamese Families Eat at Tết — And Why Every Dish Means Something",
+  "description": "Tết is not just Vietnam's Lunar New Year. It is the most important meal of the year — and every dish on the table has been carrying meaning for a thousand…"
+ },
+ "/stories/vietnamese-diaspora-food": {
+  "title": "The Foods That Follow You: What Vietnamese People Miss Most When They Leave Home",
+  "description": "Over five million Vietnamese people live outside Vietnam. Every single one of them has a dish — or several — that they think about more than they expected…"
+ },
+ "/stories/chef-secrets": {
+  "title": "Vietnamese Cooking Secrets from Mothers & Grandmothers",
+  "description": "The techniques Vietnamese home cooks learn from their mothers and grandmothers — the quiet wisdom that separates a good dish from an extraordinary one."
+ },
+ "/stories/vietnamese-food-culture-guide": {
+  "title": "Vietnamese Food Culture for Beginners: The Unwritten Rules Nobody Tells You",
+  "description": "You can read a hundred \"top 10 Vietnamese dishes\" lists and still miss what makes Vietnamese food culture genuinely different. This is the guide that…"
+ },
+ "/stories/vietnamese-fish-hotpot-story": {
+  "title": "Vietnamese Fish Hotpot (Lẩu Cá): The River in a Pot",
+  "description": "Vietnamese fish hotpot is not one dish but many — a recipe written by the Mekong itself, taught to a country that learned to listen to its rivers."
+ },
+ "/stories/vietnam-street-food-culture-story": {
+  "title": "Vietnamese Street Food Culture: Eaten on a Plastic Stool",
+  "description": "Why the most important meals in Vietnam are not served on plates — and what the country's sidewalks understand about food that the rest of the world is…"
+ },
+ "/stories/travel": {
+  "title": "Vietnam Food Travel Guide: Where to Eat, City by City",
+  "description": "From plastic stools in Hanoi alleys to seafood shacks on Vung Tau cliffs — a guide to where Vietnam actually eats."
+ },
+ "/stories/travel/pho-hanoi": {
+  "title": "Where to Eat Pho in Hanoi",
+  "description": "At 6am on a cold Hanoi morning, a plastic stool on Bat Dan street is the best seat in the world. The broth has been simmering since 3am. You smell it…"
+ },
+ "/stories/travel/banh-xeo-mekong": {
+  "title": "Where to Eat Banh Xeo in the Mekong Delta",
+  "description": "The name means sizzling cake — and the sound it makes when batter hits the wok is half the experience. Turmeric-yellow rice flour crepe, enormous…"
+ },
+ "/stories/travel/bun-bo-hue": {
+  "title": "Where to Eat Bun Bo in Hue",
+  "description": "Ask any Vietnamese chef which noodle soup deserves more global fame, and most will say: Bun Bo Hue. While pho gets the headlines, Hue's royal noodle soup…"
+ },
+ "/stories/travel/seafood-vungtau": {
+  "title": "Where to Eat Seafood in Vung Tau",
+  "description": "Two hours from Saigon, the ocean opens up — and so does the menu. Nothing frozen. Everything alive until this morning. The fishing boats come in at 4am.…"
+ },
+ "/stories/travel/banh-mi-saigon": {
+  "title": "Where to Eat Banh Mi in Saigon",
+  "description": "No culinary invention tells Vietnam's history better than a banh mi. The French brought the baguette to Vietnam in the 19th century. Vietnam took it, made…"
+ },
+ "/stories/travel/cao-lau-hoian": {
+  "title": "Where to Eat Cao Lau in Hoi An",
+  "description": "Legend says the noodles can only be made with water from a single ancient Cham well in Hoi An's old town. Whether or not you believe the legend, cao lau…"
+ },
+ "/stories/what-to-eat-in-vietnam": {
+  "title": "What to Eat in Vietnam: The Only Food Guide You Need",
+  "description": "From a 6am bowl of phở in Hanoi to a midnight bánh mì in Saigon — this is every dish you cannot leave Vietnam without eating."
+ },
+ "/account": {
+  "title": "My account",
+  "noindex": true
+ },
+ "/how-to/muoi-ot-chanh": {
+  "title": "How to Make Dipping Salt (Muối Ớt Chanh)",
+  "description": "Salt, chilli, lime — three ingredients, two versions, one condiment that works with grilled meat, fried seafood, fresh fruit, and everything in between."
+ },
+ "/how-to/rice-paper": {
+  "title": "How to Make Vietnamese Rice Paper (Bánh Tráng) from Scratch",
+  "description": "Store-bought rice paper works fine. Homemade rice paper — thin, pliable, slightly smoky from the bamboo steaming tray — is something else entirely. This…"
+ },
+ "/how-to/pandan-extract": {
+  "title": "How to Make Pandan Extract (Nước Lá Dứa)",
+  "description": "Blend, strain, wring — how to extract the vivid emerald liquid that colours and perfumes Vietnamese desserts, sticky rice, and sweet soups with Southeast…"
+ },
+ "/how-to/vietnamese-pantry": {
+  "title": "How to Build a Vietnamese Pantry from Scratch",
+  "description": "Three tiers, 30 core ingredients, all available in Germany — the precise, well-organised pantry that makes authentic Vietnamese cooking possible any night…"
+ },
+ "/how-to/order-vietnamese-food": {
+  "title": "How to Order Vietnamese Food Like a Local",
+  "description": "Beef cuts, customisation vocabulary, off-menu dishes, meal rhythm, and the phrases that unlock a better experience at any Vietnamese restaurant anywhere…"
+ },
+ "/how-to/vietnamese-kitchen-setup": {
+  "title": "How to Set Up a Vietnamese Kitchen: The Honest Guide to Cookware, Pans, and What Actually Matters",
+  "description": "You do not need expensive equipment to cook Vietnamese food well. You need the right equipment — which is a much shorter list than most people think."
+ },
+ "/how-to/kho-braise": {
+  "title": "How to Braise Vietnamese-Style (Kho)",
+  "description": "Coconut water, fish sauce, dark caramel — the four flavour components, the five-step sequence, and the heat management that produces the mahogany-glazed…"
+ },
+ "/how-to/coconut-caramel-braise": {
+  "title": "How to Make Vietnamese Coconut Caramel Braise Base",
+  "description": "Coconut water, nuoc mau, fish sauce — the ratio, the order, and the two-phase technique behind thit kho tau, ca kho to, and every great Vietnamese braised…"
+ },
+ "/how-to/fried-shallots": {
+  "title": "How to Make Crispy Fried Shallots (Hành Phi) — The Most Useful Technique in Vietnamese Cooking",
+  "description": "Crispy, golden, sweet-savory fried shallots appear on top of phở, cơm tấm, bún bò Huế, bánh cuốn, and dozens of other dishes. They take 15 minutes to make…"
+ },
+ "/how-to/butterfly-flatten-meat": {
+  "title": "How to Butterfly and Flatten Meat for Grilling",
+  "description": "The prep technique behind suon nuong and ga nuong — how to open thick cuts to an even thickness so they cook fast over high heat without the edges burning…"
+ },
+ "/how-to/bamboo-steamer": {
+  "title": "How to Care for a Bamboo Steamer",
+  "description": "Season before first use, rinse while warm, dry completely before storing — the maintenance routine that prevents mould, stops splitting, and keeps a…"
+ },
+ "/how-to/cha-gio": {
+  "title": "How to Make Vietnamese Egg Rolls (Chả Giò)",
+  "description": "Dry filling, tight roll, correct oil temperature — the three variables that produce the shatteringly crisp wrapper and moist interior that most restaurant…"
+ },
+ "/how-to/season-wok": {
+  "title": "How to Season a Carbon Steel Wok — And Keep It Perfect for Decades",
+  "description": "A new carbon steel wok is grey and sticky. After seasoning, it is black, naturally non-stick, and better than any non-stick pan you have ever used. Here…"
+ },
+ "/how-to/cha-lua": {
+  "title": "How to Make Vietnamese Pork Paste (Chả Lụa / Giò Lụa)",
+  "description": "Cold meat, cold bowl, long processing — the emulsion technique behind the smooth, bouncy pork paste that appears in banh mi, com tam, and every Vietnamese…"
+ },
+ "/how-to/vietnamese-market": {
+  "title": "How to Navigate a Vietnamese Market (Chợ)",
+  "description": "How the wet market is organised, how to choose vendors and build relationships, how bargaining actually works, and how to select the freshest produce…"
+ },
+ "/how-to/com-nieu": {
+  "title": "How to Cook Rice in a Clay Pot (Cơm Niêu)",
+  "description": "Four stages, one clay pot, and the golden scorched crust at the bottom — the technique behind cơm niêu and why it produces rice that a rice cooker never…"
+ },
+ "/how-to/pho-noodles-scratch": {
+  "title": "How to Make Pho Noodles from Scratch (Bánh Phở Tươi)",
+  "description": "Rice flour, tapioca starch, a non-stick pan and a lid — the batter ratio, swirl technique, and cutting method for fresh pho noodles that dried noodles…"
+ },
+ "/how-to/deep-fry-no-thermometer": {
+  "title": "How to Deep Fry at Home Without a Thermometer",
+  "description": "The chopstick test, the bread cube, the shimmer — five reliable ways to read oil temperature by sight and sound, and the temperature each Vietnamese fried…"
+ },
+ "/how-to/mortar-pestle": {
+  "title": "How to Choose a Vietnamese Mortar and Pestle",
+  "description": "Granite, clay, or wood — which type to buy, what size, how to season it, and the grinding technique that produces lemongrass paste a food processor cannot…"
+ },
+ "/how-to/mo-hanh": {
+  "title": "How to Make Scallion Oil (Mỡ Hành)",
+  "description": "Hot oil poured over sliced scallion until it sizzles — the four-minute condiment that finishes com tam, banh cuon, boiled chicken, and makes every…"
+ },
+ "/how-to/wash-store-fresh-herbs": {
+  "title": "How to Properly Wash & Store Fresh Herbs",
+  "description": "Rau răm, húng quế, ngò gai — how to clean without bruising, dry without wilting, and keep Vietnamese herbs fresh and fragrant for up to a week."
+ },
+ "/how-to/mandoline": {
+  "title": "How to Choose and Use a Mandoline Safely",
+  "description": "The right blade, the hand guard you actually use, and the five non-negotiable safety rules — everything needed to make do chua, goi, and xoài trộn at the…"
+ },
+ "/how-to/choose-meat-fish": {
+  "title": "How to Choose Meat and Fish for Vietnamese Cooking",
+  "description": "What Vietnamese home cooks look for at the market — and why freshness is the only non-negotiable"
+ },
+ "/how-to/vietnamese-broth": {
+  "title": "How to Make a Crystal-Clear Vietnamese Broth: The Rules That Actually Matter",
+  "description": "The difference between a great Vietnamese broth and a mediocre one is almost entirely technique — not time, not special ingredients, not expensive…"
+ },
+ "/how-to/eat-vietnamese-abroad": {
+  "title": "How to Eat Vietnamese Food in Foreign Countries",
+  "description": "How to identify a good restaurant, what to order first, how to eat each dish correctly, and what to bring or ask for when the restaurant version does not…"
+ },
+ "/how-to/nuoc-mau": {
+  "title": "How to Make Vietnamese Caramel (Nước Màu)",
+  "description": "Sugar and water, cooked past sweet into bittersweet mahogany — the dark, savoury colouring agent behind thit kho tau, ca kho to, and every properly made…"
+ },
+ "/how-to/dua-cai": {
+  "title": "How to Make Vietnamese Pickled Mustard Greens (Dưa Cải)",
+  "description": "Sun-wilt, salt, ferment — the three-day lacto-fermentation process that produces the sour, crunchy, deeply flavoured dua cai found in every Southern…"
+ },
+ "/how-to/debone-whole-fish": {
+  "title": "How to Properly Debone a Whole Fish",
+  "description": "The spine cut, the rib cage, the pin bones — a complete guide to filleting Vietnamese whole fish cleanly, from the first cut behind the pectoral fin to…"
+ },
+ "/how-to/crispy-fried-shallots": {
+  "title": "How to Make Crispy Fried Shallots (Hành Phi)",
+  "description": "Cold oil, low heat, pulled one shade too early — the counterintuitive technique that produces the crispy, caramelised hanh phi that finishes every great…"
+ },
+ "/how-to/annatto-oil": {
+  "title": "How to Make Annatto Oil (Dầu Điều)",
+  "description": "Gentle heat, the right seeds, and watching the colour — the ten-minute colouring oil that gives bún bò Huế its red-orange broth and mì Quảng its golden…"
+ },
+ "/how-to/steam-food": {
+  "title": "How to Steam Food Vietnamese Style: The Complete Guide to Hấp",
+  "description": "Steaming is one of the oldest and most precise cooking methods in Vietnamese cuisine. No oil, no direct heat, no browning — just steam and timing. It…"
+ },
+ "/how-to/balance-flavors": {
+  "title": "How to Balance Vietnamese Flavors: Sweet, Sour, Salty, and When to Add Each",
+  "description": "Vietnamese cooks do not follow recipes when they taste and adjust. They follow a framework — a mental model of how the five flavors interact — that tells…"
+ },
+ "/how-to/julienne-vietnamese-vegetables": {
+  "title": "How to Julienne Vietnamese Vegetables",
+  "description": "Daikon, carrot, green mango — the correct knife angle, strip thickness, and when a mandoline helps and when it does not. Master this one cut and every…"
+ },
+ "/how-to/season-vietnamese-food": {
+  "title": "Nêm Nếm: How to Season Vietnamese Food So It Actually Tastes Right",
+  "description": "Every Vietnamese grandmother seasons by taste, not by measurement. She tastes, adjusts, tastes again. The dish is done when it is balanced — not when a…"
+ },
+ "/how-to/char-aromatics": {
+  "title": "How to Char Aromatics Without a Gas Flame",
+  "description": "Broiler, cast iron pan, induction — three reliable methods for charring ginger and onion to the deep, caramelised blackness that makes Vietnamese pho…"
+ },
+ "/how-to/velvet-meat": {
+  "title": "How to Velvet Meat for Vietnamese Stir-Fries",
+  "description": "Egg white, cornstarch, or baking soda — the two velveting methods that keep beef, chicken, and pork silky and tender in a screaming-hot wok instead of dry…"
+ },
+ "/how-to/render-pork-fat": {
+  "title": "How to Render Pork Fat & Make Tóp Mỡ",
+  "description": "One piece of pork fat, thirty minutes of low heat, two essential Vietnamese kitchen ingredients — liquid mỡ heo for cooking and crispy tóp mỡ for…"
+ },
+ "/how-to/banh-xeo-batter": {
+  "title": "How to Make Banh Xeo Batter",
+  "description": "Rice flour, coconut milk, turmeric — the exact ratio, the resting time, and the pan technique that produces the shatteringly crisp Southern Vietnamese…"
+ },
+ "/how-to/steam-fish": {
+  "title": "How to Steam Fish the Vietnamese Way",
+  "description": "Score, steam, garnish, smoking oil pour — the 15-minute technique that produces ca hap: clean, fragrant, and defined by the dramatic sizzle that finishes…"
+ },
+ "/how-to/host-vietnamese-meal": {
+  "title": "How to Host a Vietnamese Home Meal",
+  "description": "Rice, savoury, soup, vegetable — the four-part structure, how to balance the menu, set the table, time the dishes, and host with the etiquette and…"
+ },
+ "/how-to/do-chua": {
+  "title": "How to Make Vietnamese Pickled Daikon & Carrot (Đồ Chua)",
+  "description": "Salt, squeeze, sweet-sour brine — the quick pickle that gives bánh mì its crunch, balances com tam and noodle bowls, and stays crisp for two weeks in the…"
+ },
+ "/how-to/select-fresh-seafood": {
+  "title": "How to Select and Prepare Fresh Seafood",
+  "description": "Eyes, gills, smell, texture — the exact indicators for fish, prawns, squid, crab, and shellfish, and how to clean each one correctly before it reaches the…"
+ },
+ "/how-to/hoa-chuoi": {
+  "title": "How to Prepare Banana Blossom (Hoa Chuối)",
+  "description": "Acidulated water, gloves, and the right shredding technique — how to prepare the crunchy, slightly bitter blossom used in gỏi hoa chuối and bún bò Huế…"
+ },
+ "/how-to/toast-grind-vietnamese-spices": {
+  "title": "How to Toast & Grind Vietnamese Spices",
+  "description": "Star anise, cinnamon, cardamom, clove — the correct heat, the correct order, and why pre-ground spices from a jar cannot replicate what a dry pan does in…"
+ },
+ "/how-to/marinate-meat": {
+  "title": "How to Marinate Meat Vietnamese Style: The 4-Element Formula",
+  "description": "Vietnamese marinades are not about tenderizing — they are about flavor penetration and caramelization. Fish sauce, sugar, lemongrass, and garlic in the…"
+ },
+ "/how-to/charcoal-grill": {
+  "title": "How to Set Up a Vietnamese Charcoal Grill",
+  "description": "Coconut charcoal, chimney starter, three heat zones — the setup and heat management that produces the caramelised, slightly smoky exterior that makes suon…"
+ },
+ "/how-to/knife-skills": {
+  "title": "Vietnamese Knife Skills: How to Cut Every Ingredient Correctly",
+  "description": "How you cut lemongrass determines whether it flavors your broth or sits in it unnoticed. How thin you slice the beef determines whether it cooks in the…"
+ },
+ "/how-to/phin-filter": {
+  "title": "How to Use a Vietnamese Phin Filter",
+  "description": "Water temperature, bloom time, one drop per second — the phin is designed to make patience mandatory, and the result justifies every minute of the wait."
+ },
+ "/login": {
+  "title": "Sign in",
+  "noindex": true
+ },
+ "/travel": {
+  "title": "Vietnam Food Travel: Eat Your Way Through Vietnam",
+  "description": "2,000 km of coastline, three food cultures and the best street food in the world — city by city."
+ }
+}
