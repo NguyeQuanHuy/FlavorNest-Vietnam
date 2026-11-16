@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Search, X, Clock, Soup, Sandwich, Droplet, Coffee, Wheat, Flame, ChefHat, CookingPot, UtensilsCrossed, type LucideIcon } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Search, X } from 'lucide-react';
 
 const GUIDES = [
     {
@@ -131,43 +131,51 @@ const GUIDES = [
     },
 ];
 
-const LEVEL_COLOR: Record<string, string> = {
-    Easy: '#059669',
-    Intermediate: '#D97706',
-    Advanced: '#DC2626',
-    Essential: '#7C3AED',
+// ── Design tokens (monochrome + one accent) ─────────────────────────────────
+const INK = '#2D1A0E';
+const MUTED = 'rgba(45,26,14,0.56)';
+const FAINT = 'rgba(45,26,14,0.38)';
+const RULE = 'rgba(45,26,14,0.10)';
+const ACCENT = '#B45309';
+const PAPER = '#FAF7F2';
+const SERIF = "'Playfair Display', serif";
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const LEVEL_DOT: Record<string, string> = {
+    Essential: '#B45309',
+    Easy: '#6B8E4E',
+    Intermediate: '#A16207',
+    Advanced: '#9F1239',
 };
 
 const ALL = 'All';
-
 const PREVIEW = 6;
-const CATEGORY_ICON: Record<string, LucideIcon> = {
-    'Broths & Soups': Soup,
-    'Rolling & Wrapping': Sandwich,
-    'Sauces & Condiments': Droplet,
-    'Coffee': Coffee,
-    'Rice & Noodles': Wheat,
-    'Essential Techniques': Flame,
-    'Eating & Culture': UtensilsCrossed,
-    'Kitchen & Equipment': ChefHat,
-};
-function CategoryIcon({ category, color }: { category: string; color: string }) {
-    const Icon = CATEGORY_ICON[category] ?? CookingPot;
+const START_HERE = ['vietnamese-broth', 'balance-flavors', 'season-vietnamese-food'];
+
+const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase();
+const href = (item: { slug: string; isHowTo?: boolean }) => (item.isHowTo ? `/how-to/${item.slug}` : `/recipes/${item.slug}`);
+const pad = (n: number) => String(n).padStart(2, '0');
+
+type Item = (typeof GUIDES)[number]['items'][number] & { isHowTo?: boolean };
+
+function Meta({ item }: { item: Item }) {
     return (
-        <span
-            aria-hidden
-            className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl"
-            style={{
-                background: `linear-gradient(135deg, ${color} 0%, ${color}D9 100%)`,
-                boxShadow: `0 8px 20px -8px ${color}99, inset 0 1px 0 rgba(255,255,255,0.25)`,
-            }}
-        >
-            <Icon size={22} strokeWidth={2} color="#fff" />
+        <span className="flex items-center gap-3 whitespace-nowrap text-[12px] tracking-wide" style={{ color: FAINT }}>
+            <span className="flex items-center gap-1.5">
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full" style={{ background: LEVEL_DOT[item.level] ?? ACCENT }} />
+                <span style={{ color: MUTED }}>{item.level}</span>
+            </span>
+            <span aria-hidden>·</span>
+            <span>{item.time}</span>
+            {!item.isHowTo && (
+                <>
+                    <span aria-hidden>·</span>
+                    <span className="uppercase tracking-[0.12em] text-[10.5px]">Recipe</span>
+                </>
+            )}
         </span>
     );
 }
-const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').toLowerCase();
-const href = (item: { slug: string; isHowTo?: boolean }) => (item.isHowTo ? `/how-to/${item.slug}` : `/recipes/${item.slug}`);
 
 export default function HowToClient() {
     const [active, setActive] = useState(ALL);
@@ -197,29 +205,58 @@ export default function HowToClient() {
     }, [active, q]);
 
     const found = groups.reduce((n, g) => n + g.items.length, 0);
+    const chapterNo = (cat: string) => GUIDES.findIndex(g => g.category === cat) + 1;
+
+    const startHere = useMemo(
+        () => START_HERE.map(slug => GUIDES.flatMap(g => g.items as Item[]).find(it => it.slug === slug && it.isHowTo)).filter(Boolean) as Item[],
+        [],
+    );
+    const showStart = active === ALL && !q && startHere.length > 0;
+
+    const openChapter = (cat: string) => {
+        setActive(cat);
+        setQuery('');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
-        <div style={{ minHeight: '100vh', background: '#FBF8F4', paddingTop: 88, fontFamily: "'DM Sans', sans-serif" }}>
+        <div style={{ minHeight: '100vh', background: PAPER, paddingTop: 88, fontFamily: "'DM Sans', sans-serif", color: INK }}>
 
             {/* ═══ HERO ═══ */}
-            <header className="mx-auto max-w-[1100px] px-5 pb-10 pt-12 sm:px-6 sm:pt-16">
-                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-                    <div className="mb-4 flex items-center gap-2">
-                        <span className="h-px w-8" style={{ background: '#D97706' }} />
-                        <span className="text-[11px] font-bold uppercase" style={{ color: '#D97706', letterSpacing: '0.18em' }}>Technique Guides</span>
-                    </div>
-                    <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                        <h1 className="max-w-xl font-bold leading-[1.04]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.4rem, 6vw, 4rem)', color: '#2D1A0E' }}>
-                            Learn the <em style={{ color: '#D97706' }}>techniques</em>, cook any recipe.
-                        </h1>
-                        <p className="max-w-sm text-[15px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.62)' }}>
-                            {total} short, practical guides to the building blocks of Vietnamese cooking — from clear broths to crispy shallots.
-                        </p>
-                    </div>
+            <header className="mx-auto max-w-[960px] px-5 pb-12 pt-14 sm:px-8 sm:pb-16 sm:pt-20">
+                <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE }}>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.28em]" style={{ color: ACCENT }}>
+                        The Technique Library
+                    </p>
+                    <h1
+                        className="mt-5 max-w-[14ch] font-semibold leading-[1.02] tracking-[-0.02em]"
+                        style={{ fontFamily: SERIF, fontSize: 'clamp(2.5rem, 6.4vw, 4.6rem)' }}
+                    >
+                        Master the method, <em className="font-normal" style={{ color: ACCENT }}>cook anything.</em>
+                    </h1>
+                    <p className="mt-6 max-w-[52ch] text-[16px] leading-[1.7]" style={{ color: MUTED }}>
+                        Concise, tested guides to the foundations of Vietnamese cooking — broths, sauces, knife work and the quiet
+                        details that make a dish taste like home.
+                    </p>
 
-                    {/* Search */}
-                    <div className="relative mt-9 max-w-xl">
-                        <Search size={18} className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2" style={{ color: '#B8A08A' }} aria-hidden />
+                    {/* Stats */}
+                    <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t pt-6" style={{ borderColor: RULE }}>
+                        {[
+                            [String(total), 'Guides'],
+                            [String(GUIDES.length), 'Chapters'],
+                            ['5–12', 'Minute reads'],
+                        ].map(([v, l]) => (
+                            <div key={l} className="flex items-baseline gap-2">
+                                <dt className="sr-only">{l}</dt>
+                                <dd className="text-[26px] font-semibold tabular-nums" style={{ fontFamily: SERIF }}>{v}</dd>
+                                <span className="text-[12px] uppercase tracking-[0.16em]" style={{ color: FAINT }}>{l}</span>
+                            </div>
+                        ))}
+                    </dl>
+
+                    {/* Search — underline style */}
+                    <div className="group relative mt-10 max-w-[560px]">
+                        <Search size={18} className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-[#B45309]" style={{ color: FAINT }} aria-hidden />
                         <label htmlFor="howto-search" className="sr-only">Search guides</label>
                         <input
                             id="howto-search"
@@ -227,15 +264,16 @@ export default function HowToClient() {
                             value={query}
                             onChange={e => setQuery(e.target.value)}
                             placeholder="Search a technique — broth, rice paper, wok…"
-                            className="w-full rounded-full border border-[#E8D9C8] bg-white py-4 pl-12 pr-12 text-[15px] text-[#2D1A0E] shadow-[0_6px_24px_-12px_rgba(75,46,26,0.25)] outline-none transition placeholder:text-[#B8A08A] focus:border-[#D97706] focus:ring-4 focus:ring-[#D97706]/10 [&::-webkit-search-cancel-button]:hidden"
+                            className="w-full border-0 border-b bg-transparent py-4 pl-8 pr-10 text-[17px] outline-none transition-colors placeholder:text-[rgba(45,26,14,0.35)] focus:border-[#B45309] [&::-webkit-search-cancel-button]:hidden"
+                            style={{ borderColor: 'rgba(45,26,14,0.22)', color: INK }}
                         />
                         {query && (
                             <button
                                 type="button"
                                 onClick={() => setQuery('')}
                                 aria-label="Clear search"
-                                className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[#F5EDE3]"
-                                style={{ color: '#8A6E58' }}
+                                className="absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[rgba(45,26,14,0.06)]"
+                                style={{ color: MUTED }}
                             >
                                 <X size={16} />
                             </button>
@@ -244,14 +282,14 @@ export default function HowToClient() {
                 </motion.div>
             </header>
 
-            {/* ═══ CATEGORY CHIPS (sticky) ═══ */}
+            {/* ═══ CHAPTER TABS (sticky, underline) ═══ */}
             <nav
-                aria-label="Guide categories"
-                className="sticky top-[61px] z-30 border-y border-[rgba(75,46,26,0.08)] backdrop-blur-xl min-[641px]:top-[85px]"
-                style={{ background: 'rgba(251,248,244,0.92)' }}
+                aria-label="Guide chapters"
+                className="sticky top-[61px] z-30 border-b backdrop-blur-xl min-[641px]:top-[85px]"
+                style={{ background: 'rgba(250,247,242,0.9)', borderColor: RULE }}
             >
-                <div className="mx-auto max-w-[1100px] overflow-x-auto px-5 py-3 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden">
-                    <div className="flex w-max gap-2">
+                <div className="mx-auto max-w-[960px] overflow-x-auto px-5 [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
+                    <div className="flex w-max gap-7">
                         {[ALL, ...GUIDES.map(g => g.category)].map(cat => {
                             const isActive = active === cat && !q;
                             const count = cat === ALL ? total : GUIDES.find(g => g.category === cat)!.items.length;
@@ -264,22 +302,19 @@ export default function HowToClient() {
                                         setQuery('');
                                         e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                                     }}
-                                    className="relative whitespace-nowrap rounded-full px-4 py-2 outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] text-[13.5px] font-medium transition-colors"
-                                    style={{ color: isActive ? '#fff' : '#4B2E1A' }}
+                                    className="relative whitespace-nowrap py-4 text-[13.5px] outline-none transition-colors focus-visible:text-[#B45309]"
+                                    style={{ color: isActive ? INK : MUTED, fontWeight: isActive ? 600 : 500 }}
                                 >
+                                    {cat}
+                                    <sup className="ml-1 text-[10px] tabular-nums" style={{ color: FAINT }}>{count}</sup>
                                     {isActive && (
                                         <motion.span
-                                            layoutId="howto-chip"
-                                            transition={{ type: 'spring', stiffness: 420, damping: 36 }}
-                                            className="absolute inset-0 rounded-full"
-                                            style={{ background: '#2D1A0E' }}
+                                            layoutId="howto-tab"
+                                            transition={{ type: 'spring', stiffness: 420, damping: 38 }}
+                                            className="absolute inset-x-0 -bottom-px h-[2px]"
+                                            style={{ background: INK }}
                                         />
                                     )}
-                                    {!isActive && <span className="absolute inset-0 rounded-full border border-[rgba(75,46,26,0.12)] bg-white transition-colors hover:border-[rgba(75,46,26,0.3)]" />}
-                                    <span className="relative flex items-center gap-1.5">
-                                        {cat}
-                                        <span className="text-[11px] tabular-nums" style={{ opacity: 0.55 }}>{count}</span>
-                                    </span>
                                 </button>
                             );
                         })}
@@ -287,99 +322,121 @@ export default function HowToClient() {
                 </div>
             </nav>
 
-            {/* ═══ GUIDES ═══ */}
-            <main className="mx-auto max-w-[1100px] px-5 pb-24 pt-10 sm:px-6">
+            <main className="mx-auto max-w-[960px] px-5 pb-24 pt-14 sm:px-8">
+
+                {/* ═══ START HERE ═══ */}
+                {showStart && (
+                    <section aria-labelledby="start-here" className="mb-20">
+                        <div className="mb-6 flex items-baseline justify-between">
+                            <h2 id="start-here" className="text-[11px] font-semibold uppercase tracking-[0.28em]" style={{ color: ACCENT }}>Start here</h2>
+                            <span className="hidden text-[12px] sm:inline" style={{ color: FAINT }}>Three guides every cook should read first</span>
+                        </div>
+                        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border sm:grid-cols-3" style={{ borderColor: RULE, background: RULE }}>
+                            {startHere.map((item, i) => (
+                                <Link
+                                    key={item.slug}
+                                    href={href(item)}
+                                    className="group flex flex-col p-7 outline-none transition-colors hover:bg-white focus-visible:bg-white"
+                                    style={{ background: PAPER, textDecoration: 'none', color: INK }}
+                                >
+                                    <span className="text-[40px] italic leading-none" style={{ fontFamily: SERIF, color: 'rgba(180,83,9,0.35)' }}>{pad(i + 1)}</span>
+                                    <h3 className="mt-6 text-[19px] font-semibold leading-snug" style={{ fontFamily: SERIF }}>{item.title}</h3>
+                                    <p className="mt-3 line-clamp-3 text-[14px] leading-relaxed" style={{ color: MUTED }}>{item.desc}</p>
+                                    <span className="mt-auto flex items-center gap-1.5 pt-6 text-[13px] font-semibold" style={{ color: INK }}>
+                                        Read <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" style={{ color: ACCENT }} />
+                                    </span>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
                 {q && (
-                    <p className="mb-8 text-[14px]" style={{ color: 'rgba(75,46,26,0.6)' }} aria-live="polite">
-                        {found} {found === 1 ? 'guide' : 'guides'} for “<span style={{ color: '#2D1A0E', fontWeight: 600 }}>{query.trim()}</span>”
+                    <p className="mb-10 text-[14px]" style={{ color: MUTED }} aria-live="polite">
+                        {found} {found === 1 ? 'guide' : 'guides'} for “<span style={{ color: INK, fontWeight: 600 }}>{query.trim()}</span>”
                     </p>
                 )}
 
+                {/* ═══ CHAPTERS ═══ */}
                 <AnimatePresence mode="wait">
-                    <motion.div key={`${active}|${q}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                    <motion.div key={`${active}|${q}`} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
                         {groups.map(group => {
                             const collapsed = active === ALL && !q && group.items.length > PREVIEW;
-                            const items = collapsed ? group.items.slice(0, PREVIEW) : group.items;
+                            const items = (collapsed ? group.items.slice(0, PREVIEW) : group.items) as Item[];
                             return (
-                                <section key={group.category} className="mb-16 last:mb-0" aria-labelledby={`cat-${group.category}`}>
-                                    {/* Section header */}
-                                    <div className="mb-6 flex items-end justify-between gap-4">
-                                        <div className="flex items-center gap-3.5">
-                                            <CategoryIcon category={group.category} color={group.color} />
-                                            <div>
-                                                <h2 id={`cat-${group.category}`} className="text-[24px] font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>
-                                                    {group.category}
-                                                </h2>
-                                                <p className="text-[13px]" style={{ color: 'rgba(75,46,26,0.5)' }}>
-                                                    {group.items.length} {group.items.length === 1 ? 'guide' : 'guides'}
-                                                </p>
-                                            </div>
+                                <section key={group.category} className="mb-20 last:mb-0" aria-labelledby={`cat-${group.category}`}>
+                                    {/* Chapter header */}
+                                    <div className="mb-2 flex items-end justify-between gap-4 border-b pb-5" style={{ borderColor: INK }}>
+                                        <div>
+                                            <p className="text-[11px] font-semibold uppercase tracking-[0.24em]" style={{ color: FAINT }}>
+                                                Chapter {pad(chapterNo(group.category))}
+                                            </p>
+                                            <h2 id={`cat-${group.category}`} className="mt-2 text-[28px] font-semibold leading-tight tracking-[-0.01em] sm:text-[32px]" style={{ fontFamily: SERIF }}>
+                                                {group.category}
+                                            </h2>
                                         </div>
-                                        {collapsed && (
-                                            <button
-                                                onClick={() => { setActive(group.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                                                className="group hidden items-center gap-1.5 text-[13.5px] font-semibold transition-colors hover:text-[#D97706] sm:flex"
-                                                style={{ color: '#4B2E1A' }}
-                                            >
-                                                View all {group.items.length}
-                                                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
-                                            </button>
-                                        )}
+                                        <div className="flex items-center gap-5 pb-1">
+                                            <span className="text-[12px] tabular-nums" style={{ color: FAINT }}>
+                                                {group.items.length} {group.items.length === 1 ? 'guide' : 'guides'}
+                                            </span>
+                                            {collapsed && (
+                                                <button
+                                                    onClick={() => openChapter(group.category)}
+                                                    className="group hidden items-center gap-1 text-[13px] font-semibold transition-colors hover:text-[#B45309] sm:flex"
+                                                    style={{ color: INK }}
+                                                >
+                                                    View all <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                                                </button>
+                                            )}
+                                        </div>
                                     </div>
 
-                                    {/* Cards */}
-                                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                                    {/* Index rows */}
+                                    <ul>
                                         {items.map((item, i) => (
-                                            <motion.div
+                                            <motion.li
                                                 key={`${item.slug}-${i}`}
-                                                initial={{ opacity: 0, y: 10 }}
+                                                initial={{ opacity: 0, y: 6 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: Math.min(i, 8) * 0.04, duration: 0.3 }}
+                                                transition={{ delay: Math.min(i, 8) * 0.03, duration: 0.3 }}
+                                                className="border-b last:border-b-0"
+                                                style={{ borderColor: RULE }}
                                             >
                                                 <Link
                                                     href={href(item)}
-                                                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF8F4] border border-[rgba(75,46,26,0.08)] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:shadow-[0_18px_40px_-18px_rgba(75,46,26,0.35)]"
-                                                    style={{ textDecoration: 'none' }}
+                                                    className="group grid grid-cols-[36px_1fr_20px] items-start gap-x-4 py-6 outline-none sm:grid-cols-[48px_1fr_auto_24px] sm:items-center sm:gap-x-6"
+                                                    style={{ textDecoration: 'none', color: INK }}
                                                 >
-                                                    {/* accent bar */}
-                                                    <span
-                                                        aria-hidden
-                                                        className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
-                                                        style={{ background: group.color }}
-                                                    />
-                                                    <div className="mb-4 flex items-center gap-2">
-                                                        <span
-                                                            className="rounded-full px-2.5 py-1 text-[11px] font-semibold"
-                                                            style={{ background: `${LEVEL_COLOR[item.level] ?? '#D97706'}14`, color: LEVEL_COLOR[item.level] ?? '#D97706' }}
-                                                        >
-                                                            {item.level}
-                                                        </span>
-                                                        <span className="flex items-center gap-1 text-[12px]" style={{ color: 'rgba(75,46,26,0.5)' }}>
-                                                            <Clock size={13} aria-hidden /> {item.time}
-                                                        </span>
-                                                    </div>
-                                                    <h3 className="text-[18px] font-bold leading-snug transition-colors group-hover:text-[#B45309]" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>
-                                                        {item.title}
-                                                    </h3>
-                                                    <p className="mt-2.5 line-clamp-2 text-[14px] leading-relaxed" style={{ color: 'rgba(75,46,26,0.6)' }}>
-                                                        {item.desc}
-                                                    </p>
-                                                    <span className="mt-auto flex items-center gap-1.5 pt-5 text-[13px] font-semibold" style={{ color: '#D97706' }}>
-                                                        Read guide
-                                                        <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                                                    <span className="pt-1 text-[13px] tabular-nums sm:pt-0" style={{ color: FAINT, fontFamily: SERIF, fontStyle: 'italic' }}>
+                                                        {pad(i + 1)}
                                                     </span>
+                                                    <span className="min-w-0">
+                                                        <span className="block text-[18px] font-semibold leading-snug transition-colors duration-300 group-hover:text-[#B45309] group-focus-visible:text-[#B45309] sm:text-[19px]" style={{ fontFamily: SERIF }}>
+                                                            {item.title}
+                                                        </span>
+                                                        <span className="mt-1.5 block line-clamp-2 text-[14px] leading-relaxed sm:line-clamp-1" style={{ color: MUTED }}>
+                                                            {item.desc}
+                                                        </span>
+                                                        <span className="mt-3 block sm:hidden"><Meta item={item} /></span>
+                                                    </span>
+                                                    <span className="hidden sm:block"><Meta item={item} /></span>
+                                                    <ArrowUpRight
+                                                        size={18}
+                                                        aria-hidden
+                                                        className="mt-1 opacity-30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100 group-hover:text-[#B45309] sm:mt-0"
+                                                    />
                                                 </Link>
-                                            </motion.div>
+                                            </motion.li>
                                         ))}
-                                    </div>
+                                    </ul>
 
                                     {collapsed && (
                                         <button
-                                            onClick={() => { setActive(group.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                                            className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl border border-[rgba(75,46,26,0.12)] bg-white py-3.5 text-[14px] font-semibold sm:hidden"
-                                            style={{ color: '#4B2E1A' }}
+                                            onClick={() => openChapter(group.category)}
+                                            className="mt-2 flex w-full items-center justify-center gap-1.5 border-t py-4 text-[13.5px] font-semibold transition-colors hover:text-[#B45309]"
+                                            style={{ color: INK, borderColor: RULE }}
                                         >
-                                            View all {group.items.length} guides <ArrowRight size={15} />
+                                            View all {group.items.length} in {group.category} <ArrowRight size={14} />
                                         </button>
                                     )}
                                 </section>
@@ -387,13 +444,13 @@ export default function HowToClient() {
                         })}
 
                         {groups.length === 0 && (
-                            <div className="py-20 text-center">
-                                <p className="text-[22px] font-bold" style={{ fontFamily: "'Playfair Display', serif", color: '#2D1A0E' }}>No guides found</p>
-                                <p className="mt-2 text-[15px]" style={{ color: 'rgba(75,46,26,0.6)' }}>Try another word, like “broth”, “rice” or “grill”.</p>
+                            <div className="py-24 text-center">
+                                <p className="text-[26px] font-semibold" style={{ fontFamily: SERIF }}>Nothing found</p>
+                                <p className="mt-2 text-[15px]" style={{ color: MUTED }}>Try another word — “broth”, “rice” or “grill”.</p>
                                 <button
                                     onClick={() => setQuery('')}
-                                    className="mt-6 rounded-full px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#D97706]"
-                                    style={{ background: '#2D1A0E' }}
+                                    className="mt-8 border-b pb-1 text-[14px] font-semibold transition-colors hover:text-[#B45309]"
+                                    style={{ color: INK, borderColor: INK }}
                                 >
                                     Clear search
                                 </button>
@@ -404,21 +461,15 @@ export default function HowToClient() {
             </main>
 
             {/* ═══ CTA ═══ */}
-            <section className="px-5 pb-20 sm:px-6">
-                <div
-                    className="mx-auto flex max-w-[1100px] flex-col items-start gap-6 rounded-[28px] px-8 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-12"
-                    style={{ background: '#2D1A0E' }}
-                >
-                    <div>
-                        <h2 className="text-[28px] font-bold leading-tight" style={{ fontFamily: "'Playfair Display', serif", color: '#fff' }}>
-                            Ready to put it into practice?
-                        </h2>
-                        <p className="mt-2 text-[15px]" style={{ color: 'rgba(245,237,227,0.65)' }}>Hundreds of authentic recipes are waiting for you.</p>
-                    </div>
+            <section className="mx-auto max-w-[960px] px-5 pb-24 sm:px-8">
+                <div className="flex flex-col items-start gap-8 border-t pt-14 sm:flex-row sm:items-end sm:justify-between" style={{ borderColor: INK }}>
+                    <h2 className="max-w-[18ch] text-[30px] font-semibold leading-[1.15] tracking-[-0.01em] sm:text-[38px]" style={{ fontFamily: SERIF }}>
+                        Ready to put it <em className="font-normal" style={{ color: ACCENT }}>into practice?</em>
+                    </h2>
                     <Link
                         href="/recipes"
-                        className="group flex flex-shrink-0 items-center gap-2 rounded-full px-7 py-4 text-[14px] font-semibold text-white transition-transform hover:-translate-y-0.5"
-                        style={{ background: '#D97706', textDecoration: 'none' }}
+                        className="group flex flex-shrink-0 items-center gap-2 rounded-full border px-7 py-3.5 text-[14px] font-semibold transition-colors hover:bg-[#2D1A0E] hover:text-white"
+                        style={{ borderColor: INK, color: INK, textDecoration: 'none' }}
                     >
                         Browse recipes <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                     </Link>
