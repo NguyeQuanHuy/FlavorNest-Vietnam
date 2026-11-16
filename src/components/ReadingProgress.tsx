@@ -60,14 +60,14 @@ export default function ReadingProgress() {
                     transition={{ duration: 0.3 }}
                     style={{
                         position: 'fixed',
-                        top: navBottom - 2,
+                        top: navBottom,
                         left: 0,
                         right: 0,
                         height: 2,
-                        zIndex: 110, // above the navbar (z 100)
+                        zIndex: 99, // just below the navbar (z 100) so menus/dropdowns cover it
                         transformOrigin: '0% 50%',
                         scaleX,
-                        background: 'linear-gradient(90deg, rgba(217,119,6,0.55), #D97706 40%, #F59E0B)',
+                        background: 'rgba(217,119,6,0.85)',
                         borderRadius: '0 2px 2px 0',
                         pointerEvents: 'none',
                     }}
