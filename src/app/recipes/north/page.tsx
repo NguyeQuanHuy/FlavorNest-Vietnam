@@ -360,9 +360,6 @@ export default function NorthernCuisinePage() {
                             </Link>
                         ))}
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 48 }}>
-                        <VietnamMap region="north" size={150} variant="compact" />
-                    </div>
                 </div>
             </section>
         </main>
