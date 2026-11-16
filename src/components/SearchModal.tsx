@@ -52,15 +52,18 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <button
               type="button"
               onClick={onClose}
+              aria-label="Close search"
               className="absolute top-4 right-4 p-2 text-fn-brown/40 hover:text-fn-brown hover:bg-fn-brown/5 rounded-full transition-all"
             >
               <X size={20} />
             </button>
-            <form onSubmit={handleSearch} className="relative mt-2">
+            <form onSubmit={handleSearch} className="relative mt-2 mr-10">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-fn-amber w-5 h-5" />
               <input
               ref={inputRef}
-              type="text"
+              type="search"
+              enterKeyHint="search"
+              autoComplete="off"
               placeholder="Type recipe or dish name..."
               className="w-full bg-fn-brown/5 border-none rounded-2xl py-3.5 pl-12 pr-4 text-fn-brown outline-none focus:ring-2 ring-fn-amber/20 transition-all"
               value={query}

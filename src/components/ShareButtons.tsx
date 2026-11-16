@@ -125,7 +125,7 @@ export default function ShareButtons({ path, title, image, variant = 'bar' }: Pr
                 style={{ borderColor: copied ? '#059669' : 'rgba(75,46,26,0.14)', color: copied ? '#059669' : '#2D1A0E' }}
             >
                 {copied ? <Check size={15} /> : <Link2 size={15} />}
-                <span aria-live="polite">{copied ? 'Copied!' : 'Copy link'}</span>
+                <span aria-live="polite" className={copied ? '' : 'hidden sm:inline'}>{copied ? 'Copied!' : 'Copy link'}</span>
             </button>
         </div>
     )
