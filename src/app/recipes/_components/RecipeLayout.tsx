@@ -146,6 +146,59 @@ const schema = {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <div style={{ backgroundColor: '#F5EDE3', minHeight: '100vh', paddingTop: '88px' }}>
+            <style>{`
+                .fn-print-card { display: none; }
+                @media print {
+                    @page { margin: 14mm; }
+                    body *:not(:has(.fn-print-card)):not(.fn-print-card):not(.fn-print-card *) { display: none !important; }
+                    *:has(.fn-print-card) { padding: 0 !important; margin: 0 !important; background: none !important; min-height: 0 !important; box-shadow: none !important; border: 0 !important; }
+                    .fn-print-card { display: block !important; width: 100%; background: #fff; color: #000; font-family: 'DM Sans', Arial, sans-serif; }
+                    .fn-print-card h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 24pt; margin: 0 0 4pt; }
+                    .fn-print-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 14pt; margin: 14pt 0 6pt; border-bottom: 1px solid #999; padding-bottom: 3pt; }
+                    .fn-print-card h3 { font-size: 10.5pt; margin: 8pt 0 3pt; text-transform: uppercase; letter-spacing: .06em; }
+                    .fn-print-card p, .fn-print-card li { font-size: 10.5pt; line-height: 1.5; }
+                    .fn-print-card ul, .fn-print-card ol { margin: 0; padding-left: 16pt; }
+                    .fn-print-card li { margin-bottom: 3pt; break-inside: avoid; }
+                }
+            `}</style>
+            <article className="fn-print-card" aria-hidden>
+                <div style={{ display: 'flex', gap: '14pt', alignItems: 'flex-start' }}>
+                    <div style={{ flex: 1 }}>
+                        <h1>{recipe.title}</h1>
+                        <p style={{ margin: '0 0 8pt', color: '#444' }}>{recipe.subtitle}</p>
+                        <p style={{ margin: 0 }}>
+                            <strong>Total time:</strong> {recipe.totalTime} &nbsp;·&nbsp; <strong>Serves:</strong> {servings} &nbsp;·&nbsp; <strong>Difficulty:</strong> {recipe.difficulty}
+                        </p>
+                    </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={recipe.heroImage} alt="" style={{ width: '42mm', height: '32mm', objectFit: 'cover', borderRadius: 4 }} />
+                </div>
+                <h2>Ingredients</h2>
+                {recipe.ingredientSections.map((section, si) => (
+                    <div key={si}>
+                        {section.title && <h3>{section.title}</h3>}
+                        <ul>
+                            {section.items.map((ing, ii) => (
+                                <li key={ii}>
+                                    <strong>{formatAmount(ing.amount)}{ing.unit ? ' ' + ing.unit : ''}</strong> {ing.name}{ing.note ? ` (${ing.note})` : ''}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+                <h2>Instructions</h2>
+                <ol>
+                    {recipe.steps.map((step, i) => (
+                        <li key={i}>
+                            {step.title && <strong>{step.title}. </strong>}{step.description}
+                            {step.tip && <em style={{ display: 'block', color: '#555' }}>Tip: {step.tip}</em>}
+                        </li>
+                    ))}
+                </ol>
+                <p style={{ marginTop: '16pt', paddingTop: '6pt', borderTop: '1px solid #999', fontSize: '9pt', color: '#555' }}>
+                    FlavorNest Vietnam · flavor-nest-vietnam.vercel.app/recipes/{recipe.slug}
+                </p>
+            </article>
                 {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(245,237,227,0.97)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.1)' }}>
                 <ol style={{ maxWidth: '1280px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 8, minWidth: 0, fontFamily: 'DM Sans, sans-serif', fontSize: 13, listStyle: 'none' }}>
@@ -201,6 +254,26 @@ const schema = {
                     <div style={{ marginTop: 26 }}>
                         <ShareButtons path={`/recipes/${recipe.slug}`} title={recipe.title} image={recipe.heroImage} />
                     </div>
+                    <div className="fn-no-print" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 16 }}>
+                        <a
+                            href="#recipe"
+                            onClick={e => { e.preventDefault(); setActiveTab('ingredients'); document.getElementById('recipe')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}
+                            className="transition-colors duration-200 hover:bg-[#B45309]"
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '11px 20px', borderRadius: 999, background: '#D97706', color: '#fff', fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, textDecoration: 'none' }}
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                            Jump to Recipe
+                        </a>
+                        <button
+                            type="button"
+                            onClick={() => window.print()}
+                            className="transition-colors duration-200 hover:bg-[#2D1A0E] hover:text-white"
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 20px', borderRadius: 999, background: 'transparent', color: '#2D1A0E', border: '1.5px solid #2D1A0E', fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 600, cursor: 'pointer' }}
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                            Print
+                        </button>
+                    </div>
                 </div>
 
                 {/* Image with Pin It */}
@@ -253,6 +326,7 @@ const schema = {
                     </button>
                 </div>
             </div>
+            <div id="recipe" aria-hidden style={{ scrollMarginTop: 120 }} />
             {/* Mobile Tab Switcher */}
             <div className='flex min-[769px]:hidden' style={{ borderBottom: '2px solid rgba(217,119,6,0.2)', margin: '0 16px 0', position: 'sticky', top: 56, zIndex: 30, background: '#F5EDE3' }}>
                 <button onClick={() => setActiveTab('ingredients')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'ingredients' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'ingredients' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>🥘 Ingredients</button>
