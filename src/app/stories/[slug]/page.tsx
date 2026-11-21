@@ -14,24 +14,9 @@ export default function FromStreetToTableBunChaPage() {
         offset: ['start start', 'end end'],
     });
 
-    const progressBar = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
     return (
         <article ref={scrollRef} style={{ backgroundColor: '#FAFAF7' }}>
-            {/* Reading Progress Bar */}
-            <motion.div
-                style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    height: '3px',
-                    backgroundColor: '#D97706',
-                    width: progressBar,
-                    zIndex: 100,
-                    transformOrigin: 'left',
-                }}
-            />
-
             {/* ── HERO SECTION ── */}
             <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', inset: 0 }}>
