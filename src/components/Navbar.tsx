@@ -114,26 +114,28 @@ export default function Navbar() {
             <motion.div initial={false} animate={{ x: showMark ? 30 : 0 }} transition={{ type: 'spring', stiffness: 320, damping: 30 }} className="flex flex-col leading-none">
               <span
                 style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
+                  fontFamily: "'Fraunces Variable', 'Playfair Display', Georgia, serif",
+                  fontVariationSettings: "'SOFT' 100",
                   color: forceScrolled ? "#2D1A0E" : "#F5EDE3",
-                  fontSize: 22,
-                  fontWeight: 700,
-                  letterSpacing: "0.5px",
-                  textTransform: "uppercase",
+                  fontSize: 25,
+                  fontWeight: 650,
+                  letterSpacing: "-0.01em",
+                  lineHeight: 1,
                   transition: "color 0.3s",
                 }}
               >
-                FlavorNest
+                Flavor<span style={{ color: "#F59E0B" }}>Nest</span>
               </span>
               <span
                 style={{
                   fontFamily: "var(--font-dm-sans), sans-serif",
                   color: forceScrolled ? "#D97706" : "#D97706",
-                  fontSize: 9,
+                  fontSize: 8.5,
                   fontWeight: 600,
-                  letterSpacing: "0.22em",
+                  letterSpacing: "0.16em",
                   textTransform: "uppercase",
-                  marginTop: 2,
+                  marginTop: 4,
+                  opacity: 0.9,
                   transition: "color 0.3s",
                 }}
               >

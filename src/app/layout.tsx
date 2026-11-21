@@ -25,6 +25,7 @@ import "@fontsource/manrope/500.css";
 import "@fontsource/manrope/600.css";
 import "@fontsource/manrope/700.css";
 import "@fontsource/manrope/800.css";
+import "@fontsource-variable/fraunces/soft.css"; // wordmark: soft, rounded serif
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
 import { FavoritesProvider } from "@/context/FavoritesContext";
