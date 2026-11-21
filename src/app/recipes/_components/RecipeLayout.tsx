@@ -72,6 +72,16 @@ export default function RecipeLayout({ recipe: rawRecipe }: { recipe: any }) {
     const [doneSteps, setDoneSteps] = useState<Set<number>>(new Set());
     const [introOpen, setIntroOpen] = useState(false);
     const [activeTab, setActiveTab] = useState<'ingredients'|'instructions'>('ingredients');
+    // Mobile tabs: remember direction for the slide-in, and bring the tab bar back to the top
+    // (instead of leaving the reader mid-way down the new panel)
+    const switchTab = (t: 'ingredients' | 'instructions') => {
+        if (t === activeTab) return;
+        setActiveTab(t);
+        const anchor = document.getElementById('recipe');
+        if (!anchor) return;
+        const top = anchor.getBoundingClientRect().top;
+        if (top < 61) window.scrollTo({ top: window.scrollY + top - 61, behavior: 'smooth' });
+    };
 
     const scaleFactor = servings / recipe.baseServings;
 
@@ -327,10 +337,31 @@ const schema = {
                 </div>
             </div>
             <div id="recipe" aria-hidden style={{ scrollMarginTop: 120 }} />
-            {/* Mobile Tab Switcher */}
-            <div className='flex min-[769px]:hidden' style={{ borderBottom: '2px solid rgba(217,119,6,0.2)', margin: '0 16px 0', position: 'sticky', top: 61, zIndex: 30, background: '#F5EDE3' }}>
-                <button onClick={() => setActiveTab('ingredients')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'ingredients' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'ingredients' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>🥘 Ingredients</button>
-                <button onClick={() => setActiveTab('instructions')} style={{ flex: 1, padding: '12px 0', fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", border: 'none', background: 'none', cursor: 'pointer', color: activeTab === 'instructions' ? '#D97706' : 'rgba(75,46,26,0.45)', borderBottom: activeTab === 'instructions' ? '2px solid #D97706' : '2px solid transparent', marginBottom: -2 }}>📋 Instructions</button>
+            {/* Mobile Tab Switcher — segmented control with a sliding pill */}
+            <div className='flex min-[769px]:hidden' style={{ position: 'sticky', top: 61, zIndex: 30, background: 'rgba(245,237,227,0.92)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', padding: '10px 16px' }}>
+                <div role="tablist" aria-label="Recipe sections" style={{ display: 'flex', flex: 1, padding: 4, borderRadius: 999, background: 'rgba(75,46,26,0.07)' }}>
+                    {([['ingredients', 'Ingredients'], ['instructions', 'Instructions']] as const).map(([key, label]) => {
+                        const on = activeTab === key;
+                        return (
+                            <button
+                                key={key}
+                                role="tab"
+                                aria-selected={on}
+                                onClick={() => switchTab(key)}
+                                style={{ position: 'relative', flex: 1, padding: '10px 0', border: 'none', background: 'none', cursor: 'pointer', borderRadius: 999, fontFamily: "'DM Sans', sans-serif", fontSize: 13.5, fontWeight: 600, letterSpacing: '0.01em', color: on ? '#2D1A0E' : 'rgba(75,46,26,0.5)', transition: 'color 0.3s ease', WebkitTapHighlightColor: 'transparent' }}
+                            >
+                                {on && (
+                                    <motion.span
+                                        layoutId="fn-recipe-tab"
+                                        transition={{ type: 'spring', stiffness: 380, damping: 34 }}
+                                        style={{ position: 'absolute', inset: 0, borderRadius: 999, background: '#fff', boxShadow: '0 1px 2px rgba(45,26,14,0.08), 0 4px 14px -6px rgba(45,26,14,0.25)' }}
+                                    />
+                                )}
+                                <span style={{ position: 'relative' }}>{label}</span>
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
 
             {/* Main 2-column grid */}
@@ -344,7 +375,7 @@ const schema = {
                 }}
             >
                 {/* LEFT: Ingredients */}
-                <aside className={activeTab === 'ingredients' ? '' : 'hide-on-mobile'}
+                <aside className={activeTab === 'ingredients' ? 'fn-tab-panel' : 'hide-on-mobile'} data-dir="left"
                     style={{
                         position: 'sticky',
                         top: '90px',
@@ -520,7 +551,7 @@ const schema = {
                 </aside>
 
                 {/* RIGHT: Instructions */}
-                <main className={activeTab === 'instructions' ? '' : 'hide-on-mobile'}>
+                <main className={activeTab === 'instructions' ? 'fn-tab-panel' : 'hide-on-mobile'} data-dir="right">
                     <CookingSteps
                         slug={recipe.slug}
                         steps={recipe.steps}
@@ -536,6 +567,11 @@ const schema = {
             <style jsx>{`
         @media (max-width: 768px) {
           .hide-on-mobile { display: none !important; }
+          .fn-tab-panel { animation: fnTabInRight 0.42s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+          .fn-tab-panel[data-dir='left'] { animation-name: fnTabInLeft; }
+          @keyframes fnTabInRight { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
+          @keyframes fnTabInLeft { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
+          @media (prefers-reduced-motion: reduce) { .fn-tab-panel { animation: none; } }
           div[style*='grid-template-columns: minmax(280px, 380px) 1fr'] {
             grid-template-columns: 1fr !important;
           }

@@ -155,18 +155,19 @@ const featuredStories = ALL_STORIES.slice(0, 3).map(s => ({
 
 // ── SEO Metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes Made Simple at Home',
+  title: { absolute: 'Vietnamese Recipes with Supermarket Ingredients | FlavorNest' },
   description:
-    "Your nest of authentic Vietnamese flavors. 800+ tested recipes — from Hanoi's dawn pho to Saigon's vibrant street food — made simple for every home kitchen.",
+    "Authentic Vietnamese recipes from Hanoi, Huế and Saigon, tested in a home kitchen in Germany, with easy swaps for ingredients you can't find. 880+ recipes.",
   keywords: [
     'Vietnamese recipes', 'Pho recipe', 'Banh Mi', 'Bun Cha',
     'authentic Vietnamese cooking', 'Vietnamese food blog',
+    'Vietnamese recipes with supermarket ingredients', 'Vietnamese ingredient substitutes',
   ],
   openGraph: {
     type: 'website',
     url: 'https://flavor-nest-vietnam.vercel.app',
     title: 'FlavorNest Vietnam – Authentic Vietnamese Recipes',
-    description: "Your nest of authentic Vietnamese flavors. 800+ tested recipes made simple at home.",
+    description: "Real Vietnamese food from your supermarket — authentic recipes with easy swaps for hard-to-find ingredients.",
     siteName: 'FlavorNest Vietnam',
     images: [{
       url: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80',
@@ -178,7 +179,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FlavorNest Vietnam',
-    description: "Authentic Vietnamese recipes made simple at home.",
+    description: "Real Vietnamese food from your supermarket.",
     images: ['https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1200&q=80'],
   },
   alternates: { canonical: 'https://flavor-nest-vietnam.vercel.app' },

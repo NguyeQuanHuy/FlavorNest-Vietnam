@@ -165,13 +165,13 @@ export default function IngredientFinderHero() {
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: EASE }} className="text-center">
           <HeroMapEmblem />
           <p className="mb-3 text-[11px] font-bold uppercase sm:mb-4" style={{ color: '#F59E0B', letterSpacing: '0.2em' }}>
-            Authentic Vietnamese recipes
+            Authentic · Easy to shop
           </p>
           <h1 className="font-bold leading-[1.05] text-white" style={{ ...serif, fontSize: 'clamp(2.1rem, 6.4vw, 4rem)' }}>
-            What will you <em style={{ color: '#F59E0B' }}>cook today?</em>
+            Real Vietnamese food, <em style={{ color: '#F59E0B' }}>from your supermarket.</em>
           </h1>
           <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed sm:mt-4 sm:text-[17px]" style={{ color: 'rgba(245,237,227,0.72)' }}>
-            Search a dish — or tell us what is in your fridge.
+            Recipes from Hanoi, Huế and Saigon with easy swaps for hard-to-find ingredients. Search a dish — or tell us what is in your fridge.
           </p>
         </motion.div>
 
