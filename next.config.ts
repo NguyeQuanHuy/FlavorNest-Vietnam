@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // Served straight from /public: Vercel's free image-optimization quota returns 402 once used up
+    unoptimized: true,
     qualities: [75, 80, 85],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [360, 480, 640, 768, 1024, 1280, 1600],
