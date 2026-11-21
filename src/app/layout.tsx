@@ -3,35 +3,32 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReadingProgress from '@/components/ReadingProgress'
-import { Playfair_Display, DM_Sans, Manrope } from "next/font/google";
+// Fonts are self-hosted via @fontsource (bundled at build, no network fetch → no flaky Google Fonts builds)
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/500.css";
+import "@fontsource/playfair-display/600.css";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/800.css";
+import "@fontsource/playfair-display/900.css";
+import "@fontsource/playfair-display/400-italic.css";
+import "@fontsource/playfair-display/500-italic.css";
+import "@fontsource/playfair-display/600-italic.css";
+import "@fontsource/playfair-display/700-italic.css";
+import "@fontsource/playfair-display/800-italic.css";
+import "@fontsource/playfair-display/900-italic.css";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/600.css";
+import "@fontsource/dm-sans/700.css";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "@fontsource/manrope/800.css";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import AuthProvider from "@/components/providers/AuthProvider";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import SiteTranslate from "@/components/SiteTranslate";
-
-// ── Display font — editorial serif for headings ──
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "vietnamese"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin", "vietnamese"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-// ── Body font — clean geometric sans for readability ──
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin", "latin-ext"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
 
 // ── Viewport — prevents zoom, ensures proper mobile rendering ──
 export const viewport: Viewport = {
@@ -90,7 +87,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} ${manrope.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <head>
         <link rel="preload" as="image" href="/hero-bg.jpg" fetchPriority="high" /><link rel="icon" type="image/svg+xml" href="/favicon.svg" />

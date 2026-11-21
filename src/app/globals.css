@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --font-playfair: 'Playfair Display';
+  --font-dm-sans: 'DM Sans';
+  --font-manrope: 'Manrope';
+}
+
+
 /* ── Mobile optimization ── */
 *, *::before, *::after {
   box-sizing: border-box;
