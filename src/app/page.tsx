@@ -42,6 +42,7 @@ import dynamic from 'next/dynamic'
 
 const FeaturedRecipes = dynamic(() => import('./_sections/FeaturedRecipes'))
 const BentoGrid = dynamic(() => import('./_sections/BentoGrid'))
+const SupermarketSwaps = dynamic(() => import('./_sections/SupermarketSwaps'))
 const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
 const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
 import { recipes } from "@/data/recipes";
@@ -235,6 +236,7 @@ export default function HomePage() {
       <main className="overflow-x-hidden">
         <IngredientFinderHero />
         <BentoGrid recipes={featuredRecipes} stories={featuredStories} />
+        <SupermarketSwaps />
         <TrendingSection items={trending} stats={stats} week={week} />
         <CategoriesSection />
         <WhyFlavorNest />

@@ -1,5 +1,6 @@
 "use client";
 
+import { VN_OUTLINE, W as VN_W, H as VN_H, PINS as VN_PINS } from '@/app/_sections/HeroMapEmblem';
 import { useState, useRef, useEffect } from 'react';
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,6 +28,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isLightPage = LIGHT_BG_PAGES.some((p) => pathname?.startsWith(p));
   const [scrolled, setScrolled] = useState(false);
+  const [showMark, setShowMark] = useState(false); // map logo appears after scrolling
   const forceScrolled = false; // Always dark mode
   const [recipesOpen, setRecipesOpen] = useState(false);
   const [storiesOpen, setStoriesOpen] = useState(false);
@@ -40,7 +42,7 @@ export default function Navbar() {
   const favCount = hydrated ? favorites.length : 0;
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => { setScrolled(window.scrollY > 20); setShowMark(window.scrollY > 140); };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -86,18 +88,30 @@ export default function Navbar() {
           {/* ── Logo ── */}
           <Link href="/" aria-label="FlavorNest Vietnam – Home"
             translate="no"
-            className="notranslate flex items-center gap-1 group"
+            className="notranslate relative flex items-center gap-1 group"
             style={{ textDecoration: "none" }}
           >
-            <img
-              src="/logo.svg"
-              alt="FlavorNest"
-              width="72"
-              height="72"
-              style={{ flexShrink: 0, marginTop: '-4px', marginRight: '4px' }}
-              className="transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="flex flex-col leading-none">
+            {/* Golden map of Vietnam — hidden at the top, slides in on scroll (absolute → nav links never shift) */}
+            <motion.span
+              aria-hidden
+              initial={false}
+              animate={showMark ? { opacity: 1, scale: 1, x: 0 } : { opacity: 0, scale: 0.6, x: -6 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 30 }}
+              style={{ position: 'absolute', left: 0, top: '50%', marginTop: -20, display: 'inline-flex', pointerEvents: 'none', transformOrigin: 'left center' }}
+            >
+              <svg viewBox={`-3 -3 ${VN_W + 6} ${VN_H + 6}`} height="40" width="22" style={{ overflow: 'visible', filter: 'drop-shadow(0 2px 6px rgba(245,158,11,0.35))' }}>
+                <defs>
+                  <linearGradient id="vn-gold-nav" x1="0" y1="0" x2="0.35" y2="1">
+                    <stop offset="0%" stopColor="#FDE68A" />
+                    <stop offset="45%" stopColor="#F59E0B" />
+                    <stop offset="100%" stopColor="#B45309" />
+                  </linearGradient>
+                </defs>
+                <path d={VN_OUTLINE} fill="url(#vn-gold-nav)" />
+                {VN_PINS.map(pin => <circle key={pin.name} cx={pin.x} cy={pin.y} r="3.2" fill="#2D1A0E" stroke="#FDE68A" strokeWidth="1.2" />)}
+              </svg>
+            </motion.span>
+            <motion.div initial={false} animate={{ x: showMark ? 30 : 0 }} transition={{ type: 'spring', stiffness: 320, damping: 30 }} className="flex flex-col leading-none">
               <span
                 style={{
                   fontFamily: "var(--font-playfair), Georgia, serif",
@@ -125,7 +139,7 @@ export default function Navbar() {
               >
                 Vietnam Gourmet
               </span>
-            </div>
+            </motion.div>
           </Link>
 
           {/* ── Desktop nav links ── */}
