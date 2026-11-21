@@ -155,7 +155,7 @@ const featuredStories = ALL_STORIES.slice(0, 3).map(s => ({
 
 // ── SEO Metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: { absolute: 'Vietnamese Recipes with Supermarket Ingredients | FlavorNest' },
+  title: { absolute: 'FlavorNest | Vietnamese Recipes' },
   description:
     "Authentic Vietnamese recipes from Hanoi, Huế and Saigon, tested in a home kitchen in Germany, with easy swaps for ingredients you can't find. 880+ recipes.",
   keywords: [
