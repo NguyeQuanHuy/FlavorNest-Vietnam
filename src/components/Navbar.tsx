@@ -84,7 +84,7 @@ export default function Navbar() {
           borderBottom: "1px solid",
         }}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 lg:px-8">
+        <div className="max-w-7xl mx-auto flex min-h-[60px] items-center justify-between px-6 py-2 lg:px-8 min-[641px]:min-h-[84px]">
           {/* ── Logo ── */}
           <Link href="/" aria-label="FlavorNest Vietnam – Home"
             translate="no"

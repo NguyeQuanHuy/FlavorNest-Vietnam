@@ -9,13 +9,13 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useId, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion';
 import { PROVINCES, CITY_POINTS, ISLANDS, MAP_W, MAP_H, type MapRegion, type ProvinceShape } from '@/data/vietnam-provinces';
 
-const REGION: Record<MapRegion, { label: string; color: string; base: string; active: string; hover: string }> = {
-    north: { label: 'North', color: '#1E40AF', base: '#E3EAF8', active: '#C5D5F4', hover: '#3B6FE0' },
-    central: { label: 'Central', color: '#B45309', base: '#F6E9D8', active: '#EFD3AC', hover: '#E0892B' },
-    south: { label: 'South', color: '#166534', base: '#E0EFE4', active: '#BFE0C8', hover: '#2F9E5B' },
+const REGION: Record<MapRegion, { label: string; color: string; base: string; active: string; hover: string; side: string }> = {
+    north: { label: 'North', color: '#1E40AF', base: '#E3EAF8', active: '#C5D5F4', hover: '#3B6FE0', side: '#A9BCE3' },
+    central: { label: 'Central', color: '#B45309', base: '#F6E9D8', active: '#EFD3AC', hover: '#E0892B', side: '#DDB98F' },
+    south: { label: 'South', color: '#166534', base: '#E0EFE4', active: '#BFE0C8', hover: '#2F9E5B', side: '#A3CDB0' },
 };
 
 interface CityInfo {
@@ -49,6 +49,26 @@ export default function VietnamMap({ cities, activeCity, activeRegion, onCityCli
     const [tooltipCity, setTooltipCity] = useState<CityInfo | null>(null);
 
     const shown = PROVINCES.find(p => p.code === (hovered ?? pinned)) ?? null;
+
+    // ── 3D: the map lies like a slab on the table and tilts toward the pointer ──
+    const reduce = useReducedMotion();
+    const mx = useMotionValue(0);
+    const my = useMotionValue(0);
+    const spring = { stiffness: 140, damping: 18, mass: 0.6 };
+    const rotateX = useSpring(useTransform(my, [-0.5, 0.5], reduce ? [0, 0] : [16, 4]), spring);
+    const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], reduce ? [0, 0] : [-8, 8]), spring);
+    const onTilt = (e: React.MouseEvent<HTMLDivElement>) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        mx.set((e.clientX - r.left) / r.width - 0.5);
+        my.set((e.clientY - r.top) / r.height - 0.5);
+    };
+    // one merged outline per region → a cheap extruded "side" (3 paths per layer instead of 34)
+    const regionOutlines = useMemo(() => {
+        const out: Record<MapRegion, string> = { north: '', central: '', south: '' };
+        for (const p of PROVINCES) out[p.region] += p.d + ' ';
+        return out;
+    }, []);
+    const SLAB = [8, 7, 6, 5, 4, 3, 2, 1];
 
     // cities on this page, grouped by the province they belong to
     const citiesByProvince = useMemo(() => {
@@ -103,12 +123,16 @@ export default function VietnamMap({ cities, activeCity, activeRegion, onCityCli
                 </div>
             </div>
 
-            {/* ── Map ── */}
-            <div
+            {/* ── Map (3D: perspective + pointer tilt) ── */}
+            <div style={{ perspective: 1100 }}>
+            <motion.div
                 className="relative mx-auto"
-                style={{ width: `min(100%, calc((100svh - 250px) * ${(MAP_W / MAP_H).toFixed(4)}))`, aspectRatio: `${MAP_W} / ${MAP_H}` }}
-                onMouseLeave={() => setHovered(null)}
+                style={{ width: `min(100%, calc((100svh - 250px) * ${(MAP_W / MAP_H).toFixed(4)}))`, aspectRatio: `${MAP_W} / ${MAP_H}`, rotateX, rotateY, transformOrigin: '50% 60%' }}
+                onMouseMove={onTilt}
+                onMouseLeave={() => { setHovered(null); mx.set(0); my.set(0); }}
             >
+                {/* soft ground shadow under the slab */}
+                <div aria-hidden className="pointer-events-none absolute inset-x-[12%] bottom-[-3%] h-[8%] rounded-[50%]" style={{ background: 'radial-gradient(closest-side, rgba(75,46,26,0.22), transparent)', filter: 'blur(6px)' }} />
                 <svg
                     viewBox={`0 0 ${MAP_W} ${MAP_H}`}
                     className="absolute inset-0 h-full w-full"
@@ -125,7 +149,18 @@ export default function VietnamMap({ cities, activeCity, activeRegion, onCityCli
                         </filter>
                     </defs>
 
-                    <g filter={`url(#${uid}-shadow)`}>
+                    {/* 3D slab: stacked, slightly darker copies under the map give it thickness */}
+                    <g aria-hidden pointerEvents="none" filter={`url(#${uid}-shadow)`}>
+                        {SLAB.map(k => (
+                            <g key={k} transform={`translate(0 ${k * 1.6})`}>
+                                {(Object.keys(regionOutlines) as MapRegion[]).map(r => (
+                                    <path key={r} d={regionOutlines[r]} fill={REGION[r].side} stroke={REGION[r].side} strokeWidth={1} vectorEffect="non-scaling-stroke" />
+                                ))}
+                            </g>
+                        ))}
+                    </g>
+
+                    <g>
                         {PROVINCES.map(p => (
                             <path
                                 key={p.code}
@@ -146,16 +181,28 @@ export default function VietnamMap({ cities, activeCity, activeRegion, onCityCli
 
                     {/* highlighted province drawn again on top so its outline + glow are never hidden */}
                     {shown && (
-                        <path
-                            d={shown.d}
-                            fill={REGION[shown.region].hover}
-                            stroke="#fff"
-                            strokeWidth={2.2}
-                            strokeLinejoin="round"
-                            vectorEffect="non-scaling-stroke"
-                            filter={`url(#${uid}-glow)`}
+                        <motion.g
+                            key={shown.code}
                             pointerEvents="none"
-                        />
+                            initial={{ y: 8, opacity: 0.6 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ type: 'spring', stiffness: 380, damping: 26 }}
+                        >
+                            {/* its own raised side */}
+                            {[0, 1, 2, 3, 4, 5].map(k => (
+                                <path key={k} d={shown.d} fill={REGION[shown.region].color} transform={`translate(0 ${-9 + k * 1.6})`} />
+                            ))}
+                            <path
+                                d={shown.d}
+                                transform="translate(0 -10)"
+                                fill={REGION[shown.region].hover}
+                                stroke="#fff"
+                                strokeWidth={2.2}
+                                strokeLinejoin="round"
+                                vectorEffect="non-scaling-stroke"
+                                filter={`url(#${uid}-glow)`}
+                            />
+                        </motion.g>
                     )}
 
                     {/* archipelagos */}
@@ -292,6 +339,7 @@ export default function VietnamMap({ cities, activeCity, activeRegion, onCityCli
                         </motion.div>
                     )}
                 </AnimatePresence>
+            </motion.div>
             </div>
 
             <p className="mt-2 text-center text-[11px]" style={{ color: 'rgba(75,46,26,0.42)' }}>
