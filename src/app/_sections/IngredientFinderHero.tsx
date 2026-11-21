@@ -100,6 +100,7 @@ const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 export default function IngredientFinderHero() {
   const router = useRouter();
   const [query, setQuery] = useState('');
+  const [mode, setMode] = useState<'dish' | 'fridge'>('dish');
   const [tab, setTab] = useState(0);
   const [selected, setSelected] = useState<string[]>([]);
   const [results, setResults] = useState<RecipeSuggestion[]>([]);
@@ -171,16 +172,39 @@ export default function IngredientFinderHero() {
             Real Vietnamese food, <em style={{ color: '#F59E0B' }}>from your supermarket.</em>
           </h1>
           <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed sm:mt-4 sm:text-[17px]" style={{ color: 'rgba(245,237,227,0.72)' }}>
-            Recipes from Hanoi, Huế and Saigon with easy swaps for hard-to-find ingredients. Search a dish — or tell us what is in your fridge.
+            Recipes from Hanoi, Huế and Saigon, with easy swaps for hard-to-find ingredients.
           </p>
         </motion.div>
 
+        {/* ── Mode: find by dish or by what is in the fridge ── */}
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.05, ease: EASE }} className="mt-7 flex justify-center">
+          <div role="tablist" aria-label="How do you want to find a recipe?" className="inline-flex rounded-full p-1" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}>
+            {([['dish', 'Search a dish'], ['fridge', "What's in my fridge"]] as const).map(([k, l]) => {
+              const on = mode === k;
+              return (
+                <button
+                  key={k}
+                  role="tab"
+                  aria-selected={on}
+                  onClick={() => setMode(k)}
+                  className="relative rounded-full px-4 py-2 text-[13.5px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#F59E0B] sm:px-5"
+                  style={{ color: on ? '#2D1A0E' : 'rgba(245,237,227,0.8)' }}
+                >
+                  {on && <motion.span layoutId="hero-mode" className="absolute inset-0 rounded-full bg-[#F5EDE3]" transition={{ type: 'spring', stiffness: 420, damping: 36 }} />}
+                  <span className="relative">{l}</span>
+                </button>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {mode === 'dish' && (<>
         {/* ── Search ── */}
         <motion.form
           initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
           onSubmit={e => { e.preventDefault(); search(query); }}
           role="search"
-          className="relative mx-auto mt-7 max-w-xl"
+          className="relative mx-auto mt-5 max-w-xl"
         >
           <label htmlFor="home-search" className="sr-only">Search recipes</label>
           <Search size={19} className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2" style={{ color: '#B8A08A' }} aria-hidden />
@@ -191,18 +215,8 @@ export default function IngredientFinderHero() {
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Phở, bánh mì, chicken…"
-            className="h-14 w-full rounded-full border-0 bg-white pl-[52px] pr-[168px] text-[16px] text-[#2D1A0E] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
+            className="h-14 w-full rounded-full border-0 bg-white pl-[52px] pr-[112px] text-[16px] text-[#2D1A0E] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.6)] outline-none placeholder:text-[#B8A08A] focus:ring-4 focus:ring-[#D97706]/40 [&::-webkit-search-cancel-button]:hidden"
           />
-          {/* scan a restaurant menu with the camera */}
-          <Link
-            href="/menu-decoder?scan=1"
-            aria-label="Scan a restaurant menu with your camera"
-            title="Scan a menu"
-            className="absolute right-[104px] top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full transition-colors hover:bg-[#FEF3C7]"
-            style={{ color: '#B45309' }}
-          >
-            <Camera size={20} />
-          </Link>
           <button type="submit" className="absolute right-1.5 top-1/2 h-11 -translate-y-1/2 rounded-full px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#B45309]" style={{ background: '#D97706' }}>
             Search
           </button>
@@ -223,23 +237,24 @@ export default function IngredientFinderHero() {
           ))}
         </motion.div>
 
-        {/* ── Eating out? → menu scanner ── */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }} className="mt-4 flex justify-center">
+        {/* ── Eating out? → menu scanner (secondary, quiet) ── */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }} className="mt-5 flex justify-center">
           <Link
             href="/menu-decoder?scan=1"
-            className="group inline-flex items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-4 text-[13.5px] font-semibold transition-colors hover:bg-white/15"
-            style={{ color: '#F5EDE3', background: 'rgba(217,119,6,0.16)', border: '1px solid rgba(245,158,11,0.45)', textDecoration: 'none' }}
+            className="group inline-flex items-center gap-1.5 text-[13px] font-medium transition-colors hover:text-[#F59E0B]"
+            style={{ color: 'rgba(245,237,227,0.62)', textDecoration: 'none' }}
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full" style={{ background: '#D97706' }}><Camera size={15} color="#fff" /></span>
-            Eating out? Scan the menu — every dish explained
-            <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" style={{ color: '#F59E0B' }} />
+            <Camera size={14} aria-hidden /> Eating out? Scan a menu
+            <ArrowRight size={13} className="transition-transform group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
+        </>)}
 
+        {mode === 'fridge' && (<>
         {/* ── Ingredient finder card ── */}
         <motion.div
           initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
-          className="mt-10 rounded-[28px] p-4 sm:mt-12 sm:p-6"
+          className="mt-5 rounded-[28px] p-4 sm:mt-6 sm:p-6"
           style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)' }}
         >
           <div className="mb-4 flex items-baseline justify-between gap-3 px-1">
@@ -420,6 +435,7 @@ export default function IngredientFinderHero() {
             )}
           </AnimatePresence>
         </div>
+        </>)}
       </div>
 
       {preload && (

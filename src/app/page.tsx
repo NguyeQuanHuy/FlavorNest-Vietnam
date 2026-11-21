@@ -44,7 +44,6 @@ const FeaturedRecipes = dynamic(() => import('./_sections/FeaturedRecipes'))
 const BentoGrid = dynamic(() => import('./_sections/BentoGrid'))
 const CategoriesSection = dynamic(() => import('./_sections/CategoriesSection'))
 const WhyFlavorNest = dynamic(() => import('./_sections/WhyFlavorNest'))
-const NewsletterSection = dynamic(() => import('./_sections/NewsletterSection'))
 import { recipes } from "@/data/recipes";
 import { STORIES as ALL_STORIES } from "@/data/stories-data";
 import Image from "next/image";
@@ -217,7 +216,7 @@ export default function HomePage() {
   const trending = getTrending(8)
   const site = getSiteStats()
   const stats = [
-    { value: site.recipes, label: 'Tested recipes' },
+    { value: site.recipes, label: 'Recipes' },
     { value: site.stories, label: 'Food stories' },
     { value: site.guides, label: 'Technique guides' },
     { value: site.regions, label: 'Regions, north to south' },
@@ -239,7 +238,6 @@ export default function HomePage() {
         <TrendingSection items={trending} stats={stats} week={week} />
         <CategoriesSection />
         <WhyFlavorNest />
-        <NewsletterSection />
       </main>
     </>
   )
