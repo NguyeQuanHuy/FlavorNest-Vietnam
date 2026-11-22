@@ -11,6 +11,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import CategoryHero from '@/components/CategoryHero'
 import { useState, useRef, useMemo, useEffect } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
@@ -650,8 +651,6 @@ const heroLine = (delay: number) => ({
 
 // --- Dessert Card -------------------------------------------------------------
 function DessertCard({ item, index }: { item: Dessert; index: number }) {
-    const [hovered, setHovered] = useState(false)
-
     return (
         <motion.div
             custom={index}
@@ -660,141 +659,19 @@ function DessertCard({ item, index }: { item: Dessert; index: number }) {
             whileInView="show"
             viewport={{ once: true, margin: '-50px' }}
         >
-            <Link
-                href={`/recipes/${item.slug}`}
-                style={{
-                    display: 'block',
-                    textDecoration: 'none',
-                    background: 'white',
-                    borderRadius: 26,
-                    overflow: 'hidden',
-                    border: hovered ? '1px solid rgba(217,119,6,0.28)' : '1px solid rgba(75,46,26,0.07)',
-                    transform: hovered ? 'translateY(-8px)' : 'translateY(0)',
-                    boxShadow: hovered ? '0 28px 64px rgba(75,46,26,0.13)' : '0 2px 12px rgba(75,46,26,0.05)',
-                    transition: 'transform 0.36s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s, border-color 0.22s',
-                }}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-                aria-label={`View recipe for ${item.name}`}
-            >
-                {/* -- Image -- */}
-                <div style={{ position: 'relative', height: 230, overflow: 'hidden', background: '#f5ede3' }}>
-                    <Image
-                        src={item.image}
-                        alt={`${item.name} (${item.viet}) — Vietnamese dessert recipe`}
-                        fill
-                        sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                        style={{
-                            objectFit: 'cover',
-                            transform: hovered ? 'scale(1.08)' : 'scale(1)',
-                            transition: 'transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94)',
-                        }}
-                        quality={80}
-                    />
-                    {/* Gradient */}
-                    <div style={{
-                        position: 'absolute', inset: 0,
-                        background: 'linear-gradient(to top, rgba(75,46,26,0.62) 0%, transparent 55%)',
-                        opacity: hovered ? 1 : 0.55,
-                        transition: 'opacity 0.3s',
-                    }} />
-
-                    {/* Signature badge */}
-                    {item.isSignature && (
-                        <div style={{ position: 'absolute', top: 14, left: 14, background: '#D97706', color: 'white', fontSize: 10, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', borderRadius: 100 }}>
-                            — Signature
-                        </div>
-                    )}
-
-                    {/* Type badge */}
-                    <div style={{ position: 'absolute', top: 14, right: 14, background: TYPE_COLOR[item.type] ?? '#4B2E1A', color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', padding: '5px 13px', borderRadius: 100 }}>
-                        {item.type}
-                    </div>
-
-                    {/* Bottom overlay */}
-                    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '16px 18px' }}>
-                        <h3 style={{
-                            fontFamily: "'Playfair Display', serif",
-                            fontSize: 21, fontWeight: 700, color: 'white',
-                            margin: 0, lineHeight: 1.15,
-                            textShadow: '0 2px 10px rgba(0,0,0,0.4)',
-                        }}>
-                            {item.name}
-                        </h3>
-                        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', fontStyle: 'italic', margin: '3px 0 0' }}>
-                            {item.viet}
-                        </p>
-                    </div>
+            <Link href={`/recipes/${item.slug}`} className="ed-card" aria-label={`View recipe for ${item.name}`}>
+                <div className="ed-photo">
+                    <Image src={item.image} alt={`${item.name} (${item.viet}) — Vietnamese dessert recipe`} fill sizes="(max-width:640px) 50vw,(max-width:1024px) 50vw,33vw" style={{ objectFit: 'cover' }} quality={80} />
                 </div>
-
-                {/* -- Body -- */}
-                <div style={{ padding: '18px 20px 22px' }}>
-                    {/* Story quote */}
-                    <p style={{
-                        fontFamily: "'Playfair Display', serif",
-                        fontSize: 13.5, fontStyle: 'italic', fontWeight: 600,
-                        color: '#D97706', lineHeight: 1.5,
-                        margin: '0 0 10px',
-                        borderLeft: '2.5px solid #D97706',
-                        paddingLeft: 11,
-                    }}>
-                        "{item.story}"
-                    </p>
-
-                    {/* Description */}
-                    <p style={{ fontSize: 13.5, color: 'rgba(75,46,26,0.62)', lineHeight: 1.72, margin: '0 0 16px' }}>
-                        {item.description}
-                    </p>
-
-                    {/* Meta row */}
-                    <div style={{
-                        display: 'grid', gridTemplateColumns: 'repeat(3,1fr)',
-                        gap: 8, marginBottom: 16,
-                        background: '#FAFAF7', borderRadius: 14, padding: '10px 4px',
-                    }}>
-                        {[
-                            { label: 'Total', value: item.totalTime },
-                            { label: 'Serves', value: `${item.servings}` },
-                            { label: 'Calories', value: `${item.cal}` },
-                        ].map(m => (
-                            <div key={m.label} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: 14, fontWeight: 700, color: '#2D1A0E' }}>{m.value}</div>
-                                <div style={{ fontSize: 10, color: 'rgba(75,46,26,0.42)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{m.label}</div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Tags */}
-                    <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 16 }}>
-                        <span style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, fontWeight: 700, color: DIFF_COLOR[item.difficulty], background: `${DIFF_COLOR[item.difficulty]}18`, padding: '4px 10px', borderRadius: 8 }}>
-                            <span style={{ width: 5, height: 5, borderRadius: '50%', background: DIFF_COLOR[item.difficulty], display: 'inline-block' }} />
-                            {item.difficulty}
-                        </span>
-                        {item.tags.map(t => (
-                            <span key={t} style={{ fontSize: 10, fontWeight: 600, color: 'rgba(75,46,26,0.45)', background: 'rgba(75,46,26,0.06)', padding: '4px 9px', borderRadius: 8 }}>
-                                {t}
-                            </span>
-                        ))}
-                    </div>
-
-                    {/* CTA */}
-                    <div style={{
-                        paddingTop: 14, borderTop: '1px solid rgba(75,46,26,0.07)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    }}>
-                        <span style={{
-                            fontSize: 13, fontWeight: 700, color: '#D97706',
-                            display: 'flex', alignItems: 'center', gap: 5,
-                        }}>
-                            View Recipe
-                            <span style={{
-                                display: 'inline-block',
-                                transform: hovered ? 'translateX(5px)' : 'translateX(0)',
-                                transition: 'transform 0.22s ease',
-                            }}>?</span>
-                        </span>
-                        <span style={{ fontSize: 11, color: 'rgba(75,46,26,0.3)', fontWeight: 500 }}>? {item.totalTime}</span>
-                    </div>
+                <div className="ed-kicker">{item.isSignature ? <>Signature · {item.type}</> : item.type}</div>
+                <h2 className="ed-title">{item.name}</h2>
+                <p className="ed-vi">{item.viet}</p>
+                <div className="ed-meta">
+                    <span>{item.difficulty}</span>
+                    <span className="ed-dot" aria-hidden />
+                    <span>{item.totalTime}</span>
+                    <span className="ed-dot ed-hide-sm" aria-hidden />
+                    <span className="ed-hide-sm">Serves {item.servings}</span>
                 </div>
             </Link>
         </motion.div>
@@ -816,17 +693,16 @@ export default function DessertsPage() {
 
     const filtered = useMemo(() => {
         return DESSERTS.filter(d => {
-            const typeMatch = activeType === 'All' || d.type === activeType
+            const typeMatch = (activeType === 'All' || d.type === activeType) && (diff === 'All' || d.difficulty === diff)
             const q = query.toLowerCase()
             const textMatch = !q || d.name.toLowerCase().includes(q) || d.viet.toLowerCase().includes(q) || d.tags.some(t => t.toLowerCase().includes(q))
             return typeMatch && textMatch
         })
-    }, [activeType, query])
+    }, [activeType, diff, query])
 
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap');
         * { box-sizing: border-box; }
         .pill {
           border: 1.5px solid rgba(75,46,26,0.12); border-radius:100px;
@@ -848,96 +724,32 @@ export default function DessertsPage() {
         .search-input::placeholder { color: rgba(75,46,26,0.35); }
       `}</style>
 
-            {/* -- HERO -- */}
-            <section ref={heroRef} style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    {/* Breadcrumb */}
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
-                        {[['Home', '/'], ['Recipes', '/recipes'], ['Desserts', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>?</span>}
-                                {href ?
-                                    <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
-                            </span>
-                        ))}
-                    </nav>
-
-                    {/* Eyebrow */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Sweet Finale</span>
-                    </div>
-
-                    {/* Title */}
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
-                        Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Desserts</span>
-                    </h1>
-
-                    {/* Subtitle */}
-                    <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
-                        <span aria-hidden style={{
-                            position: 'absolute',
-                            left: 0,
-                            top: 8,
-                            width: 3,
-                            height: 'calc(100% - 12px)',
-                            background: '#D97706',
-                            borderRadius: 2,
-                        }} />
-                        <p style={{
-                            fontFamily: "'Playfair Display', serif",
-                            color: '#4B2E1A',
-                            fontSize: 19,
-                            fontStyle: 'italic',
-                            fontWeight: 400,
-                            lineHeight: 1.55,
-                            margin: 0,
-                            paddingLeft: 18,
-                        }}>
-                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>silky chè</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>caramel-kissed bánh flan</span> — Vietnamese sweets are quiet, balanced, and quietly addictive. Less sugar, more soul.
-                        </p>
-                    </div>
-
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[
-                            { Icon: Utensils, val: `${DESSERTS.length}`, lbl: 'Recipes' },
-                            { Icon: Clock, val: '20 min', lbl: 'Quickest' },
-                            { Icon: Globe, val: '3', lbl: 'Regions' },
-                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
-                        ].map(({ Icon, val, lbl }) => (
-                            <div key={lbl}>
-                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            <section ref={heroRef} style={{ position: 'relative' }}>
+                <CategoryHero crumb="Desserts" accent="Desserts"
+                    intro="Silky chè, caramel bánh flan and sticky-rice cakes — Vietnamese sweets are gentle, balanced and less sugary."
+                    stats={[{ value: DESSERTS.length, label: 'recipes' }, { prefix: 'from', value: '20 min', label: '' }]} />
             </section>
 
             {/* -- FILTER BAR -- */}
-            <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
+            <div className="cat-filter" style={{ position: 'sticky', zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
                     {FILTERS.map(f => <button key={f} onClick={() => setDiff(f)} className={`pill ${diff === f ? 'on' : ''}`}>{f}</button>)}
                     <div style={{ width: 1, height: 22, background: 'rgba(75,46,26,0.1)', margin: '0 6px', flexShrink: 0 }} />
-                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Region</span>
-                    {REGIONS.map(r => <button key={r} onClick={() => setRegion(r)} className={`pill ${region === r ? 'on' : ''}`}>{r}</button>)}
+                    <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Type</span>
+                    {TYPES.map(t => <button key={t} onClick={() => setActiveType(t)} className={`pill ${activeType === t ? 'on' : ''}`}>{t}</button>)}
                     <span style={{ marginLeft: 'auto', fontSize: 13, color: 'rgba(75,46,26,0.38)', flexShrink: 0, fontWeight: 500 }}>{filtered.length} recipes</span>
                 </div>
             </div>
 
             {/* -- DESSERT GRID ---------------------------------------------------- */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 40px 96px' }} aria-label="Dessert recipes grid">
+            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }} aria-label="Dessert recipes grid">
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={`${activeType}-${query}`}
+                        key={`${activeType}-${diff}-${query}`}
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                         transition={{ duration: 0.28 }}
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 24 }}
+                        className="cat-grid"
                     >
                         {filtered.map((item, i) => (
                             <DessertCard key={item.slug} item={item} index={i} />
@@ -951,12 +763,11 @@ export default function DessertsPage() {
                         initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                         style={{ textAlign: 'center', padding: '80px 0', color: 'rgba(75,46,26,0.38)' }}
                     >
-                        <div style={{ fontSize: 48, marginBottom: 14 }}>??</div>
                         <p style={{ fontSize: 17, fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
                             No desserts match your search — yet.
                         </p>
                         <button
-                            onClick={() => { setQuery(''); setActiveType('All') }}
+                            onClick={() => { setQuery(''); setActiveType('All'); setDiff('All') }}
                             style={{ marginTop: 16, padding: '10px 24px', borderRadius: 100, border: '1.5px solid rgba(75,46,26,0.15)', background: 'transparent', color: '#D97706', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                         >
                             Clear filters
@@ -994,7 +805,6 @@ export default function DessertsPage() {
                                 onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(217,119,6,0.35)'; el.style.background = 'rgba(217,119,6,0.06)'; el.style.transform = 'translateY(-4px)'; }}
                                 onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.borderColor = 'rgba(255,255,255,0.07)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'none'; }}
                             >
-                                <span style={{ fontSize: 26 }}>{item.emoji}</span>
                                 <span style={{ fontSize: 14, fontWeight: 600, color: 'white' }}>{item.label}</span>
                                 <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', fontStyle: 'italic' }}>{item.sub}</span>
                             </Link>

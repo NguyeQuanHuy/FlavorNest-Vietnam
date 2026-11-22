@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import CategoryHero from '@/components/CategoryHero'
 import { useState, useMemo, useCallback } from 'react'
 import { Utensils, Clock, Globe, Star } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -224,11 +225,11 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
     }, [liked, recipe, toggle])
 
     return (
-        <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
+        <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 2 }}>
             <AnimatePresence>
                 {toast && (
                     <motion.div initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
-                        style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
+                        style={{ position: 'absolute', top: 42, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}>
                         {toast === 'added' ? '♥ Saved' : '✕ Removed'}
                     </motion.div>
                 )}
@@ -287,68 +288,12 @@ export default function BreakfastPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
             `}</style>
 
-            {/* ── HERO ── */}
-            <section className="bf-hero" style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
-                <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
-                        {[['Home', '/'], ['Recipes', '/recipes'], ['Breakfast', '']].map(([label, href], i) => (
-                            <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
-                                {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
-                            </span>
-                        ))}
-                    </nav>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Morning Ritual</span>
-                    </div>
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
-                        Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Breakfast</span>
-                    </h1>
-                    <div style={{ position: 'relative', maxWidth: 540, margin: '20px 0 36px' }}>
-                        <span aria-hidden style={{
-                            position: 'absolute',
-                            left: 0,
-                            top: 8,
-                            width: 3,
-                            height: 'calc(100% - 12px)',
-                            background: '#D97706',
-                            borderRadius: 2,
-                        }} />
-                        <p style={{
-                            fontFamily: "'Playfair Display', serif",
-                            color: '#4B2E1A',
-                            fontSize: 19,
-                            fontStyle: 'italic',
-                            fontWeight: 400,
-                            lineHeight: 1.55,
-                            margin: 0,
-                            paddingLeft: 18,
-                        }}>
-                            Start your day the Vietnamese way — from <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>steaming bowls of phở</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>crispy bánh mì</span>, these are the morning meals that fuel a nation.
-                        </p>
-                    </div>
-                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[
-                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                            { Icon: Clock, val: '15 min', lbl: 'Quickest' },
-                            { Icon: Globe, val: '3', lbl: 'Regions' },
-                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
-                        ].map(({ Icon, val, lbl }) => (
-                            <div key={lbl}>
-                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <CategoryHero crumb="Breakfast" accent="Breakfast"
+                intro="Steaming bowls of phở, sticky xôi and crisp bánh mì — the morning meals that start a Vietnamese day."
+                stats={[{ value: RECIPES.length, label: 'recipes' }, { prefix: 'from', value: '15 min', label: '' }, { value: 3, label: 'regions' }]} />
 
             {/* ── FILTER BAR ── */}
-            <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '10px 12px' }}>
+            <div className="cat-filter" style={{ position: 'sticky', zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '10px 12px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
                     {FILTERS.map(f => <button key={f} onClick={() => setDiff(f)} className={`pill ${diff === f ? 'on' : ''}`}>{f}</button>)}
@@ -360,37 +305,26 @@ export default function BreakfastPage() {
             </div>
 
             {/* ── GRID ── */}
-            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 12px 60px' }}>
+            <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
                     <motion.div key={`${diff}-${region}`}
-                        className="bf-grid"
-                        style={{ display: 'grid', gap: 18 }}>
+                        className="cat-grid">
                         {filtered.map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
-                                <Link href={`/recipes/${recipe.slug}`} className="r-card">
-                                    <div className="bf-card-img" style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
-                                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
-                                        <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px 5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)', textShadow: '0 1px 3px rgba(0,0,0,0.2)' }}>{recipe.tag}</div>
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
-                                        <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
-                                            <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
-                                            <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
-                                        </div>
-                                        <div style={{ position: 'absolute', bottom: 14, right: 54, color: 'rgba(255,255,255,0.65)', fontSize: 10, fontWeight: 600 }}>{recipe.cal} kcal</div>
+                                <Link href={`/recipes/${recipe.slug}`} className="ed-card">
+                                    <div className="ed-photo">
+                                        <Image src={recipe.image} alt={`${recipe.title} Vietnamese breakfast recipe`} fill style={{ objectFit: 'cover' }} sizes="(max-width:640px) 50vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <HeartBtn recipe={recipe} />
                                     </div>
-                                    <div style={{ padding: '18px 20px 22px' }}>
-                                        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
-                                        <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{recipe.title}</h2>
-                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
-                                        <div style={{ paddingTop: 12, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                                            {recipe.tags.slice(0, 3).map(t => (
-                                                <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>
-                                                    {t}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <div className="ed-kicker">{recipe.tag}</div>
+                                    <h2 className="ed-title">{recipe.title}</h2>
+                                    <p className="ed-vi">{recipe.subtitle}</p>
+                                    <div className="ed-meta">
+                                        <span className="ed-hide-sm">{recipe.region}</span>
+                                        <span className="ed-dot ed-hide-sm" aria-hidden />
+                                        <span>{recipe.difficulty}</span>
+                                        <span className="ed-dot" aria-hidden />
+                                        <span>{recipe.time}</span>
                                     </div>
                                 </Link>
                             </motion.div>
