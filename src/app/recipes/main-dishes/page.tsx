@@ -766,19 +766,19 @@ function HeartBtn({ recipe }: { recipe: Recipe }) {
     }, [liked, recipe, toggle])
 
     return (
-        <div style={{ position: 'absolute', bottom: 14, right: 14 }}>
+        <div style={{ position: 'absolute', top: 12, right: 12, zIndex: 2 }}>
             <AnimatePresence>
                 {toast && (
                     <motion.div
                         initial={{ opacity: 0, y: 6, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0 }}
-                        style={{ position: 'absolute', bottom: 44, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}
+                        style={{ position: 'absolute', top: 42, right: 0, background: liked ? '#4B2E1A' : 'rgba(75,46,26,0.75)', color: 'white', fontSize: 11, fontWeight: 600, padding: '5px 12px', borderRadius: 100, whiteSpace: 'nowrap', pointerEvents: 'none' }}
                     >
                         {toast === 'added' ? '♥ Saved' : '✕ Removed'}
                     </motion.div>
                 )}
             </AnimatePresence>
             <motion.button onClick={handleToggle} whileTap={{ scale: 0.82 }} aria-label={liked ? 'Remove from favorites' : 'Save recipe'}
-                style={{ width: 36, height: 36, borderRadius: '50%', background: liked ? 'rgba(217,119,6,0.92)' : 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(217,119,6,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s, box-shadow 0.25s', position: 'relative', overflow: 'hidden' }}
+                style={{ width: 34, height: 34, borderRadius: '50%', background: liked ? 'rgba(217,119,6,0.92)' : 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', border: liked ? 'none' : '1px solid rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: liked ? '0 4px 16px rgba(217,119,6,0.35)' : '0 2px 8px rgba(0,0,0,0.15)', transition: 'background 0.25s, box-shadow 0.25s', position: 'relative', overflow: 'hidden' }}
             >
                 {burst && <motion.span initial={{ scale: 0.6, opacity: 0.8 }} animate={{ scale: 2.2, opacity: 0 }} transition={{ duration: 0.5 }} style={{ position: 'absolute', inset: 0, borderRadius: '50%', background: 'rgba(217,119,6,0.3)', pointerEvents: 'none' }} />}
                 <motion.svg width="16" height="16" viewBox="0 0 24 24" animate={burst ? { scale: [1, 1.35, 1] } : { scale: 1 }} transition={{ duration: 0.35 }}>
@@ -804,22 +804,32 @@ export default function MainDishesPage() {
     return (
         <main style={{ minHeight: '100vh', background: '#FAFAF7', fontFamily: "'DM Sans', system-ui, sans-serif" }}>
             <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,600;1,700&display=swap');
                 * { box-sizing: border-box; }
-                .md-grid { grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); }
-                @media (max-width: 768px) {
-                  .md-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
-                  .md-card-img { height: 140px !important; }
-                  .r-card > div:last-child { padding: 10px 12px 14px !important; }
-                  .r-card h2 { font-size: 11px !important; letter-spacing: 0.04em !important; }
-                  .r-card p { font-size: 10px !important; margin-bottom: 0 !important; display: none !important; }
-                  .r-card > div:last-child > div:first-child { font-size: 9px !important; margin-bottom: 3px !important; }
-                  .r-card > div:last-child > div:last-child { display: none !important; }
+                .md-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; row-gap: 44px; }
+                @media (max-width: 1024px) { .md-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+                @media (max-width: 640px) { .md-grid { column-gap: 14px; row-gap: 28px; } }
+                /* editorial recipe card: photo, then quiet text — no boxes, no badges */
+                .ed-card { display: block; text-decoration: none; color: inherit; }
+                .ed-photo { position: relative; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; background: #EFE8DF; }
+                .ed-photo img { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+                .ed-card:hover .ed-photo img, .ed-card:focus-visible .ed-photo img { transform: scale(1.045); }
+                .ed-card:focus-visible { outline: 2px solid #D97706; outline-offset: 4px; border-radius: 16px; }
+                .ed-kicker { margin-top: 16px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #B45309; }
+                .ed-title { margin: 6px 0 0; font-family: 'Playfair Display', Georgia, serif; font-size: 21px; font-weight: 700; line-height: 1.22; color: #2D1A0E; transition: color 0.25s; }
+                .ed-card:hover .ed-title { color: #B45309; }
+                .ed-vi { margin: 4px 0 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 14.5px; color: rgba(75,46,26,0.5); }
+                .ed-meta { margin-top: 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; font-size: 12.5px; color: rgba(75,46,26,0.55); }
+                .ed-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(75,46,26,0.3); }
+                @media (max-width: 640px) {
+                  .ed-photo { aspect-ratio: 1 / 1; border-radius: 12px; }
+                  .ed-kicker { margin-top: 10px; font-size: 9.5px; letter-spacing: 0.1em; }
+                  .ed-title { font-size: 15.5px; }
+                  .ed-vi { font-size: 12.5px; }
+                  .ed-meta { margin-top: 6px; font-size: 11px; gap: 4px 7px; }
+                  .ed-meta .ed-region { display: none; }
                 }
-                .r-card { background: white; border-radius: 4px; overflow: hidden; border: 1px solid rgba(75,46,26,0.07); text-decoration: none; display: block; transition: box-shadow 0.2s, border-color 0.2s; }
-                .r-card:hover { box-shadow: 0 8px 24px rgba(75,46,26,0.10); border-color: rgba(217,119,6,0.2); }
-                .r-card:hover .r-img { transform: scale(1.07); }
-                .r-img { transition: transform 0.55s ease; }
+                .md-filter { top: 61px; }
+                @media (min-width: 641px) { .md-filter { top: 85px; } }
                 .pill { border: 1.5px solid rgba(75,46,26,0.12); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; color: rgba(75,46,26,0.55); background: transparent; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
                 .pill:hover { color: #D97706; border-color: rgba(217,119,6,0.38); }
                 .pill.on { background: #4B2E1A; color: white; border-color: #4B2E1A; }
@@ -893,7 +903,7 @@ export default function MainDishesPage() {
             </section>
 
             {/* ── FILTER BAR ── */}
-            <div style={{ position: 'sticky', top: 88, zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
+            <div className="md-filter" style={{ position: 'sticky', zIndex: 40, background: 'rgba(250,250,247,0.96)', backdropFilter: 'blur(16px)', borderBottom: '1px solid rgba(75,46,26,0.07)', padding: '12px 24px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 8, overflowX: 'auto', alignItems: 'center' }}>
                     <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(75,46,26,0.35)', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>Difficulty</span>
                     {FILTERS.map(f => <button key={f} onClick={() => setDiff(f)} className={`pill ${diff === f ? 'on' : ''}`}>{f}</button>)}
@@ -907,44 +917,24 @@ export default function MainDishesPage() {
             {/* ── GRID ── */}
             <section style={{ maxWidth: 1200, margin: '0 auto', padding: '48px 24px 96px' }}>
                 <AnimatePresence mode="wait">
-                    <motion.div key={`${diff}-${region}`}
-                        className="md-grid" style={{ display: 'grid', gap: 18 }}>
+                    <motion.div key={`${diff}-${region}`} id="recipes-grid"
+                        className="md-grid" style={{ display: 'grid', scrollMarginTop: 150 }}>
                         {filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE).map((recipe, i) => (
                             <motion.div key={recipe.slug} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0 }}>
-                                <Link href={`/recipes/${recipe.slug}`} className="r-card">
-                                    {/* Image */}
-                                    <div className="md-card-img" style={{ position: 'relative', height: 180, overflow: 'hidden', background: '#f0ebe4' }}>
-                                        <Image src={recipe.image} alt={`${recipe.title} — ${recipe.subtitle} Vietnamese recipe`} fill className="r-img" style={{ objectFit: 'cover' }} sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,33vw" quality={80} />
-                                        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 55%)' }} />
-
-                                        {/* Tag */}
-                                        <div style={{ position: 'absolute', top: 14, left: 0, background: recipe.tagColor, color: 'white', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 14px', clipPath: 'polygon(0 0, 100% 0, 88% 100%, 0 100%)', boxShadow: '2px 3px 8px rgba(0,0,0,0.25)' }}>{recipe.tag}</div>
-
-                                        {/* Time */}
-                                        <div style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(0,0,0,0.38)', backdropFilter: 'blur(6px)', color: 'white', fontSize: 11, fontWeight: 500, padding: '5px 11px', borderRadius: 100 }}>⏱ {recipe.time}</div>
-
-                                        {/* Difficulty */}
-                                        <div style={{ position: 'absolute', bottom: 14, left: 14, display: 'flex', alignItems: 'center', gap: 5 }}>
-                                            <div style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[recipe.difficulty] }} />
-                                            <span style={{ color: 'white', fontSize: 11, fontWeight: 600, textShadow: '0 1px 4px rgba(0,0,0,0.6)' }}>{recipe.difficulty}</span>
-                                        </div>
-
-                                        {/* Calories */}
-                                        <div style={{ position: 'absolute', bottom: 14, right: 54, color: 'rgba(255,255,255,0.65)', fontSize: 10, fontWeight: 600 }}>{recipe.cal} kcal</div>
-
+                                <Link href={`/recipes/${recipe.slug}`} className="ed-card">
+                                    <div className="ed-photo">
+                                        <Image src={recipe.image} alt={`${recipe.title} — ${recipe.subtitle} Vietnamese recipe`} fill style={{ objectFit: 'cover' }} sizes="(max-width:640px) 50vw,(max-width:1024px) 50vw,33vw" quality={80} />
                                         <HeartBtn recipe={recipe} />
                                     </div>
-
-                                    {/* Body */}
-                                    <div style={{ padding: '18px 20px 22px' }}>
-                                        <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', color: '#D97706', textTransform: 'uppercase', marginBottom: 6 }}>{recipe.region} Vietnam</div>
-                                        <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600, color: '#2D1A0E', margin: '0 0 3px', lineHeight: 1.3, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{recipe.title}</h2>
-                                        <p style={{ fontSize: 12, color: 'rgba(75,46,26,0.4)', fontStyle: 'italic', margin: '0 0 10px' }}>{recipe.subtitle}</p>
-                                        <div style={{ paddingTop: 12, borderTop: '1px solid rgba(75,46,26,0.07)', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                                            {recipe.tags.slice(0, 3).map(t => (
-                                                <span key={t} style={{ fontSize: 10, color: 'rgba(75,46,26,0.5)', background: 'rgba(75,46,26,0.05)', padding: '3px 8px', borderRadius: 3, fontWeight: 500 }}>{t}</span>
-                                            ))}
-                                        </div>
+                                    <div className="ed-kicker">{recipe.tag}</div>
+                                    <h2 className="ed-title">{recipe.title}</h2>
+                                    <p className="ed-vi">{recipe.subtitle}</p>
+                                    <div className="ed-meta">
+                                        <span className="ed-region">{recipe.region}</span>
+                                        <span className="ed-dot ed-region" aria-hidden />
+                                        <span>{recipe.difficulty}</span>
+                                        <span className="ed-dot" aria-hidden />
+                                        <span>{recipe.time}</span>
                                     </div>
                                 </Link>
                             </motion.div>
@@ -953,7 +943,7 @@ export default function MainDishesPage() {
                 </AnimatePresence>
 
                 {filtered.length > PER_PAGE && (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 48, position: 'sticky', bottom: 24, zIndex: 30 }}>     <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', padding: '10px 16px', borderRadius: 100, boxShadow: '0 4px 24px rgba(75,46,26,0.12)', border: '1px solid rgba(75,46,26,0.08)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 64 }}>     <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap', justifyContent: 'center' }}>
                         <button
                             onClick={() => { setPage(p => Math.max(1, p - 1)); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
                             disabled={page === 1}
@@ -965,7 +955,7 @@ export default function MainDishesPage() {
                             <button
                                 key={n}
                                 onClick={() => { setPage(n); document.getElementById('recipes-grid')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }}
-                                style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#D97706' : 'rgba(75,46,26,0.15)', background: page === n ? '#D97706' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
+                                style={{ width: 36, height: 36, borderRadius: '50%', border: '1.5px solid', borderColor: page === n ? '#2D1A0E' : 'transparent', background: page === n ? '#2D1A0E' : 'transparent', color: page === n ? 'white' : 'rgba(75,46,26,0.55)', fontSize: 13, fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit' }}
                             >
                                 {n}
                             </button>
