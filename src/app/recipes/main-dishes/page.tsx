@@ -829,6 +829,7 @@ export default function MainDishesPage() {
                   .ed-meta .ed-region { display: none; }
                 }
                 .md-filter { top: 61px; }
+                @media (max-width: 640px) { .md-hero { padding: 84px 20px 24px !important; } }
                 @media (min-width: 641px) { .md-filter { top: 85px; } }
                 .pill { border: 1.5px solid rgba(75,46,26,0.12); border-radius: 100px; padding: 7px 18px; font-size: 13px; font-weight: 500; color: rgba(75,46,26,0.55); background: transparent; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
                 .pill:hover { color: #D97706; border-color: rgba(217,119,6,0.38); }
@@ -836,68 +837,36 @@ export default function MainDishesPage() {
                 .tag { font-size: 10px; font-weight: 600; color: rgba(75,46,26,0.45); background: rgba(75,46,26,0.05); padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
             `}</style>
 
-            {/* ── HERO ── */}
-            <section style={{ background: 'linear-gradient(135deg, #FEF3E2 0%, #FDEAC8 55%, #F5EDE3 100%)', paddingTop: 120, paddingBottom: 72, padding: '88px 24px 48px', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 40, right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'rgba(217,119,6,0.07)', pointerEvents: 'none' }} />
+            {/* ── HERO (compact) ── */}
+            <section className="md-hero" style={{ background: 'linear-gradient(180deg, #FDF4E7 0%, #FAFAF7 100%)', padding: '108px 24px 32px' }}>
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     {/* Breadcrumb */}
-                    <nav style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, marginBottom: 24 }}>
+                    <nav aria-label="Breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12.5, marginBottom: 18 }}>
                         {[['Home', '/'], ['Recipes', '/recipes'], ['Main Dishes', '']].map(([label, href], i) => (
                             <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                                 {i > 0 && <span style={{ color: 'rgba(75,46,26,0.3)' }}>›</span>}
                                 {href ? <Link href={href} style={{ color: 'rgba(75,46,26,0.45)', textDecoration: 'none', fontWeight: 500 }}>{label}</Link>
-                                    : <span style={{ color: '#D97706', fontWeight: 600 }}>{label}</span>}
+                                    : <span style={{ color: '#B45309', fontWeight: 600 }}>{label}</span>}
                             </span>
                         ))}
                     </nav>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-                        <div style={{ width: 32, height: 1.5, background: '#D97706' }} />
-                        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.18em', color: '#D97706', textTransform: 'uppercase' }}>The Heart of the Table</span>
-                    </div>
-
-                    <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 800, color: '#2D1A0E', margin: '0 0 18px', lineHeight: 1.0 }}>
-                        Vietnamese<br /><span style={{ color: '#D97706', fontStyle: 'italic' }}>Main Dishes</span>
-                    </h1>
-
-                    <div style={{ position: 'relative', maxWidth: 560, margin: '0 0 36px' }}>
-                        <span aria-hidden style={{
-                            position: 'absolute',
-                            left: 0,
-                            top: 8,
-                            width: 3,
-                            height: 'calc(100% - 12px)',
-                            background: '#D97706',
-                            borderRadius: 2,
-                        }} />
-                        <p style={{
-                            fontFamily: "'Playfair Display', serif",
-                            color: '#4B2E1A',
-                            fontSize: 19,
-                            fontStyle: 'italic',
-                            fontWeight: 400,
-                            lineHeight: 1.55,
-                            margin: 0,
-                            paddingLeft: 18,
-                        }}>
-                            From <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>slow-braised clay pots</span> to <span style={{ color: '#D97706', fontWeight: 600, fontStyle: 'normal' }}>fiery wok dishes</span> — these are the recipes that define the Vietnamese dining table. Passed down through generations, perfected by time.
+                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '14px 40px' }}>
+                        <div style={{ maxWidth: 620 }}>
+                            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(30px, 3.6vw, 44px)', fontWeight: 700, color: '#2D1A0E', margin: 0, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
+                                Vietnamese <span style={{ color: '#D97706', fontStyle: 'italic' }}>Main Dishes</span>
+                            </h1>
+                            <p style={{ margin: '10px 0 0', fontSize: 15.5, lineHeight: 1.6, color: 'rgba(75,46,26,0.62)' }}>
+                                Slow-braised clay pots, fiery wok dishes and the everyday plates of the Vietnamese family table.
+                            </p>
+                        </div>
+                        <p style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'rgba(75,46,26,0.55)', whiteSpace: 'nowrap' }}>
+                            <span><strong style={{ color: '#2D1A0E', fontWeight: 700 }}>{RECIPES.length}</strong> recipes</span>
+                            <span aria-hidden style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(75,46,26,0.3)' }} />
+                            <span>from <strong style={{ color: '#2D1A0E', fontWeight: 700 }}>20 min</strong></span>
+                            <span aria-hidden style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(75,46,26,0.3)' }} />
+                            <span><strong style={{ color: '#2D1A0E', fontWeight: 700 }}>3</strong> regions</span>
                         </p>
-                    </div>
-
-                    {/* Stats */}
-                    <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
-                        {[
-                            { Icon: Utensils, val: `${RECIPES.length}`, lbl: 'Recipes' },
-                            { Icon: Clock, val: '20 min', lbl: 'Quickest' },
-                            { Icon: Globe, val: '3', lbl: 'Regions' },
-                            { Icon: Star, val: '4.8', lbl: 'Avg Rating' },
-                        ].map(({ Icon, val, lbl }) => (
-                            <div key={lbl}>
-                                <Icon size={16} strokeWidth={1.8} color="#D97706" style={{ marginBottom: 4 }} />
-                                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: '#2D1A0E', lineHeight: 1 }}>{val}</div>
-                                <div style={{ fontSize: 11, color: 'rgba(75,46,26,0.45)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{lbl}</div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
